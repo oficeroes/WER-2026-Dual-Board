@@ -524,7 +524,7 @@ def main(argv=None):
     # 7) 输出安装/还原脚本 + 信息文件
     new_sha = packed['sha256']
     tpl = {
-        '__TARGET__': DEFAULT_ASSETS,
+        '__TARGET__': assets,
         '__ORIG_SHA__': orig_sha,
         '__OLD_SHA__': old_sha,
         '__NEW_SHA__': new_sha,
@@ -562,7 +562,7 @@ def main(argv=None):
     info_txt.append('双板通讯 prelude 字符数 = %d' % len(wl))
     info_txt.append('合并后 prelude 总字符数 = %d' % len(prelude_new))
     info_txt.append('')
-    info_txt.append('安装目标 = %s' % DEFAULT_ASSETS)
+    info_txt.append('安装目标 = %s' % assets)
     info_txt.append('')
     for item in check['changed']:
         info_txt.append('修改条目 %s（%d -> %d 字节）' % (item['name'], item['old_len'], item['new_len']))
