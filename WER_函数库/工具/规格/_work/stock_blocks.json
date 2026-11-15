@@ -1,0 +1,368 @@
+{
+ "logic_boolean": {
+  "file": "blocks/logic.js",
+  "start_line": 46,
+  "end_line": 64,
+  "source": "{\n    \"type\": \"logic_boolean\",\n    \"message0\": \"%1\",\n    \"args0\": [\n      {\n        \"type\": \"field_dropdown\",\n        \"name\": \"BOOL\",\n        \"options\": [\n          [\"%{BKY_LOGIC_BOOLEAN_TRUE}\", \"TRUE\"],\n          [\"%{BKY_LOGIC_BOOLEAN_FALSE}\", \"FALSE\"]\n        ]\n      }\n    ],\n    \"output\": \"Boolean\",\n    // \"style\": \"logic_blocks\",\n    \"tooltip\": \"%{BKY_LOGIC_BOOLEAN_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_LOGIC_BOOLEAN_HELPURL}\",\n    \"colour\": \"#FF9900\"\n  }"
+ },
+ "field_dropdown": {
+  "file": "blocks/loops.js",
+  "start_line": 197,
+  "end_line": 204,
+  "source": "{\n      \"type\": \"field_dropdown\",\n      \"name\": \"FLOW\",\n      \"options\": [\n        [\"%{BKY_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK}\", \"BREAK\"],\n        [\"%{BKY_CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE}\", \"CONTINUE\"]\n      ]\n    }"
+ },
+ "controls_if": {
+  "file": "blocks/logic.js",
+  "start_line": 66,
+  "end_line": 89,
+  "source": "{\n    \"type\": \"controls_if\",\n    \"message0\": \"%{BKY_CONTROLS_IF_MSG_IF} %1\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"IF0\",\n        \"check\": \"Boolean\"\n      }\n    ],\n    \"message1\": \"%{BKY_CONTROLS_IF_MSG_THEN} %1\",\n    \"args1\": [\n      {\n        \"type\": \"input_statement\",\n        \"name\": \"DO0\"\n      }\n    ],\n    \"previousStatement\": null,\n    \"nextStatement\": null,\n    \"style\": \"logic_blocks\",\n    \"helpUrl\": \"%{BKY_CONTROLS_IF_HELPURL}\",\n    \"mutator\": \"controls_if_mutator\",\n    \"extensions\": [\"controls_if_tooltip\"]\n  }"
+ },
+ "input_value": {
+  "file": "blocks/variables_dynamic.js",
+  "start_line": 69,
+  "end_line": 72,
+  "source": "{\n      \"type\": \"input_value\",\n      \"name\": \"VALUE\"\n    }"
+ },
+ "input_statement": {
+  "file": "blocks/loops.js",
+  "start_line": 180,
+  "end_line": 183,
+  "source": "{\n      \"type\": \"input_statement\",\n      \"name\": \"DO\"\n    }"
+ },
+ "controls_ifelse": {
+  "file": "blocks/logic.js",
+  "start_line": 91,
+  "end_line": 121,
+  "source": "{\n    \"type\": \"controls_ifelse\",\n    \"message0\": \"%{BKY_CONTROLS_IF_MSG_IF} %1\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"IF0\",\n        \"check\": \"Boolean\"\n      }\n    ],\n    \"message1\": \"%{BKY_CONTROLS_IF_MSG_THEN} %1\",\n    \"args1\": [\n      {\n        \"type\": \"input_statement\",\n        \"name\": \"DO0\"\n      }\n    ],\n    \"message2\": \"%{BKY_CONTROLS_IF_MSG_ELSE} %1\",\n    \"args2\": [\n      {\n        \"type\": \"input_statement\",\n        \"name\": \"ELSE\"\n      }\n    ],\n    \"previousStatement\": null,\n    \"nextStatement\": null,\n    \"style\": \"logic_blocks\",\n    \"tooltip\": \"%{BKYCONTROLS_IF_TOOLTIP_2}\",\n    \"helpUrl\": \"%{BKY_CONTROLS_IF_HELPURL}\",\n    \"extensions\": [\"controls_if_tooltip\"]\n  }"
+ },
+ "logic_compare": {
+  "file": "blocks/logic.js",
+  "start_line": 123,
+  "end_line": 153,
+  "source": "{\n    \"type\": \"logic_compare\",\n    \"message0\": \"%1 %2 %3\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"A\"\n      },\n      {\n        \"type\": \"field_dropdown\",\n        \"name\": \"OP\",\n        \"options\": [\n          [\"=\", \"EQ\"],\n          [\"\\u2260\", \"NEQ\"],\n          [\"\\u200F<\", \"LT\"],\n          [\"\\u200F\\u2264\", \"LTE\"],\n          [\"\\u200F>\", \"GT\"],\n          [\"\\u200F\\u2265\", \"GTE\"]\n        ]\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"B\"\n      }\n    ],\n    \"inputsInline\": true,\n    \"output\": \"Boolean\",\n    \"style\": \"logic_blocks\",\n    \"helpUrl\": \"%{BKY_LOGIC_COMPARE_HELPURL}\",\n    \"extensions\": [\"logic_compare\", \"logic_op_tooltip\"]\n  }"
+ },
+ "logic_operation": {
+  "file": "blocks/logic.js",
+  "start_line": 155,
+  "end_line": 184,
+  "source": "{\n    \"type\": \"logic_operation\",\n    \"message0\": \"%1 %2 %3\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"A\",\n        \"check\": \"Boolean\"\n      },\n      {\n        \"type\": \"field_dropdown\",\n        \"name\": \"OP\",\n        \"options\": [\n          [\"%{BKY_LOGIC_OPERATION_AND}\", \"AND\"],\n          [\"%{BKY_LOGIC_OPERATION_OR}\", \"OR\"]\n        ]\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"B\",\n        \"check\": \"Boolean\"\n      }\n    ],\n    \"inputsInline\": true,\n    \"output\": \"Boolean\",\n    // \"style\": \"logic_blocks\",\n    \"helpUrl\": \"%{BKY_LOGIC_OPERATION_HELPURL}\",\n    \"extensions\": [\"logic_op_tooltip\"],\n    \"colour\": \"#FF9900\"\n  }"
+ },
+ "logic_negate": {
+  "file": "blocks/logic.js",
+  "start_line": 186,
+  "end_line": 202,
+  "source": "{\n    \"type\": \"logic_negate\",\n    \"message0\": \"%{BKY_LOGIC_NEGATE_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"BOOL\",\n        \"check\": \"Boolean\"\n      }\n    ],\n    \"output\": \"Boolean\",\n    // \"style\": \"logic_blocks\",\n    \"tooltip\": \"%{BKY_LOGIC_NEGATE_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_LOGIC_NEGATE_HELPURL}\",\n    \"colour\": \"#FF9900\"\n\n  }"
+ },
+ "logic_null": {
+  "file": "blocks/logic.js",
+  "start_line": 204,
+  "end_line": 211,
+  "source": "{\n    \"type\": \"logic_null\",\n    \"message0\": \"%{BKY_LOGIC_NULL}\",\n    \"output\": null,\n    \"style\": \"logic_blocks\",\n    \"tooltip\": \"%{BKY_LOGIC_NULL_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_LOGIC_NULL_HELPURL}\"\n  }"
+ },
+ "logic_ternary": {
+  "file": "blocks/logic.js",
+  "start_line": 213,
+  "end_line": 242,
+  "source": "{\n    \"type\": \"logic_ternary\",\n    \"message0\": \"%{BKY_LOGIC_TERNARY_CONDITION} %1\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"IF\",\n        \"check\": \"Boolean\"\n      }\n    ],\n    \"message1\": \"%{BKY_LOGIC_TERNARY_IF_TRUE} %1\",\n    \"args1\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"THEN\"\n      }\n    ],\n    \"message2\": \"%{BKY_LOGIC_TERNARY_IF_FALSE} %1\",\n    \"args2\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"ELSE\"\n      }\n    ],\n    \"output\": null,\n    \"style\": \"logic_blocks\",\n    \"tooltip\": \"%{BKY_LOGIC_TERNARY_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_LOGIC_TERNARY_HELPURL}\",\n    \"extensions\": [\"logic_ternary\"]\n  }"
+ },
+ "controls_if_if": {
+  "file": "blocks/logic.js",
+  "start_line": 247,
+  "end_line": 254,
+  "source": "{\n    \"type\": \"controls_if_if\",\n    \"message0\": \"%{BKY_CONTROLS_IF_IF_TITLE_IF}\",\n    \"nextStatement\": null,\n    \"enableContextMenu\": false,\n    \"style\": \"logic_blocks\",\n    \"tooltip\": \"%{BKY_CONTROLS_IF_IF_TOOLTIP}\"\n  }"
+ },
+ "controls_if_elseif": {
+  "file": "blocks/logic.js",
+  "start_line": 256,
+  "end_line": 264,
+  "source": "{\n    \"type\": \"controls_if_elseif\",\n    \"message0\": \"%{BKY_CONTROLS_IF_ELSEIF_TITLE_ELSEIF}\",\n    \"previousStatement\": null,\n    \"nextStatement\": null,\n    \"enableContextMenu\": false,\n    \"style\": \"logic_blocks\",\n    \"tooltip\": \"%{BKY_CONTROLS_IF_ELSEIF_TOOLTIP}\"\n  }"
+ },
+ "controls_if_else": {
+  "file": "blocks/logic.js",
+  "start_line": 266,
+  "end_line": 273,
+  "source": "{\n    \"type\": \"controls_if_else\",\n    \"message0\": \"%{BKY_CONTROLS_IF_ELSE_TITLE_ELSE}\",\n    \"previousStatement\": null,\n    \"enableContextMenu\": false,\n    \"style\": \"logic_blocks\",\n    \"tooltip\": \"%{BKY_CONTROLS_IF_ELSE_TOOLTIP}\"\n  }"
+ },
+ "math_number": {
+  "file": "blocks/math.js",
+  "start_line": 47,
+  "end_line": 61,
+  "source": "{\n    \"type\": \"math_number\",\n    \"message0\": \"%1\",\n    \"args0\": [{\n      \"type\": \"field_number\",\n      \"name\": \"NUM\",\n      \"value\": 0\n    }],\n    \"output\": \"Number\",\n    \"helpUrl\": \"%{BKY_MATH_NUMBER_HELPURL}\",\n    // \"style\": \"math_blocks\",\n    \"tooltip\": \"%{BKY_MATH_NUMBER_TOOLTIP}\",\n    \"extensions\": [\"parent_tooltip_when_inline\"],\n    \"colour\": \"#FF9900\"\n  }"
+ },
+ "field_number": {
+  "file": "blocks/loops.js",
+  "start_line": 71,
+  "end_line": 77,
+  "source": "{\n      \"type\": \"field_number\",\n      \"name\": \"TIMES\",\n      \"value\": 10,\n      \"min\": 0,\n      \"precision\": 1\n    }"
+ },
+ "math_arithmetic": {
+  "file": "blocks/math.js",
+  "start_line": 64,
+  "end_line": 95,
+  "source": "{\n    \"type\": \"math_arithmetic\",\n    \"message0\": \"%1 %2 %3\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"A\",\n        \"check\": \"Number\"\n      },\n      {\n        \"type\": \"field_dropdown\",\n        \"name\": \"OP\",\n        \"options\": [\n          [\"%{BKY_MATH_ADDITION_SYMBOL}\", \"ADD\"],\n          [\"%{BKY_MATH_SUBTRACTION_SYMBOL}\", \"MINUS\"],\n          [\"%{BKY_MATH_MULTIPLICATION_SYMBOL}\", \"MULTIPLY\"],\n          [\"%{BKY_MATH_DIVISION_SYMBOL}\", \"DIVIDE\"],\n          [\"%{BKY_MATH_POWER_SYMBOL}\", \"POWER\"]\n        ]\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"B\",\n        \"check\": \"Number\"\n      }\n    ],\n    \"inputsInline\": true,\n    \"output\": \"Number\",\n    \"style\": \"math_blocks\",\n    \"helpUrl\": \"%{BKY_MATH_ARITHMETIC_HELPURL}\",\n    \"extensions\": [\"math_op_tooltip\"]\n  }"
+ },
+ "math_single": {
+  "file": "blocks/math.js",
+  "start_line": 98,
+  "end_line": 125,
+  "source": "{\n    \"type\": \"math_single\",\n    \"message0\": \"%1 %2\",\n    \"args0\": [\n      {\n        \"type\": \"field_dropdown\",\n        \"name\": \"OP\",\n        \"options\": [\n          [\"%{BKY_MATH_SINGLE_OP_ROOT}\", 'ROOT'],\n          [\"%{BKY_MATH_SINGLE_OP_ABSOLUTE}\", 'ABS'],\n          ['-', 'NEG'],\n          ['ln', 'LN'],\n          ['log10', 'LOG10'],\n          ['e^', 'EXP'],\n          ['10^', 'POW10']\n        ]\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"NUM\",\n        \"check\": \"Number\"\n      }\n    ],\n    \"output\": \"Number\",\n    \"style\": \"math_blocks\",\n    \"helpUrl\": \"%{BKY_MATH_SINGLE_HELPURL}\",\n    \"extensions\": [\"math_op_tooltip\"]\n  }"
+ },
+ "math_trig": {
+  "file": "blocks/math.js",
+  "start_line": 128,
+  "end_line": 154,
+  "source": "{\n    \"type\": \"math_trig\",\n    \"message0\": \"%1 %2\",\n    \"args0\": [\n      {\n        \"type\": \"field_dropdown\",\n        \"name\": \"OP\",\n        \"options\": [\n          [\"%{BKY_MATH_TRIG_SIN}\", \"SIN\"],\n          [\"%{BKY_MATH_TRIG_COS}\", \"COS\"],\n          [\"%{BKY_MATH_TRIG_TAN}\", \"TAN\"],\n          [\"%{BKY_MATH_TRIG_ASIN}\", \"ASIN\"],\n          [\"%{BKY_MATH_TRIG_ACOS}\", \"ACOS\"],\n          [\"%{BKY_MATH_TRIG_ATAN}\", \"ATAN\"]\n        ]\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"NUM\",\n        \"check\": \"Number\"\n      }\n    ],\n    \"output\": \"Number\",\n    \"style\": \"math_blocks\",\n    \"helpUrl\": \"%{BKY_MATH_TRIG_HELPURL}\",\n    \"extensions\": [\"math_op_tooltip\"]\n  }"
+ },
+ "math_constant": {
+  "file": "blocks/math.js",
+  "start_line": 157,
+  "end_line": 178,
+  "source": "{\n    \"type\": \"math_constant\",\n    \"message0\": \"%1\",\n    \"args0\": [\n      {\n        \"type\": \"field_dropdown\",\n        \"name\": \"CONSTANT\",\n        \"options\": [\n          [\"\\u03c0\", \"PI\"],\n          [\"e\", \"E\"],\n          [\"\\u03c6\", \"GOLDEN_RATIO\"],\n          [\"sqrt(2)\", \"SQRT2\"],\n          [\"sqrt(\\u00bd)\", \"SQRT1_2\"],\n          [\"\\u221e\", \"INFINITY\"]\n        ]\n      }\n    ],\n    \"output\": \"Number\",\n    \"style\": \"math_blocks\",\n    \"tooltip\": \"%{BKY_MATH_CONSTANT_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_MATH_CONSTANT_HELPURL}\"\n  }"
+ },
+ "math_number_property": {
+  "file": "blocks/math.js",
+  "start_line": 182,
+  "end_line": 210,
+  "source": "{\n    \"type\": \"math_number_property\",\n    \"message0\": \"%1 %2\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"NUMBER_TO_CHECK\",\n        \"check\": \"Number\"\n      },\n      {\n        \"type\": \"field_dropdown\",\n        \"name\": \"PROPERTY\",\n        \"options\": [\n          [\"%{BKY_MATH_IS_EVEN}\", \"EVEN\"],\n          [\"%{BKY_MATH_IS_ODD}\", \"ODD\"],\n          [\"%{BKY_MATH_IS_PRIME}\", \"PRIME\"],\n          [\"%{BKY_MATH_IS_WHOLE}\", \"WHOLE\"],\n          [\"%{BKY_MATH_IS_POSITIVE}\", \"POSITIVE\"],\n          [\"%{BKY_MATH_IS_NEGATIVE}\", \"NEGATIVE\"],\n          [\"%{BKY_MATH_IS_DIVISIBLE_BY}\", \"DIVISIBLE_BY\"]\n        ]\n      }\n    ],\n    \"inputsInline\": true,\n    \"output\": \"Boolean\",\n    \"style\": \"math_blocks\",\n    \"tooltip\": \"%{BKY_MATH_IS_TOOLTIP}\",\n    \"mutator\": \"math_is_divisibleby_mutator\"\n  }"
+ },
+ "math_change": {
+  "file": "blocks/math.js",
+  "start_line": 213,
+  "end_line": 233,
+  "source": "{\n    \"type\": \"math_change\",\n    \"message0\": \"%{BKY_MATH_CHANGE_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"field_variable\",\n        \"name\": \"VAR\",\n        \"variable\": \"%{BKY_MATH_CHANGE_TITLE_ITEM}\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"DELTA\",\n        \"check\": \"Number\"\n      }\n    ],\n    \"previousStatement\": null,\n    \"nextStatement\": null,\n    \"style\": \"variable_blocks\",\n    \"helpUrl\": \"%{BKY_MATH_CHANGE_HELPURL}\",\n    \"extensions\": [\"math_change_tooltip\"]\n  }"
+ },
+ "field_variable": {
+  "file": "blocks/variables_dynamic.js",
+  "start_line": 64,
+  "end_line": 68,
+  "source": "{\n      \"type\": \"field_variable\",\n      \"name\": \"VAR\",\n      \"variable\": \"%{BKY_VARIABLES_DEFAULT_NAME}\"\n    }"
+ },
+ "math_round": {
+  "file": "blocks/math.js",
+  "start_line": 236,
+  "end_line": 259,
+  "source": "{\n    \"type\": \"math_round\",\n    \"message0\": \"%1 %2\",\n    \"args0\": [\n      {\n        \"type\": \"field_dropdown\",\n        \"name\": \"OP\",\n        \"options\": [\n          [\"%{BKY_MATH_ROUND_OPERATOR_ROUND}\", \"ROUND\"],\n          [\"%{BKY_MATH_ROUND_OPERATOR_ROUNDUP}\", \"ROUNDUP\"],\n          [\"%{BKY_MATH_ROUND_OPERATOR_ROUNDDOWN}\", \"ROUNDDOWN\"]\n        ]\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"NUM\",\n        \"check\": \"Number\"\n      }\n    ],\n    \"output\": \"Number\",\n    \"style\": \"math_blocks\",\n    \"helpUrl\": \"%{BKY_MATH_ROUND_HELPURL}\",\n    \"tooltip\": \"%{BKY_MATH_ROUND_TOOLTIP}\"\n  }"
+ },
+ "math_on_list": {
+  "file": "blocks/math.js",
+  "start_line": 263,
+  "end_line": 292,
+  "source": "{\n    \"type\": \"math_on_list\",\n    \"message0\": \"%1 %2\",\n    \"args0\": [\n      {\n        \"type\": \"field_dropdown\",\n        \"name\": \"OP\",\n        \"options\": [\n          [\"%{BKY_MATH_ONLIST_OPERATOR_SUM}\", \"SUM\"],\n          [\"%{BKY_MATH_ONLIST_OPERATOR_MIN}\", \"MIN\"],\n          [\"%{BKY_MATH_ONLIST_OPERATOR_MAX}\", \"MAX\"],\n          [\"%{BKY_MATH_ONLIST_OPERATOR_AVERAGE}\", \"AVERAGE\"],\n          [\"%{BKY_MATH_ONLIST_OPERATOR_MEDIAN}\", \"MEDIAN\"],\n          [\"%{BKY_MATH_ONLIST_OPERATOR_MODE}\", \"MODE\"],\n          [\"%{BKY_MATH_ONLIST_OPERATOR_STD_DEV}\", \"STD_DEV\"],\n          [\"%{BKY_MATH_ONLIST_OPERATOR_RANDOM}\", \"RANDOM\"]\n        ]\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"LIST\",\n        \"check\": \"Array\"\n      }\n    ],\n    \"output\": \"Number\",\n    \"style\": \"math_blocks\",\n    \"helpUrl\": \"%{BKY_MATH_ONLIST_HELPURL}\",\n    \"mutator\": \"math_modes_of_list_mutator\",\n    \"extensions\": [\"math_op_tooltip\"]\n  }"
+ },
+ "math_modulo": {
+  "file": "blocks/math.js",
+  "start_line": 295,
+  "end_line": 316,
+  "source": "{\n    \"type\": \"math_modulo\",\n    \"message0\": \"%{BKY_MATH_MODULO_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"DIVIDEND\",\n        \"check\": \"Number\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"DIVISOR\",\n        \"check\": \"Number\"\n      }\n    ],\n    \"inputsInline\": true,\n    \"output\": \"Number\",\n    // \"style\": \"math_blocks\",\n    \"tooltip\": \"%{BKY_MATH_MODULO_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_MATH_MODULO_HELPURL}\",\n    \"colour\": \"#FF9900\"\n  }"
+ },
+ "math_constrain": {
+  "file": "blocks/math.js",
+  "start_line": 319,
+  "end_line": 344,
+  "source": "{\n    \"type\": \"math_constrain\",\n    \"message0\": \"%{BKY_MATH_CONSTRAIN_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"VALUE\",\n        \"check\": \"Number\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"LOW\",\n        \"check\": \"Number\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"HIGH\",\n        \"check\": \"Number\"\n      }\n    ],\n    \"inputsInline\": true,\n    \"output\": \"Number\",\n    \"style\": \"math_blocks\",\n    \"tooltip\": \"%{BKY_MATH_CONSTRAIN_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_MATH_CONSTRAIN_HELPURL}\"\n  }"
+ },
+ "math_random_int": {
+  "file": "blocks/math.js",
+  "start_line": 347,
+  "end_line": 367,
+  "source": "{\n    \"type\": \"math_random_int\",\n    \"message0\": \"%{BKY_MATH_RANDOM_INT_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"FROM\",\n        \"check\": \"Number\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"TO\",\n        \"check\": \"Number\"\n      }\n    ],\n    \"inputsInline\": true,\n    \"output\": \"Number\",\n    \"style\": \"math_blocks\",\n    \"tooltip\": \"%{BKY_MATH_RANDOM_INT_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_MATH_RANDOM_INT_HELPURL}\"\n  }"
+ },
+ "math_random_float": {
+  "file": "blocks/math.js",
+  "start_line": 370,
+  "end_line": 377,
+  "source": "{\n    \"type\": \"math_random_float\",\n    \"message0\": \"%{BKY_MATH_RANDOM_FLOAT_TITLE_RANDOM}\",\n    \"output\": \"Number\",\n    \"style\": \"math_blocks\",\n    \"tooltip\": \"%{BKY_MATH_RANDOM_FLOAT_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_MATH_RANDOM_FLOAT_HELPURL}\"\n  }"
+ },
+ "math_atan2": {
+  "file": "blocks/math.js",
+  "start_line": 380,
+  "end_line": 400,
+  "source": "{\n    \"type\": \"math_atan2\",\n    \"message0\": \"%{BKY_MATH_ATAN2_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"X\",\n        \"check\": \"Number\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"Y\",\n        \"check\": \"Number\"\n      }\n    ],\n    \"inputsInline\": true,\n    \"output\": \"Number\",\n    \"style\": \"math_blocks\",\n    \"tooltip\": \"%{BKY_MATH_ATAN2_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_MATH_ATAN2_HELPURL}\"\n  }"
+ },
+ "text": {
+  "file": "blocks/text.js",
+  "start_line": 42,
+  "end_line": 58,
+  "source": "{\n    \"type\": \"text\",\n    \"message0\": \"%1\",\n    \"args0\": [{\n      \"type\": \"field_input\",\n      \"name\": \"TEXT\",\n      \"text\": \"\"\n    }],\n    \"output\": \"String\",\n    \"style\": \"text_blocks\",\n    \"helpUrl\": \"%{BKY_TEXT_TEXT_HELPURL}\",\n    \"tooltip\": \"%{BKY_TEXT_TEXT_TOOLTIP}\",\n    \"extensions\": [\n      \"text_quotes\",\n      \"parent_tooltip_when_inline\"\n    ]\n  }"
+ },
+ "field_input": {
+  "file": "blocks/text.js",
+  "start_line": 45,
+  "end_line": 49,
+  "source": "{\n      \"type\": \"field_input\",\n      \"name\": \"TEXT\",\n      \"text\": \"\"\n    }"
+ },
+ "text_join": {
+  "file": "blocks/text.js",
+  "start_line": 59,
+  "end_line": 68,
+  "source": "{\n    \"type\": \"text_join\",\n    \"message0\": \"\",\n    \"output\": \"String\",\n    \"style\": \"text_blocks\",\n    \"helpUrl\": \"%{BKY_TEXT_JOIN_HELPURL}\",\n    \"tooltip\": \"%{BKY_TEXT_JOIN_TOOLTIP}\",\n    \"mutator\": \"text_join_mutator\"\n\n  }"
+ },
+ "text_create_join_container": {
+  "file": "blocks/text.js",
+  "start_line": 69,
+  "end_line": 82,
+  "source": "{\n    \"type\": \"text_create_join_container\",\n    \"message0\": \"%{BKY_TEXT_CREATE_JOIN_TITLE_JOIN} %1 %2\",\n    \"args0\": [{\n      \"type\": \"input_dummy\"\n    },\n    {\n      \"type\": \"input_statement\",\n      \"name\": \"STACK\"\n    }],\n    \"style\": \"text_blocks\",\n    \"tooltip\": \"%{BKY_TEXT_CREATE_JOIN_TOOLTIP}\",\n    \"enableContextMenu\": false\n  }"
+ },
+ "input_dummy": {
+  "file": "blocks/text.js",
+  "start_line": 72,
+  "end_line": 74,
+  "source": "{\n      \"type\": \"input_dummy\"\n    }"
+ },
+ "text_create_join_item": {
+  "file": "blocks/text.js",
+  "start_line": 83,
+  "end_line": 91,
+  "source": "{\n    \"type\": \"text_create_join_item\",\n    \"message0\": \"%{BKY_TEXT_CREATE_JOIN_ITEM_TITLE_ITEM}\",\n    \"previousStatement\": null,\n    \"nextStatement\": null,\n    \"style\": \"text_blocks\",\n    \"tooltip\": \"%{BKY_TEXT_CREATE_JOIN_ITEM_TOOLTIP}\",\n    \"enableContextMenu\": false\n  }"
+ },
+ "text_append": {
+  "file": "blocks/text.js",
+  "start_line": 92,
+  "end_line": 110,
+  "source": "{\n    \"type\": \"text_append\",\n    \"message0\": \"%{BKY_TEXT_APPEND_TITLE}\",\n    \"args0\": [{\n      \"type\": \"field_variable\",\n      \"name\": \"VAR\",\n      \"variable\": \"%{BKY_TEXT_APPEND_VARIABLE}\"\n    },\n    {\n      \"type\": \"input_value\",\n      \"name\": \"TEXT\"\n    }],\n    \"previousStatement\": null,\n    \"nextStatement\": null,\n    \"style\": \"text_blocks\",\n    \"extensions\": [\n      \"text_append_tooltip\"\n    ]\n  }"
+ },
+ "text_length": {
+  "file": "blocks/text.js",
+  "start_line": 111,
+  "end_line": 125,
+  "source": "{\n    \"type\": \"text_length\",\n    \"message0\": \"%{BKY_TEXT_LENGTH_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"VALUE\",\n        \"check\": ['String', 'Array']\n      }\n    ],\n    \"output\": 'Number',\n    \"style\": \"text_blocks\",\n    \"tooltip\": \"%{BKY_TEXT_LENGTH_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_TEXT_LENGTH_HELPURL}\"\n  }"
+ },
+ "text_isEmpty": {
+  "file": "blocks/text.js",
+  "start_line": 126,
+  "end_line": 140,
+  "source": "{\n    \"type\": \"text_isEmpty\",\n    \"message0\": \"%{BKY_TEXT_ISEMPTY_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"VALUE\",\n        \"check\": ['String', 'Array']\n      }\n    ],\n    \"output\": 'Boolean',\n    \"style\": \"text_blocks\",\n    \"tooltip\": \"%{BKY_TEXT_ISEMPTY_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_TEXT_ISEMPTY_HELPURL}\"\n  }"
+ },
+ "text_indexOf": {
+  "file": "blocks/text.js",
+  "start_line": 141,
+  "end_line": 177,
+  "source": "{\n    \"type\": \"text_indexOf\",\n    \"message0\": \"%{BKY_TEXT_INDEXOF_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"VALUE\",\n        \"check\": \"String\"\n      },\n      {\n        \"type\": \"field_dropdown\",\n        \"name\": \"END\",\n        \"options\": [\n          [\n            \"%{BKY_TEXT_INDEXOF_OPERATOR_FIRST}\",\n            \"FIRST\"\n          ],\n          [\n            \"%{BKY_TEXT_INDEXOF_OPERATOR_LAST}\",\n            \"LAST\"\n          ]\n        ]\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"FIND\",\n        \"check\": \"String\"\n      }\n    ],\n    \"output\": \"Number\",\n    \"style\": \"text_blocks\",\n    \"helpUrl\": \"%{BKY_TEXT_INDEXOF_HELPURL}\",\n    \"inputsInline\": true,\n    \"extensions\": [\n      \"text_indexOf_tooltip\"\n    ]\n  }"
+ },
+ "text_charAt": {
+  "file": "blocks/text.js",
+  "start_line": 178,
+  "end_line": 204,
+  "source": "{\n    \"type\": \"text_charAt\",\n    \"message0\": \"%{BKY_TEXT_CHARAT_TITLE}\", // \"in text %1 %2\"\n    \"args0\": [\n      {\n        \"type\":\"input_value\",\n        \"name\": \"VALUE\",\n        \"check\": \"String\"\n      },\n      {\n        \"type\": \"field_dropdown\",\n        \"name\": \"WHERE\",\n        \"options\": [\n          [\"%{BKY_TEXT_CHARAT_FROM_START}\", \"FROM_START\"],\n          [\"%{BKY_TEXT_CHARAT_FROM_END}\", \"FROM_END\"],\n          [\"%{BKY_TEXT_CHARAT_FIRST}\", \"FIRST\"],\n          [\"%{BKY_TEXT_CHARAT_LAST}\", \"LAST\"],\n          [\"%{BKY_TEXT_CHARAT_RANDOM}\", \"RANDOM\"]\n        ]\n      }\n    ],\n    \"output\": \"String\",\n    \"style\": \"text_blocks\",\n    \"helpUrl\": \"%{BKY_TEXT_CHARAT_HELPURL}\",\n    \"inputsInline\": true,\n    \"mutator\": \"text_charAt_mutator\"\n  }"
+ },
+ "variables_get": {
+  "file": "blocks/variables.js",
+  "start_line": 47,
+  "end_line": 62,
+  "source": "{\n    \"type\": \"variables_get\",\n    \"message0\": \"%1\",\n    \"args0\": [\n      {\n        \"type\": \"field_variable\",\n        \"name\": \"VAR\",\n        \"variable\": \"%{BKY_VARIABLES_DEFAULT_NAME}\"\n      }\n    ],\n    \"output\": null,\n    \"style\": \"variable_blocks\",\n    \"helpUrl\": \"%{BKY_VARIABLES_GET_HELPURL}\",\n    \"tooltip\": \"%{BKY_VARIABLES_GET_TOOLTIP}\",\n    \"extensions\": [\"contextMenu_variableSetterGetter\"]\n  }"
+ },
+ "variables_set": {
+  "file": "blocks/variables.js",
+  "start_line": 64,
+  "end_line": 84,
+  "source": "{\n    \"type\": \"variables_set\",\n    \"message0\": \"%{BKY_VARIABLES_SET}\",\n    \"args0\": [\n      {\n        \"type\": \"field_variable\",\n        \"name\": \"VAR\",\n        \"variable\": \"%{BKY_VARIABLES_DEFAULT_NAME}\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"VALUE\"\n      }\n    ],\n    \"previousStatement\": null,\n    \"nextStatement\": null,\n    \"style\": \"variable_blocks\",\n    \"tooltip\": \"%{BKY_VARIABLES_SET_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_VARIABLES_SET_HELPURL}\",\n    \"extensions\": [\"contextMenu_variableSetterGetter\"]\n  }"
+ },
+ "controls_repeat_ext": {
+  "file": "blocks/loops.js",
+  "start_line": 47,
+  "end_line": 65,
+  "source": "{\n    \"type\": \"controls_repeat_ext\",\n    \"message0\": \"%{BKY_CONTROLS_REPEAT_TITLE}\",\n    \"args0\": [{\n      \"type\": \"input_value\",\n      \"name\": \"TIMES\",\n      \"check\": \"Number\"\n    }],\n    \"message1\": \"%{BKY_CONTROLS_REPEAT_INPUT_DO} %1\",\n    \"args1\": [{\n      \"type\": \"input_statement\",\n      \"name\": \"DO\"\n    }],\n    \"previousStatement\": null,\n    \"nextStatement\": null,\n    \"style\": \"loop_blocks\",\n    \"tooltip\": \"%{BKY_CONTROLS_REPEAT_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_CONTROLS_REPEAT_HELPURL}\"\n  }"
+ },
+ "controls_repeat": {
+  "file": "blocks/loops.js",
+  "start_line": 68,
+  "end_line": 88,
+  "source": "{\n    \"type\": \"controls_repeat\",\n    \"message0\": \"%{BKY_CONTROLS_REPEAT_TITLE}\",\n    \"args0\": [{\n      \"type\": \"field_number\",\n      \"name\": \"TIMES\",\n      \"value\": 10,\n      \"min\": 0,\n      \"precision\": 1\n    }],\n    \"message1\": \"%{BKY_CONTROLS_REPEAT_INPUT_DO} %1\",\n    \"args1\": [{\n      \"type\": \"input_statement\",\n      \"name\": \"DO\"\n    }],\n    \"previousStatement\": null,\n    \"nextStatement\": null,\n    \"style\": \"loop_blocks\",\n    \"tooltip\": \"%{BKY_CONTROLS_REPEAT_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_CONTROLS_REPEAT_HELPURL}\"\n  }"
+ },
+ "controls_whileUntil": {
+  "file": "blocks/loops.js",
+  "start_line": 90,
+  "end_line": 118,
+  "source": "{\n    \"type\": \"controls_whileUntil\",\n    \"message0\": \"%1 %2\",\n    \"args0\": [\n      {\n        \"type\": \"field_dropdown\",\n        \"name\": \"MODE\",\n        \"options\": [\n          [\"%{BKY_CONTROLS_WHILEUNTIL_OPERATOR_WHILE}\", \"WHILE\"],\n          [\"%{BKY_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL}\", \"UNTIL\"]\n        ]\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"BOOL\",\n        \"check\": \"Boolean\"\n      }\n    ],\n    \"message1\": \"%{BKY_CONTROLS_REPEAT_INPUT_DO} %1\",\n    \"args1\": [{\n      \"type\": \"input_statement\",\n      \"name\": \"DO\"\n    }],\n    \"previousStatement\": null,\n    \"nextStatement\": null,\n    \"style\": \"loop_blocks\",\n    \"helpUrl\": \"%{BKY_CONTROLS_WHILEUNTIL_HELPURL}\",\n    \"extensions\": [\"controls_whileUntil_tooltip\"]\n  }"
+ },
+ "controls_for": {
+  "file": "blocks/loops.js",
+  "start_line": 120,
+  "end_line": 162,
+  "source": "{\n    \"type\": \"controls_for\",\n    \"message0\": \"%{BKY_CONTROLS_FOR_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"field_variable\",\n        \"name\": \"VAR\",\n        \"variable\": null\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"FROM\",\n        \"check\": \"Number\",\n        \"align\": \"RIGHT\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"TO\",\n        \"check\": \"Number\",\n        \"align\": \"RIGHT\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"BY\",\n        \"check\": \"Number\",\n        \"align\": \"RIGHT\"\n      }\n    ],\n    \"message1\": \"%{BKY_CONTROLS_REPEAT_INPUT_DO} %1\",\n    \"args1\": [{\n      \"type\": \"input_statement\",\n      \"name\": \"DO\"\n    }],\n    \"inputsInline\": true,\n    \"previousStatement\": null,\n    \"nextStatement\": null,\n    \"style\": \"loop_blocks\",\n    \"helpUrl\": \"%{BKY_CONTROLS_FOR_HELPURL}\",\n    \"extensions\": [\n      \"contextMenu_newGetVariableBlock\",\n      \"controls_for_tooltip\"\n    ]\n  }"
+ },
+ "controls_forEach": {
+  "file": "blocks/loops.js",
+  "start_line": 164,
+  "end_line": 192,
+  "source": "{\n    \"type\": \"controls_forEach\",\n    \"message0\": \"%{BKY_CONTROLS_FOREACH_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"field_variable\",\n        \"name\": \"VAR\",\n        \"variable\": null\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"LIST\",\n        \"check\": \"Array\"\n      }\n    ],\n    \"message1\": \"%{BKY_CONTROLS_REPEAT_INPUT_DO} %1\",\n    \"args1\": [{\n      \"type\": \"input_statement\",\n      \"name\": \"DO\"\n    }],\n    \"previousStatement\": null,\n    \"nextStatement\": null,\n    \"style\": \"loop_blocks\",\n    \"helpUrl\": \"%{BKY_CONTROLS_FOREACH_HELPURL}\",\n    \"extensions\": [\n      \"contextMenu_newGetVariableBlock\",\n      \"controls_forEach_tooltip\"\n    ]\n  }"
+ },
+ "controls_flow_statements": {
+  "file": "blocks/loops.js",
+  "start_line": 194,
+  "end_line": 212,
+  "source": "{\n    \"type\": \"controls_flow_statements\",\n    \"message0\": \"%1\",\n    \"args0\": [{\n      \"type\": \"field_dropdown\",\n      \"name\": \"FLOW\",\n      \"options\": [\n        [\"%{BKY_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK}\", \"BREAK\"],\n        [\"%{BKY_CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE}\", \"CONTINUE\"]\n      ]\n    }],\n    \"previousStatement\": null,\n    \"style\": \"loop_blocks\",\n    \"helpUrl\": \"%{BKY_CONTROLS_FLOW_STATEMENTS_HELPURL}\",\n    \"extensions\": [\n      \"controls_flow_tooltip\",\n      \"controls_flow_in_loop_check\"\n    ]\n  }"
+ },
+ "colour_picker": {
+  "file": "blocks/colour.js",
+  "start_line": 47,
+  "end_line": 62,
+  "source": "{\n    \"type\": \"colour_picker\",\n    \"message0\": \"%1\",\n    \"args0\": [\n      {\n        \"type\": \"field_colour\",\n        \"name\": \"COLOUR\",\n        \"colour\": \"#ff0000\"\n      }\n    ],\n    \"output\": \"Colour\",\n    \"helpUrl\": \"%{BKY_COLOUR_PICKER_HELPURL}\",\n    \"style\": \"colour_blocks\",\n    \"tooltip\": \"%{BKY_COLOUR_PICKER_TOOLTIP}\",\n    \"extensions\": [\"parent_tooltip_when_inline\"]\n  }"
+ },
+ "field_colour": {
+  "file": "blocks/colour.js",
+  "start_line": 51,
+  "end_line": 55,
+  "source": "{\n        \"type\": \"field_colour\",\n        \"name\": \"COLOUR\",\n        \"colour\": \"#ff0000\"\n      }"
+ },
+ "colour_random": {
+  "file": "blocks/colour.js",
+  "start_line": 65,
+  "end_line": 72,
+  "source": "{\n    \"type\": \"colour_random\",\n    \"message0\": \"%{BKY_COLOUR_RANDOM_TITLE}\",\n    \"output\": \"Colour\",\n    \"helpUrl\": \"%{BKY_COLOUR_RANDOM_HELPURL}\",\n    \"style\": \"colour_blocks\",\n    \"tooltip\": \"%{BKY_COLOUR_RANDOM_TOOLTIP}\"\n  }"
+ },
+ "colour_rgb": {
+  "file": "blocks/colour.js",
+  "start_line": 75,
+  "end_line": 102,
+  "source": "{\n    \"type\": \"colour_rgb\",\n    \"message0\": \"%{BKY_COLOUR_RGB_TITLE} %{BKY_COLOUR_RGB_RED} %1 %{BKY_COLOUR_RGB_GREEN} %2 %{BKY_COLOUR_RGB_BLUE} %3\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"RED\",\n        \"check\": \"Number\",\n        \"align\": \"RIGHT\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"GREEN\",\n        \"check\": \"Number\",\n        \"align\": \"RIGHT\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"BLUE\",\n        \"check\": \"Number\",\n        \"align\": \"RIGHT\"\n      }\n    ],\n    \"output\": \"Colour\",\n    \"helpUrl\": \"%{BKY_COLOUR_RGB_HELPURL}\",\n    \"style\": \"colour_blocks\",\n    \"tooltip\": \"%{BKY_COLOUR_RGB_TOOLTIP}\"\n  }"
+ },
+ "colour_blend": {
+  "file": "blocks/colour.js",
+  "start_line": 105,
+  "end_line": 133,
+  "source": "{\n    \"type\": \"colour_blend\",\n    \"message0\": \"%{BKY_COLOUR_BLEND_TITLE} %{BKY_COLOUR_BLEND_COLOUR1} \" +\n        \"%1 %{BKY_COLOUR_BLEND_COLOUR2} %2 %{BKY_COLOUR_BLEND_RATIO} %3\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"COLOUR1\",\n        \"check\": \"Colour\",\n        \"align\": \"RIGHT\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"COLOUR2\",\n        \"check\": \"Colour\",\n        \"align\": \"RIGHT\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"RATIO\",\n        \"check\": \"Number\",\n        \"align\": \"RIGHT\"\n      }\n    ],\n    \"output\": \"Colour\",\n    \"helpUrl\": \"%{BKY_COLOUR_BLEND_HELPURL}\",\n    \"style\": \"colour_blocks\",\n    \"tooltip\": \"%{BKY_COLOUR_BLEND_TOOLTIP}\"\n  }"
+ },
+ "lists_create_empty": {
+  "file": "blocks/lists.js",
+  "start_line": 50,
+  "end_line": 57,
+  "source": "{\n    \"type\": \"lists_create_empty\",\n    \"message0\": \"%{BKY_LISTS_CREATE_EMPTY_TITLE}\",\n    \"output\": \"Array\",\n    \"style\": \"list_blocks\",\n    \"tooltip\": \"%{BKY_LISTS_CREATE_EMPTY_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_LISTS_CREATE_EMPTY_HELPURL}\"\n  }"
+ },
+ "lists_repeat": {
+  "file": "blocks/lists.js",
+  "start_line": 59,
+  "end_line": 77,
+  "source": "{\n    \"type\": \"lists_repeat\",\n    \"message0\": \"%{BKY_LISTS_REPEAT_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"ITEM\"\n      },\n      {\n        \"type\": \"input_value\",\n        \"name\": \"NUM\",\n        \"check\": \"Number\"\n      }\n    ],\n    \"output\": \"Array\",\n    \"style\": \"list_blocks\",\n    \"tooltip\": \"%{BKY_LISTS_REPEAT_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_LISTS_REPEAT_HELPURL}\"\n  }"
+ },
+ "lists_reverse": {
+  "file": "blocks/lists.js",
+  "start_line": 79,
+  "end_line": 94,
+  "source": "{\n    \"type\": \"lists_reverse\",\n    \"message0\": \"%{BKY_LISTS_REVERSE_MESSAGE0}\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"LIST\",\n        \"check\": \"Array\"\n      }\n    ],\n    \"output\": \"Array\",\n    \"inputsInline\": true,\n    \"style\": \"list_blocks\",\n    \"tooltip\": \"%{BKY_LISTS_REVERSE_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_LISTS_REVERSE_HELPURL}\"\n  }"
+ },
+ "lists_isEmpty": {
+  "file": "blocks/lists.js",
+  "start_line": 96,
+  "end_line": 110,
+  "source": "{\n    \"type\": \"lists_isEmpty\",\n    \"message0\": \"%{BKY_LISTS_ISEMPTY_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"VALUE\",\n        \"check\": [\"String\", \"Array\"]\n      }\n    ],\n    \"output\": \"Boolean\",\n    \"style\": \"list_blocks\",\n    \"tooltip\": \"%{BKY_LISTS_ISEMPTY_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_LISTS_ISEMPTY_HELPURL}\"\n  }"
+ },
+ "lists_length": {
+  "file": "blocks/lists.js",
+  "start_line": 112,
+  "end_line": 126,
+  "source": "{\n    \"type\": \"lists_length\",\n    \"message0\": \"%{BKY_LISTS_LENGTH_TITLE}\",\n    \"args0\": [\n      {\n        \"type\": \"input_value\",\n        \"name\": \"VALUE\",\n        \"check\": [\"String\", \"Array\"]\n      }\n    ],\n    \"output\": \"Number\",\n    \"style\": \"list_blocks\",\n    \"tooltip\": \"%{BKY_LISTS_LENGTH_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_LISTS_LENGTH_HELPURL}\"\n  }"
+ },
+ "variables_get_dynamic": {
+  "file": "blocks/variables_dynamic.js",
+  "start_line": 46,
+  "end_line": 59,
+  "source": "{\n    \"type\": \"variables_get_dynamic\",\n    \"message0\": \"%1\",\n    \"args0\": [{\n      \"type\": \"field_variable\",\n      \"name\": \"VAR\",\n      \"variable\": \"%{BKY_VARIABLES_DEFAULT_NAME}\"\n    }],\n    \"output\": null,\n    \"style\": \"variable_dynamic_blocks\",\n    \"helpUrl\": \"%{BKY_VARIABLES_GET_HELPURL}\",\n    \"tooltip\": \"%{BKY_VARIABLES_GET_TOOLTIP}\",\n    \"extensions\": [\"contextMenu_variableDynamicSetterGetter\"]\n  }"
+ },
+ "variables_set_dynamic": {
+  "file": "blocks/variables_dynamic.js",
+  "start_line": 61,
+  "end_line": 80,
+  "source": "{\n    \"type\": \"variables_set_dynamic\",\n    \"message0\": \"%{BKY_VARIABLES_SET}\",\n    \"args0\": [{\n      \"type\": \"field_variable\",\n      \"name\": \"VAR\",\n      \"variable\": \"%{BKY_VARIABLES_DEFAULT_NAME}\"\n    },\n    {\n      \"type\": \"input_value\",\n      \"name\": \"VALUE\"\n    }\n    ],\n    \"previousStatement\": null,\n    \"nextStatement\": null,\n    \"style\": \"variable_dynamic_blocks\",\n    \"tooltip\": \"%{BKY_VARIABLES_SET_TOOLTIP}\",\n    \"helpUrl\": \"%{BKY_VARIABLES_SET_HELPURL}\",\n    \"extensions\": [\"contextMenu_variableDynamicSetterGetter\"]\n  }"
+ }
+}

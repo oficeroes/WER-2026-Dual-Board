@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "errors": [],
+  "original": {
+    "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\ps_work\\browser_assets.副本",
+    "size": 85271033,
+    "sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40",
+    "count": 6645
+  },
+  "python_patch": {
+    "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\ps_work\\python_patch\\browser_assets.patched",
+    "size": 85320453,
+    "sha256": "a1a3bf14e1c1b189ffce3faf423bf6eadebad1bb71f90f90c1e630aabbdb1604",
+    "count": 6645
+  },
+  "ps_patch": {
+    "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\ps_work\\ps_patch\\browser_assets.patched",
+    "size": 85320453,
+    "sha256": "a1a3bf14e1c1b189ffce3faf423bf6eadebad1bb71f90f90c1e630aabbdb1604",
+    "count": 6645
+  },
+  "byte_identical": true,
+  "entry_count": 6645,
+  "names_order_identical": true,
+  "same_entries": 6644,
+  "changed_entries": [
+    {
+      "name": "/Blockly_Code/maingui_init.js",
+      "orig": "c86fe3fa00c0433c43cf888eedaedebe71d35c93d161ac13d034222901447561",
+      "python": "c6f652639ff011505bd950f681ac10ea04c3addf7ce17923971f460c5e43d1ee",
+      "ps": "c6f652639ff011505bd950f681ac10ea04c3addf7ce17923971f460c5e43d1ee",
+      "orig_len": 5242,
+      "python_len": 54662,
+      "ps_len": 54662
+    }
+  ],
+  "init_old_sha256": "c86fe3fa00c0433c43cf888eedaedebe71d35c93d161ac13d034222901447561",
+  "init_python_sha256": "c6f652639ff011505bd950f681ac10ea04c3addf7ce17923971f460c5e43d1ee",
+  "init_ps_sha256": "c6f652639ff011505bd950f681ac10ea04c3addf7ce17923971f460c5e43d1ee",
+  "fragment": {
+    "chars": 48657,
+    "sha256": "8de4759a39e64a1169f6a648b027d3fea0d0b3fd8000709af7a4869d9f932d4d"
+  },
+  "decoded": {
+    "orig_chars": 379,
+    "python_chars": 48657,
+    "ps_chars": 48657,
+    "python_sha256": "8de4759a39e64a1169f6a648b027d3fea0d0b3fd8000709af7a4869d9f932d4d",
+    "ps_sha256": "8de4759a39e64a1169f6a648b027d3fea0d0b3fd8000709af7a4869d9f932d4d",
+    "equals_fragment": true,
+    "other_unchanged_defaultcodeTr": true,
+    "other_unchanged_defaultcodeEn": true
+  }
+}

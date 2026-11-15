@@ -1,0 +1,320 @@
+{
+ "source": "逆向资料/通用数据/积木定义.json",
+ "note": "tooltip=积木鼠标悬停量程提示（官方）。label 为原始中文。",
+ "blocks": [
+  {
+   "id": "set_do",
+   "label": "数字输出 下拉[动态列表] 下拉[OFF/ON]",
+   "fields": [
+    "PORT",
+    "STATE"
+   ],
+   "inputs": [],
+   "hue": "#009900",
+   "tooltip": ""
+  },
+  {
+   "id": "printf_text",
+   "label": "显示 输入框",
+   "fields": [
+    "text"
+   ],
+   "inputs": [],
+   "hue": "#009900",
+   "tooltip": ""
+  },
+  {
+   "id": "printf_number",
+   "label": "显示 输入框",
+   "fields": [
+    "dataname"
+   ],
+   "inputs": [
+    {
+     "name": "data",
+     "kind": "value"
+    }
+   ],
+   "hue": "#009900",
+   "tooltip": ""
+  },
+  {
+   "id": "printf_lines",
+   "label": "多行显示",
+   "fields": [],
+   "inputs": [
+    {
+     "name": "code",
+     "kind": "statement"
+    }
+   ],
+   "hue": "#009900",
+   "tooltip": ""
+  },
+  {
+   "id": "printf",
+   "label": "显示",
+   "fields": [],
+   "inputs": [
+    {
+     "name": "para1",
+     "kind": "value"
+    }
+   ],
+   "hue": "#009900",
+   "tooltip": ""
+  },
+  {
+   "id": "printf_emoji",
+   "label": "显示表情 下拉[动态列表]",
+   "fields": [
+    "emoji_name"
+   ],
+   "inputs": [],
+   "hue": "#009900",
+   "tooltip": ""
+  },
+  {
+   "id": "play_sound",
+   "label": "播放 下拉[hello/hai/bye/thank/wo/sorry/hen/ok] 下拉[动态列表]",
+   "fields": [
+    "musicname",
+    "musicname"
+   ],
+   "inputs": [],
+   "hue": "#CC66FF",
+   "tooltip": ""
+  },
+  {
+   "id": "play_sound_until",
+   "label": "播放 下拉[hello/hai/bye/thank/wo/sorry/hen/ok] 下拉[动态列表] 直到播放完毕",
+   "fields": [
+    "musicname",
+    "musicname"
+   ],
+   "inputs": [],
+   "hue": "#CC66FF",
+   "tooltip": ""
+  },
+  {
+   "id": "record",
+   "label": "录音 record_time_field 秒 保存为文件 下拉[1/2/3/4/5/6/7/8…]",
+   "fields": [
+    "record_time",
+    "record_ID"
+   ],
+   "inputs": [],
+   "hue": "#CC66FF",
+   "tooltip": ""
+  },
+  {
+   "id": "set_coloured_light",
+   "label": "彩灯 下拉[动态列表] 下拉[动态列表]",
+   "fields": [
+    "port",
+    "on_off"
+   ],
+   "inputs": [],
+   "hue": "#CC66FF",
+   "tooltip": ""
+  },
+  {
+   "id": "set_smart_light",
+   "label": "智能灯 下拉[动态列表] 颜色 colourField 模式 modeField periodTitleField periodField secondTitleField",
+   "fields": [
+    "port",
+    "colour",
+    "mode",
+    "period_title",
+    "period",
+    "second_title"
+   ],
+   "inputs": [],
+   "hue": "#CC66FF",
+   "tooltip": ""
+  },
+  {
+   "id": "close_smart_light",
+   "label": "关闭智能灯 下拉[动态列表]",
+   "fields": [
+    "port"
+   ],
+   "inputs": [],
+   "hue": "#CC66FF",
+   "tooltip": ""
+  },
+  {
+   "id": "AI",
+   "label": "AI",
+   "fields": [],
+   "inputs": [
+    {
+     "name": "CHANNEL",
+     "kind": "value"
+    }
+   ],
+   "hue": "#99CC33",
+   "tooltip": ""
+  },
+  {
+   "id": "getai_mic",
+   "label": "麦克风检测声音强度",
+   "fields": [],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": ""
+  },
+  {
+   "id": "getai_ir",
+   "label": "红外 下拉[动态列表] 测距",
+   "fields": [
+    "channel"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": "0~1200"
+  },
+  {
+   "id": "get_flame",
+   "label": "火焰 下拉[动态列表] 检测光源强度",
+   "fields": [
+    "port"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": "0~4095"
+  },
+  {
+   "id": "getai_glay",
+   "label": "灰度 下拉[动态列表] 地面灰度",
+   "fields": [
+    "channel"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": "0~4095"
+  },
+  {
+   "id": "get_integrated_grayscale",
+   "label": "集成灰度 下拉[动态列表] 下拉[动态列表] 灰度值",
+   "fields": [
+    "port",
+    "channel"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": "0~4095"
+  },
+  {
+   "id": "getai_sonic",
+   "label": "超声 下拉[动态列表] 测距",
+   "fields": [
+    "channel"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": "50~1500"
+  },
+  {
+   "id": "get_sonic_detect_object",
+   "label": "超声 下拉[动态列表] 探测到物体",
+   "fields": [
+    "port"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": ""
+  },
+  {
+   "id": "getai_light",
+   "label": "光敏 下拉[动态列表] 探测环境光亮度",
+   "fields": [
+    "channel"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": "0~4095"
+  },
+  {
+   "id": "get_angle",
+   "label": "角度 下拉[动态列表] 角度值",
+   "fields": [
+    "port"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": "0~359"
+  },
+  {
+   "id": "getai_temperature",
+   "label": "温度 下拉[动态列表] 检测环境温度",
+   "fields": [
+    "channel"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": "0~40"
+  },
+  {
+   "id": "get_humidity",
+   "label": "湿度 下拉[动态列表] 检测环境湿度",
+   "fields": [
+    "port"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": "0~100"
+  },
+  {
+   "id": "get_magnetic",
+   "label": "磁敏 下拉[动态列表] 检测到磁场",
+   "fields": [
+    "port"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": ""
+  },
+  {
+   "id": "get_colour",
+   "label": "颜色 下拉[动态列表] 检测到 下拉[动态列表]",
+   "fields": [
+    "port",
+    "colour"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": ""
+  },
+  {
+   "id": "getai_touch",
+   "label": "碰撞 下拉[动态列表] 碰到物体",
+   "fields": [
+    "channel"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": ""
+  },
+  {
+   "id": "get_aibychannel",
+   "label": "读取模拟通道 下拉[动态列表]",
+   "fields": [
+    "Port"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": ""
+  },
+  {
+   "id": "getai_battery",
+   "label": "电量百分比 下拉[通道0/通道1/通道2/通道3]",
+   "fields": [
+    "channel"
+   ],
+   "inputs": [],
+   "hue": "#99CC33",
+   "tooltip": ""
+  }
+ ]
+}

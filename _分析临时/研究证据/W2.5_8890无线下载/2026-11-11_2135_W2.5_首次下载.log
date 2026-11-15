@@ -1,0 +1,19 @@
+进度 0% 准备下载 W2PROBE（272 字节）
+进度 1% 正在连接机器人 192.168.1.103…
+[info] TCP 192.168.1.103:10086 已连接，发送心跳启动帧
+[info] 心跳成功，机器人类型 111，耗时 1095ms
+进度 4% 机器人握手成功，正在建立文件通道…
+[info] TCP 192.168.1.103:8890 已连接（文件传输通道）
+进度 6% 文件通道已建立，开始下载…
+[info] 请求下载: 文件=W2PROBE.py.zip 大小=272 CRC32=0x1f8899dd appType=3 fileType=21
+[debug] 请求帧: aa 55 00 20 6f 01 01 00 00 00 04 03 15 10 01 00 00 dd 99 88 1f 57 32 50 52 4f 42 45 2e 70 79 2e 7a 69 70 73
+进度 7% 已连接，正在请求下载…
+[info] 机器人允许传输（160,1），开始分块发送
+[info] 暂停心跳（文件传输期间）
+进度 96% 正在传输 272/272 字节…
+[info] 文件发送完毕，等待机器人 CRC 校验结果
+进度 99% 传输完成，机器人正在校验…
+进度 100% 下载成功
+[info] 恢复心跳
+[info] 下载完成：W2PROBE.py.zip（272 字节，耗时 1292ms，下载成功）
+{"ok":true,"bytes":272,"ms":1292,"remoteName":"W2PROBE.py.zip","headerChanged":false,"stubLinesRemoved":0,"header":"#<SKCON9><WiFi><W2PROBE>","programName":"W2PROBE","fileExists":false,"code":1,"message":"下载成功"}

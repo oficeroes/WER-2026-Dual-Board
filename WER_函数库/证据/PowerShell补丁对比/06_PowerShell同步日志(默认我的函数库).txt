@@ -1,0 +1,44 @@
+===== PowerShell 版同步：默认函数库（WER_函数库\我的函数库.srhs） =====
+执行方式：PowerShell 脚本直接调用（与 .cmd 最终执行的是同一个 .ps1）
+耗时：3.6 秒    进程/脚本退出码：0
+==========================================================================================
+
+
+==========================================================================
+  AbilixScratch3.0 新建项目默认模板 —— 同步「我的函数库」（仅 PowerShell 版）
+==========================================================================
+        本机 PowerShell 版本：5.1.26100.9711
+[同步] 1/7 定位并校验 browser_assets
+        原资源包：D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\browser_assets.副本
+        条目数=6645  文件大小=81.32 MB  索引结束=406350
+        原包 sha256=df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40
+[同步] 2/7 纯 roundtrip 自检（解包→原样重打包→逐字节比较）
+        逐字节一致 OK（df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40）
+[同步] 3/7 读取函数库并生成 defaultcode 片段
+        默认函数库：D:\UserData\Documents\WER\2026普级赛\WER_函数库\我的函数库.srhs
+        来源：D:\UserData\Documents\WER\2026普级赛\WER_函数库\我的函数库.srhs
+        顶层积木块=1（start=1，无返回函数=0，有返回函数=0）变量=0  片段=1155 字符
+[同步] 4/7 修改 Blockly_Code/maingui_init.js（只改简体中文 defaultcode）
+        原 defaultcode 条目：5242 字节  sha256=c86fe3fa00c0433c43cf888eedaedebe71d35c93d161ac13d034222901447561  BOM=False
+        修改后：6633 字节  sha256=8437593c10b8a44bc733ff3716853de209ae4db4abc093d327a0e17e1a71fa2e  （379 -> 1155 字符）
+[同步] 5/7 重新打包 browser_assets
+        补丁包：D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\ps_patch_myfunc\browser_assets.patched
+        大小=81.32 MB  sha256=be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c
+[同步] 6/7 打包后自检（逐条目 sha256 + 布局 + 读回 defaultcode）
+        其它 6644 个条目 sha256 全部一致 OK；变化条目 1 个（/Blockly_Code/maingui_init.js 5242 -> 6633 字节）
+        读回 defaultcode 反转义后与片段一致 OK（1155 字符）
+[同步] 7/7 复制补丁包到输出路径（未安装）
+
+==========================================================================
+  同步结果
+--------------------------------------------------------------------------
+  原资源包    : D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\browser_assets.副本
+  原包 sha256 : df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40
+  函数库来源  : D:\UserData\Documents\WER\2026普级赛\WER_函数库\我的函数库.srhs
+  defaultcode : 顶层块=1（start=1）函数=0 变量=0 字符=1155
+  纯 roundtrip: 逐字节一致 OK
+  打包后自检  : 通过 OK（条目 6645，变化 1 个）
+  补丁包      : D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\ps_patch_myfunc\browser_assets.patched
+  补丁包sha256: be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c
+  状态        : 补丁包已生成，尚未安装（加 -Install 由管理员安装，或双击 一键同步(管理员).cmd）
+==========================================================================

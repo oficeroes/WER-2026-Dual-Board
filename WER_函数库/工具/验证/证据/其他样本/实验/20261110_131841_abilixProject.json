@@ -1,0 +1,750 @@
+{
+  "meta": {
+    "tool": "run_validate.py",
+    "toolVersion": "1.0",
+    "generatedAt": "2026-11-10T13:18:38",
+    "argv": [
+      "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\工具\\验证\\run_validate.py",
+      "_分析临时\\实验\\abilixProject.srh",
+      "--evidence-dir",
+      "WER_函数库\\工具\\验证\\证据\\其他样本\\实验",
+      "--timeout",
+      "300"
+    ],
+    "python": "3.12.14",
+    "mode": "project",
+    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "webRoot": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\blockly_web",
+    "elapsedMs": 2751
+  },
+  "ok": true,
+  "errors": [],
+  "project": {
+    "inputPath": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\实验\\abilixProject.srh",
+    "format": "srh",
+    "encoding": "utf-8-sig",
+    "info": {
+      "Version": "1.0.3.4",
+      "RobotType": "SKCON9",
+      "DownloadProgramName": "experiment"
+    },
+    "infoRaw": "\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ScratchProjectInfo xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <Version>1.0.3.4</Version>\r\n  <RobotType>SKCON9</RobotType>\r\n  <DownloadProgramName>experiment</DownloadProgramName>\r\n</ScratchProjectInfo>\n",
+    "zipRobotType": null,
+    "robotType": "SKCON9",
+    "connectionType": "USB",
+    "programName": "experiment",
+    "static": {
+      "xmlValid": true,
+      "xmlError": null,
+      "rootTag": "xml",
+      "variablesCount": 16,
+      "variables": [
+        {
+          "name": "var_1mm",
+          "id": "i~@WMdT#tFrV^II4!t%M"
+        },
+        {
+          "name": "var_",
+          "id": "#@aR+XQAJpXu2T5m#u-)"
+        },
+        {
+          "name": "var_time",
+          "id": "S]39vBe7{#|g)JGM`2*k"
+        },
+        {
+          "name": "var_S2_0",
+          "id": "p{qU@ny+:$%O.PJaPm7S"
+        },
+        {
+          "name": "var_S3_0",
+          "id": "1|%5q].2XVU/^k^(.!0R"
+        },
+        {
+          "name": "var_S2_1",
+          "id": "-#Gysp25|[R)xl`^7hgv"
+        },
+        {
+          "name": "var_S3_1",
+          "id": "mNUZ2O)ZRE0|Q]~NhEq2"
+        },
+        {
+          "name": "var_past_10",
+          "id": "k?0T0gv)40/tScAs+e]g"
+        },
+        {
+          "name": "var_past_8",
+          "id": "_t|Qiv3l0$@_iH;ZYG%2"
+        },
+        {
+          "name": "var_result_10",
+          "id": "6syLuKf](I:3J(@jvUD@"
+        },
+        {
+          "name": "var_result_7",
+          "id": "B}k:BSp|K:^-CaJ1VkxC"
+        },
+        {
+          "name": "var_while",
+          "id": "h{jr^lBz,i?zKQt]N38J"
+        },
+        {
+          "name": "var_past_9",
+          "id": "?a0x/_=SYHw9Ovy]CYN-"
+        },
+        {
+          "name": "var_past_7",
+          "id": "EYc*CcfjC/hetv$jx(QO"
+        },
+        {
+          "name": "var_result_9",
+          "id": "7$Jg?=H4,#m[M{SVdxRK"
+        },
+        {
+          "name": "var_result_8",
+          "id": "*@,|93IfXOlbmX$|E6jS"
+        }
+      ],
+      "topBlockCount": 14,
+      "topBlocks": [
+        {
+          "type": "procedures_defnoreturn",
+          "id": "0SBY|ADA.dB:Y.8gA$QU",
+          "name": "func_Learntofollowtheline",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": ",42;6(BrZxA@1|!/ov=G",
+          "name": "func_name",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "IpgrV];v*l`vnFbH/JZT",
+          "name": "func_initial",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "u_(:Qnr{lV^+FDGbSn].",
+          "name": "func_off",
+          "args": []
+        },
+        {
+          "type": "printf_number",
+          "id": "YY@];THQY2X4V*GNtOkx"
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "id": "qj3u0*%1ZP8nbL,wO|5."
+        },
+        {
+          "type": "start",
+          "id": ":,-8s,JP[Hv2l0?r`GjL"
+        },
+        {
+          "type": "ifelse",
+          "id": "fRUG0h]m%gL7-q([HDJR"
+        },
+        {
+          "type": "getai_glay",
+          "id": "Y+JUaXG8)Zz=[pMqI+rL"
+        },
+        {
+          "type": "variables_get",
+          "id": "#nE)!-Pl:Yj$Ldr4A#yi"
+        },
+        {
+          "type": "getai_glay",
+          "id": "TBO(VppGu@LF~4)GTQJ,"
+        },
+        {
+          "type": "while_break",
+          "id": ")bq,@z8|~+jOH%[TRI.U"
+        },
+        {
+          "type": "while_forver",
+          "id": "bW/7r_K4N7Z,_EgZ,gTk"
+        },
+        {
+          "type": "dual_motor_angle",
+          "id": "=|*jz|nQj1fz]IB)(/Y#"
+        }
+      ],
+      "procedures": {
+        "defnoreturn": [
+          {
+            "type": "procedures_defnoreturn",
+            "id": "0SBY|ADA.dB:Y.8gA$QU",
+            "name": "func_Learntofollowtheline",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": ",42;6(BrZxA@1|!/ov=G",
+            "name": "func_name",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "IpgrV];v*l`vnFbH/JZT",
+            "name": "func_initial",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "u_(:Qnr{lV^+FDGbSn].",
+            "name": "func_off",
+            "args": []
+          }
+        ],
+        "defreturn": []
+      },
+      "topBlocksByType": {
+        "procedures_defnoreturn": 4,
+        "printf_number": 1,
+        "procedures_callnoreturn": 1,
+        "start": 1,
+        "ifelse": 1,
+        "getai_glay": 2,
+        "variables_get": 1,
+        "while_break": 1,
+        "while_forver": 1,
+        "dual_motor_angle": 1
+      },
+      "hasStartBlock": true
+    },
+    "warnings": []
+  },
+  "chrome": {
+    "returncode": 0,
+    "timedOut": false,
+    "elapsedMs": 2259
+  },
+  "harness": {
+    "ok": true,
+    "tool": "wer-blockly-harness",
+    "harnessVersion": "1.0",
+    "startedAt": "2026-11-10T05:18:40.192Z",
+    "config": {
+      "mode": "project",
+      "robotType": "SKCON9",
+      "connectionType": "USB",
+      "programName": "experiment",
+      "projectXmlLength": 59674
+    },
+    "steps": [
+      {
+        "name": "inject",
+        "ok": true,
+        "ms": 53.7
+      },
+      {
+        "name": "clear",
+        "ok": true,
+        "ms": 0.2
+      },
+      {
+        "name": "textToDom",
+        "ok": true,
+        "ms": 12.9
+      },
+      {
+        "name": "domToWorkspace",
+        "ok": true,
+        "ms": 232.3
+      },
+      {
+        "name": "workspaceStats",
+        "ok": true,
+        "ms": 0.5
+      },
+      {
+        "name": "procedures",
+        "ok": true,
+        "ms": 9.4
+      },
+      {
+        "name": "flyoutCategory",
+        "ok": true,
+        "ms": 0.8
+      },
+      {
+        "name": "flyoutInstantiate",
+        "ok": true,
+        "ms": 7.1
+      }
+    ],
+    "windowErrors": [],
+    "consoleErrors": [],
+    "load": {
+      "success": true,
+      "error": null,
+      "ms": 299.1
+    },
+    "workspace": {
+      "topBlockCount": 14,
+      "totalBlockCount": 360,
+      "variableCount": 16,
+      "variableNames": [
+        "var_1mm",
+        "var_",
+        "var_time",
+        "var_S2_0",
+        "var_S3_0",
+        "var_S2_1",
+        "var_S3_1",
+        "var_past_10",
+        "var_past_8",
+        "var_result_10",
+        "var_result_7",
+        "var_while",
+        "var_past_9",
+        "var_past_7",
+        "var_result_9",
+        "var_result_8"
+      ],
+      "topBlocksByType": {
+        "procedures_defnoreturn": 4,
+        "printf_number": 1,
+        "procedures_callnoreturn": 1,
+        "start": 1,
+        "ifelse": 1,
+        "getai_glay": 2,
+        "variables_get": 1,
+        "while_break": 1,
+        "while_forver": 1,
+        "dual_motor_angle": 1
+      },
+      "allBlocksByType": {
+        "procedures_defnoreturn": 4,
+        "printf_number": 39,
+        "procedures_callnoreturn": 3,
+        "start": 1,
+        "ifelse": 1,
+        "getai_glay": 22,
+        "variables_get": 53,
+        "while_break": 8,
+        "while_forver": 4,
+        "dual_motor_angle": 1,
+        "variables_set": 29,
+        "block_mod": 2,
+        "motor": 4,
+        "eeprom_read": 8,
+        "logic_boolean": 1,
+        "printf_lines": 14,
+        "if": 5,
+        "math_number": 54,
+        "wait": 9,
+        "while_number": 6,
+        "annotation": 4,
+        "getai_touch": 5,
+        "getmsecondsreset": 3,
+        "printf_text": 9,
+        "math_change": 3,
+        "math_op": 30,
+        "robot_math_rounding": 16,
+        "eeprom_write": 12,
+        "play_sound": 2,
+        "dual_motor_duration": 1,
+        "getmseconds": 3,
+        "resetencoder": 2,
+        "getai_battery": 1,
+        "resetmotionsensor": 1
+      },
+      "topBlocks": [
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            181,
+            -152
+          ],
+          "id": "0SBY|ADA.dB:Y.8gA$QU"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -72,
+            -138
+          ],
+          "id": ",42;6(BrZxA@1|!/ov=G"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -1394,
+            73
+          ],
+          "id": "IpgrV];v*l`vnFbH/JZT"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -614,
+            133
+          ],
+          "id": "u_(:Qnr{lV^+FDGbSn]."
+        },
+        {
+          "type": "printf_number",
+          "xy": [
+            -965,
+            242
+          ],
+          "id": "YY@];THQY2X4V*GNtOkx"
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "xy": [
+            -332,
+            768
+          ],
+          "id": "qj3u0*%1ZP8nbL,wO|5."
+        },
+        {
+          "type": "start",
+          "xy": [
+            -2319,
+            988
+          ],
+          "id": ":,-8s,JP[Hv2l0?r`GjL"
+        },
+        {
+          "type": "ifelse",
+          "xy": [
+            -378,
+            1516
+          ],
+          "id": "fRUG0h]m%gL7-q([HDJR"
+        },
+        {
+          "type": "getai_glay",
+          "xy": [
+            -1091,
+            1635
+          ],
+          "id": "Y+JUaXG8)Zz=[pMqI+rL"
+        },
+        {
+          "type": "variables_get",
+          "xy": [
+            -1089,
+            1638
+          ],
+          "id": "#nE)!-Pl:Yj$Ldr4A#yi"
+        },
+        {
+          "type": "getai_glay",
+          "xy": [
+            -1085,
+            1689
+          ],
+          "id": "TBO(VppGu@LF~4)GTQJ,"
+        },
+        {
+          "type": "while_break",
+          "xy": [
+            -630,
+            1792
+          ],
+          "id": ")bq,@z8|~+jOH%[TRI.U"
+        },
+        {
+          "type": "while_forver",
+          "xy": [
+            -1751,
+            1999
+          ],
+          "id": "bW/7r_K4N7Z,_EgZ,gTk"
+        },
+        {
+          "type": "dual_motor_angle",
+          "xy": [
+            -826,
+            1963
+          ],
+          "id": "=|*jz|nQj1fz]IB)(/Y#"
+        }
+      ]
+    },
+    "procedures": {
+      "defnoreturn": [
+        {
+          "name": "func_Learntofollowtheline",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "0SBY|ADA.dB:Y.8gA$QU"
+        },
+        {
+          "name": "func_name",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": ",42;6(BrZxA@1|!/ov=G"
+        },
+        {
+          "name": "func_initial",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "IpgrV];v*l`vnFbH/JZT"
+        },
+        {
+          "name": "func_off",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "u_(:Qnr{lV^+FDGbSn]."
+        }
+      ],
+      "defreturn": [],
+      "allProceduresSorted": {
+        "defnoreturn": [
+          {
+            "name": "func_initial",
+            "args": []
+          },
+          {
+            "name": "func_Learntofollowtheline",
+            "args": []
+          },
+          {
+            "name": "func_name",
+            "args": []
+          },
+          {
+            "name": "func_off",
+            "args": []
+          }
+        ],
+        "defreturn": []
+      }
+    },
+    "flyout": {
+      "categoryXml": {
+        "count": 5,
+        "xml": [
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_defnoreturn\" gap=\"24\"><field name=\"NAME\">func_name</field></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_initial\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Learntofollowtheline\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_name\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_off\"></mutation></block>"
+        ],
+        "blocks": [
+          {
+            "tag": "block",
+            "type": "procedures_defnoreturn",
+            "fieldName": "func_name"
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_initial",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Learntofollowtheline",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_name",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_off",
+            "args": []
+          }
+        ]
+      },
+      "instantiate": {
+        "viaTreeSelection": true,
+        "flyoutVisible": true,
+        "blockCount": 5,
+        "blocks": [
+          {
+            "type": "procedures_defnoreturn",
+            "isInFlyout": true,
+            "name": "func_name",
+            "args": [],
+            "inputs": [
+              "",
+              "STACK"
+            ],
+            "width": 150,
+            "height": 62
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_initial",
+            "callName": "func_initial",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 97,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Learntofollowtheline",
+            "callName": "func_Learntofollowtheline",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 201,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_name",
+            "callName": "func_name",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 97,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_off",
+            "callName": "func_off",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 77,
+            "height": 29
+          }
+        ]
+      }
+    },
+    "generation": {
+      "success": true,
+      "usedRealSource": true,
+      "evalError": null,
+      "error": null,
+      "code": "#<SKCON9><USB><experiment>\n\nimport threading\nimport time\nimport libstarpy\n\nrobot = Robot()\n\nfrom numbers import Number\n\nvar_past_9 = None\nvar_time = None\nvar_S2_0 = None\nvar_while = None\nvar_S2_1 = None\nvar_S3_0 = None\nvar_result_9 = None\nvar_past_7 = None\nvar_result_7 = None\nvar_S3_1 = None\nvar_past_10 = None\nvar_result_10 = None\nvar_past_8 = None\nvar_result_8 = None\n\ndef func_Learntofollowtheline():\n    global var_past_9, var_time, var_S2_0, var_while, var_S2_1, var_S3_0, var_result_9, var_past_7, var_result_7, var_S3_1, var_past_10, var_result_10, var_past_8, var_result_8\n    var_time = 3\n    for count in range(int(var_time)):\n        robot.clear()\n        if True:\n            robot.print('光电放在黑线上\\n')\n            robot.print('時間 ' +str(var_time) +'\\n')\n\n        var_time = (var_time if isinstance(var_time, Number) else 0) + -1\n        time.sleep(1)\n    robot.clear()\n    if True:\n        robot.print('光电放在黑线上\\n')\n        robot.print('時間 ' +str(var_time) +'\\n')\n\n    var_S2_0 = robot.get_gray(1)\n    var_S3_0 = robot.get_gray(2)\n    robot.set_ee(2,robot.clamp(var_S2_0, -99999, 99999))\n    robot.set_ee(3,robot.clamp(var_S3_0, -99999, 99999))\n    robot.play('luyin_p1')\n    robot.set_double_motor_time(1,robot.clamp(10, -100, 100),2,robot.clamp(10, -100, 100),robot.clamp(0.5, 0, 3600))\n    time.sleep(1)\n    var_time = 3\n    for count2 in range(int(var_time)):\n        robot.clear()\n        if True:\n            robot.print('光电放在白底上\\n')\n            robot.print('時間 ' +str(var_time) +'\\n')\n\n        var_time = (var_time if isinstance(var_time, Number) else 0) + -1\n        time.sleep(1)\n    robot.clear()\n    if True:\n        robot.print('光电放在白底上\\n')\n        robot.print('時間 ' +str(var_time) +'\\n')\n\n    var_S2_1 = robot.get_gray(1)\n    var_S3_1 = robot.get_gray(2)\n    robot.set_ee(6,robot.clamp(var_S2_1, -99999, 99999))\n    robot.set_ee(7,robot.clamp(var_S3_1, -99999, 99999))\n    robot.play('luyin_p1')\n    robot.clear()\n    if True:\n        robot.print('白底S2 ' +str(robot.get_ee(2)) +'\\n')\n        robot.print('白底S3 ' +str(robot.get_ee(3)) +'\\n')\n        robot.print('黑线S2 ' +str(robot.get_ee(6)) +'\\n')\n        robot.print('黑线S3 ' +str(robot.get_ee(7)) +'\\n')\n\n    while True:\n        if robot.get_touch(5):\n            break\n        if robot.get_touch(6):\n            var_time = 3\n            for count3 in range(int(var_time)):\n                robot.clear()\n                if True:\n                    robot.print('校准陀螺仪\\n')\n                    robot.print('時間 ' +str(var_time) +'\\n')\n\n                var_time = (var_time if isinstance(var_time, Number) else 0) + -1\n                time.sleep(1)\n            robot.reset_gyro()\n            break\n    pass\n\ndef func_name():\n    global var_past_9, var_time, var_S2_0, var_while, var_S2_1, var_S3_0, var_result_9, var_past_7, var_result_7, var_S3_1, var_past_10, var_result_10, var_past_8, var_result_8\n    #黑线数据位置\n    if True:\n        #黑线S2\n        robot.print('数据地址 ' +str(2) +'\\n')\n        #黑线S3\n        robot.print('数据地址 ' +str(3) +'\\n')\n    #白底数据位置\n    if True:\n        #白底S2\n        robot.print('数据地址 ' +str(6) +'\\n')\n        #白底S3\n        robot.print('数据地址 ' +str(7) +'\\n')\n    pass\n\ndef func_initial():\n    global var_past_9, var_time, var_S2_0, var_while, var_S2_1, var_S3_0, var_result_9, var_past_7, var_result_7, var_S3_1, var_past_10, var_result_10, var_past_8, var_result_8\n    var_time = 0\n    var_S2_0 = 0\n    var_S2_1 = 0\n    var_S3_0 = 0\n    var_S3_1 = 0\n    var_past_10 = 0\n    var_past_8 = 0\n    var_past_9 = 0\n    var_past_7 = 0\n    robot.set_motor(1,robot.clamp(10, -100, 100))\n    robot.set_motor(2,robot.clamp(10, -100, 100))\n    time.sleep(0.01)\n    func_off()\n    robot.reset_encoder(1);\n    robot.reset_encoder(2);\n    pass\n\ndef func_off():\n    global var_past_9, var_time, var_S2_0, var_while, var_S2_1, var_S3_0, var_result_9, var_past_7, var_result_7, var_S3_1, var_past_10, var_result_10, var_past_8, var_result_8\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    pass\n\n\ndef main():\n    global var_past_9, var_time, var_S2_0, var_while, var_S2_1, var_S3_0, var_result_9, var_past_7, var_result_7, var_S3_1, var_past_10, var_result_10, var_past_8, var_result_8\n    func_initial()\n    var_while = 70\n    while True:\n        if robot.get_touch(1):\n            robot.reset_timer(1)\n            for count4 in range(int(var_while)):\n                var_past_9 = (var_past_9 + robot.get_gray(9))\n                var_past_10 = (var_past_10 + robot.get_gray(10))\n                robot.clear()\n                if True:\n                    robot.print('正在计算中. . .     倒计时:  ' +str(robot.round((((var_while / 10) + 1) - robot.round((robot.get_timer_ms(1) / 1000))))) +'\\n')\n                    robot.print('灰度9： ' +str(robot.get_gray(9)) +'\\n')\n                    robot.print('灰度10： ' +str(robot.get_gray(10)) +'\\n')\n\n                time.sleep(0.01)\n            var_result_9 = robot.round((robot.round((var_past_9 / var_while)) * 1))\n            var_result_10 = robot.round((robot.round((var_past_10 / var_while)) * 1))\n            robot.clear()\n            if True:\n                robot.print('灰度9： ' +str(var_result_9) +'\\n')\n                robot.print('灰度10： ' +str(var_result_10) +'\\n')\n\n            robot.set_ee(9,robot.clamp(var_result_9, -99999, 99999))\n            robot.set_ee(10,robot.clamp(var_result_10, -99999, 99999))\n            break\n\nmain()#program entry",
+      "ms": 9.1,
+      "analysis": {
+        "codeLength": 5416,
+        "codeLines": 162,
+        "headerLine": "#<SKCON9><USB><experiment>",
+        "defCount": 5,
+        "defs": [
+          {
+            "name": "func_Learntofollowtheline",
+            "args": ""
+          },
+          {
+            "name": "func_name",
+            "args": ""
+          },
+          {
+            "name": "func_initial",
+            "args": ""
+          },
+          {
+            "name": "func_off",
+            "args": ""
+          },
+          {
+            "name": "main",
+            "args": ""
+          }
+        ],
+        "hasMainCall": true
+      }
+    },
+    "finishedAt": "2026-11-10T05:18:40.519Z"
+  },
+  "analysis": {
+    "lineCount": 162,
+    "header": "#<SKCON9><USB><experiment>",
+    "imports": [
+      "import threading",
+      "import time",
+      "import libstarpy",
+      "from numbers import Number"
+    ],
+    "robotInit": [
+      "robot = Robot()"
+    ],
+    "varDeclCount": 14,
+    "varDecls": [
+      "var_past_9",
+      "var_time",
+      "var_S2_0",
+      "var_while",
+      "var_S2_1",
+      "var_S3_0",
+      "var_result_9",
+      "var_past_7",
+      "var_result_7",
+      "var_S3_1",
+      "var_past_10",
+      "var_result_10",
+      "var_past_8",
+      "var_result_8"
+    ],
+    "otherPreamble": [],
+    "defCount": 5,
+    "defs": [
+      {
+        "name": "func_Learntofollowtheline",
+        "args": "",
+        "bodyLines": 58,
+        "globalLine": "global var_past_9, var_time, var_S2_0, var_while, var_S2_1, var_S3_0, var_result_9, var_past_7, var_result_7, var_S3_1, var_past_10, var_result_10, var_past_8, var_result_8"
+      },
+      {
+        "name": "func_name",
+        "args": "",
+        "bodyLines": 8,
+        "globalLine": "global var_past_9, var_time, var_S2_0, var_while, var_S2_1, var_S3_0, var_result_9, var_past_7, var_result_7, var_S3_1, var_past_10, var_result_10, var_past_8, var_result_8"
+      },
+      {
+        "name": "func_initial",
+        "args": "",
+        "bodyLines": 17,
+        "globalLine": "global var_past_9, var_time, var_S2_0, var_while, var_S2_1, var_S3_0, var_result_9, var_past_7, var_result_7, var_S3_1, var_past_10, var_result_10, var_past_8, var_result_8"
+      },
+      {
+        "name": "func_off",
+        "args": "",
+        "bodyLines": 4,
+        "globalLine": "global var_past_9, var_time, var_S2_0, var_while, var_S2_1, var_S3_0, var_result_9, var_past_7, var_result_7, var_S3_1, var_past_10, var_result_10, var_past_8, var_result_8"
+      },
+      {
+        "name": "main",
+        "args": "",
+        "bodyLines": 24,
+        "globalLine": "global var_past_9, var_time, var_S2_0, var_while, var_S2_1, var_S3_0, var_result_9, var_past_7, var_result_7, var_S3_1, var_past_10, var_result_10, var_past_8, var_result_8"
+      }
+    ],
+    "tail": [
+      "main()#program entry"
+    ]
+  },
+  "syntaxCheck": {
+    "ok": true,
+    "returncode": 0,
+    "cmd": [
+      "C:\\Users\\s1325\\.dsh\\dsh-runtimes\\dsh-primary-runtime\\dependencies\\python\\python.exe",
+      "-m",
+      "py_compile",
+      "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_0ch_fvjw\\generated_syntax_check.py"
+    ],
+    "stdout": "",
+    "stderr": "",
+    "elapsedMs": 141,
+    "file": "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_0ch_fvjw\\generated_syntax_check.py"
+  }
+}

@@ -1,0 +1,64 @@
+== WER headless 验证工具 v1.0 ==
+   web_root : D:\UserData\Documents\WER\2026普级赛\_分析临时\native_work\patched_web_ex20
+   chrome   : C:\Program Files\Google\Chrome\Application\chrome.exe
+   work tmp : C:\Users\s1325\AppData\Local\Temp\wer_validate_5_32lby5
+   harness URL: http://127.0.0.1:64241/Blockly_Code/__harness__.html
+
+证据已写入：D:\UserData\Documents\WER\2026普级赛\WER_函数库\证据\原生积木验证\native_ex20\20261111_135259_native_ex20.json / .report.txt / .py
+
+==============================================================================
+WER headless 验证报告   生成时间 2026-11-11T13:52:41
+==============================================================================
+输入文件    : D:\UserData\Documents\WER\2026普级赛\_分析临时\native_work\evidence\native_ex20.srh  (srh, utf-8-sig)
+机器人类型  : SKCON9    连接: USB    程序名: NativeEx20
+项目 Info   : {"Version": "1.0.3.4", "RobotType": "SKCON9", "DownloadProgramName": "NativeEx20"}
+XML 静态校验: 通过    静态顶层块: 1    变量: 1    静态函数定义: 0
+[1] 加载项目 XML : 成功  (72.8 ms)
+    顶层块数: 1    总块数: 6    变量数: 1
+    顶层块类型: {"start": 1}
+    渲染检查: 已渲染块 6/6    SVG 根 6    0 尺寸块 0    警告 0    禁用 0    mainWorkspace 正确 True
+[2] 函数定义     : 无返回值 0 个, 有返回值 0 个
+[3] 函数分类 flyout（Blockly.Procedures.flyoutCategory）: 1 个 XML 块
+    - procedures_defnoreturn  name='func_name'  args=[]
+[4] 真实 flyout 实例化: 空 (None 块, 经工具箱树真实选中=None)    渲染 None/None    SVG 根 None    0 尺寸 None
+[5] Python 生成  : 成功  (2.8 ms, 使用 maingui.js 原始 getPythonCode=True)
+    长度/行数: 318 行
+    文件头: '#<SKCON9><USB><NativeEx20>'    def 数: 21    import: ['import threading', 'import time', 'import libstarpy']
+    变量声明: 27 个   尾部: ['main()#program entry']
+[6] py_compile  : 通过
+[10] 原生函数块（工具箱“我的函数”分类 → flyout createBlock 拖出 → 接入 start → 生成 Python）: 通过 (32/32)
+    [PASS] 项目加载成功: 
+    [PASS] web_root 中存在原生函数块补丁 abilix_userlib.js: D:\UserData\Documents\WER\2026普级赛\_分析临时\native_work\patched_web_ex20\Blockly_Code\abilix_userlib.js
+    [PASS] userlib 解析无错误: 
+    [PASS] userlib 中解析出原生函数（20 个）: func_Init, func_Stop, func_ResetEncoder, func_ForwardCM, func_BackwardCM, func_TurnLeft, func_TurnRight, func_DriveTime...
+    [PASS] 工具箱树里找到「我的函数」分类: name='我的函数' blockCount=20
+    [PASS] 分类名 == '我的函数': 我的函数
+    [PASS] 经由真实工具箱树选中分类（Toolbox.TreeControl.setSelectedItem）: True
+    [PASS] flyout 实例化块数 == userlib 函数数（20）: 实际 20
+    [PASS] flyout 里全部是 abilixuf_* 原生块: ['abilixuf_func_Init', 'abilixuf_func_Stop', 'abilixuf_func_ResetEncoder', 'abilixuf_func_ForwardCM', 'abilixuf_func_BackwardCM', 'abilixuf_func_TurnLeft', 'abilixuf_func_TurnRight', 'abilixuf_func_DriveTime']
+    [PASS] flyout 原生块类型与 userlib 完全一致（含顺序）: {"flyout": ["abilixuf_func_Init", "abilixuf_func_Stop", "abilixuf_func_ResetEncoder", "abilixuf_func_ForwardCM", "abilixuf_func_BackwardCM", "abilixuf_func_TurnLeft", "abilixuf_func_TurnRight", "abilixuf_func_DriveTime"], "expected": ["abilixuf_func_Init", "abilixuf_func_Stop", "abilixuf_func_ResetEncoder", "abilixuf_func_ForwardCM", "abilixuf_func_BackwardCM", "abilixuf_func_TurnLeft", "abilixuf_func_TurnRight", "abilixuf_func_DriveTime"]}
+    [PASS] flyout 原生块均已渲染（rendered + SVG root + 非 0 尺寸）: {"renderedBlockCount": 20, "renderedSvgRootCount": 20, "zeroSizeBlockCount": 0}
+    [PASS] 拖拽路径执行成功（Flyout.createBlock 真实拖出）: 
+    [PASS] 从 flyout 拖出的原生块数量 == flyout 块数（20）: 实际 20
+    [PASS] 拖出原生块类型与 flyout 顺序一致: ["abilixuf_func_Init", "abilixuf_func_Stop", "abilixuf_func_ResetEncoder", "abilixuf_func_ForwardCM", "abilixuf_func_BackwardCM", "abilixuf_func_TurnLeft", "abilixuf_func_TurnRight", "abilixuf_func_DriveTime"]
+    [PASS] 拖出的原生块均已渲染（rendered + SVG root）: []
+    [PASS] 所有带参原生块的参数输入都已填值（11 个）: 实际 11/11
+    [PASS] 拖出的原生块已接入 start 的 code 语句链: startBlockId=start_ex20 chainLength=20
+    [PASS] 项目里原有的原生块在拖拽前被移除（避免重复调用，生成内容全部来自本次拖出）: removed=3 projectNative=3
+    [PASS] 真实 maingui.getPythonCode 生成成功: 
+    [PASS] 文件头恰好出现一次且内容正确: 期待 '#<SKCON9><USB><NativeEx20>'，实际首行 '#<SKCON9><USB><NativeEx20>'，出现 1 次
+    [PASS] import 无重复且包含 threading/time/libstarpy: ['threading', 'time', 'libstarpy']
+    [PASS] robot = Robot() 恰好一次: 实际 1 次
+    [PASS] 生成代码注入了 abilixUserLibPython（整段完全一致）: prelude 14064 字符，行序匹配=True，sha256=d4e1f1261cd8653712f6ad87bd5ece2cf822ccf9367ac5133e7cdd3ab26ae721
+    [PASS] userlib 注入内容位于 def main 之前: prelude@92 main@14155
+    [PASS] 注入的 def 没有重复: 重复 []
+    [PASS] userlib 20 个函数定义全部出现在生成代码中: []
+    [PASS] 生成代码里有 def main(): 
+    [PASS] main 里调用了全部 20 个原生函数: 缺失 []
+    [PASS] main 里调用顺序与 flyout 拖出顺序一致: [["func_Init", 5], ["func_Stop", 21], ["func_ResetEncoder", 37], ["func_ForwardCM", 61], ["func_BackwardCM", 84], ["func_TurnLeft", 108], ["func_TurnRight", 130], ["func_DriveTime", 153], ["func_DriveSpeed", 184], ["func_ArmUp", 212], ["func_ArmDown", 229], ["func_Grab", 248]]
+    [PASS] main 里带参数调用的实参与填值完全一致（逐表达式匹配）: ["func_Init()", "func_Stop()", "func_ResetEncoder()", "func_ForwardCM(40)", "func_BackwardCM(50)", "func_TurnLeft(60)", "func_TurnRight(70)", "func_DriveTime(80, 81, 82)", "func_DriveSpeed(90, 91)", "func_ArmUp()", "func_ArmDown()", "func_Grab()"]
+    [PASS] 程序入口 main()#program entry 恰好一次且在末尾: 出现 1 次
+    [PASS] py_compile 语法检查通过: 
+[11] 原生块 prelude 注入回归: 通过（项目原生块数 3，期望注入=True，实际注入=True，prelude 14064 字符，userlib 函数 20 个）
+生成的 Python 全文见 --py 输出 / JSON generated.code；可另传 --screenshot 截图。
+结论: 通过

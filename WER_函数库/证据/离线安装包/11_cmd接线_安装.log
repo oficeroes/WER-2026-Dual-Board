@@ -1,0 +1,11 @@
+﻿COMMAND: cmd /c install_launcher.cmd (test copy: elevation line commented out; stub ps1)
+EXIT CODE: 0
+
+[WER] Starting offline installer (PowerShell 5.1, no Python needed) ...
+
+[STUB] install ps1 invoked, Yes=True
+
+[DONE] Offline install finished. Read the messages above.
+
+Press any key to continue . . . 
+

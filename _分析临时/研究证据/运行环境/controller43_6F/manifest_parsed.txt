@@ -1,0 +1,45 @@
+# AndroidManifest.xml AXML 解析: D:\Program Files\AbilixScratch3.0\AbilixScratch3.0_Data\StreamingAssets\standalonewindows\hot_update_dir\extenddatas\brainApk\6F\Controller_43.apk
+
+<manifest> versionCode=43; versionName=1.0.43; package=com.abilix.controller
+<uses-sdk> minSdkVersion=21; targetSdkVersion=27
+<uses-permission> name=android.permission.INTERNET
+<uses-permission> name=android.permission.ACCESS_NETWORK_STATE
+<uses-permission> name=android.permission.CHANGE_NETWORK_STATE
+<uses-permission> name=android.permission.ACCESS_WIFI_STATE
+<uses-permission> name=android.permission.CHANGE_WIFI_STATE
+<uses-permission> name=android.permission.WRITE_EXTERNAL_STORAGE
+<uses-permission> name=android.permission.READ_EXTERNAL_STORAGE
+<uses-permission> name=android.permission.CAMERA
+<uses-permission> name=android.permission.RECORD_AUDIO
+<uses-permission> name=android.permission.BLUETOOTH
+<uses-permission> name=android.permission.BLUETOOTH_ADMIN
+<uses-permission> name=android.permission.SYSTEM_ALERT_WINDOW
+<uses-permission> name=android.permission.SYSTEM_OVERLAY_WINDOW
+<uses-permission> name=android.permission.WAKE_LOCK
+<uses-feature> name=android.hardware.bluetooth_le; required=true
+<uses-feature> glEsVersion=0x20000; required=true
+<application> theme=<type=0x01 data=0x7f0e0005>; label=<type=0x01 data=0x7f0d0026>; icon=<type=0x01 data=0x7f0b0000>; name=com.abilix.controller.application.ControllerApp; allowBackup=true; supportsRtl=true; roundIcon=<type=0x01 data=0x7f0b0001>
+<activity> name=com.abilix.controller.ui.activity.MainActivity; launchMode=2
+<intent-filter> 
+<action> name=android.intent.action.MAIN
+<action> name=android.intent.action.VIEW
+<category> name=android.intent.category.DEFAULT
+<category> name=android.intent.category.HOME
+<category> name=android.intent.category.LAUNCHER
+<activity> name=com.abilix.controller.ui.activity.ProgramActivity; launchMode=2
+<activity> theme=<type=0x01 data=0x7f0e00a3>; label=<type=0x01 data=0x7f0d0050>; name=com.abilix.controller.ui.activity.ProgrammingActivity; launchMode=2; screenOrientation=0; configChanges=0x4a0; windowSoftInputMode=0x22; parentActivityName=com.abilix.controller.ui.activity.MainActivity
+<activity> name=com.abilix.controller.ui.activity.SensorActivity; launchMode=2
+<activity> name=com.abilix.controller.ui.activity.ControlActivity; launchMode=2
+<activity> name=com.abilix.controller.ui.activity.DataActivity; launchMode=2
+<activity> name=com.abilix.controller.ui.activity.RunningActivity; process=com.abilix.controller.running; launchMode=2
+<service> name=com.abilix.controller.service.ControllerService
+<service> name=com.abilix.controller.service.ProtocolService; process=:protocolservice
+<intent-filter> 
+<action> name=com.abilix.controller.IControllerInterface
+<service> name=com.abilix.controller.service.RunningService; process=com.abilix.controller.running
+<service> name=com.google.blockly.android.codegen.CodeGeneratorService; exported=false
+<service> name=com.serenegiant.service.UVCService; process=:uvcservice
+<intent-filter> 
+<action> name=com.serenegiant.service.IUVCService
+<action> name=com.serenegiant.service.IUVCSlaveService
+<provider> name=android.arch.lifecycle.ProcessLifecycleOwnerInitializer; exported=false; multiprocess=true; authorities=com.abilix.controller.lifecycle-trojan

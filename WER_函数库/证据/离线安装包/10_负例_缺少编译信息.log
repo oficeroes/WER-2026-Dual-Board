@@ -1,0 +1,19 @@
+﻿COMMAND: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "-NoProfile" "-ExecutionPolicy" "Bypass" "-File" "D:\UserData\Documents\WER\2026普级赛\WER_函数库\安装包\安装.ps1" "-Target" "C:\Users\s1325\AppData\Local\Temp\wer_offline_test\AbilixScratch3.0" "-Yes" "-Info" "D:\UserData\Documents\WER\2026普级赛\WER_函数库\安装包\不存在的编译信息.txt"
+EXIT CODE: 1
+
+===== STDOUT =====
+==============================================================================
+  WER 原生函数积木 - 离线安装    v1.0.0
+  纯 PowerShell 5.1 实现：安装时不需要 Python，也不需要 Chrome。
+==============================================================================
+[INFO] 时间       : 2026-11-11 14:07:13
+[INFO] 脚本目录   : D:\UserData\Documents\WER\2026普级赛\WER_函数库\安装包
+[INFO] 当前权限   : 普通用户（目标目录可写时也能继续，例如复制出来的测试副本）
+
+[ERROR] 缺少编译信息文件：D:\UserData\Documents\WER\2026普级赛\WER_函数库\安装包\不存在的编译信息.txt
+「安装包」文件夹必须完整拷贝（至少要有 安装.ps1、还原.ps1、browser_assets.patched、编译信息.txt、README_离线安装.txt）。
+
+[ERROR] 安装未完成。如果已经动过目标文件，请用备份或「还原原版(离线).cmd」恢复。
+
+===== STDERR =====
+

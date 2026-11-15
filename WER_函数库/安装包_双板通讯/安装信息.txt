@@ -1,0 +1,25 @@
+# 双板通讯原生积木扩展 · 构建信息
+# 由 WER_函数库/工具/双板通讯/构建双板通讯扩展.py 生成
+
+构建时间 = 2026-11-12 21:01:45
+原版资源包 = D:\UserData\Documents\WER\2026普级赛\WER_函数库\工具\原生积木\备份\browser_assets.原始.df6db241752d.bin
+原版资源包sha256 = df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40
+原版资源包大小 = 85271033
+安装前资源包sha256 = b294b5cce4d8f8dde38bd6f6d317e57de9e934b62f9a080d6f7e152ea63b0b3a
+
+补丁包文件 = browser_assets.patched
+补丁包sha256 = a2515601e51174f4649722883849a94e4a47629eaef5a8af34802f22d5cb3b3b
+补丁包大小 = 85295162
+补丁包条目数 = 6647
+保留的我的函数 = func_Hello
+新增双板通讯积木 = abilixuf_dk_setip、abilixuf_dk_send、abilixuf_dk_recv、abilixuf_dk_save
+双板通讯 prelude 字符数 = 12830
+合并后 prelude 总字符数 = 12940
+
+安装目标 = D:\Program Files\AbilixScratch3.0\AbilixScratch3.0_Data\Resources\browser_assets
+
+修改条目 /Blockly_Code/maingui.html（69281 -> 71629 字节）
+修改条目 /Blockly_Code/maingui.js（23313 -> 23733 字节）
+新增条目 /Blockly_Code/abilix_userlib.js（18591 字节）
+新增条目 /Blockly_Code/abilix_userlib.json（2680 字节）
+逐字节不变条目数 = 6643

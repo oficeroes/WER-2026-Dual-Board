@@ -1,0 +1,12 @@
+Python 版补丁包  vs  PowerShell 版补丁包 —— 整文件对比
+====================================================================================================
+原包              : D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\browser_assets.副本
+  大小=85271033  sha256=df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40  条目数=6645
+Python 版补丁包   : D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\python_patch\browser_assets.patched
+  大小=85320453  sha256=a1a3bf14e1c1b189ffce3faf423bf6eadebad1bb71f90f90c1e630aabbdb1604  条目数=6645
+PowerShell 版补丁包: D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\ps_patch\browser_assets.patched
+  大小=85320453  sha256=a1a3bf14e1c1b189ffce3faf423bf6eadebad1bb71f90f90c1e630aabbdb1604  条目数=6645
+
+大小是否相同   : True
+sha256 是否相同: True  <== 相同即两个补丁包逐字节完全相同（最强证据）
+

@@ -1,0 +1,22 @@
+==============================================================================
+WER headless 验证报告   生成时间 2026-11-10T13:18:41
+==============================================================================
+输入文件    : D:\UserData\Documents\WER\2026普级赛\_分析临时\Scratch-3\abilixProject.srh  (srh, utf-8-sig)
+机器人类型  : SKCON9    连接: USB    程序名: music
+项目 Info   : {"Version": "1.0.3.4", "RobotType": "SKCON9", "DownloadProgramName": "music"}
+XML 静态校验: 通过    静态顶层块: 2    变量: 0    静态函数定义: 0
+[1] 加载项目 XML : 成功  (49.1 ms)
+    顶层块数: 2    总块数: 3    变量数: 0
+    顶层块类型: {"start": 1, "record": 1}
+[2] 函数定义     : 无返回值 0 个, 有返回值 0 个
+[3] 函数分类 flyout（Blockly.Procedures.flyoutCategory）: 1 个 XML 块
+    - procedures_defnoreturn  name='func_name'  args=[]
+[4] 真实 flyout 实例化: 成功 (1 块, 经工具箱树真实选中=True)
+    - procedures_defnoreturn  name='func_name'  args=[]  inputs=['', 'STACK']
+[5] Python 生成  : 成功  (1 ms, 使用 maingui.js 原始 getPythonCode=True)
+    长度/行数: 12 行
+    文件头: '#<SKCON9><USB><music>'    def 数: 1    import: ['import threading', 'import time', 'import libstarpy']
+    变量声明: 0 个   尾部: ['main()#program entry']
+[6] py_compile  : 通过
+生成的 Python 全文见 --py 输出 / JSON generated.code；可另传 --screenshot 截图。
+结论: 通过

@@ -1,0 +1,8 @@
+=== JNIPROBE v8 ===
+uid=10017 pid=3176
+probe rc=-11
+  子进程被信号 11 (Segmentation fault)
+  step=160 msg=getSystemService(activity) ok
+  vm=1 env=1 app=1 usb=0 ndev=0 found=0 has_perm=0 conn=0 fd=0
+  first dev vid=0000 pid=0000
+=== END ===

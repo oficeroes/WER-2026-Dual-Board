@@ -1,0 +1,7 @@
+[2026-11-11 21:34:26.447] probe start: target 192.168.1.103:8888, wait up to 120s
+[2026-11-11 21:34:26.634] CONNECTED to 192.168.1.103:8888 after 0.2s
+[2026-11-11 21:34:26.642] PING 1 ok rtt=8.38ms echo=b'PCPROBE 1\n'
+[2026-11-11 21:34:26.931] PING 2 ok rtt=87.85ms echo=b'PCPROBE 2\n'
+[2026-11-11 21:34:27.134] PING 3 ok rtt=3.26ms echo=b'PCPROBE 3\n'
+[2026-11-11 21:34:27.347] BIG echo 4096 bytes ok, round-trip 10.8ms, ~6090.4 kbps(双向)
+[2026-11-11 21:34:27.347] probe done: ping_ok=3/3

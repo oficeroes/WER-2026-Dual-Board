@@ -1,0 +1,6 @@
+=== JNITEST ===
+uid=10017 pid=2639
+Main 参数 env=0xa3346094 thiz=0x0
+probe rc=-11
+  子进程被信号 11 (Segmentation fault)
+=== END ===

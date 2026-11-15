@@ -1,0 +1,25 @@
+默认函数库（WER_函数库\我的函数库.srhs，1 个 start + 0 个函数）—— Python 版 vs PowerShell 版 补丁包对比
+==============================================================================================================
+原包                : D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\browser_assets.副本
+  85,271,033 字节  sha256=df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40
+Python 版补丁包     : D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\python_patch_myfunc\browser_assets.patched
+  sha256=be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c
+PowerShell 版补丁包 : D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\ps_patch_myfunc\browser_assets.patched
+  sha256=be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c
+
+两个补丁包是否逐字节相同: True   <== 相同即最强证据
+条目数 6645；除 /Blockly_Code/maingui_init.js 外逐条目 sha256 完全一致: 6644 个
+maingui_init.js: 原 5242 字节(c86fe3fa00c0433c43cf888eedaedebe71d35c93d161ac13d034222901447561)
+                 Python 6633 字节(8437593c10b8a44bc733ff3716853de209ae4db4abc093d327a0e17e1a71fa2e)
+                 PS     6633 字节(8437593c10b8a44bc733ff3716853de209ae4db4abc093d327a0e17e1a71fa2e)
+
+函数库片段: 1155 字符  sha256(UTF-8)=37930c19eafaefbcefbcb41dca8ac9ab9d468bf79f7a390099bbcfcc6652b1ef
+Python 版读回 defaultcode 反转义 sha256=37930c19eafaefbcefbcb41dca8ac9ab9d468bf79f7a390099bbcfcc6652b1ef
+PowerShell 版读回 defaultcode 反转义 sha256=37930c19eafaefbcefbcb41dca8ac9ab9d468bf79f7a390099bbcfcc6652b1ef
+两者与 我的函数库.srhs 片段逐字符相同: True
+defaultcodeTr 未改动: True   defaultcodeEn 未改动: True
+
+注意：本例函数库没有 <variables> 里的变量声明（空 <variables />），PS 版与 Python 版
+     仍逐字节一致，说明“无变量/自闭合 variables 标签”分支也完全兼容。
+
+结论: PASS —— 与 Python 参考版产物逐字节完全相同

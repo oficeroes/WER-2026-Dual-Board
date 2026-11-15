@@ -1,0 +1,12 @@
+<Abilix.ScratchProject.Info>
+<?xml version="1.0" encoding="utf-8"?>
+<ScratchProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>1.0.3.4</Version>
+  <RobotType>SKCON9</RobotType>
+  <DownloadProgramName>ProgramA</DownloadProgramName>
+</ScratchProjectInfo>
+</Abilix.ScratchProject.Info>
+
+<Abilix.ScratchProject.ProjectString>
+<xml xmlns="http://www.w3.org/1999/xhtml"><block type="start" id=":,-8s,JP[Hv2l0?r`GjL" deletable="false" x="458" y="98"><statement name="code"><block type="annotation" id="tK!fbP3b*_]TpoejKIK5"><field name="text">将要运行的模块放入主函数</field><next><block type="printf_text" id="2DW1)x!2IGx`pxFYY?*{"><field name="text">hello world</field></block></next></block></statement></block></xml>
+</Abilix.ScratchProject.ProjectString>

@@ -1,0 +1,12 @@
+<Abilix.ScratchProject.Info>
+<?xml version="1.0" encoding="utf-8"?>
+<ScratchProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>1.0.3.4</Version>
+  <RobotType>SKCON9</RobotType>
+  <DownloadProgramName>ProgramA</DownloadProgramName>
+</ScratchProjectInfo>
+</Abilix.ScratchProject.Info>
+
+<Abilix.ScratchProject.ProjectString>
+<xml xmlns="http://www.w3.org/1999/xhtml"><block type="set_do" id="Ke9~ny*0bB{)^B5,C:8q" disabled="true" x="-19" y="-328"><field name="PORT">1</field><field name="STATE">0</field></block><block type="procedures_defnoreturn" id="$X,jPn*c47?X[ofM73Qj" x="105" y="-240"><field name="NAME">func_Hello</field><statement name="STACK"><block type="printf_text" id="EVp|KAT72[._6:yQaT@W"><field name="text">hello world</field></block></statement></block><block type="start" id="blk_b" deletable="false" x="480" y="-40"><statement name="code"><block type="annotation" id="blk_c"><field name="text">【我的函数库】这个项目用来放你自己常用的函数；同步后，软件里每个新建项目都会自带它们。</field><next><block type="annotation" id="blk_d"><field name="text">① 左侧「函数」分类 → 拖出「新建函数」积木 → 改名字（自动加 func_ 前缀）→ 在它里面搭你的函数体；可以建多个。</field><next><block type="annotation" id="blk_e"><field name="text">② 主函数（start 积木）里不需要写动作；这几行说明可以留着当模板，也可以删掉（但主函数块要保留）。</field><next><block type="annotation" id="blk_f"><field name="text">③ 保存：文件→保存（Ctrl+S），保存为  WER_函数库\我的函数库.srhs（覆盖本文件）。</field><next><block type="annotation" id="blk_g"><field name="text">④ 同步：双击  工具\框架\同步我的函数库(管理员).cmd  → 以后软件里每次「新建项目」都会自带这些函数。</field><next><block type="annotation" id="blk_h"><field name="text">⑤ 函数新增/改名/删除后：重新保存本文件 → 再同步一次即可；同步前会自动备份，可用「还原新建模板(管理员).cmd」撤销。</field><next><block type="annotation" id="blk_i"><field name="text">⑥ 没有管理员权限时：用  工具\便携版\创建便携函数版.cmd（生成"函数版"快捷方式）；或让管理员运行  工具\仅PowerShell\一键同步(管理员).cmd。</field></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>
+</Abilix.ScratchProject.ProjectString>

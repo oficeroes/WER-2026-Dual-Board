@@ -1,0 +1,6881 @@
+{
+ "meta": {
+  "name": "WER 函数库积木 XML 规格",
+  "ide": "能力风暴 AbilixScratch3.0（SKCON9，Blockly 2018 前后版本 + PartnerX 自定义生成器）",
+  "workspace": "D:\\UserData\\Documents\\WER\\2026普级赛",
+  "generated_by": "schema 队友（task-1）。重建命令：python WER_函数库/工具/规格/_work/build_schemas.py all；再生成人读版：python WER_函数库/工具/规格/_work/gen_md.py；校验：python WER_函数库/工具/规格/check_library_xml.py",
+  "regenerate": {
+   "inputs": "_work/ 下的 msgs_zh.json / stock_blocks.json / gens_clean.json / real_samples.json / toolboxes.json / blocks_clean.json 均由 _分析临时/blockly_utf8 只读提取，行号由脚本直接从源码按 \\n 重新计算",
+   "commands": [
+    "python WER_函数库/工具/规格/_work/build_schemas.py all",
+    "python WER_函数库/工具/规格/_work/gen_md.py",
+    "python WER_函数库/工具/规格/check_library_xml.py"
+   ]
+  },
+  "sources": {
+   "block_defs_custom": "_分析临时/blockly_utf8/blocks/myrobotrun.js（原文另有 GBK 原始版 _分析临时/blockly_web/Blockly_Code/）",
+   "block_defs_procedures": "_分析临时/blockly_utf8/blocks/procedures.js",
+   "block_defs_stock": "_分析临时/blockly_utf8/blocks/{logic,math,text,variables,loops}.js（Blockly.defineBlocksWithJsonArray）",
+   "python_generators": "_分析临时/blockly_utf8/generators/myrobotpythoncode.js + generators/python/*.js",
+   "blockly_python_runtime": "Blockly.Python = new Blockly.Generator('Python')（generators/python.js:36）；Python 输出 = definitions_ 前置 + 顶层块代码；maingui.js:204/214 调 Blockly.Python.workspaceToCode(workspace)",
+   "msg_zh": "_分析临时/blockly_utf8/msg/js/zh-hans.js（含 PartnerX 追加的 ABILIX_SCRATCH_* 文案）",
+   "toolbox": "_分析临时/blockly_utf8/maingui.html 的 <xml id=\"toolbox_skcon9\">",
+   "real_samples": {
+    "PI": "_分析临时/PI/abilixProject.srh（当前保存 1328 块 / 31 类 / 26 个 procedures_defnoreturn）",
+    "实验": "_分析临时/实验/abilixProject.srh（17 块 / 13 类）",
+    "Scratch-3": "_分析临时/Scratch-3/abilixProject.srh（2 块）"
+   }
+  },
+  "conventions": {
+   "xml_root": "<xml xmlns=\"http://www.w3.org/1999/xhtml\">…</xml>；变量声明在最前：<variables><variable type=\"\" id=\"ID\">名字</variable>…</variables>",
+   "line_numbers": "generator / block_def 行号均为 1-based，与 grep/read 工具一致（按 \\n 计，UTF-8 副本文件）",
+   "python_placeholders": "<...> 是模板占位符；换行以 \\n 结尾；表达式类块返回 [code, order]，语句类块返回带 \\n 的语句",
+   "statement_order": "语句类积木的 next 链由 Blockly 自动拼接，XML 中 <next> 只表示同一积木栈的下一块",
+   "evidence_levels": {
+    "A+": "生成器/积木定义源码 + 真实项目样本双重确认",
+    "A": "生成器/积木定义源码直接可证，无真实样本",
+    "B": "源码可证但运行期行为（如参数化函数在 IDE 中的加载/渲染）尚待 headless 实测",
+    "C": "推断，需实测"
+   }
+  }
+ },
+ "block_count": 60,
+ "blocks": {
+  "start": {
+   "type": "start",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 110,
+    "end_line": 124
+   },
+   "category_skcon9": [
+    "主函数（不在工具箱，由新建项目默认模板/工程 XML 提供）"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/main.png"
+    },
+    {
+     "kind": "label",
+     "text": "主函数"
+    },
+    {
+     "kind": "input_statement",
+     "name": "code"
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {},
+    "statement": {
+     "code": {}
+    }
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 7,
+    "end_line": 38
+   },
+   "python": "def main():\n    global <工作区所有用到的变量名, 逗号分隔>   # 仅当有变量时\n    <语句输入 code 的代码>\n    pass                # 仅当 code 为空或全部是注释时",
+   "python_notes": "整个文件入口；def main 由 start 生成，函数定义由 procedures_* 生成。global 行列出【整个工作区】allUsedVarModels，不只是函数体内变量。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"start\" deletable=\"false\" />"
+   },
+   "xml_min": "<block type=\"start\" deletable=\"false\" x=\"0\" y=\"0\">\n  <statement name=\"code\"></statement>\n</block>",
+   "evidence": "A+"
+  },
+  "annotation": {
+   "type": "annotation",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 127,
+    "end_line": 139
+   },
+   "category_skcon9": [
+    "注释"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/ic_feedback_white_24dp.png"
+    },
+    {
+     "kind": "field_text_input",
+     "field": "text",
+     "default": "注释说明"
+    }
+   ],
+   "fields": {
+    "text": {
+     "kind": "field_text_input",
+     "field": "text",
+     "default": "注释说明"
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 41,
+    "end_line": 51
+   },
+   "python": "#<text>\n",
+   "python_notes": "text 原样拼在 # 后面，不加空格；语句输入 code 即使有内容也被忽略。",
+   "xml_min": "<block type=\"annotation\">\n  <field name=\"text\">注释说明</field>\n</block>",
+   "evidence": "A+"
+  },
+  "block_mod": {
+   "type": "block_mod",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 142,
+    "end_line": 157
+   },
+   "category_skcon9": [
+    "注释"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic\\ic_list_white_24dp.png"
+    },
+    {
+     "kind": "label",
+     "text": "模块组"
+    },
+    {
+     "kind": "field_text_input",
+     "field": "NAME",
+     "default": "简要说明"
+    },
+    {
+     "kind": "input_statement",
+     "name": "code"
+    }
+   ],
+   "fields": {
+    "NAME": {
+     "kind": "field_text_input",
+     "field": "NAME",
+     "default": "简要说明"
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {
+     "code": {}
+    }
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 53,
+    "end_line": 63
+   },
+   "python": "#<NAME>\nif True:\n<语句输入 code>",
+   "python_notes": "本质是带标题的 if True 折叠块；body 为空时补 '    pass\\n'。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"block_mod\"><field name=\"NAME\">自转</field></block>"
+   },
+   "xml_min": "<block type=\"block_mod\">\n  <field name=\"NAME\">简要说明</field>\n</block>",
+   "evidence": "A+"
+  },
+  "motor": {
+   "type": "motor",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 162,
+    "end_line": 180
+   },
+   "category_skcon9": [
+    "运动"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic\\block_icon\\motor.png"
+    },
+    {
+     "kind": "label",
+     "text": "电机"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "speed",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "速度"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "%"
+    }
+   ],
+   "fields": {
+    "channel": {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "speed": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 74,
+    "end_line": 81
+   },
+   "python": "robot.set_motor(<Number(channel)>, robot.clamp(<speed 表达式>, -100, 100))\n",
+   "python_notes": "channel 出 XML 前已由 Number() 转 int；speed 无论写什么都会再包一层 robot.clamp。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"motor\"><field name=\"channel\">1</field></block>"
+   },
+   "xml_min": "<block type=\"motor\">\n  <field name=\"channel\">1</field>\n  <value name=\"speed\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "motor_time": {
+   "type": "motor_time",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 183,
+    "end_line": 206
+   },
+   "category_skcon9": [
+    "运动"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic\\block_icon\\motor.png"
+    },
+    {
+     "kind": "label",
+     "text": "电机"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "speed",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "速度"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "%"
+    },
+    {
+     "kind": "input_value",
+     "name": "time",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "持续"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "秒"
+    }
+   ],
+   "fields": {
+    "channel": {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "speed": {
+      "check": "Number"
+     },
+     "time": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 84,
+    "end_line": 93
+   },
+   "python": "robot.set_motor_time(<Number(channel)>, robot.clamp(<speed>, -100, 100), robot.clamp(<time>, 0, 3600))\n",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"motor_time\"><field name=\"channel\">3</field></block>"
+   },
+   "xml_min": "<block type=\"motor_time\">\n  <field name=\"channel\">1</field>\n  <value name=\"speed\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n  <value name=\"time\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "motor_angle": {
+   "type": "motor_angle",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 209,
+    "end_line": 232
+   },
+   "category_skcon9": [
+    "运动"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic\\block_icon\\motor.png"
+    },
+    {
+     "kind": "label",
+     "text": "电机"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "speed",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "速度"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "%"
+    },
+    {
+     "kind": "input_value",
+     "name": "angle",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "直到编码器读数超过"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "停止"
+    }
+   ],
+   "fields": {
+    "channel": {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "speed": {
+      "check": "Number"
+     },
+     "angle": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 143,
+    "end_line": 152
+   },
+   "python": "robot.set_motor_encoder(<Number(channel)>, robot.clamp(<speed>, -100, 100), robot.clamp(<angle>, -99999, 99999))\n",
+   "xml_min": "<block type=\"motor_angle\">\n  <field name=\"channel\">1</field>\n  <value name=\"speed\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n  <value name=\"angle\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "dual_motor_duration": {
+   "type": "dual_motor_duration",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 279,
+    "end_line": 356
+   },
+   "category_skcon9": [
+    "运动"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic\\block_icon\\motor.png"
+    },
+    {
+     "kind": "label",
+     "text": "电机"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "port_1",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "speed_1",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "速度"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "%"
+    },
+    {
+     "kind": "label",
+     "text": ","
+    },
+    {
+     "kind": "label",
+     "text": "电机"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "port_2",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "speed_2",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "速度"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "%"
+    },
+    {
+     "kind": "label",
+     "text": ","
+    },
+    {
+     "kind": "input_value",
+     "name": "time",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "持续"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "秒"
+    }
+   ],
+   "fields": {
+    "port_1": {
+     "kind": "field_dropdown",
+     "field": "port_1",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    },
+    "port_2": {
+     "kind": "field_dropdown",
+     "field": "port_2",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "speed_1": {
+      "check": "Number"
+     },
+     "speed_2": {
+      "check": "Number"
+     },
+     "time": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 96,
+    "end_line": 116
+   },
+   "python": "robot.set_double_motor_time(<Number(port_1)>, robot.clamp(<speed_1>, -100, 100), <Number(port_2)>, robot.clamp(<speed_2>, -100, 100), robot.clamp(<time>, 0, 3600))\n",
+   "xml_min": "<block type=\"dual_motor_duration\">\n  <field name=\"port_1\">1</field>\n  <field name=\"port_2\">1</field>\n  <value name=\"speed_1\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n  <value name=\"speed_2\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n  <value name=\"time\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "dual_motor_angle": {
+   "type": "dual_motor_angle",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 359,
+    "end_line": 450
+   },
+   "category_skcon9": [
+    "运动"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic\\block_icon\\motor.png"
+    },
+    {
+     "kind": "label",
+     "text": "电机"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "port_1",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "speed_1",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "速度"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "%"
+    },
+    {
+     "kind": "label",
+     "text": ","
+    },
+    {
+     "kind": "label",
+     "text": "电机"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "port_2",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "speed_2",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "速度"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "%"
+    },
+    {
+     "kind": "label",
+     "text": ","
+    },
+    {
+     "kind": "label",
+     "text": "直到电机"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "port_3",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "编码器读数超过"
+    },
+    {
+     "kind": "input_value",
+     "name": "angle",
+     "check": "Number"
+    },
+    {
+     "kind": "label",
+     "text": "停止"
+    }
+   ],
+   "fields": {
+    "port_1": {
+     "kind": "field_dropdown",
+     "field": "port_1",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    },
+    "port_2": {
+     "kind": "field_dropdown",
+     "field": "port_2",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    },
+    "port_3": {
+     "kind": "field_dropdown",
+     "field": "port_3",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "speed_1": {
+      "check": "Number"
+     },
+     "speed_2": {
+      "check": "Number"
+     },
+     "angle": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 119,
+    "end_line": 140
+   },
+   "python": "robot.set_double_motor_encoder(<Number(port_1)>, robot.clamp(<speed_1>, -100, 100), <Number(port_2)>, robot.clamp(<speed_2>, -100, 100), <Number(port_3)>, robot.clamp(<angle>, -99999, 99999))\n",
+   "python_notes": "port_3 会被 UI 的 onChange 限制为 port_1/port_2 之一。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"dual_motor_angle\"><field name=\"port_1\">1</field><field name=\"port_2\">2</field><field name=\"port_3\">1</field></block>"
+   },
+   "xml_min": "<block type=\"dual_motor_angle\">\n  <field name=\"port_1\">1</field>\n  <field name=\"port_2\">1</field>\n  <field name=\"port_3\">1</field>\n  <value name=\"speed_1\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n  <value name=\"speed_2\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n  <value name=\"angle\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "resetencoder": {
+   "type": "resetencoder",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 1375,
+    "end_line": 1389
+   },
+   "category_skcon9": [
+    "传感"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/motor_encoder.png"
+    },
+    {
+     "kind": "label",
+     "text": "电机编码器"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "port",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "清零"
+    }
+   ],
+   "fields": {
+    "port": {
+     "kind": "field_dropdown",
+     "field": "port",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 516,
+    "end_line": 521
+   },
+   "python": "robot.reset_encoder(<port>);\n",
+   "python_notes": "注意生成器里带一个分号：';\\n'（Python 里合法但多余）。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"resetencoder\"><field name=\"port\">1</field></block>"
+   },
+   "xml_min": "<block type=\"resetencoder\">\n  <field name=\"port\">1</field>\n</block>",
+   "evidence": "A+"
+  },
+  "getencoder": {
+   "type": "getencoder",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 1392,
+    "end_line": 1404
+   },
+   "category_skcon9": [
+    "传感"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/motor_encoder.png"
+    },
+    {
+     "kind": "label",
+     "text": "获取电机编码器累计值"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "port",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    }
+   ],
+   "fields": {
+    "port": {
+     "kind": "field_dropdown",
+     "field": "port",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 492,
+    "end_line": 497
+   },
+   "python": "robot.get_encoder(<port>)",
+   "python_notes": "输出表达式",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"getencoder\"><field name=\"port\">2</field></block>"
+   },
+   "xml_min": "<block type=\"getencoder\">\n  <field name=\"port\">1</field>\n</block>",
+   "evidence": "A+"
+  },
+  "getai_glay": {
+   "type": "getai_glay",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 1004,
+    "end_line": 1017
+   },
+   "category_skcon9": [
+    "传感",
+    "巡线"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/gray_scale_sensor.png"
+    },
+    {
+     "kind": "label",
+     "text": "灰度"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口1",
+       "1"
+      ],
+      [
+       "端口2",
+       "2"
+      ],
+      [
+       "端口3",
+       "3"
+      ],
+      [
+       "端口4",
+       "4"
+      ],
+      [
+       "端口5",
+       "5"
+      ],
+      [
+       "端口6",
+       "6"
+      ],
+      [
+       "端口7",
+       "7"
+      ],
+      [
+       "端口8",
+       "8"
+      ],
+      [
+       "端口9",
+       "9"
+      ],
+      [
+       "端口10",
+       "10"
+      ],
+      [
+       "端口11",
+       "11"
+      ],
+      [
+       "端口12",
+       "12"
+      ]
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "地面灰度"
+    }
+   ],
+   "fields": {
+    "channel": {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口1",
+       "1"
+      ],
+      [
+       "端口2",
+       "2"
+      ],
+      [
+       "端口3",
+       "3"
+      ],
+      [
+       "端口4",
+       "4"
+      ],
+      [
+       "端口5",
+       "5"
+      ],
+      [
+       "端口6",
+       "6"
+      ],
+      [
+       "端口7",
+       "7"
+      ],
+      [
+       "端口8",
+       "8"
+      ],
+      [
+       "端口9",
+       "9"
+      ],
+      [
+       "端口10",
+       "10"
+      ],
+      [
+       "端口11",
+       "11"
+      ],
+      [
+       "端口12",
+       "12"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 345,
+    "end_line": 350
+   },
+   "python": "robot.get_gray(<channel>)",
+   "python_notes": "输出表达式",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"getai_glay\"><field name=\"channel\">9</field></block>"
+   },
+   "xml_min": "<block type=\"getai_glay\">\n  <field name=\"channel\">1</field>\n</block>",
+   "evidence": "A+"
+  },
+  "getai_touch": {
+   "type": "getai_touch",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 1199,
+    "end_line": 1212
+   },
+   "category_skcon9": [
+    "传感"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/touch_sensor.png"
+    },
+    {
+     "kind": "label",
+     "text": "碰撞"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口1",
+       "1"
+      ],
+      [
+       "端口2",
+       "2"
+      ],
+      [
+       "端口3",
+       "3"
+      ],
+      [
+       "端口4",
+       "4"
+      ],
+      [
+       "端口5",
+       "5"
+      ],
+      [
+       "端口6",
+       "6"
+      ],
+      [
+       "端口7",
+       "7"
+      ],
+      [
+       "端口8",
+       "8"
+      ],
+      [
+       "端口9",
+       "9"
+      ],
+      [
+       "端口10",
+       "10"
+      ],
+      [
+       "端口11",
+       "11"
+      ],
+      [
+       "端口12",
+       "12"
+      ]
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "碰到物体"
+    }
+   ],
+   "fields": {
+    "channel": {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口1",
+       "1"
+      ],
+      [
+       "端口2",
+       "2"
+      ],
+      [
+       "端口3",
+       "3"
+      ],
+      [
+       "端口4",
+       "4"
+      ],
+      [
+       "端口5",
+       "5"
+      ],
+      [
+       "端口6",
+       "6"
+      ],
+      [
+       "端口7",
+       "7"
+      ],
+      [
+       "端口8",
+       "8"
+      ],
+      [
+       "端口9",
+       "9"
+      ],
+      [
+       "端口10",
+       "10"
+      ],
+      [
+       "端口11",
+       "11"
+      ],
+      [
+       "端口12",
+       "12"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Boolean"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 437,
+    "end_line": 442
+   },
+   "python": "robot.get_touch(<channel>)",
+   "python_notes": "输出表达式",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"getai_touch\"><field name=\"channel\">1</field></block>"
+   },
+   "xml_min": "<block type=\"getai_touch\">\n  <field name=\"channel\">1</field>\n</block>",
+   "evidence": "A+"
+  },
+  "eeprom_read": {
+   "type": "eeprom_read",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 1455,
+    "end_line": 1467
+   },
+   "category_skcon9": [
+    "传感"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/read_and_write_data.png"
+    },
+    {
+     "kind": "label",
+     "text": "读取数据 地址"
+    },
+    {
+     "kind": "field_number",
+     "field": "address",
+     "default": "1"
+    }
+   ],
+   "fields": {
+    "address": {
+     "kind": "field_number",
+     "field": "address",
+     "default": "1"
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 540,
+    "end_line": 545
+   },
+   "python": "robot.get_ee(<address>)",
+   "python_notes": "输出表达式",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"eeprom_read\"><field name=\"address\">9</field></block>"
+   },
+   "xml_min": "<block type=\"eeprom_read\">\n  <field name=\"address\">1</field>\n</block>",
+   "evidence": "A+"
+  },
+  "wait": {
+   "type": "wait",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 787,
+    "end_line": 802
+   },
+   "category_skcon9": [
+    "控制"
+   ],
+   "append_fields": [
+    {
+     "kind": "input_value",
+     "name": "time",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "image",
+       "src": "pic/block_icon/delay.png"
+      },
+      {
+       "kind": "label",
+       "text": "等待"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "秒"
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {
+     "time": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 673,
+    "end_line": 686
+   },
+   "python": "SKCON9/其它: time.sleep(<time>)\nSKCON2:      robot.sleep(<time>)",
+   "python_notes": "生成器分 maingui.robotType 判断；本机 SKCON9 走 time.sleep。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"wait\" />"
+   },
+   "xml_min": "<block type=\"wait\">\n  <value name=\"time\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "if": {
+   "type": "if",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 807,
+    "end_line": 825
+   },
+   "category_skcon9": [
+    "控制"
+   ],
+   "append_fields": [
+    {
+     "kind": "input_value",
+     "name": "logic_val",
+     "check": "Boolean",
+     "prefix": [
+      {
+       "kind": "image",
+       "src": "pic/block_icon/if_else.png"
+      },
+      {
+       "kind": "label",
+       "text": "如果"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "那么"
+    },
+    {
+     "kind": "input_statement",
+     "name": "code"
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {
+     "logic_val": {
+      "check": "Boolean"
+     }
+    },
+    "statement": {
+     "code": {}
+    }
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 583,
+    "end_line": 591
+   },
+   "python": "if <logic_val>:\n<语句输入 code>",
+   "python_notes": "body 为空时补 '    pass\\n'。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"if\" />"
+   },
+   "xml_min": "<block type=\"if\">\n  <value name=\"logic_val\"><shadow type=\"logic_boolean\"><field name=\"BOOL\">TRUE</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "ifelse": {
+   "type": "ifelse",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 828,
+    "end_line": 849
+   },
+   "category_skcon9": [
+    "控制"
+   ],
+   "append_fields": [
+    {
+     "kind": "input_value",
+     "name": "logic_val",
+     "check": "Boolean",
+     "prefix": [
+      {
+       "kind": "image",
+       "src": "pic/block_icon/if_else.png"
+      },
+      {
+       "kind": "label",
+       "text": "如果"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "那么"
+    },
+    {
+     "kind": "input_statement",
+     "name": "code"
+    },
+    {
+     "kind": "input_statement",
+     "name": "else_code",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "否则"
+      }
+     ]
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {
+     "logic_val": {
+      "check": "Boolean"
+     }
+    },
+    "statement": {
+     "code": {},
+     "else_code": {}
+    }
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 594,
+    "end_line": 608
+   },
+   "python": "if <logic_val>:\n<语句输入 code>else:\n<语句输入 else_code>",
+   "python_notes": "两个 body 为空时各自补 '    pass\\n'。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"ifelse\" />"
+   },
+   "xml_min": "<block type=\"ifelse\">\n  <value name=\"logic_val\"><shadow type=\"logic_boolean\"><field name=\"BOOL\">TRUE</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "while_cmp": {
+   "type": "while_cmp",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 869,
+    "end_line": 884
+   },
+   "category_skcon9": [
+    "控制"
+   ],
+   "append_fields": [
+    {
+     "kind": "input_value",
+     "name": "bool",
+     "check": "Boolean",
+     "prefix": [
+      {
+       "kind": "image",
+       "src": "pic/block_icon/loop_until.png"
+      },
+      {
+       "kind": "label",
+       "text": "重复执行直到"
+      }
+     ]
+    },
+    {
+     "kind": "input_statement",
+     "name": "code"
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {
+     "bool": {
+      "check": "Boolean"
+     }
+    },
+    "statement": {
+     "code": {}
+    }
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 621,
+    "end_line": 629
+   },
+   "python": "while not <bool>:\n<语句输入 code>",
+   "python_notes": "注意是 while not：bool 为假时继续循环。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"while_cmp\" />"
+   },
+   "xml_min": "<block type=\"while_cmp\">\n  <value name=\"bool\"><shadow type=\"logic_boolean\"><field name=\"BOOL\">TRUE</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "while_forver": {
+   "type": "while_forver",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 852,
+    "end_line": 866
+   },
+   "category_skcon9": [
+    "控制"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/infinite_loop.png"
+    },
+    {
+     "kind": "label",
+     "text": "重复执行"
+    },
+    {
+     "kind": "input_statement",
+     "name": "NAME"
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {},
+    "statement": {
+     "NAME": {}
+    }
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 611,
+    "end_line": 618
+   },
+   "python": "while True:\n<语句输入 NAME>",
+   "python_notes": "语句输入名是 NAME（不是 code）。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"while_forver\" />"
+   },
+   "xml_min": "<block type=\"while_forver\">\n</block>",
+   "evidence": "A+"
+  },
+  "while_number": {
+   "type": "while_number",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 887,
+    "end_line": 904
+   },
+   "category_skcon9": [
+    "控制"
+   ],
+   "append_fields": [
+    {
+     "kind": "input_value",
+     "name": "TIMES",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "image",
+       "src": "pic/block_icon/loop.png"
+      },
+      {
+       "kind": "label",
+       "text": "重复"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "次"
+    },
+    {
+     "kind": "input_statement",
+     "name": "code"
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {
+     "TIMES": {
+      "check": "Number"
+     }
+    },
+    "statement": {
+     "code": {}
+    }
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 632,
+    "end_line": 655
+   },
+   "python": "for <自动生成的 loopVar> in range(<TIMES>):\n<语句输入 code>",
+   "python_notes": "TIMES 是值输入（不是字段！）。若 TIMES 是数字字面量则直接用；否则包 int(...)。loopVar 由 getDistinctName('count') 生成 → count/count2/count3…。",
+   "xml_min": "<block type=\"while_number\">\n  <value name=\"TIMES\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+（TIMES 为值输入由块定义+工具箱+生成器三方确认）"
+  },
+  "while_break": {
+   "type": "while_break",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 925,
+    "end_line": 937
+   },
+   "category_skcon9": [
+    "控制"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/exit_loop.png"
+    },
+    {
+     "kind": "label",
+     "text": "退出循环"
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 667,
+    "end_line": 671
+   },
+   "python": "break\n",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"while_break\" />"
+   },
+   "xml_min": "<block type=\"while_break\">\n</block>",
+   "evidence": "A+"
+  },
+  "variables_get": {
+   "type": "variables_get",
+   "block_def": {
+    "file": "blocks/variables.js",
+    "start_line": 47,
+    "end_line": 62
+   },
+   "category_skcon9": [
+    "变量（动态分类 custom=\"VARIABLE\"）"
+   ],
+   "append_fields": [
+    {
+     "kind": "field_variable",
+     "field": "VAR"
+    }
+   ],
+   "fields": {
+    "VAR": {
+     "kind": "field_variable",
+     "field": "VAR"
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": null,
+    "has_output": true
+   },
+   "generator": {
+    "file": "generators/python/variables.js",
+    "start_line": 32,
+    "end_line": 37
+   },
+   "python": "<变量安全名>",
+   "python_notes": "表达式；名字经 Blockly.Names.safeName_（ASCII 名原样保留，中文会被转成 _E5_... 之类）。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"variables_get\"><field name=\"VAR\" id=\"%lZZ$hn^M*oIp_,)#:6r\" variabletype=\"\">var_1cm</field></block>"
+   },
+   "xml_min": "<block type=\"variables_get\">\n  <field name=\"VAR\" id=\"var_id_1\" variabletype=\"\">var_name</field>\n</block>",
+   "evidence": "A+"
+  },
+  "variables_set": {
+   "type": "variables_set",
+   "block_def": {
+    "file": "blocks/variables.js",
+    "start_line": 64,
+    "end_line": 84
+   },
+   "category_skcon9": [
+    "变量（动态分类 custom=\"VARIABLE\"）"
+   ],
+   "append_fields": [
+    {
+     "kind": "label",
+     "text": "赋值 "
+    },
+    {
+     "kind": "field_variable",
+     "field": "VAR"
+    },
+    {
+     "kind": "label",
+     "text": " 为 "
+    },
+    {
+     "kind": "input_value",
+     "name": "VALUE",
+     "check": null
+    }
+   ],
+   "fields": {
+    "VAR": {
+     "kind": "field_variable",
+     "field": "VAR"
+    }
+   },
+   "inputs": {
+    "value": {
+     "VALUE": {
+      "check": null
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null,
+    "has_output": false
+   },
+   "generator": {
+    "file": "generators/python/variables.js",
+    "start_line": 39,
+    "end_line": 46
+   },
+   "python": "<变量安全名> = <VALUE 或 '0'>\n",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"variables_set\"><field name=\"VAR\" id=\"xh{|)jB=Qw*X)LD:#OkE\" variabletype=\"\">var_angle</field></block>"
+   },
+   "xml_min": "<block type=\"variables_set\">\n  <field name=\"VAR\" id=\"var_id_1\" variabletype=\"\">var_name</field>\n  <value name=\"VALUE\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "math_number": {
+   "type": "math_number",
+   "block_def": {
+    "file": "blocks/math.js",
+    "start_line": 47,
+    "end_line": 61
+   },
+   "category_skcon9": [
+    "巡线",
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "field_number",
+     "field": "NUM",
+     "default": "0"
+    }
+   ],
+   "fields": {
+    "NUM": {
+     "kind": "field_number",
+     "field": "NUM",
+     "default": "0"
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number",
+    "has_output": true
+   },
+   "generator": {
+    "file": "generators/python/math.js",
+    "start_line": 35,
+    "end_line": 50
+   },
+   "python": "<数字字面量>",
+   "python_notes": "parseFloat；13 → 13，-5.5 → -5.5；Infinity 特殊处理。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"math_number\"><field name=\"NUM\">13</field></block>"
+   },
+   "xml_min": "<block type=\"math_number\">\n  <field name=\"NUM\">0</field>\n</block>",
+   "evidence": "A+"
+  },
+  "math_op": {
+   "type": "math_op",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 2226,
+    "end_line": 2240
+   },
+   "category_skcon9": [
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "input_value",
+     "name": "A",
+     "check": "Number"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "valname",
+     "options": [
+      [
+       "+",
+       "+"
+      ],
+      [
+       "-",
+       "-"
+      ],
+      [
+       "*",
+       "*"
+      ],
+      [
+       "/",
+       "/"
+      ],
+      [
+       "^",
+       "^"
+      ],
+      [
+       "%",
+       "%"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "B",
+     "check": "Number"
+    }
+   ],
+   "fields": {
+    "valname": {
+     "kind": "field_dropdown",
+     "field": "valname",
+     "options": [
+      [
+       "+",
+       "+"
+      ],
+      [
+       "-",
+       "-"
+      ],
+      [
+       "*",
+       "*"
+      ],
+      [
+       "/",
+       "/"
+      ],
+      [
+       "^",
+       "^"
+      ],
+      [
+       "%",
+       "%"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "A": {
+      "check": "Number"
+     },
+     "B": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 1055,
+    "end_line": 1066
+   },
+   "python": "+ - * / %: (<A> <operator> <B>)\n^:        robot.pow(<A>, <B>)",
+   "python_notes": "operator 直接取字段值（+ - * / % ^），^ 特判为 robot.pow。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"math_op\"><field name=\"valname\">*</field></block>"
+   },
+   "xml_min": "<block type=\"math_op\">\n  <field name=\"valname\">+</field>\n  <value name=\"A\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n  <value name=\"B\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "math_compare": {
+   "type": "math_compare",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 2243,
+    "end_line": 2257
+   },
+   "category_skcon9": [
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "input_value",
+     "name": "A",
+     "check": null
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "comparison_operator",
+     "options": [
+      [
+       "=",
+       "=="
+      ],
+      [
+       "!=",
+       "!="
+      ],
+      [
+       "<",
+       "<"
+      ],
+      [
+       "<=",
+       "<="
+      ],
+      [
+       ">",
+       ">"
+      ],
+      [
+       ">=",
+       ">="
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "B",
+     "check": null
+    }
+   ],
+   "fields": {
+    "comparison_operator": {
+     "kind": "field_dropdown",
+     "field": "comparison_operator",
+     "options": [
+      [
+       "=",
+       "=="
+      ],
+      [
+       "!=",
+       "!="
+      ],
+      [
+       "<",
+       "<"
+      ],
+      [
+       "<=",
+       "<="
+      ],
+      [
+       ">",
+       ">"
+      ],
+      [
+       ">=",
+       ">="
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "A": {
+      "check": null
+     },
+     "B": {
+      "check": null
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Boolean"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 1069,
+    "end_line": 1076
+   },
+   "python": "<A> <comparison_operator> <B>",
+   "python_notes": "comparison_operator 字段【值】是 ==/!=/</<=/>/>=（界面上显示 =/≠/</≤/>/≥）。XML 里必须写 == 等，写 '=' 会被当成不存在的选项而静默回退到第一项。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"math_compare\"><field name=\"comparison_operator\">&gt;=</field></block>"
+   },
+   "xml_min": "<block type=\"math_compare\">\n  <field name=\"comparison_operator\">==</field>\n  <value name=\"A\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n  <value name=\"B\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+（下拉 value 语义由块定义+真实样本+生成器三方确认）"
+  },
+  "logic_compare": {
+   "type": "logic_compare",
+   "block_def": {
+    "file": "blocks/logic.js",
+    "start_line": 123,
+    "end_line": 153
+   },
+   "category_skcon9": [
+    "巡线",
+    "AI"
+   ],
+   "append_fields": [
+    {
+     "kind": "input_value",
+     "name": "A",
+     "check": null
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "OP",
+     "options": [
+      [
+       "=",
+       "EQ"
+      ],
+      [
+       "≠",
+       "NEQ"
+      ],
+      [
+       "‏<",
+       "LT"
+      ],
+      [
+       "‏≤",
+       "LTE"
+      ],
+      [
+       "‏>",
+       "GT"
+      ],
+      [
+       "‏≥",
+       "GTE"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "B",
+     "check": null
+    }
+   ],
+   "fields": {
+    "OP": {
+     "kind": "field_dropdown",
+     "field": "OP",
+     "options": [
+      [
+       "=",
+       "EQ"
+      ],
+      [
+       "≠",
+       "NEQ"
+      ],
+      [
+       "‏<",
+       "LT"
+      ],
+      [
+       "‏≤",
+       "LTE"
+      ],
+      [
+       "‏>",
+       "GT"
+      ],
+      [
+       "‏≥",
+       "GTE"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "A": {
+      "check": null
+     },
+     "B": {
+      "check": null
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Boolean",
+    "has_output": true
+   },
+   "generator": {
+    "file": "generators/python/logic.js",
+    "start_line": 56,
+    "end_line": 72
+   },
+   "python": "<A> <op> <B>   # op: EQ→==, NEQ→!=, LT→<, LTE→<=, GT→>, GTE→>=",
+   "python_notes": "字段 OP 的值是 EQ/NEQ/LT/LTE/GT/GTE（不是符号本身）。",
+   "xml_min": "<block type=\"logic_compare\">\n  <field name=\"OP\">EQ</field>\n  <value name=\"A\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n  <value name=\"B\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A"
+  },
+  "logic_operation": {
+   "type": "logic_operation",
+   "block_def": {
+    "file": "blocks/logic.js",
+    "start_line": 155,
+    "end_line": 184
+   },
+   "category_skcon9": [
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "input_value",
+     "name": "A",
+     "check": "Boolean"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "OP",
+     "options": [
+      [
+       "并且",
+       "AND"
+      ],
+      [
+       "或",
+       "OR"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "B",
+     "check": "Boolean"
+    }
+   ],
+   "fields": {
+    "OP": {
+     "kind": "field_dropdown",
+     "field": "OP",
+     "options": [
+      [
+       "并且",
+       "AND"
+      ],
+      [
+       "或",
+       "OR"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "A": {
+      "check": "Boolean"
+     },
+     "B": {
+      "check": "Boolean"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Boolean",
+    "has_output": true
+   },
+   "generator": {
+    "file": "generators/python/logic.js",
+    "start_line": 74,
+    "end_line": 97
+   },
+   "python": "<A> and <B>  |  <A> or <B>",
+   "python_notes": "字段 OP = AND/OR。缺输入时补 True/False。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"logic_operation\"><field name=\"OP\">OR</field></block>"
+   },
+   "xml_min": "<block type=\"logic_operation\">\n  <field name=\"OP\">AND</field>\n  <value name=\"A\"><shadow type=\"logic_boolean\"><field name=\"BOOL\">TRUE</field></shadow></value>\n  <value name=\"B\"><shadow type=\"logic_boolean\"><field name=\"BOOL\">TRUE</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "logic_boolean": {
+   "type": "logic_boolean",
+   "block_def": {
+    "file": "blocks/logic.js",
+    "start_line": 46,
+    "end_line": 64
+   },
+   "category_skcon9": [
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "field_dropdown",
+     "field": "BOOL",
+     "options": [
+      [
+       "真",
+       "TRUE"
+      ],
+      [
+       "假",
+       "FALSE"
+      ]
+     ]
+    }
+   ],
+   "fields": {
+    "BOOL": {
+     "kind": "field_dropdown",
+     "field": "BOOL",
+     "options": [
+      [
+       "真",
+       "TRUE"
+      ],
+      [
+       "假",
+       "FALSE"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Boolean",
+    "has_output": true
+   },
+   "generator": {
+    "file": "generators/python/logic.js",
+    "start_line": 107,
+    "end_line": 111
+   },
+   "python": "True  (BOOL=TRUE)\nFalse (BOOL=FALSE)",
+   "python_notes": "表达式。",
+   "xml_min": "<block type=\"logic_boolean\">\n  <field name=\"BOOL\">TRUE</field>\n</block>",
+   "evidence": "A"
+  },
+  "robot_math_rounding": {
+   "type": "robot_math_rounding",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 2305,
+    "end_line": 2319
+   },
+   "category_skcon9": [
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "field_dropdown",
+     "field": "rounding_type",
+     "options": [
+      [
+       "四舍五入",
+       "round"
+      ],
+      [
+       "向上舍入",
+       "ceil"
+      ],
+      [
+       "向下舍入",
+       "floor"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "param",
+     "check": "Number"
+    }
+   ],
+   "fields": {
+    "rounding_type": {
+     "kind": "field_dropdown",
+     "field": "rounding_type",
+     "options": [
+      [
+       "四舍五入",
+       "round"
+      ],
+      [
+       "向上舍入",
+       "ceil"
+      ],
+      [
+       "向下舍入",
+       "floor"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "param": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 1128,
+    "end_line": 1140
+   },
+   "python": "round: robot.round(<param>)\nceil:  robot.ceil(<param>)\nfloor: robot.floor(<param>)",
+   "python_notes": "表达式。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"robot_math_rounding\"><field name=\"rounding_type\">ceil</field></block>"
+   },
+   "xml_min": "<block type=\"robot_math_rounding\">\n  <field name=\"rounding_type\">round</field>\n  <value name=\"param\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "robot_math_unary_operation": {
+   "type": "robot_math_unary_operation",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 2260,
+    "end_line": 2280
+   },
+   "category_skcon9": [
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "field_dropdown",
+     "field": "operation",
+     "options": [
+      [
+       "平方根",
+       "sqrt"
+      ],
+      [
+       "绝对值",
+       "fabs"
+      ],
+      [
+       "-",
+       "negative"
+      ],
+      [
+       "ln",
+       "ln"
+      ],
+      [
+       "log10",
+       "log10"
+      ],
+      [
+       "e^",
+       "e^"
+      ],
+      [
+       "10^",
+       "10^"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "operand",
+     "check": "Number"
+    }
+   ],
+   "fields": {
+    "operation": {
+     "kind": "field_dropdown",
+     "field": "operation",
+     "options": [
+      [
+       "平方根",
+       "sqrt"
+      ],
+      [
+       "绝对值",
+       "fabs"
+      ],
+      [
+       "-",
+       "negative"
+      ],
+      [
+       "ln",
+       "ln"
+      ],
+      [
+       "log10",
+       "log10"
+      ],
+      [
+       "e^",
+       "e^"
+      ],
+      [
+       "10^",
+       "10^"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "operand": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 1079,
+    "end_line": 1099
+   },
+   "python": "sqrt:  robot.sqrt(<operand>)\nfabs:  robot.abs(<operand>)\nnegative: -(<operand>)\nln:    robot.ln(<operand>)\nlog10: robot.log10(<operand>)\ne^:    robot.exp(<operand>)\n10^:   robot.pow(10, <operand>)",
+   "python_notes": "表达式。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"robot_math_unary_operation\"><field name=\"operation\">fabs</field></block>"
+   },
+   "xml_min": "<block type=\"robot_math_unary_operation\">\n  <field name=\"operation\">sqrt</field>\n  <value name=\"operand\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "printf_text": {
+   "type": "printf_text",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 535,
+    "end_line": 548
+   },
+   "category_skcon9": [
+    "输出"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/display.png"
+    },
+    {
+     "kind": "label",
+     "text": "显示"
+    },
+    {
+     "kind": "field_text_input",
+     "field": "text",
+     "default": "hello world"
+    }
+   ],
+   "fields": {
+    "text": {
+     "kind": "field_text_input",
+     "field": "text",
+     "default": "hello world"
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 202,
+    "end_line": 208
+   },
+   "python": "robot.print('<text 中的单引号转义为 \\'>\\n')\n",
+   "python_notes": "注意生成的是字符串里带 \\n 的换行。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"printf_text\"><field name=\"text\">hello world</field></block>"
+   },
+   "xml_min": "<block type=\"printf_text\">\n  <field name=\"text\">hello world</field>\n</block>",
+   "evidence": "A+"
+  },
+  "printf_number": {
+   "type": "printf_number",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 551,
+    "end_line": 565
+   },
+   "category_skcon9": [
+    "输出"
+   ],
+   "append_fields": [
+    {
+     "kind": "input_value",
+     "name": "data",
+     "check": null,
+     "prefix": [
+      {
+       "kind": "image",
+       "src": "pic/block_icon/display.png"
+      },
+      {
+       "kind": "label",
+       "text": "显示"
+      },
+      {
+       "kind": "field_text_input",
+       "field": "dataname",
+       "default": "data="
+      }
+     ]
+    }
+   ],
+   "fields": {
+    "dataname": {
+     "kind": "field_text_input",
+     "field": "dataname",
+     "default": "data="
+    }
+   },
+   "inputs": {
+    "value": {
+     "data": {
+      "check": null
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 211,
+    "end_line": 222
+   },
+   "python": "robot.print('<dataname> ' + str(<data>) + '\\n')\n",
+   "python_notes": "dataname 后面固定带一个空格。",
+   "xml_real": {
+    "project": "实验",
+    "xml": "<block type=\"printf_number\"><field name=\"dataname\">黑线S2</field></block>"
+   },
+   "xml_min": "<block type=\"printf_number\">\n  <field name=\"dataname\">data=</field>\n  <value name=\"data\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "play_sound": {
+   "type": "play_sound",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 620,
+    "end_line": 634
+   },
+   "category_skcon9": [
+    "声光"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/speaker.png"
+    },
+    {
+     "kind": "label",
+     "text": "播放"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "musicname",
+     "options": [
+      [
+       "打招呼-你好",
+       "dazhaohu_c0.mp3"
+      ],
+      [
+       "打招呼-再见",
+       "dazhaohu_c1.mp3"
+      ],
+      [
+       "打招呼-反对",
+       "dazhaohu_c2.mp3"
+      ],
+      [
+       "打招呼-欢迎",
+       "dazhaohu_c3.mp3"
+      ],
+      [
+       "打招呼-请多关照",
+       "dazhaohu_c4.mp3"
+      ],
+      [
+       "动物海豹",
+       "dongwu_p0.mp3"
+      ],
+      [
+       "动物鹦鹉",
+       "dongwu_p1.mp3"
+      ],
+      [
+       "动物青蛙",
+       "dongwu_p2.mp3"
+      ],
+      [
+       "动物羊",
+       "dongwu_p3.mp3"
+      ],
+      [
+       "动物鸡",
+       "dongwu_p4.mp3"
+      ],
+      [
+       "动物鸭子",
+       "dongwu_p5.mp3"
+      ],
+      [
+       "动物狗",
+       "dongwu_p6.mp3"
+      ],
+      [
+       "动物天鹅",
+       "dongwu_p7.mp3"
+      ],
+      [
+       "动物蜜蜂",
+       "dongwu_p8.mp3"
+      ],
+      [
+       "交通摩托车",
+       "jiaotong_p0.mp3"
+      ],
+      [
+       "交通赛车",
+       "jiaotong_p1.mp3"
+      ],
+      [
+       "交通火车",
+       "jiaotong_p2.mp3"
+      ],
+      [
+       "交通汽车",
+       "jiaotong_p3.mp3"
+      ],
+      [
+       "交通飞机",
+       "jiaotong_p4.mp3"
+      ],
+      [
+       "交通轮船",
+       "jiaotong_p5.mp3"
+      ],
+      [
+       "交通自行车",
+       "jiaotong_p6.mp3"
+      ],
+      [
+       "交通直升机",
+       "jiaotong_p7.mp3"
+      ],
+      [
+       "钢琴-do",
+       "gangqin_p0.mp3"
+      ],
+      [
+       "钢琴-ri",
+       "gangqin_p1.mp3"
+      ],
+      [
+       "钢琴-mi",
+       "gangqin_p2.mp3"
+      ],
+      [
+       "钢琴-fa",
+       "gangqin_p3.mp3"
+      ],
+      [
+       "钢琴-so",
+       "gangqin_p4.mp3"
+      ],
+      [
+       "钢琴-la",
+       "gangqin_p5.mp3"
+      ],
+      [
+       "钢琴-si",
+       "gangqin_p6.mp3"
+      ],
+      [
+       "钢琴-Hdo",
+       "gangqin_p7.mp3"
+      ],
+      [
+       "表情生气",
+       "biaoqing_c0.mp3"
+      ],
+      [
+       "表情傲慢",
+       "biaoqing_c1.mp3"
+      ],
+      [
+       "表情哭泣",
+       "biaoqing_c2.mp3"
+      ],
+      [
+       "表情激动",
+       "biaoqing_c3.mp3"
+      ],
+      [
+       "表情惊吓",
+       "biaoqing_c4.mp3"
+      ],
+      [
+       "表情委屈",
+       "biaoqing_c5.mp3"
+      ],
+      [
+       "表情高兴",
+       "biaoqing_c6.mp3"
+      ],
+      [
+       "表情可爱",
+       "biaoqing_c7.mp3"
+      ],
+      [
+       "表情大笑",
+       "biaoqing_c8.mp3"
+      ],
+      [
+       "表情悲伤",
+       "biaoqing_c9.mp3"
+      ],
+      [
+       "表情愤怒",
+       "biaoqing_c10.mp3"
+      ],
+      [
+       "表情调皮",
+       "biaoqing_c11.mp3"
+      ],
+      [
+       "动作打寒颤",
+       "dongzuo_c0.mp3"
+      ],
+      [
+       "动作卖萌",
+       "dongzuo_c1.mp3"
+      ],
+      [
+       "动作赞成",
+       "dongzuo_c2.mp3"
+      ],
+      [
+       "动作求抱抱",
+       "dongzuo_c3.mp3"
+      ],
+      [
+       "动作打哈欠",
+       "dongzuo_c4.mp3"
+      ],
+      [
+       "动作加油",
+       "dongzuo_c5.mp3"
+      ],
+      [
+       "动作睡觉",
+       "dongzuo_c6.mp3"
+      ],
+      [
+       "动作休息",
+       "dongzuo_c7.mp3"
+      ],
+      [
+       "动作鬼鬼祟祟",
+       "dongzuo_c8.mp3"
+      ],
+      [
+       "小提琴-1",
+       "xiaotiqin_p0.mp3"
+      ],
+      [
+       "小提琴-2",
+       "xiaotiqin_p1.mp3"
+      ],
+      [
+       "小提琴-3",
+       "xiaotiqin_p2.mp3"
+      ],
+      [
+       "小提琴-4",
+       "xiaotiqin_p3.mp3"
+      ],
+      [
+       "小提琴-5",
+       "xiaotiqin_p4.mp3"
+      ],
+      [
+       "小提琴-6",
+       "xiaotiqin_p5.mp3"
+      ],
+      [
+       "小提琴-7",
+       "xiaotiqin_p6.mp3"
+      ],
+      [
+       "小提琴-8",
+       "xiaotiqin_p7.mp3"
+      ],
+      [
+       "架子鼓低音大鼓",
+       "jiazigu_p0.mp3"
+      ],
+      [
+       "架子鼓军鼓",
+       "jiazigu_p1.mp3"
+      ],
+      [
+       "架子鼓落地鼓",
+       "jiazigu_p2.mp3"
+      ],
+      [
+       "架子鼓嗵嗵鼓1",
+       "jiazigu_p3.mp3"
+      ],
+      [
+       "架子鼓嗵嗵鼓2",
+       "jiazigu_p4.mp3"
+      ],
+      [
+       "架子鼓踩镲",
+       "jiazigu_p5.mp3"
+      ],
+      [
+       "架子鼓吊镲",
+       "jiazigu_p6.mp3"
+      ],
+      [
+       "架子鼓节奏镲",
+       "jiazigu_p7.mp3"
+      ],
+      [
+       "架子鼓镲片",
+       "jiazigu_p8.mp3"
+      ],
+      [
+       "录音-1",
+       "luyin_p1"
+      ],
+      [
+       "录音-2",
+       "luyin_p2"
+      ],
+      [
+       "录音-3",
+       "luyin_p3"
+      ],
+      [
+       "录音-4",
+       "luyin_p4"
+      ],
+      [
+       "录音-5",
+       "luyin_p5"
+      ],
+      [
+       "录音-6",
+       "luyin_p5"
+      ],
+      [
+       "录音-7",
+       "luyin_p7"
+      ],
+      [
+       "录音-8",
+       "luyin_p8"
+      ],
+      [
+       "录音-9",
+       "luyin_p9"
+      ],
+      [
+       "录音-10",
+       "luyin_p10"
+      ]
+     ]
+    }
+   ],
+   "fields": {
+    "musicname": {
+     "kind": "field_dropdown",
+     "field": "musicname",
+     "options": [
+      [
+       "打招呼-你好",
+       "dazhaohu_c0.mp3"
+      ],
+      [
+       "打招呼-再见",
+       "dazhaohu_c1.mp3"
+      ],
+      [
+       "打招呼-反对",
+       "dazhaohu_c2.mp3"
+      ],
+      [
+       "打招呼-欢迎",
+       "dazhaohu_c3.mp3"
+      ],
+      [
+       "打招呼-请多关照",
+       "dazhaohu_c4.mp3"
+      ],
+      [
+       "动物海豹",
+       "dongwu_p0.mp3"
+      ],
+      [
+       "动物鹦鹉",
+       "dongwu_p1.mp3"
+      ],
+      [
+       "动物青蛙",
+       "dongwu_p2.mp3"
+      ],
+      [
+       "动物羊",
+       "dongwu_p3.mp3"
+      ],
+      [
+       "动物鸡",
+       "dongwu_p4.mp3"
+      ],
+      [
+       "动物鸭子",
+       "dongwu_p5.mp3"
+      ],
+      [
+       "动物狗",
+       "dongwu_p6.mp3"
+      ],
+      [
+       "动物天鹅",
+       "dongwu_p7.mp3"
+      ],
+      [
+       "动物蜜蜂",
+       "dongwu_p8.mp3"
+      ],
+      [
+       "交通摩托车",
+       "jiaotong_p0.mp3"
+      ],
+      [
+       "交通赛车",
+       "jiaotong_p1.mp3"
+      ],
+      [
+       "交通火车",
+       "jiaotong_p2.mp3"
+      ],
+      [
+       "交通汽车",
+       "jiaotong_p3.mp3"
+      ],
+      [
+       "交通飞机",
+       "jiaotong_p4.mp3"
+      ],
+      [
+       "交通轮船",
+       "jiaotong_p5.mp3"
+      ],
+      [
+       "交通自行车",
+       "jiaotong_p6.mp3"
+      ],
+      [
+       "交通直升机",
+       "jiaotong_p7.mp3"
+      ],
+      [
+       "钢琴-do",
+       "gangqin_p0.mp3"
+      ],
+      [
+       "钢琴-ri",
+       "gangqin_p1.mp3"
+      ],
+      [
+       "钢琴-mi",
+       "gangqin_p2.mp3"
+      ],
+      [
+       "钢琴-fa",
+       "gangqin_p3.mp3"
+      ],
+      [
+       "钢琴-so",
+       "gangqin_p4.mp3"
+      ],
+      [
+       "钢琴-la",
+       "gangqin_p5.mp3"
+      ],
+      [
+       "钢琴-si",
+       "gangqin_p6.mp3"
+      ],
+      [
+       "钢琴-Hdo",
+       "gangqin_p7.mp3"
+      ],
+      [
+       "表情生气",
+       "biaoqing_c0.mp3"
+      ],
+      [
+       "表情傲慢",
+       "biaoqing_c1.mp3"
+      ],
+      [
+       "表情哭泣",
+       "biaoqing_c2.mp3"
+      ],
+      [
+       "表情激动",
+       "biaoqing_c3.mp3"
+      ],
+      [
+       "表情惊吓",
+       "biaoqing_c4.mp3"
+      ],
+      [
+       "表情委屈",
+       "biaoqing_c5.mp3"
+      ],
+      [
+       "表情高兴",
+       "biaoqing_c6.mp3"
+      ],
+      [
+       "表情可爱",
+       "biaoqing_c7.mp3"
+      ],
+      [
+       "表情大笑",
+       "biaoqing_c8.mp3"
+      ],
+      [
+       "表情悲伤",
+       "biaoqing_c9.mp3"
+      ],
+      [
+       "表情愤怒",
+       "biaoqing_c10.mp3"
+      ],
+      [
+       "表情调皮",
+       "biaoqing_c11.mp3"
+      ],
+      [
+       "动作打寒颤",
+       "dongzuo_c0.mp3"
+      ],
+      [
+       "动作卖萌",
+       "dongzuo_c1.mp3"
+      ],
+      [
+       "动作赞成",
+       "dongzuo_c2.mp3"
+      ],
+      [
+       "动作求抱抱",
+       "dongzuo_c3.mp3"
+      ],
+      [
+       "动作打哈欠",
+       "dongzuo_c4.mp3"
+      ],
+      [
+       "动作加油",
+       "dongzuo_c5.mp3"
+      ],
+      [
+       "动作睡觉",
+       "dongzuo_c6.mp3"
+      ],
+      [
+       "动作休息",
+       "dongzuo_c7.mp3"
+      ],
+      [
+       "动作鬼鬼祟祟",
+       "dongzuo_c8.mp3"
+      ],
+      [
+       "小提琴-1",
+       "xiaotiqin_p0.mp3"
+      ],
+      [
+       "小提琴-2",
+       "xiaotiqin_p1.mp3"
+      ],
+      [
+       "小提琴-3",
+       "xiaotiqin_p2.mp3"
+      ],
+      [
+       "小提琴-4",
+       "xiaotiqin_p3.mp3"
+      ],
+      [
+       "小提琴-5",
+       "xiaotiqin_p4.mp3"
+      ],
+      [
+       "小提琴-6",
+       "xiaotiqin_p5.mp3"
+      ],
+      [
+       "小提琴-7",
+       "xiaotiqin_p6.mp3"
+      ],
+      [
+       "小提琴-8",
+       "xiaotiqin_p7.mp3"
+      ],
+      [
+       "架子鼓低音大鼓",
+       "jiazigu_p0.mp3"
+      ],
+      [
+       "架子鼓军鼓",
+       "jiazigu_p1.mp3"
+      ],
+      [
+       "架子鼓落地鼓",
+       "jiazigu_p2.mp3"
+      ],
+      [
+       "架子鼓嗵嗵鼓1",
+       "jiazigu_p3.mp3"
+      ],
+      [
+       "架子鼓嗵嗵鼓2",
+       "jiazigu_p4.mp3"
+      ],
+      [
+       "架子鼓踩镲",
+       "jiazigu_p5.mp3"
+      ],
+      [
+       "架子鼓吊镲",
+       "jiazigu_p6.mp3"
+      ],
+      [
+       "架子鼓节奏镲",
+       "jiazigu_p7.mp3"
+      ],
+      [
+       "架子鼓镲片",
+       "jiazigu_p8.mp3"
+      ],
+      [
+       "录音-1",
+       "luyin_p1"
+      ],
+      [
+       "录音-2",
+       "luyin_p2"
+      ],
+      [
+       "录音-3",
+       "luyin_p3"
+      ],
+      [
+       "录音-4",
+       "luyin_p4"
+      ],
+      [
+       "录音-5",
+       "luyin_p5"
+      ],
+      [
+       "录音-6",
+       "luyin_p5"
+      ],
+      [
+       "录音-7",
+       "luyin_p7"
+      ],
+      [
+       "录音-8",
+       "luyin_p8"
+      ],
+      [
+       "录音-9",
+       "luyin_p9"
+      ],
+      [
+       "录音-10",
+       "luyin_p10"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 254,
+    "end_line": 259
+   },
+   "python": "robot.play('<musicname>')\n",
+   "python_notes": "musicname 是 PlayList 的值（如 luyin_p2、dongwu_p0.mp3）。",
+   "xml_min": "<block type=\"play_sound\">\n  <field name=\"musicname\">dazhaohu_c0.mp3</field>\n</block>",
+   "evidence": "A+"
+  },
+  "procedures_defnoreturn": {
+   "type": "procedures_defnoreturn",
+   "category_skcon9": null,
+   "block_def": {
+    "file": "blocks/procedures.js",
+    "start_line": 33,
+    "end_line": 391
+   },
+   "append_fields": [
+    {
+     "kind": "label",
+     "text": "函数"
+    },
+    {
+     "kind": "field_text_input",
+     "field": "NAME",
+     "default": ""
+    },
+    {
+     "kind": "field_label",
+     "field": "PARAMS",
+     "note": "由 mutation 的 arg 列表自动渲染，XML 中不要手写"
+    },
+    {
+     "kind": "input_statement",
+     "name": "STACK"
+    }
+   ],
+   "fields": {
+    "NAME": {
+     "kind": "field_text_input",
+     "rule": "必须 ASCII，界面改名会自动加 func_ 前缀并过滤非 \\w"
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {
+     "STACK": {}
+    }
+   },
+   "mutation": {
+    "xml": "<mutation><arg name=\"cm\" varid=\"PARAM_VAR_ID_OPTIONAL\"></arg></mutation>",
+    "rules": [
+     "无参数可完全省略 <mutation>",
+     "参数名必须 ASCII；界面被禁用改参数（setMutator 被注释，blocks/procedures.js:47 附近），但 XML 加载会走 domToMutation 恢复参数",
+     "domToMutation 会为每个 arg 调 Blockly.Variables.getOrCreateVariablePackage(workspace, varid, name, '') 创建/复用变量，之后函数体内用 variables_get 引用参数名即可",
+     "建议把参数变量也声明进 <variables>（如 <variable type=\"\" id=\"PARAM_VAR_ID\">cm</variable>），并让 mutation 的 varid 与之一致；不声明也能加载（会现场创建变量）",
+     "保存时 def 的 mutation 不带 name 属性（name 在 <field name=\"NAME\">）；mutationToDom(true) 才带 name，仅用于内部 mutateCallers"
+    ],
+    "xml_param_example": "<block type=\"procedures_defnoreturn\" x=\"0\" y=\"0\">\n  <mutation><arg name=\"cm\" varid=\"v_param_cm\"></arg></mutation>\n  <field name=\"NAME\">func_MoveForward</field>\n  <statement name=\"STACK\">\n    <block type=\"motor\">\n      <field name=\"channel\">1</field>\n      <value name=\"speed\"><block type=\"variables_get\"><field name=\"VAR\" id=\"v_param_cm\" variabletype=\"\">cm</field></block></value>\n    </block>\n  </statement>\n</block>",
+    "xml_noparam_example": "<block type=\"procedures_defnoreturn\" x=\"0\" y=\"0\"><field name=\"NAME\">func_Stop</field><statement name=\"STACK\"></statement></block>"
+   },
+   "generator": {
+    "file": "generators/python/procedures.js",
+    "start_line": 32,
+    "end_line": 88,
+    "alias_line": 92,
+    "symbol": "Blockly.Python['procedures_defreturn']（procedures_defnoreturn 在第 92-93 行直接别名到它）"
+   },
+   "python": "def <NAME>(<参数名, 逗号分隔>):\n    global <工作区用到的变量名, 排除参数名>\n    <STACK 语句代码>\n    pass                          # 生成器总会在函数体末尾追加一个 pass\n",
+   "python_notes": "生成到 Blockly.Python.definitions_['%'+name]，排在 main 之前。procedures_defnoreturn 与 procedures_defreturn 共用同一个生成器。",
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": null
+   },
+   "xml_min": "<block type=\"procedures_defnoreturn\" x=\"0\" y=\"0\"><field name=\"NAME\">func_Stop</field><statement name=\"STACK\"></statement></block>",
+   "evidence": "A+（参数化 mutation 已由 harness headless 实测通过：加载/flyout 调用块/ARG0/Python 生成/py_compile 16/16 PASS；证据 工具/验证/证据/参数化函数/20261110_131824_param_test.report.txt）",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"procedures_defnoreturn\"><field name=\"NAME\">func_end</field></block>"
+   }
+  },
+  "procedures_callnoreturn": {
+   "type": "procedures_callnoreturn",
+   "category_skcon9": null,
+   "block_def": {
+    "file": "blocks/procedures.js",
+    "start_line": 626,
+    "end_line": 972
+   },
+   "append_fields": [
+    {
+     "kind": "field_label",
+     "field": "NAME",
+     "note": "init 时显示 this.id，domToMutation 用 mutation 的 name 调 renameProcedure 填真实函数名"
+    },
+    {
+     "kind": "field_label",
+     "field": "WITH",
+     "note": "有参数时追加 '与：'；参数输入为 ARG0..ARGn，各带一个 FieldLabel"
+    },
+    {
+     "kind": "input_value",
+     "name": "ARG0",
+     "note": "参数个数由 mutation 的 arg 数量决定"
+    }
+   ],
+   "fields": {
+    "NAME": {
+     "kind": "field_label",
+     "note": "不需要在 XML 写；由 <mutation name=...> 恢复"
+    }
+   },
+   "inputs": {
+    "value": {
+     "ARG0": {
+      "check": null
+     },
+     "ARG1": {
+      "check": null
+     },
+     "ARGn": {
+      "check": null
+     }
+    },
+    "statement": {}
+   },
+   "mutation": {
+    "xml": "<mutation name=\"func_MoveForward\"><arg name=\"cm\"></arg></mutation>",
+    "rules": [
+     "无参数：<mutation name=\"func_x\"></mutation>（真实样本即这种形式）",
+     "有参数：arg 顺序/名字必须与 def 的 mutation 完全一致；否则调用块的 onchange 会认为签名不符并自动新建同名 def 块（会重复定义）",
+     "paramId 属性可省（真实样本没有）；domToMutation 对 null paramId 也能正确建出 ARG0.. 输入"
+    ],
+    "xml_noparam_example": "<block type=\"procedures_callnoreturn\"><mutation name=\"func_Stop\"></mutation></block>",
+    "xml_param_example": "<block type=\"procedures_callnoreturn\"><mutation name=\"func_MoveForward\"><arg name=\"cm\"></arg></mutation><value name=\"ARG0\"><block type=\"math_number\"><field name=\"NUM\">30</field></block></value></block>"
+   },
+   "generator": {
+    "file": "generators/python/procedures.js",
+    "start_line": 108,
+    "end_line": 119
+   },
+   "python": "<NAME>(<ARG0>, <ARG1>, ...)\n",
+   "python_notes": "缺参数的输入位置生成 None。调用块字段 NAME 由 <mutation name> 恢复，不需要 <field name=\"NAME\">。",
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "xml_min": "<block type=\"procedures_callnoreturn\"><mutation name=\"func_Stop\"></mutation></block>",
+   "evidence": "A+",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"procedures_callnoreturn\"><mutation name=\"func_forward\" /></block>"
+   }
+  },
+  "servoa_angle": {
+   "type": "servoa_angle",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 236,
+    "end_line": 257
+   },
+   "category_skcon9": [
+    "运动"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic\\block_icon\\intelligent_motor.png"
+    },
+    {
+     "kind": "label",
+     "text": "智能电机"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "ID1",
+       "1"
+      ],
+      [
+       "ID2",
+       "2"
+      ],
+      [
+       "ID3",
+       "3"
+      ],
+      [
+       "ID4",
+       "4"
+      ],
+      [
+       "ID5",
+       "5"
+      ],
+      [
+       "ID6",
+       "6"
+      ],
+      [
+       "ID7",
+       "7"
+      ],
+      [
+       "ID8",
+       "8"
+      ],
+      [
+       "ID9",
+       "9"
+      ],
+      [
+       "ID10",
+       "10"
+      ],
+      [
+       "ID11",
+       "11"
+      ],
+      [
+       "所有智能电机",
+       "254"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "speed",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "速度"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "%"
+    },
+    {
+     "kind": "input_value",
+     "name": "angle",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "角度-90~90"
+      }
+     ]
+    }
+   ],
+   "fields": {
+    "channel": {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "ID1",
+       "1"
+      ],
+      [
+       "ID2",
+       "2"
+      ],
+      [
+       "ID3",
+       "3"
+      ],
+      [
+       "ID4",
+       "4"
+      ],
+      [
+       "ID5",
+       "5"
+      ],
+      [
+       "ID6",
+       "6"
+      ],
+      [
+       "ID7",
+       "7"
+      ],
+      [
+       "ID8",
+       "8"
+      ],
+      [
+       "ID9",
+       "9"
+      ],
+      [
+       "ID10",
+       "10"
+      ],
+      [
+       "ID11",
+       "11"
+      ],
+      [
+       "所有智能电机",
+       "254"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "speed": {
+      "check": "Number"
+     },
+     "angle": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 155,
+    "end_line": 164
+   },
+   "python": "robot.set_servo(<channel>, robot.clamp(<speed>, 0, 100), robot.clamp(<angle>, -90, 90))\n",
+   "python_notes": "channel 是字符串直接拼入（不转 Number）。",
+   "xml_min": "<block type=\"servoa_angle\">\n  <field name=\"channel\">1</field>\n  <value name=\"speed\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n  <value name=\"angle\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "set_do": {
+   "type": "set_do",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 518,
+    "end_line": 532
+   },
+   "category_skcon9": [
+    "输出"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/digital_output.png"
+    },
+    {
+     "kind": "label",
+     "text": "数字输出"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "PORT",
+     "options": [
+      [
+       "端口1",
+       "1"
+      ],
+      [
+       "端口2",
+       "2"
+      ],
+      [
+       "端口3",
+       "3"
+      ],
+      [
+       "端口4",
+       "4"
+      ],
+      [
+       "端口5",
+       "5"
+      ],
+      [
+       "端口6",
+       "6"
+      ],
+      [
+       "端口7",
+       "7"
+      ],
+      [
+       "端口8",
+       "8"
+      ],
+      [
+       "端口9",
+       "9"
+      ],
+      [
+       "端口10",
+       "10"
+      ],
+      [
+       "端口11",
+       "11"
+      ],
+      [
+       "端口12",
+       "12"
+      ]
+     ]
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "STATE",
+     "options": [
+      [
+       "OFF",
+       "0"
+      ],
+      [
+       "ON",
+       "1"
+      ]
+     ]
+    }
+   ],
+   "fields": {
+    "PORT": {
+     "kind": "field_dropdown",
+     "field": "PORT",
+     "options": [
+      [
+       "端口1",
+       "1"
+      ],
+      [
+       "端口2",
+       "2"
+      ],
+      [
+       "端口3",
+       "3"
+      ],
+      [
+       "端口4",
+       "4"
+      ],
+      [
+       "端口5",
+       "5"
+      ],
+      [
+       "端口6",
+       "6"
+      ],
+      [
+       "端口7",
+       "7"
+      ],
+      [
+       "端口8",
+       "8"
+      ],
+      [
+       "端口9",
+       "9"
+      ],
+      [
+       "端口10",
+       "10"
+      ],
+      [
+       "端口11",
+       "11"
+      ],
+      [
+       "端口12",
+       "12"
+      ]
+     ]
+    },
+    "STATE": {
+     "kind": "field_dropdown",
+     "field": "STATE",
+     "options": [
+      [
+       "OFF",
+       "0"
+      ],
+      [
+       "ON",
+       "1"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 193,
+    "end_line": 199
+   },
+   "python": "robot.set_do(<PORT>, <STATE>)\n",
+   "python_notes": "STATE: 0=OFF, 1=ON。",
+   "xml_min": "<block type=\"set_do\">\n  <field name=\"PORT\">1</field>\n  <field name=\"STATE\">0</field>\n</block>",
+   "evidence": "A+"
+  },
+  "set_electric_magnet": {
+   "type": "set_electric_magnet",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 259,
+    "end_line": 276
+   },
+   "category_skcon9": [
+    "运动"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic\\block_icon\\electromagnet.png"
+    },
+    {
+     "kind": "label",
+     "text": "电磁铁"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口1",
+       "1"
+      ],
+      [
+       "端口2",
+       "2"
+      ],
+      [
+       "端口3",
+       "3"
+      ],
+      [
+       "端口4",
+       "4"
+      ],
+      [
+       "端口5",
+       "5"
+      ],
+      [
+       "端口6",
+       "6"
+      ],
+      [
+       "端口7",
+       "7"
+      ],
+      [
+       "端口8",
+       "8"
+      ],
+      [
+       "端口9",
+       "9"
+      ],
+      [
+       "端口10",
+       "10"
+      ],
+      [
+       "端口11",
+       "11"
+      ],
+      [
+       "端口12",
+       "12"
+      ]
+     ]
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "status",
+     "options": [
+      [
+       "吸合",
+       "1"
+      ],
+      [
+       "断开",
+       "0"
+      ]
+     ]
+    }
+   ],
+   "fields": {
+    "channel": {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口1",
+       "1"
+      ],
+      [
+       "端口2",
+       "2"
+      ],
+      [
+       "端口3",
+       "3"
+      ],
+      [
+       "端口4",
+       "4"
+      ],
+      [
+       "端口5",
+       "5"
+      ],
+      [
+       "端口6",
+       "6"
+      ],
+      [
+       "端口7",
+       "7"
+      ],
+      [
+       "端口8",
+       "8"
+      ],
+      [
+       "端口9",
+       "9"
+      ],
+      [
+       "端口10",
+       "10"
+      ],
+      [
+       "端口11",
+       "11"
+      ],
+      [
+       "端口12",
+       "12"
+      ]
+     ]
+    },
+    "status": {
+     "kind": "field_dropdown",
+     "field": "status",
+     "options": [
+      [
+       "吸合",
+       "1"
+      ],
+      [
+       "断开",
+       "0"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 166,
+    "end_line": 171
+   },
+   "python": "robot.set_do(<channel>, <status>)\n",
+   "python_notes": "电磁铁复用 robot.set_do；status: 1=吸合, 0=断开。",
+   "xml_min": "<block type=\"set_electric_magnet\">\n  <field name=\"channel\">1</field>\n  <field name=\"status\">1</field>\n</block>",
+   "evidence": "A+"
+  },
+  "printf_lines": {
+   "type": "printf_lines",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 568,
+    "end_line": 582
+   },
+   "category_skcon9": [
+    "输出"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/display.png"
+    },
+    {
+     "kind": "label",
+     "text": "多行显示"
+    },
+    {
+     "kind": "input_statement",
+     "name": "code"
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {},
+    "statement": {
+     "code": {}
+    }
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 225,
+    "end_line": 234
+   },
+   "python": "robot.clear()\nif True:\n<语句输入 code>\n",
+   "python_notes": "多行显示 = 先 clear 再显示。",
+   "xml_min": "<block type=\"printf_lines\">\n</block>",
+   "evidence": "A+"
+  },
+  "wait_until": {
+   "type": "wait_until",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 907,
+    "end_line": 922
+   },
+   "category_skcon9": [
+    "控制"
+   ],
+   "append_fields": [
+    {
+     "kind": "input_value",
+     "name": "bool",
+     "check": "Boolean",
+     "prefix": [
+      {
+       "kind": "image",
+       "src": "pic/block_icon/delay.png"
+      },
+      {
+       "kind": "label",
+       "text": "等待直到"
+      }
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "继续"
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {
+     "bool": {
+      "check": "Boolean"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 658,
+    "end_line": 664
+   },
+   "python": "while not <bool>:\n    pass\n",
+   "python_notes": "固定只生成 pass 死等（没有 body）。",
+   "xml_min": "<block type=\"wait_until\">\n  <value name=\"bool\"><shadow type=\"logic_boolean\"><field name=\"BOOL\">TRUE</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "logic_negate": {
+   "type": "logic_negate",
+   "block_def": {
+    "file": "blocks/logic.js",
+    "start_line": 186,
+    "end_line": 202
+   },
+   "category_skcon9": [
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "label",
+     "text": "非"
+    },
+    {
+     "kind": "input_value",
+     "name": "BOOL",
+     "check": "Boolean"
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {
+     "BOOL": {
+      "check": "Boolean"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Boolean",
+    "has_output": true
+   },
+   "generator": {
+    "file": "generators/python/logic.js",
+    "start_line": 99,
+    "end_line": 105
+   },
+   "python": "not <BOOL>",
+   "python_notes": "表达式。",
+   "xml_min": "<block type=\"logic_negate\">\n  <value name=\"BOOL\"><shadow type=\"logic_boolean\"><field name=\"BOOL\">TRUE</field></shadow></value>\n</block>",
+   "evidence": "A"
+  },
+  "math_modulo": {
+   "type": "math_modulo",
+   "block_def": {
+    "file": "blocks/math.js",
+    "start_line": 295,
+    "end_line": 316
+   },
+   "category_skcon9": [
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "label",
+     "text": "取 "
+    },
+    {
+     "kind": "input_value",
+     "name": "DIVIDEND",
+     "check": "Number"
+    },
+    {
+     "kind": "label",
+     "text": " ÷ "
+    },
+    {
+     "kind": "input_value",
+     "name": "DIVISOR",
+     "check": "Number"
+    },
+    {
+     "kind": "label",
+     "text": " 的余数"
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {
+     "DIVIDEND": {
+      "check": "Number"
+     },
+     "DIVISOR": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number",
+    "has_output": true
+   },
+   "generator": {
+    "file": "generators/python/math.js",
+    "start_line": 371,
+    "end_line": 379
+   },
+   "python": "<DIVIDEND> % <DIVISOR>",
+   "python_notes": "表达式。",
+   "xml_min": "<block type=\"math_modulo\">\n  <value name=\"DIVIDEND\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n  <value name=\"DIVISOR\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A"
+  },
+  "robot_math_constants": {
+   "type": "robot_math_constants",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 2431,
+    "end_line": 2444
+   },
+   "category_skcon9": [
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "field_dropdown",
+     "field": "constant_type",
+     "options": [
+      [
+       "sqrt(2)",
+       "sqrt(2)"
+      ],
+      [
+       "sqrt(1/2)",
+       "sqrt(1/2)"
+      ]
+     ]
+    }
+   ],
+   "fields": {
+    "constant_type": {
+     "kind": "field_dropdown",
+     "field": "constant_type",
+     "options": [
+      [
+       "sqrt(2)",
+       "sqrt(2)"
+      ],
+      [
+       "sqrt(1/2)",
+       "sqrt(1/2)"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 1196,
+    "end_line": 1215
+   },
+   "python": "sqrt(2)    → robot.sqrt(2)\nsqrt(1/2)  → robot.sqrt(1 / 2)",
+   "python_notes": "当前下拉只有 sqrt(2)/sqrt(1/2)；源码另有 pi→robot.pi()、e→robot.e() 分支，但选项被注释掉了（XML 里写 pi/e 无效）。",
+   "xml_min": "<block type=\"robot_math_constants\">\n  <field name=\"constant_type\">sqrt(2)</field>\n</block>",
+   "evidence": "A+"
+  },
+  "get_encoder_real_time_value": {
+   "type": "get_encoder_real_time_value",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 1407,
+    "end_line": 1419
+   },
+   "category_skcon9": [
+    "传感"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/motor_encoder.png"
+    },
+    {
+     "kind": "label",
+     "text": "获取电机编码器实时值"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "port",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    }
+   ],
+   "fields": {
+    "port": {
+     "kind": "field_dropdown",
+     "field": "port",
+     "options": [
+      [
+       "端口A",
+       "1"
+      ],
+      [
+       "端口B",
+       "2"
+      ],
+      [
+       "端口C",
+       "3"
+      ],
+      [
+       "端口D",
+       "4"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 500,
+    "end_line": 513
+   },
+   "python": "SKCON9/其它: robot.get_instant_incoder(<port>)\nSKCON2:      robot.get_instant_encoder(<port>)",
+   "python_notes": "注意 SKCON9 分支的 'incoder' 是固件拼写，必须照抄。输出表达式。",
+   "xml_min": "<block type=\"get_encoder_real_time_value\">\n  <field name=\"port\">1</field>\n</block>",
+   "evidence": "A+"
+  },
+  "getai_sonic": {
+   "type": "getai_sonic",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 1037,
+    "end_line": 1050
+   },
+   "category_skcon9": [
+    "传感"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/ultrasonic.png"
+    },
+    {
+     "kind": "label",
+     "text": "超声"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口1",
+       "1"
+      ],
+      [
+       "端口2",
+       "2"
+      ],
+      [
+       "端口3",
+       "3"
+      ],
+      [
+       "端口4",
+       "4"
+      ],
+      [
+       "端口5",
+       "5"
+      ],
+      [
+       "端口6",
+       "6"
+      ],
+      [
+       "端口7",
+       "7"
+      ],
+      [
+       "端口8",
+       "8"
+      ],
+      [
+       "端口9",
+       "9"
+      ],
+      [
+       "端口10",
+       "10"
+      ],
+      [
+       "端口11",
+       "11"
+      ],
+      [
+       "端口12",
+       "12"
+      ]
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "测距"
+    }
+   ],
+   "fields": {
+    "channel": {
+     "kind": "field_dropdown",
+     "field": "channel",
+     "options": [
+      [
+       "端口1",
+       "1"
+      ],
+      [
+       "端口2",
+       "2"
+      ],
+      [
+       "端口3",
+       "3"
+      ],
+      [
+       "端口4",
+       "4"
+      ],
+      [
+       "端口5",
+       "5"
+      ],
+      [
+       "端口6",
+       "6"
+      ],
+      [
+       "端口7",
+       "7"
+      ],
+      [
+       "端口8",
+       "8"
+      ],
+      [
+       "端口9",
+       "9"
+      ],
+      [
+       "端口10",
+       "10"
+      ],
+      [
+       "端口11",
+       "11"
+      ],
+      [
+       "端口12",
+       "12"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 362,
+    "end_line": 367
+   },
+   "python": "robot.get_ultra_sonic(<channel>)",
+   "python_notes": "输出表达式",
+   "xml_min": "<block type=\"getai_sonic\">\n  <field name=\"channel\">1</field>\n</block>",
+   "evidence": "A+"
+  },
+  "get_sonic_detect_object": {
+   "type": "get_sonic_detect_object",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 1053,
+    "end_line": 1066
+   },
+   "category_skcon9": [
+    "传感"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/ultrasonic.png"
+    },
+    {
+     "kind": "label",
+     "text": "超声"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "port",
+     "options": [
+      [
+       "端口1",
+       "1"
+      ],
+      [
+       "端口2",
+       "2"
+      ],
+      [
+       "端口3",
+       "3"
+      ],
+      [
+       "端口4",
+       "4"
+      ],
+      [
+       "端口5",
+       "5"
+      ],
+      [
+       "端口6",
+       "6"
+      ],
+      [
+       "端口7",
+       "7"
+      ],
+      [
+       "端口8",
+       "8"
+      ],
+      [
+       "端口9",
+       "9"
+      ],
+      [
+       "端口10",
+       "10"
+      ],
+      [
+       "端口11",
+       "11"
+      ],
+      [
+       "端口12",
+       "12"
+      ]
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "探测到物体"
+    }
+   ],
+   "fields": {
+    "port": {
+     "kind": "field_dropdown",
+     "field": "port",
+     "options": [
+      [
+       "端口1",
+       "1"
+      ],
+      [
+       "端口2",
+       "2"
+      ],
+      [
+       "端口3",
+       "3"
+      ],
+      [
+       "端口4",
+       "4"
+      ],
+      [
+       "端口5",
+       "5"
+      ],
+      [
+       "端口6",
+       "6"
+      ],
+      [
+       "端口7",
+       "7"
+      ],
+      [
+       "端口8",
+       "8"
+      ],
+      [
+       "端口9",
+       "9"
+      ],
+      [
+       "端口10",
+       "10"
+      ],
+      [
+       "端口11",
+       "11"
+      ],
+      [
+       "端口12",
+       "12"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Boolean"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 370,
+    "end_line": 376
+   },
+   "python": "(robot.get_ultra_sonic(<port>) > 50 and robot.get_ultra_sonic(<port>) < 200)",
+   "python_notes": "输出 Boolean；固定 50~200 区间，没有可调阈值。",
+   "xml_min": "<block type=\"get_sonic_detect_object\">\n  <field name=\"port\">1</field>\n</block>",
+   "evidence": "A+"
+  },
+  "getmseconds": {
+   "type": "getmseconds",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 1439,
+    "end_line": 1451
+   },
+   "category_skcon9": [
+    "传感"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/timer.png"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "timer_ID",
+     "options": [
+      [
+       "计时器1",
+       "1"
+      ],
+      [
+       "计时器2",
+       "2"
+      ],
+      [
+       "计时器3",
+       "3"
+      ],
+      [
+       "计时器4",
+       "4"
+      ],
+      [
+       "计时器5",
+       "5"
+      ],
+      [
+       "计时器6",
+       "6"
+      ],
+      [
+       "计时器7",
+       "7"
+      ],
+      [
+       "计时器8",
+       "8"
+      ],
+      [
+       "计时器9",
+       "9"
+      ],
+      [
+       "计时器10",
+       "10"
+      ],
+      [
+       "计时器11",
+       "11"
+      ],
+      [
+       "计时器12",
+       "12"
+      ]
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "的读数(毫秒)"
+    }
+   ],
+   "fields": {
+    "timer_ID": {
+     "kind": "field_dropdown",
+     "field": "timer_ID",
+     "options": [
+      [
+       "计时器1",
+       "1"
+      ],
+      [
+       "计时器2",
+       "2"
+      ],
+      [
+       "计时器3",
+       "3"
+      ],
+      [
+       "计时器4",
+       "4"
+      ],
+      [
+       "计时器5",
+       "5"
+      ],
+      [
+       "计时器6",
+       "6"
+      ],
+      [
+       "计时器7",
+       "7"
+      ],
+      [
+       "计时器8",
+       "8"
+      ],
+      [
+       "计时器9",
+       "9"
+      ],
+      [
+       "计时器10",
+       "10"
+      ],
+      [
+       "计时器11",
+       "11"
+      ],
+      [
+       "计时器12",
+       "12"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 532,
+    "end_line": 537
+   },
+   "python": "robot.get_timer_ms(<timer_ID>)",
+   "python_notes": "表达式。",
+   "xml_min": "<block type=\"getmseconds\">\n  <field name=\"timer_ID\">1</field>\n</block>",
+   "evidence": "A+"
+  },
+  "getmsecondsreset": {
+   "type": "getmsecondsreset",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 1423,
+    "end_line": 1436
+   },
+   "category_skcon9": [
+    "传感"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/timer.png"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "timer_ID",
+     "options": [
+      [
+       "计时器1",
+       "1"
+      ],
+      [
+       "计时器2",
+       "2"
+      ],
+      [
+       "计时器3",
+       "3"
+      ],
+      [
+       "计时器4",
+       "4"
+      ],
+      [
+       "计时器5",
+       "5"
+      ],
+      [
+       "计时器6",
+       "6"
+      ],
+      [
+       "计时器7",
+       "7"
+      ],
+      [
+       "计时器8",
+       "8"
+      ],
+      [
+       "计时器9",
+       "9"
+      ],
+      [
+       "计时器10",
+       "10"
+      ],
+      [
+       "计时器11",
+       "11"
+      ],
+      [
+       "计时器12",
+       "12"
+      ]
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "清零"
+    }
+   ],
+   "fields": {
+    "timer_ID": {
+     "kind": "field_dropdown",
+     "field": "timer_ID",
+     "options": [
+      [
+       "计时器1",
+       "1"
+      ],
+      [
+       "计时器2",
+       "2"
+      ],
+      [
+       "计时器3",
+       "3"
+      ],
+      [
+       "计时器4",
+       "4"
+      ],
+      [
+       "计时器5",
+       "5"
+      ],
+      [
+       "计时器6",
+       "6"
+      ],
+      [
+       "计时器7",
+       "7"
+      ],
+      [
+       "计时器8",
+       "8"
+      ],
+      [
+       "计时器9",
+       "9"
+      ],
+      [
+       "计时器10",
+       "10"
+      ],
+      [
+       "计时器11",
+       "11"
+      ],
+      [
+       "计时器12",
+       "12"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 524,
+    "end_line": 529
+   },
+   "python": "robot.reset_timer(<timer_ID>)\n",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"getmsecondsreset\"><field name=\"timer_ID\">1</field></block>"
+   },
+   "xml_min": "<block type=\"getmsecondsreset\">\n  <field name=\"timer_ID\">1</field>\n</block>",
+   "evidence": "A+"
+  },
+  "eeprom_write": {
+   "type": "eeprom_write",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 1470,
+    "end_line": 1486
+   },
+   "category_skcon9": [
+    "传感"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/read_and_write_data.png"
+    },
+    {
+     "kind": "label",
+     "text": "写入数据 地址"
+    },
+    {
+     "kind": "field_number",
+     "field": "address",
+     "default": "1"
+    },
+    {
+     "kind": "input_value",
+     "name": "data",
+     "check": "Number",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "="
+      }
+     ]
+    }
+   ],
+   "fields": {
+    "address": {
+     "kind": "field_number",
+     "field": "address",
+     "default": "1"
+    }
+   },
+   "inputs": {
+    "value": {
+     "data": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 548,
+    "end_line": 554
+   },
+   "python": "robot.set_ee(<address>, robot.clamp(<data>, -99999, 99999))\n",
+   "xml_min": "<block type=\"eeprom_write\">\n  <field name=\"address\">1</field>\n  <value name=\"data\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "get_key": {
+   "type": "get_key",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 1101,
+    "end_line": 1114
+   },
+   "category_skcon9": [
+    "（不在 SKCON9 工具箱；blocks/ 中定义存在，应属 SKCON2/5 或旧版遗留，函数库不要用）"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/key.png"
+    },
+    {
+     "kind": "label",
+     "text": "Start按键"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "port",
+     "options": [
+      [
+       "Enter键",
+       "1"
+      ],
+      [
+       "Left键",
+       "2"
+      ],
+      [
+       "Right键",
+       "3"
+      ]
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "被按下"
+    }
+   ],
+   "fields": {
+    "port": {
+     "kind": "field_dropdown",
+     "field": "port",
+     "options": [
+      [
+       "Enter键",
+       "1"
+      ],
+      [
+       "Left键",
+       "2"
+      ],
+      [
+       "Right键",
+       "3"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 1252,
+    "end_line": 1258
+   },
+   "python": "robot.check_key(<port>)",
+   "python_notes": "表达式；port: 1=Enter, 2=Left, 3=Right。",
+   "xml_min": "<block type=\"get_key\">\n  <field name=\"port\">1</field>\n</block>",
+   "evidence": "A+"
+  },
+  "math_change": {
+   "type": "math_change",
+   "block_def": {
+    "file": "blocks/math.js",
+    "start_line": 213,
+    "end_line": 233
+   },
+   "category_skcon9": [
+    "变量（动态分类 custom=\"VARIABLE\"）"
+   ],
+   "append_fields": [
+    {
+     "kind": "label",
+     "text": "将 "
+    },
+    {
+     "kind": "field_variable",
+     "field": "VAR"
+    },
+    {
+     "kind": "label",
+     "text": " 增加 "
+    },
+    {
+     "kind": "input_value",
+     "name": "DELTA",
+     "check": "Number"
+    }
+   ],
+   "fields": {
+    "VAR": {
+     "kind": "field_variable",
+     "field": "VAR"
+    }
+   },
+   "inputs": {
+    "value": {
+     "DELTA": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null,
+    "has_output": false
+   },
+   "generator": {
+    "file": "generators/python/math.js",
+    "start_line": 240,
+    "end_line": 262
+   },
+   "python": "from numbers import Number\n<var> = (<var> if isinstance(<var>, Number) else 0) + <DELTA>\n",
+   "python_notes": "会在 definitions_ 里追加 import 'from numbers import Number'（出现即置顶）。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"math_change\"><field name=\"VAR\" id=\"Usgx-)nm)).0rG9ni-(c\" variabletype=\"\">var_speed</field></block>"
+   },
+   "xml_min": "<block type=\"math_change\">\n  <field name=\"VAR\" id=\"var_id_1\" variabletype=\"\">var_name</field>\n  <value name=\"DELTA\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "procedures_defreturn": {
+   "type": "procedures_defreturn",
+   "category_skcon9": null,
+   "block_def": {
+    "file": "blocks/procedures.js",
+    "start_line": 393,
+    "end_line": 448
+   },
+   "append_fields": [
+    {
+     "kind": "label",
+     "text": "函数（有返回值）"
+    },
+    {
+     "kind": "field_text_input",
+     "field": "NAME",
+     "default": ""
+    },
+    {
+     "kind": "field_label",
+     "field": "PARAMS"
+    },
+    {
+     "kind": "input_value",
+     "name": "RETURN",
+     "prefix": [
+      {
+       "kind": "label",
+       "text": "返回"
+      }
+     ]
+    },
+    {
+     "kind": "input_statement",
+     "name": "STACK"
+    }
+   ],
+   "fields": {
+    "NAME": {
+     "kind": "field_text_input"
+    }
+   },
+   "inputs": {
+    "value": {
+     "RETURN": {
+      "check": null
+     }
+    },
+    "statement": {
+     "STACK": {}
+    }
+   },
+   "mutation": {
+    "xml": "<mutation><arg name=\"cm\"></arg></mutation>",
+    "rules": [
+     "与 defnoreturn 共用的 domToMutation/mutationToDom（blocks/procedures.js:426-427）",
+     "该块的参数 mutator 在 IDE 里是【可用】的（未注释 setMutator），但工具箱不再提供“新建返回函数”积木；只能通过 XML 载入",
+     "core/procedures.js:114-127 的“新建”入口被注释；但 flyoutCategory 第 166 行仍会对已有 defreturn 生成 procedures_callreturn 调用块（在“函数”分类可见）"
+    ]
+   },
+   "generator": {
+    "file": "generators/python/procedures.js",
+    "start_line": 32,
+    "end_line": 88,
+    "symbol": "Blockly.Python['procedures_defreturn']"
+   },
+   "python": "def <NAME>(<参数名>):\n    global <工作区用到的变量名, 排除参数名>\n    <STACK 语句代码>\n    pass\n    return <RETURN 值输入>          # 仅当 RETURN 有连接时才生成\n",
+   "python_notes": "函数声明与 defnoreturn 共用生成器；RETURN 是值输入。飞函数分类的“新建返回函数”入口被注释，但 XML 加载/生成完全支持。",
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": null
+   },
+   "xml_min": "<block type=\"procedures_defreturn\" x=\"0\" y=\"0\">\n  <mutation><arg name=\"cm\"></arg></mutation>\n  <field name=\"NAME\">func_Distance</field>\n  <statement name=\"STACK\"><block type=\"motor\"><field name=\"channel\">1</field><value name=\"speed\"><block type=\"variables_get\"><field name=\"VAR\" id=\"PARAM_VAR_ID\" variabletype=\"\">cm</field></block></value></block></statement>\n  <value name=\"RETURN\"><block type=\"getencoder\"><field name=\"port\">1</field></block></value>\n</block>",
+   "evidence": "A（块定义+生成器源码可证；工具箱不提供新建，仅 XML 载入；flyout 调用块渲染未单独实测 → B 级待验证）"
+  },
+  "block_conststring": {
+   "type": "block_conststring",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 2210,
+    "end_line": 2222
+   },
+   "category_skcon9": [
+    "AI",
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "label",
+     "text": "\""
+    },
+    {
+     "kind": "field_text_input",
+     "field": "NAME",
+     "default": "string"
+    },
+    {
+     "kind": "label",
+     "text": "\""
+    }
+   ],
+   "fields": {
+    "NAME": {
+     "kind": "field_text_input",
+     "field": "NAME",
+     "default": "string"
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "null"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 1046,
+    "end_line": 1052
+   },
+   "python": "'<NAME 中的单引号转义>'\n",
+   "python_notes": "表达式（字符串常量）。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"block_conststring\"><field name=\"NAME\">右</field></block>"
+   },
+   "xml_min": "<block type=\"block_conststring\">\n  <field name=\"NAME\">string</field>\n</block>",
+   "evidence": "A+"
+  },
+  "printf": {
+   "type": "printf",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 584,
+    "end_line": 597
+   },
+   "category_skcon9": [
+    "输出"
+   ],
+   "append_fields": [
+    {
+     "kind": "input_value",
+     "name": "para1",
+     "check": null,
+     "prefix": [
+      {
+       "kind": "image",
+       "src": "pic/block_icon/display.png"
+      },
+      {
+       "kind": "label",
+       "text": "显示"
+      }
+     ]
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {
+     "para1": {
+      "check": null
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 237,
+    "end_line": 243
+   },
+   "python": "robot.print(<para1>, '\\n')\n",
+   "python_notes": "值输入 para1 直接作为 print 第一个参数。",
+   "xml_min": "<block type=\"printf\">\n  <value name=\"para1\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "printf_emoji": {
+   "type": "printf_emoji",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 600,
+    "end_line": 613
+   },
+   "category_skcon9": [
+    "输出"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/display.png"
+    },
+    {
+     "kind": "label",
+     "text": "显示表情"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "emoji_name",
+     "options": [
+      [
+       "胆小",
+       "danxiao"
+      ],
+      [
+       "高兴",
+       "gaoxing"
+      ],
+      [
+       "加油",
+       "jiayou"
+      ],
+      [
+       "可爱",
+       "keai"
+      ],
+      [
+       "哭泣",
+       "kuqi"
+      ],
+      [
+       "委屈",
+       "weiqu"
+      ],
+      [
+       "眨眼",
+       "zhayanjing"
+      ]
+     ]
+    }
+   ],
+   "fields": {
+    "emoji_name": {
+     "kind": "field_dropdown",
+     "field": "emoji_name",
+     "options": [
+      [
+       "胆小",
+       "danxiao"
+      ],
+      [
+       "高兴",
+       "gaoxing"
+      ],
+      [
+       "加油",
+       "jiayou"
+      ],
+      [
+       "可爱",
+       "keai"
+      ],
+      [
+       "哭泣",
+       "kuqi"
+      ],
+      [
+       "委屈",
+       "weiqu"
+      ],
+      [
+       "眨眼",
+       "zhayanjing"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 246,
+    "end_line": 251
+   },
+   "python": "robot.print_expression('<emoji_name>')\n",
+   "python_notes": "emoji_name 取值为 danxiao/gaoxing/jiayou/keai/kuqi/weiqu/zhayanjing。",
+   "xml_min": "<block type=\"printf_emoji\">\n  <field name=\"emoji_name\">danxiao</field>\n</block>",
+   "evidence": "A+"
+  },
+  "play_sound_until": {
+   "type": "play_sound_until",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 636,
+    "end_line": 651
+   },
+   "category_skcon9": [
+    "声光"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/speaker.png"
+    },
+    {
+     "kind": "label",
+     "text": "播放"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "musicname",
+     "options": [
+      [
+       "打招呼-你好",
+       "dazhaohu_c0.mp3"
+      ],
+      [
+       "打招呼-再见",
+       "dazhaohu_c1.mp3"
+      ],
+      [
+       "打招呼-反对",
+       "dazhaohu_c2.mp3"
+      ],
+      [
+       "打招呼-欢迎",
+       "dazhaohu_c3.mp3"
+      ],
+      [
+       "打招呼-请多关照",
+       "dazhaohu_c4.mp3"
+      ],
+      [
+       "动物海豹",
+       "dongwu_p0.mp3"
+      ],
+      [
+       "动物鹦鹉",
+       "dongwu_p1.mp3"
+      ],
+      [
+       "动物青蛙",
+       "dongwu_p2.mp3"
+      ],
+      [
+       "动物羊",
+       "dongwu_p3.mp3"
+      ],
+      [
+       "动物鸡",
+       "dongwu_p4.mp3"
+      ],
+      [
+       "动物鸭子",
+       "dongwu_p5.mp3"
+      ],
+      [
+       "动物狗",
+       "dongwu_p6.mp3"
+      ],
+      [
+       "动物天鹅",
+       "dongwu_p7.mp3"
+      ],
+      [
+       "动物蜜蜂",
+       "dongwu_p8.mp3"
+      ],
+      [
+       "交通摩托车",
+       "jiaotong_p0.mp3"
+      ],
+      [
+       "交通赛车",
+       "jiaotong_p1.mp3"
+      ],
+      [
+       "交通火车",
+       "jiaotong_p2.mp3"
+      ],
+      [
+       "交通汽车",
+       "jiaotong_p3.mp3"
+      ],
+      [
+       "交通飞机",
+       "jiaotong_p4.mp3"
+      ],
+      [
+       "交通轮船",
+       "jiaotong_p5.mp3"
+      ],
+      [
+       "交通自行车",
+       "jiaotong_p6.mp3"
+      ],
+      [
+       "交通直升机",
+       "jiaotong_p7.mp3"
+      ],
+      [
+       "钢琴-do",
+       "gangqin_p0.mp3"
+      ],
+      [
+       "钢琴-ri",
+       "gangqin_p1.mp3"
+      ],
+      [
+       "钢琴-mi",
+       "gangqin_p2.mp3"
+      ],
+      [
+       "钢琴-fa",
+       "gangqin_p3.mp3"
+      ],
+      [
+       "钢琴-so",
+       "gangqin_p4.mp3"
+      ],
+      [
+       "钢琴-la",
+       "gangqin_p5.mp3"
+      ],
+      [
+       "钢琴-si",
+       "gangqin_p6.mp3"
+      ],
+      [
+       "钢琴-Hdo",
+       "gangqin_p7.mp3"
+      ],
+      [
+       "表情生气",
+       "biaoqing_c0.mp3"
+      ],
+      [
+       "表情傲慢",
+       "biaoqing_c1.mp3"
+      ],
+      [
+       "表情哭泣",
+       "biaoqing_c2.mp3"
+      ],
+      [
+       "表情激动",
+       "biaoqing_c3.mp3"
+      ],
+      [
+       "表情惊吓",
+       "biaoqing_c4.mp3"
+      ],
+      [
+       "表情委屈",
+       "biaoqing_c5.mp3"
+      ],
+      [
+       "表情高兴",
+       "biaoqing_c6.mp3"
+      ],
+      [
+       "表情可爱",
+       "biaoqing_c7.mp3"
+      ],
+      [
+       "表情大笑",
+       "biaoqing_c8.mp3"
+      ],
+      [
+       "表情悲伤",
+       "biaoqing_c9.mp3"
+      ],
+      [
+       "表情愤怒",
+       "biaoqing_c10.mp3"
+      ],
+      [
+       "表情调皮",
+       "biaoqing_c11.mp3"
+      ],
+      [
+       "动作打寒颤",
+       "dongzuo_c0.mp3"
+      ],
+      [
+       "动作卖萌",
+       "dongzuo_c1.mp3"
+      ],
+      [
+       "动作赞成",
+       "dongzuo_c2.mp3"
+      ],
+      [
+       "动作求抱抱",
+       "dongzuo_c3.mp3"
+      ],
+      [
+       "动作打哈欠",
+       "dongzuo_c4.mp3"
+      ],
+      [
+       "动作加油",
+       "dongzuo_c5.mp3"
+      ],
+      [
+       "动作睡觉",
+       "dongzuo_c6.mp3"
+      ],
+      [
+       "动作休息",
+       "dongzuo_c7.mp3"
+      ],
+      [
+       "动作鬼鬼祟祟",
+       "dongzuo_c8.mp3"
+      ],
+      [
+       "小提琴-1",
+       "xiaotiqin_p0.mp3"
+      ],
+      [
+       "小提琴-2",
+       "xiaotiqin_p1.mp3"
+      ],
+      [
+       "小提琴-3",
+       "xiaotiqin_p2.mp3"
+      ],
+      [
+       "小提琴-4",
+       "xiaotiqin_p3.mp3"
+      ],
+      [
+       "小提琴-5",
+       "xiaotiqin_p4.mp3"
+      ],
+      [
+       "小提琴-6",
+       "xiaotiqin_p5.mp3"
+      ],
+      [
+       "小提琴-7",
+       "xiaotiqin_p6.mp3"
+      ],
+      [
+       "小提琴-8",
+       "xiaotiqin_p7.mp3"
+      ],
+      [
+       "架子鼓低音大鼓",
+       "jiazigu_p0.mp3"
+      ],
+      [
+       "架子鼓军鼓",
+       "jiazigu_p1.mp3"
+      ],
+      [
+       "架子鼓落地鼓",
+       "jiazigu_p2.mp3"
+      ],
+      [
+       "架子鼓嗵嗵鼓1",
+       "jiazigu_p3.mp3"
+      ],
+      [
+       "架子鼓嗵嗵鼓2",
+       "jiazigu_p4.mp3"
+      ],
+      [
+       "架子鼓踩镲",
+       "jiazigu_p5.mp3"
+      ],
+      [
+       "架子鼓吊镲",
+       "jiazigu_p6.mp3"
+      ],
+      [
+       "架子鼓节奏镲",
+       "jiazigu_p7.mp3"
+      ],
+      [
+       "架子鼓镲片",
+       "jiazigu_p8.mp3"
+      ],
+      [
+       "录音-1",
+       "luyin_p1"
+      ],
+      [
+       "录音-2",
+       "luyin_p2"
+      ],
+      [
+       "录音-3",
+       "luyin_p3"
+      ],
+      [
+       "录音-4",
+       "luyin_p4"
+      ],
+      [
+       "录音-5",
+       "luyin_p5"
+      ],
+      [
+       "录音-6",
+       "luyin_p5"
+      ],
+      [
+       "录音-7",
+       "luyin_p7"
+      ],
+      [
+       "录音-8",
+       "luyin_p8"
+      ],
+      [
+       "录音-9",
+       "luyin_p9"
+      ],
+      [
+       "录音-10",
+       "luyin_p10"
+      ]
+     ]
+    },
+    {
+     "kind": "label",
+     "text": "直到播放完毕"
+    }
+   ],
+   "fields": {
+    "musicname": {
+     "kind": "field_dropdown",
+     "field": "musicname",
+     "options": [
+      [
+       "打招呼-你好",
+       "dazhaohu_c0.mp3"
+      ],
+      [
+       "打招呼-再见",
+       "dazhaohu_c1.mp3"
+      ],
+      [
+       "打招呼-反对",
+       "dazhaohu_c2.mp3"
+      ],
+      [
+       "打招呼-欢迎",
+       "dazhaohu_c3.mp3"
+      ],
+      [
+       "打招呼-请多关照",
+       "dazhaohu_c4.mp3"
+      ],
+      [
+       "动物海豹",
+       "dongwu_p0.mp3"
+      ],
+      [
+       "动物鹦鹉",
+       "dongwu_p1.mp3"
+      ],
+      [
+       "动物青蛙",
+       "dongwu_p2.mp3"
+      ],
+      [
+       "动物羊",
+       "dongwu_p3.mp3"
+      ],
+      [
+       "动物鸡",
+       "dongwu_p4.mp3"
+      ],
+      [
+       "动物鸭子",
+       "dongwu_p5.mp3"
+      ],
+      [
+       "动物狗",
+       "dongwu_p6.mp3"
+      ],
+      [
+       "动物天鹅",
+       "dongwu_p7.mp3"
+      ],
+      [
+       "动物蜜蜂",
+       "dongwu_p8.mp3"
+      ],
+      [
+       "交通摩托车",
+       "jiaotong_p0.mp3"
+      ],
+      [
+       "交通赛车",
+       "jiaotong_p1.mp3"
+      ],
+      [
+       "交通火车",
+       "jiaotong_p2.mp3"
+      ],
+      [
+       "交通汽车",
+       "jiaotong_p3.mp3"
+      ],
+      [
+       "交通飞机",
+       "jiaotong_p4.mp3"
+      ],
+      [
+       "交通轮船",
+       "jiaotong_p5.mp3"
+      ],
+      [
+       "交通自行车",
+       "jiaotong_p6.mp3"
+      ],
+      [
+       "交通直升机",
+       "jiaotong_p7.mp3"
+      ],
+      [
+       "钢琴-do",
+       "gangqin_p0.mp3"
+      ],
+      [
+       "钢琴-ri",
+       "gangqin_p1.mp3"
+      ],
+      [
+       "钢琴-mi",
+       "gangqin_p2.mp3"
+      ],
+      [
+       "钢琴-fa",
+       "gangqin_p3.mp3"
+      ],
+      [
+       "钢琴-so",
+       "gangqin_p4.mp3"
+      ],
+      [
+       "钢琴-la",
+       "gangqin_p5.mp3"
+      ],
+      [
+       "钢琴-si",
+       "gangqin_p6.mp3"
+      ],
+      [
+       "钢琴-Hdo",
+       "gangqin_p7.mp3"
+      ],
+      [
+       "表情生气",
+       "biaoqing_c0.mp3"
+      ],
+      [
+       "表情傲慢",
+       "biaoqing_c1.mp3"
+      ],
+      [
+       "表情哭泣",
+       "biaoqing_c2.mp3"
+      ],
+      [
+       "表情激动",
+       "biaoqing_c3.mp3"
+      ],
+      [
+       "表情惊吓",
+       "biaoqing_c4.mp3"
+      ],
+      [
+       "表情委屈",
+       "biaoqing_c5.mp3"
+      ],
+      [
+       "表情高兴",
+       "biaoqing_c6.mp3"
+      ],
+      [
+       "表情可爱",
+       "biaoqing_c7.mp3"
+      ],
+      [
+       "表情大笑",
+       "biaoqing_c8.mp3"
+      ],
+      [
+       "表情悲伤",
+       "biaoqing_c9.mp3"
+      ],
+      [
+       "表情愤怒",
+       "biaoqing_c10.mp3"
+      ],
+      [
+       "表情调皮",
+       "biaoqing_c11.mp3"
+      ],
+      [
+       "动作打寒颤",
+       "dongzuo_c0.mp3"
+      ],
+      [
+       "动作卖萌",
+       "dongzuo_c1.mp3"
+      ],
+      [
+       "动作赞成",
+       "dongzuo_c2.mp3"
+      ],
+      [
+       "动作求抱抱",
+       "dongzuo_c3.mp3"
+      ],
+      [
+       "动作打哈欠",
+       "dongzuo_c4.mp3"
+      ],
+      [
+       "动作加油",
+       "dongzuo_c5.mp3"
+      ],
+      [
+       "动作睡觉",
+       "dongzuo_c6.mp3"
+      ],
+      [
+       "动作休息",
+       "dongzuo_c7.mp3"
+      ],
+      [
+       "动作鬼鬼祟祟",
+       "dongzuo_c8.mp3"
+      ],
+      [
+       "小提琴-1",
+       "xiaotiqin_p0.mp3"
+      ],
+      [
+       "小提琴-2",
+       "xiaotiqin_p1.mp3"
+      ],
+      [
+       "小提琴-3",
+       "xiaotiqin_p2.mp3"
+      ],
+      [
+       "小提琴-4",
+       "xiaotiqin_p3.mp3"
+      ],
+      [
+       "小提琴-5",
+       "xiaotiqin_p4.mp3"
+      ],
+      [
+       "小提琴-6",
+       "xiaotiqin_p5.mp3"
+      ],
+      [
+       "小提琴-7",
+       "xiaotiqin_p6.mp3"
+      ],
+      [
+       "小提琴-8",
+       "xiaotiqin_p7.mp3"
+      ],
+      [
+       "架子鼓低音大鼓",
+       "jiazigu_p0.mp3"
+      ],
+      [
+       "架子鼓军鼓",
+       "jiazigu_p1.mp3"
+      ],
+      [
+       "架子鼓落地鼓",
+       "jiazigu_p2.mp3"
+      ],
+      [
+       "架子鼓嗵嗵鼓1",
+       "jiazigu_p3.mp3"
+      ],
+      [
+       "架子鼓嗵嗵鼓2",
+       "jiazigu_p4.mp3"
+      ],
+      [
+       "架子鼓踩镲",
+       "jiazigu_p5.mp3"
+      ],
+      [
+       "架子鼓吊镲",
+       "jiazigu_p6.mp3"
+      ],
+      [
+       "架子鼓节奏镲",
+       "jiazigu_p7.mp3"
+      ],
+      [
+       "架子鼓镲片",
+       "jiazigu_p8.mp3"
+      ],
+      [
+       "录音-1",
+       "luyin_p1"
+      ],
+      [
+       "录音-2",
+       "luyin_p2"
+      ],
+      [
+       "录音-3",
+       "luyin_p3"
+      ],
+      [
+       "录音-4",
+       "luyin_p4"
+      ],
+      [
+       "录音-5",
+       "luyin_p5"
+      ],
+      [
+       "录音-6",
+       "luyin_p5"
+      ],
+      [
+       "录音-7",
+       "luyin_p7"
+      ],
+      [
+       "录音-8",
+       "luyin_p8"
+      ],
+      [
+       "录音-9",
+       "luyin_p9"
+      ],
+      [
+       "录音-10",
+       "luyin_p10"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 262,
+    "end_line": 267
+   },
+   "python": "robot.play_until('<musicname>')\n",
+   "xml_min": "<block type=\"play_sound_until\">\n  <field name=\"musicname\">dazhaohu_c0.mp3</field>\n</block>",
+   "evidence": "A+"
+  },
+  "record": {
+   "type": "record",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 653,
+    "end_line": 679
+   },
+   "category_skcon9": [
+    "声光"
+   ],
+   "append_fields": [
+    {
+     "kind": "image",
+     "src": "pic/block_icon/record.png"
+    },
+    {
+     "kind": "label",
+     "text": "录音"
+    },
+    {
+     "kind": "field_number",
+     "field": "record_time",
+     "default": "5"
+    },
+    {
+     "kind": "label",
+     "text": "秒"
+    },
+    {
+     "kind": "label",
+     "text": "保存为文件"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "record_ID",
+     "options": [
+      [
+       "1",
+       "1"
+      ],
+      [
+       "2",
+       "2"
+      ],
+      [
+       "3",
+       "3"
+      ],
+      [
+       "4",
+       "4"
+      ],
+      [
+       "5",
+       "5"
+      ],
+      [
+       "6",
+       "6"
+      ],
+      [
+       "7",
+       "7"
+      ],
+      [
+       "8",
+       "8"
+      ],
+      [
+       "9",
+       "9"
+      ],
+      [
+       "10",
+       "10"
+      ]
+     ]
+    }
+   ],
+   "fields": {
+    "record_time": {
+     "kind": "field_number",
+     "field": "record_time",
+     "default": "5"
+    },
+    "record_ID": {
+     "kind": "field_dropdown",
+     "field": "record_ID",
+     "options": [
+      [
+       "1",
+       "1"
+      ],
+      [
+       "2",
+       "2"
+      ],
+      [
+       "3",
+       "3"
+      ],
+      [
+       "4",
+       "4"
+      ],
+      [
+       "5",
+       "5"
+      ],
+      [
+       "6",
+       "6"
+      ],
+      [
+       "7",
+       "7"
+      ],
+      [
+       "8",
+       "8"
+      ],
+      [
+       "9",
+       "9"
+      ],
+      [
+       "10",
+       "10"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {},
+    "statement": {}
+   },
+   "connection": {
+    "previous": true,
+    "next": true,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 270,
+    "end_line": 276
+   },
+   "python": "robot.record_audio(<record_ID>, <record_time>)\n",
+   "xml_real": {
+    "project": "Scratch-3",
+    "xml": "<block type=\"record\"><field name=\"record_time\">5</field><field name=\"record_ID\">2</field></block>"
+   },
+   "xml_min": "<block type=\"record\">\n  <field name=\"record_time\">5</field>\n  <field name=\"record_ID\">1</field>\n</block>",
+   "evidence": "A+"
+  },
+  "robot_math_trigonometric_function": {
+   "type": "robot_math_trigonometric_function",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 2283,
+    "end_line": 2302
+   },
+   "category_skcon9": [
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "field_dropdown",
+     "field": "trigonometric_function_type",
+     "options": [
+      [
+       "sin",
+       "sin"
+      ],
+      [
+       "cos",
+       "cos"
+      ],
+      [
+       "tan",
+       "tan"
+      ],
+      [
+       "asin",
+       "asin"
+      ],
+      [
+       "acos",
+       "acos"
+      ],
+      [
+       "atan",
+       "atan"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "param",
+     "check": "Number"
+    }
+   ],
+   "fields": {
+    "trigonometric_function_type": {
+     "kind": "field_dropdown",
+     "field": "trigonometric_function_type",
+     "options": [
+      [
+       "sin",
+       "sin"
+      ],
+      [
+       "cos",
+       "cos"
+      ],
+      [
+       "tan",
+       "tan"
+      ],
+      [
+       "asin",
+       "asin"
+      ],
+      [
+       "acos",
+       "acos"
+      ],
+      [
+       "atan",
+       "atan"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "param": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Number"
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 1102,
+    "end_line": 1125
+   },
+   "python": "sin/cos/tan: robot.sin|cos|tan(<param> / 180.0 * robot.pi())\nasin/acos/atan: robot.asin|acos|atan(<param>) / robot.pi() * 180.0",
+   "python_notes": "SKCON9 用 robot.pi()；SKCON2 用 robot.pi（无括号）。表达式。",
+   "xml_real": {
+    "project": "PI",
+    "xml": "<block type=\"robot_math_trigonometric_function\"><field name=\"trigonometric_function_type\">sin</field></block>"
+   },
+   "xml_min": "<block type=\"robot_math_trigonometric_function\">\n  <field name=\"trigonometric_function_type\">sin</field>\n  <value name=\"param\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "robot_math_random": {
+   "type": "robot_math_random",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 2390,
+    "end_line": 2428
+   },
+   "category_skcon9": [
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "label",
+     "text": "从"
+    },
+    {
+     "kind": "input_value",
+     "name": "FROM",
+     "check": "Number"
+    },
+    {
+     "kind": "label",
+     "text": " 到 "
+    },
+    {
+     "kind": "input_value",
+     "name": "TO",
+     "check": "Number"
+    },
+    {
+     "kind": "label",
+     "text": " 范围内的随机整数"
+    }
+   ],
+   "fields": {},
+   "inputs": {
+    "value": {
+     "FROM": {
+      "check": "Number"
+     },
+     "TO": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": null
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 1185,
+    "end_line": 1193
+   },
+   "python": "robot.random(<FROM>, <TO>)",
+   "python_notes": "表达式。",
+   "xml_min": "<block type=\"robot_math_random\">\n  <value name=\"FROM\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n  <value name=\"TO\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  },
+  "abilix_math_number_property": {
+   "type": "abilix_math_number_property",
+   "block_def": {
+    "file": "blocks/myrobotrun.js",
+    "start_line": 2321,
+    "end_line": 2387
+   },
+   "category_skcon9": [
+    "运算"
+   ],
+   "append_fields": [
+    {
+     "kind": "input_value",
+     "name": "NUMBER_TO_CHECK",
+     "check": "Number"
+    },
+    {
+     "kind": "field_dropdown",
+     "field": "PROPERTY",
+     "options": [
+      [
+       "是偶数",
+       "EVEN"
+      ],
+      [
+       "是奇数",
+       "ODD"
+      ],
+      [
+       "是质数",
+       "PRIME"
+      ],
+      [
+       "是整数",
+       "WHOLE"
+      ],
+      [
+       "是正数",
+       "POSITIVE"
+      ],
+      [
+       "是负数",
+       "NEGATIVE"
+      ],
+      [
+       "可被整除",
+       "DIVISIBLE_BY"
+      ]
+     ]
+    },
+    {
+     "kind": "input_value",
+     "name": "DIVISOR",
+     "check": "Number"
+    }
+   ],
+   "fields": {
+    "PROPERTY": {
+     "kind": "field_dropdown",
+     "field": "PROPERTY",
+     "options": [
+      [
+       "是偶数",
+       "EVEN"
+      ],
+      [
+       "是奇数",
+       "ODD"
+      ],
+      [
+       "是质数",
+       "PRIME"
+      ],
+      [
+       "是整数",
+       "WHOLE"
+      ],
+      [
+       "是正数",
+       "POSITIVE"
+      ],
+      [
+       "是负数",
+       "NEGATIVE"
+      ],
+      [
+       "可被整除",
+       "DIVISIBLE_BY"
+      ]
+     ]
+    }
+   },
+   "inputs": {
+    "value": {
+     "NUMBER_TO_CHECK": {
+      "check": "Number"
+     },
+     "DIVISOR": {
+      "check": "Number"
+     }
+    },
+    "statement": {}
+   },
+   "connection": {
+    "previous": false,
+    "next": false,
+    "output": "Boolean"
+   },
+   "mutation": {
+    "xml": "<mutation divisor_input=\"true\"></mutation>",
+    "rules": [
+     "仅当 PROPERTY=DIVISIBLE_BY 时需要；为 true 时块上才出现 DIVISOR 值输入，否则没有该输入",
+     "domToMutation 读属性 divisor_input=='true'；保存时 mutationToDom 会写该属性"
+    ]
+   },
+   "generator": {
+    "file": "generators/myrobotpythoncode.js",
+    "start_line": 1142,
+    "end_line": 1183
+   },
+   "python": "EVEN: <N> % 2 == 0\nODD: <N> % 2 == 1\nPRIME: robot.isprime(<N>)\nWHOLE: <N> % 1 == 0\nPOSITIVE: <N> > 0\nNEGATIVE: <N> < 0\nDIVISIBLE_BY: <N> % <DIVISOR> == 0",
+   "python_notes": "DIVISIBLE_BY 时需要 mutation divisor_input=true 才会出现 DIVISOR 值输入。",
+   "xml_min": "<block type=\"abilix_math_number_property\">\n  <field name=\"PROPERTY\">EVEN</field>\n  <value name=\"NUMBER_TO_CHECK\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n  <value name=\"DIVISOR\"><shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow></value>\n</block>",
+   "evidence": "A+"
+  }
+ },
+ "procedures_design_rules": {
+  "定义块语句输入名": "STACK（不是 code）",
+  "调用块参数输入": "ARG0..ARGn，由 <mutation> 的 <arg> 个数/顺序决定",
+  "函数名规则": "界面改名只保留 \\w 且自动加 func_ 前缀（core/procedures.js:47-63）；XML 载入不走 rename 校验，但生成 Python 时经 Blockly.Names.safeName_，中文名会变成 _E5_... 乱码 → 函数名/参数名/变量名必须 ASCII",
+  "函数分类(flyout)显示逻辑": "toolbox 分类 custom=\"PROCEDURE\" → core/toolbox.js:325 走动态回调 → core/procedures.js:212 flyoutCategory；内容 = 1 个新建 defnoreturn 模板 + 每个已有定义一个调用块（callnoreturn；若存在 defreturn 则还有 callreturn）",
+  "生成顺序": "python.js finish()：变量初始化(var_x = None) → import → 各函数 def（definitions_）→ main()（start 块代码），导入来自 math_change 等",
+  "main()": "由唯一 start 块生成；空/纯注释 body 会补 pass；global 行列出整个工作区用到的变量（参数变量也会出现在顶层 var 初始化里，属预期噪音，不影响语义）"
+ }
+}

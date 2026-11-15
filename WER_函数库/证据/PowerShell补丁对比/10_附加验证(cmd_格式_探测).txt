@@ -1,0 +1,70 @@
+===== 附加验证：.srh 格式、.cmd 纯 ASCII、cmd 脚本发现逻辑、Start-Process 参数传递、自动探测 =====
+
+---------- 1) .srh 纯文本函数库（Python 参考实现算出的期望值来自只读调用 srhs工具） ----------
+Python 参考：片段 48594 字符 sha256=92eb5f1e59798663b76bfeb5422410fcd5ff63c93d3e4cbc22d91158396f86a5
+Python 参考：改后 maingui_init.js 54599 字节 sha256=da229de8adf38b4a132b13bd260b420df03d0a653561b699f7af6dd2cf62fb8a
+PowerShell 输出：
+
+==========================================================================
+  AbilixScratch3.0 新建项目默认模板 —— 同步「我的函数库」（仅 PowerShell 版）
+==========================================================================
+        本机 PowerShell 版本：5.1.26100.9711
+[同步] 1/7 定位并校验 browser_assets
+        原资源包：D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\browser_assets.副本
+        条目数=6645  文件大小=81.32 MB  索引结束=406350
+        原包 sha256=df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40
+[同步] 2/7 纯 roundtrip 自检（解包→原样重打包→逐字节比较）
+        逐字节一致 OK（df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40）
+[同步] 3/7 读取函数库并生成 defaultcode 片段
+        来源：D:\UserData\Documents\WER\2026普级赛\WER_函数库\示例\WER函数库.srh
+        顶层积木块=21（start=1，无返回函数=20，有返回函数=0）变量=27  片段=48594 字符
+[同步] 4/7 修改 Blockly_Code/maingui_init.js（只改简体中文 defaultcode）
+        原 defaultcode 条目：5242 字节  sha256=c86fe3fa00c0433c43cf888eedaedebe71d35c93d161ac13d034222901447561  BOM=False
+        修改后：54599 字节  sha256=da229de8adf38b4a132b13bd260b420df03d0a653561b699f7af6dd2cf62fb8a  （379 -> 48594 字符）
+[同步] 5/7 重新打包 browser_assets
+        补丁包：D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\edge_out\from_srh.patched
+        大小=81.37 MB  sha256=a1ff700b46a1ae92b08ba780d2a3eaf9bb9b3862440ddcb0bf4c1a2f1441220a
+[同步] 6/7 打包后自检（逐条目 sha256 + 布局 + 读回 defaultcode）
+        其它 6644 个条目 sha256 全部一致 OK；变化条目 1 个（/Blockly_Code/maingui_init.js 5242 -> 54599 字节）
+        读回 defaultcode 反转义后与片段一致 OK（48594 字符）
+[同步] 7/7 复制补丁包到输出路径（未安装）
+
+==========================================================================
+  同步结果
+--------------------------------------------------------------------------
+  原资源包    : D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\browser_assets.副本
+  原包 sha256 : df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40
+  函数库来源  : D:\UserData\Documents\WER\2026普级赛\WER_函数库\示例\WER函数库.srh
+  defaultcode : 顶层块=21（start=1）函数=20 变量=27 字符=48594
+  纯 roundtrip: 逐字节一致 OK
+  打包后自检  : 通过 OK（条目 6645，变化 1 个）
+  补丁包      : D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\edge_out\from_srh.patched
+  补丁包sha256: a1ff700b46a1ae92b08ba780d2a3eaf9bb9b3862440ddcb0bf4c1a2f1441220a
+  状态        : 补丁包已生成，尚未安装（加 -Install 由管理员安装，或双击 一键同步(管理员).cmd）
+==========================================================================
+
+PowerShell 补丁包 sha256=a1ff700b46a1ae92b08ba780d2a3eaf9bb9b3862440ddcb0bf4c1a2f1441220a（与 05 的 .srhs 结果不同是正常的：示例目录里的 .srh 与 .srhs 内容本身不同）
+
+---------- 2) 两个 .cmd 是否纯 ASCII（要求：是；中文只出现在 .ps1 里） ----------
+  一键同步(管理员).cmd  大小=2168 字节  非ASCII字节数=0
+  一键还原(管理员).cmd  大小=2154 字节  非ASCII字节数=0
+
+---------- 3) cmd 里的脚本发现逻辑（按 # TOOL-ID 标记找 .ps1，避免在 cmd 里写中文文件名） ----------
+  SYNC 标记命中文件数=1 -> 同步我的函数库.ps1
+  RESTORE 标记命中文件数=1 -> 还原新建模板.ps1
+
+---------- 4) Start-Process 参数数组传递测试（与 cmd 中提升运行时相同的传参方式；此处不提升、隐藏窗口） ----------
+  Start-Process 退出码=0
+  输出补丁包 sha256=a1a3bf14e1c1b189ffce3faf423bf6eadebad1bb71f90f90c1e630aabbdb1604（应等于 05 的 a1a3bf14...，说明中文/空格路径参数传递正确）
+  cmd 里提升运行时只多一个 -Verb RunAs（会弹 UAC），参数结构与此完全相同。
+
+---------- 5) 安装目录自动探测（本机） ----------
+  Find-BrowserAssets() = D:\Program Files\AbilixScratch3.0\AbilixScratch3.0_Data\Resources\browser_assets
+  该文件 sha256=df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40（只读探测，未做任何修改）
+
+---------- 6) 交付脚本自身 sha256 ----------
+  同步我的函数库.ps1  sha256=d005725403a9f32626cba047ea329b5657ab55369c5b6d352969c9c239820722
+  还原新建模板.ps1  sha256=131d8f7c49c1c5b881bfcc18f8ad3cf0a4e98c668ccdc373a6a5289adfa9f705
+  一键同步(管理员).cmd  sha256=601f9fa7e3d001209c5ef188937f9535de41ba5e3690ceb01b6ef07abd19be28
+  一键还原(管理员).cmd  sha256=bc1574ca8b66c6990c7f5635babea6bcb265e3de96bda1ac8243dfafe991adb1
+  说明.md  sha256=125e6dc5d1102453bcccb09253de097bfa88fae6ab94ed14e50ee9c2c79b54a9

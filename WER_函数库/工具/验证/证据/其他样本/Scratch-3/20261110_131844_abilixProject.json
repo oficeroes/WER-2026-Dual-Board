@@ -1,0 +1,270 @@
+{
+  "meta": {
+    "tool": "run_validate.py",
+    "toolVersion": "1.0",
+    "generatedAt": "2026-11-10T13:18:41",
+    "argv": [
+      "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\工具\\验证\\run_validate.py",
+      "_分析临时\\Scratch-3\\abilixProject.srh",
+      "--evidence-dir",
+      "WER_函数库\\工具\\验证\\证据\\其他样本\\Scratch-3",
+      "--timeout",
+      "300"
+    ],
+    "python": "3.12.14",
+    "mode": "project",
+    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "webRoot": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\blockly_web",
+    "elapsedMs": 2173
+  },
+  "ok": true,
+  "errors": [],
+  "project": {
+    "inputPath": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\Scratch-3\\abilixProject.srh",
+    "format": "srh",
+    "encoding": "utf-8-sig",
+    "info": {
+      "Version": "1.0.3.4",
+      "RobotType": "SKCON9",
+      "DownloadProgramName": "music"
+    },
+    "infoRaw": "\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ScratchProjectInfo xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <Version>1.0.3.4</Version>\r\n  <RobotType>SKCON9</RobotType>\r\n  <DownloadProgramName>music</DownloadProgramName>\r\n</ScratchProjectInfo>\n",
+    "zipRobotType": null,
+    "robotType": "SKCON9",
+    "connectionType": "USB",
+    "programName": "music",
+    "static": {
+      "xmlValid": true,
+      "xmlError": null,
+      "rootTag": "xml",
+      "variablesCount": 0,
+      "variables": [],
+      "topBlockCount": 2,
+      "topBlocks": [
+        {
+          "type": "start",
+          "id": ":,-8s,JP[Hv2l0?r`GjL"
+        },
+        {
+          "type": "record",
+          "id": "}aNXR;2ZDM(|5[AIBz6w"
+        }
+      ],
+      "procedures": {
+        "defnoreturn": [],
+        "defreturn": []
+      },
+      "topBlocksByType": {
+        "start": 1,
+        "record": 1
+      },
+      "hasStartBlock": true
+    },
+    "warnings": []
+  },
+  "chrome": {
+    "returncode": 0,
+    "timedOut": false,
+    "elapsedMs": 1692
+  },
+  "harness": {
+    "ok": true,
+    "tool": "wer-blockly-harness",
+    "harnessVersion": "1.0",
+    "startedAt": "2026-11-10T05:18:43.241Z",
+    "config": {
+      "mode": "project",
+      "robotType": "SKCON9",
+      "connectionType": "USB",
+      "programName": "music",
+      "projectXmlLength": 423
+    },
+    "steps": [
+      {
+        "name": "inject",
+        "ok": true,
+        "ms": 33
+      },
+      {
+        "name": "clear",
+        "ok": true,
+        "ms": 0.1
+      },
+      {
+        "name": "textToDom",
+        "ok": true,
+        "ms": 0.3
+      },
+      {
+        "name": "domToWorkspace",
+        "ok": true,
+        "ms": 15.7
+      },
+      {
+        "name": "workspaceStats",
+        "ok": true,
+        "ms": 0.1
+      },
+      {
+        "name": "procedures",
+        "ok": true,
+        "ms": 0.1
+      },
+      {
+        "name": "flyoutCategory",
+        "ok": true,
+        "ms": 0.3
+      },
+      {
+        "name": "flyoutInstantiate",
+        "ok": true,
+        "ms": 4.3
+      }
+    ],
+    "windowErrors": [],
+    "consoleErrors": [],
+    "load": {
+      "success": true,
+      "error": null,
+      "ms": 49.1
+    },
+    "workspace": {
+      "topBlockCount": 2,
+      "totalBlockCount": 3,
+      "variableCount": 0,
+      "variableNames": [],
+      "topBlocksByType": {
+        "start": 1,
+        "record": 1
+      },
+      "allBlocksByType": {
+        "start": 1,
+        "record": 1,
+        "play_sound": 1
+      },
+      "topBlocks": [
+        {
+          "type": "start",
+          "xy": [
+            458,
+            98
+          ],
+          "id": ":,-8s,JP[Hv2l0?r`GjL"
+        },
+        {
+          "type": "record",
+          "xy": [
+            53,
+            274
+          ],
+          "id": "}aNXR;2ZDM(|5[AIBz6w"
+        }
+      ]
+    },
+    "procedures": {
+      "defnoreturn": [],
+      "defreturn": [],
+      "allProceduresSorted": {
+        "defnoreturn": [],
+        "defreturn": []
+      }
+    },
+    "flyout": {
+      "categoryXml": {
+        "count": 1,
+        "xml": [
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_defnoreturn\" gap=\"24\"><field name=\"NAME\">func_name</field></block>"
+        ],
+        "blocks": [
+          {
+            "tag": "block",
+            "type": "procedures_defnoreturn",
+            "fieldName": "func_name"
+          }
+        ]
+      },
+      "instantiate": {
+        "viaTreeSelection": true,
+        "flyoutVisible": true,
+        "blockCount": 1,
+        "blocks": [
+          {
+            "type": "procedures_defnoreturn",
+            "isInFlyout": true,
+            "name": "func_name",
+            "args": [],
+            "inputs": [
+              "",
+              "STACK"
+            ],
+            "width": 150,
+            "height": 62
+          }
+        ]
+      }
+    },
+    "generation": {
+      "success": true,
+      "usedRealSource": true,
+      "evalError": null,
+      "error": null,
+      "code": "#<SKCON9><USB><music>\n\nimport threading\nimport time\nimport libstarpy\n\nrobot = Robot()\n\ndef main():\n    robot.play('luyin_p2')\n\nmain()#program entry",
+      "ms": 1,
+      "analysis": {
+        "codeLength": 147,
+        "codeLines": 12,
+        "headerLine": "#<SKCON9><USB><music>",
+        "defCount": 1,
+        "defs": [
+          {
+            "name": "main",
+            "args": ""
+          }
+        ],
+        "hasMainCall": true
+      }
+    },
+    "finishedAt": "2026-11-10T05:18:43.297Z"
+  },
+  "analysis": {
+    "lineCount": 12,
+    "header": "#<SKCON9><USB><music>",
+    "imports": [
+      "import threading",
+      "import time",
+      "import libstarpy"
+    ],
+    "robotInit": [
+      "robot = Robot()"
+    ],
+    "varDeclCount": 0,
+    "varDecls": [],
+    "otherPreamble": [],
+    "defCount": 1,
+    "defs": [
+      {
+        "name": "main",
+        "args": "",
+        "bodyLines": 1,
+        "globalLine": null
+      }
+    ],
+    "tail": [
+      "main()#program entry"
+    ]
+  },
+  "syntaxCheck": {
+    "ok": true,
+    "returncode": 0,
+    "cmd": [
+      "C:\\Users\\s1325\\.dsh\\dsh-runtimes\\dsh-primary-runtime\\dependencies\\python\\python.exe",
+      "-m",
+      "py_compile",
+      "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_e3v7m369\\generated_syntax_check.py"
+    ],
+    "stdout": "",
+    "stderr": "",
+    "elapsedMs": 110,
+    "file": "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_e3v7m369\\generated_syntax_check.py"
+  }
+}

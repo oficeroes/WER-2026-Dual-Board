@@ -1,0 +1,12 @@
+PI 黄金样本：生成 Python 与官方 PI.py 字节级比对
+
+生成文件: 20261110_132817_abilixProject.py
+参考文件: D:\UserData\Documents\WER\2026普级赛\逆向资料\样本程序\PI.py
+生成大小: 50618 bytes    sha256: 30a0bab0625e3dd1c1bd1fd167a27b1601bc15e0a26439b2ba5afff7e7a3df4a
+参考大小: 50618 bytes    sha256: 30a0bab0625e3dd1c1bd1fd167a27b1601bc15e0a26439b2ba5afff7e7a3df4a
+字节完全相同: True
+
+说明: 生成时 --program-name ProgramA 与官方样本文件头一致；
+      项目 _分析临时/PI/abilixProject.srh 的 DownloadProgramName 是 PI，
+      所以默认运行仅文件头 #<SKCON9><USB><PI> / <ProgramA> 差一个程序名。
+      两个文件均为 UTF-8 + LF。

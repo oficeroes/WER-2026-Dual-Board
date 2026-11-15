@@ -1,0 +1,8 @@
+preludeChars: 61
+preludeSha256: 5a0311e2c2b12e8e18b37d7170eee123a67166e1c6ddbad14cd052ce1792927c
+projectNativeBlockCount: 1
+expectedInjection: True
+detectedInjection: True
+exactMatch: True
+lineSequenceMatch: True
+ok: True

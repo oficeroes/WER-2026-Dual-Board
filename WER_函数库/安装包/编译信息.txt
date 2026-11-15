@@ -1,0 +1,60 @@
+﻿# WER 原生函数积木 · 离线安装包 编译信息
+# 本文件由 工具/原生积木/原生积木核心.py build 的产物整理而成。
+# 格式：key = value（安装.ps1 / 还原.ps1 会读取其中的 sha256 做校验）
+# 注意：请保持本文件与 browser_assets.patched 在一起，不要单独拷走。
+
+工具名称 = WER原生积木核心
+工具版本 = 1.0.0
+生成时间 = 2026-11-11 13:55:58
+构建机器 = HARVEST
+构建用户 = 世界毁灭者
+
+函数库路径 = D:\UserData\Documents\WER\2026普级赛\WER_函数库\我的函数库.srhs
+函数库sha256 = ad0b85069588d18bf0ab1f4e920cd773163adce1f412f1700aa0297c9da34623
+函数库大小 = 1363
+机器人类型 = SKCON9
+程序名称 = MyFuncLib
+函数数量 = 1
+函数列表 = func_Hello
+函数1 = func_Hello()  [积木类型 abilixuf_func_Hello]
+
+原版资源包路径 = D:\Program Files\AbilixScratch3.0\AbilixScratch3.0_Data\Resources\browser_assets
+原版资源包sha256 = DF6DB241752D42BFF2995FCD24521E070ADF9EB5D96E870148F9DC51690EDC40
+原版资源包大小 = 85271033
+
+补丁包文件 = browser_assets.patched
+补丁包sha256 = C03D6A232EDBB2DBCC5ECDD47D42CF5884A38F72AB44BE47258E1DEEAAE3A180
+补丁包大小 = 85274942
+补丁包条目数 = 6647
+补丁包条目说明 = 原版 6645 条 + 新增 2 条（abilix_userlib.js、abilix_userlib.json）
+
+prelude文件 = prelude.py（与安装.ps1同目录；仅作记录，安装时不需要）
+prelude sha256 = 5A0311E2C2B12E8E18B37D7170EEE123A67166E1C6DDBAD14CD052CE1792927C
+prelude 字符数 = 61
+
+自检结果 = 通过（只允许 2 处修改 + 2 处新增，其余条目逐字节不变）
+自检-修改条目 = /Blockly_Code/maingui.html（69281 -> 69853 字节）；/Blockly_Code/maingui.js（23313 -> 23733 字节）
+自检-新增条目 = /Blockly_Code/abilix_userlib.js（1514 字节）；/Blockly_Code/abilix_userlib.json（1313 字节）
+自检-逐字节不变条目数 = 6643
+自检-新增条目sha256 = abilix_userlib.js=CB9C13EDC0D65832E42CBD0EBBE223D74F881E539C61B424326AB0DF48412A67；abilix_userlib.json=972A301BD79769DFE514CA5E88CC2F68F32CDB2F6AA199A0B7E6E48DA3D7F058
+自检-条目数核对 = 补丁包索引实测 6647 条，与 build 自检一致
+
+安装校验值 = 补丁包sha256（安装.ps1 写入后用它校验目标资源包）
+还原校验值 = 原版资源包sha256（还原.ps1 用它校验备份与还原结果）
+
+# ---------------------------------------------------------------------------
+# 附：4 个被修改/新增条目的实测信息（从补丁包 zfb 索引读取）
+# 说明：补丁包内 manifest 的 entries 只记录 html/js/userlib 三项，不含 manifest 自身；
+#       故 abilix_userlib.json 的大小/sha 以本段实测为准。
+/Blockly_Code/maingui.html = 17BF0A1C2A9B2F29AB2C981EEBD59281F3D1E9AE27F5FBB147FD914CCEA84CA3（69853 字节，修改）
+/Blockly_Code/maingui.js = F4B771C305690BECAFAC5B665B062AE89EC707DD73E45B2E2D55DAE59F53BBDC（23733 字节，修改）
+/Blockly_Code/abilix_userlib.js = CB9C13EDC0D65832E42CBD0EBBE223D74F881E539C61B424326AB0DF48412A67（1514 字节，新增）
+/Blockly_Code/abilix_userlib.json = 972A301BD79769DFE514CA5E88CC2F68F32CDB2F6AA199A0B7E6E48DA3D7F058（1313 字节，新增）
+
+# ---------------------------------------------------------------------------
+# 附：prelude（Python 前奏）完整内容，安装后由 abilix_userlib.js 注入到生成代码里
+===== PRELUDE 开始 =====
+def func_Hello():
+    robot.print('hello world\n')
+    pass
+===== PRELUDE 结束 =====

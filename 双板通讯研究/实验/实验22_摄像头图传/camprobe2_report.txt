@@ -1,0 +1,195 @@
+=== CAMPROBE2 ===
+uid=10017 gid=10017 pid=2313
+uname=Linux 3.10.72 armv7l
+
+--- build.prop ---
+  ro.build.version.release=5.1
+  ro.build.type=user
+  ro.build.tags=test-keys
+  ro.product.model=abilix_c9_l
+  ro.debuggable=1
+
+--- /dev (全部) ---
+  wmtWifi                  chr  20660 1000:1000
+  stpgps                   chr  20660 1021:1021
+  stpbt                    chr  20660 1002:1001
+  stpwmt                   chr  20660 1000:1000
+  radio                    dir  40770 1001:1001
+  usb-ffs                  dir  40770 2000:2000
+  logo                     oth  60640 0:1000
+  misc                     oth  60660 0:1000
+  nvram                    oth  60660 0:1000
+  pro_info                 oth  60660 0:1000
+  seccfg                   oth  60660 0:1000
+  sec_ro                   oth  60640 0:1000
+  recovery                 oth  60640 0:1000
+  bootimg                  oth  60640 0:1000
+  fscklogs                 dir  40770 0:1000
+  cpuctl                   dir  40755 1000:1000
+  memcg                    dir  40700 0:1000
+  bus                      dir  40755 0:0
+  rtc0                     chr  20640 1000:1000
+  mali                     chr  20666 1000:1003
+  camera-sysram            chr  20660 1000:1006
+  pmic_ftm                 chr  20600 0:0
+  camera-pipemgr           chr  20660 1000:1006
+  mtk-adc-cali             chr  20600 0:0
+  kd_camera_hw             chr  20660 1000:1006
+  camera-isp               chr  20660 1000:1006
+  gps                      chr  20660 1021:1000
+  ccci_uem_tx              chr  20660 1001:1001
+  ccci_uem_rx              chr  20660 1001:1001
+  ccci_fs                  chr  20660 1001:1001
+  ccci_pcm_tx              chr  20660 1013:1013
+  ccci_pcm_rx              chr  20660 1013:1013
+  ccci_ioctl4              chr  20660 1001:1001
+  ccci_ioctl3              chr  20660 1001:1001
+  ccci_ioctl2              chr  20660 1001:1001
+  ccci_ioctl1              chr  20660 1001:1001
+  ccci_ioctl0              chr  20660 1001:1001
+  ccci_ipc_1220_0          chr  20660 1001:1001
+  ccci_ipc_2               chr  20660 1001:1001
+  ttyC2                    chr  20660 1001:1001
+  ttyC1                    chr  20660 1001:1001
+  ttyC0                    chr  20660 1001:1001
+  ccci_monitor             chr  20660 1001:1001
+  ccci_md_log_tx           chr  20660 1001:1001
+  ccci_md_log_rx           chr  20660 1001:1001
+  devmap                   chr  20444 0:1013
+  mtk_disp_mgr             chr  20660 1000:1003
+  MTK_SMI                  chr  20660 1000:1013
+  accdet                   chr  20600 0:0
+  emmcrpmb0                chr  20600 0:0
+  wmtdetect                chr  20660 1000:1000
+  mtk_sched                chr  20660 1000:1013
+  Vcodec                   chr  20660 1000:1013
+  snd                      dir  40755 0:0
+  MT_pmic_adc_cali         chr  20600 0:0
+  mtk_cmdq                 chr  20640 1000:1000
+  block                    dir  40755 0:0
+  EEPROM_AT24              chr  20777 1000:1000
+  hwmsensor                chr  20660 1000:1000
+  network_throughput       chr  20600 0:0
+  keychord                 chr  20600 0:0
+  device-mapper            chr  20600 0:0
+  m_gyro_misc              chr  20600 0:0
+  snapshot                 chr  20600 0:0
+  mt_otg_test              chr  20660 0:1001
+  uinput                   chr  20660 1000:3001
+  gsensor                  chr  20660 1000:1000
+  mtgpio                   chr  20777 1000:1000
+  mtp_usb                  chr  20660 0:1024
+  msensor                  chr  20660 1000:1000
+  loop-control             chr  20600 0:0
+  sw_sync                  chr  20660 1000:1003
+  binder                   chr  20666 0:0
+  m_acc_misc               chr  20600 0:0
+  ashmem                   chr  20666 0:0
+  misc-sd                  chr  20664 0:1000
+  android_adb              chr  20660 1011:1011
+  usb_accessory            chr  20660 0:1018
+  tpd_em_log               chr  20600 0:0
+  xt_qtaguid               chr  20644 0:0
+  network_latency          chr  20600 0:0
+  gyroscope                chr  20660 1000:1000
+  log                      dir  40755 0:0
+  touch                    chr  20660 0:1000
+  psaux                    chr  20600 0:0
+  alarm                    chr  20664 1000:1001
+  RT_Monitor               chr  20600 1000:1000
+  cpu_dma_latency          chr  20600 0:0
+  xLog                     chr  20600 0:0
+  uhid                     chr  20660 1000:3008
+  fuse                     chr  20600 0:0
+  aed1                     chr  20600 0:0
+  aed0                     chr  20600 0:0
+  tun                      chr  20660 1000:1016
+  ion                      chr  20644 0:0
+  ebc                      chr  20660 1000:1013
+  FT                       chr  20600 0:0
+  btif                     chr  20600 1000:1000
+  BOOT                     chr  20600 0:0
+  ttyGS7                   chr  20600 0:0
+  ttyGS6                   chr  20600 0:0
+  ttyGS5                   chr  20600 0:0
+  ttyGS4                   chr  20600 0:0
+  ttyGS3                   chr  20660 1000:1001
+  ttyGS2                   chr  20660 1002:1001
+  ttyGS1                   chr  20660 1000:0
+  ttyGS0                   chr  20660 1000:0
+  ttypf                    chr  20600 0:0
+  ttype                    chr  20600 0:0
+  ttypd                    chr  20600 0:0
+  ttypc                    chr  20600 0:0
+  ...truncated
+
+--- 摄像头原始节点 ---
+  /dev/video0 absent
+  /dev/video1 absent
+  /dev/video2 absent
+  /dev/video3 absent
+  /dev/video4 absent
+  /dev/video5 absent
+  /dev/video6 absent
+  /dev/video7 absent
+  /dev/video8 absent
+  /dev/video9 absent
+  /dev/media0                                absent
+  /dev/v4l-subdev0                           absent
+
+--- 串口（若摄像头是 USB 转串口） ---
+  /dev/ttyUSB0                               absent
+  /dev/ttyACM0                               absent
+  /dev/ttyUSB1                               absent
+  /dev/ttyACM1                               absent
+  /dev/ttyUSB2                               absent
+  /dev/ttyACM2                               absent
+  /dev/ttyUSB3                               absent
+  /dev/ttyACM3                               absent
+  /dev/ttyUSB4                               absent
+  /dev/ttyACM4                               absent
+  /dev/ttyUSB5                               absent
+  /dev/ttyACM5                               absent
+  /dev/ttyUSB6                               absent
+  /dev/ttyACM6                               absent
+  /dev/ttyUSB7                               absent
+  /dev/ttyACM7                               absent
+
+--- root 迹象 ---
+  /system/bin/su                             absent
+  /system/xbin/su                            absent
+  /system/sbin/su                            absent
+  /su/bin/su                                 absent
+  /system/bin/failsafe/su                    absent
+  /sbin/su                                   absent
+  uid/euid=10017/10017
+
+--- 常用工具 ---
+  /system/bin/nc                             absent
+  /system/xbin/nc                            absent
+  /system/bin/toybox                         absent
+  /system/bin/busybox                        absent
+  /system/bin/screencap                      mode=100755 uid=0 gid=2000
+  /system/bin/am                             mode=100755 uid=0 gid=2000
+  /system/bin/sh                             mode=100755 uid=0 gid=2000
+  /system/xbin/gcc4.8.2                      mode=40755 uid=0 gid=2000
+  /system/bin/dmesg                          mode=100755 uid=0 gid=2000
+
+--- usb sysfs ---
+  dev 1-1          vid=090c pid=037c product=USB 2.0 PC Cam
+  dev usb1         vid=1d6b pid=0002 product=MUSB HDRC host driver
+  if 1-0:1.0        class=09/00 drv=hub
+  if 1-1:1.0        class=0e/01 drv=usbfs
+  if 1-1:1.1        class=0e/02 drv=usbfs
+
+--- /dev/bus/usb ---
+  /dev/bus/usb/001/002                       mode=20660 uid=0 gid=1018 openRw=FAIL errno=13(Permission denied)
+  /dev/bus/usb/001/001                       mode=20660 uid=0 gid=1018 openRw=FAIL errno=13(Permission denied)
+
+--- /proc/self/fd ---
+  opendir fail errno=13(Permission denied)
+
+--- App 私有 .so（maps） ---
+  /data/data/com.abilix.controller/files/libuser.so
+  /data/data/com.abilix.controller/files/libuser.so
+=== END ===

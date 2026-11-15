@@ -1,0 +1,65 @@
+﻿===== 离线安装包自测 =====
+时间: 2026-11-11 14:06:53
+用户: harvest\世界毁灭者
+管理员: NO
+PS: 5.1.26100.9818
+
+PASS  真实原版资源包 sha 未变（测试前）
+PASS  补丁包 sha 与编译信息一致
+PASS  补丁包大小  :: 85274942
+PASS  临时副本初始为原版  :: DF6DB241752D42BFF2995FCD24521E070ADF9EB5D96E870148F9DC51690EDC40
+  [02_安装.log] exit=0
+PASS  T1 安装 exit code = 0  :: rc=0
+PASS  T1 安装输出含 [DONE]
+PASS  T1 安装后目标 sha = 补丁包 sha  :: C03D6A232EDBB2DBCC5ECDD47D42CF5884A38F72AB44BE47258E1DEEAAE3A180
+PASS  T1 生成安装备份  :: ['browser_assets.备份-20261111-140657']
+PASS  T1 备份 sha = 原版 sha  :: DF6DB241752D42BFF2995FCD24521E070ADF9EB5D96E870148F9DC51690EDC40
+
+  [03_重复安装.log] exit=1
+PASS  T2 重复安装被拒绝 exit=1  :: rc=1
+PASS  T2 提示已是补丁版本
+PASS  T2 目标未被再次修改
+
+  [04_还原.log] exit=0
+PASS  T3 还原 exit code = 0  :: rc=0
+PASS  T3 还原输出含 [DONE]
+PASS  T3 还原后 sha = 原版 sha  :: DF6DB241752D42BFF2995FCD24521E070ADF9EB5D96E870148F9DC51690EDC40
+PASS  T3 还原后大小 = 原版大小
+PASS  T3 生成还原前安全备份  :: ['browser_assets.还原前备份-20261111-140701']
+PASS  T3 安全备份 sha = 补丁包 sha
+
+  [05_再次还原.log] exit=0
+PASS  T4 已是原版时还原 exit=0 且不改动  :: rc=0
+
+  [06_安装_目标为文件.log] exit=0
+PASS  T5 -Target 指向文件也能安装  :: rc=0
+  [07_还原_指定备份.log] exit=0
+PASS  T5 -Backup 指定备份还原成功  :: rc=0
+
+  [08_负例_只读文件.log] exit=1
+PASS  T6 只读目标被拒绝 exit=1  :: rc=1
+PASS  T6 提示没有写入权限
+PASS  T6 只读时目标未被修改
+
+  [09_负例_IDE运行中.log] exit=1
+PASS  T7 IDE 运行时被拒绝 exit=1  :: rc=1
+PASS  T7 提示检测到 IDE 正在运行
+PASS  T7 未改动目标
+
+  [10_负例_缺少编译信息.log] exit=1
+PASS  T8 编译信息缺失被拒绝 exit=1  :: rc=1
+PASS  T8 提示缺少编译信息
+
+PASS  T9 cmd 安装 launcher 退出码 0  :: rc=0
+PASS  T9 cmd 找到并调用了中文名 安装.ps1
+PASS  T9 cmd 打印 [DONE]
+PASS  T9 cmd 还原 launcher 透传退出码 1  :: rc=1
+PASS  T9 cmd 找到并调用了中文名 还原.ps1
+PASS  T9 cmd 打印 [NOT DONE]
+
+PASS  真实原版资源包 sha 未变（测试后）
+PASS  补丁包 sha 未变
+
+===== 结果: 全部通过（37/37）=====
+已归档记录文件: 安装记录-20261111-140657.txt, 安装记录-20261111-140705.txt, 还原记录-20261111-140701.txt, 还原记录-20261111-140707.txt
+临时目录已删除: C:\Users\s1325\AppData\Local\Temp\wer_offline_test

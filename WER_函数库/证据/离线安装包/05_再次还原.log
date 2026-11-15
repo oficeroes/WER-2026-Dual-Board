@@ -1,0 +1,21 @@
+﻿COMMAND: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "-NoProfile" "-ExecutionPolicy" "Bypass" "-File" "D:\UserData\Documents\WER\2026普级赛\WER_函数库\安装包\还原.ps1" "-Target" "C:\Users\s1325\AppData\Local\Temp\wer_offline_test\AbilixScratch3.0" "-Yes"
+EXIT CODE: 0
+
+===== STDOUT =====
+==============================================================================
+  WER 原生函数积木 - 离线还原    v1.0.0
+  把 browser_assets 还原成 AbilixScratch3.0 原始版本（不需要 Python）。
+==============================================================================
+[INFO] 时间       : 2026-11-11 14:07:02
+[INFO] 脚本目录   : D:\UserData\Documents\WER\2026普级赛\WER_函数库\安装包
+[INFO] 当前权限   : 普通用户（目标目录可写时也能继续，例如复制出来的测试副本）
+[INFO] 还原目标   : C:\Users\s1325\AppData\Local\Temp\wer_offline_test\AbilixScratch3.0\AbilixScratch3.0_Data\Resources\browser_assets（由 -Target 指定）
+[WARN] 当前不是管理员，但目标目录可写：继续还原（适用于测试副本 / 绿色版目录；真实 Program Files 安装请用管理员权限）。
+[INFO] 计算目标资源包当前 sha256 …
+[INFO] 目标当前   : 81.3 MB，sha256 DF6DB241752D42BFF2995FCD24521E070ADF9EB5D96E870148F9DC51690EDC40
+[OK]   目标资源包已经是原版，无需还原。
+
+[DONE] 未做任何修改。
+
+===== STDERR =====
+

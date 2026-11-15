@@ -1,0 +1,11 @@
+﻿COMMAND: cmd /c restore_launcher.cmd (test copy: elevation line commented out; stub ps1 exit 1)
+EXIT CODE: 1
+
+[WER] Starting offline restore script (PowerShell 5.1, no Python needed) ...
+
+[STUB] restore ps1 invoked, Yes=True
+
+[NOT DONE] Restore failed or was refused. Read the messages above.
+
+Press any key to continue . . . 
+

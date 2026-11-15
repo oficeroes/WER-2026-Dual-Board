@@ -1,0 +1,43 @@
+==============================================================================
+WER headless 验证报告   生成时间 2026-11-10T13:28:57
+==============================================================================
+输入文件    : None  (builtin-param-test, utf-8)
+机器人类型  : SKCON9    连接: USB    程序名: ProgramA
+项目 Info   : {"RobotType": "SKCON9", "DownloadProgramName": "ProgramA"}
+XML 静态校验: 通过    静态顶层块: 2    变量: 2    静态函数定义: 1
+[1] 加载项目 XML : 成功  (55.7 ms)
+    顶层块数: 2    总块数: 10    变量数: 2
+    顶层块类型: {"procedures_defnoreturn": 1, "start": 1}
+    渲染检查: 已渲染块 10/10    SVG 根 10    0 尺寸块 0    警告 0    禁用 0    mainWorkspace 正确 True
+[2] 函数定义     : 无返回值 1 个, 有返回值 0 个
+    - func_MoveCm(cm)
+[3] 函数分类 flyout（Blockly.Procedures.flyoutCategory）: 2 个 XML 块
+    - procedures_defnoreturn  name='func_name'  args=[]
+    - procedures_callnoreturn  name='func_MoveCm'  args=['cm']
+[4] 真实 flyout 实例化: 成功 (2 块, 经工具箱树真实选中=True)    渲染 2/2    SVG 根 2    0 尺寸 0
+    - procedures_defnoreturn  name='func_name'  args=[]  inputs=['', 'STACK']
+    - procedures_callnoreturn  name='func_MoveCm'  args=['cm']  inputs=['TOPROW', 'ARG0']
+[5] Python 生成  : 成功  (1.1 ms, 使用 maingui.js 原始 getPythonCode=True)
+    长度/行数: 24 行
+    文件头: '#<SKCON9><USB><ProgramA>'    def 数: 2    import: ['import threading', 'import time', 'import libstarpy']
+    变量声明: 2 个   尾部: ['main()#program entry']
+[6] py_compile  : 通过
+[8] 带参数函数结论: 通过 (16/16)
+    [PASS] 项目加载成功: 
+    [PASS] 顶层块数=2（1 个函数定义 + 1 个 start）: 实际 2: {'procedures_defnoreturn': 1, 'start': 1}
+    [PASS] procedures 列表中 func_MoveCm 存在: [{"name": "func_MoveCm", "args": ["cm"], "blockType": "procedures_defnoreturn", "id": "def_block"}]
+    [PASS] func_MoveCm 的参数为 ['cm']: ["cm"]
+    [PASS] flyoutCategory 生成 func_MoveCm 的调用块 XML: [{"tag": "block", "type": "procedures_defnoreturn", "fieldName": "func_name"}, {"tag": "block", "type": "procedures_callnoreturn", "mutationName": "func_MoveCm", "args": ["cm"]}]
+    [PASS] 该调用块 XML 的 mutation 带参数 cm: ["cm"]
+    [PASS] 真实 flyout 实例化出 func_MoveCm 调用块: [{"type": "procedures_defnoreturn", "isInFlyout": true, "name": "func_name", "args": [], "inputs": ["", "STACK"], "width": 150, "height": 62}, {"type": "procedures_callnoreturn", "isInFlyout": true, "name": "func_MoveCm", "callName": "func_MoveCm", "args": ["cm"], "inputs": ["TOPROW", "ARG0"], "width": 165, "height": 54}]
+    [PASS] 实例化调用块的 arguments_=['cm'] 且有 ARG0 值输入: {"type": "procedures_callnoreturn", "isInFlyout": true, "name": "func_MoveCm", "callName": "func_MoveCm", "args": ["cm"], "inputs": ["TOPROW", "ARG0"], "width": 165, "height": 54}
+    [PASS] 生成 Python 含 `def func_MoveCm(cm):`: def func_MoveCm(cm):
+    [PASS] 函数体用参数：`var_last_cm = cm`: 
+    [PASS] 函数体用参数：`time.sleep(cm)`: 
+    [PASS] func_MoveCm 内 global 含 var_last_cm: ['var_last_cm']
+    [PASS] func_MoveCm 内 global 不含参数 cm（参数被正确排除）: ['var_last_cm']
+    [PASS] main 中调用 func_MoveCm(10): 
+    [PASS] main 中调用 func_MoveCm(20): 
+    [PASS] py_compile 语法检查通过: 
+生成的 Python 全文见 --py 输出 / JSON generated.code；可另传 --screenshot 截图。
+结论: 通过

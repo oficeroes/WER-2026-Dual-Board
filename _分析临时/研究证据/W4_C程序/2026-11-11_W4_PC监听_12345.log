@@ -1,0 +1,87 @@
+
+===== listener start 2026-11-11 21:26:32.118 port=12345 =====
+[2026-11-11 21:26:32.118] listening on 0.0.0.0:12345 (timeout 1800s)
+[2026-11-11 21:27:20.692] ACCEPT from 127.0.0.1:63728
+[2026-11-11 21:27:20.693] received 0 bytes:
+
+[2026-11-11 21:28:05.534] ACCEPT from 192.168.1.103:43309
+[2026-11-11 21:28:05.607] received 2568 bytes:
+W4PROBE socket ok pid=1325 argc=-1556719284
+--- getprop ---
+5.1
+abilix_c9_l
+alps/full_abilix_c9_l/abilix_c9_l:5.1/LMY47I/1559014187:user/test-keys
+--- /proc/net/tcp (head) ---
+  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     
+   0: 6701A8C0:A92D 6601A8C0:3039 01 00000084:00000000 01:00000016 00000000 10017        0 24916 2 00000000 22 0 0 10 -1                             
+--- /proc/self/maps (head) ---
+12c00000-12e01000 rw-p 00000000 00:04 130        /dev/ashmem/dalvik-main space (deleted)
+12e01000-13001000 rw-p 00201000 00:04 130        /dev/ashmem/dalvik-main space (deleted)
+13001000-22c00000 ---p 00401000 00:04 130        /dev/ashmem/dalvik-main space (deleted)
+22c00000-32c00000 ---p 00000000 00:04 131        /dev/ashmem/dalvik-main space (deleted)
+6f9d4000-7029a000 rw-p 00000000 b3:14 65541      /data/dalvik-cache/arm/system@framework@boot.art
+7029a000-72206000 r--p 00000000 b3:14 65542      /data/dalvik-cache/arm/system@framework@boot.oat
+72206000-73b59000 r-xp 01f6c000 b3:14 65542      /data/dalvik-cache/arm/system@framework@boot.oat
+73b59000-73b5a000 rw-p 038bf000 b3:14 65542      /data/dalvik-cache/arm/system@framework@boot.oat
+73b5a000-73f5f000 rw-p 00000000 00:04 129        /dev/ashmem/dalvik-zygote space (deleted)
+73f5f000-73f60000 rw-p 00000000 00:04 6913       /dev/ashmem/dalvik-non moving space (deleted)
+73f60000-73fd1000 rw-p 00001000 00:04 6913       /dev/ashmem/dalvik-non moving space (deleted)
+73fd1000-7775b000 ---p 00072000 00:04 6913       /dev/ashmem/dalvik-non moving space (deleted)
+7775b000-77b5a000 rw-p 037fc000 00:04 6913       /dev/ashmem/dalvik-non moving space (deleted)
+a2691000-a26d1000 rw-s 10100000 00:0c 6390       /dev/mali
+a26d1000-a2713000 rw-p 00000000 00:00 0 
+a2713000-a2793000 rw-s 10080000 00:0c 6390       /dev/mali
+a2793000-a27d3000 rw-s 10040000 00:0c 6390       /dev/mali
+a27d3000-a2869000 rw-s 00000000 00:08 5030       anon_inode:dmabuf
+a2869000-a286a000 ---p 00000000 00:00 0 
+a286a000-a2967000 rw-p 00000000 00:00 0          [stack:2563]
+a2967000-a29a7000 rw-s 10000000 00:0c 6390       /dev/mali
+a29a7000-a29a8000 ---p 00000000 00:00 0 
+a29a8000-a2aa5000 rw-p 00000000 00:00 0          [stack:2562]
+a2aa5000-a2aa6000 ---p 00000000 00:00 0 
+a2aa6000-a2ba3000 rw-p 00000000 00:00 0          [stack:2561]
+a2ba3000-a2ba4000 ---p 00000000 00:00 0 
+a2ba4000-a2ca1000 rw-p 00000000 00:00 0          [stack:2560]
+a2ca1000-a2ca2000 ---p 00000000 00:00 0 
+a2ca2000-a2ca3000 ---p 00000000 W4PROBE done
+
+[2026-11-11 21:28:58.540] ACCEPT from 192.168.1.103:43310
+[2026-11-11 21:28:58.605] received 2718 bytes:
+W4PROBE socket ok pid=2618 argc=-1556719284
+--- getprop ---
+5.1
+abilix_c9_l
+alps/full_abilix_c9_l/abilix_c9_l:5.1/LMY47I/1559014187:user/test-keys
+--- /proc/net/tcp (head) ---
+  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     
+   0: 6701A8C0:A92D 6601A8C0:3039 06 00000000:00000000 03:000002BD 00000000     0        0 0 3 00000000                                              
+   1: 6701A8C0:A92E 6601A8C0:3039 01 00000084:00000000 01:00000016 00000000 10017        0 23849 2 00000000 22 0 0 10 -1                             
+--- /proc/self/maps (head) ---
+12c00000-12e01000 rw-p 00000000 00:04 130        /dev/ashmem/dalvik-main space (deleted)
+12e01000-13001000 rw-p 00201000 00:04 130        /dev/ashmem/dalvik-main space (deleted)
+13001000-22c00000 ---p 00401000 00:04 130        /dev/ashmem/dalvik-main space (deleted)
+22c00000-22c01000 rw-p 00000000 00:04 131        /dev/ashmem/dalvik-main space (deleted)
+22c01000-32c00000 ---p 00001000 00:04 131        /dev/ashmem/dalvik-main space (deleted)
+6f9d4000-7029a000 rw-p 00000000 b3:14 65541      /data/dalvik-cache/arm/system@framework@boot.art
+7029a000-72206000 r--p 00000000 b3:14 65542      /data/dalvik-cache/arm/system@framework@boot.oat
+72206000-73b59000 r-xp 01f6c000 b3:14 65542      /data/dalvik-cache/arm/system@framework@boot.oat
+73b59000-73b5a000 rw-p 038bf000 b3:14 65542      /data/dalvik-cache/arm/system@framework@boot.oat
+73b5a000-73f5f000 rw-p 00000000 00:04 129        /dev/ashmem/dalvik-zygote space (deleted)
+73f5f000-73f60000 rw-p 00000000 00:04 6913       /dev/ashmem/dalvik-non moving space (deleted)
+73f60000-73fd1000 rw-p 00001000 00:04 6913       /dev/ashmem/dalvik-non moving space (deleted)
+73fd1000-7775b000 ---p 00072000 00:04 6913       /dev/ashmem/dalvik-non moving space (deleted)
+7775b000-77b5a000 rw-p 037fc000 00:04 6913       /dev/ashmem/dalvik-non moving space (deleted)
+a26cb000-a270d000 rw-p 00000000 00:00 0 
+a270d000-a278d000 rw-s 10080000 00:0c 6390       /dev/mali
+a278d000-a27cd000 rw-s 10040000 00:0c 6390       /dev/mali
+a27cd000-a2863000 rw-s 00000000 00:08 5030       anon_inode:dmabuf
+a2863000-a2877000 r-xp 00000000 b3:12 1235       /system/lib/libgui_ext.so
+a2877000-a2878000 ---p 00000000 00:00 0 
+a2878000-a287b000 r--p 00014000 b3:12 1235       /system/lib/libgui_ext.so
+a287b000-a287c000 rw-p 00017000 b3:12 1235       /system/lib/libgui_ext.so
+a287c000-a287d000 ---p 00000000 00:00 0 
+a287d000-a297a000 rw-p 00000000 00:00 0          [stack:2661]
+a297a000-a29ba000 rw-s 10000000 00:0c 6390       /dev/mali
+a29ba000-a29bb000 ---p 00000000 00:00 0 
+a29bb000-a2ab8000 rw-p 00000000 00:00 0      W4PROBE done
+

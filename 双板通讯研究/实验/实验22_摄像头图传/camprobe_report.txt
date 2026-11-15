@@ -1,0 +1,52 @@
+=== CAMPROBE ===
+uid=10017 gid=10017 euid=10017 pid=2116
+uname=Linux 3.10.72 armv7l #1 SMP PREEMPT Tue May 28 11:41:37 CST 2019
+
+--- /dev 关键节点 ---
+  /dev/video0: absent
+  /dev/video1: absent
+  /dev/video2: absent
+  /dev/video3: absent
+  /dev/video4: absent
+  /dev/v4l-subdev0: absent
+  /dev/media0: absent
+  /dev/graphics/fb0: mode=20660 uid=1000 gid=1003 rdev=29:0
+  /dev/graphics/fb0: open(O_RDWR) FAIL errno=13 (Permission denied)
+  /dev/graphics/fb0: open(O_RDONLY) FAIL errno=13 (Permission denied)
+  /dev/fb0: absent
+
+--- /dev/v4l* ---
+  /dev:
+  /dev:
+
+--- /sys/class/video4linux ---
+
+--- usb sysfs ---
+  dev usb1         vid=1d6b pid=0002 class=09 product=MUSB HDRC host driver
+      descriptors size=65553
+  if 1-0:1.0        class=09/00/00 driver=?
+
+--- /dev/bus/usb ---
+  /dev/bus/usb/001/001 mode=20660 uid=0 gid=1018 openRw=FAIL errno=13(Permission denied)
+
+--- 本进程已打开的 usb/video fd ---
+  /proc/self/fd: FAIL
+
+--- 相关库文件 ---
+  /system/lib/libusb100.so: absent
+  /system/lib/libusb1.0.so: absent
+  /system/lib/libuvc.so: absent
+  /system/lib/libuvccamera.so: absent
+  /system/lib/libjpeg.so (197756 bytes)
+  /system/lib/libRobot.so: absent
+  /system/lib/libstar.so: absent
+  /system/lib/libstarpy.so: absent
+  /system/vendor/lib/libusb100.so: absent
+
+--- /proc/mounts sdcard ---
+
+--- /system/bin & /system/xbin gcc ---
+  /system/xbin/gcc absent
+  /system/bin/gcc absent
+  /system/xbin/gcc4.8.2 present mode=40755
+=== END ===

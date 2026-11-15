@@ -1,0 +1,245 @@
+=== VECTOR TABLE @0x08004000 ===
+  [ 0] 0x20004020 
+  [ 1] 0x08004145 
+  [ 2] 0x08006c7f 
+  [ 3] 0x08006025 
+  [ 4] 0x08006c7d 
+  [ 5] 0x08004d4d 
+  [ 6] 0x08008dfd 
+  [11] 0x08007621 
+  [12] 0x0800593d 
+  [14] 0x08007185 
+  [15] 0x08008125 
+  [16] 0x0800415f 
+  [17] 0x0800415f 
+  [18] 0x0800415f 
+  [19] 0x0800415f 
+  [20] 0x0800415f 
+  [21] 0x0800415f 
+  [22] 0x0800415f 
+  [23] 0x0800415f 
+  [24] 0x0800415f 
+  [25] 0x0800415f 
+  [26] 0x0800415f 
+  [27] 0x0800566d 
+  [28] 0x08005689 
+  [29] 0x080056a5 
+  [30] 0x080056c1 
+  [31] 0x080056dd 
+  [32] 0x080056f9 
+  [33] 0x08005715 
+  [34] 0x0800415f 
+  [35] 0x0800415f 
+  [36] 0x0800415f 
+  [37] 0x0800415f 
+  [38] 0x0800415f 
+  [39] 0x0800415f 
+  [40] 0x0800415f 
+  [41] 0x0800415f 
+  [42] 0x0800415f 
+  [43] 0x0800415f 
+  [44] 0x0800415f 
+  [45] 0x0800415f 
+  [46] 0x0800415f 
+  [47] 0x0800415f 
+  [48] 0x0800415f 
+  [49] 0x0800415f 
+  [50] 0x0800415f 
+  [51] 0x0800415f 
+  [52] 0x0800415f 
+  [53] 0x08008a1d 
+  [54] 0x08008a21 
+  [55] 0x0800415f 
+  [56] 0x0800415f 
+  [57] 0x0800415f 
+  [58] 0x0800415f 
+  [59] 0x0800415f 
+  [60] 0x0800415f 
+  [61] 0x0800415f 
+  [62] 0x0800415f 
+  [63] 0x0800415f 
+  [64] 0x0800415f 
+  [65] 0x0800415f 
+  [66] 0x0800415f 
+  [67] 0x0800415f 
+  [68] 0x08008849 
+  [69] 0x0800884d 
+  [70] 0x0800415f 
+  [71] 0x0800415f 
+  [72] 0x08005731 
+  [73] 0x08005751 
+  [74] 0x08005771 
+  [75] 0x0800578d 
+
+=== PERIPHERAL CONSTANTS + REGISTER ACCESSES ===
+0x08004984: ldr r0     = 0x40010c00 GPIOB
+0x080055e0: ldr r0     = 0x40004400 USART2
+0x080055e2: ldrh     r0, [r0]                         ; USART2+0x0
+0x080055e4: ldr r0     = 0x40004400 USART2
+0x080055e8: ldrh     r0, [r0]                         ; USART2+0x0
+0x0800566c: ldr r1     = 0x40020000 DMA1
+0x08005670: ldr      r0, [r1]                         ; DMA1+0x0
+0x08005676: str      r0, [r1, #4]                     ; DMA1+0x4
+0x08005688: ldr r1     = 0x40020000 DMA1
+0x0800568c: ldr      r0, [r1]                         ; DMA1+0x0
+0x08005694: str      r2, [r1, #4]                     ; DMA1+0x4
+0x080056a4: ldr r1     = 0x40020000 DMA1
+0x080056a8: ldr      r0, [r1]                         ; DMA1+0x0
+0x080056b0: str      r2, [r1, #4]                     ; DMA1+0x4
+0x080056c0: ldr r1     = 0x40020000 DMA1
+0x080056c4: ldr      r0, [r1]                         ; DMA1+0x0
+0x080056cc: str      r2, [r1, #4]                     ; DMA1+0x4
+0x080056dc: ldr r1     = 0x40020000 DMA1
+0x080056e0: ldr      r0, [r1]                         ; DMA1+0x0
+0x080056e8: str      r2, [r1, #4]                     ; DMA1+0x4
+0x080056f8: ldr r1     = 0x40020000 DMA1
+0x080056fc: ldr      r0, [r1]                         ; DMA1+0x0
+0x08005704: str      r2, [r1, #4]                     ; DMA1+0x4
+0x08005714: ldr r1     = 0x40020000 DMA1
+0x08005718: ldr      r0, [r1]                         ; DMA1+0x0
+0x08005720: str      r2, [r1, #4]                     ; DMA1+0x4
+0x0800573e: str      r0, [r1]                         ; DMA1+0x0
+0x08005acc: ldr r5     = 0x40010800 GPIOA
+0x08005ae0: ldr r6     = 0x40010c00 GPIOB
+0x08005bfc: strh     r4, [r5, #0x24]                  ; GPIOA+0x24
+0x08005c58: ldr r1     = 0x40022000 FLASH_R
+0x08005c5a: str      r0, [r1, #0xc]                   ; FLASH_R+0xc
+0x08005ca0: ldr r1     = 0x40022000 FLASH_R
+0x08005ca4: ldr      r2, [r1, #0xc]                   ; FLASH_R+0xc
+0x08005cae: ldr      r2, [r1, #0xc]                   ; FLASH_R+0xc
+0x08005cb8: ldr      r1, [r1, #0xc]                   ; FLASH_R+0xc
+0x08005cc8: ldr r0     = 0x40022000 FLASH_R
+0x08005cca: ldr      r1, [r0, #0x10]                  ; FLASH_R+0x10
+0x08005cd0: str      r1, [r0, #0x10]                  ; FLASH_R+0x10
+0x08005cfc: strh     r5, [r6]                         ; GPIOB+0x0
+0x08005d12: strh     r0, [r6]                         ; GPIOB+0x0
+0x08005d28: ldr r0     = 0x40022000 FLASH_R
+0x08005d2c: str      r1, [r0, #4]                     ; FLASH_R+0x4
+0x08005d30: str      r1, [r0, #4]                     ; FLASH_R+0x4
+0x08005d3c: ldrh     r3, [r5, #0xc]                   ; GPIOA+0xc
+0x08005d6a: ldr      r1, [r5, #0x44]                  ; GPIOA+0x44
+0x08005d72: str      r1, [r5, #0x44]                  ; GPIOA+0x44
+0x08005d7a: str      r0, [r5, #0x44]                  ; GPIOA+0x44
+0x08005d94: str      r0, [r5, #0x40]                  ; GPIOA+0x40
+0x08005dbc: ldr r1     = 0x40010800 GPIOA
+0x08005e72: ldrb     r4, [r1, #3]                     ; GPIOA+0x3
+0x08005e7e: ldrb     r4, [r1, #2]                     ; GPIOA+0x2
+0x08005e82: ldrb     r4, [r1]                         ; GPIOA+0x0
+0x08005e92: ldr      r5, [r0]                         ; FLASH_R+0x0
+0x08005e94: ldrh     r6, [r1]                         ; GPIOA+0x0
+0x08005eae: ldrb     r6, [r1, #3]                     ; GPIOA+0x3
+0x08005ebc: str      r4, [r0, #0x14]                  ; FLASH_R+0x14
+0x08005ec0: str      r4, [r0, #0x10]                  ; FLASH_R+0x10
+0x08005ec8: str      r5, [r0]                         ; FLASH_R+0x0
+0x08005eca: ldrh     r2, [r1]                         ; GPIOA+0x0
+0x08005ed0: ldr      r4, [r0, #4]                     ; FLASH_R+0x4
+0x08005edc: ldrh     r6, [r1]                         ; GPIOA+0x0
+0x08005ef0: ldrb     r6, [r1, #3]                     ; GPIOA+0x3
+0x08005ef8: str      r5, [r0, #0x14]                  ; FLASH_R+0x14
+0x08005efa: ldrb     r6, [r1, #3]                     ; GPIOA+0x3
+0x08005f00: str      r5, [r0, #0x10]                  ; FLASH_R+0x10
+0x08005f08: str      r4, [r0, #4]                     ; FLASH_R+0x4
+0x08005f64: str      r1, [r0, #0x14]                  ; FLASH_R+0x14
+0x08005f68: str      r1, [r0, #0x10]                  ; FLASH_R+0x10
+0x08005f70: strh     r1, [r0]                         ; FLASH_R+0x0
+0x08005f74: strb     r1, [r0, #2]                     ; FLASH_R+0x2
+0x08005f78: strb     r1, [r0, #3]                     ; FLASH_R+0x3
+0x08005fac: ldr r0     = 0x40021000 RCC
+0x08005fae: ldr      r1, [r0]                         ; RCC+0x0
+0x08005fb4: str      r1, [r0]                         ; RCC+0x0
+0x08005fd0: ldr      r1, [r0, #4]                     ; RCC+0x4
+0x08005fd2: str      r1, [r0, #4]                     ; RCC+0x4
+0x08005fd4: ldr      r1, [r0, #4]                     ; RCC+0x4
+0x08005fd6: str      r1, [r0, #4]                     ; RCC+0x4
+0x08005fd8: ldr      r1, [r0, #4]                     ; RCC+0x4
+0x08005fde: str      r1, [r0, #4]                     ; RCC+0x4
+0x08005fe0: ldr      r1, [r0, #4]                     ; RCC+0x4
+0x08005fe2: str      r1, [r0, #4]                     ; RCC+0x4
+0x08005fe4: ldr      r1, [r0, #4]                     ; RCC+0x4
+0x08005fea: str      r1, [r0, #4]                     ; RCC+0x4
+0x08005fec: ldr      r1, [r0, #4]                     ; RCC+0x4
+0x08005fee: str      r1, [r0, #4]                     ; RCC+0x4
+0x08005ff0: ldr      r1, [r0]                         ; RCC+0x0
+0x08005ff6: str      r1, [r0]                         ; RCC+0x0
+0x08005ff8: ldr      r1, [r0]                         ; RCC+0x0
+0x08005ffe: ldr      r1, [r0, #4]                     ; RCC+0x4
+0x08006004: str      r1, [r0, #4]                     ; RCC+0x4
+0x08006006: ldr      r1, [r0, #4]                     ; RCC+0x4
+0x0800600c: str      r1, [r0, #4]                     ; RCC+0x4
+0x0800600e: ldr      r1, [r0, #4]                     ; RCC+0x4
+0x08006028: ldr r1     = 0x40003000 IWDG
+0x0800602e: str      r0, [r1]                         ; IWDG+0x0
+0x0800605c: ldr r1     = 0x40003000 IWDG
+0x08006062: str      r0, [r1]                         ; IWDG+0x0
+0x0800606c: ldr r1     = 0x40003000 IWDG
+0x0800606e: str      r0, [r1, #4]                     ; IWDG+0x4
+0x08006078: ldr r1     = 0x40003000 IWDG
+0x0800607a: str      r0, [r1, #8]                     ; IWDG+0x8
+0x08006084: ldr r1     = 0x40003000 IWDG
+0x08006086: str      r0, [r1]                         ; IWDG+0x0
+0x080060a8: ldr r0     = 0x40011000 GPIOC
+0x080060b8: ldr r0     = 0x40011800 GPIOE
+0x080060c8: ldr r0     = 0x40011400 GPIOD
+0x080060ec: ldr r5     = 0x40011400 GPIOD
+0x0800611e: str      r4, [r0, #0x38]                  ; GPIOD+0x38
+0x0800614a: strb     r7, [r0]                         ; GPIOD+0x0
+0x08006150: strb     r4, [r0, #2]                     ; GPIOD+0x2
+0x08006152: strb     r4, [r0, #3]                     ; GPIOD+0x3
+0x08006154: strb     r1, [r0, #4]                     ; GPIOD+0x4
+0x08006156: strb     r2, [r0, #5]                     ; GPIOD+0x5
+0x08006158: strb     r2, [r0, #6]                     ; GPIOD+0x6
+0x0800615a: strb     r2, [r0, #7]                     ; GPIOD+0x7
+0x0800615c: strb     r2, [r0, #8]                     ; GPIOD+0x8
+0x0800615e: strb     r2, [r0, #9]                     ; GPIOD+0x9
+0x08006160: strb     r2, [r0, #0xa]                   ; GPIOD+0xa
+0x08006162: strb     r2, [r0, #0xb]                   ; GPIOD+0xb
+0x08006164: strb     r2, [r0, #0xc]                   ; GPIOD+0xc
+0x08006166: strb     r2, [r0, #0xd]                   ; GPIOD+0xd
+0x08006168: strb     r2, [r0, #0xe]                   ; GPIOD+0xe
+0x0800616a: strb     r2, [r0, #0xf]                   ; GPIOD+0xf
+0x08006170: strb     r1, [r0]                         ; GPIOD+0x0
+0x08006172: strb     r1, [r0, #1]                     ; GPIOD+0x1
+0x08006174: strb     r1, [r0, #2]                     ; GPIOD+0x2
+0x08006176: strb     r1, [r0, #3]                     ; GPIOD+0x3
+0x08006178: strb     r1, [r0, #4]                     ; GPIOD+0x4
+0x0800617a: strb     r1, [r0, #5]                     ; GPIOD+0x5
+0x0800617c: strb     r1, [r0, #6]                     ; GPIOD+0x6
+0x0800617e: strb     r1, [r0, #7]                     ; GPIOD+0x7
+0x08006180: strb     r1, [r0, #8]                     ; GPIOD+0x8
+0x08006182: strb     r1, [r0, #9]                     ; GPIOD+0x9
+0x08006184: strb     r1, [r0, #0xa]                   ; GPIOD+0xa
+0x08006186: strb     r1, [r0, #0xb]                   ; GPIOD+0xb
+0x08006188: strb     r1, [r0, #0xc]                   ; GPIOD+0xc
+0x0800618a: strb     r1, [r0, #0xd]                   ; GPIOD+0xd
+0x0800618c: strb     r1, [r0, #0xe]                   ; GPIOD+0xe
+0x0800618e: strb     r1, [r0, #0xf]                   ; GPIOD+0xf
+0x080062f8: ldr r4     = 0x40011000 GPIOC
+0x080063a8: ldr r4     = 0x40010800 GPIOA
+0x08006404: ldr r4     = 0x40013800 USART1
+0x080064a4: ldr r5     = 0x40005000 UART5
+0x0800652c: ldr r4     = 0x40010c00 GPIOB
+0x080066bc: ldr r5     = 0x40011800 GPIOE
+0x08006724: ldr r0     = 0x40011400 GPIOD
+0x08006728: str      r5, [r0]                         ; GPIOD+0x0
+0x0800672a: str      r4, [r0]                         ; GPIOD+0x0
+0x0800672c: str      r6, [r0]                         ; GPIOD+0x0
+0x080067a0: ldr      r1, [r5, #0xc]                   ; GPIOE+0xc
+0x080067b8: ldr      r1, [r5]                         ; GPIOE+0x0
+0x08006832: str      r0, [r5]                         ; GPIOE+0x0
+0x08006842: str      r0, [r5, #4]                     ; GPIOE+0x4
+0x08006852: str      r0, [r5, #8]                     ; GPIOE+0x8
+0x08006862: str      r0, [r5, #0xc]                   ; GPIOE+0xc
+0x080068e0: ldr      r1, [r5, #0xc]                   ; GPIOE+0xc
+0x080068f8: ldr      r1, [r5]                         ; GPIOE+0x0
+0x0800697a: str      r0, [r5]                         ; GPIOE+0x0
+0x0800698a: str      r0, [r5, #4]                     ; GPIOE+0x4
+0x0800699a: str      r0, [r5, #8]                     ; GPIOE+0x8
+0x080069aa: str      r0, [r5, #0xc]                   ; GPIOE+0xc
+0x08006a00: ldr r0     = 0x40011400 GPIOD
+0x08006a14: ldr r4     = 0x40010c00 GPIOB
+0x08006aba: strb     r0, [r4]                         ; GPIOB+0x0
+0x08006aee: strb     r0, [r4]                         ; GPIOB+0x0
+0x08006af6: ldrb     r0, [r4]                         ; GPIOB+0x0
+0x08006b6e: strb     r3, [r4, #1]                     ; GPIOB+0x1
+0x08006c68: strb     r2, [r4, r1]                     ; GPIOB+0x0
+0x08006c74: strb     r0, [r4, #0xf]                   ; GPIOB+0xf

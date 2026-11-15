@@ -1,0 +1,1356 @@
+CLASS com/abilix/utils/ProgramAndInterfaceC METHOD CCJ_Interface (Ljava/lang/String;)Ljava/lang/String;
+     0 move-object/from16     v0, v25
+     1 move-object/from16     v1, v26
+     2 const-string           v2, "null"
+     3 const-string           v3, "&"
+     4 invoke-virtual         v1, v3, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+     5 move-result-object     v3
+     6 iget-boolean           v4, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->isRunning Z
+     7 if-eqz                 v4, +a84h
+     8 array-length           v4, v3
+     9 if-nez                 v4, +004h
+    10 goto/16                +a7fh
+    11 const/4                v4, 0
+    12 aget-object            v5, v3, v4
+    13 invoke-virtual         v5, Ljava/lang/String;->hashCode()I
+    14 move-result            v6
+    15 const/16               v8, 32
+    16 const/4                v10, 6
+    17 const/4                v11, -1
+    18 const/4                v12, 7
+    19 const/4                v13, 5
+    20 const/4                v14, 4
+    21 const/4                v15, 3
+    22 const/4                v9, 2
+    23 const/4                v7, 1
+    24 sparse-switch          v6, +0000a6eh
+    25 goto/16                +291h
+    26 const-string           v6, "GetMic"
+    27 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    28 move-result            v5
+    29 if-eqz                 v5, +289h
+    30 const/16               v5, 23
+    31 goto/16                +286h
+    32 const-string           v6, "getRecvCmd"
+    33 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    34 move-result            v5
+    35 if-eqz                 v5, +27dh
+    36 const/16               v5, 20
+    37 goto/16                +27ah
+    38 const-string           v6, "PrintfExpression"
+    39 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    40 move-result            v5
+    41 if-eqz                 v5, +271h
+    42 const/16               v5, 39
+    43 goto/16                +26eh
+    44 const-string           v6, "getSendCmdBuffer"
+    45 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    46 move-result            v5
+    47 if-eqz                 v5, +265h
+    48 const/16               v5, 19
+    49 goto/16                +262h
+    50 const-string           v6, "WER_SetMotor_CS"
+    51 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    52 move-result            v5
+    53 if-eqz                 v5, +259h
+    54 const/16               v5, 51
+    55 goto/16                +256h
+    56 const-string           v6, "Camera"
+    57 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    58 move-result            v5
+    59 if-eqz                 v5, +24dh
+    60 const/16               v5, 15
+    61 goto/16                +24ah
+    62 const-string           v6, "AIOpen"
+    63 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    64 move-result            v5
+    65 if-eqz                 v5, +241h
+    66 const/16               v5, 35
+    67 goto/16                +23eh
+    68 const-string           v6, "SetMotorEncoder"
+    69 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    70 move-result            v5
+    71 if-eqz                 v5, +235h
+    72 const/4                v5, 4
+    73 goto/16                +233h
+    74 const-string           v6, "GetMicrophone"
+    75 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    76 move-result            v5
+    77 if-eqz                 v5, +22ah
+    78 const/16               v5, 16
+    79 goto/16                +227h
+    80 const-string           v6, "GetTimerMS"
+    81 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    82 move-result            v5
+    83 if-eqz                 v5, +21eh
+    84 const/16               v5, 32
+    85 goto/16                +21bh
+    86 const-string           v6, "WER_SetMotor"
+    87 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    88 move-result            v5
+    89 if-eqz                 v5, +212h
+    90 const/16               v5, 47
+    91 goto/16                +20fh
+    92 const-string           v6, "WER_Around"
+    93 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    94 move-result            v5
+    95 if-eqz                 v5, +206h
+    96 const/16               v5, 46
+    97 goto/16                +203h
+    98 const-string           v6, "SetServo"
+    99 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   100 move-result            v5
+   101 if-eqz                 v5, +1fah
+   102 const/4                v5, 5
+   103 goto/16                +1f8h
+   104 const-string           v6, "SetMotor"
+   105 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   106 move-result            v5
+   107 if-eqz                 v5, +1efh
+   108 const/4                v5, 2
+   109 goto/16                +1edh
+   110 const-string           v6, "getRecvCmdBuffer"
+   111 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   112 move-result            v5
+   113 if-eqz                 v5, +1e4h
+   114 const/16               v5, 21
+   115 goto/16                +1e1h
+   116 const-string           v6, "GetEncoder"
+   117 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   118 move-result            v5
+   119 if-eqz                 v5, +1d8h
+   120 const/16               v5, 29
+   121 goto/16                +1d5h
+   122 const-string           v6, "SetMotorTime"
+   123 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   124 move-result            v5
+   125 if-eqz                 v5, +1cch
+   126 const/4                v5, 3
+   127 goto/16                +1cah
+   128 const-string           v6, "WER_Set_GrayscaleSensor"
+   129 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   130 move-result            v5
+   131 if-eqz                 v5, +1c1h
+   132 const/16               v5, 43
+   133 goto/16                +1beh
+   134 const-string           v6, "SetMotorAdvanced"
+   135 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   136 move-result            v5
+   137 if-eqz                 v5, +1b5h
+   138 const/4                v5, 1
+   139 goto/16                +1b3h
+   140 const-string           v6, "GetInstantEncoder"
+   141 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   142 move-result            v5
+   143 if-eqz                 v5, +1aah
+   144 const/16               v5, 30
+   145 goto/16                +1a7h
+   146 const-string           v6, "getHIDValue"
+   147 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   148 move-result            v5
+   149 if-eqz                 v5, +19eh
+   150 const/16               v5, 34
+   151 goto/16                +19bh
+   152 const-string           v6, "WER_SetMotor_T"
+   153 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   154 move-result            v5
+   155 if-eqz                 v5, +192h
+   156 const/16               v5, 48
+   157 goto/16                +18fh
+   158 const-string           v6, "WER_SetMotor_S"
+   159 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   160 move-result            v5
+   161 if-eqz                 v5, +186h
+   162 const/16               v5, 50
+   163 goto/16                +183h
+   164 const-string           v6, "WER_SetMotor_E"
+   165 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   166 move-result            v5
+   167 if-eqz                 v5, +17ah
+   168 const/16               v5, 49
+   169 goto/16                +177h
+   170 const-string           v6, "WER_AdvancedWay_CS"
+   171 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   172 move-result            v5
+   173 if-eqz                 v5, +16eh
+   174 const/16               v5, 55
+   175 goto/16                +16bh
+   176 const-string           v6, "GetSeconds"
+   177 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   178 move-result            v5
+   179 if-eqz                 v5, +162h
+   180 const/16               v5, 33
+   181 goto/16                +15fh
+   182 const-string           v6, "setSendCmd"
+   183 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   184 move-result            v5
+   185 if-eqz                 v5, +156h
+   186 const/16               v5, 17
+   187 goto/16                +153h
+   188 const-string           v6, "ResetMotionSensor"
+   189 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   190 move-result            v5
+   191 if-eqz                 v5, +14ah
+   192 const/16               v5, 26
+   193 goto/16                +147h
+   194 const-string           v6, "ResetTimer"
+   195 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   196 move-result            v5
+   197 if-eqz                 v5, +13eh
+   198 const/16               v5, 31
+   199 goto/16                +13bh
+   200 const-string           v6, "PlayUntil"
+   201 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   202 move-result            v5
+   203 if-eqz                 v5, +132h
+   204 const/16               v5, 9
+   205 goto/16                +12fh
+   206 const-string           v6, "SetEE"
+   207 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   208 move-result            v5
+   209 if-eqz                 v5, +126h
+   210 const/16               v5, 13
+   211 goto/16                +123h
+   212 const-string           v6, "SetDO"
+   213 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   214 move-result            v5
+   215 if-eqz                 v5, +11ah
+   216 const/4                v5, 7
+   217 goto/16                +118h
+   218 const-string           v6, "GetEE"
+   219 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   220 move-result            v5
+   221 if-eqz                 v5, +10fh
+   222 const/16               v5, 14
+   223 goto/16                +10ch
+   224 const-string           v6, "GetAI"
+   225 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   226 move-result            v5
+   227 if-eqz                 v5, +103h
+   228 const/16               v5, 24
+   229 goto/16                +100h
+   230 const-string           v6, "Clear"
+   231 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   232 move-result            v5
+   233 if-eqz                 v5, +0f7h
+   234 const/16               v5, 11
+   235 goto/16                +0f4h
+   236 const-string           v6, "WER_AdvancedWay_T"
+   237 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   238 move-result            v5
+   239 if-eqz                 v5, +0ebh
+   240 const/16               v5, 52
+   241 goto/16                +0e8h
+   242 const-string           v6, "WER_AdvancedWay_S"
+   243 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   244 move-result            v5
+   245 if-eqz                 v5, +0dfh
+   246 const/16               v5, 54
+   247 goto/16                +0dch
+   248 const-string           v6, "WER_AdvancedWay_E"
+   249 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   250 move-result            v5
+   251 if-eqz                 v5, +0d3h
+   252 const/16               v5, 53
+   253 goto/16                +0d0h
+   254 const-string           v6, "Wait"
+   255 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   256 move-result            v5
+   257 if-eqz                 v5, +0c7h
+   258 const/16               v5, 10
+   259 goto/16                +0c4h
+   260 const-string           v6, "Play"
+   261 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   262 move-result            v5
+   263 if-eqz                 v5, +0bbh
+   264 const/16               v5, 8
+   265 goto/16                +0b8h
+   266 const-string           v6, "Log"
+   267 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   268 move-result            v5
+   269 if-eqz                 v5, +0afh
+   270 const/16               v5, 22
+   271 goto/16                +0ach
+   272 const-string           v6, "WER_InitRobot"
+   273 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   274 move-result            v5
+   275 if-eqz                 v5, +0a3h
+   276 const/16               v5, 42
+   277 goto/16                +0a0h
+   278 const-string           v6, "SmartLed"
+   279 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   280 move-result            v5
+   281 if-eqz                 v5, +097h
+   282 const/4                v5, 6
+   283 goto/16                +095h
+   284 const-string           v6, "GetMotionSensor"
+   285 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   286 move-result            v5
+   287 if-eqz                 v5, +08ch
+   288 const/16               v5, 27
+   289 goto/16                +089h
+   290 const-string           v6, "getSendCmd"
+   291 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   292 move-result            v5
+   293 if-eqz                 v5, +080h
+   294 const/16               v5, 18
+   295 goto/16                +07dh
+   296 const-string           v6, "WER_InitRobot_5"
+   297 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   298 move-result            v5
+   299 if-eqz                 v5, +074h
+   300 const/16               v5, 41
+   301 goto/16                +071h
+   302 const-string           v6, "GetChannelGray"
+   303 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   304 move-result            v5
+   305 if-eqz                 v5, +068h
+   306 const/16               v5, 40
+   307 goto/16                +065h
+   308 const-string           v6, "GetQRCode"
+   309 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   310 move-result            v5
+   311 if-eqz                 v5, +05ch
+   312 const/16               v5, 37
+   313 goto                   +59h
+   314 const-string           v6, "GetBattery"
+   315 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   316 move-result            v5
+   317 if-eqz                 v5, +051h
+   318 const/16               v5, 25
+   319 goto                   +4eh
+   320 const-string           v6, "Random"
+   321 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   322 move-result            v5
+   323 if-eqz                 v5, +046h
+   324 const/16               v5, 38
+   325 goto                   +43h
+   326 const-string           v6, "SetMotorOverTurn"
+   327 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   328 move-result            v5
+   329 if-eqz                 v5, +03bh
+   330 const/4                v5, 0
+   331 goto                   +39h
+   332 const-string           v6, "Printf"
+   333 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   334 move-result            v5
+   335 if-eqz                 v5, +031h
+   336 const/16               v5, 12
+   337 goto                   +2eh
+   338 const-string           v6, "ResetEncoder"
+   339 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   340 move-result            v5
+   341 if-eqz                 v5, +026h
+   342 const/16               v5, 28
+   343 goto                   +23h
+   344 const-string           v6, "GetAICode"
+   345 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   346 move-result            v5
+   347 if-eqz                 v5, +01bh
+   348 const/16               v5, 36
+   349 goto                   +18h
+   350 const-string           v6, "WER_LineWay_T"
+   351 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   352 move-result            v5
+   353 if-eqz                 v5, +010h
+   354 const/16               v5, 44
+   355 goto                   +dh
+   356 const-string           v6, "WER_LineWay_C"
+   357 invoke-virtual         v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+   358 move-result            v5
+   359 if-eqz                 v5, +005h
+   360 const/16               v5, 45
+   361 goto                   +2h
+   362 const/4                v5, -1
+   363 const/16               v6, 1000
+   364 const/high16           v18, 1148846080
+   365 packed-switch          v5, +00008b7h
+   366 const-string           v1, "ProgramAndInterfaceC"
+   367 invoke-static          v1, Lcom/orhanobut/logger/Logger;->t(Ljava/lang/String;)Lcom/orhanobut/logger/Printer;
+   368 move-result-object     v1
+   369 new-instance           v5, Ljava/lang/StringBuilder;
+   370 invoke-direct          v5, Ljava/lang/StringBuilder;-><init>()V
+   371 const-string           v6, "not defined method: "
+   372 invoke-virtual         v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   373 aget-object            v3, v3, v4
+   374 invoke-virtual         v5, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   375 invoke-virtual         v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+   376 move-result-object     v3
+   377 new-array              v4, v4, [Ljava/lang/Object;
+   378 invoke-interface       v1, v3, v4, Lcom/orhanobut/logger/Printer;->e(Ljava/lang/String; [Ljava/lang/Object;)V
+   379 goto/16                +7b1h
+   380 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   381 aget-object            v4, v3, v7
+   382 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   383 move-result            v20
+   384 aget-object            v4, v3, v9
+   385 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   386 move-result            v21
+   387 aget-object            v4, v3, v15
+   388 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   389 move-result            v22
+   390 aget-object            v4, v3, v14
+   391 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   392 move-result            v23
+   393 aget-object            v3, v3, v13
+   394 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   395 move-result            v24
+   396 move-object/from16     v19, v1
+   397 invoke-virtual/range   v19 ... v24, Lcom/abilix/controller/api/Walkline;->WER_AdvancedWay_CS(I I I I I)V
+   398 goto/16                +78ah
+   399 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   400 aget-object            v4, v3, v7
+   401 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   402 move-result            v4
+   403 aget-object            v5, v3, v9
+   404 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   405 move-result            v5
+   406 aget-object            v6, v3, v15
+   407 invoke-static          v6, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   408 move-result            v6
+   409 aget-object            v3, v3, v14
+   410 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   411 move-result            v3
+   412 invoke-virtual         v1, v4, v5, v6, v3, Lcom/abilix/controller/api/Walkline;->WER_AdvancedWay_S(I I I I)V
+   413 goto/16                +76bh
+   414 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   415 aget-object            v4, v3, v7
+   416 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   417 move-result            v4
+   418 aget-object            v5, v3, v9
+   419 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   420 move-result            v5
+   421 aget-object            v3, v3, v15
+   422 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   423 move-result            v3
+   424 invoke-virtual         v1, v4, v5, v3, Lcom/abilix/controller/api/Walkline;->WER_AdvancedWay_E(I I I)V
+   425 goto/16                +752h
+   426 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   427 aget-object            v4, v3, v7
+   428 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   429 move-result            v4
+   430 aget-object            v3, v3, v9
+   431 invoke-static          v3, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+   432 move-result            v3
+   433 invoke-virtual         v1, v4, v3, Lcom/abilix/controller/api/Walkline;->WER_AdvancedWay_T(I F)V
+   434 goto/16                +73fh
+   435 iget-object            v5, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   436 aget-object            v1, v3, v7
+   437 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   438 move-result            v6
+   439 aget-object            v1, v3, v9
+   440 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   441 move-result            v7
+   442 aget-object            v1, v3, v15
+   443 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   444 move-result            v8
+   445 aget-object            v1, v3, v14
+   446 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   447 move-result            v9
+   448 aget-object            v1, v3, v13
+   449 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   450 move-result            v1
+   451 aget-object            v3, v3, v10
+   452 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   453 move-result            v11
+   454 move                   v10, v1
+   455 invoke-virtual/range   v5 ... v11, Lcom/abilix/controller/api/Walkline;->WER_SetMotor_CS(I I I I I I)V
+   456 goto/16                +713h
+   457 iget-object            v12, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   458 aget-object            v1, v3, v7
+   459 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   460 move-result            v1
+   461 aget-object            v4, v3, v9
+   462 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   463 move-result            v4
+   464 aget-object            v5, v3, v15
+   465 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   466 move-result            v15
+   467 aget-object            v5, v3, v14
+   468 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   469 move-result            v16
+   470 aget-object            v3, v3, v13
+   471 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   472 move-result            v17
+   473 move                   v13, v1
+   474 move                   v14, v4
+   475 invoke-virtual/range   v12 ... v17, Lcom/abilix/controller/api/Walkline;->WER_SetMotor_S(I I I I I)V
+   476 goto/16                +6ech
+   477 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   478 aget-object            v4, v3, v7
+   479 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   480 move-result            v4
+   481 aget-object            v5, v3, v9
+   482 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   483 move-result            v5
+   484 aget-object            v6, v3, v15
+   485 invoke-static          v6, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   486 move-result            v6
+   487 aget-object            v3, v3, v14
+   488 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   489 move-result            v3
+   490 invoke-virtual         v1, v4, v5, v6, v3, Lcom/abilix/controller/api/Walkline;->WER_SetMotor_E(I I I I)V
+   491 goto/16                +6cdh
+   492 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   493 aget-object            v4, v3, v7
+   494 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   495 move-result            v4
+   496 aget-object            v5, v3, v9
+   497 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   498 move-result            v5
+   499 aget-object            v3, v3, v15
+   500 invoke-static          v3, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+   501 move-result            v3
+   502 invoke-virtual         v1, v4, v5, v3, Lcom/abilix/controller/api/Walkline;->WER_SetMotor_T(I I F)V
+   503 goto/16                +6b4h
+   504 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   505 aget-object            v4, v3, v7
+   506 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   507 move-result            v4
+   508 aget-object            v5, v3, v9
+   509 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   510 move-result            v5
+   511 aget-object            v3, v3, v15
+   512 invoke-static          v3, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+   513 move-result            v3
+   514 invoke-virtual         v1, v4, v5, v3, Lcom/abilix/controller/api/Walkline;->WER_SetMotor_T(I I F)V
+   515 goto/16                +69bh
+   516 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   517 aget-object            v4, v3, v7
+   518 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   519 move-result            v4
+   520 aget-object            v5, v3, v9
+   521 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   522 move-result            v5
+   523 aget-object            v3, v3, v15
+   524 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   525 move-result            v3
+   526 invoke-virtual         v1, v4, v5, v3, Lcom/abilix/controller/api/Walkline;->WER_Around(I I I)V
+   527 goto/16                +682h
+   528 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   529 aget-object            v4, v3, v7
+   530 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   531 move-result            v4
+   532 aget-object            v5, v3, v9
+   533 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   534 move-result            v5
+   535 aget-object            v3, v3, v15
+   536 invoke-static          v3, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+   537 move-result            v3
+   538 invoke-virtual         v1, v4, v5, v3, Lcom/abilix/controller/api/Walkline;->WER_LineWay_C(I I F)V
+   539 goto/16                +669h
+   540 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   541 aget-object            v4, v3, v7
+   542 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   543 move-result            v4
+   544 aget-object            v3, v3, v9
+   545 invoke-static          v3, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+   546 move-result            v3
+   547 invoke-virtual         v1, v4, v3, Lcom/abilix/controller/api/Walkline;->WER_LineWay_T(I F)V
+   548 goto/16                +656h
+   549 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   550 invoke-virtual         v1, Lcom/abilix/controller/api/Walkline;->WER_Set_Floorsensor()V
+   551 goto/16                +64fh
+   552 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   553 aget-object            v4, v3, v7
+   554 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   555 move-result            v4
+   556 aget-object            v5, v3, v9
+   557 invoke-static          v5, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+   558 move-result            v5
+   559 float-to-double        v5, v5
+   560 aget-object            v7, v3, v15
+   561 invoke-static          v7, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   562 move-result            v7
+   563 aget-object            v8, v3, v14
+   564 invoke-static          v8, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+   565 move-result            v8
+   566 float-to-double        v8, v8
+   567 aget-object            v3, v3, v13
+   568 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   569 move-result            v10
+   570 move-object            v3, v1
+   571 invoke-virtual/range   v3 ... v10, Lcom/abilix/controller/api/Walkline;->WER_InitRobot(I D I D I)I
+   572 move-result            v1
+   573 if-ne                  v1, v11, +626h
+   574 new-instance           v1, Ljava/lang/StringBuilder;
+   575 invoke-direct          v1, Ljava/lang/StringBuilder;-><init>()V
+   576 const                  v3, 2131558590
+   577 invoke-direct          v0, v3, Lcom/abilix/utils/ProgramAndInterfaceC;->getString(I)Ljava/lang/String;
+   578 move-result-object     v3
+   579 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   580 const-string           v3, "
+"
+   581 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   582 invoke-virtual         v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+   583 move-result-object     v1
+   584 invoke-direct          v0, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->printText(Ljava/lang/String;)V
+   585 goto/16                +609h
+   586 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mWalkline Lcom/abilix/controller/api/Walkline;
+   587 aget-object            v4, v3, v7
+   588 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   589 move-result            v4
+   590 aget-object            v5, v3, v9
+   591 invoke-static          v5, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+   592 move-result            v5
+   593 float-to-double        v5, v5
+   594 aget-object            v7, v3, v15
+   595 invoke-static          v7, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   596 move-result            v16
+   597 aget-object            v7, v3, v14
+   598 invoke-static          v7, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+   599 move-result            v7
+   600 float-to-double        v7, v7
+   601 aget-object            v9, v3, v13
+   602 invoke-static          v9, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   603 move-result            v19
+   604 aget-object            v9, v3, v10
+   605 invoke-static          v9, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   606 move-result            v20
+   607 aget-object            v9, v3, v12
+   608 invoke-static          v9, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   609 move-result            v21
+   610 const/16               v9, 8
+   611 aget-object            v9, v3, v9
+   612 invoke-static          v9, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   613 move-result            v22
+   614 const/16               v9, 9
+   615 aget-object            v3, v3, v9
+   616 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   617 move-result            v23
+   618 move-object            v12, v1
+   619 move                   v13, v4
+   620 move-wide              v14, v5
+   621 move-wide/from16       v17, v7
+   622 invoke-virtual/range   v12 ... v23, Lcom/abilix/controller/api/Walkline;->WER_InitRobot_5(I D I D I I I I I)I
+   623 move-result            v1
+   624 if-ne                  v1, v11, +5c0h
+   625 new-instance           v1, Ljava/lang/StringBuilder;
+   626 invoke-direct          v1, Ljava/lang/StringBuilder;-><init>()V
+   627 const                  v3, 2131558590
+   628 invoke-direct          v0, v3, Lcom/abilix/utils/ProgramAndInterfaceC;->getString(I)Ljava/lang/String;
+   629 move-result-object     v3
+   630 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   631 const-string           v3, "
+"
+   632 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   633 invoke-virtual         v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+   634 move-result-object     v1
+   635 invoke-direct          v0, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->printText(Ljava/lang/String;)V
+   636 goto/16                +5a3h
+   637 aget-object            v1, v3, v7
+   638 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   639 move-result            v1
+   640 aget-object            v2, v3, v9
+   641 invoke-static          v2, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   642 move-result            v2
+   643 iget-object            v3, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   644 invoke-interface       v3, v1, v2, Lcom/abilix/controller/api/IControllerApi;->getGray(I I)I
+   645 move-result            v1
+   646 invoke-static          v1, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+   647 move-result-object     v2
+   648 goto/16                +58bh
+   649 sget-object            v1, Lcom/abilix/utils/FileUtil;->DIR_MEDIA_IMAGE_EXPRESSION Ljava/lang/String;
+   650 new-instance           v4, Ljava/lang/StringBuilder;
+   651 invoke-direct          v4, Ljava/lang/StringBuilder;-><init>()V
+   652 aget-object            v3, v3, v7
+   653 invoke-virtual         v4, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   654 const-string           v3, ".png"
+   655 invoke-virtual         v4, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   656 invoke-virtual         v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+   657 move-result-object     v3
+   658 invoke-static          v1, v3, Lcom/abilix/utils/FileUtil;->getFilePath(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+   659 move-result-object     v1
+   660 invoke-direct          v0, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->showImage(Ljava/lang/String;)V
+   661 goto/16                +56dh
+   662 aget-object            v1, v3, v7
+   663 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   664 move-result            v1
+   665 aget-object            v2, v3, v9
+   666 invoke-static          v2, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   667 move-result            v2
+   668 if-lt                  v2, v1, +014h
+   669 new-instance           v3, Ljava/util/Random;
+   670 invoke-direct          v3, Ljava/util/Random;-><init>()V
+   671 sub-int/2addr          v2, v1
+   672 add-int/2addr          v2, v7
+   673 invoke-virtual         v3, v2, Ljava/util/Random;->nextInt(I)I
+   674 move-result            v2
+   675 add-int/2addr          v2, v1
+   676 invoke-static          v2, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+   677 move-result-object     v2
+   678 goto/16                +54dh
+   679 invoke-static          v4, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+   680 move-result-object     v2
+   681 goto/16                +547h
+   682 const/16               v1, 16
+   683 aget-object            v2, v3, v7
+   684 invoke-static          v2, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+   685 move-result            v2
+   686 invoke-static          v2, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+   687 move-result-object     v2
+   688 invoke-direct          v0, v1, v2, Lcom/abilix/utils/ProgramAndInterfaceC;->startCamera(I Ljava/lang/Object;)Ljava/lang/String;
+   689 move-result-object     v2
+   690 goto/16                +535h
+   691 array-length           v1, v3
+   692 if-eq                  v1, v15, +02eh
+   693 new-instance           v1, Ljava/lang/StringBuilder;
+   694 invoke-direct          v1, Ljava/lang/StringBuilder;-><init>()V
+   695 const                  v3, 2131558533
+   696 invoke-direct          v0, v3, Lcom/abilix/utils/ProgramAndInterfaceC;->getString(I)Ljava/lang/String;
+   697 move-result-object     v3
+   698 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   699 const-string           v3, " GetAIString:"
+   700 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   701 const                  v3, 2131558506
+   702 invoke-direct          v0, v3, Lcom/abilix/utils/ProgramAndInterfaceC;->getString(I)Ljava/lang/String;
+   703 move-result-object     v3
+   704 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   705 const-string           v3, "
+"
+   706 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   707 invoke-virtual         v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+   708 move-result-object     v1
+   709 invoke-direct          v0, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->printText(Ljava/lang/String;)V
+   710 goto/16                +506h
+   711 aget-object            v1, v3, v7
+   712 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   713 move-result            v1
+   714 if-ne                  v1, v7, +015h
+   715 const-string           v1, "ProgramAndInterfaceC"
+   716 invoke-static          v1, Lcom/orhanobut/logger/Logger;->t(Ljava/lang/String;)Lcom/orhanobut/logger/Printer;
+   717 move-result-object     v1
+   718 const-string           v2, "GetAICode: 开始识别"
+   719 invoke-interface       v1, v2, Lcom/orhanobut/logger/Printer;->d(Ljava/lang/Object;)V
+   720 aget-object            v1, v3, v9
+   721 invoke-direct          v0, v8, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->startCamera(I Ljava/lang/Object;)Ljava/lang/String;
+   722 move-result-object     v2
+   723 goto/16                +4ebh
+   724 if-nez                 v1, +4e9h
+   725 const-string           v1, "ProgramAndInterfaceC"
+   726 invoke-static          v1, Lcom/orhanobut/logger/Logger;->t(Ljava/lang/String;)Lcom/orhanobut/logger/Printer;
+   727 move-result-object     v1
+   728 const-string           v2, "GetAICode: 停止识别"
+   729 invoke-interface       v1, v2, Lcom/orhanobut/logger/Printer;->d(Ljava/lang/Object;)V
+   730 aget-object            v1, v3, v9
+   731 invoke-direct          v0, v4, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->startCamera(I Ljava/lang/Object;)Ljava/lang/String;
+   732 move-result-object     v2
+   733 goto/16                +4d6h
+   734 aget-object            v1, v3, v7
+   735 const-string           v5, "my_ai"
+   736 invoke-virtual         v1, v5, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+   737 move-result            v1
+   738 if-nez                 v1, +4cch
+   739 aget-object            v1, v3, v9
+   740 invoke-static          v1, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+   741 move-result-object     v1
+   742 invoke-virtual         v1, Ljava/lang/Integer;->intValue()I
+   743 move-result            v1
+   744 packed-switch          v1, +0000619h
+   745 goto/16                +4bdh
+   746 aget-object            v1, v3, v7
+   747 invoke-direct          v0, v8, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->startCamera(I Ljava/lang/Object;)Ljava/lang/String;
+   748 move-result-object     v2
+   749 goto/16                +4b5h
+   750 aget-object            v1, v3, v7
+   751 invoke-direct          v0, v4, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->startCamera(I Ljava/lang/Object;)Ljava/lang/String;
+   752 move-result-object     v2
+   753 goto/16                +4adh
+   754 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   755 aget-object            v2, v3, v7
+   756 invoke-static          v2, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   757 move-result            v2
+   758 invoke-interface       v1, v2, Lcom/abilix/controller/api/IControllerApi;->getHIDValue(I)I
+   759 move-result            v1
+   760 invoke-static          v1, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+   761 move-result-object     v2
+   762 goto/16                +49bh
+   763 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   764 aget-object            v2, v3, v7
+   765 invoke-static          v2, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   766 move-result            v2
+   767 invoke-interface       v1, v2, Lcom/abilix/controller/api/IControllerApi;->getSysTimer(I)J
+   768 move-result-wide       v1
+   769 sget-object            v3, Ljava/util/Locale;->US Ljava/util/Locale;
+   770 const-string           v5, "%.03f"
+   771 new-array              v6, v7, [Ljava/lang/Object;
+   772 long-to-float          v1, v1
+   773 const/high16           v2, 1065353216
+   774 mul-float              v1, v1, v2
+   775 div-float              v1, v1, v18
+   776 invoke-static          v1, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+   777 move-result-object     v1
+   778 aput-object            v1, v6, v4
+   779 invoke-static          v3, v5, v6, Ljava/lang/String;->format(Ljava/util/Locale; Ljava/lang/String; [Ljava/lang/Object;)Ljava/lang/String;
+   780 move-result-object     v2
+   781 goto/16                +476h
+   782 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   783 aget-object            v2, v3, v7
+   784 invoke-static          v2, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   785 move-result            v2
+   786 invoke-interface       v1, v2, Lcom/abilix/controller/api/IControllerApi;->getSysTimer(I)J
+   787 move-result-wide       v1
+   788 invoke-static          v1, v2, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+   789 move-result-object     v2
+   790 goto/16                +464h
+   791 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   792 aget-object            v3, v3, v7
+   793 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   794 move-result            v3
+   795 invoke-interface       v1, v3, Lcom/abilix/controller/api/IControllerApi;->resetSysTimer(I)V
+   796 goto/16                +457h
+   797 aget-object            v1, v3, v7
+   798 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   799 move-result            v1
+   800 iget-object            v2, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   801 invoke-interface       v2, v1, Lcom/abilix/controller/api/IControllerApi;->getInstantEncoder(I)I
+   802 move-result            v1
+   803 invoke-static          v1, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+   804 move-result-object     v2
+   805 goto/16                +445h
+   806 aget-object            v1, v3, v7
+   807 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   808 move-result            v1
+   809 iget-object            v2, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   810 invoke-interface       v2, v1, Lcom/abilix/controller/api/IControllerApi;->getEncoder(I)I
+   811 move-result            v1
+   812 invoke-static          v1, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+   813 move-result-object     v2
+   814 goto/16                +433h
+   815 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   816 aget-object            v3, v3, v7
+   817 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   818 move-result            v3
+   819 invoke-interface       v1, v3, Lcom/abilix/controller/api/IControllerApi;->resetEncoder(I)V
+   820 goto/16                +426h
+   821 aget-object            v1, v3, v7
+   822 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   823 move-result            v1
+   824 array-length           v2, v3
+   825 if-le                  v2, v9, +00fh
+   826 aget-object            v1, v3, v7
+   827 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   828 move-result            v1
+   829 aget-object            v2, v3, v9
+   830 invoke-static          v2, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   831 move-result            v2
+   832 goto                   +3h
+   833 move                   v2, v1
+   834 const/4                v1, 0
+   835 sget-object            v3, Ljava/util/Locale;->US Ljava/util/Locale;
+   836 const-string           v5, "%.03f"
+   837 new-array              v6, v7, [Ljava/lang/Object;
+   838 iget-object            v7, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   839 invoke-interface       v7, v1, v2, Lcom/abilix/controller/api/IControllerApi;->getGyro(I I)F
+   840 move-result            v1
+   841 invoke-static          v1, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+   842 move-result-object     v1
+   843 aput-object            v1, v6, v4
+   844 invoke-static          v3, v5, v6, Ljava/lang/String;->format(Ljava/util/Locale; Ljava/lang/String; [Ljava/lang/Object;)Ljava/lang/String;
+   845 move-result-object     v2
+   846 goto/16                +3f6h
+   847 new-instance           v1, Ljava/lang/StringBuilder;
+   848 invoke-direct          v1, Ljava/lang/StringBuilder;-><init>()V
+   849 const                  v3, 2131558452
+   850 invoke-direct          v0, v3, Lcom/abilix/utils/ProgramAndInterfaceC;->getString(I)Ljava/lang/String;
+   851 move-result-object     v3
+   852 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   853 const-string           v3, "
+"
+   854 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   855 invoke-virtual         v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+   856 move-result-object     v1
+   857 invoke-direct          v0, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->printText(Ljava/lang/String;)V
+   858 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   859 invoke-interface       v1, Lcom/abilix/controller/api/IControllerApi;->resetGyro()Z
+   860 move-result            v1
+   861 if-eqz                 v1, +01fh
+   862 new-instance           v1, Ljava/lang/StringBuilder;
+   863 invoke-direct          v1, Ljava/lang/StringBuilder;-><init>()V
+   864 const                  v3, 2131558454
+   865 invoke-direct          v0, v3, Lcom/abilix/utils/ProgramAndInterfaceC;->getString(I)Ljava/lang/String;
+   866 move-result-object     v3
+   867 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   868 const-string           v3, "
+"
+   869 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   870 invoke-virtual         v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+   871 move-result-object     v1
+   872 invoke-direct          v0, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->printText(Ljava/lang/String;)V
+   873 goto/16                +3b6h
+   874 new-instance           v1, Ljava/lang/StringBuilder;
+   875 invoke-direct          v1, Ljava/lang/StringBuilder;-><init>()V
+   876 const                  v3, 2131558453
+   877 invoke-direct          v0, v3, Lcom/abilix/utils/ProgramAndInterfaceC;->getString(I)Ljava/lang/String;
+   878 move-result-object     v3
+   879 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   880 const-string           v3, "
+"
+   881 invoke-virtual         v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   882 invoke-virtual         v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+   883 move-result-object     v1
+   884 invoke-direct          v0, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->printText(Ljava/lang/String;)V
+   885 goto/16                +399h
+   886 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   887 invoke-interface       v1, Lcom/abilix/controller/api/IControllerApi;->getBattery()I
+   888 move-result            v1
+   889 invoke-static          v1, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+   890 move-result-object     v2
+   891 goto/16                +38dh
+   892 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   893 aget-object            v2, v3, v7
+   894 invoke-static          v2, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   895 move-result            v2
+   896 aget-object            v3, v3, v9
+   897 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   898 move-result            v3
+   899 invoke-interface       v1, v2, v3, Lcom/abilix/controller/api/IControllerApi;->getAI(I I)I
+   900 move-result            v1
+   901 invoke-static          v1, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+   902 move-result-object     v2
+   903 goto/16                +375h
+   904 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   905 invoke-interface       v1, Lcom/abilix/controller/api/IControllerApi;->getMicDbValue()I
+   906 move-result            v1
+   907 invoke-static          v1, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+   908 move-result-object     v2
+   909 goto/16                +369h
+   910 const-string           v3, "LOG==>"
+   911 invoke-virtual         v1, v14, Ljava/lang/String;->substring(I)Ljava/lang/String;
+   912 move-result-object     v1
+   913 invoke-static          v3, v1, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
+   914 goto/16                +35eh
+   915 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   916 aget-object            v5, v3, v7
+   917 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   918 move-result            v5
+   919 aget-object            v6, v3, v9
+   920 invoke-static          v6, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   921 move-result            v6
+   922 aget-object            v3, v3, v15
+   923 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   924 move-result            v3
+   925 invoke-interface       v1, v5, v6, v3, Lcom/abilix/controller/api/IControllerApi;->getRecvCmdBuffer(I I I)[B
+   926 move-result-object     v1
+   927 if-eqz                 v1, +344h
+   928 array-length           v2, v1
+   929 invoke-static          v1, v4, v2, Lcom/abilix/utils/ByteUtil;->bytesToHexStr([B I I)Ljava/lang/String;
+   930 move-result-object     v2
+   931 goto/16                +33dh
+   932 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   933 aget-object            v2, v3, v7
+   934 invoke-static          v2, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   935 move-result            v2
+   936 aget-object            v3, v3, v9
+   937 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   938 move-result            v3
+   939 invoke-interface       v1, v2, v3, Lcom/abilix/controller/api/IControllerApi;->getRecvCmd(I I)B
+   940 move-result            v1
+   941 invoke-static          v1, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+   942 move-result-object     v2
+   943 goto/16                +325h
+   944 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   945 aget-object            v5, v3, v7
+   946 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   947 move-result            v5
+   948 aget-object            v6, v3, v9
+   949 invoke-static          v6, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   950 move-result            v6
+   951 aget-object            v3, v3, v15
+   952 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   953 move-result            v3
+   954 invoke-interface       v1, v5, v6, v3, Lcom/abilix/controller/api/IControllerApi;->getSendCmdBuffer(I I I)[B
+   955 move-result-object     v1
+   956 if-eqz                 v1, +30bh
+   957 array-length           v2, v1
+   958 invoke-static          v1, v4, v2, Lcom/abilix/utils/ByteUtil;->bytesToHexStr([B I I)Ljava/lang/String;
+   959 move-result-object     v2
+   960 goto/16                +304h
+   961 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   962 aget-object            v2, v3, v7
+   963 invoke-static          v2, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   964 move-result            v2
+   965 aget-object            v3, v3, v9
+   966 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   967 move-result            v3
+   968 invoke-interface       v1, v2, v3, Lcom/abilix/controller/api/IControllerApi;->getSendCmd(I I)B
+   969 move-result            v1
+   970 invoke-static          v1, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+   971 move-result-object     v2
+   972 goto/16                +2ech
+   973 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+   974 aget-object            v4, v3, v7
+   975 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   976 move-result            v4
+   977 aget-object            v5, v3, v9
+   978 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   979 move-result            v5
+   980 aget-object            v3, v3, v15
+   981 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   982 move-result            v3
+   983 int-to-byte            v3, v3
+   984 invoke-interface       v1, v4, v5, v3, Lcom/abilix/controller/api/IControllerApi;->setSendCmd(I I B)V
+   985 goto/16                +2d2h
+   986 aget-object            v1, v3, v7
+   987 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   988 move-result            v1
+   989 aget-object            v3, v3, v9
+   990 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+   991 move-result            v3
+   992 sget-object            v5, Lcom/abilix/utils/FileUtil;->DIR_AUDIO Ljava/lang/String;
+   993 new-instance           v8, Ljava/lang/StringBuilder;
+   994 invoke-direct          v8, Ljava/lang/StringBuilder;-><init>()V
+   995 invoke-virtual         v8, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+   996 const-string           v1, ".3gp"
+   997 invoke-virtual         v8, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   998 invoke-virtual         v8, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+   999 move-result-object     v1
+  1000 invoke-static          v5, v1, Lcom/abilix/utils/FileUtil;->getFilePath(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+  1001 move-result-object     v1
+  1002 const                  v5, 2131558535
+  1003 invoke-direct          v0, v5, Lcom/abilix/utils/ProgramAndInterfaceC;->getString(I)Ljava/lang/String;
+  1004 move-result-object     v5
+  1005 new-instance           v8, Ljava/lang/StringBuilder;
+  1006 invoke-direct          v8, Ljava/lang/StringBuilder;-><init>()V
+  1007 invoke-virtual         v8, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  1008 const-string           v5, "  
+"
+  1009 invoke-virtual         v8, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  1010 invoke-virtual         v8, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+  1011 move-result-object     v5
+  1012 invoke-direct          v0, v5, Lcom/abilix/utils/ProgramAndInterfaceC;->printText(Ljava/lang/String;)V
+  1013 iput-boolean           v7, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->isRecording Z
+  1014 invoke-static          Lcom/abilix/utils/RecorderUtil;->getInstance()Lcom/abilix/utils/RecorderUtil;
+  1015 move-result-object     v5
+  1016 new-instance           v8, Lcom/abilix/utils/ProgramAndInterfaceC$1;
+  1017 invoke-direct          v8, v0, Lcom/abilix/utils/ProgramAndInterfaceC$1;-><init>(Lcom/abilix/utils/ProgramAndInterfaceC;)V
+  1018 invoke-virtual         v5, v1, v3, v8, v4, Lcom/abilix/utils/RecorderUtil;->startRecord(Ljava/lang/String; I Lcom/abilix/utils/RecorderUtil$OnCompletionListener; Z)V
+  1019 invoke-static          Ljava/lang/System;->currentTimeMillis()J
+  1020 move-result-wide       v4
+  1021 iget-boolean           v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->isRecording Z
+  1022 if-eqz                 v1, +27eh
+  1023 invoke-static          Ljava/lang/System;->currentTimeMillis()J
+  1024 move-result-wide       v8
+  1025 sub-long/2addr         v8, v4
+  1026 add-int/lit8           v1, v3, 1
+  1027 mul-int/lit16          v1, v1, 1000
+  1028 int-to-long            v10, v1
+  1029 cmp-long               v1, v8, v10
+  1030 if-gez                 v1, +270h
+  1031 invoke-direct          v0, v6, Lcom/abilix/utils/ProgramAndInterfaceC;->sleep(I)V
+  1032 goto                   -15h
+  1033 aget-object            v1, v3, v7
+  1034 const/16               v2, 48
+  1035 invoke-direct          v0, v2, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->startCamera(I Ljava/lang/Object;)Ljava/lang/String;
+  1036 move-result-object     v2
+  1037 goto/16                +262h
+  1038 aget-object            v1, v3, v7
+  1039 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1040 move-result            v1
+  1041 iget-object            v2, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1042 invoke-interface       v2, v1, Lcom/abilix/controller/api/IControllerApi;->getData(I)I
+  1043 move-result            v1
+  1044 invoke-static          v1, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+  1045 move-result-object     v2
+  1046 goto/16                +250h
+  1047 aget-object            v1, v3, v7
+  1048 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1049 move-result            v1
+  1050 aget-object            v3, v3, v9
+  1051 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1052 move-result            v3
+  1053 iget-object            v4, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1054 invoke-interface       v4, v1, v3, Lcom/abilix/controller/api/IControllerApi;->setData(I I)V
+  1055 goto/16                +23dh
+  1056 invoke-virtual         v1, v12, Ljava/lang/String;->substring(I)Ljava/lang/String;
+  1057 move-result-object     v1
+  1058 invoke-direct          v0, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->printText(Ljava/lang/String;)V
+  1059 goto/16                +234h
+  1060 invoke-direct/range    v25, Lcom/abilix/utils/ProgramAndInterfaceC;->clearScreen()V
+  1061 goto/16                +22fh
+  1062 aget-object            v1, v3, v7
+  1063 invoke-static          v1, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+  1064 move-result            v1
+  1065 mul-float              v1, v1, v18
+  1066 float-to-int           v1, v1
+  1067 invoke-direct          v0, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->sleep(I)V
+  1068 goto/16                +221h
+  1069 aget-object            v1, v3, v7
+  1070 const-string           v4, "luyin_p"
+  1071 invoke-virtual         v1, v4, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+  1072 move-result            v1
+  1073 if-eqz                 v1, +020h
+  1074 sget-object            v1, Lcom/abilix/utils/FileUtil;->DIR_AUDIO Ljava/lang/String;
+  1075 new-instance           v4, Ljava/lang/StringBuilder;
+  1076 invoke-direct          v4, Ljava/lang/StringBuilder;-><init>()V
+  1077 aget-object            v3, v3, v7
+  1078 invoke-virtual         v3, v12, Ljava/lang/String;->substring(I)Ljava/lang/String;
+  1079 move-result-object     v3
+  1080 invoke-virtual         v4, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  1081 const-string           v3, ".3gp"
+  1082 invoke-virtual         v4, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  1083 invoke-virtual         v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+  1084 move-result-object     v3
+  1085 invoke-static          v1, v3, Lcom/abilix/utils/FileUtil;->getFilePath(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+  1086 move-result-object     v1
+  1087 goto                   +9h
+  1088 sget-object            v1, Lcom/abilix/utils/FileUtil;->DIR_MUSIC Ljava/lang/String;
+  1089 aget-object            v3, v3, v7
+  1090 invoke-static          v1, v3, Lcom/abilix/utils/FileUtil;->getFilePath(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+  1091 move-result-object     v1
+  1092 invoke-static          Lcom/abilix/utils/PlayerUtil;->getInstance()Lcom/abilix/utils/PlayerUtil;
+  1093 move-result-object     v3
+  1094 invoke-virtual         v3, v1, Lcom/abilix/utils/PlayerUtil;->play(Ljava/lang/String;)V
+  1095 invoke-virtual         v3, Lcom/abilix/utils/PlayerUtil;->isPlaying()Z
+  1096 move-result            v1
+  1097 if-eqz                 v1, +1e4h
+  1098 invoke-direct          v0, v6, Lcom/abilix/utils/ProgramAndInterfaceC;->sleep(I)V
+  1099 goto                   -9h
+  1100 aget-object            v1, v3, v7
+  1101 const-string           v4, "luyin_p"
+  1102 invoke-virtual         v1, v4, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+  1103 move-result            v1
+  1104 if-eqz                 v1, +020h
+  1105 sget-object            v1, Lcom/abilix/utils/FileUtil;->DIR_AUDIO Ljava/lang/String;
+  1106 new-instance           v4, Ljava/lang/StringBuilder;
+  1107 invoke-direct          v4, Ljava/lang/StringBuilder;-><init>()V
+  1108 aget-object            v3, v3, v7
+  1109 invoke-virtual         v3, v12, Ljava/lang/String;->substring(I)Ljava/lang/String;
+  1110 move-result-object     v3
+  1111 invoke-virtual         v4, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  1112 const-string           v3, ".3gp"
+  1113 invoke-virtual         v4, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  1114 invoke-virtual         v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+  1115 move-result-object     v3
+  1116 invoke-static          v1, v3, Lcom/abilix/utils/FileUtil;->getFilePath(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+  1117 move-result-object     v1
+  1118 goto                   +9h
+  1119 sget-object            v1, Lcom/abilix/utils/FileUtil;->DIR_MUSIC Ljava/lang/String;
+  1120 aget-object            v3, v3, v7
+  1121 invoke-static          v1, v3, Lcom/abilix/utils/FileUtil;->getFilePath(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+  1122 move-result-object     v1
+  1123 invoke-static          Lcom/abilix/utils/PlayerUtil;->getInstance()Lcom/abilix/utils/PlayerUtil;
+  1124 move-result-object     v3
+  1125 invoke-virtual         v3, v1, Lcom/abilix/utils/PlayerUtil;->play(Ljava/lang/String;)V
+  1126 goto/16                +1a7h
+  1127 aget-object            v1, v3, v7
+  1128 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1129 move-result            v1
+  1130 iget-object            v4, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1131 aget-object            v3, v3, v9
+  1132 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1133 move-result            v3
+  1134 invoke-interface       v4, v1, v3, Lcom/abilix/controller/api/IControllerApi;->setDO(I I)V
+  1135 goto/16                +194h
+  1136 aget-object            v1, v3, v7
+  1137 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1138 move-result            v17
+  1139 aget-object            v1, v3, v9
+  1140 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1141 move-result            v18
+  1142 aget-object            v1, v3, v15
+  1143 invoke-static          v1, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+  1144 move-result            v19
+  1145 aget-object            v1, v3, v14
+  1146 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1147 move-result            v20
+  1148 aget-object            v1, v3, v13
+  1149 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1150 move-result            v21
+  1151 aget-object            v1, v3, v10
+  1152 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1153 move-result            v22
+  1154 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1155 move-object/from16     v16, v1
+  1156 invoke-interface/range v16 ... v22, Lcom/abilix/controller/api/IControllerApi;->setSmartLed(I I F I I I)V
+  1157 goto/16                +167h
+  1158 aget-object            v1, v3, v7
+  1159 invoke-static          v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1160 move-result            v1
+  1161 aget-object            v4, v3, v9
+  1162 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1163 move-result            v4
+  1164 aget-object            v3, v3, v15
+  1165 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1166 move-result            v3
+  1167 iget-object            v5, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1168 invoke-interface       v5, v1, v4, v3, Lcom/abilix/controller/api/IControllerApi;->setServo(I I I)V
+  1169 goto/16                +14eh
+  1170 const/16               v1, 101
+  1171 new-array              v1, v1, [I
+  1172 fill-array-data        v1, +00002a9h
+  1173 const-string           v5, "A"
+  1174 const-string           v6, "B"
+  1175 const-string           v8, "C"
+  1176 const-string           v10, "D"
+  1177 filled-new-array       v5, v6, v8, v10, [Ljava/lang/String;
+  1178 move-result-object     v5
+  1179 aget-object            v6, v3, v7
+  1180 invoke-static          v6, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1181 move-result            v6
+  1182 invoke-static          v6, v7, v14, Landroid/support/v4/math/MathUtils;->clamp(I I I)I
+  1183 move-result            v6
+  1184 aget-object            v8, v3, v9
+  1185 invoke-static          v8, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1186 move-result            v8
+  1187 invoke-static          v8, Ljava/lang/Math;->abs(I)I
+  1188 move-result            v8
+  1189 aget-object            v3, v3, v15
+  1190 new-array              v10, v14, [I
+  1191 invoke-static          v3, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+  1192 move-result            v12
+  1193 if-eqz                 v12, +006h
+  1194 add-int/lit8           v3, v6, -1
+  1195 aget-object            v3, v5, v3
+  1196 invoke-virtual         v3, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+  1197 move-result-object     v3
+  1198 const/4                v12, 0
+  1199 const/16               v13, 255
+  1200 if-ge                  v12, v14, +01bh
+  1201 aget-object            v11, v5, v12
+  1202 invoke-virtual         v3, v11, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+  1203 move-result            v11
+  1204 if-eqz                 v11, +00dh
+  1205 iget-object            v11, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1206 add-int/lit8           v13, v12, 1
+  1207 invoke-interface       v11, v13, Lcom/abilix/controller/api/IControllerApi;->getMotorSpeed(I)I
+  1208 move-result            v11
+  1209 aput                   v11, v10, v12
+  1210 goto                   +3h
+  1211 aput                   v13, v10, v12
+  1212 add-int/lit8           v12, v12, 1
+  1213 const/4                v11, -1
+  1214 goto                   -1ch
+  1215 add-int/lit8           v3, v6, -1
+  1216 aget                   v3, v10, v3
+  1217 invoke-static          v3, Ljava/lang/Math;->abs(I)I
+  1218 move-result            v3
+  1219 aget                   v1, v1, v3
+  1220 invoke-direct          v0, v9, Lcom/abilix/utils/ProgramAndInterfaceC;->sleep(I)V
+  1221 iget-object            v3, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1222 invoke-interface       v3, v6, Lcom/abilix/controller/api/IControllerApi;->getEncoder(I)I
+  1223 move-result            v3
+  1224 invoke-static          v3, Ljava/lang/Math;->abs(I)I
+  1225 move-result            v3
+  1226 add-int/2addr          v3, v1
+  1227 if-lt                  v3, v8, -00eh
+  1228 const/4                v1, 0
+  1229 if-ge                  v1, v14, +030h
+  1230 aget                   v3, v10, v1
+  1231 if-eq                  v3, v13, +027h
+  1232 aget                   v3, v10, v1
+  1233 if-gez                 v3, +004h
+  1234 const/4                v3, -1
+  1235 goto                   +2h
+  1236 const/4                v3, 1
+  1237 aget                   v5, v10, v1
+  1238 invoke-static          v5, Ljava/lang/Math;->abs(I)I
+  1239 move-result            v9
+  1240 const/16               v5, 10
+  1241 if-le                  v9, v5, +008h
+  1242 add-int/lit8           v9, v9, -8
+  1243 if-ge                  v9, v5, +004h
+  1244 const/16               v9, 10
+  1245 mul-int                v9, v9, v3
+  1246 aput                   v9, v10, v1
+  1247 iget-object            v3, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1248 add-int/lit8           v9, v1, 1
+  1249 aget                   v11, v10, v1
+  1250 invoke-interface       v3, v9, v11, Lcom/abilix/controller/api/IControllerApi;->setMotor(I I)V
+  1251 goto                   +3h
+  1252 const/16               v5, 10
+  1253 add-int/lit8           v1, v1, 1
+  1254 goto                   -2fh
+  1255 const/16               v5, 10
+  1256 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1257 invoke-interface       v1, v6, Lcom/abilix/controller/api/IControllerApi;->getEncoder(I)I
+  1258 move-result            v1
+  1259 invoke-static          v1, Ljava/lang/Math;->abs(I)I
+  1260 move-result            v1
+  1261 add-int/lit8           v1, v1, 24
+  1262 if-lt                  v1, v8, -03fh
+  1263 const/4                v1, 0
+  1264 if-ge                  v1, v14, +010h
+  1265 aget                   v3, v10, v1
+  1266 if-eq                  v3, v13, +009h
+  1267 iget-object            v3, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1268 add-int/lit8           v5, v1, 1
+  1269 invoke-interface       v3, v5, v4, Lcom/abilix/controller/api/IControllerApi;->setMotor(I I)V
+  1270 add-int/lit8           v1, v1, 1
+  1271 goto                   -fh
+  1272 const/4                v1, 0
+  1273 const/16               v3, 15
+  1274 invoke-direct          v0, v3, Lcom/abilix/utils/ProgramAndInterfaceC;->sleep(I)V
+  1275 add-int/2addr          v1, v7
+  1276 iget-object            v3, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1277 invoke-interface       v3, v6, Lcom/abilix/controller/api/IControllerApi;->getInstantEncoder(I)I
+  1278 move-result            v3
+  1279 if-eqz                 v3, +003h
+  1280 const/4                v1, 0
+  1281 if-lt                  v1, v15, -00fh
+  1282 goto                   +77h
+  1283 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1284 aget-object            v5, v3, v7
+  1285 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1286 move-result            v5
+  1287 aget-object            v6, v3, v9
+  1288 invoke-static          v6, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1289 move-result            v6
+  1290 invoke-interface       v1, v5, v6, Lcom/abilix/controller/api/IControllerApi;->setMotor(I I)V
+  1291 aget-object            v1, v3, v15
+  1292 invoke-static          v1, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+  1293 move-result            v1
+  1294 mul-float              v1, v1, v18
+  1295 float-to-int           v1, v1
+  1296 invoke-direct          v0, v1, Lcom/abilix/utils/ProgramAndInterfaceC;->sleep(I)V
+  1297 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1298 aget-object            v3, v3, v7
+  1299 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1300 move-result            v3
+  1301 invoke-interface       v1, v3, v4, Lcom/abilix/controller/api/IControllerApi;->setMotor(I I)V
+  1302 goto                   +4eh
+  1303 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1304 aget-object            v4, v3, v7
+  1305 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1306 move-result            v4
+  1307 aget-object            v3, v3, v9
+  1308 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1309 move-result            v3
+  1310 invoke-interface       v1, v4, v3, Lcom/abilix/controller/api/IControllerApi;->setMotor(I I)V
+  1311 goto                   +3ch
+  1312 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1313 aget-object            v4, v3, v7
+  1314 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1315 move-result            v4
+  1316 aget-object            v5, v3, v9
+  1317 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1318 move-result            v5
+  1319 aget-object            v6, v3, v15
+  1320 invoke-static          v6, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1321 move-result            v6
+  1322 aget-object            v3, v3, v14
+  1323 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1324 move-result            v3
+  1325 invoke-interface       v1, v4, v5, v6, v3, Lcom/abilix/controller/api/IControllerApi;->setMotorAdvanced(I I I I)V
+  1326 goto                   +1eh
+  1327 iget-object            v1, v0, Lcom/abilix/utils/ProgramAndInterfaceC;->mControllerApi Lcom/abilix/controller/api/IControllerApi;
+  1328 aget-object            v4, v3, v7
+  1329 invoke-static          v4, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1330 move-result            v4
+  1331 aget-object            v5, v3, v9
+  1332 invoke-static          v5, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1333 move-result            v5
+  1334 aget-object            v6, v3, v15
+  1335 invoke-static          v6, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1336 move-result            v6
+  1337 aget-object            v3, v3, v14
+  1338 invoke-static          v3, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+  1339 move-result            v3
+  1340 invoke-interface       v1, v4, v5, v6, v3, Lcom/abilix/controller/api/IControllerApi;->setMotorOverTurn(I I I I)V
+  1341 return-object          v2
+  1342 return-object          v2
+  1343 nop                    
+  1344 sparse-switch-payload  -7a29cbfc -7a29cbeb -79cbd315 -796e7313 -71047087 -70de9a1c -6e882f1d -5f1f3a09 -5dff759c -5191ab10 -51218c2b -4c3017a4 -2a5fd69a -1ff4c85e -1eb81c21 12b24 25ff54 290595 1768e18 1768e26 1768e27 3e2c62d 41829de 4182a56 4c1444d 4c14462 6fa046a 1245cf56 1c4c11df 274135d0 2a0c6269 2d5b34fd 358df434 358df442 358df443 3dee8924 40bcd4d1 44bf2695 465ef3c9 4d7d42c0 54d09d06 5512f31e 573a5d53 578a57f7 585d6b48 5b292bee 664e6b95 6f968100 723eac49 73154e92 77deaf45 7c309261 7c3fb3bc 7cfabaf1 7e56d93e 7eed4331
+  1345 packed-switch-payload  0 1 2 3 4 5 6 7 8 9 a b c d e f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37
+  1346 packed-switch-payload  0 1
+  1347 fill-array-data-payload b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00Z\x00\x00\x00\\\x00\x00\x00^\x00\x00\x00`\x00\x00\x00b\x00\x00\x00d\x00\x00\x00f\x00\x00\x00h\x00\x00\x00j\x00\x00\x00l\x00\x00\x00n\x00\x00\x00p\x00\x00\x00r\x00\x00\x00t\x00\x00\x00v\x00\x00\x00x\x00\x00\x00z\x00\x00\x00|\x00\x00\x00~\x00\x00\x00\x80\x00\x00\x00\x82\x00\x00\x00\x84\x00\x00\x00\x86\x00\x00\x00\x88\x00\x00\x00\x8a\x00\x00\x00\x8c\x00\x00\x00\x90\x00\x00\x00\x94\x00\x00\x00\x98\x00\x00\x00\x9c\x00\x00\x00\xa0\x00\x00\x00\xa4\x00\x00\x00\xa8\x00\x00\x00\xac\x00\x00\x00\xb0\x00\x00\x00\xb4\x00\x00\x00\xbe\x00\x00\x00\xc8\x00\x00\x00\xd2\x00\x00\x00\xdc\x00\x00\x00\xe6\x00\x00\x00\xee\x00\x00\x00\xf6\x00\x00\x00\xfe\x00\x00\x00\x06\x01\x00\x00\x0e\x01\x00\x00\x14\x01\x00\x00\x1a\x01\x00\x00 \x01\x00\x00&\x01\x00\x00,\x01\x00\x002\x01\x00\x008\x01\x00\x00>\x01\x00\x00D\x01\x00\x00J\x01\x00\x00P\x01\x00\x00V\x01\x00\x00\\\x01\x00\x00b\x01\x00\x00h\x01\x00\x00j\x01\x00\x00l\x01\x00\x00n\x01\x00\x00p\x01\x00\x00r\x01\x00\x00x\x01\x00\x00~\x01\x00\x00\x84\x01\x00\x00\x8a\x01\x00\x00\x90\x01\x00\x00\x94\x01\x00\x00\x98\x01\x00\x00\x9c\x01\x00\x00\xa0\x01\x00\x00\xa4\x01\x00\x00\xac\x01\x00\x00\xb4\x01\x00\x00\xbc\x01\x00\x00\xc4\x01\x00\x00\xcc\x01\x00\x00\xd0\x01\x00\x00\xd4\x01\x00\x00\xd8\x01\x00\x00\xdc\x01\x00\x00\xe0\x01\x00\x00\xe4\x01\x00\x00\xe8\x01\x00\x00\xec\x01\x00\x00\xf0\x01\x00\x00\xf4\x01\x00\x00' | \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x5a\x00\x00\x00\x5c\x00\x00\x00\x5e\x00\x00\x00\x60\x00\x00\x00\x62\x00\x00\x00\x64\x00\x00\x00\x66\x00\x00\x00\x68\x00\x00\x00\x6a\x00\x00\x00\x6c\x00\x00\x00\x6e\x00\x00\x00\x70\x00\x00\x00\x72\x00\x00\x00\x74\x00\x00\x00\x76\x00\x00\x00\x78\x00\x00\x00\x7a\x00\x00\x00\x7c\x00\x00\x00\x7e\x00\x00\x00\x80\x00\x00\x00\x82\x00\x00\x00\x84\x00\x00\x00\x86\x00\x00\x00\x88\x00\x00\x00\x8a\x00\x00\x00\x8c\x00\x00\x00\x90\x00\x00\x00\x94\x00\x00\x00\x98\x00\x00\x00\x9c\x00\x00\x00\xa0\x00\x00\x00\xa4\x00\x00\x00\xa8\x00\x00\x00\xac\x00\x00\x00\xb0\x00\x00\x00\xb4\x00\x00\x00\xbe\x00\x00\x00\xc8\x00\x00\x00\xd2\x00\x00\x00\xdc\x00\x00\x00\xe6\x00\x00\x00\xee\x00\x00\x00\xf6\x00\x00\x00\xfe\x00\x00\x00\x06\x01\x00\x00\x0e\x01\x00\x00\x14\x01\x00\x00\x1a\x01\x00\x00\x20\x01\x00\x00\x26\x01\x00\x00\x2c\x01\x00\x00\x32\x01\x00\x00\x38\x01\x00\x00\x3e\x01\x00\x00\x44\x01\x00\x00\x4a\x01\x00\x00\x50\x01\x00\x00\x56\x01\x00\x00\x5c\x01\x00\x00\x62\x01\x00\x00\x68\x01\x00\x00\x6a\x01\x00\x00\x6c\x01\x00\x00\x6e\x01\x00\x00\x70\x01\x00\x00\x72\x01\x00\x00\x78\x01\x00\x00\x7e\x01\x00\x00\x84\x01\x00\x00\x8a\x01\x00\x00\x90\x01\x00\x00\x94\x01\x00\x00\x98\x01\x00\x00\x9c\x01\x00\x00\xa0\x01\x00\x00\xa4\x01\x00\x00\xac\x01\x00\x00\xb4\x01\x00\x00\xbc\x01\x00\x00\xc4\x01\x00\x00\xcc\x01\x00\x00\xd0\x01\x00\x00\xd4\x01\x00\x00\xd8\x01\x00\x00\xdc\x01\x00\x00\xe0\x01\x00\x00\xe4\x01\x00\x00\xe8\x01\x00\x00\xec\x01\x00\x00\xf0\x01\x00\x00\xf4\x01\x00\x00

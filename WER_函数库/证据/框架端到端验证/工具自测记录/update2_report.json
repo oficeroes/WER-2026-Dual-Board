@@ -1,0 +1,181 @@
+{
+  "tool": "更新便携版函数库.py",
+  "started_at": "20261110-141544",
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "函数库源里没有任何函数（0 个），更新后新项目将只有 start 模板"
+  ],
+  "steps": {
+    "precheck": {
+      "target": "D:\\UserData\\portable_func_test\\AbilixScratch3.0_FuncLib",
+      "assets": "D:\\UserData\\portable_func_test\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+      "running": []
+    },
+    "library": {
+      "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\我的函数库.srhs",
+      "bytes": 1199,
+      "sha256": "c2eee98ae90bdaf49206c97264a32a02652c43ae8d7f5340152adcc54f092f9e",
+      "top_blocks": 1,
+      "start_blocks": 1,
+      "defnoreturn": 0,
+      "defreturn": 0,
+      "variables": 0,
+      "ok": true,
+      "errors": [],
+      "origin": "参数 --library 指定",
+      "kind": "mine"
+    },
+    "current": {
+      "zh_hans_chars": 48657,
+      "zh_hant_chars": 379,
+      "en_chars": 407
+    },
+    "up_to_date": false,
+    "patch": {
+      "assets": "D:\\UserData\\portable_func_test\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+      "detached_hardlink": false,
+      "before_sha256": "a1a3bf14e1c1b189ffce3faf423bf6eadebad1bb71f90f90c1e630aabbdb1604",
+      "before_size": 85320453,
+      "patch": {
+        "ok": true,
+        "assets": "D:\\UserData\\portable_func_test\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+        "dry_run": false,
+        "errors": [],
+        "warnings": [],
+        "steps": {
+          "validate_original": {
+            "ok": true,
+            "path": "D:\\UserData\\portable_func_test\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+            "errors": [],
+            "warnings": [],
+            "count": 6645,
+            "index_end": 406350,
+            "file_size": 85320453
+          },
+          "pure_roundtrip": {
+            "ok": true,
+            "original_sha256": "a1a3bf14e1c1b189ffce3faf423bf6eadebad1bb71f90f90c1e630aabbdb1604",
+            "repacked_sha256": "a1a3bf14e1c1b189ffce3faf423bf6eadebad1bb71f90f90c1e630aabbdb1604",
+            "identical": true
+          },
+          "fragment": {
+            "source": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\我的函数库.srhs",
+            "top_blocks": 1,
+            "start_blocks": 1,
+            "defnoreturn": 0,
+            "variables": 0,
+            "chars": 1155
+          },
+          "maingui_init": {
+            "old_bytes": 54662,
+            "old_sha256": "c6f652639ff011505bd950f681ac10ea04c3addf7ce17923971f460c5e43d1ee",
+            "new_bytes": 6633,
+            "new_sha256": "8437593c10b8a44bc733ff3716853de209ae4db4abc093d327a0e17e1a71fa2e"
+          },
+          "defaultcode_patch": {
+            "patched": [
+              {
+                "var_name": "defaultcode",
+                "line": 5,
+                "old_chars": 48657,
+                "new_chars": 1155,
+                "old_raw_len": 48657,
+                "new_raw_len": 1162
+              }
+            ],
+            "not_found": [],
+            "errors": []
+          },
+          "compare": {
+            "ok": true,
+            "old": "D:\\UserData\\portable_func_test\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+            "new": "C:\\Users\\s1325\\AppData\\Local\\Temp\\zfb_patch_0qpp5w6b\\browser_assets.patched",
+            "old_count": 6645,
+            "new_count": 6645,
+            "changed": [
+              {
+                "name": "/Blockly_Code/maingui_init.js",
+                "old_sha256": "c6f652639ff011505bd950f681ac10ea04c3addf7ce17923971f460c5e43d1ee",
+                "new_sha256": "8437593c10b8a44bc733ff3716853de209ae4db4abc093d327a0e17e1a71fa2e",
+                "old_len": 54662,
+                "new_len": 6633
+              }
+            ],
+            "missing": [],
+            "extra": [],
+            "order_mismatch": [],
+            "unchanged_allowed": [],
+            "errors": [],
+            "warnings": []
+          },
+          "install": {
+            "ok": true,
+            "backup": "D:\\UserData\\portable_func_test\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets.备份-20261110-141909",
+            "errors": [],
+            "warnings": [],
+            "sha256": "be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c"
+          }
+        },
+        "installed": true,
+        "original": {
+          "count": 6645,
+          "file_size": 85320453,
+          "sha256": "a1a3bf14e1c1b189ffce3faf423bf6eadebad1bb71f90f90c1e630aabbdb1604"
+        },
+        "workdir": "C:\\Users\\s1325\\AppData\\Local\\Temp\\zfb_patch_0qpp5w6b",
+        "patched": {
+          "path": "C:\\Users\\s1325\\AppData\\Local\\Temp\\zfb_patch_0qpp5w6b\\browser_assets.patched",
+          "bytes": 85272424,
+          "sha256": "be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c"
+        },
+        "unchanged_entries": 6644,
+        "out": "C:\\Users\\s1325\\AppData\\Local\\Temp\\zfb_patch_0qpp5w6b\\browser_assets.patched",
+        "backup": "D:\\UserData\\portable_func_test\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets.备份-20261110-141909"
+      },
+      "after_sha256": "be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c",
+      "after_size": 85272424,
+      "backup": "D:\\UserData\\portable_func_test\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets.备份-20261110-141909",
+      "ok": true
+    },
+    "verify": {
+      "ok": true,
+      "expected_chars": 1155,
+      "expected_top_blocks": 1,
+      "expected_functions": 0,
+      "expected_variables": 0,
+      "languages": {
+        "zh-hans": {
+          "chars": 1155,
+          "equals_expected": true
+        },
+        "zh-hant": {
+          "chars": 379,
+          "equals_expected": false
+        },
+        "en": {
+          "chars": 407,
+          "equals_expected": false
+        }
+      },
+      "errors": [],
+      "fragment_valid": true,
+      "fragment_start": 1,
+      "fragment_functions": 0
+    },
+    "backups": [
+      {
+        "path": "D:\\UserData\\portable_func_test\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets.备份-20261110-135110",
+        "bytes": 85271033,
+        "mtime": 1591778075.0
+      },
+      {
+        "path": "D:\\UserData\\portable_func_test\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets.备份-20261110-141909",
+        "bytes": 85320453,
+        "mtime": 1794289869.984826
+      }
+    ],
+    "pruned": []
+  },
+  "finished_at": "20261110-141911"
+}

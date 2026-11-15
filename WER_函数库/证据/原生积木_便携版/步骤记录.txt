@@ -1,0 +1,149 @@
+原生函数积木 · 便携版真机端到端验证 · 步骤记录
+================================================================================
+项目：WER 2026 普级赛 · WER_函数库
+方案：原生函数积木（核心工具 原生积木核心.py build 注入 browser_assets）
+验证机：Windows 11，屏幕 2880×1800 @200% DPI（物理像素），IDE 窗口 hwnd 396302 等
+真实安装：D:\Program Files\AbilixScratch3.0（只读，全程未写入）
+便携副本：C:\Users\s1325\AbilixScratch3.0_FuncLib（纯 ASCII 路径；测试后已按任务要求删除）
+函数库：WER_函数库\我的函数库.srhs（1396 B，1 个函数 func_Hello）
+日期：2026-11-11
+
+一、基线记录（测试前）
+--------------------------------------------------------------------------------
+1) 真实安装 browser_assets：
+   85,271,033 B / sha256 DF6DB241752D42BFF2995FCD24521E070ADF9EB5D96E870148F9DC51690EDC40
+2) AppData 项目目录（启动前备份，测试后恢复）：
+   C:\Users\s1325\AppData\LocalLow\partnerx\AbilixScratch3_0\standalonewindows\AbilixProjects
+   备份 → WER_函数库\证据\原生积木_便携版\AppData备份\AbilixProjects.备份-20261111-134507
+   13 文件 / 297,670 B；111\abilixProjectConfig.txt sha256 =
+   5A52DD18D8DE191648C1EB87F847183A3D1C8372DCB2FFDC5E05510EEFACE310
+3) 注册表 HKCU\Software\partnerx\AbilixScratch3.0\clear_app_data_switch_h107047456 = 0
+   （存在且为 0，工具确认「下次启动不会清空 AppData」）
+4) 我的函数库.srhs：1396 B / sha256 71aa5ba97bfc8c375259046f88299ad2fceb4004e1e09ea182202216bc309890
+   （1 个函数 func_Hello，3 个顶层块，0 变量）
+
+二、创建便携副本（创建便携函数版.py）
+--------------------------------------------------------------------------------
+命令（工作目录 = 项目根目录）：
+  python "WER_函数库\工具\原生积木\便携版\创建便携函数版.py" --force ^
+         --report "WER_函数库\证据\原生积木_便携版\创建报告.json"
+
+时间线：开始 13:43:18，结束 13:44:21（报告 finished_at）
+关键输出：
+  [1/5] 复制安装目录 → C:\Users\s1325\AbilixScratch3.0_FuncLib
+        1727 个文件 / 406.7 MB / 3.47 秒；硬链接 0（跨盘 C:↔D: 不可硬链接），
+        独立复制 1727，回退复制 1725；browser_assets 强制独立复制
+  [2/5] 校验复制：文件数/总大小一致，exe 存在，资源包已独立（不 hardlink），assets_independent=true
+  [3/5] 备份副本内原始资源 → _原始资源\browser_assets.orig
+        81.3 MB / sha256 df6db241752d42bf…（= 安装目录原包，detach 后移动）
+  [4/5] 核心工具 build（原生积木核心.py build）：
+        44.3 秒，退出码 0
+        --library 我的函数库.srhs
+        --source-assets _原始资源\browser_assets.orig
+        --out _原始资源\browser_assets.build-20261111-134322
+        产物 85,274,935 B / sha256 17ed1363544a09a99463a338ac9a8e24884535a3d8c9fbfc3a87a2ef6af36905
+        修改 /Blockly_Code/maingui.html（69281 → 69853 字节）
+        修改 /Blockly_Code/maingui.js（23313 → 23733 字节）
+        新增 /Blockly_Code/abilix_userlib.js、/Blockly_Code/abilix_userlib.json
+        其余 6643 个条目逐字节不变
+        核心工具 verify：通过（校验结果：通过 ✔）
+        成功后 os.replace 覆盖副本
+        AbilixScratch3.0_Data\Resources\browser_assets
+  [5/5] 复核真实安装：85,271,033 B / DF6DB241752D42BF… 未变（install_untouched.ok=true）
+  收尾：桌面快捷方式 D:\UserData\Desktop\AbilixScratch3.0 函数版.lnk
+        → target C:\Users\s1325\AbilixScratch3.0_FuncLib\AbilixScratch3.0.exe
+        → workdir C:\Users\s1325\AbilixScratch3.0_FuncLib（1988 B，CREATED）
+
+三、真实 IDE 端到端验证（1 函数用户库）
+--------------------------------------------------------------------------------
+1) 13:46:23 首次启动便携副本（AbilixScratch3.0.exe），窗口 hwnd 396302，
+   rect (0,35)-(2906,1765)，client 2880×1659；自动加载项目 MyFuncLib。
+2) 13:48 激活前台并截图 01_IDE启动.png（IDE 前台；左侧分类栏、主函数区、
+   右侧 Python 代码面板可见）。
+3) 悬停「文件」菜单 (268,105) 截图 03_文件菜单.png + crop_文件菜单.png：
+   菜单含 新建 Ctrl+N / 打开 Ctrl+O / 保存 Ctrl+S / 另存为 Ctrl+Shift+S /
+   例程 Ctrl+E / 退出 Alt+F4。
+4) 13:52:43 点击左侧「我的函数」分类 (60,630)（像素定位：分类彩条 40px 一段，
+   「我的函数」y 611–650，紫色 RGB(95,38,152)）→ 截图
+   02_点击我的函数分类.png：
+     · 分类高亮、flyout 出现紫色原生块 func_Hello；
+     · 主函数内含该原生块，右侧 Python 面板显示
+       def func_Hello(): … 与主函数中 func_Hello() 调用。
+5) 13:56 走「文件 → 新建」流程验证新建项目：点「新建」弹出「当前程序已修改，
+   是否保存？」（截图 04_新建项目.png），点「不保存」(1453,1089) → 新项目
+   Scratch-7（截图 05_新项目空白.png）。期间 IDE 于 13:56:32 自行退出
+   （output_log.txt：zfb_shutdown called / LuaEnv dispose 异常，原因未定），
+   随后重启（PID 11052 / hwnd 2952100，约 4s 出窗口，截图 07_重启IDE.png）。
+6) 13:59:05 重拍「我的函数」flyout：截图 06_我的函数flyout_重拍.png
+   （旧 06 截到 DSH 窗口前台，已弃用）。
+7) 13:59–14:01 拖拽验证：
+   · 第一次 drag(176,188 → 1424,962) 只把块拖到工作区，未接插槽（截图 08，
+     块呈虚线悬浮，Python 无 func_Hello() 调用）；
+   · 改为先点空白画布 (1000,400)，再把悬浮块 (1427,960) 拖到主函数语句链
+     插槽 (1341,978) → 块实心连接（注释块与「显示 hello world」之间）。
+8) 14:01 右侧 Python 面板 Ctrl+A / Ctrl+C 取文本 + 截图
+   13_拖拽完成_Python证据.png、crop_13_python面板_放大.png，生成代码为：
+     #<SKCON9><USB><ProgramA>
+     import threading / import time / import libstarpy
+     robot = Robot()
+     def func_Hello():
+         robot.print('hello world\n')
+         pass
+     def main():
+         #将要运行的模块放入主函数
+         func_Hello()
+         robot.print('hello world\n')
+     main()#program entry
+   （逐字记录见 python代码_1函数版本.txt）
+
+四、更新验证（20 函数示例库）
+--------------------------------------------------------------------------------
+命令：
+  python "WER_函数库\工具\原生积木\便携版\更新便携函数版.py" ^
+         --library "WER_函数库\示例\WER函数库.srhs" ^
+         --report "WER_函数库\证据\原生积木_便携版\更新报告_示例库20函数.json"
+
+结果（14:03:38 起，退出码 0）：
+  函数库 WERFuncLib：20 个函数
+    func_Init、func_Stop、func_ResetEncoder、func_ForwardCM、func_BackwardCM、
+    func_TurnLeft、func_TurnRight、func_DriveTime、func_DriveSpeed、func_ArmUp、
+    func_ArmDown、func_Grab、func_Release、func_LineStep、func_LineTime、
+    func_LineUntilCross、func_WaitStartKey、func_WaitTouch、func_Show、func_Beep
+  build 8.5 秒 → browser_assets.build-20261111-140338
+    81.4 MB（比原包 +32.4 KB）/ sha256
+    8a3691dc32dabc400f0ead3a22b603802cb3d85def42ccc5835911b6e84b902b
+    修改 maingui.html 69281→77965、maingui.js 23313→23733
+    新增 abilix_userlib.js（20171 B）、abilix_userlib.json（3782 B）
+    prelude 14064 字符；上一版资源自动备份为 _原始资源\browser_assets.上一版
+  verify 通过；真实安装 DF6DB241… 未变。
+  启动后：旧 Scratch-7 项目标签（引用了换库后不存在的 func_Hello 块）工作区灰屏，
+  切到「我的函数库」标签正常；点「我的函数」分类截图
+  14_示例库20函数_flyout.png（14:05:51，IDE 前台）显示 flyout 全部 20 个紫色原生块；
+  另截图 15_示例库20函数_Python代码.png。
+  经验：换库后应新建项目，避免旧项目引用不存在的函数块导致积木区灰屏。
+
+五、收尾与安全校验
+--------------------------------------------------------------------------------
+1) 关闭便携 IDE（PostMessage WM_CLOSE），1.2 秒内进程退出（进程数 0）。
+2) 恢复 AppData：当前目录改名 AbilixProjects.测试后-20261111-140621 保存，
+   从备份复制回 AbilixProjects → 13 文件 / 297,670 B；
+   config sha256 恢复为 5A52DD18D8DE191648C1EB87F847183A3D1C8372DCB2FFDC5E05510EEFACE310（一致）。
+3) 删除便携副本：
+   python "WER_函数库\工具\原生积木\便携版\删除便携版.py" --yes
+   → 预检 1729 文件 / 569.4 MB（含 _原始资源），改名
+     AbilixScratch3.0_FuncLib.删除中-20261111-140655 后递归删除成功；
+   → 删除桌面快捷方式 D:\UserData\Desktop\AbilixScratch3.0 函数版.lnk。
+4) 最终校验：
+   真实安装 browser_assets：85,271,033 B / DF6DB241752D42BF… 未变 ✔
+   WER_函数库\我的函数库.srhs：存在（1363 B；测试期间 IDE 打开「我的函数库」标签
+     后 mtime 变为 13:51:29，内容仍只有 func_Hello，非本工具写入）
+   便携副本目录：不存在 ✔；桌面快捷方式：不存在 ✔
+   C 盘可用空间：5.56 GB（测试前约 5.4 GB）
+
+六、前台自动化说明
+--------------------------------------------------------------------------------
+截图/点击前统一调用 win32_ui.activate()：SetForegroundWindow 返回 1（成功），
+activate() 多级回退后 GetForegroundWindow()==IDE hwnd 立即成立（等待 0.0s）；
+每次动作前重新激活并校验前台窗口，动作后复激活再截图——此策略下 01/02/03/04/
+05/06重拍/07/08/13/14/15 均为 IDE 前台画面。曾出现 DSH/浏览器窗口抢占前台导致
+首版 01、06、02b 遮挡，已重拍/弃用（详见 README_证据说明.md）。

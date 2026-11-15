@@ -1,0 +1,21 @@
+{
+  "tool": "删除便携版.py",
+  "started_at": "20261110-141923",
+  "dry_run": false,
+  "ok": true,
+  "errors": [],
+  "steps": {
+    "target": {
+      "path": "D:\\UserData\\portable_func_test\\AbilixScratch3.0_FuncLib",
+      "exists": true,
+      "files": 1729,
+      "bytes": 597071142,
+      "dirs": 168,
+      "free_before": 554021638144,
+      "running": [],
+      "deleted": true,
+      "free_after": 554622386176
+    }
+  },
+  "finished_at": "20261110-141924"
+}

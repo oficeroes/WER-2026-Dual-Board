@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TempProjectsInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TempProjectInfoList>
+    <tempProjectFolderName>1774848011627</tempProjectFolderName>
+    <isNewProject>true</isNewProject>
+    <isSaved>false</isSaved>
+    <isChanged>false</isChanged>
+    <savedProjectPath>C:\Users\s1325\Desktop\AbilixScratch3.0\Scratch-2</savedProjectPath>
+  </TempProjectInfoList>
+  <TempProjectInfoList>
+    <tempProjectFolderName>1778235646643</tempProjectFolderName>
+    <isNewProject>false</isNewProject>
+    <isSaved>true</isSaved>
+    <isChanged>false</isChanged>
+    <savedProjectPath>C:\Users\s1325\Documents\School\WER2026\My-WER\Program\实验.srhs</savedProjectPath>
+  </TempProjectInfoList>
+  <TempProjectInfoList>
+    <tempProjectFolderName>1789804807659</tempProjectFolderName>
+    <isNewProject>false</isNewProject>
+    <isSaved>true</isSaved>
+    <isChanged>false</isChanged>
+    <savedProjectPath>C:\Users\s1325\Documents\School\WER2026\My-WER\Program\Ai.srhs</savedProjectPath>
+  </TempProjectInfoList>
+  <TempProjectInfoList>
+    <tempProjectFolderName>1778913698999</tempProjectFolderName>
+    <isNewProject>false</isNewProject>
+    <isSaved>true</isSaved>
+    <isChanged>false</isChanged>
+    <savedProjectPath>C:\Users\s1325\Documents\School\WER2026\My-WER\Program\PI.srhs</savedProjectPath>
+  </TempProjectInfoList>
+</TempProjectsInfo>

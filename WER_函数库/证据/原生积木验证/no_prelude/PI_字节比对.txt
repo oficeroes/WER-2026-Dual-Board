@@ -1,0 +1,16 @@
+PI 工程生成结果与黄金样本逐字节比对
+============================================================
+参考文件: D:\UserData\Documents\WER\2026普级赛\逆向资料\样本程序\PI.py
+  bytes: 50618
+  sha256: 30a0bab0625e3dd1c1bd1fd167a27b1601bc15e0a26439b2ba5afff7e7a3df4a
+生成文件: D:\UserData\Documents\WER\2026普级赛\WER_函数库\证据\原生积木验证\no_prelude\20261111_135310_abilixProject.py
+  bytes: 50618
+  sha256: 30a0bab0625e3dd1c1bd1fd167a27b1601bc15e0a26439b2ba5afff7e7a3df4a
+逐字节相同: True
+run_validate comparison.identicalModuloAllowedDiffs: True
+comparison.rawTextIdenticalNormalized: True
+comparison.normalizedDiffLineCount: 0
+nativePrelude: {"userlibPath": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\patched_web\\Blockly_Code\\abilix_userlib.js", "userlibFunctionCount": 1, "userlibFunctions": ["func_Hello"], "preludeChars": 61, "preludeSha256": "5a0311e2c2b12e8e18b37d7170eee123a67166e1c6ddbad14cd052ce1792927c", "projectNativeBlockCount": 0, "projectNativeBlockTypes": [], "expectedInjection": false, "detectedInjection": false, "exactMatch": false, "lineSequenceMatch": false, "ok": true}
+
+说明: 生成/参考文件的大小、sha256 完全一致，说明同一 patched web 下无原生块的 PI 工程
+     生成结果与无补丁真实 IDE 的黄金样本逐字节一致（补丁未污染普通工程生成）。

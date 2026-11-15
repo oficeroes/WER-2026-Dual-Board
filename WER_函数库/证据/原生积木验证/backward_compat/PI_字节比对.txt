@@ -1,0 +1,11 @@
+无原生块 PI 工程生成结果与黄金样本逐字节比对
+============================================================
+参考: D:\UserData\Documents\WER\2026普级赛\逆向资料\样本程序\PI.py（50618 字节, sha256 30a0bab0625e3dd1c1bd1fd167a27b1601bc15e0a26439b2ba5afff7e7a3df4a）
+
+文件级逐字节比对：
+- reg_pi_unpatched.py: 50618 字节, sha256 30a0bab0625e3dd1c1bd1fd167a27b1601bc15e0a26439b2ba5afff7e7a3df4a, bytesEqualPI=True
+- reg_pi_patched.py: 50618 字节, sha256 30a0bab0625e3dd1c1bd1fd167a27b1601bc15e0a26439b2ba5afff7e7a3df4a, bytesEqualPI=True
+- reg_pi_srhs.py: 50618 字节, sha256 30a0bab0625e3dd1c1bd1fd167a27b1601bc15e0a26439b2ba5afff7e7a3df4a, bytesEqualPI=True
+
+说明：三种输入（_分析临时/PI/abilixProject.srh 未打补丁 web、同项目 patched web、真实用户 PI.srhs patched web）
+      生成结果均与 PI.py 逐字节一致，证明新增 nativePrelude / userlib 逻辑对无原生块工程零影响。

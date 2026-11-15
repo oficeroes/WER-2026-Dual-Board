@@ -1,0 +1,38 @@
+=== immediate constants of interest ===
+0x08004264: cmp      r2, #0x80                                ; 0x80
+0x080049ae: movs     r0, #0x80                                ; 0x80
+0x08004d56: movs     r0, #0x55                                ; 0x55
+0x08005064: add.w    r0, r2, #0x80                            ; 0x80
+0x080051fe: cmp      r1, #0xaa                                ; 0xAA
+0x08005204: cmp      r1, #0x55                                ; 0x55
+0x0800520c: movs     r2, #0xbb                                ; 0xBB
+0x08005210: movs     r2, #0x66                                ; 0x66
+0x080052a6: cmp      r0, #0xaa                                ; 0xAA
+0x080052ac: cmp      r0, #0x55                                ; 0x55
+0x08005360: movs     r0, #0xbb                                ; 0xBB
+0x08005366: movs     r0, #0x66                                ; 0x66
+0x080055a4: cmp      r1, #0x80                                ; 0x80
+0x08005a94: cmp      r4, #0x24                                ; 0x24(BRR?)
+0x08005bf8: adds     r0, #0x24                                ; 0x24(BRR?)
+0x08005c00: adds     r0, #0x24                                ; 0x24(BRR?)
+0x08005c06: adds     r0, #0x24                                ; 0x24(BRR?)
+0x08005ccc: orr      r1, r1, #0x80                            ; 0x80
+0x08005e2a: movs     r0, #0x80                                ; 0x80
+0x08005e32: movs     r0, #0x80                                ; 0x80
+0x08006136: movs     r7, #0xaa                                ; 0xAA
+0x0800613c: mov.w    ip, #0x55                                ; 0x55
+0x08006264: movs     r0, #0x80                                ; 0x80
+0x08006284: movs     r1, #0x80                                ; 0x80
+0x080062b0: adr      r1, #0x80                                ; 0x80
+0x080063de: asrs     r0, r4, #0x12                            ; 0x12
+0x0800659e: movs     r7, #0x80                                ; 0x80
+0x080065f2: movs     r1, #0x80                                ; 0x80
+0x0800662c: adr      r1, #0x80                                ; 0x80
+0x08006634: cmp      r1, #0x80                                ; 0x80
+0x08006950: add.w    sb, r4, #0x80                            ; 0x80
+0x08006a4c: asrs     r0, r4, #0x12                            ; 0x12
+0x08006abc: movs     r1, #0x80                                ; 0x80
+0x08006b64: orr      r4, r4, #0x80                            ; 0x80
+0x08006b82: movs     r0, #0x55                                ; 0x55
+RAW LITERAL @0x08005d34 = 0x45670123
+RAW LITERAL @0x08005d3c = 0xcdef89ab

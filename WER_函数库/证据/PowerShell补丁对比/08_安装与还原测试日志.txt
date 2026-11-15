@@ -1,0 +1,89 @@
+===== 安装（-Install）+ 还原 端到端测试（在可写副本上进行，不碰真实安装目录） =====
+测试目录：D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\install_test
+初始 sha256  : df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40（未打补丁的真实包）
+同步退出码=0  同步后 sha256=be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c
+还原退出码=0  还原后 sha256=df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40
+同步产生的备份文件   : browser_assets.备份-20261110-140429
+还原产生的还原前备份 : browser_assets.还原前备份-20261110-140430
+还原后是否等于原始包 : True
+总耗时：5.2 秒
+==========================================================================================
+
+########## 第 1 步：双击 一键同步(管理员).cmd 等价执行 同步我的函数库.ps1 -Install ##########
+
+==========================================================================
+  AbilixScratch3.0 新建项目默认模板 —— 同步「我的函数库」（仅 PowerShell 版）
+==========================================================================
+        本机 PowerShell 版本：5.1.26100.9711
+[同步] 1/7 定位并校验 browser_assets
+        原资源包：D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\install_test\browser_assets
+        条目数=6645  文件大小=81.32 MB  索引结束=406350
+        原包 sha256=df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40
+[同步] 2/7 纯 roundtrip 自检（解包→原样重打包→逐字节比较）
+        逐字节一致 OK（df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40）
+[同步] 3/7 读取函数库并生成 defaultcode 片段
+        默认函数库：D:\UserData\Documents\WER\2026普级赛\WER_函数库\我的函数库.srhs
+        来源：D:\UserData\Documents\WER\2026普级赛\WER_函数库\我的函数库.srhs
+        顶层积木块=1（start=1，无返回函数=0，有返回函数=0）变量=0  片段=1155 字符
+[同步] 4/7 修改 Blockly_Code/maingui_init.js（只改简体中文 defaultcode）
+        原 defaultcode 条目：5242 字节  sha256=c86fe3fa00c0433c43cf888eedaedebe71d35c93d161ac13d034222901447561  BOM=False
+        修改后：6633 字节  sha256=8437593c10b8a44bc733ff3716853de209ae4db4abc093d327a0e17e1a71fa2e  （379 -> 1155 字符）
+[同步] 5/7 重新打包 browser_assets
+        补丁包：C:\Users\s1325\AppData\Local\Temp\zfb_patch_ps_64e9268d\browser_assets.patched
+        大小=81.32 MB  sha256=be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c
+[同步] 6/7 打包后自检（逐条目 sha256 + 布局 + 读回 defaultcode）
+        其它 6644 个条目 sha256 全部一致 OK；变化条目 1 个（/Blockly_Code/maingui_init.js 5242 -> 6633 字节）
+        读回 defaultcode 反转义后与片段一致 OK（1155 字符）
+[同步] 7/7 安装到 browser_assets（会先自动备份原文件）
+当前不是管理员，但目标目录可写（便携版/副本），继续写入：D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\install_test
+        原文件备份：D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\install_test\browser_assets.备份-20261110-140429
+        备份 sha256=df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40
+        写入后 sha256=be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c
+
+==========================================================================
+  同步结果
+--------------------------------------------------------------------------
+  原资源包    : D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\install_test\browser_assets
+  原包 sha256 : df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40
+  函数库来源  : D:\UserData\Documents\WER\2026普级赛\WER_函数库\我的函数库.srhs
+  defaultcode : 顶层块=1（start=1）函数=0 变量=0 字符=1155
+  纯 roundtrip: 逐字节一致 OK
+  打包后自检  : 通过 OK（条目 6645，变化 1 个）
+  补丁包      : C:\Users\s1325\AppData\Local\Temp\zfb_patch_ps_64e9268d\browser_assets.patched
+  补丁包sha256: be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c
+  原文件备份  : D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\install_test\browser_assets.备份-20261110-140429
+  状态        : OK 已写入安装目录（重启 IDE 后「新建项目」即自带函数库）
+  还原方法    : 双击「一键还原(管理员).cmd」或运行 还原新建模板.ps1
+==========================================================================
+
+########## 第 2 步：双击 一键还原(管理员).cmd 等价执行 还原新建模板.ps1 -Yes ##########
+
+==========================================================================
+  AbilixScratch3.0 新建项目默认模板 —— 还原（仅 PowerShell 版）
+==========================================================================
+        本机 PowerShell 版本：5.1.26100.9711
+[还原] 1/6 定位 browser_assets
+        当前文件：81.32 MB  sha256=be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c
+        是否有效 zfbRes_v1 资源包：True
+[还原] 2/6 查找备份文件（browser_assets.备份-*）
+        找到 1 个备份（按时间从新到旧）：
+          [1] browser_assets.备份-20261110-140429  81.32 MB  2020-06-10 16:34:35  sha256=df6db241752d42bf...
+        将使用最新有效备份：D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\install_test\browser_assets.备份-20261110-140429
+[还原] 3/6 检查写入权限
+        管理员=False；目标目录可写=True
+[还原] 4/6 先把当前文件另存为还原前备份
+        当前文件已备份：D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\install_test\browser_assets.还原前备份-20261110-140430
+        sha256=be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c
+[还原] 5/6 用备份覆盖 browser_assets
+[还原] 6/6 完成
+
+==========================================================================
+  还原结果
+--------------------------------------------------------------------------
+  browser_assets: D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\install_test\browser_assets
+  还原前 sha256 : be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c
+  还原后 sha256 : df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40
+  使用的备份    : D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\install_test\browser_assets.备份-20261110-140429
+  还原前备份    : D:\UserData\Documents\WER\2026普级赛\_分析临时\ps_work\install_test\browser_assets.还原前备份-20261110-140430
+  状态          : OK 已还原（重启 IDE 后新建项目恢复原始模板）
+==========================================================================

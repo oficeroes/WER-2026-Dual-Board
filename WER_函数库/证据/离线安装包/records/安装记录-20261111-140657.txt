@@ -1,0 +1,16 @@
+﻿WER 原生函数积木 - 离线安装记录
+==================================================
+时间            = 2026-11-11 14:06:57
+计算机          = HARVEST
+用户            = 世界毁灭者
+是否管理员      = False
+工具版本        = 1.0.0
+目标资源包      = C:\Users\s1325\AppData\Local\Temp\wer_offline_test\AbilixScratch3.0\AbilixScratch3.0_Data\Resources\browser_assets
+安装前sha256    = DF6DB241752D42BFF2995FCD24521E070ADF9EB5D96E870148F9DC51690EDC40
+安装后sha256    = C03D6A232EDBB2DBCC5ECDD47D42CF5884A38F72AB44BE47258E1DEEAAE3A180
+补丁包文件      = D:\UserData\Documents\WER\2026普级赛\WER_函数库\安装包\browser_assets.patched
+补丁包sha256    = C03D6A232EDBB2DBCC5ECDD47D42CF5884A38F72AB44BE47258E1DEEAAE3A180
+函数库sha256    = ad0b85069588d18bf0ab1f4e920cd773163adce1f412f1700aa0297c9da34623
+原版备份文件    = C:\Users\s1325\AppData\Local\Temp\wer_offline_test\AbilixScratch3.0\AbilixScratch3.0_Data\Resources\browser_assets.备份-20261111-140657
+还原方法        = 运行同目录「还原原版(离线).cmd」，或 powershell -NoProfile -ExecutionPolicy Bypass -File "还原.ps1" -Yes
+备注            = 本记录由 安装.ps1 自动生成；恢复时优先使用上面的原版备份文件。

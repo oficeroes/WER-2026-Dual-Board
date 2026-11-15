@@ -1,0 +1,1026 @@
+====================================================================================================
+FILE libRobot  D:\UserData\Documents\WER\2026普级赛\_分析临时\brainApk分析\6F\assets_program_c_libRobot.so  size=105984
+ELF: class=32 machine=ARM type=ET_DYN entry=0x0
+SECTIONS:
+  [ 0]                    type=SHT_NULL       addr=0x00000000 off=0x00000 size=0x00000 flags=0
+  [306] .note.gnu.build-id type=SHT_NOTE       addr=0x00000134 off=0x00134 size=0x00024 flags=2
+  [267] .dynsym            type=SHT_DYNSYM     addr=0x00000158 off=0x00158 size=0x00bf0 flags=2
+  [161] .dynstr            type=SHT_STRTAB     addr=0x00000d48 off=0x00d48 size=0x00b51 flags=2
+  [275] .hash              type=SHT_HASH       addr=0x0000189c off=0x0189c size=0x00510 flags=2
+  [231] .gnu.version       type=SHT_GNU_versym addr=0x00001dac off=0x01dac size=0x0017e flags=2
+  [325] .gnu.version_d     type=SHT_GNU_verdef addr=0x00001f2c off=0x01f2c size=0x0001c flags=2
+  [180] .gnu.version_r     type=SHT_GNU_verneed addr=0x00001f48 off=0x01f48 size=0x00040 flags=2
+  [222] .rel.dyn           type=SHT_REL        addr=0x00001f88 off=0x01f88 size=0x000f0 flags=2
+  [70] .rel.plt           type=SHT_REL        addr=0x00002078 off=0x02078 size=0x001d0 flags=2
+  [74] .plt               type=SHT_PROGBITS   addr=0x00002248 off=0x02248 size=0x002cc flags=6
+  [50] .text              type=SHT_PROGBITS   addr=0x00002514 off=0x02514 size=0x03b60 flags=6
+  [360] .ARM.extab         type=SHT_PROGBITS   addr=0x00006074 off=0x06074 size=0x0015c flags=2
+  [25] .ARM.exidx         type=SHT_ARM_EXIDX  addr=0x000061d0 off=0x061d0 size=0x002f0 flags=130
+  [397] .rodata            type=SHT_PROGBITS   addr=0x000064c0 off=0x064c0 size=0x0048e flags=50
+  [13] .fini_array        type=SHT_FINI_ARRAY addr=0x00007d78 off=0x06d78 size=0x00008 flags=3
+  [ 1] .init_array        type=SHT_INIT_ARRAY addr=0x00007d80 off=0x06d80 size=0x00004 flags=3
+  [351] .dynamic           type=SHT_DYNAMIC    addr=0x00007d84 off=0x06d84 size=0x00118 flags=3
+  [56] .got               type=SHT_PROGBITS   addr=0x00007e9c off=0x06e9c size=0x00164 flags=3
+  [405] .data              type=SHT_PROGBITS   addr=0x00008000 off=0x07000 size=0x00038 flags=3
+  [79] .bss               type=SHT_NOBITS     addr=0x00008038 off=0x07038 size=0x00024 flags=3
+  [61] .comment           type=SHT_PROGBITS   addr=0x00000000 off=0x07038 size=0x00065 flags=48
+  [169] .debug_str         type=SHT_PROGBITS   addr=0x00000000 off=0x0709d size=0x02c2b flags=48
+  [340] .debug_loc         type=SHT_PROGBITS   addr=0x00000000 off=0x09cc8 size=0x01a3c flags=0
+  [36] .debug_abbrev      type=SHT_PROGBITS   addr=0x00000000 off=0x0b704 size=0x0092b flags=0
+  [210] .debug_info        type=SHT_PROGBITS   addr=0x00000000 off=0x0c02f size=0x06ea6 flags=0
+  [147] .debug_ranges      type=SHT_PROGBITS   addr=0x00000000 off=0x12ed5 size=0x00380 flags=0
+  [195] .debug_macinfo     type=SHT_PROGBITS   addr=0x00000000 off=0x13255 size=0x00001 flags=0
+  [116] .debug_pubnames    type=SHT_PROGBITS   addr=0x00000000 off=0x13256 size=0x0073d flags=0
+  [100] .debug_pubtypes    type=SHT_PROGBITS   addr=0x00000000 off=0x13993 size=0x00362 flags=0
+  [281] .debug_line        type=SHT_PROGBITS   addr=0x00000000 off=0x13cf5 size=0x01c97 flags=0
+  [293] .debug_frame       type=SHT_PROGBITS   addr=0x00000000 off=0x1598c size=0x00e6c flags=0
+  [132] .debug_aranges     type=SHT_PROGBITS   addr=0x00000000 off=0x167f8 size=0x000a0 flags=0
+  [244] .note.gnu.gold-version type=SHT_NOTE       addr=0x00000000 off=0x16898 size=0x0001c flags=0
+  [84] .ARM.attributes    type=SHT_ARM_ATTRIBUTES addr=0x00000000 off=0x168b4 size=0x00038 flags=0
+  [389] .symtab            type=SHT_SYMTAB     addr=0x00000000 off=0x168ec size=0x02010 flags=0
+  [381] .strtab            type=SHT_STRTAB     addr=0x00000000 off=0x188fc size=0x00d79 flags=0
+  [371] .shstrtab          type=SHT_STRTAB     addr=0x00000000 off=0x19675 size=0x0019b flags=0
+DYNSYM count=191
+  __cxa_finalize                                     val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __cxa_atexit                                       val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  CCJ_Interface                                      val=0x00002551 size=824    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  pthread_mutex_trylock                              val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  gettid                                             val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __android_log_print                                val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  sprintf                                            val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  pthread_mutex_unlock                               val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __stack_chk_fail                                   val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __stack_chk_guard                                  val=0x00000000 size=0      type=STT_OBJECT bind=STB_GLOBAL shndx=SHN_UNDEF
+  mutexID                                            val=0x00008058 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  dlsym                                              val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  main_tid                                           val=0x00008040 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  g_AbilixEnv                                        val=0x0000804c size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  dlopen                                             val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  g_AbilixJobject                                    val=0x00008050 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  dlerror                                            val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  g_AbilixJVM                                        val=0x00008038 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  pthread_mutex_init                                 val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __aeabi_unwind_cpp_pr1                             val=0x00005951 size=4      type=STT_FUNC bind=STB_WEAK shndx=11
+  signal                                             val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  SetMotorOverTurn                                   val=0x00002889 size=152    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  exit                                               val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __aeabi_unwind_cpp_pr0                             val=0x0000594d size=4      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  SetMotorAdvanced                                   val=0x00002921 size=152    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  SetMotor                                           val=0x000029b9 size=128    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  SetMotorTime                                       val=0x00002a39 size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  SetMotorEncoder                                    val=0x00002ac1 size=124    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  SetServo                                           val=0x00002b3d size=124    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __errno                                            val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  SmartLed                                           val=0x00002bb9 size=192    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  strerror                                           val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  SetDO                                              val=0x00002c79 size=128    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  Play                                               val=0x00002cf9 size=108    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  PlayUntil                                          val=0x00002d65 size=108    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  Wait                                               val=0x00002dd1 size=112    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  Clear                                              val=0x00002e41 size=88     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  SetEE                                              val=0x00002e99 size=128    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetEE                                              val=0x00002f19 size=116    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  atoi                                               val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  Camera                                             val=0x00002f8d size=108    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetMicrophone                                      val=0x00002ff9 size=128    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetMic                                             val=0x00003079 size=96     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  PrintfExpression                                   val=0x000030d9 size=108    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  getAI                                              val=0x00003145 size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetAI                                              val=0x000031cd size=40     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_UNKNOWN                                    val=0x00008044 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  GetGray                                            val=0x000031f5 size=40     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_GRAY                                       val=0x00008010 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetTouch                                           val=0x0000321d size=40     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_COLLISION                                  val=0x00008008 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetUltraSonic                                      val=0x00003245 size=40     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_ULTRASONIC                                 val=0x00008018 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetFlame                                           val=0x0000326d size=40     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_FLAME                                      val=0x0000801c size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetTemperature                                     val=0x00003295 size=40     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_TEMPERATURE                                val=0x00008028 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetMagnet                                          val=0x000032bd size=40     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_MAGNETIC_SWITCH                            val=0x00008024 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetHumidity                                        val=0x000032e5 size=40     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_HUMIDITY                                   val=0x0000802c size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetInfrared                                        val=0x0000330d size=40     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_INFRARED                                   val=0x0000800c size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetAngle                                           val=0x00003335 size=40     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_ANGLE                                      val=0x00008030 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetLight                                           val=0x0000335d size=40     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_LIGHT                                      val=0x00008020 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetColor                                           val=0x00003385 size=40     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_COLOR                                      val=0x00008014 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetChannelGray                                     val=0x000033ad size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetBattery                                         val=0x00003435 size=96     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ResetMotionSensor                                  val=0x00003495 size=88     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetMotionSensor                                    val=0x000034ed size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ResetEncoder                                       val=0x00003575 size=108    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetEncoder                                         val=0x000035e1 size=116    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetInstantEncoder                                  val=0x00003655 size=116    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ResetTimer                                         val=0x000036c9 size=108    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetTimerMS                                         val=0x00003735 size=116    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetSeconds                                         val=0x000037a9 size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  atof                                               val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  getHIDValue                                        val=0x00003831 size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  setSendCmd                                         val=0x000038b9 size=124    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  getSendCmd                                         val=0x00003935 size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  toUpper                                            val=0x000039bd size=60     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  hexString2bytes                                    val=0x000039f9 size=180    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  getSendCmdBuffer                                   val=0x00003aad size=220    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  strlen                                             val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  strcmp                                             val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  getRecvCmd                                         val=0x00003b89 size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  getRecvCmdBuffer                                   val=0x00003c11 size=220    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_InitRobot_5                                    val=0x00003ced size=236    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_InitRobot                                      val=0x00003dd9 size=176    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_Set_GrayscaleSensor                            val=0x00003e89 size=88     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_LineWay_T                                      val=0x00003ee1 size=132    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_LineWay_C                                      val=0x00003f65 size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_Around                                         val=0x00003fed size=124    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_SetMotor                                       val=0x00004069 size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_SetMotor_T                                     val=0x000040f1 size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_SetMotor_E                                     val=0x00004179 size=152    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_SetMotor_S                                     val=0x00004211 size=176    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_SetMotor_CS                                    val=0x000042c1 size=192    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_AdvancedWay_T                                  val=0x00004381 size=132    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_AdvancedWay_E                                  val=0x00004405 size=124    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_AdvancedWay_S                                  val=0x00004481 size=152    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_AdvancedWay_CS                                 val=0x00004519 size=176    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AIOpen                                             val=0x000045c9 size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetAICode                                          val=0x00004651 size=132    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetAIString                                        val=0x000046d5 size=240    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __aeabi_memcpy                                     val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  GetQRCode                                          val=0x000047c5 size=116    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetQRString                                        val=0x00004839 size=248    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  Random                                             val=0x00004931 size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  LogPrint                                           val=0x000049b9 size=132    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  vsnprintf                                          val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  Log                                                val=0x00004a3d size=160    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  Printf                                             val=0x00004add size=160    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  iseven                                             val=0x00004b7d size=78     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  isint                                              val=0x00004bcb size=58     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  isodd                                              val=0x00004c05 size=78     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  isprime                                            val=0x00004c53 size=148    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __aeabi_idivmod                                    val=0x00005235 size=26     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ispositive                                         val=0x00004ce7 size=38     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  isnegative                                         val=0x00004d0d size=38     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  isdivided                                          val=0x00004d33 size=110    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  range                                              val=0x00004da1 size=70     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  rangef                                             val=0x00004de7 size=96     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  CreateTask                                         val=0x00004e49 size=112    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  pthread_attr_init                                  val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  pthread_attr_setdetachstate                        val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  pthread_create                                     val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  Java_com_abilix_utils_ProgramAndInterfaceC_JCC_1Exit val=0x00004eb9 size=76     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  Java_com_abilix_utils_ProgramAndInterfaceC_JCC_1Main val=0x00004f05 size=476    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  handle                                             val=0x00008054 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  cac_func                                           val=0x0000803c size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  error                                              val=0x00008048 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  AI_TYPE_ELECTROMAGNET                              val=0x00008034 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  _edata                                             val=0x00008038 size=0      type=STT_NOTYPE bind=STB_GLOBAL shndx=SHN_ABS
+  _end                                               val=0x0000805c size=0      type=STT_NOTYPE bind=STB_GLOBAL shndx=SHN_ABS
+  __bss_start                                        val=0x00008038 size=0      type=STT_NOTYPE bind=STB_GLOBAL shndx=SHN_ABS
+  abort                                              val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  memcpy                                             val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  raise                                              val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __divsi3                                           val=0x00005171 size=196    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __aeabi_idiv                                       val=0x00005171 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __aeabi_idiv0                                      val=0x00005251 size=12     type=STT_FUNC bind=STB_WEAK shndx=11
+  __aeabi_ldiv0                                      val=0x00005251 size=12     type=STT_FUNC bind=STB_WEAK shndx=11
+  __aeabi_unwind_cpp_pr2                             val=0x00005955 size=4      type=STT_FUNC bind=STB_WEAK shndx=11
+  __gnu_Unwind_Find_exidx                            val=0x00000000 size=0      type=STT_FUNC bind=STB_WEAK shndx=SHN_UNDEF
+  __gnu_Unwind_Restore_VFP_D                         val=0x00005bb1 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Restore_VFP                           val=0x00005ba1 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Restore_VFP_D_16_to_31                val=0x00005bc1 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Restore_WMMXD                         val=0x00005bd1 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Restore_WMMXC                         val=0x00005c59 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  restore_core_regs                                  val=0x00005b89 size=24     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetCFA                                     val=0x00005501 size=4      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_RaiseException                        val=0x00005505 size=98     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_ForcedUnwind                          val=0x00005567 size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Resume                                val=0x0000557b size=66     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Resume_or_Rethrow                     val=0x000055bd size=16     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_Complete                                   val=0x000055cd size=2      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_DeleteException                            val=0x000055cf size=12     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_VRS_Get                                    val=0x000055db size=46     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_VRS_Set                                    val=0x00005621 size=46     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Backtrace                             val=0x00005669 size=122    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __cxa_begin_cleanup                                val=0x00000000 size=0      type=STT_NOTYPE bind=STB_WEAK shndx=SHN_UNDEF
+  __cxa_type_match                                   val=0x00000000 size=0      type=STT_NOTYPE bind=STB_WEAK shndx=SHN_UNDEF
+  __gnu_unwind_execute                               val=0x00005d7b size=630    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __cxa_call_unexpected                              val=0x00000000 size=0      type=STT_NOTYPE bind=STB_WEAK shndx=SHN_UNDEF
+  _Unwind_VRS_Pop                                    val=0x00005959 size=560    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_WMMXD                            val=0x00005c15 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_WMMXC                            val=0x00005c6d size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_VFP                              val=0x00005ba9 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_VFP_D_16_to_31                   val=0x00005bc9 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_VFP_D                            val=0x00005bb9 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __restore_core_regs                                val=0x00005b89 size=24     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_RaiseException                           val=0x00005c81 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_RaiseException                             val=0x00005c81 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_Resume                                   val=0x00005ca5 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_Resume                                     val=0x00005ca5 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_Resume_or_Rethrow                        val=0x00005cc9 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_Resume_or_Rethrow                          val=0x00005cc9 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_ForcedUnwind                             val=0x00005ced size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_ForcedUnwind                               val=0x00005ced size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_Backtrace                                val=0x00005d11 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_Backtrace                                  val=0x00005d11 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_unwind_frame                                 val=0x00005ff1 size=42     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetRegionStart                             val=0x0000601b size=10     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetLanguageSpecificData                    val=0x00006025 size=18     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetDataRelBase                             val=0x00006037 size=6      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetTextRelBase                             val=0x0000603d size=6      type=STT_FUNC bind=STB_GLOBAL shndx=11
+SYMTAB count=513
+  $a                                                 val=0x00002524 size=0      type=STT_NOTYPE
+  $a                                                 val=0x00002514 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002520 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00007d78 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002548 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00008000 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002550 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002828 size=0      type=STT_NOTYPE
+  TAG                                                val=0x00008004 size=4      type=STT_OBJECT
+  $d                                                 val=0x00006074 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000061d0 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002888 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002914 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000061d8 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002920 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000029ac size=0      type=STT_NOTYPE
+  $t                                                 val=0x000029b8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002a2c size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006080 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000061e0 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002a38 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002ab4 size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000608c size=0      type=STT_NOTYPE
+  $d                                                 val=0x000061e8 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002ac0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002b30 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000061f0 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002b3c size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002bac size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002bb8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002c6c size=0      type=STT_NOTYPE
+  $d                                                 val=0x000061f8 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002c78 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002cec size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006098 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006200 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002cf8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002d58 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006208 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002d64 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002dc4 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002dd0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002e34 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002e40 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002e8c size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002e98 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002f0c size=0      type=STT_NOTYPE
+  $d                                                 val=0x000060a4 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006210 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002f18 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002f80 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006218 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002f8c size=0      type=STT_NOTYPE
+  $d                                                 val=0x00002fec size=0      type=STT_NOTYPE
+  $t                                                 val=0x00002ff8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000306c size=0      type=STT_NOTYPE
+  $d                                                 val=0x000060b0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006220 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003078 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000030cc size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006228 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000030d8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003138 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003144 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000031c0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000060bc size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006230 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000031cc size=0      type=STT_NOTYPE
+  $d                                                 val=0x000031f0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006238 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000031f4 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003218 size=0      type=STT_NOTYPE
+  $t                                                 val=0x0000321c size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003240 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003244 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003268 size=0      type=STT_NOTYPE
+  $t                                                 val=0x0000326c size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003290 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003294 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000032b8 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000032bc size=0      type=STT_NOTYPE
+  $d                                                 val=0x000032e0 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000032e4 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003308 size=0      type=STT_NOTYPE
+  $t                                                 val=0x0000330c size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003330 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003334 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003358 size=0      type=STT_NOTYPE
+  $t                                                 val=0x0000335c size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003380 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003384 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000033a8 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000033ac size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003428 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000060c8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006240 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003434 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003488 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006248 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003494 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000034e0 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000034ec size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003568 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000060d4 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006250 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003574 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000035d4 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006258 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000035e0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003648 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003654 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000036bc size=0      type=STT_NOTYPE
+  $t                                                 val=0x000036c8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003728 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003734 size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000379c size=0      type=STT_NOTYPE
+  $t                                                 val=0x000037a8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003824 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003830 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000038ac size=0      type=STT_NOTYPE
+  $t                                                 val=0x000038b8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003928 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006260 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003934 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000039b0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000060e0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006268 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000039bc size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006270 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000039f8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006278 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003aac size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003b74 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006280 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003b88 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003c04 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000060ec size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006288 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003c10 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003cd8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006290 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003cec size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003dcc size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006298 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003dd8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003e7c size=0      type=STT_NOTYPE
+  $d                                                 val=0x000062a0 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003e88 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003ed4 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000062a8 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003ee0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003f58 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000060f8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000062b0 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003f64 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00003fe0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006104 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000062b8 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00003fec size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000405c size=0      type=STT_NOTYPE
+  $d                                                 val=0x000062c0 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004068 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000040e4 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006110 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000062c8 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000040f0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000416c size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000611c size=0      type=STT_NOTYPE
+  $d                                                 val=0x000062d0 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004178 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00004204 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000062d8 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004210 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000042b4 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000062e0 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000042c0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00004374 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000062e8 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004380 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000043f8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006128 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000062f0 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004404 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00004474 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000062f8 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004480 size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000450c size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006300 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004518 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000045bc size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006308 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000045c8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00004640 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006310 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004650 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000046c8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006134 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006318 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000046d4 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000047b4 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006320 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000047c4 size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000482c size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006328 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004838 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00004920 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006140 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006330 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004930 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000049ac size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000614c size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006338 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000049b8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00004a30 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006158 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006340 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004a3c size=0      type=STT_NOTYPE
+  $d                                                 val=0x00004ad0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006164 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006348 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004adc size=0      type=STT_NOTYPE
+  $d                                                 val=0x00004b70 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006170 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006350 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004b7c size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006358 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004bca size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006360 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004c04 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006368 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004c52 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004ce6 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006370 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004d0c size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004d32 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006378 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004da0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006380 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004de6 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006388 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004e48 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00004eb4 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006390 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004eb8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00004efc size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000617c size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006398 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00004f04 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000050a4 size=0      type=STT_NOTYPE
+  trapsigiot6                                        val=0x000050e1 size=72     type=STT_FUNC
+  trapsigfpe8                                        val=0x00005129 size=72     type=STT_FUNC
+  $d                                                 val=0x00006188 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000063a0 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000050e0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00005120 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000063a8 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00005128 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00005168 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00008038 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00008004 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00000010 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00005170 size=0      type=STT_NOTYPE
+  .divsi3_skip_div0_test                             val=0x00005174 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00000aa8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000000c size=0      type=STT_NOTYPE
+  $t                                                 val=0x00005250 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00006194 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000063b8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000002c size=0      type=STT_NOTYPE
+  $t                                                 val=0x0000525c size=0      type=STT_NOTYPE
+  selfrel_offset31                                   val=0x0000525d size=18     type=STT_FUNC
+  $d                                                 val=0x000063c0 size=0      type=STT_NOTYPE
+  search_EIT_table                                   val=0x0000526f size=104    type=STT_FUNC
+  __gnu_unwind_get_pr_addr                           val=0x000052d7 size=50     type=STT_FUNC
+  $d                                                 val=0x000052fc size=0      type=STT_NOTYPE
+  $t                                                 val=0x00005308 size=0      type=STT_NOTYPE
+  get_eit_entry                                      val=0x00005309 size=160    type=STT_FUNC
+  $d                                                 val=0x0000539c size=0      type=STT_NOTYPE
+  $t                                                 val=0x000053a8 size=0      type=STT_NOTYPE
+  restore_non_core_regs                              val=0x000053a9 size=78     type=STT_FUNC
+  _Unwind_decode_typeinfo_ptr.isra.0                 val=0x000053f7 size=12     type=STT_FUNC
+  __gnu_unwind_24bit.isra.1                          val=0x00005403 size=4      type=STT_FUNC
+  _Unwind_DebugHook                                  val=0x00005407 size=2      type=STT_FUNC
+  unwind_phase2                                      val=0x00005409 size=58     type=STT_FUNC
+  unwind_phase2_forced                               val=0x00005443 size=190    type=STT_FUNC
+  $d                                                 val=0x000055e4 size=0      type=STT_NOTYPE
+  $t                                                 val=0x000055ea size=0      type=STT_NOTYPE
+  _Unwind_GetGR                                      val=0x00005609 size=24     type=STT_FUNC
+  $d                                                 val=0x0000562a size=0      type=STT_NOTYPE
+  $t                                                 val=0x00005630 size=0      type=STT_NOTYPE
+  _Unwind_SetGR                                      val=0x0000564f size=26     type=STT_FUNC
+  __gnu_unwind_pr_common                             val=0x000056e3 size=618    type=STT_FUNC
+  $d                                                 val=0x00005948 size=0      type=STT_NOTYPE
+  $t                                                 val=0x0000594c size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000596c size=0      type=STT_NOTYPE
+  $t                                                 val=0x00005972 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00000ac8 size=0      type=STT_NOTYPE
+  $d                                                 val=0x000055e9 size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000562f size=0      type=STT_NOTYPE
+  $d                                                 val=0x00005971 size=0      type=STT_NOTYPE
+  $t                                                 val=0x00005b88 size=0      type=STT_NOTYPE
+  $d                                                 val=0x0000006c size=0      type=STT_NOTYPE
+  $t                                                 val=0x00005d34 size=0      type=STT_NOTYPE
+  next_unwind_byte                                   val=0x00005d35 size=44     type=STT_FUNC
+  $d                                                 val=0x00006470 size=0      type=STT_NOTYPE
+  _Unwind_GetGR.constprop.0                          val=0x00005d61 size=24     type=STT_FUNC
+  unwind_UCB_from_context                            val=0x00005d79 size=2      type=STT_FUNC
+  $d                                                 val=0x000061a0 size=0      type=STT_NOTYPE
+  $d                                                 val=0x00000d90 size=0      type=STT_NOTYPE
+  __atexit_handler_wrapper                           val=0x00002524 size=12     type=STT_FUNC
+  __on_dlclose                                       val=0x00002514 size=16     type=STT_FUNC
+  atexit                                             val=0x00002530 size=32     type=STT_FUNC
+  __dso_handle                                       val=0x00008000 size=4      type=STT_OBJECT
+  _DYNAMIC                                           val=0x00007d84 size=280    type=STT_OBJECT
+  __exidx_start                                      val=0x000061d0 size=0      type=STT_NOTYPE
+  __exidx_end                                        val=0x000064c0 size=0      type=STT_NOTYPE
+  _GLOBAL_OFFSET_TABLE_                              val=0x00007f0c size=0      type=STT_OBJECT
+  $a                                                 val=0x00002248 size=0      type=STT_NOTYPE
+  CCJ_Interface                                      val=0x00002551 size=824    type=STT_FUNC
+  mutexID                                            val=0x00008058 size=4      type=STT_OBJECT
+  main_tid                                           val=0x00008040 size=4      type=STT_OBJECT
+  g_AbilixEnv                                        val=0x0000804c size=4      type=STT_OBJECT
+  g_AbilixJobject                                    val=0x00008050 size=4      type=STT_OBJECT
+  g_AbilixJVM                                        val=0x00008038 size=4      type=STT_OBJECT
+  __aeabi_unwind_cpp_pr1                             val=0x00005951 size=4      type=STT_FUNC
+  SetMotorOverTurn                                   val=0x00002889 size=152    type=STT_FUNC
+  __aeabi_unwind_cpp_pr0                             val=0x0000594d size=4      type=STT_FUNC
+  SetMotorAdvanced                                   val=0x00002921 size=152    type=STT_FUNC
+  SetMotor                                           val=0x000029b9 size=128    type=STT_FUNC
+  SetMotorTime                                       val=0x00002a39 size=136    type=STT_FUNC
+  SetMotorEncoder                                    val=0x00002ac1 size=124    type=STT_FUNC
+  SetServo                                           val=0x00002b3d size=124    type=STT_FUNC
+  SmartLed                                           val=0x00002bb9 size=192    type=STT_FUNC
+  SetDO                                              val=0x00002c79 size=128    type=STT_FUNC
+  Play                                               val=0x00002cf9 size=108    type=STT_FUNC
+  PlayUntil                                          val=0x00002d65 size=108    type=STT_FUNC
+  Wait                                               val=0x00002dd1 size=112    type=STT_FUNC
+  Clear                                              val=0x00002e41 size=88     type=STT_FUNC
+  SetEE                                              val=0x00002e99 size=128    type=STT_FUNC
+  GetEE                                              val=0x00002f19 size=116    type=STT_FUNC
+  Camera                                             val=0x00002f8d size=108    type=STT_FUNC
+  GetMicrophone                                      val=0x00002ff9 size=128    type=STT_FUNC
+  GetMic                                             val=0x00003079 size=96     type=STT_FUNC
+  PrintfExpression                                   val=0x000030d9 size=108    type=STT_FUNC
+  getAI                                              val=0x00003145 size=136    type=STT_FUNC
+  GetAI                                              val=0x000031cd size=40     type=STT_FUNC
+  AI_TYPE_UNKNOWN                                    val=0x00008044 size=4      type=STT_OBJECT
+  GetGray                                            val=0x000031f5 size=40     type=STT_FUNC
+  AI_TYPE_GRAY                                       val=0x00008010 size=4      type=STT_OBJECT
+  GetTouch                                           val=0x0000321d size=40     type=STT_FUNC
+  AI_TYPE_COLLISION                                  val=0x00008008 size=4      type=STT_OBJECT
+  GetUltraSonic                                      val=0x00003245 size=40     type=STT_FUNC
+  AI_TYPE_ULTRASONIC                                 val=0x00008018 size=4      type=STT_OBJECT
+  GetFlame                                           val=0x0000326d size=40     type=STT_FUNC
+  AI_TYPE_FLAME                                      val=0x0000801c size=4      type=STT_OBJECT
+  GetTemperature                                     val=0x00003295 size=40     type=STT_FUNC
+  AI_TYPE_TEMPERATURE                                val=0x00008028 size=4      type=STT_OBJECT
+  GetMagnet                                          val=0x000032bd size=40     type=STT_FUNC
+  AI_TYPE_MAGNETIC_SWITCH                            val=0x00008024 size=4      type=STT_OBJECT
+  GetHumidity                                        val=0x000032e5 size=40     type=STT_FUNC
+  AI_TYPE_HUMIDITY                                   val=0x0000802c size=4      type=STT_OBJECT
+  GetInfrared                                        val=0x0000330d size=40     type=STT_FUNC
+  AI_TYPE_INFRARED                                   val=0x0000800c size=4      type=STT_OBJECT
+  GetAngle                                           val=0x00003335 size=40     type=STT_FUNC
+  AI_TYPE_ANGLE                                      val=0x00008030 size=4      type=STT_OBJECT
+  GetLight                                           val=0x0000335d size=40     type=STT_FUNC
+  AI_TYPE_LIGHT                                      val=0x00008020 size=4      type=STT_OBJECT
+  GetColor                                           val=0x00003385 size=40     type=STT_FUNC
+  AI_TYPE_COLOR                                      val=0x00008014 size=4      type=STT_OBJECT
+  GetChannelGray                                     val=0x000033ad size=136    type=STT_FUNC
+  GetBattery                                         val=0x00003435 size=96     type=STT_FUNC
+  ResetMotionSensor                                  val=0x00003495 size=88     type=STT_FUNC
+  GetMotionSensor                                    val=0x000034ed size=136    type=STT_FUNC
+  ResetEncoder                                       val=0x00003575 size=108    type=STT_FUNC
+  GetEncoder                                         val=0x000035e1 size=116    type=STT_FUNC
+  GetInstantEncoder                                  val=0x00003655 size=116    type=STT_FUNC
+  ResetTimer                                         val=0x000036c9 size=108    type=STT_FUNC
+  GetTimerMS                                         val=0x00003735 size=116    type=STT_FUNC
+  GetSeconds                                         val=0x000037a9 size=136    type=STT_FUNC
+  getHIDValue                                        val=0x00003831 size=136    type=STT_FUNC
+  setSendCmd                                         val=0x000038b9 size=124    type=STT_FUNC
+  getSendCmd                                         val=0x00003935 size=136    type=STT_FUNC
+  toUpper                                            val=0x000039bd size=60     type=STT_FUNC
+  hexString2bytes                                    val=0x000039f9 size=180    type=STT_FUNC
+  getSendCmdBuffer                                   val=0x00003aad size=220    type=STT_FUNC
+  getRecvCmd                                         val=0x00003b89 size=136    type=STT_FUNC
+  getRecvCmdBuffer                                   val=0x00003c11 size=220    type=STT_FUNC
+  WER_InitRobot_5                                    val=0x00003ced size=236    type=STT_FUNC
+  WER_InitRobot                                      val=0x00003dd9 size=176    type=STT_FUNC
+  WER_Set_GrayscaleSensor                            val=0x00003e89 size=88     type=STT_FUNC
+  WER_LineWay_T                                      val=0x00003ee1 size=132    type=STT_FUNC
+  WER_LineWay_C                                      val=0x00003f65 size=136    type=STT_FUNC
+  WER_Around                                         val=0x00003fed size=124    type=STT_FUNC
+  WER_SetMotor                                       val=0x00004069 size=136    type=STT_FUNC
+  WER_SetMotor_T                                     val=0x000040f1 size=136    type=STT_FUNC
+  WER_SetMotor_E                                     val=0x00004179 size=152    type=STT_FUNC
+  WER_SetMotor_S                                     val=0x00004211 size=176    type=STT_FUNC
+  WER_SetMotor_CS                                    val=0x000042c1 size=192    type=STT_FUNC
+  WER_AdvancedWay_T                                  val=0x00004381 size=132    type=STT_FUNC
+  WER_AdvancedWay_E                                  val=0x00004405 size=124    type=STT_FUNC
+  WER_AdvancedWay_S                                  val=0x00004481 size=152    type=STT_FUNC
+  WER_AdvancedWay_CS                                 val=0x00004519 size=176    type=STT_FUNC
+  AIOpen                                             val=0x000045c9 size=136    type=STT_FUNC
+  GetAICode                                          val=0x00004651 size=132    type=STT_FUNC
+  GetAIString                                        val=0x000046d5 size=240    type=STT_FUNC
+  GetQRCode                                          val=0x000047c5 size=116    type=STT_FUNC
+  GetQRString                                        val=0x00004839 size=248    type=STT_FUNC
+  Random                                             val=0x00004931 size=136    type=STT_FUNC
+  LogPrint                                           val=0x000049b9 size=132    type=STT_FUNC
+  Log                                                val=0x00004a3d size=160    type=STT_FUNC
+  Printf                                             val=0x00004add size=160    type=STT_FUNC
+  iseven                                             val=0x00004b7d size=78     type=STT_FUNC
+  isint                                              val=0x00004bcb size=58     type=STT_FUNC
+  isodd                                              val=0x00004c05 size=78     type=STT_FUNC
+  isprime                                            val=0x00004c53 size=148    type=STT_FUNC
+  __aeabi_idivmod                                    val=0x00005235 size=26     type=STT_FUNC
+  ispositive                                         val=0x00004ce7 size=38     type=STT_FUNC
+  isnegative                                         val=0x00004d0d size=38     type=STT_FUNC
+  isdivided                                          val=0x00004d33 size=110    type=STT_FUNC
+  range                                              val=0x00004da1 size=70     type=STT_FUNC
+  rangef                                             val=0x00004de7 size=96     type=STT_FUNC
+  CreateTask                                         val=0x00004e49 size=112    type=STT_FUNC
+  Java_com_abilix_utils_ProgramAndInterfaceC_JCC_1Exit val=0x00004eb9 size=76     type=STT_FUNC
+  Java_com_abilix_utils_ProgramAndInterfaceC_JCC_1Main val=0x00004f05 size=476    type=STT_FUNC
+  handle                                             val=0x00008054 size=4      type=STT_OBJECT
+  cac_func                                           val=0x0000803c size=4      type=STT_OBJECT
+  error                                              val=0x00008048 size=4      type=STT_OBJECT
+  AI_TYPE_ELECTROMAGNET                              val=0x00008034 size=4      type=STT_OBJECT
+  _edata                                             val=0x00008038 size=0      type=STT_NOTYPE
+  _end                                               val=0x0000805c size=0      type=STT_NOTYPE
+  __bss_start                                        val=0x00008038 size=0      type=STT_NOTYPE
+  __divsi3                                           val=0x00005171 size=196    type=STT_FUNC
+  __aeabi_idiv                                       val=0x00005171 size=0      type=STT_FUNC
+  __aeabi_idiv0                                      val=0x00005251 size=12     type=STT_FUNC
+  __aeabi_ldiv0                                      val=0x00005251 size=12     type=STT_FUNC
+  __aeabi_unwind_cpp_pr2                             val=0x00005955 size=4      type=STT_FUNC
+  __gnu_Unwind_Restore_VFP_D                         val=0x00005bb1 size=0      type=STT_FUNC
+  __gnu_Unwind_Restore_VFP                           val=0x00005ba1 size=0      type=STT_FUNC
+  __gnu_Unwind_Restore_VFP_D_16_to_31                val=0x00005bc1 size=0      type=STT_FUNC
+  __gnu_Unwind_Restore_WMMXD                         val=0x00005bd1 size=0      type=STT_FUNC
+  __gnu_Unwind_Restore_WMMXC                         val=0x00005c59 size=0      type=STT_FUNC
+  restore_core_regs                                  val=0x00005b89 size=24     type=STT_FUNC
+  _Unwind_GetCFA                                     val=0x00005501 size=4      type=STT_FUNC
+  __gnu_Unwind_RaiseException                        val=0x00005505 size=98     type=STT_FUNC
+  __gnu_Unwind_ForcedUnwind                          val=0x00005567 size=20     type=STT_FUNC
+  __gnu_Unwind_Resume                                val=0x0000557b size=66     type=STT_FUNC
+  __gnu_Unwind_Resume_or_Rethrow                     val=0x000055bd size=16     type=STT_FUNC
+  _Unwind_Complete                                   val=0x000055cd size=2      type=STT_FUNC
+  _Unwind_DeleteException                            val=0x000055cf size=12     type=STT_FUNC
+  _Unwind_VRS_Get                                    val=0x000055db size=46     type=STT_FUNC
+  _Unwind_VRS_Set                                    val=0x00005621 size=46     type=STT_FUNC
+  __gnu_Unwind_Backtrace                             val=0x00005669 size=122    type=STT_FUNC
+  __gnu_unwind_execute                               val=0x00005d7b size=630    type=STT_FUNC
+  _Unwind_VRS_Pop                                    val=0x00005959 size=560    type=STT_FUNC
+  __gnu_Unwind_Save_WMMXD                            val=0x00005c15 size=0      type=STT_FUNC
+  __gnu_Unwind_Save_WMMXC                            val=0x00005c6d size=0      type=STT_FUNC
+  __gnu_Unwind_Save_VFP                              val=0x00005ba9 size=0      type=STT_FUNC
+  __gnu_Unwind_Save_VFP_D_16_to_31                   val=0x00005bc9 size=0      type=STT_FUNC
+  __gnu_Unwind_Save_VFP_D                            val=0x00005bb9 size=0      type=STT_FUNC
+  __restore_core_regs                                val=0x00005b89 size=24     type=STT_FUNC
+  ___Unwind_RaiseException                           val=0x00005c81 size=34     type=STT_FUNC
+  _Unwind_RaiseException                             val=0x00005c81 size=34     type=STT_FUNC
+  ___Unwind_Resume                                   val=0x00005ca5 size=34     type=STT_FUNC
+  _Unwind_Resume                                     val=0x00005ca5 size=34     type=STT_FUNC
+  ___Unwind_Resume_or_Rethrow                        val=0x00005cc9 size=34     type=STT_FUNC
+  _Unwind_Resume_or_Rethrow                          val=0x00005cc9 size=34     type=STT_FUNC
+  ___Unwind_ForcedUnwind                             val=0x00005ced size=34     type=STT_FUNC
+  _Unwind_ForcedUnwind                               val=0x00005ced size=34     type=STT_FUNC
+  ___Unwind_Backtrace                                val=0x00005d11 size=34     type=STT_FUNC
+  _Unwind_Backtrace                                  val=0x00005d11 size=34     type=STT_FUNC
+  __gnu_unwind_frame                                 val=0x00005ff1 size=42     type=STT_FUNC
+  _Unwind_GetRegionStart                             val=0x0000601b size=10     type=STT_FUNC
+  _Unwind_GetLanguageSpecificData                    val=0x00006025 size=18     type=STT_FUNC
+  _Unwind_GetDataRelBase                             val=0x00006037 size=6      type=STT_FUNC
+  _Unwind_GetTextRelBase                             val=0x0000603d size=6      type=STT_FUNC
+====================================================================================================
+FILE libRobot_v7a  D:\UserData\Documents\WER\2026普级赛\_分析临时\brainApk分析\6F\lib_armeabi-v7a_libRobot.so  size=26064
+ELF: class=32 machine=ARM type=ET_DYN entry=0x0
+SECTIONS:
+  [ 0]                    type=SHT_NULL       addr=0x00000000 off=0x00000 size=0x00000 flags=0
+  [11] .note.gnu.build-id type=SHT_NOTE       addr=0x00000134 off=0x00134 size=0x00024 flags=2
+  [30] .dynsym            type=SHT_DYNSYM     addr=0x00000158 off=0x00158 size=0x00bf0 flags=2
+  [38] .dynstr            type=SHT_STRTAB     addr=0x00000d48 off=0x00d48 size=0x00b51 flags=2
+  [46] .hash              type=SHT_HASH       addr=0x0000189c off=0x0189c size=0x00510 flags=2
+  [52] .gnu.version       type=SHT_GNU_versym addr=0x00001dac off=0x01dac size=0x0017e flags=2
+  [65] .gnu.version_d     type=SHT_GNU_verdef addr=0x00001f2c off=0x01f2c size=0x0001c flags=2
+  [80] .gnu.version_r     type=SHT_GNU_verneed addr=0x00001f48 off=0x01f48 size=0x00040 flags=2
+  [95] .rel.dyn           type=SHT_REL        addr=0x00001f88 off=0x01f88 size=0x000e8 flags=2
+  [104] .rel.plt           type=SHT_REL        addr=0x00002070 off=0x02070 size=0x001c0 flags=66
+  [108] .plt               type=SHT_PROGBITS   addr=0x00002230 off=0x02230 size=0x002b4 flags=6
+  [113] .text              type=SHT_PROGBITS   addr=0x000024e4 off=0x024e4 size=0x02c90 flags=6
+  [119] .ARM.extab         type=SHT_PROGBITS   addr=0x00005174 off=0x05174 size=0x002ac flags=2
+  [130] .ARM.exidx         type=SHT_ARM_EXIDX  addr=0x00005420 off=0x05420 size=0x00350 flags=130
+  [141] .rodata            type=SHT_PROGBITS   addr=0x00005770 off=0x05770 size=0x00498 flags=50
+  [149] .fini_array        type=SHT_FINI_ARRAY addr=0x00006d80 off=0x05d80 size=0x00008 flags=3
+  [161] .init_array        type=SHT_INIT_ARRAY addr=0x00006d88 off=0x05d88 size=0x00004 flags=3
+  [173] .dynamic           type=SHT_DYNAMIC    addr=0x00006d8c off=0x05d8c size=0x00118 flags=3
+  [182] .got               type=SHT_PROGBITS   addr=0x00006ea4 off=0x05ea4 size=0x0015c flags=3
+  [187] .data              type=SHT_PROGBITS   addr=0x00007000 off=0x06000 size=0x00034 flags=3
+  [193] .bss               type=SHT_NOBITS     addr=0x00007034 off=0x06034 size=0x00024 flags=3
+  [198] .comment           type=SHT_PROGBITS   addr=0x00000000 off=0x06034 size=0x00065 flags=48
+  [207] .note.gnu.gold-version type=SHT_NOTE       addr=0x00000000 off=0x0609c size=0x0001c flags=0
+  [230] .ARM.attributes    type=SHT_ARM_ATTRIBUTES addr=0x00000000 off=0x060b8 size=0x00038 flags=0
+  [ 1] .shstrtab          type=SHT_STRTAB     addr=0x00000000 off=0x060f0 size=0x000f6 flags=0
+DYNSYM count=191
+  __cxa_finalize                                     val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __cxa_atexit                                       val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  CCJ_Interface                                      val=0x00002521 size=540    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  pthread_mutex_trylock                              val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  gettid                                             val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  strlen                                             val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __aeabi_memcpy                                     val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __android_log_print                                val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  pthread_mutex_unlock                               val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __stack_chk_fail                                   val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __stack_chk_guard                                  val=0x00000000 size=0      type=STT_OBJECT bind=STB_GLOBAL shndx=SHN_UNDEF
+  dlsym                                              val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  mutexID                                            val=0x00007054 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  main_tid                                           val=0x0000703c size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  dlopen                                             val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  g_AbilixJVM                                        val=0x00007034 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  dlerror                                            val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  g_AbilixJobject                                    val=0x0000704c size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  pthread_mutex_init                                 val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  g_AbilixEnv                                        val=0x00007048 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  signal                                             val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __aeabi_unwind_cpp_pr0                             val=0x00004a3d size=4      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  exit                                               val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  SetMotorOverTurn                                   val=0x0000273d size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  sprintf                                            val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __aeabi_unwind_cpp_pr1                             val=0x00004a41 size=4      type=STT_FUNC bind=STB_WEAK shndx=11
+  SetMotorAdvanced                                   val=0x00002799 size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  SetMotor                                           val=0x000027f5 size=88     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  SetMotorTime                                       val=0x0000284d size=100    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __errno                                            val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  SetMotorEncoder                                    val=0x000028b1 size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  strerror                                           val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  SetServo                                           val=0x0000290d size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  SmartLed                                           val=0x00002969 size=100    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  SetDO                                              val=0x000029cd size=88     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  Play                                               val=0x00002a25 size=80     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  PlayUntil                                          val=0x00002a75 size=80     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  Wait                                               val=0x00002ac5 size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  Clear                                              val=0x00002b21 size=72     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  SetEE                                              val=0x00002b69 size=88     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetEE                                              val=0x00002bc1 size=84     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  atoi                                               val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  Camera                                             val=0x00002c15 size=80     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetMicrophone                                      val=0x00002c65 size=88     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetMic                                             val=0x00002cbd size=76     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  PrintfExpression                                   val=0x00002d09 size=80     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  getAI                                              val=0x00002d59 size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetAI                                              val=0x00002db5 size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_UNKNOWN                                    val=0x00007040 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  GetGray                                            val=0x00002dc9 size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_GRAY                                       val=0x0000700c size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetTouch                                           val=0x00002ddd size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_COLLISION                                  val=0x00007004 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetUltraSonic                                      val=0x00002df1 size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_ULTRASONIC                                 val=0x00007014 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetFlame                                           val=0x00002e05 size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_FLAME                                      val=0x00007018 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetTemperature                                     val=0x00002e19 size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_TEMPERATURE                                val=0x00007024 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetMagnet                                          val=0x00002e2d size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_MAGNETIC_SWITCH                            val=0x00007020 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetHumidity                                        val=0x00002e41 size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_HUMIDITY                                   val=0x00007028 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetInfrared                                        val=0x00002e55 size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_INFRARED                                   val=0x00007008 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetAngle                                           val=0x00002e69 size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_ANGLE                                      val=0x0000702c size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetLight                                           val=0x00002e7d size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_LIGHT                                      val=0x0000701c size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetColor                                           val=0x00002e91 size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AI_TYPE_COLOR                                      val=0x00007010 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  GetChannelGray                                     val=0x00002ea5 size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetBattery                                         val=0x00002f01 size=88     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ResetMotionSensor                                  val=0x00002f59 size=84     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetMotionSensor                                    val=0x00002fad size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ResetEncoder                                       val=0x00003009 size=80     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetEncoder                                         val=0x00003059 size=84     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetInstantEncoder                                  val=0x000030ad size=84     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ResetTimer                                         val=0x00003101 size=80     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetTimerMS                                         val=0x00003151 size=84     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetSeconds                                         val=0x000031a5 size=100    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  atof                                               val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  getHIDValue                                        val=0x00003209 size=100    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  setSendCmd                                         val=0x0000326d size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  getSendCmd                                         val=0x000032c9 size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  toUpper                                            val=0x00003325 size=16     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  hexString2bytes                                    val=0x00003335 size=104    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  getSendCmdBuffer                                   val=0x0000339d size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  strcmp                                             val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  getRecvCmd                                         val=0x00003425 size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  getRecvCmdBuffer                                   val=0x00003481 size=136    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_InitRobot_5                                    val=0x00003509 size=140    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_InitRobot                                      val=0x00003595 size=116    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_Set_GrayscaleSensor                            val=0x00003609 size=76     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_LineWay_T                                      val=0x00003655 size=96     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_LineWay_C                                      val=0x000036b5 size=100    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_Around                                         val=0x00003719 size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_SetMotor                                       val=0x00003775 size=100    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_SetMotor_T                                     val=0x000037d9 size=100    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_SetMotor_E                                     val=0x0000383d size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_SetMotor_S                                     val=0x00003899 size=96     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_SetMotor_CS                                    val=0x000038f9 size=100    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_AdvancedWay_T                                  val=0x0000395d size=96     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_AdvancedWay_E                                  val=0x000039bd size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_AdvancedWay_S                                  val=0x00003a19 size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  WER_AdvancedWay_CS                                 val=0x00003a75 size=96     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  AIOpen                                             val=0x00003ad5 size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetAICode                                          val=0x00003b31 size=88     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetAIString                                        val=0x00003b89 size=144    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetQRCode                                          val=0x00003c19 size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  GetQRString                                        val=0x00003c75 size=148    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  Random                                             val=0x00003d09 size=92     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  LogPrint                                           val=0x00003d65 size=112    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  vsnprintf                                          val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  Log                                                val=0x00003dd5 size=132    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  Printf                                             val=0x00003e59 size=132    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  iseven                                             val=0x00003edd size=40     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  isint                                              val=0x00003f05 size=32     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  isodd                                              val=0x00003f25 size=38     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  isprime                                            val=0x00003f4b size=86     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __aeabi_idivmod                                    val=0x00004325 size=26     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ispositive                                         val=0x00003fa1 size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  isnegative                                         val=0x00003fb5 size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  isdivided                                          val=0x00003fc9 size=84     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  range                                              val=0x0000401d size=16     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  rangef                                             val=0x0000402d size=46     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  CreateTask                                         val=0x0000405d size=80     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  pthread_attr_init                                  val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  pthread_attr_setdetachstate                        val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  pthread_create                                     val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  Java_com_abilix_utils_ProgramAndInterfaceC_JCC_1Exit val=0x000040ad size=36     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  Java_com_abilix_utils_ProgramAndInterfaceC_JCC_1Main val=0x000040d1 size=304    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  handle                                             val=0x00007050 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  cac_func                                           val=0x00007038 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  error                                              val=0x00007044 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=20
+  AI_TYPE_ELECTROMAGNET                              val=0x00007030 size=4      type=STT_OBJECT bind=STB_GLOBAL shndx=19
+  _edata                                             val=0x00007034 size=0      type=STT_NOTYPE bind=STB_GLOBAL shndx=SHN_ABS
+  _end                                               val=0x00007058 size=0      type=STT_NOTYPE bind=STB_GLOBAL shndx=SHN_ABS
+  __bss_start                                        val=0x00007034 size=0      type=STT_NOTYPE bind=STB_GLOBAL shndx=SHN_ABS
+  abort                                              val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  memcpy                                             val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  raise                                              val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __divsi3                                           val=0x00004261 size=196    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __aeabi_idiv                                       val=0x00004261 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __aeabi_idiv0                                      val=0x00004341 size=12     type=STT_FUNC bind=STB_WEAK shndx=11
+  __aeabi_ldiv0                                      val=0x00004341 size=12     type=STT_FUNC bind=STB_WEAK shndx=11
+  __aeabi_unwind_cpp_pr2                             val=0x00004a45 size=4      type=STT_FUNC bind=STB_WEAK shndx=11
+  __gnu_Unwind_Find_exidx                            val=0x00000000 size=0      type=STT_FUNC bind=STB_WEAK shndx=SHN_UNDEF
+  __gnu_Unwind_Restore_VFP_D                         val=0x00004ca1 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Restore_VFP                           val=0x00004c91 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Restore_VFP_D_16_to_31                val=0x00004cb1 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Restore_WMMXD                         val=0x00004cc1 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Restore_WMMXC                         val=0x00004d49 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  restore_core_regs                                  val=0x00004c79 size=24     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetCFA                                     val=0x000045f1 size=4      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_RaiseException                        val=0x000045f5 size=98     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_ForcedUnwind                          val=0x00004657 size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Resume                                val=0x0000466b size=66     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Resume_or_Rethrow                     val=0x000046ad size=16     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_Complete                                   val=0x000046bd size=2      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_DeleteException                            val=0x000046bf size=12     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_VRS_Get                                    val=0x000046cb size=46     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_VRS_Set                                    val=0x00004711 size=46     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Backtrace                             val=0x00004759 size=122    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __cxa_begin_cleanup                                val=0x00000000 size=0      type=STT_NOTYPE bind=STB_WEAK shndx=SHN_UNDEF
+  __cxa_type_match                                   val=0x00000000 size=0      type=STT_NOTYPE bind=STB_WEAK shndx=SHN_UNDEF
+  __gnu_unwind_execute                               val=0x00004e6b size=630    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __cxa_call_unexpected                              val=0x00000000 size=0      type=STT_NOTYPE bind=STB_WEAK shndx=SHN_UNDEF
+  _Unwind_VRS_Pop                                    val=0x00004a49 size=560    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_WMMXD                            val=0x00004d05 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_WMMXC                            val=0x00004d5d size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_VFP                              val=0x00004c99 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_VFP_D_16_to_31                   val=0x00004cb9 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_VFP_D                            val=0x00004ca9 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __restore_core_regs                                val=0x00004c79 size=24     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_RaiseException                           val=0x00004d71 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_RaiseException                             val=0x00004d71 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_Resume                                   val=0x00004d95 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_Resume                                     val=0x00004d95 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_Resume_or_Rethrow                        val=0x00004db9 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_Resume_or_Rethrow                          val=0x00004db9 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_ForcedUnwind                             val=0x00004ddd size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_ForcedUnwind                               val=0x00004ddd size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_Backtrace                                val=0x00004e01 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_Backtrace                                  val=0x00004e01 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_unwind_frame                                 val=0x000050e1 size=42     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetRegionStart                             val=0x0000510b size=10     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetLanguageSpecificData                    val=0x00005115 size=18     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetDataRelBase                             val=0x00005127 size=6      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetTextRelBase                             val=0x0000512d size=6      type=STT_FUNC bind=STB_GLOBAL shndx=11
+NO .symtab (stripped)
+====================================================================================================
+FILE libserial  D:\UserData\Documents\WER\2026普级赛\_分析临时\brainApk分析\6F\lib_armeabi-v7a_libserial.so  size=13728
+ELF: class=32 machine=ARM type=ET_DYN entry=0x0
+SECTIONS:
+  [ 0]                    type=SHT_NULL       addr=0x00000000 off=0x00000 size=0x00000 flags=0
+  [11] .note.gnu.build-id type=SHT_NOTE       addr=0x00000134 off=0x00134 size=0x00024 flags=2
+  [30] .dynsym            type=SHT_DYNSYM     addr=0x00000158 off=0x00158 size=0x00420 flags=2
+  [38] .dynstr            type=SHT_STRTAB     addr=0x00000578 off=0x00578 size=0x00554 flags=2
+  [46] .hash              type=SHT_HASH       addr=0x00000acc off=0x00acc size=0x001a4 flags=2
+  [52] .gnu.version       type=SHT_GNU_versym addr=0x00000c70 off=0x00c70 size=0x00084 flags=2
+  [65] .gnu.version_d     type=SHT_GNU_verdef addr=0x00000cf4 off=0x00cf4 size=0x0001c flags=2
+  [80] .gnu.version_r     type=SHT_GNU_verneed addr=0x00000d10 off=0x00d10 size=0x00020 flags=2
+  [95] .rel.dyn           type=SHT_REL        addr=0x00000d30 off=0x00d30 size=0x00048 flags=2
+  [104] .rel.plt           type=SHT_REL        addr=0x00000d78 off=0x00d78 size=0x00120 flags=66
+  [108] .plt               type=SHT_PROGBITS   addr=0x00000e98 off=0x00e98 size=0x001c4 flags=6
+  [113] .text              type=SHT_PROGBITS   addr=0x0000105c off=0x0105c size=0x012e0 flags=6
+  [119] .ARM.extab         type=SHT_PROGBITS   addr=0x0000233c off=0x0233c size=0x00030 flags=2
+  [130] .ARM.exidx         type=SHT_ARM_EXIDX  addr=0x0000236c off=0x0236c size=0x00110 flags=130
+  [141] .rodata            type=SHT_PROGBITS   addr=0x0000247c off=0x0247c size=0x000f9 flags=50
+  [149] .fini_array        type=SHT_FINI_ARRAY addr=0x00003e20 off=0x02e20 size=0x00008 flags=3
+  [161] .init_array        type=SHT_INIT_ARRAY addr=0x00003e28 off=0x02e28 size=0x00004 flags=3
+  [173] .dynamic           type=SHT_DYNAMIC    addr=0x00003e2c off=0x02e2c size=0x00118 flags=3
+  [182] .got               type=SHT_PROGBITS   addr=0x00003f44 off=0x02f44 size=0x000bc flags=3
+  [187] .data              type=SHT_PROGBITS   addr=0x00004000 off=0x03000 size=0x00004 flags=3
+  [193] .bss               type=SHT_NOBITS     addr=0x00004004 off=0x03004 size=0x00000 flags=3
+  [198] .comment           type=SHT_PROGBITS   addr=0x00000000 off=0x03004 size=0x00065 flags=48
+  [207] .note.gnu.gold-version type=SHT_NOTE       addr=0x00000000 off=0x0306c size=0x0001c flags=0
+  [230] .ARM.attributes    type=SHT_ARM_ATTRIBUTES addr=0x00000000 off=0x03088 size=0x00038 flags=0
+  [ 1] .shstrtab          type=SHT_STRTAB     addr=0x00000000 off=0x030c0 size=0x000f6 flags=0
+DYNSYM count=66
+  __cxa_finalize                                     val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __cxa_atexit                                       val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  Java_com_abilix_utils_SerialPort_open              val=0x00001099 size=996    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __android_log_print                                val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  open                                               val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  tcgetattr                                          val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  cfmakeraw                                          val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __stack_chk_guard                                  val=0x00000000 size=0      type=STT_OBJECT bind=STB_GLOBAL shndx=SHN_UNDEF
+  cfsetispeed                                        val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __stack_chk_fail                                   val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  cfsetospeed                                        val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  tcsetattr                                          val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  close                                              val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __aeabi_unwind_cpp_pr0                             val=0x00001c15 size=4      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  Java_com_abilix_utils_SerialPort_close             val=0x0000147d size=168    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _edata                                             val=0x00004004 size=0      type=STT_NOTYPE bind=STB_GLOBAL shndx=SHN_ABS
+  _end                                               val=0x00004004 size=0      type=STT_NOTYPE bind=STB_GLOBAL shndx=SHN_ABS
+  __bss_start                                        val=0x00004004 size=0      type=STT_NOTYPE bind=STB_GLOBAL shndx=SHN_ABS
+  abort                                              val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  memcpy                                             val=0x00000000 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=SHN_UNDEF
+  __aeabi_unwind_cpp_pr1                             val=0x00001c19 size=4      type=STT_FUNC bind=STB_WEAK shndx=11
+  __aeabi_unwind_cpp_pr2                             val=0x00001c1d size=4      type=STT_FUNC bind=STB_WEAK shndx=11
+  __gnu_Unwind_Find_exidx                            val=0x00000000 size=0      type=STT_FUNC bind=STB_WEAK shndx=SHN_UNDEF
+  __gnu_Unwind_Restore_VFP_D                         val=0x00001e79 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Restore_VFP                           val=0x00001e69 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Restore_VFP_D_16_to_31                val=0x00001e89 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Restore_WMMXD                         val=0x00001e99 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Restore_WMMXC                         val=0x00001f21 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  restore_core_regs                                  val=0x00001e51 size=24     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetCFA                                     val=0x000017c9 size=4      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_RaiseException                        val=0x000017cd size=98     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_ForcedUnwind                          val=0x0000182f size=20     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Resume                                val=0x00001843 size=66     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Resume_or_Rethrow                     val=0x00001885 size=16     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_Complete                                   val=0x00001895 size=2      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_DeleteException                            val=0x00001897 size=12     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_VRS_Get                                    val=0x000018a3 size=46     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_VRS_Set                                    val=0x000018e9 size=46     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Backtrace                             val=0x00001931 size=122    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __cxa_begin_cleanup                                val=0x00000000 size=0      type=STT_NOTYPE bind=STB_WEAK shndx=SHN_UNDEF
+  __cxa_type_match                                   val=0x00000000 size=0      type=STT_NOTYPE bind=STB_WEAK shndx=SHN_UNDEF
+  __gnu_unwind_execute                               val=0x00002043 size=630    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __cxa_call_unexpected                              val=0x00000000 size=0      type=STT_NOTYPE bind=STB_WEAK shndx=SHN_UNDEF
+  _Unwind_VRS_Pop                                    val=0x00001c21 size=560    type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_WMMXD                            val=0x00001edd size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_WMMXC                            val=0x00001f35 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_VFP                              val=0x00001e71 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_VFP_D_16_to_31                   val=0x00001e91 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_Unwind_Save_VFP_D                            val=0x00001e81 size=0      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __restore_core_regs                                val=0x00001e51 size=24     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_RaiseException                           val=0x00001f49 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_RaiseException                             val=0x00001f49 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_Resume                                   val=0x00001f6d size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_Resume                                     val=0x00001f6d size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_Resume_or_Rethrow                        val=0x00001f91 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_Resume_or_Rethrow                          val=0x00001f91 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_ForcedUnwind                             val=0x00001fb5 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_ForcedUnwind                               val=0x00001fb5 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  ___Unwind_Backtrace                                val=0x00001fd9 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_Backtrace                                  val=0x00001fd9 size=34     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  __gnu_unwind_frame                                 val=0x000022b9 size=42     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetRegionStart                             val=0x000022e3 size=10     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetLanguageSpecificData                    val=0x000022ed size=18     type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetDataRelBase                             val=0x000022ff size=6      type=STT_FUNC bind=STB_GLOBAL shndx=11
+  _Unwind_GetTextRelBase                             val=0x00002305 size=6      type=STT_FUNC bind=STB_GLOBAL shndx=11
+NO .symtab (stripped)

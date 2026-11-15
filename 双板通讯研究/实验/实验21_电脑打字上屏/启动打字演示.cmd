@@ -1,0 +1,3 @@
+@echo off
+echo Starting typing demo...
+start "" /d "%~dp0" cmd /c "%~dp0start_typing_demo.cmd"

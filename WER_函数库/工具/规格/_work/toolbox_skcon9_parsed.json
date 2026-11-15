@@ -1,0 +1,1817 @@
+[
+ {
+  "name": "%{BKY_ABILIX_SCRATCH_CATEGORY_MOTION}",
+  "custom": null,
+  "blocks": [
+   {
+    "type": "motor",
+    "fields": [
+     [
+      "NUM",
+      "0"
+     ],
+     [
+      "NUM",
+      "50"
+     ]
+    ],
+    "values": [
+     {
+      "name": "channel",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "0"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "speed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "50"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "motor_time",
+    "fields": [
+     [
+      "NUM",
+      "0"
+     ],
+     [
+      "NUM",
+      "50"
+     ],
+     [
+      "NUM",
+      "2.5"
+     ]
+    ],
+    "values": [
+     {
+      "name": "channel",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "0"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "speed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "50"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "time",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "2.5"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "dual_motor_duration",
+    "fields": [
+     [
+      "port_1",
+      "1"
+     ],
+     [
+      "port_2",
+      "2"
+     ],
+     [
+      "NUM",
+      "80"
+     ],
+     [
+      "NUM",
+      "80"
+     ],
+     [
+      "NUM",
+      "2.5"
+     ]
+    ],
+    "values": [
+     {
+      "name": "speed_1",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "80"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "speed_2",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "80"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "time",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "2.5"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "motor_angle",
+    "fields": [
+     [
+      "NUM",
+      "0"
+     ],
+     [
+      "NUM",
+      "50"
+     ],
+     [
+      "NUM",
+      "3200"
+     ]
+    ],
+    "values": [
+     {
+      "name": "channel",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "0"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "speed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "50"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "angle",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "3200"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "dual_motor_angle",
+    "fields": [
+     [
+      "port_1",
+      "1"
+     ],
+     [
+      "NUM",
+      "80"
+     ],
+     [
+      "port_2",
+      "2"
+     ],
+     [
+      "NUM",
+      "80"
+     ],
+     [
+      "port_3",
+      "1"
+     ],
+     [
+      "NUM",
+      "3200"
+     ]
+    ],
+    "values": [
+     {
+      "name": "speed_1",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "80"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "speed_2",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "80"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "angle",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "3200"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "servoa_angle",
+    "fields": [
+     [
+      "NUM",
+      "0"
+     ],
+     [
+      "NUM",
+      "50"
+     ],
+     [
+      "NUM",
+      "0"
+     ]
+    ],
+    "values": [
+     {
+      "name": "channel",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "0"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "speed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "50"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "angle",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "0"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "set_electric_magnet"
+   },
+   {
+    "type": "set_motor_reverse_open_loop"
+   }
+  ]
+ },
+ {
+  "name": "%{BKY_ABILIX_SCRATCH_CATEGORY_OUTPUT}",
+  "custom": null,
+  "blocks": [
+   {
+    "type": "set_do"
+   },
+   {
+    "type": "printf_text"
+   },
+   {
+    "type": "printf_number",
+    "fields": [
+     [
+      "NUM",
+      "100"
+     ]
+    ],
+    "values": [
+     {
+      "name": "data",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "100"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "printf",
+    "fields": [
+     [
+      "NUM",
+      "100"
+     ]
+    ],
+    "values": [
+     {
+      "name": "para1",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "100"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "printf_lines"
+   },
+   {
+    "type": "printf_emoji"
+   }
+  ]
+ },
+ {
+  "name": "%{BKY_ABILIX_SCRATCH_CATEGORY_SOUND_AND_LIGHT}",
+  "custom": null,
+  "blocks": [
+   {
+    "type": "play_sound"
+   },
+   {
+    "type": "play_sound_until"
+   },
+   {
+    "type": "record"
+   },
+   {
+    "type": "set_coloured_light"
+   },
+   {
+    "type": "set_smart_light"
+   },
+   {
+    "type": "close_smart_light"
+   }
+  ]
+ },
+ {
+  "name": "%{BKY_ABILIX_SCRATCH_CATEGORY_SENSOR}",
+  "custom": null,
+  "blocks": [
+   {
+    "type": "getai_glay"
+   },
+   {
+    "type": "get_integrated_grayscale"
+   },
+   {
+    "type": "getai_touch"
+   },
+   {
+    "type": "getai_sonic"
+   },
+   {
+    "type": "get_sonic_detect_object"
+   },
+   {
+    "type": "getai_ir"
+   },
+   {
+    "type": "get_flame"
+   },
+   {
+    "type": "getai_temperature"
+   },
+   {
+    "type": "get_humidity"
+   },
+   {
+    "type": "get_magnetic"
+   },
+   {
+    "type": "get_colour"
+   },
+   {
+    "type": "getai_light"
+   },
+   {
+    "type": "get_angle"
+   },
+   {
+    "type": "get_intelligent_motor_angle"
+   },
+   {
+    "type": "getencoder"
+   },
+   {
+    "type": "get_encoder_real_time_value"
+   },
+   {
+    "type": "resetencoder"
+   },
+   {
+    "type": "getai_mic"
+   },
+   {
+    "type": "getmotionsensor"
+   },
+   {
+    "type": "get_motion_sensor_angular_velocity"
+   },
+   {
+    "type": "resetmotionsensor"
+   },
+   {
+    "type": "getmseconds"
+   },
+   {
+    "type": "getmsecondsreset"
+   },
+   {
+    "type": "eeprom_read"
+   },
+   {
+    "type": "eeprom_write",
+    "fields": [
+     [
+      "NUM",
+      "100"
+     ]
+    ],
+    "values": [
+     {
+      "name": "data",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "100"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "get_aibychannel",
+    "fields": [
+     [
+      "NUM",
+      "1"
+     ]
+    ],
+    "values": [
+     {
+      "name": "NAME",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "1"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "getai_battery"
+   }
+  ]
+ },
+ {
+  "name": "%{BKY_ABILIX_SCRATCH_CATEGORY_LINE_PATROL}",
+  "custom": null,
+  "blocks": [
+   {
+    "type": "walkline_init",
+    "fields": [
+     [
+      "leftch",
+      "1"
+     ],
+     [
+      "rightch",
+      "4"
+     ],
+     [
+      "ch1",
+      "1"
+     ],
+     [
+      "ch2",
+      "2"
+     ],
+     [
+      "ch3",
+      "3"
+     ],
+     [
+      "ch4",
+      "4"
+     ],
+     [
+      "ch5",
+      "5"
+     ]
+    ]
+   },
+   {
+    "type": "walkline_init_integrated_grayscale",
+    "fields": [
+     [
+      "leftch",
+      "1"
+     ],
+     [
+      "rightch",
+      "4"
+     ],
+     [
+      "port",
+      "1"
+     ]
+    ]
+   },
+   {
+    "type": "walkline_floorsensor"
+   },
+   {
+    "type": "walkline_linewayc",
+    "fields": [
+     [
+      "type",
+      "1"
+     ],
+     [
+      "NUM",
+      "60"
+     ],
+     [
+      "NUM",
+      "0.05"
+     ]
+    ],
+    "values": [
+     {
+      "name": "speed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "60"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "time",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "0.05"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "walkline_linewayt",
+    "fields": [
+     [
+      "NUM",
+      "60"
+     ],
+     [
+      "NUM",
+      "0.5"
+     ]
+    ],
+    "values": [
+     {
+      "name": "speed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "60"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "time",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "0.5"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "walkline_lineway_e",
+    "fields": [
+     [
+      "NUM",
+      "60"
+     ],
+     [
+      "motor_port",
+      "0"
+     ],
+     [
+      "NUM",
+      "3200"
+     ]
+    ],
+    "values": [
+     {
+      "name": "speed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "60"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "encoder_value",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "3200"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "walkline_stop_until",
+    "fields": [
+     [
+      "NUM",
+      "60"
+     ],
+     [
+      "NUM",
+      "true"
+     ],
+     [
+      "OP",
+      "LT"
+     ],
+     [
+      "NUM",
+      "10"
+     ],
+     [
+      "NUM",
+      "1500"
+     ]
+    ],
+    "values": [
+     {
+      "name": "speed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "60"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "stop_condition",
+      "shadow": [
+       {
+        "type": "logic_boolean",
+        "fields": [
+         [
+          "NUM",
+          "true"
+         ]
+        ]
+       },
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "10"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "logic_compare",
+    "fields": [
+     [
+      "OP",
+      "LT"
+     ],
+     [
+      "NUM",
+      "10"
+     ],
+     [
+      "NUM",
+      "1500"
+     ]
+    ],
+    "values": [
+     {
+      "name": "A",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "10"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "B",
+      "shadow": []
+     }
+    ]
+   },
+   {
+    "type": "getai_glay"
+   },
+   {
+    "type": "math_number",
+    "fields": [
+     [
+      "NUM",
+      "1500"
+     ]
+    ]
+   },
+   {
+    "type": "walkline_around",
+    "fields": [
+     [
+      "NUM",
+      "20"
+     ],
+     [
+      "NUM",
+      "-20"
+     ]
+    ],
+    "values": [
+     {
+      "name": "leftspeed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "20"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "rightspeed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "-20"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "walkline_start_motor_last",
+    "fields": [
+     [
+      "NUM",
+      "20"
+     ],
+     [
+      "NUM",
+      "20"
+     ],
+     [
+      "NUM",
+      "0.5"
+     ]
+    ],
+    "values": [
+     {
+      "name": "left_speed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "20"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "right_speed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "20"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "duration",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "0.5"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "wer_set_motor_e",
+    "fields": [
+     [
+      "NUM",
+      "20"
+     ],
+     [
+      "NUM",
+      "20"
+     ],
+     [
+      "motor_port",
+      "0"
+     ],
+     [
+      "NUM",
+      "3200"
+     ]
+    ],
+    "values": [
+     {
+      "name": "left_speed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "20"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "right_speed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "20"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "encoder_value",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "3200"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "walkline_motor_stop_until",
+    "fields": [
+     [
+      "NUM",
+      "20"
+     ],
+     [
+      "NUM",
+      "20"
+     ],
+     [
+      "NUM",
+      "true"
+     ],
+     [
+      "OP",
+      "LT"
+     ],
+     [
+      "NUM",
+      "10"
+     ],
+     [
+      "NUM",
+      "1500"
+     ]
+    ],
+    "values": [
+     {
+      "name": "leftspeed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "20"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "rightspeed",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "20"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "stopbool",
+      "shadow": [
+       {
+        "type": "logic_boolean",
+        "fields": [
+         [
+          "NUM",
+          "true"
+         ]
+        ]
+       },
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "10"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "logic_compare",
+    "fields": [
+     [
+      "OP",
+      "LT"
+     ],
+     [
+      "NUM",
+      "10"
+     ],
+     [
+      "NUM",
+      "1500"
+     ]
+    ],
+    "values": [
+     {
+      "name": "A",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "10"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "B",
+      "shadow": []
+     }
+    ]
+   },
+   {
+    "type": "getai_glay"
+   },
+   {
+    "type": "math_number",
+    "fields": [
+     [
+      "NUM",
+      "1500"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "%{BKY_ABILIX_SCRATCH_CATEGORY_AI}",
+  "custom": null,
+  "blocks": [
+   {
+    "type": "logic_compare",
+    "fields": [
+     [
+      "OP",
+      "EQ"
+     ],
+     [
+      "NUM",
+      "10"
+     ]
+    ],
+    "values": [
+     {
+      "name": "A",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "10"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "B",
+      "shadow": []
+     }
+    ]
+   },
+   {
+    "type": "get_camcode",
+    "fields": [
+     [
+      "NUM",
+      "10"
+     ]
+    ],
+    "values": [
+     {
+      "name": "time",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "10"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "block_conststring"
+   },
+   {
+    "type": "ai_learn"
+   },
+   {
+    "type": "ai_open"
+   },
+   {
+    "type": "ai_close"
+   },
+   {
+    "type": "ai_result"
+   }
+  ]
+ },
+ {
+  "name": "%{BKY_ABILIX_SCRATCH_CATEGORY_CONTROL}",
+  "custom": null,
+  "blocks": [
+   {
+    "type": "wait",
+    "fields": [
+     [
+      "NUM",
+      "1"
+     ]
+    ],
+    "values": [
+     {
+      "name": "time",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "1"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "if",
+    "fields": [
+     [
+      "logic",
+      "true"
+     ]
+    ],
+    "values": [
+     {
+      "name": "logic_val",
+      "shadow": [
+       {
+        "type": "logic_boolean",
+        "fields": [
+         [
+          "logic",
+          "true"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ifelse",
+    "fields": [
+     [
+      "logic",
+      "true"
+     ]
+    ],
+    "values": [
+     {
+      "name": "logic_val",
+      "shadow": [
+       {
+        "type": "logic_boolean",
+        "fields": [
+         [
+          "logic",
+          "true"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "while_forver"
+   },
+   {
+    "type": "while_number",
+    "fields": [
+     [
+      "NUM",
+      "10"
+     ]
+    ],
+    "values": [
+     {
+      "name": "TIMES",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "10"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "while_cmp",
+    "fields": [
+     [
+      "logic",
+      "true"
+     ]
+    ],
+    "values": [
+     {
+      "name": "bool",
+      "shadow": [
+       {
+        "type": "logic_boolean",
+        "fields": [
+         [
+          "logic",
+          "true"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "wait_until",
+    "fields": [
+     [
+      "logic",
+      "true"
+     ]
+    ],
+    "values": [
+     {
+      "name": "bool",
+      "shadow": [
+       {
+        "type": "logic_boolean",
+        "fields": [
+         [
+          "logic",
+          "true"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "while_break"
+   }
+  ]
+ },
+ {
+  "name": "%{BKY_ABILIX_SCRATCH_CATEGORY_OPERATION}",
+  "custom": null,
+  "blocks": [
+   {
+    "type": "math_op",
+    "fields": [
+     [
+      "NUM",
+      "1"
+     ],
+     [
+      "NUM",
+      "1"
+     ]
+    ],
+    "values": [
+     {
+      "name": "A",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "1"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "B",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "1"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "math_compare",
+    "fields": [
+     [
+      "NUM",
+      "1"
+     ],
+     [
+      "NUM",
+      "1"
+     ]
+    ],
+    "values": [
+     {
+      "name": "A",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "1"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "B",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "1"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "logic_operation",
+    "fields": [
+     [
+      "NUM",
+      "true"
+     ],
+     [
+      "NUM",
+      "true"
+     ]
+    ],
+    "values": [
+     {
+      "name": "A",
+      "shadow": [
+       {
+        "type": "logic_boolean",
+        "fields": [
+         [
+          "NUM",
+          "true"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "B",
+      "shadow": [
+       {
+        "type": "logic_boolean",
+        "fields": [
+         [
+          "NUM",
+          "true"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "logic_negate"
+   },
+   {
+    "type": "logic_boolean"
+   },
+   {
+    "type": "robot_math_unary_operation",
+    "fields": [
+     [
+      "NUM",
+      "9"
+     ]
+    ],
+    "values": [
+     {
+      "name": "operand",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "9"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "robot_math_trigonometric_function",
+    "fields": [
+     [
+      "NUM",
+      "45"
+     ]
+    ],
+    "values": [
+     {
+      "name": "param",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "45"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "robot_math_rounding",
+    "fields": [
+     [
+      "NUM",
+      "3.1"
+     ]
+    ],
+    "values": [
+     {
+      "name": "param",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "3.1"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "abilix_math_number_property",
+    "fields": [
+     [
+      "NUM",
+      "0"
+     ]
+    ],
+    "values": [
+     {
+      "name": "NUMBER_TO_CHECK",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "0"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "math_modulo",
+    "fields": [
+     [
+      "NUM",
+      "64"
+     ],
+     [
+      "NUM",
+      "10"
+     ]
+    ],
+    "values": [
+     {
+      "name": "DIVIDEND",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "64"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "DIVISOR",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "10"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "robot_math_random",
+    "fields": [
+     [
+      "NUM",
+      "1"
+     ],
+     [
+      "NUM",
+      "100"
+     ]
+    ],
+    "values": [
+     {
+      "name": "FROM",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "1"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "name": "TO",
+      "shadow": [
+       {
+        "type": "math_number",
+        "fields": [
+         [
+          "NUM",
+          "100"
+         ]
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "math_number"
+   },
+   {
+    "type": "block_conststring"
+   },
+   {
+    "type": "robot_math_constants"
+   }
+  ]
+ },
+ {
+  "name": "%{BKY_ABILIX_SCRATCH_CATEGORY_VARIABLE}",
+  "custom": "VARIABLE",
+  "blocks": []
+ },
+ {
+  "name": "%{BKY_ABILIX_SCRATCH_CATEGORY_FUNCTION}",
+  "custom": "PROCEDURE",
+  "blocks": [
+   {
+    "type": "function_call_noreturn"
+   }
+  ]
+ },
+ {
+  "name": "%{BKY_ABILIX_SCRATCH_CATEGORY_COMMENT}",
+  "custom": null,
+  "blocks": [
+   {
+    "type": "annotation"
+   },
+   {
+    "type": "block_mod"
+   }
+  ]
+ }
+]

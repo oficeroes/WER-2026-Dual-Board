@@ -1,0 +1,16 @@
+=== JNIPROBE v15 ===
+uid=10017 pid=3537
+上次运行停在: 31 done
+d ok
+ ok
+true
+
+
+ed ok
+ ok
+�机器人屏幕点允许）
+probe rc=0
+  step=31 msg=done
+  vm=1 env=1 app=1 usb=1 ndev=1 found=1 has_perm=1 conn=1 fd=59
+  first dev vid=090c pid=037c
+=== END ===

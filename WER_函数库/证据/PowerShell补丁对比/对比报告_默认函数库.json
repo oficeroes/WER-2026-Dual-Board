@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "errors": [],
+  "original_sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40",
+  "python_sha256": "be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c",
+  "ps_sha256": "be850838de0b49f7fa7652b8602360492772b7036dd8ac1589d736fabc95bc8c",
+  "byte_identical": true,
+  "same_entries": 6644,
+  "init_shas": {
+    "old": "c86fe3fa00c0433c43cf888eedaedebe71d35c93d161ac13d034222901447561",
+    "python": "8437593c10b8a44bc733ff3716853de209ae4db4abc093d327a0e17e1a71fa2e",
+    "ps": "8437593c10b8a44bc733ff3716853de209ae4db4abc093d327a0e17e1a71fa2e",
+    "old_len": 5242,
+    "python_len": 6633,
+    "ps_len": 6633
+  },
+  "fragment": {
+    "chars": 1155,
+    "sha256": "37930c19eafaefbcefbcb41dca8ac9ab9d468bf79f7a390099bbcfcc6652b1ef"
+  },
+  "decoded": {
+    "python_sha256": "37930c19eafaefbcefbcb41dca8ac9ab9d468bf79f7a390099bbcfcc6652b1ef",
+    "ps_sha256": "37930c19eafaefbcefbcb41dca8ac9ab9d468bf79f7a390099bbcfcc6652b1ef",
+    "equals_fragment": true,
+    "other_unchanged_defaultcodeTr": true,
+    "other_unchanged_defaultcodeEn": true
+  }
+}

@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.tmp
+*.bak
+
+# 85 MB prebuilt assets (built locally, never committed)
+WER_函数库/安装包/browser_assets.patched
+WER_函数库/安装包_双板通讯/browser_assets.patched
+WER_函数库/工具/原生积木/备份/*.bin
+WER_函数库/工具/原生积木/备份/browser_assets.双板通讯前-*.bin

@@ -1,0 +1,1784 @@
+{
+  "meta": {
+    "tool": "run_validate.py",
+    "toolVersion": "1.0",
+    "generatedAt": "2026-11-10T13:32:31",
+    "argv": [
+      "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\工具\\验证\\run_validate.py",
+      "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\lead_harness\\ide_resaved.srh",
+      "--py",
+      "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\工具\\验证\\证据\\真实IDE回存\\ide_resaved.py",
+      "--json",
+      "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\工具\\验证\\证据\\真实IDE回存\\ide_resaved.json",
+      "--evidence-dir",
+      "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\工具\\验证\\证据\\真实IDE回存"
+    ],
+    "python": "3.12.14",
+    "mode": "project",
+    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "webRoot": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\blockly_web",
+    "elapsedMs": 2022,
+    "pythonOutput": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\工具\\验证\\证据\\真实IDE回存\\ide_resaved.py",
+    "jsonOutput": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\工具\\验证\\证据\\真实IDE回存\\ide_resaved.json"
+  },
+  "ok": true,
+  "errors": [],
+  "project": {
+    "inputPath": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\lead_harness\\ide_resaved.srh",
+    "format": "srh",
+    "encoding": "utf-8-sig",
+    "info": {
+      "Version": "1.0.3.4",
+      "RobotType": "SKCON9",
+      "DownloadProgramName": "WERFuncLib"
+    },
+    "infoRaw": "\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ScratchProjectInfo xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <Version>1.0.3.4</Version>\r\n  <RobotType>SKCON9</RobotType>\r\n  <DownloadProgramName>WERFuncLib</DownloadProgramName>\r\n</ScratchProjectInfo>\n",
+    "zipRobotType": null,
+    "robotType": "SKCON9",
+    "connectionType": "USB",
+    "programName": "WERFuncLib",
+    "static": {
+      "xmlValid": true,
+      "xmlError": null,
+      "rootTag": "xml",
+      "variablesCount": 27,
+      "variables": [
+        {
+          "name": "var_1cm",
+          "id": "v_1_var_1cm"
+        },
+        {
+          "name": "var_1angle",
+          "id": "v_2_var_1angle"
+        },
+        {
+          "name": "var_speed",
+          "id": "v_3_var_speed"
+        },
+        {
+          "name": "var_straight_Kp",
+          "id": "v_4_var_straight_Kp"
+        },
+        {
+          "name": "var_turn_speed",
+          "id": "v_5_var_turn_speed"
+        },
+        {
+          "name": "var_arm_speed",
+          "id": "v_6_var_arm_speed"
+        },
+        {
+          "name": "var_arm_time",
+          "id": "v_7_var_arm_time"
+        },
+        {
+          "name": "var_ray_white",
+          "id": "v_8_var_ray_white"
+        },
+        {
+          "name": "var_ray_speed",
+          "id": "v_9_var_ray_speed"
+        },
+        {
+          "name": "var_ray_Kp",
+          "id": "v_10_var_ray_Kp"
+        },
+        {
+          "name": "var_ray_Kd",
+          "id": "v_11_var_ray_Kd"
+        },
+        {
+          "name": "var_ee_white_9",
+          "id": "v_12_var_ee_white_9"
+        },
+        {
+          "name": "var_ee_white_10",
+          "id": "v_13_var_ee_white_10"
+        },
+        {
+          "name": "var_err_last_9",
+          "id": "v_14_var_err_last_9"
+        },
+        {
+          "name": "var_err_last_10",
+          "id": "v_15_var_err_last_10"
+        },
+        {
+          "name": "var_ready",
+          "id": "v_16_var_ready"
+        },
+        {
+          "name": "cm",
+          "id": "v_17_cm"
+        },
+        {
+          "name": "var_enc_diff",
+          "id": "v_18_var_enc_diff"
+        },
+        {
+          "name": "deg",
+          "id": "v_19_deg"
+        },
+        {
+          "name": "speedL",
+          "id": "v_20_speedL"
+        },
+        {
+          "name": "speedR",
+          "id": "v_21_speedR"
+        },
+        {
+          "name": "sec",
+          "id": "v_22_sec"
+        },
+        {
+          "name": "var_err_9",
+          "id": "v_23_var_err_9"
+        },
+        {
+          "name": "var_err_10",
+          "id": "v_24_var_err_10"
+        },
+        {
+          "name": "var_pid_9",
+          "id": "v_25_var_pid_9"
+        },
+        {
+          "name": "var_pid_10",
+          "id": "v_26_var_pid_10"
+        },
+        {
+          "name": "text",
+          "id": "v_27_text"
+        }
+      ],
+      "topBlockCount": 21,
+      "topBlocks": [
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_gE",
+          "name": "func_Init",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_hw",
+          "name": "func_Stop",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_hE",
+          "name": "func_ResetEncoder",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_hI",
+          "name": "func_ForwardCM",
+          "args": [
+            "cm"
+          ]
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_iY",
+          "name": "func_TurnLeft",
+          "args": [
+            "deg"
+          ]
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_jo",
+          "name": "func_TurnRight",
+          "args": [
+            "deg"
+          ]
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_jQ",
+          "name": "func_DriveTime",
+          "args": [
+            "speedL",
+            "speedR",
+            "sec"
+          ]
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_ij",
+          "name": "func_BackwardCM",
+          "args": [
+            "cm"
+          ]
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_ka",
+          "name": "func_ArmUp",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_j1",
+          "name": "func_DriveSpeed",
+          "args": [
+            "speedL",
+            "speedR"
+          ]
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_kk",
+          "name": "func_ArmDown",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_kv",
+          "name": "func_Grab",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_kF",
+          "name": "func_Release",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_kQ",
+          "name": "func_LineStep",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_lw",
+          "name": "func_LineTime",
+          "args": [
+            "sec"
+          ]
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_lZ",
+          "name": "func_LineUntilCross",
+          "args": []
+        },
+        {
+          "type": "start",
+          "id": "blk_mT"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_ms",
+          "name": "func_WaitStartKey",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_mC",
+          "name": "func_WaitTouch",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_mM",
+          "name": "func_Show",
+          "args": [
+            "text"
+          ]
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "blk_mQ",
+          "name": "func_Beep",
+          "args": []
+        }
+      ],
+      "procedures": {
+        "defnoreturn": [
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_gE",
+            "name": "func_Init",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_hw",
+            "name": "func_Stop",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_hE",
+            "name": "func_ResetEncoder",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_hI",
+            "name": "func_ForwardCM",
+            "args": [
+              "cm"
+            ]
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_iY",
+            "name": "func_TurnLeft",
+            "args": [
+              "deg"
+            ]
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_jo",
+            "name": "func_TurnRight",
+            "args": [
+              "deg"
+            ]
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_jQ",
+            "name": "func_DriveTime",
+            "args": [
+              "speedL",
+              "speedR",
+              "sec"
+            ]
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_ij",
+            "name": "func_BackwardCM",
+            "args": [
+              "cm"
+            ]
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_ka",
+            "name": "func_ArmUp",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_j1",
+            "name": "func_DriveSpeed",
+            "args": [
+              "speedL",
+              "speedR"
+            ]
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_kk",
+            "name": "func_ArmDown",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_kv",
+            "name": "func_Grab",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_kF",
+            "name": "func_Release",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_kQ",
+            "name": "func_LineStep",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_lw",
+            "name": "func_LineTime",
+            "args": [
+              "sec"
+            ]
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_lZ",
+            "name": "func_LineUntilCross",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_ms",
+            "name": "func_WaitStartKey",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_mC",
+            "name": "func_WaitTouch",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_mM",
+            "name": "func_Show",
+            "args": [
+              "text"
+            ]
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "blk_mQ",
+            "name": "func_Beep",
+            "args": []
+          }
+        ],
+        "defreturn": []
+      },
+      "topBlocksByType": {
+        "procedures_defnoreturn": 20,
+        "start": 1
+      },
+      "hasStartBlock": true
+    },
+    "warnings": []
+  },
+  "chrome": {
+    "returncode": 0,
+    "timedOut": false,
+    "elapsedMs": 1509
+  },
+  "harness": {
+    "ok": true,
+    "tool": "wer-blockly-harness",
+    "harnessVersion": "1.0",
+    "startedAt": "2026-11-10T05:32:32.328Z",
+    "config": {
+      "mode": "project",
+      "robotType": "SKCON9",
+      "connectionType": "USB",
+      "programName": "WERFuncLib",
+      "projectXmlLength": 48894
+    },
+    "steps": [
+      {
+        "name": "inject",
+        "ok": true,
+        "ms": 26.4
+      },
+      {
+        "name": "clear",
+        "ok": true,
+        "ms": 0.2
+      },
+      {
+        "name": "textToDom",
+        "ok": true,
+        "ms": 3.6
+      },
+      {
+        "name": "domToWorkspace",
+        "ok": true,
+        "ms": 143.2
+      },
+      {
+        "name": "workspaceStats",
+        "ok": true,
+        "ms": 0.9
+      },
+      {
+        "name": "procedures",
+        "ok": true,
+        "ms": 5.1
+      },
+      {
+        "name": "flyoutCategory",
+        "ok": true,
+        "ms": 0.5
+      },
+      {
+        "name": "flyoutInstantiate",
+        "ok": true,
+        "ms": 8.4
+      }
+    ],
+    "windowErrors": [],
+    "consoleErrors": [],
+    "load": {
+      "success": true,
+      "error": null,
+      "ms": 173.4
+    },
+    "workspace": {
+      "topBlockCount": 21,
+      "totalBlockCount": 413,
+      "variableCount": 27,
+      "variableNames": [
+        "var_1cm",
+        "var_1angle",
+        "var_speed",
+        "var_straight_Kp",
+        "var_turn_speed",
+        "var_arm_speed",
+        "var_arm_time",
+        "var_ray_white",
+        "var_ray_speed",
+        "var_ray_Kp",
+        "var_ray_Kd",
+        "var_ee_white_9",
+        "var_ee_white_10",
+        "var_err_last_9",
+        "var_err_last_10",
+        "var_ready",
+        "cm",
+        "var_enc_diff",
+        "deg",
+        "speedL",
+        "speedR",
+        "sec",
+        "var_err_9",
+        "var_err_10",
+        "var_pid_9",
+        "var_pid_10",
+        "text"
+      ],
+      "topBlocksByType": {
+        "procedures_defnoreturn": 20,
+        "start": 1
+      },
+      "allBlocksByType": {
+        "procedures_defnoreturn": 20,
+        "start": 1,
+        "annotation": 29,
+        "ifelse": 12,
+        "variables_set": 34,
+        "motor": 28,
+        "resetencoder": 4,
+        "math_compare": 23,
+        "procedures_callnoreturn": 22,
+        "while_cmp": 8,
+        "printf": 1,
+        "play_sound": 1,
+        "math_number": 76,
+        "variables_get": 73,
+        "dual_motor_duration": 1,
+        "motor_time": 4,
+        "math_op": 27,
+        "wait": 17,
+        "robot_math_unary_operation": 10,
+        "getai_glay": 4,
+        "get_key": 1,
+        "getai_touch": 1,
+        "getmsecondsreset": 1,
+        "if": 3,
+        "getencoder": 8,
+        "while_break": 1,
+        "getmseconds": 1,
+        "eeprom_read": 2
+      },
+      "topBlocks": [
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -2600,
+            -2200
+          ],
+          "id": "blk_gE"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -2140,
+            -2200
+          ],
+          "id": "blk_hw"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -1680,
+            -2200
+          ],
+          "id": "blk_hE"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -1220,
+            -2200
+          ],
+          "id": "blk_hI"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -2140,
+            -1580
+          ],
+          "id": "blk_iY"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -1680,
+            -1580
+          ],
+          "id": "blk_jo"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -1220,
+            -1580
+          ],
+          "id": "blk_jQ"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -623,
+            -1280
+          ],
+          "id": "blk_ij"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -2140,
+            -960
+          ],
+          "id": "blk_ka"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -2571,
+            -920
+          ],
+          "id": "blk_j1"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -1680,
+            -960
+          ],
+          "id": "blk_kk"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -1220,
+            -960
+          ],
+          "id": "blk_kv"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -2600,
+            -340
+          ],
+          "id": "blk_kF"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -2140,
+            -340
+          ],
+          "id": "blk_kQ"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -1680,
+            -340
+          ],
+          "id": "blk_lw"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -1220,
+            -340
+          ],
+          "id": "blk_lZ"
+        },
+        {
+          "type": "start",
+          "xy": [
+            480,
+            -40
+          ],
+          "id": "blk_mT"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -2600,
+            280
+          ],
+          "id": "blk_ms"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -2140,
+            280
+          ],
+          "id": "blk_mC"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -1680,
+            280
+          ],
+          "id": "blk_mM"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -1220,
+            280
+          ],
+          "id": "blk_mQ"
+        }
+      ],
+      "render": {
+        "renderedBlockCount": 413,
+        "renderedSvgRootCount": 413,
+        "zeroSizeBlockCount": 0,
+        "warningCount": 0,
+        "warnings": [],
+        "disabledBlockCount": 0,
+        "mainWorkspaceIsThis": true,
+        "blocklyBlockCanvasCount": 2,
+        "injectionDivCount": 1,
+        "svgCount": 1
+      }
+    },
+    "procedures": {
+      "defnoreturn": [
+        {
+          "name": "func_Init",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_gE"
+        },
+        {
+          "name": "func_Stop",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_hw"
+        },
+        {
+          "name": "func_ResetEncoder",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_hE"
+        },
+        {
+          "name": "func_ForwardCM",
+          "args": [
+            "cm"
+          ],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_hI"
+        },
+        {
+          "name": "func_TurnLeft",
+          "args": [
+            "deg"
+          ],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_iY"
+        },
+        {
+          "name": "func_TurnRight",
+          "args": [
+            "deg"
+          ],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_jo"
+        },
+        {
+          "name": "func_DriveTime",
+          "args": [
+            "speedL",
+            "speedR",
+            "sec"
+          ],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_jQ"
+        },
+        {
+          "name": "func_BackwardCM",
+          "args": [
+            "cm"
+          ],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_ij"
+        },
+        {
+          "name": "func_ArmUp",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_ka"
+        },
+        {
+          "name": "func_DriveSpeed",
+          "args": [
+            "speedL",
+            "speedR"
+          ],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_j1"
+        },
+        {
+          "name": "func_ArmDown",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_kk"
+        },
+        {
+          "name": "func_Grab",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_kv"
+        },
+        {
+          "name": "func_Release",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_kF"
+        },
+        {
+          "name": "func_LineStep",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_kQ"
+        },
+        {
+          "name": "func_LineTime",
+          "args": [
+            "sec"
+          ],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_lw"
+        },
+        {
+          "name": "func_LineUntilCross",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_lZ"
+        },
+        {
+          "name": "func_WaitStartKey",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_ms"
+        },
+        {
+          "name": "func_WaitTouch",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_mC"
+        },
+        {
+          "name": "func_Show",
+          "args": [
+            "text"
+          ],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_mM"
+        },
+        {
+          "name": "func_Beep",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "blk_mQ"
+        }
+      ],
+      "defreturn": [],
+      "allProceduresSorted": {
+        "defnoreturn": [
+          {
+            "name": "func_ArmDown",
+            "args": []
+          },
+          {
+            "name": "func_ArmUp",
+            "args": []
+          },
+          {
+            "name": "func_BackwardCM",
+            "args": [
+              "cm"
+            ]
+          },
+          {
+            "name": "func_Beep",
+            "args": []
+          },
+          {
+            "name": "func_DriveSpeed",
+            "args": [
+              "speedL",
+              "speedR"
+            ]
+          },
+          {
+            "name": "func_DriveTime",
+            "args": [
+              "speedL",
+              "speedR",
+              "sec"
+            ]
+          },
+          {
+            "name": "func_ForwardCM",
+            "args": [
+              "cm"
+            ]
+          },
+          {
+            "name": "func_Grab",
+            "args": []
+          },
+          {
+            "name": "func_Init",
+            "args": []
+          },
+          {
+            "name": "func_LineStep",
+            "args": []
+          },
+          {
+            "name": "func_LineTime",
+            "args": [
+              "sec"
+            ]
+          },
+          {
+            "name": "func_LineUntilCross",
+            "args": []
+          },
+          {
+            "name": "func_Release",
+            "args": []
+          },
+          {
+            "name": "func_ResetEncoder",
+            "args": []
+          },
+          {
+            "name": "func_Show",
+            "args": [
+              "text"
+            ]
+          },
+          {
+            "name": "func_Stop",
+            "args": []
+          },
+          {
+            "name": "func_TurnLeft",
+            "args": [
+              "deg"
+            ]
+          },
+          {
+            "name": "func_TurnRight",
+            "args": [
+              "deg"
+            ]
+          },
+          {
+            "name": "func_WaitStartKey",
+            "args": []
+          },
+          {
+            "name": "func_WaitTouch",
+            "args": []
+          }
+        ],
+        "defreturn": []
+      }
+    },
+    "flyout": {
+      "categoryXml": {
+        "count": 21,
+        "xml": [
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_defnoreturn\" gap=\"24\"><field name=\"NAME\">func_name</field></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_ArmDown\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_ArmUp\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_BackwardCM\"><arg name=\"cm\"></arg></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Beep\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_DriveSpeed\"><arg name=\"speedL\"></arg><arg name=\"speedR\"></arg></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_DriveTime\"><arg name=\"speedL\"></arg><arg name=\"speedR\"></arg><arg name=\"sec\"></arg></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_ForwardCM\"><arg name=\"cm\"></arg></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Grab\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Init\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_LineStep\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_LineTime\"><arg name=\"sec\"></arg></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_LineUntilCross\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Release\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_ResetEncoder\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Show\"><arg name=\"text\"></arg></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Stop\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_TurnLeft\"><arg name=\"deg\"></arg></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_TurnRight\"><arg name=\"deg\"></arg></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_WaitStartKey\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_WaitTouch\"></mutation></block>"
+        ],
+        "blocks": [
+          {
+            "tag": "block",
+            "type": "procedures_defnoreturn",
+            "fieldName": "func_name"
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_ArmDown",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_ArmUp",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_BackwardCM",
+            "args": [
+              "cm"
+            ]
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Beep",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_DriveSpeed",
+            "args": [
+              "speedL",
+              "speedR"
+            ]
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_DriveTime",
+            "args": [
+              "speedL",
+              "speedR",
+              "sec"
+            ]
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_ForwardCM",
+            "args": [
+              "cm"
+            ]
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Grab",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Init",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_LineStep",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_LineTime",
+            "args": [
+              "sec"
+            ]
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_LineUntilCross",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Release",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_ResetEncoder",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Show",
+            "args": [
+              "text"
+            ]
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Stop",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_TurnLeft",
+            "args": [
+              "deg"
+            ]
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_TurnRight",
+            "args": [
+              "deg"
+            ]
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_WaitStartKey",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_WaitTouch",
+            "args": []
+          }
+        ]
+      },
+      "instantiate": {
+        "viaTreeSelection": true,
+        "flyoutVisible": true,
+        "blockCount": 21,
+        "blocks": [
+          {
+            "type": "procedures_defnoreturn",
+            "isInFlyout": true,
+            "name": "func_name",
+            "args": [],
+            "inputs": [
+              "",
+              "STACK"
+            ],
+            "width": 150,
+            "height": 62
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_ArmDown",
+            "callName": "func_ArmDown",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 126,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_ArmUp",
+            "callName": "func_ArmUp",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 106,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_BackwardCM",
+            "callName": "func_BackwardCM",
+            "args": [
+              "cm"
+            ],
+            "inputs": [
+              "TOPROW",
+              "ARG0"
+            ],
+            "width": 195,
+            "height": 54
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Beep",
+            "callName": "func_Beep",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 93,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_DriveSpeed",
+            "callName": "func_DriveSpeed",
+            "args": [
+              "speedL",
+              "speedR"
+            ],
+            "inputs": [
+              "TOPROW",
+              "ARG0",
+              "ARG1"
+            ],
+            "width": 184,
+            "height": 79
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_DriveTime",
+            "callName": "func_DriveTime",
+            "args": [
+              "speedL",
+              "speedR",
+              "sec"
+            ],
+            "inputs": [
+              "TOPROW",
+              "ARG0",
+              "ARG1",
+              "ARG2"
+            ],
+            "width": 175,
+            "height": 104
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_ForwardCM",
+            "callName": "func_ForwardCM",
+            "args": [
+              "cm"
+            ],
+            "inputs": [
+              "TOPROW",
+              "ARG0"
+            ],
+            "width": 184,
+            "height": 54
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Grab",
+            "callName": "func_Grab",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 91,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Init",
+            "callName": "func_Init",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 81,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_LineStep",
+            "callName": "func_LineStep",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 118,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_LineTime",
+            "callName": "func_LineTime",
+            "args": [
+              "sec"
+            ],
+            "inputs": [
+              "TOPROW",
+              "ARG0"
+            ],
+            "width": 169,
+            "height": 54
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_LineUntilCross",
+            "callName": "func_LineUntilCross",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 158,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Release",
+            "callName": "func_Release",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 111,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_ResetEncoder",
+            "callName": "func_ResetEncoder",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 152,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Show",
+            "callName": "func_Show",
+            "args": [
+              "text"
+            ],
+            "inputs": [
+              "TOPROW",
+              "ARG0"
+            ],
+            "width": 144,
+            "height": 54
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Stop",
+            "callName": "func_Stop",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 90,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_TurnLeft",
+            "callName": "func_TurnLeft",
+            "args": [
+              "deg"
+            ],
+            "inputs": [
+              "TOPROW",
+              "ARG0"
+            ],
+            "width": 163,
+            "height": 54
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_TurnRight",
+            "callName": "func_TurnRight",
+            "args": [
+              "deg"
+            ],
+            "inputs": [
+              "TOPROW",
+              "ARG0"
+            ],
+            "width": 173,
+            "height": 54
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_WaitStartKey",
+            "callName": "func_WaitStartKey",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 147,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_WaitTouch",
+            "callName": "func_WaitTouch",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 130,
+            "height": 29
+          }
+        ],
+        "render": {
+          "renderedBlockCount": 21,
+          "renderedSvgRootCount": 21,
+          "zeroSizeBlockCount": 0
+        }
+      }
+    },
+    "generation": {
+      "success": true,
+      "usedRealSource": true,
+      "evalError": null,
+      "error": null,
+      "code": "#<SKCON9><USB><WERFuncLib>\n\nimport threading\nimport time\nimport libstarpy\n\nrobot = Robot()\n\ncm = None\ndeg = None\nspeedL = None\nspeedR = None\nsec = None\ntext = None\nvar_1cm = None\nvar_err_9 = None\nvar_1angle = None\nvar_ready = None\nvar_err_10 = None\nvar_err_last_9 = None\nvar_speed = None\nvar_arm_speed = None\nvar_arm_time = None\nvar_ee_white_9 = None\nvar_pid_9 = None\nvar_err_last_10 = None\nvar_straight_Kp = None\nvar_enc_diff = None\nvar_ee_white_10 = None\nvar_pid_10 = None\nvar_turn_speed = None\nvar_ray_Kp = None\nvar_ray_Kd = None\nvar_ray_white = None\nvar_ray_speed = None\n\ndef func_Init():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #初始化：设定校准参数、读 EEPROM 灰度白值、停车、编码器清零。\n    var_1cm = 90.4\n    var_1angle = 17.8\n    var_speed = 40\n    var_straight_Kp = 0.005\n    var_turn_speed = 25\n    var_arm_speed = 30\n    var_arm_time = 0.5\n    var_ray_white = 1300\n    var_ray_speed = 30\n    var_ray_Kp = 0.01\n    var_ray_Kd = 0.001\n    #EEPROM 9/10 = 标定程序写入的左/右灰度白值；没标定过就退回默认 1300。\n    var_ee_white_9 = robot.get_ee(9)\n    var_ee_white_10 = robot.get_ee(10)\n    if var_ee_white_9 < 100:\n        var_ee_white_9 = 1300\n    if var_ee_white_10 < 100:\n        var_ee_white_10 = 1300\n    var_err_last_9 = 0\n    var_err_last_10 = 0\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    robot.reset_encoder(1);\n    robot.reset_encoder(2);\n    #标记已初始化；各个动作函数检测到未初始化会自动调用本函数。\n    var_ready = 1\n    pass\n\ndef func_Stop():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #停止：左右驱动电机速度清零。\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    pass\n\ndef func_ResetEncoder():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #驱动电机编码器清零（1=左轮 2=右轮）。\n    robot.reset_encoder(1);\n    robot.reset_encoder(2);\n    pass\n\ndef func_ForwardCM(cm):\n    global deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #前进 cm 厘米：编码器定距 + 两轮差值纠偏；cm 必须 > 0。\n    func_ResetEncoder()\n    while not robot.abs(robot.get_encoder(1)) >= (cm * var_1cm):\n        var_enc_diff = (robot.get_encoder(1) - robot.get_encoder(2))\n        robot.set_motor(1,robot.clamp((var_speed - (var_straight_Kp * var_enc_diff)), -100, 100))\n        robot.set_motor(2,robot.clamp((var_speed + (var_straight_Kp * var_enc_diff)), -100, 100))\n        time.sleep(0.01)\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    pass\n\ndef func_TurnLeft(deg):\n    global cm, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #原地左转 deg 度：左轮反转、右轮正转，编码器定角度。\n    func_ResetEncoder()\n    while not robot.abs(robot.get_encoder(1)) >= (deg * var_1angle):\n        robot.set_motor(1,robot.clamp(-(var_turn_speed), -100, 100))\n        robot.set_motor(2,robot.clamp(var_turn_speed, -100, 100))\n        time.sleep(0.01)\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    pass\n\ndef func_TurnRight(deg):\n    global cm, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #原地右转 deg 度：左轮正转、右轮反转，编码器定角度。\n    func_ResetEncoder()\n    while not robot.abs(robot.get_encoder(1)) >= (deg * var_1angle):\n        robot.set_motor(1,robot.clamp(var_turn_speed, -100, 100))\n        robot.set_motor(2,robot.clamp(-(var_turn_speed), -100, 100))\n        time.sleep(0.01)\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    pass\n\ndef func_DriveTime(speedL, speedR, sec):\n    global cm, deg, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #双电机按时间行驶：左速度 speedL %、右速度 speedR %，持续 sec 秒后自动停。\n    robot.set_double_motor_time(1,robot.clamp(speedL, -100, 100),2,robot.clamp(speedR, -100, 100),robot.clamp(sec, 0, 3600))\n    pass\n\ndef func_BackwardCM(cm):\n    global deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #后退 cm 厘米：编码器定距 + 两轮差值纠偏；cm 必须 > 0。\n    func_ResetEncoder()\n    while not robot.abs(robot.get_encoder(1)) >= (cm * var_1cm):\n        var_enc_diff = (robot.get_encoder(1) - robot.get_encoder(2))\n        robot.set_motor(1,robot.clamp((-(var_speed) - (var_straight_Kp * var_enc_diff)), -100, 100))\n        robot.set_motor(2,robot.clamp((-(var_speed) + (var_straight_Kp * var_enc_diff)), -100, 100))\n        time.sleep(0.01)\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    pass\n\ndef func_ArmUp():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #抬升电机（端口3）正转 var_arm_time 秒（默认 30% 速度）。\n    robot.set_motor_time(3,robot.clamp(var_arm_speed, -100, 100),robot.clamp(var_arm_time, 0, 3600))\n    pass\n\ndef func_DriveSpeed(speedL, speedR):\n    global cm, deg, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #双电机持续转：左 speedL %、右 speedR %；不会自己停，要配 等待/重复/停止。\n    robot.set_motor(1,robot.clamp(speedL, -100, 100))\n    robot.set_motor(2,robot.clamp(speedR, -100, 100))\n    pass\n\ndef func_ArmDown():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #抬升电机（端口3）反转 var_arm_time 秒。\n    robot.set_motor_time(3,robot.clamp(-(var_arm_speed), -100, 100),robot.clamp(var_arm_time, 0, 3600))\n    pass\n\ndef func_Grab():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #夹爪电机（端口4）正转 var_arm_time 秒（夹紧/取物）。\n    robot.set_motor_time(4,robot.clamp(var_arm_speed, -100, 100),robot.clamp(var_arm_time, 0, 3600))\n    pass\n\ndef func_Release():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #夹爪电机（端口4）反转 var_arm_time 秒（松开/放下）。\n    robot.set_motor_time(4,robot.clamp(-(var_arm_speed), -100, 100),robot.clamp(var_arm_time, 0, 3600))\n    pass\n\ndef func_LineStep():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #内部函数：巡线 PID 走一步（由 func_LineTime / func_LineUntilCross 调用）。\n    var_err_9 = (var_ee_white_9 - robot.get_gray(9))\n    var_err_10 = (var_ee_white_10 - robot.get_gray(10))\n    var_pid_9 = ((var_ray_Kp * var_err_9) + (var_ray_Kd * (var_err_9 - var_err_last_9)))\n    var_pid_10 = ((var_ray_Kp * var_err_10) + (var_ray_Kd * (var_err_10 - var_err_last_10)))\n    var_err_last_9 = var_err_9\n    var_err_last_10 = var_err_10\n    robot.set_motor(1,robot.clamp((var_ray_speed + var_pid_9), -100, 100))\n    robot.set_motor(2,robot.clamp((var_ray_speed + var_pid_10), -100, 100))\n    time.sleep(0.01)\n    pass\n\ndef func_LineTime(sec):\n    global cm, deg, speedL, speedR, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #巡线行驶 sec 秒：灰度9/10 PID 巡线，到时间停车。\n    var_err_last_9 = 0\n    var_err_last_10 = 0\n    robot.reset_timer(2)\n    while not robot.get_timer_ms(2) >= (sec * 1000):\n        func_LineStep()\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    var_err_last_9 = 0\n    var_err_last_10 = 0\n    pass\n\ndef func_LineUntilCross():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #巡线到路口：灰度7 或 灰度8 读到白值（>= var_ray_white）时停车。\n    var_err_last_9 = 0\n    var_err_last_10 = 0\n    while not robot.get_gray(7) >= var_ray_white:\n        if robot.get_gray(8) >= var_ray_white:\n            break\n        func_LineStep()\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    var_err_last_9 = 0\n    var_err_last_10 = 0\n    pass\n\ndef func_WaitStartKey():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #等待按下主板的 Start(确认)键 1 再继续（如果你的车没有该按键，改用 func_WaitTouch）。\n    while not robot.check_key(1) == 1:\n        time.sleep(0.02)\n    time.sleep(0.2)\n    pass\n\ndef func_WaitTouch():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #等待触碰传感器（端口1）被按下再继续；主程序.py 就是用触碰1当启动/分段键。\n    while not robot.get_touch(1) == 1:\n        time.sleep(0.02)\n    time.sleep(0.2)\n    pass\n\ndef func_Show(text):\n    global cm, deg, speedL, speedR, sec, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #在机器人屏幕显示一段文字（text 里放一个文本块）。\n    robot.print(text,'\\n')\n    pass\n\ndef func_Beep():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #播放内置提示音（打招呼声）。\n    robot.play('dazhaohu_c0.mp3')\n    pass\n\n\ndef main():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #WER 函数库示例。做法：左边工具箱 → 函数 分类，把函数块拖进来；\n    #下面 3 个动作块是示例，直接删掉换成你的任务即可。\n    #① 初始化（必须第一步）\n    func_Init()\n    #② 前进 10 厘米（把 10 改成你要的厘米数）\n    func_ForwardCM(10)\n    #③ 原地右转 90 度（把 90 改成你要的角度）\n    func_TurnRight(90)\n    func_Stop()\n    #其他常用：func_LineUntilCross 巡线到路口 / func_LineTime 巡线 N 秒 /\n    #func_ArmUp func_Grab 取物 / func_WaitStartKey 等 Start 键 / func_WaitTouch 等触碰 / func_Show 显示文字。\n\nmain()#program entry",
+      "ms": 8.5,
+      "analysis": {
+        "codeLength": 14911,
+        "codeLines": 311,
+        "headerLine": "#<SKCON9><USB><WERFuncLib>",
+        "defCount": 21,
+        "defs": [
+          {
+            "name": "func_Init",
+            "args": ""
+          },
+          {
+            "name": "func_Stop",
+            "args": ""
+          },
+          {
+            "name": "func_ResetEncoder",
+            "args": ""
+          },
+          {
+            "name": "func_ForwardCM",
+            "args": "cm"
+          },
+          {
+            "name": "func_TurnLeft",
+            "args": "deg"
+          },
+          {
+            "name": "func_TurnRight",
+            "args": "deg"
+          },
+          {
+            "name": "func_DriveTime",
+            "args": "speedL, speedR, sec"
+          },
+          {
+            "name": "func_BackwardCM",
+            "args": "cm"
+          },
+          {
+            "name": "func_ArmUp",
+            "args": ""
+          },
+          {
+            "name": "func_DriveSpeed",
+            "args": "speedL, speedR"
+          },
+          {
+            "name": "func_ArmDown",
+            "args": ""
+          },
+          {
+            "name": "func_Grab",
+            "args": ""
+          },
+          {
+            "name": "func_Release",
+            "args": ""
+          },
+          {
+            "name": "func_LineStep",
+            "args": ""
+          },
+          {
+            "name": "func_LineTime",
+            "args": "sec"
+          },
+          {
+            "name": "func_LineUntilCross",
+            "args": ""
+          },
+          {
+            "name": "func_WaitStartKey",
+            "args": ""
+          },
+          {
+            "name": "func_WaitTouch",
+            "args": ""
+          },
+          {
+            "name": "func_Show",
+            "args": "text"
+          },
+          {
+            "name": "func_Beep",
+            "args": ""
+          },
+          {
+            "name": "main",
+            "args": ""
+          }
+        ],
+        "hasMainCall": true
+      }
+    },
+    "drag": {
+      "attempted": false,
+      "ok": false,
+      "error": null,
+      "created": [],
+      "argFillRules": {}
+    },
+    "finishedAt": "2026-11-10T05:32:32.525Z"
+  },
+  "analysis": {
+    "lineCount": 311,
+    "header": "#<SKCON9><USB><WERFuncLib>",
+    "imports": [
+      "import threading",
+      "import time",
+      "import libstarpy"
+    ],
+    "robotInit": [
+      "robot = Robot()"
+    ],
+    "varDeclCount": 27,
+    "varDecls": [
+      "cm",
+      "deg",
+      "speedL",
+      "speedR",
+      "sec",
+      "text",
+      "var_1cm",
+      "var_err_9",
+      "var_1angle",
+      "var_ready",
+      "var_err_10",
+      "var_err_last_9",
+      "var_speed",
+      "var_arm_speed",
+      "var_arm_time",
+      "var_ee_white_9",
+      "var_pid_9",
+      "var_err_last_10",
+      "var_straight_Kp",
+      "var_enc_diff",
+      "var_ee_white_10",
+      "var_pid_10",
+      "var_turn_speed",
+      "var_ray_Kp",
+      "var_ray_Kd",
+      "var_ray_white",
+      "var_ray_speed"
+    ],
+    "otherPreamble": [],
+    "defCount": 21,
+    "defs": [
+      {
+        "name": "func_Init",
+        "args": "",
+        "bodyLines": 27,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_Stop",
+        "args": "",
+        "bodyLines": 5,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_ResetEncoder",
+        "args": "",
+        "bodyLines": 4,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_ForwardCM",
+        "args": "cm",
+        "bodyLines": 15,
+        "globalLine": "global deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_TurnLeft",
+        "args": "deg",
+        "bodyLines": 14,
+        "globalLine": "global cm, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_TurnRight",
+        "args": "deg",
+        "bodyLines": 14,
+        "globalLine": "global cm, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_DriveTime",
+        "args": "speedL, speedR, sec",
+        "bodyLines": 7,
+        "globalLine": "global cm, deg, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_BackwardCM",
+        "args": "cm",
+        "bodyLines": 15,
+        "globalLine": "global deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_ArmUp",
+        "args": "",
+        "bodyLines": 7,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_DriveSpeed",
+        "args": "speedL, speedR",
+        "bodyLines": 8,
+        "globalLine": "global cm, deg, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_ArmDown",
+        "args": "",
+        "bodyLines": 7,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_Grab",
+        "args": "",
+        "bodyLines": 7,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_Release",
+        "args": "",
+        "bodyLines": 7,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_LineStep",
+        "args": "",
+        "bodyLines": 11,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_LineTime",
+        "args": "sec",
+        "bodyLines": 16,
+        "globalLine": "global cm, deg, speedL, speedR, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_LineUntilCross",
+        "args": "",
+        "bodyLines": 17,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_WaitStartKey",
+        "args": "",
+        "bodyLines": 5,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_WaitTouch",
+        "args": "",
+        "bodyLines": 5,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_Show",
+        "args": "text",
+        "bodyLines": 3,
+        "globalLine": "global cm, deg, speedL, speedR, sec, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_Beep",
+        "args": "",
+        "bodyLines": 3,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "main",
+        "args": "",
+        "bodyLines": 5,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      }
+    ],
+    "tail": [
+      "main()#program entry"
+    ]
+  },
+  "syntaxCheck": {
+    "ok": true,
+    "returncode": 0,
+    "cmd": [
+      "C:\\Users\\s1325\\.dsh\\dsh-runtimes\\dsh-primary-runtime\\dependencies\\python\\python.exe",
+      "-m",
+      "py_compile",
+      "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_6wzgkl7f\\generated_syntax_check.py"
+    ],
+    "stdout": "",
+    "stderr": "",
+    "elapsedMs": 112,
+    "file": "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_6wzgkl7f\\generated_syntax_check.py"
+  }
+}

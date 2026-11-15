@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TempProjectsInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TempProjectInfoList>
+    <tempProjectFolderName>1763442530156</tempProjectFolderName>
+    <isNewProject>false</isNewProject>
+    <isSaved>true</isSaved>
+    <isChanged>false</isChanged>
+    <savedProjectPath>C:\Users\s1325\Documents\School\WER2026\My-WER\Program\Ai_2.srhs</savedProjectPath>
+  </TempProjectInfoList>
+</TempProjectsInfo>

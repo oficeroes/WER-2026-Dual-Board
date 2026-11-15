@@ -1,0 +1,17 @@
+defaultcode 内容对比（从补丁包读回 -> JS 反转义 -> 与函数库片段逐字符比较）
+====================================================================================================
+函数库来源: D:\UserData\Documents\WER\2026普级赛\WER_函数库\示例\WER函数库.srhs
+函数库片段: 48657 字符  sha256(UTF-8)=8de4759a39e64a1169f6a648b027d3fea0d0b3fd8000709af7a4869d9f932d4d
+原包 defaultcode : 379 字符  sha256=deee252b7213bb0fca15c0aa474d0baeef3a5e626e1366414e3a05ce0df16213（旧模板自带的 start 示例）
+Python 版读回    : 48657 字符  sha256=8de4759a39e64a1169f6a648b027d3fea0d0b3fd8000709af7a4869d9f932d4d
+PowerShell 版读回: 48657 字符  sha256=8de4759a39e64a1169f6a648b027d3fea0d0b3fd8000709af7a4869d9f932d4d
+
+三者(片段/Python/PS)逐字符完全相同: True
+defaultcodeTr 未被改动: True
+defaultcodeEn 未被改动: True
+
+片段前 300 字符:
+<xml xmlns="http://www.w3.org/1999/xhtml"><variables><variable type="" id="v_1_var_1cm">var_1cm</variable><variable type="" id="v_2_var_1angle">var_1angle</variable><variable type="" id="v_3_var_speed">var_speed</variable><variable type="" id="v_4_var_straight_Kp">var_straight_Kp</variable><variable
+...
+片段后 300 字符:
+eld name="text">func_ArmUp func_Grab 取物 / func_WaitStartKey 等 Start 键 / func_WaitTouch 等触碰 / func_Show 显示文字。</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>

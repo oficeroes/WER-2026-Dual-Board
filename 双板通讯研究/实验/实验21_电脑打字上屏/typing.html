@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>打字上屏 · PC → 机器人</title>
+<style>
+  :root{
+    --bg:#0b1020; --panel:#141b33; --panel2:#1b2444;
+    --fg:#e8ecff; --dim:#8d98c2; --accent:#6ee7ff; --accent2:#a78bfa;
+    --ok:#34d399; --bad:#f87171;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{
+    font-family:"Microsoft YaHei UI","PingFang SC",system-ui,sans-serif;
+    color:var(--fg);
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #1d2a5f 0%, transparent 60%),
+      radial-gradient(900px 500px at 90% 110%, #3a1f63 0%, transparent 55%),
+      var(--bg);
+    display:flex;align-items:center;justify-content:center;padding:28px;
+  }
+  .app{width:min(1080px,100%)}
+  header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+  h1{font-size:26px;margin:0;letter-spacing:2px}
+  h1 small{font-size:13px;color:var(--dim);letter-spacing:1px;font-weight:400;margin-left:10px}
+  .chip{
+    margin-left:auto;display:flex;align-items:center;gap:8px;
+    padding:8px 14px;border-radius:999px;background:var(--panel);
+    border:1px solid #2a3560;font-size:13px;color:var(--dim);
+  }
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--bad);box-shadow:0 0 10px var(--bad)}
+  .dot.ok{background:var(--ok);box-shadow:0 0 10px var(--ok)}
+  .card{
+    background:linear-gradient(180deg,var(--panel) 0%,var(--panel2) 100%);
+    border:1px solid #2a3560;border-radius:20px;padding:22px;
+    box-shadow:0 24px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.05);
+  }
+  #inp{
+    width:100%;min-height:290px;resize:vertical;
+    background:rgba(8,12,26,.75);color:var(--fg);
+    border:1px solid #2f3b6e;border-radius:14px;outline:none;
+    padding:20px 22px;font-size:26px;line-height:1.55;
+    font-family:inherit;caret-color:var(--accent);
+    transition:border-color .2s, box-shadow .2s;
+  }
+  #inp:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(110,231,255,.12)}
+  #inp::placeholder{color:#5b6694}
+  .bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:14px}
+  .meta{color:var(--dim);font-size:13px;display:flex;gap:18px}
+  .meta b{color:var(--fg);font-weight:600}
+  button{
+    cursor:pointer;border:1px solid #38457a;background:#202a52;color:var(--fg);
+    padding:10px 18px;border-radius:12px;font-size:14px;font-family:inherit;
+    transition:transform .08s, background .2s, border-color .2s;
+  }
+  button:hover{background:#2a3767;border-color:var(--accent)}
+  button:active{transform:translateY(1px)}
+  button.primary{background:linear-gradient(135deg,#2dd4bf,#6ee7ff);color:#04202b;border:none;font-weight:700}
+  .hint{margin-top:14px;font-size:13px;color:var(--dim);line-height:1.7}
+  .hint code{background:#0d1430;border:1px solid #26325e;border-radius:6px;padding:2px 7px;color:var(--accent)}
+  .preview{
+    margin-top:18px;border-radius:14px;border:1px dashed #33406f;background:rgba(8,12,26,.45);
+    padding:14px 18px;min-height:54px;font-size:20px;color:#cfe0ff;word-break:break-all;
+  }
+  .preview .lbl{display:block;font-size:12px;color:var(--dim);letter-spacing:1px;margin-bottom:6px}
+  footer{margin-top:14px;text-align:center;font-size:12px;color:#5b6694}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>打字上屏 <small>PC → SKCON9 机器人屏幕</small></h1>
+    <div class="chip"><span id="dot" class="dot"></span><span id="conn">连接中…</span></div>
+  </header>
+
+  <div class="card">
+    <textarea id="inp" autofocus spellcheck="false"
+      placeholder="在这里打字，机器人机身屏幕会实时显示你输入的内容…&#10;（支持中文；按 Esc 清空并清屏）"></textarea>
+
+    <div class="bar">
+      <div class="meta">
+        <span>字符 <b id="len">0</b></span>
+        <span>已发送 <b id="sent">0</b></span>
+        <span>模式 <b id="modeTxt">整屏</b></span>
+      </div>
+      <span style="flex:1"></span>
+      <button id="modeBtn" title="整屏：每次显示当前全部文字；追加：每次往下加一行">切换到追加模式</button>
+      <button id="clearBtn">清空 / 清屏</button>
+    </div>
+
+    <div class="preview"><span class="lbl">屏幕预览（机器人上显示的内容）</span><span id="prev"></span></div>
+
+    <div class="hint">
+      使用前：①先在机器人屏幕运行 <code>PCTEXT.c</code>；②本页由 <code>pc_typing_server.py</code> 提供并转发。
+      机器人没连上时页面仍可输入，连上后会自动补发最新内容。
+    </div>
+  </div>
+  <footer>打字上屏 · 实验21 · 机器人 192.168.1.103:9001</footer>
+</div>
+
+<script>
+(function(){
+  var inp=document.getElementById('inp');
+  var lenEl=document.getElementById('len');
+  var sentEl=document.getElementById('sent');
+  var dot=document.getElementById('dot');
+  var connEl=document.getElementById('conn');
+  var prev=document.getElementById('prev');
+  var modeTxt=document.getElementById('modeTxt');
+  var modeBtn=document.getElementById('modeBtn');
+  var clearBtn=document.getElementById('clearBtn');
+  var mode='T';
+  var lastSent='';
+
+  function post(path, body){
+    return fetch(path,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body||{})
+    }).catch(function(){});
+  }
+
+  function pushText(){
+    var text=inp.value;
+    lenEl.textContent=text.length;
+    prev.textContent=text;
+    if(text===lastSent) return;
+    lastSent=text;
+    post('/send',{text:text, mode:mode});
+  }
+
+  var timer=null;
+  function schedule(){
+    // 中文输入法组合期间先不发送，组合结束再发
+    if(timer) clearTimeout(timer);
+    timer=setTimeout(pushText, 60);
+  }
+
+  inp.addEventListener('input', function(){
+    if(inp.isComposing){ return; }
+    schedule();
+  });
+  inp.addEventListener('compositionstart', function(){ inp.isComposing=true; });
+  inp.addEventListener('compositionend', function(){
+    inp.isComposing=false;
+    schedule();
+  });
+  inp.addEventListener('keydown', function(ev){
+    if(ev.key==='Escape'){
+      ev.preventDefault();
+      clearAll();
+    }
+  });
+
+  function clearAll(){
+    inp.value='';
+    lastSent='';
+    lenEl.textContent='0';
+    prev.textContent='';
+    post('/clear', {});
+    post('/send', {text:'', mode:'T'});
+  }
+  clearBtn.addEventListener('click', clearAll);
+
+  modeBtn.addEventListener('click', function(){
+    mode = (mode==='T') ? 'A' : 'T';
+    modeTxt.textContent = (mode==='T') ? '整屏' : '追加';
+    modeBtn.textContent = (mode==='T') ? '切换到追加模式' : '切换到整屏模式';
+    lastSent='';
+    pushText();
+  });
+
+  function poll(){
+    fetch('/status').then(function(r){return r.json();}).then(function(st){
+      if(st && st.connected){
+        dot.classList.add('ok');
+        connEl.textContent='机器人已连接';
+      }else{
+        dot.classList.remove('ok');
+        connEl.textContent='未连接 · 等待机器人运行 PCTEXT';
+      }
+      if(st && typeof st.sent==='number') sentEl.textContent=st.sent;
+    }).catch(function(){
+      dot.classList.remove('ok');
+      connEl.textContent='桥服务未启动';
+    });
+  }
+  poll(); setInterval(poll, 1500);
+})();
+</script>
+</body>
+</html>

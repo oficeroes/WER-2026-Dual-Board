@@ -1,0 +1,2 @@
+[20:29:52] listening on 0.0.0.0:12345 (outbound probe)
+[20:29:52] 8888-CONNECT-OK attempt=1 data=b'CONTROL alive pid=2750 src=192.168.1.105\n'

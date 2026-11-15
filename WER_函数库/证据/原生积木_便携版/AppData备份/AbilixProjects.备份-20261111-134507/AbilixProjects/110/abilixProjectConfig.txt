@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TempProjectsInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TempProjectInfoList>
+    <tempProjectFolderName>1763442949145</tempProjectFolderName>
+    <isNewProject>true</isNewProject>
+    <isSaved>false</isSaved>
+    <isChanged>false</isChanged>
+    <savedProjectPath>C:\Users\s1325\Desktop\AbilixScratch3.0\Scratch-1</savedProjectPath>
+  </TempProjectInfoList>
+</TempProjectsInfo>

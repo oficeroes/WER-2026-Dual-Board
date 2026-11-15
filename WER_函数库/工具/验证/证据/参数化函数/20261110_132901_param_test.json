@@ -1,0 +1,474 @@
+{
+  "meta": {
+    "tool": "run_validate.py",
+    "toolVersion": "1.0",
+    "generatedAt": "2026-11-10T13:28:57",
+    "argv": [
+      "WER_函数库\\工具\\验证\\run_validate.py",
+      "--param-test",
+      "--evidence-dir",
+      "WER_函数库\\工具\\验证\\证据\\参数化函数",
+      "--screenshot",
+      "WER_函数库\\工具\\验证\\证据\\参数化函数\\参数函数_函数分类flyout.png",
+      "--window-size",
+      "1600,1200",
+      "--timeout",
+      "300"
+    ],
+    "python": "3.12.14",
+    "mode": "param",
+    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "webRoot": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\blockly_web",
+    "elapsedMs": 3463
+  },
+  "ok": true,
+  "errors": [],
+  "project": {
+    "inputPath": null,
+    "format": "builtin-param-test",
+    "encoding": "utf-8",
+    "info": {
+      "RobotType": "SKCON9",
+      "DownloadProgramName": "ProgramA"
+    },
+    "infoRaw": null,
+    "zipRobotType": null,
+    "robotType": "SKCON9",
+    "connectionType": "USB",
+    "programName": "ProgramA",
+    "static": {
+      "xmlValid": true,
+      "xmlError": null,
+      "rootTag": "xml",
+      "variablesCount": 2,
+      "variables": [
+        {
+          "name": "cm",
+          "id": "param_cm_id"
+        },
+        {
+          "name": "var_last_cm",
+          "id": "var_last_cm_id"
+        }
+      ],
+      "topBlockCount": 2,
+      "topBlocks": [
+        {
+          "type": "procedures_defnoreturn",
+          "id": "def_block",
+          "name": "func_MoveCm",
+          "args": [
+            "cm"
+          ]
+        },
+        {
+          "type": "start",
+          "id": "start_block"
+        }
+      ],
+      "procedures": {
+        "defnoreturn": [
+          {
+            "type": "procedures_defnoreturn",
+            "id": "def_block",
+            "name": "func_MoveCm",
+            "args": [
+              "cm"
+            ]
+          }
+        ],
+        "defreturn": []
+      },
+      "topBlocksByType": {
+        "procedures_defnoreturn": 1,
+        "start": 1
+      },
+      "hasStartBlock": true
+    },
+    "warnings": []
+  },
+  "chrome": {
+    "returncode": 0,
+    "timedOut": false,
+    "elapsedMs": 1484
+  },
+  "harness": {
+    "ok": true,
+    "tool": "wer-blockly-harness",
+    "harnessVersion": "1.0",
+    "startedAt": "2026-11-10T05:28:58.765Z",
+    "config": {
+      "mode": "param",
+      "robotType": "SKCON9",
+      "connectionType": "USB",
+      "programName": "ProgramA",
+      "projectXmlLength": 1811
+    },
+    "steps": [
+      {
+        "name": "inject",
+        "ok": true,
+        "ms": 32
+      },
+      {
+        "name": "clear",
+        "ok": true,
+        "ms": 0.1
+      },
+      {
+        "name": "textToDom",
+        "ok": true,
+        "ms": 0.6
+      },
+      {
+        "name": "domToWorkspace",
+        "ok": true,
+        "ms": 23
+      },
+      {
+        "name": "workspaceStats",
+        "ok": true,
+        "ms": 0.3
+      },
+      {
+        "name": "procedures",
+        "ok": true,
+        "ms": 0.1
+      },
+      {
+        "name": "flyoutCategory",
+        "ok": true,
+        "ms": 0.3
+      },
+      {
+        "name": "flyoutInstantiate",
+        "ok": true,
+        "ms": 3.7
+      }
+    ],
+    "windowErrors": [],
+    "consoleErrors": [],
+    "load": {
+      "success": true,
+      "error": null,
+      "ms": 55.7
+    },
+    "workspace": {
+      "topBlockCount": 2,
+      "totalBlockCount": 10,
+      "variableCount": 2,
+      "variableNames": [
+        "cm",
+        "var_last_cm"
+      ],
+      "topBlocksByType": {
+        "procedures_defnoreturn": 1,
+        "start": 1
+      },
+      "allBlocksByType": {
+        "procedures_defnoreturn": 1,
+        "start": 1,
+        "variables_set": 1,
+        "procedures_callnoreturn": 2,
+        "variables_get": 2,
+        "wait": 1,
+        "math_number": 2
+      },
+      "topBlocks": [
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            40,
+            40
+          ],
+          "id": "def_block"
+        },
+        {
+          "type": "start",
+          "xy": [
+            40,
+            460
+          ],
+          "id": "start_block"
+        }
+      ],
+      "render": {
+        "renderedBlockCount": 10,
+        "renderedSvgRootCount": 10,
+        "zeroSizeBlockCount": 0,
+        "warningCount": 0,
+        "warnings": [],
+        "disabledBlockCount": 0,
+        "mainWorkspaceIsThis": true,
+        "blocklyBlockCanvasCount": 2,
+        "injectionDivCount": 1,
+        "svgCount": 1
+      }
+    },
+    "procedures": {
+      "defnoreturn": [
+        {
+          "name": "func_MoveCm",
+          "args": [
+            "cm"
+          ],
+          "blockType": "procedures_defnoreturn",
+          "id": "def_block"
+        }
+      ],
+      "defreturn": [],
+      "allProceduresSorted": {
+        "defnoreturn": [
+          {
+            "name": "func_MoveCm",
+            "args": [
+              "cm"
+            ]
+          }
+        ],
+        "defreturn": []
+      }
+    },
+    "flyout": {
+      "categoryXml": {
+        "count": 2,
+        "xml": [
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_defnoreturn\" gap=\"24\"><field name=\"NAME\">func_name</field></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_MoveCm\"><arg name=\"cm\"></arg></mutation></block>"
+        ],
+        "blocks": [
+          {
+            "tag": "block",
+            "type": "procedures_defnoreturn",
+            "fieldName": "func_name"
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_MoveCm",
+            "args": [
+              "cm"
+            ]
+          }
+        ]
+      },
+      "instantiate": {
+        "viaTreeSelection": true,
+        "flyoutVisible": true,
+        "blockCount": 2,
+        "blocks": [
+          {
+            "type": "procedures_defnoreturn",
+            "isInFlyout": true,
+            "name": "func_name",
+            "args": [],
+            "inputs": [
+              "",
+              "STACK"
+            ],
+            "width": 150,
+            "height": 62
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_MoveCm",
+            "callName": "func_MoveCm",
+            "args": [
+              "cm"
+            ],
+            "inputs": [
+              "TOPROW",
+              "ARG0"
+            ],
+            "width": 165,
+            "height": 54
+          }
+        ],
+        "render": {
+          "renderedBlockCount": 2,
+          "renderedSvgRootCount": 2,
+          "zeroSizeBlockCount": 0
+        }
+      }
+    },
+    "generation": {
+      "success": true,
+      "usedRealSource": true,
+      "evalError": null,
+      "error": null,
+      "code": "#<SKCON9><USB><ProgramA>\n\nimport threading\nimport time\nimport libstarpy\n\nrobot = Robot()\n\ncm = None\nvar_last_cm = None\n\ndef func_MoveCm(cm):\n    global var_last_cm\n    var_last_cm = cm\n    time.sleep(cm)\n    pass\n\n\ndef main():\n    global cm, var_last_cm\n    func_MoveCm(10)\n    func_MoveCm(20)\n\nmain()#program entry",
+      "ms": 1.1,
+      "analysis": {
+        "codeLength": 315,
+        "codeLines": 24,
+        "headerLine": "#<SKCON9><USB><ProgramA>",
+        "defCount": 2,
+        "defs": [
+          {
+            "name": "func_MoveCm",
+            "args": "cm"
+          },
+          {
+            "name": "main",
+            "args": ""
+          }
+        ],
+        "hasMainCall": true
+      }
+    },
+    "drag": {
+      "attempted": false,
+      "ok": false,
+      "error": null,
+      "created": [],
+      "argFillRules": {}
+    },
+    "finishedAt": "2026-11-10T05:28:58.827Z"
+  },
+  "analysis": {
+    "lineCount": 24,
+    "header": "#<SKCON9><USB><ProgramA>",
+    "imports": [
+      "import threading",
+      "import time",
+      "import libstarpy"
+    ],
+    "robotInit": [
+      "robot = Robot()"
+    ],
+    "varDeclCount": 2,
+    "varDecls": [
+      "cm",
+      "var_last_cm"
+    ],
+    "otherPreamble": [],
+    "defCount": 2,
+    "defs": [
+      {
+        "name": "func_MoveCm",
+        "args": "cm",
+        "bodyLines": 4,
+        "globalLine": "global var_last_cm"
+      },
+      {
+        "name": "main",
+        "args": "",
+        "bodyLines": 3,
+        "globalLine": "global cm, var_last_cm"
+      }
+    ],
+    "tail": [
+      "main()#program entry"
+    ]
+  },
+  "syntaxCheck": {
+    "ok": true,
+    "returncode": 0,
+    "cmd": [
+      "C:\\Users\\s1325\\.dsh\\dsh-runtimes\\dsh-primary-runtime\\dependencies\\python\\python.exe",
+      "-m",
+      "py_compile",
+      "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_12skz6ml\\generated_syntax_check.py"
+    ],
+    "stdout": "",
+    "stderr": "",
+    "elapsedMs": 93,
+    "file": "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_12skz6ml\\generated_syntax_check.py"
+  },
+  "paramTest": {
+    "checks": [
+      {
+        "name": "项目加载成功",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "顶层块数=2（1 个函数定义 + 1 个 start）",
+        "pass": true,
+        "detail": "实际 2: {'procedures_defnoreturn': 1, 'start': 1}"
+      },
+      {
+        "name": "procedures 列表中 func_MoveCm 存在",
+        "pass": true,
+        "detail": "[{\"name\": \"func_MoveCm\", \"args\": [\"cm\"], \"blockType\": \"procedures_defnoreturn\", \"id\": \"def_block\"}]"
+      },
+      {
+        "name": "func_MoveCm 的参数为 ['cm']",
+        "pass": true,
+        "detail": "[\"cm\"]"
+      },
+      {
+        "name": "flyoutCategory 生成 func_MoveCm 的调用块 XML",
+        "pass": true,
+        "detail": "[{\"tag\": \"block\", \"type\": \"procedures_defnoreturn\", \"fieldName\": \"func_name\"}, {\"tag\": \"block\", \"type\": \"procedures_callnoreturn\", \"mutationName\": \"func_MoveCm\", \"args\": [\"cm\"]}]"
+      },
+      {
+        "name": "该调用块 XML 的 mutation 带参数 cm",
+        "pass": true,
+        "detail": "[\"cm\"]"
+      },
+      {
+        "name": "真实 flyout 实例化出 func_MoveCm 调用块",
+        "pass": true,
+        "detail": "[{\"type\": \"procedures_defnoreturn\", \"isInFlyout\": true, \"name\": \"func_name\", \"args\": [], \"inputs\": [\"\", \"STACK\"], \"width\": 150, \"height\": 62}, {\"type\": \"procedures_callnoreturn\", \"isInFlyout\": true, \"name\": \"func_MoveCm\", \"callName\": \"func_MoveCm\", \"args\": [\"cm\"], \"inputs\": [\"TOPROW\", \"ARG0\"], \"width\": 165, \"height\": 54}]"
+      },
+      {
+        "name": "实例化调用块的 arguments_=['cm'] 且有 ARG0 值输入",
+        "pass": true,
+        "detail": "{\"type\": \"procedures_callnoreturn\", \"isInFlyout\": true, \"name\": \"func_MoveCm\", \"callName\": \"func_MoveCm\", \"args\": [\"cm\"], \"inputs\": [\"TOPROW\", \"ARG0\"], \"width\": 165, \"height\": 54}"
+      },
+      {
+        "name": "生成 Python 含 `def func_MoveCm(cm):`",
+        "pass": true,
+        "detail": "def func_MoveCm(cm):"
+      },
+      {
+        "name": "函数体用参数：`var_last_cm = cm`",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "函数体用参数：`time.sleep(cm)`",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "func_MoveCm 内 global 含 var_last_cm",
+        "pass": true,
+        "detail": "['var_last_cm']"
+      },
+      {
+        "name": "func_MoveCm 内 global 不含参数 cm（参数被正确排除）",
+        "pass": true,
+        "detail": "['var_last_cm']"
+      },
+      {
+        "name": "main 中调用 func_MoveCm(10)",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "main 中调用 func_MoveCm(20)",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "py_compile 语法检查通过",
+        "pass": true,
+        "detail": ""
+      }
+    ],
+    "passed": true,
+    "passedCount": 16,
+    "totalCount": 16
+  },
+  "screenshot": {
+    "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\工具\\验证\\证据\\参数化函数\\参数函数_函数分类flyout.png",
+    "exists": true,
+    "sizeBytes": 50990,
+    "chromeReturncode": 0,
+    "chromeTimedOut": false,
+    "chromeStderrTail": "50990 bytes written to file D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\工具\\验证\\证据\\参数化函数\\参数函数_函数分类flyout.png\r\n"
+  }
+}

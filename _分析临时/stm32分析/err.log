@@ -1,0 +1,81 @@
+2026-11-10 17:25:18.616 | DEBUG    | androguard.core.dex:__init__:8331 - DEX None None None
+2026-11-10 17:25:18.616 | DEBUG    | androguard.core.dex:__init__:511 - HeaderItem
+2026-11-10 17:25:18.627 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'HEADER_ITEM'
+2026-11-10 17:25:18.627 | DEBUG    | androguard.core.dex:__init__:511 - HeaderItem
+2026-11-10 17:25:18.634 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'HEADER_ITEM'. Required time 0:00.0060
+2026-11-10 17:25:18.634 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'MAP_LIST'
+2026-11-10 17:25:18.634 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'MAP_LIST'. Required time 0:00.0000
+2026-11-10 17:25:18.634 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'STRING_DATA_ITEM'
+2026-11-10 17:25:18.720 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'STRING_DATA_ITEM'. Required time 0:00.0859
+2026-11-10 17:25:18.737 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'STRING_ID_ITEM'
+2026-11-10 17:25:18.802 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'STRING_ID_ITEM'. Required time 0:00.0652
+2026-11-10 17:25:18.823 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'TYPE_ID_ITEM'
+2026-11-10 17:25:18.831 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'TYPE_ID_ITEM'. Required time 0:00.0075
+2026-11-10 17:25:18.831 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'FIELD_ID_ITEM'
+2026-11-10 17:25:18.917 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'FIELD_ID_ITEM'. Required time 0:00.0866
+2026-11-10 17:25:18.918 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'TYPE_LIST'
+2026-11-10 17:25:18.970 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'TYPE_LIST'. Required time 0:00.0523
+2026-11-10 17:25:18.974 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'PROTO_ID_ITEM'
+2026-11-10 17:25:18.996 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'PROTO_ID_ITEM'. Required time 0:00.0220
+2026-11-10 17:25:18.997 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'METHOD_ID_ITEM'
+2026-11-10 17:25:19.237 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'METHOD_ID_ITEM'. Required time 0:00.2402
+2026-11-10 17:25:19.237 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'CLASS_DATA_ITEM'
+2026-11-10 17:25:19.534 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'CLASS_DATA_ITEM'. Required time 0:00.2961
+2026-11-10 17:25:19.537 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'DEBUG_INFO_ITEM'
+2026-11-10 17:25:19.538 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'DEBUG_INFO_ITEM'. Required time 0:00.0010
+2026-11-10 17:25:19.538 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'CODE_ITEM'
+2026-11-10 17:25:19.732 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'CODE_ITEM'. Required time 0:00.1935
+2026-11-10 17:25:19.732 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'ANNOTATION_ITEM'
+2026-11-10 17:25:19.822 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'ANNOTATION_ITEM'. Required time 0:00.0900
+2026-11-10 17:25:19.827 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'ANNOTATION_SET_ITEM'
+2026-11-10 17:25:19.838 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'ANNOTATION_SET_ITEM'. Required time 0:00.0105
+2026-11-10 17:25:19.841 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'ANNOTATION_SET_REF_LIST'
+2026-11-10 17:25:19.842 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'ANNOTATION_SET_REF_LIST'. Required time 0:00.0010
+2026-11-10 17:25:19.842 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'ENCODED_ARRAY_ITEM'
+2026-11-10 17:25:19.858 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'ENCODED_ARRAY_ITEM'. Required time 0:00.0163
+2026-11-10 17:25:19.858 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'ANNOTATIONS_DIRECTORY_ITEM'
+2026-11-10 17:25:19.963 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'ANNOTATIONS_DIRECTORY_ITEM'. Required time 0:00.1040
+2026-11-10 17:25:19.965 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'CLASS_DEF_ITEM'
+2026-11-10 17:25:20.582 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'CLASS_DEF_ITEM'. Required time 0:00.6173
+2026-11-10 17:25:20.588 | DEBUG    | androguard.core.dex:__init__:8331 - DEX None None None
+2026-11-10 17:25:20.588 | DEBUG    | androguard.core.dex:__init__:511 - HeaderItem
+2026-11-10 17:25:20.589 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'HEADER_ITEM'
+2026-11-10 17:25:20.589 | DEBUG    | androguard.core.dex:__init__:511 - HeaderItem
+2026-11-10 17:25:20.589 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'HEADER_ITEM'. Required time 0:00.0000
+2026-11-10 17:25:20.590 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'MAP_LIST'
+2026-11-10 17:25:20.590 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'MAP_LIST'. Required time 0:00.0000
+2026-11-10 17:25:20.590 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'STRING_DATA_ITEM'
+2026-11-10 17:25:20.596 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'STRING_DATA_ITEM'. Required time 0:00.0060
+2026-11-10 17:25:20.598 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'STRING_ID_ITEM'
+2026-11-10 17:25:20.600 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'STRING_ID_ITEM'. Required time 0:00.0020
+2026-11-10 17:25:20.601 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'TYPE_ID_ITEM'
+2026-11-10 17:25:20.602 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'TYPE_ID_ITEM'. Required time 0:00.0010
+2026-11-10 17:25:20.602 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'FIELD_ID_ITEM'
+2026-11-10 17:25:20.606 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'FIELD_ID_ITEM'. Required time 0:00.0040
+2026-11-10 17:25:20.606 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'TYPE_LIST'
+2026-11-10 17:25:20.607 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'TYPE_LIST'. Required time 0:00.0010
+2026-11-10 17:25:20.608 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'PROTO_ID_ITEM'
+2026-11-10 17:25:20.609 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'PROTO_ID_ITEM'. Required time 0:00.0010
+2026-11-10 17:25:20.610 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'METHOD_ID_ITEM'
+2026-11-10 17:25:20.626 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'METHOD_ID_ITEM'. Required time 0:00.0160
+2026-11-10 17:25:20.626 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'CLASS_DATA_ITEM'
+2026-11-10 17:25:20.640 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'CLASS_DATA_ITEM'. Required time 0:00.0138
+2026-11-10 17:25:20.640 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'DEBUG_INFO_ITEM'
+2026-11-10 17:25:20.640 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'DEBUG_INFO_ITEM'. Required time 0:00.0000
+2026-11-10 17:25:20.640 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'CODE_ITEM'
+2026-11-10 17:25:20.653 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'CODE_ITEM'. Required time 0:00.0130
+2026-11-10 17:25:20.653 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'ANNOTATION_ITEM'
+2026-11-10 17:25:20.666 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'ANNOTATION_ITEM'. Required time 0:00.0131
+2026-11-10 17:25:20.666 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'ANNOTATION_SET_ITEM'
+2026-11-10 17:25:20.668 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'ANNOTATION_SET_ITEM'. Required time 0:00.0025
+2026-11-10 17:25:20.668 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'ENCODED_ARRAY_ITEM'
+2026-11-10 17:25:20.668 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'ENCODED_ARRAY_ITEM'. Required time 0:00.0000
+2026-11-10 17:25:20.668 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'ANNOTATIONS_DIRECTORY_ITEM'
+2026-11-10 17:25:20.670 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'ANNOTATIONS_DIRECTORY_ITEM'. Required time 0:00.0020
+2026-11-10 17:25:20.671 | DEBUG    | androguard.core.dex:parse:7636 - Starting parsing map_item 'CLASS_DEF_ITEM'
+2026-11-10 17:25:20.678 | DEBUG    | androguard.core.dex:parse:7757 - End of parsing map_item 'CLASS_DEF_ITEM'. Required time 0:00.0069
+Traceback (most recent call last):
+  File "D:\UserData\Documents\WER\2026普级赛\_分析临时\stm32分析\08_all_classes.py", line 22, in <module>
+    cname, c.get_superclassname(), c.get_source_file_name(), c.get_access_flags()))
+                                   ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClassDefItem' object has no attribute 'get_source_file_name'. Did you mean: 'get_source_file_idx'?

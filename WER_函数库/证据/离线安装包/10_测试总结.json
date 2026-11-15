@@ -1,0 +1,191 @@
+{
+  "time": "2026-11-11 14:07:16",
+  "allPass": true,
+  "results": [
+    {
+      "name": "真实原版资源包 sha 未变（测试前）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "补丁包 sha 与编译信息一致",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "补丁包大小",
+      "pass": true,
+      "detail": "85274942"
+    },
+    {
+      "name": "临时副本初始为原版",
+      "pass": true,
+      "detail": "DF6DB241752D42BFF2995FCD24521E070ADF9EB5D96E870148F9DC51690EDC40"
+    },
+    {
+      "name": "T1 安装 exit code = 0",
+      "pass": true,
+      "detail": "rc=0"
+    },
+    {
+      "name": "T1 安装输出含 [DONE]",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T1 安装后目标 sha = 补丁包 sha",
+      "pass": true,
+      "detail": "C03D6A232EDBB2DBCC5ECDD47D42CF5884A38F72AB44BE47258E1DEEAAE3A180"
+    },
+    {
+      "name": "T1 生成安装备份",
+      "pass": true,
+      "detail": "['browser_assets.备份-20261111-140657']"
+    },
+    {
+      "name": "T1 备份 sha = 原版 sha",
+      "pass": true,
+      "detail": "DF6DB241752D42BFF2995FCD24521E070ADF9EB5D96E870148F9DC51690EDC40"
+    },
+    {
+      "name": "T2 重复安装被拒绝 exit=1",
+      "pass": true,
+      "detail": "rc=1"
+    },
+    {
+      "name": "T2 提示已是补丁版本",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T2 目标未被再次修改",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T3 还原 exit code = 0",
+      "pass": true,
+      "detail": "rc=0"
+    },
+    {
+      "name": "T3 还原输出含 [DONE]",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T3 还原后 sha = 原版 sha",
+      "pass": true,
+      "detail": "DF6DB241752D42BFF2995FCD24521E070ADF9EB5D96E870148F9DC51690EDC40"
+    },
+    {
+      "name": "T3 还原后大小 = 原版大小",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T3 生成还原前安全备份",
+      "pass": true,
+      "detail": "['browser_assets.还原前备份-20261111-140701']"
+    },
+    {
+      "name": "T3 安全备份 sha = 补丁包 sha",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T4 已是原版时还原 exit=0 且不改动",
+      "pass": true,
+      "detail": "rc=0"
+    },
+    {
+      "name": "T5 -Target 指向文件也能安装",
+      "pass": true,
+      "detail": "rc=0"
+    },
+    {
+      "name": "T5 -Backup 指定备份还原成功",
+      "pass": true,
+      "detail": "rc=0"
+    },
+    {
+      "name": "T6 只读目标被拒绝 exit=1",
+      "pass": true,
+      "detail": "rc=1"
+    },
+    {
+      "name": "T6 提示没有写入权限",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T6 只读时目标未被修改",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T7 IDE 运行时被拒绝 exit=1",
+      "pass": true,
+      "detail": "rc=1"
+    },
+    {
+      "name": "T7 提示检测到 IDE 正在运行",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T7 未改动目标",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T8 编译信息缺失被拒绝 exit=1",
+      "pass": true,
+      "detail": "rc=1"
+    },
+    {
+      "name": "T8 提示缺少编译信息",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T9 cmd 安装 launcher 退出码 0",
+      "pass": true,
+      "detail": "rc=0"
+    },
+    {
+      "name": "T9 cmd 找到并调用了中文名 安装.ps1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T9 cmd 打印 [DONE]",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T9 cmd 还原 launcher 透传退出码 1",
+      "pass": true,
+      "detail": "rc=1"
+    },
+    {
+      "name": "T9 cmd 找到并调用了中文名 还原.ps1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "T9 cmd 打印 [NOT DONE]",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "真实原版资源包 sha 未变（测试后）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "补丁包 sha 未变",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

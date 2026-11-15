@@ -1,0 +1,8 @@
+[20:29:08] listening on 0.0.0.0:12345 (outbound probe)
+[20:29:10] 8888 attempt=1 TimeoutError
+[20:29:15] 8888 attempt=2 TimeoutError
+[20:29:20] 8888 attempt=3 TimeoutError
+[20:29:25] 8888 attempt=4 TimeoutError
+[20:29:30] 8888 attempt=5 TimeoutError
+[20:29:34] 8888-CONNECT-OK attempt=6 data=b'CONTROL alive pid=2750 src=192.168.1.105\n'
+[20:29:45] listener stopped

@@ -1,0 +1,20 @@
+env probe...
+time=1
+math=0
+sys=1
+os=1
+socket=0
+threading=1
+struct=1
+json=1
+random=0
+subprocess=0
+serial=0
+ctypes=0
+py=3.4.5(default,Jan 18 2017, 19:44:59)
+[GCC 4.8]
+cwd=/
+ls=52
+socket=0
+No module named'_socket'
+done

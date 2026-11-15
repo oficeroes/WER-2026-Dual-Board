@@ -1,0 +1,205 @@
+{
+  "total": 39,
+  "failed": 0,
+  "results": [
+    {
+      "name": "无备份时 restore 返回 exit_code=2 且不写文件",
+      "ok": true,
+      "detail": "['没有找到备份文件（browser_assets.备份-*）。\\n  目录：D:\\\\UserData\\\\Documents\\\\WER\\\\2026普级赛\\\\_分"
+    },
+    {
+      "name": "sync(dry-run) 在合成小资源包上成功",
+      "ok": true,
+      "detail": "exit=0 errors=[]"
+    },
+    {
+      "name": "sync 自检通过（仅 maingui_init.js 变化）",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "补丁包已生成",
+      "ok": true,
+      "detail": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\framework_work\\selftest\\browser_assets.patched"
+    },
+    {
+      "name": "原始包解析出 0 个函数（正常）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "当前（模拟已安装）模板 zh-hans 有 20 个函数",
+      "ok": true,
+      "detail": "functions=20"
+    },
+    {
+      "name": "inspect 判定当前为已打补丁",
+      "ok": true,
+      "detail": "已打过补丁：函数分类里有 20 个函数调用块"
+    },
+    {
+      "name": "inspect 判定“无需同步”（模板与函数库片段完全一致）",
+      "ok": true,
+      "detail": "{'library': 'D:\\\\UserData\\\\Documents\\\\WER\\\\2026普级赛\\\\WER_函数库\\\\示例\\\\WER函数库.srh', 'library_label': '命令行 --library', 'library"
+    },
+    {
+      "name": "restore --list 列出 1 份备份",
+      "ok": true,
+      "detail": "[{'path': 'D:\\\\UserData\\\\Documents\\\\WER\\\\2026普级赛\\\\_分析临时\\\\framework_work\\\\selftest\\\\pkg1\\\\browser_assets.备份-20260101-000000', 'name': 'browser_assets.备份-20260101-000000', 'kind': '备份', 'size': 5348, 'mtime': '2026-11-10 14:00:32'}]"
+    },
+    {
+      "name": "restore 计划：仅 maingui_init.js 不同，可安全还原",
+      "ok": true,
+      "detail": "{'ok': True, 'changed': [{'name': '/Blockly_Code/maingui_init.js', 'old_sha256': 'da229de8adf38b4a132b13bd260b420df03d0a"
+    },
+    {
+      "name": "restore --yes 成功",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "还原后 sha256 与备份一致",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "还原时创建了“还原前备份”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "还原后模板回到原始（0 个函数）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "还原后 dummy.js 原样",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "示例库校验 ERROR=0",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "两 start 被判 ERROR",
+      "ok": true,
+      "detail": "['恰好 1 个 start 块（当前 2 个；新建项目模板必须恰好 1 个 start）', '函数库源文件必须恰好包含 1 个 start 块（当前 2 个）。\\n  start 块就是新项目里的"
+    },
+    {
+      "name": "无 start 被判 ERROR",
+      "ok": true,
+      "detail": "['恰好 1 个 start 块（当前 0 个；新建项目模板必须恰好 1 个 start）', '函数库源文件必须恰好包含 1 个 start 块（当前 0 个）。\\n  start 块就是新项目里的"
+    },
+    {
+      "name": "孤立调用被判 WARN（不阻塞）",
+      "ok": true,
+      "detail": "['孤立调用：项目里调用了未定义的函数 func_Init（同步后新建项目里这些调用会找不到函数）', 'start 主函数里预置了 13 个块（annotation、annotation、annotation、procedures_cal"
+    },
+    {
+      "name": "非 ASCII 函数名给 WARN 而非 ERROR",
+      "ok": true,
+      "detail": "[\"函数名 'func_初始化' 不是纯 ASCII 标识符；生成为 Python 函数名时可能变形\", '函数名不是 ASCII 标识符（生成 Python 函数名可能变形，建议只用字母数字下划线）：func_初始化', '孤立调用：项目"
+    },
+    {
+      "name": "损坏文件校验不崩、ERROR 给出",
+      "ok": true,
+      "detail": "[\"读取函数库项目文件失败：不是合法的 .srh 内容：找不到 Info 段标记 '<Abilix.ScratchProject.Info>' / '</Abi"
+    },
+    {
+      "name": "不存在的库文件校验不崩、ERROR 给出",
+      "ok": true,
+      "detail": "['函数库源文件不存在：D:\\\\UserData\\\\Documents\\\\WER\\\\2026普级赛\\\\_分析临时\\\\framework_work\\\\selfte"
+    },
+    {
+      "name": "make_new_project 成功",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "输出已存在时拒绝覆盖",
+      "ok": true,
+      "detail": "['输出文件已存在：D:\\\\UserData\\\\Documents\\\\WER\\\\2026普级赛\\\\_分析临时\\\\framework_work\\\\selftest"
+    },
+    {
+      "name": "--force 可覆盖",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "指定机器人/程序名生效",
+      "ok": true,
+      "detail": "robot_code=110 program=MyProg"
+    },
+    {
+      "name": "can_write_dir(不存在的目录)=False",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "is_admin() 可调用",
+      "ok": true,
+      "detail": "admin=False"
+    },
+    {
+      "name": "sync(install=True) 在可写合成包上安装成功",
+      "ok": true,
+      "detail": "exit=0 installed=True backup=D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\framework_work\\selftest\\pkg2\\browser_assets.备份-20261110-140033 errors=[]"
+    },
+    {
+      "name": "安装时自动创建了原文件备份",
+      "ok": true,
+      "detail": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\framework_work\\selftest\\pkg2\\browser_assets.备份-20261110-140033"
+    },
+    {
+      "name": "安装后回读安装目录 defaultcode 与片段一致",
+      "ok": true,
+      "detail": "{'assets': 'D:\\\\UserData\\\\Documents\\\\WER\\\\2026普级赛\\\\_分析临时\\\\framework_work\\\\selftest\\\\pkg2\\\\browser_as"
+    },
+    {
+      "name": "安装目录里模板已有 20 个函数",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "无写权限时 sync 自动降级为演练、needs_admin=True、exit_code=2",
+      "ok": true,
+      "detail": "needs_admin=True installed=False exit=2 ok=True"
+    },
+    {
+      "name": "无权限时仍生成并通过自检的补丁包",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "无权限时安装文件一个字节都没改",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "--langs all 同步成功",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "--langs all 后三种语言都有 20 个函数",
+      "ok": true,
+      "detail": {
+        "zh-hans": 20,
+        "zh-hant": 20,
+        "en": 20
+      }
+    },
+    {
+      "name": "--assets 给“上级目录”也能定位到 browser_assets",
+      "ok": true,
+      "detail": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\framework_work\\selftest\\pkg2\\browser_assets"
+    },
+    {
+      "name": "环境变量 ABILIX_ASSETS 生效",
+      "ok": true,
+      "detail": "环境变量 ABILIX_ASSETS"
+    }
+  ]
+}

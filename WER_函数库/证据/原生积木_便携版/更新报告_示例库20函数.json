@@ -1,0 +1,98 @@
+{
+  "tool": "更新便携函数版.py",
+  "scheme": "原生函数积木",
+  "started_at": "20261111-140334",
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "steps": {
+    "target": {
+      "path": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib",
+      "check": {
+        "ok": true,
+        "app_dir": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib",
+        "errors": [],
+        "warnings": [],
+        "exe": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0.exe",
+        "assets": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+        "assets_size": 85274935,
+        "assets_sha256": "17ed1363544a09a99463a338ac9a8e24884535a3d8c9fbfc3a87a2ef6af36905",
+        "orig_assets": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\_原始资源\\browser_assets.orig",
+        "orig_exists": true
+      }
+    },
+    "library": {
+      "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\示例\\WER函数库.srhs",
+      "bytes": 5944,
+      "sha256": "7dc818416ff9ad633b4ec4937cf466d4220b4f7e5230bae374d048b4eaf6f8f1",
+      "top_blocks": 21,
+      "start_blocks": 1,
+      "defnoreturn": 20,
+      "defreturn": 0,
+      "variables": 27,
+      "ok": true,
+      "errors": [],
+      "origin": "参数 --library 指定",
+      "kind": "explicit"
+    },
+    "status": {
+      "ok": true,
+      "returncode": 0,
+      "stdout": "==============================================================================\r\n原生积木状态\r\n==============================================================================\r\n  资源包      : C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets\r\n  大小/hash   : 81.3 MB / 17ed1363544a09a99463a338ac9a8e24884535a3d8c9fbfc3a87a2ef6af36905\r\n  管理员      : 否（安装/还原需要管理员）\r\n  IDE 运行    : 否\r\n  原生积木    : 已打补丁  v1.0.0  2026-11-11 13:43:56\r\n  补丁时函数库: D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\我的函数库.srhs  hash=71aa5ba97bfc8c37…\r\n  补丁时函数  : func_Hello\r\n  当前函数库  : D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\示例\\WER函数库.srhs  hash=7dc818416ff9ad63…\r\n  是否需要重装: 是（函数库有变化）\r\n    函数变化  : 原来 func_Hello\r\n                现在 func_Init、func_Stop、func_ResetEncoder、func_ForwardCM、func_BackwardCM、func_TurnLeft、func_TurnRight、func_DriveTime、func_DriveSpeed、func_ArmUp、func_ArmDown、func_Grab、func_Release、func_LineStep、func_LineTime、func_LineUntilCross、func_WaitStartKey、func_WaitTouch、func_Show、func_Beep\r\n  备份        : 0 份\r\n\r\n建议：\r\n  已打补丁，但函数库有变化（新增/删除/改名/改内容）。下一步：关闭 IDE 后以管理员运行「安装原生积木.cmd」重新编译安装。\r\n  还没有原始资源包备份；安装时会在 WER_函数库\\工具\\原生积木\\备份 自动创建。\r\n  当前不是管理员：安装/还原需要管理员权限（UAC 弹窗需你点“是”）。\r\n\r\n",
+      "stderr": ""
+    },
+    "native_build": {
+      "ok": true,
+      "error": null,
+      "library": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\示例\\WER函数库.srhs",
+      "orig": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\_原始资源\\browser_assets.orig",
+      "assets": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+      "build": {
+        "ok": true,
+        "returncode": 0,
+        "seconds": 9.8,
+        "args_used": [
+          "build",
+          "--library",
+          "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\示例\\WER函数库.srhs",
+          "--source-assets",
+          "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\_原始资源\\browser_assets.orig",
+          "--out",
+          "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\_原始资源\\browser_assets.build-20261111-140338"
+        ]
+      },
+      "verify": {
+        "ok": true,
+        "returncode": 0,
+        "args_used": [
+          "verify",
+          "--file",
+          "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\_原始资源\\browser_assets.build-20261111-140338",
+          "--original",
+          "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\_原始资源\\browser_assets.orig"
+        ],
+        "stdout_tail": "校验结果：通过 ✔\r\n  修改 /Blockly_Code/maingui.html（69281 -> 77965 字节）\r\n  修改 /Blockly_Code/maingui.js（23313 -> 23733 字节）\r\n  新增 /Blockly_Code/abilix_userlib.js\r\n  新增 /Blockly_Code/abilix_userlib.json\r\n  其余 6643 个条目逐字节不变",
+        "stderr_tail": ""
+      },
+      "orig_bytes": 85271033,
+      "orig_sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40",
+      "before_bytes": 85274935,
+      "before_sha256": "17ed1363544a09a99463a338ac9a8e24884535a3d8c9fbfc3a87a2ef6af36905",
+      "after_bytes": 85304180,
+      "after_sha256": "8a3691dc32dabc400f0ead3a22b603802cb3d85def42ccc5835911b6e84b902b",
+      "prev_backup": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\_原始资源\\browser_assets.上一版"
+    },
+    "final_verify": {
+      "ok": true,
+      "returncode": 0
+    },
+    "install_untouched": {
+      "ok": true,
+      "assets": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+      "sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40",
+      "bytes": 85271033,
+      "error": null
+    }
+  },
+  "finished_at": "20261111-140350"
+}

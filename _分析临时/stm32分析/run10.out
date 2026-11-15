@@ -1,0 +1,3 @@
+bc type <class 'androguard.core.dex.DCode'> ['CM', 'add_inote', 'cached_instructions', 'get_ins_off', 'get_insn', 'get_instruction', 'get_instructions', 'get_length', 'get_raw', 'idx', 'insn', 'is_cached_instructions', 'notes', 'off_to_pos', 'offset', 'seek', 'set_insn', 'set_instructions', 'show', 'size']
+instructions via bc.get_instructions: 12 monitor-enter v1
+wrote 10_keyclass_bytecode.txt lines 4849

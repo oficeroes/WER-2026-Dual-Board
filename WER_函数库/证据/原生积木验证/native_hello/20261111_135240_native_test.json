@@ -1,0 +1,603 @@
+{
+  "meta": {
+    "tool": "run_validate.py",
+    "toolVersion": "1.0",
+    "generatedAt": "2026-11-11T13:52:29",
+    "argv": [
+      "WER_函数库/工具/验证/run_validate.py",
+      "_分析临时/native_work/evidence/native_test.srh",
+      "--native-test",
+      "--web-root",
+      "_分析临时/native_work/patched_web",
+      "--screenshot",
+      "--evidence-dir",
+      "WER_函数库/证据/原生积木验证/native_hello",
+      "--window-size",
+      "1600,1800",
+      "--timeout",
+      "300"
+    ],
+    "python": "3.12.4",
+    "mode": "native",
+    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "webRoot": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\patched_web",
+    "elapsedMs": 11200
+  },
+  "ok": true,
+  "errors": [],
+  "project": {
+    "inputPath": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\evidence\\native_test.srh",
+    "format": "srh",
+    "encoding": "utf-8-sig",
+    "info": {
+      "Version": "1.0.3.4",
+      "RobotType": "SKCON9",
+      "DownloadProgramName": "NativeTest"
+    },
+    "infoRaw": "\r\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\r\n<ScratchProjectInfo xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\r\n  <Version>1.0.3.4</Version>\r\r\n  <RobotType>SKCON9</RobotType>\r\r\n  <DownloadProgramName>NativeTest</DownloadProgramName>\r\r\n</ScratchProjectInfo>\r\n",
+    "zipRobotType": null,
+    "robotType": "SKCON9",
+    "connectionType": "USB",
+    "programName": "NativeTest",
+    "static": {
+      "xmlValid": true,
+      "xmlError": null,
+      "rootTag": "xml",
+      "variablesCount": 0,
+      "variables": [],
+      "topBlockCount": 1,
+      "topBlocks": [
+        {
+          "type": "start",
+          "id": "start_native_test"
+        }
+      ],
+      "procedures": {
+        "defnoreturn": [],
+        "defreturn": []
+      },
+      "topBlocksByType": {
+        "start": 1
+      },
+      "hasStartBlock": true
+    },
+    "warnings": []
+  },
+  "chrome": {
+    "returncode": 0,
+    "timedOut": false,
+    "elapsedMs": 1618
+  },
+  "harness": {
+    "ok": true,
+    "tool": "wer-blockly-harness",
+    "harnessVersion": "1.0",
+    "startedAt": "2026-11-11T05:52:30.294Z",
+    "config": {
+      "mode": "native",
+      "robotType": "SKCON9",
+      "connectionType": "USB",
+      "programName": "NativeTest",
+      "projectXmlLength": 257
+    },
+    "steps": [
+      {
+        "name": "inject",
+        "ok": true,
+        "ms": 35.3
+      },
+      {
+        "name": "clear",
+        "ok": true,
+        "ms": 0.1
+      },
+      {
+        "name": "textToDom",
+        "ok": true,
+        "ms": 0.3
+      },
+      {
+        "name": "domToWorkspace",
+        "ok": true,
+        "ms": 5.2
+      },
+      {
+        "name": "workspaceStats",
+        "ok": true,
+        "ms": 0.2
+      },
+      {
+        "name": "procedures",
+        "ok": true,
+        "ms": 0.1
+      },
+      {
+        "name": "flyoutCategory",
+        "ok": true,
+        "ms": 0.2
+      },
+      {
+        "name": "nativeCategory",
+        "ok": true,
+        "ms": 0.2
+      },
+      {
+        "name": "nativeFlyout",
+        "ok": true,
+        "ms": 2.3
+      },
+      {
+        "name": "nativeDragFromFlyout",
+        "ok": true,
+        "ms": 2.2
+      }
+    ],
+    "windowErrors": [],
+    "consoleErrors": [],
+    "load": {
+      "success": true,
+      "error": null,
+      "ms": 40.9
+    },
+    "workspace": {
+      "topBlockCount": 1,
+      "totalBlockCount": 2,
+      "variableCount": 0,
+      "variableNames": [],
+      "topBlocksByType": {
+        "start": 1
+      },
+      "allBlocksByType": {
+        "start": 1,
+        "abilixuf_func_Hello": 1
+      },
+      "topBlocks": [
+        {
+          "type": "start",
+          "xy": [
+            40,
+            40
+          ],
+          "id": "start_native_test"
+        }
+      ],
+      "render": {
+        "renderedBlockCount": 2,
+        "renderedSvgRootCount": 2,
+        "zeroSizeBlockCount": 0,
+        "warningCount": 0,
+        "warnings": [],
+        "disabledBlockCount": 0,
+        "mainWorkspaceIsThis": true,
+        "blocklyBlockCanvasCount": 2,
+        "injectionDivCount": 1,
+        "svgCount": 1
+      }
+    },
+    "procedures": {
+      "defnoreturn": [],
+      "defreturn": [],
+      "allProceduresSorted": {
+        "defnoreturn": [],
+        "defreturn": []
+      }
+    },
+    "flyout": {
+      "categoryXml": {
+        "count": 1,
+        "xml": [
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_defnoreturn\" gap=\"24\"><field name=\"NAME\">func_name</field></block>"
+        ],
+        "blocks": [
+          {
+            "tag": "block",
+            "type": "procedures_defnoreturn",
+            "fieldName": "func_name"
+          }
+        ]
+      },
+      "instantiate": {
+        "skipped": true,
+        "reason": "原生块模式不实例化 PROCEDURE 分类"
+      }
+    },
+    "native": {
+      "attempted": true,
+      "ok": true,
+      "error": null,
+      "category": {
+        "found": true,
+        "name": "我的函数",
+        "viaTreeSelection": true,
+        "blockCount": 1,
+        "blockTypes": [
+          "abilixuf_func_Hello"
+        ]
+      },
+      "flyout": {
+        "visible": true,
+        "blockCount": 1,
+        "blockTypes": [
+          "abilixuf_func_Hello"
+        ],
+        "blocks": [
+          {
+            "type": "abilixuf_func_Hello",
+            "isInFlyout": true,
+            "inputs": [
+              ""
+            ],
+            "width": 94,
+            "height": 29
+          }
+        ],
+        "render": {
+          "renderedBlockCount": 1,
+          "renderedSvgRootCount": 1,
+          "zeroSizeBlockCount": 0
+        }
+      },
+      "drag": {
+        "attempted": true,
+        "ok": true,
+        "error": null,
+        "viaTreeSelection": true,
+        "removedCount": 1,
+        "removedTypes": [
+          "abilixuf_func_Hello"
+        ],
+        "createdCount": 1,
+        "created": [
+          {
+            "type": "abilixuf_func_Hello",
+            "flyoutIndex": 0,
+            "argInputs": [],
+            "argValues": [],
+            "rendered": true,
+            "svgOk": true
+          }
+        ],
+        "startBlockId": "start_native_test",
+        "chainLength": 1,
+        "workspaceTopBlockCountAfter": 1,
+        "workspaceTotalBlockCountAfter": 2
+      }
+    },
+    "generation": {
+      "success": true,
+      "usedRealSource": true,
+      "evalError": null,
+      "error": null,
+      "code": "#<SKCON9><USB><NativeTest>\n\nimport threading\nimport time\nimport libstarpy\n\nrobot = Robot()\n\ndef func_Hello():\n    robot.print('hello world\\n')\n    pass\n\ndef main():\n    func_Hello()\n\nmain()#program entry",
+      "ms": 0.8,
+      "analysis": {
+        "codeLength": 203,
+        "codeLines": 16,
+        "headerLine": "#<SKCON9><USB><NativeTest>",
+        "defCount": 2,
+        "defs": [
+          {
+            "name": "func_Hello",
+            "args": ""
+          },
+          {
+            "name": "main",
+            "args": ""
+          }
+        ],
+        "hasMainCall": true
+      }
+    },
+    "drag": {
+      "attempted": false,
+      "ok": false,
+      "error": null,
+      "created": [],
+      "argFillRules": {}
+    },
+    "finishedAt": "2026-11-11T05:52:30.342Z"
+  },
+  "analysis": {
+    "lineCount": 16,
+    "header": "#<SKCON9><USB><NativeTest>",
+    "imports": [
+      "import threading",
+      "import time",
+      "import libstarpy"
+    ],
+    "robotInit": [
+      "robot = Robot()"
+    ],
+    "varDeclCount": 0,
+    "varDecls": [],
+    "otherPreamble": [],
+    "defCount": 2,
+    "defs": [
+      {
+        "name": "func_Hello",
+        "args": "",
+        "bodyLines": 2,
+        "globalLine": null
+      },
+      {
+        "name": "main",
+        "args": "",
+        "bodyLines": 1,
+        "globalLine": null
+      }
+    ],
+    "tail": [
+      "main()#program entry"
+    ]
+  },
+  "syntaxCheck": {
+    "ok": true,
+    "returncode": 0,
+    "cmd": [
+      "C:\\Users\\s1325\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-m",
+      "py_compile",
+      "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_mzu1ktkw\\generated_syntax_check.py"
+    ],
+    "stdout": "",
+    "stderr": "",
+    "elapsedMs": 236,
+    "file": "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_mzu1ktkw\\generated_syntax_check.py"
+  },
+  "nativeBlocks": {
+    "count": 1,
+    "types": [
+      "abilixuf_func_Hello"
+    ],
+    "byType": {
+      "abilixuf_func_Hello": 1
+    }
+  },
+  "nativePrelude": {
+    "userlibPath": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\patched_web\\Blockly_Code\\abilix_userlib.js",
+    "userlibFunctionCount": 1,
+    "userlibFunctions": [
+      "func_Hello"
+    ],
+    "preludeChars": 61,
+    "preludeSha256": "5a0311e2c2b12e8e18b37d7170eee123a67166e1c6ddbad14cd052ce1792927c",
+    "projectNativeBlockCount": 1,
+    "projectNativeBlockTypes": [
+      "abilixuf_func_Hello"
+    ],
+    "expectedInjection": true,
+    "detectedInjection": true,
+    "exactMatch": true,
+    "lineSequenceMatch": true,
+    "ok": true
+  },
+  "userlib": {
+    "present": true,
+    "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\patched_web\\Blockly_Code\\abilix_userlib.js",
+    "encoding": "utf-8-sig",
+    "functions": [
+      {
+        "name": "func_Hello",
+        "args": [],
+        "tip": "hello world",
+        "blockType": "abilixuf_func_Hello"
+      }
+    ],
+    "preludeChars": 61,
+    "preludeSha256": "5a0311e2c2b12e8e18b37d7170eee123a67166e1c6ddbad14cd052ce1792927c",
+    "errors": []
+  },
+  "nativeTest": {
+    "checks": [
+      {
+        "name": "项目加载成功",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "web_root 中存在原生函数块补丁 abilix_userlib.js",
+        "pass": true,
+        "detail": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\patched_web\\Blockly_Code\\abilix_userlib.js"
+      },
+      {
+        "name": "userlib 解析无错误",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "userlib 中解析出原生函数（1 个）",
+        "pass": true,
+        "detail": "func_Hello"
+      },
+      {
+        "name": "工具箱树里找到「我的函数」分类",
+        "pass": true,
+        "detail": "name='我的函数' blockCount=1"
+      },
+      {
+        "name": "分类名 == '我的函数'",
+        "pass": true,
+        "detail": "我的函数"
+      },
+      {
+        "name": "经由真实工具箱树选中分类（Toolbox.TreeControl.setSelectedItem）",
+        "pass": true,
+        "detail": "True"
+      },
+      {
+        "name": "flyout 实例化块数 == userlib 函数数（1）",
+        "pass": true,
+        "detail": "实际 1"
+      },
+      {
+        "name": "flyout 里全部是 abilixuf_* 原生块",
+        "pass": true,
+        "detail": "['abilixuf_func_Hello']"
+      },
+      {
+        "name": "flyout 原生块类型与 userlib 完全一致（含顺序）",
+        "pass": true,
+        "detail": "{\"flyout\": [\"abilixuf_func_Hello\"], \"expected\": [\"abilixuf_func_Hello\"]}"
+      },
+      {
+        "name": "flyout 原生块均已渲染（rendered + SVG root + 非 0 尺寸）",
+        "pass": true,
+        "detail": "{\"renderedBlockCount\": 1, \"renderedSvgRootCount\": 1, \"zeroSizeBlockCount\": 0}"
+      },
+      {
+        "name": "拖拽路径执行成功（Flyout.createBlock 真实拖出）",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "从 flyout 拖出的原生块数量 == flyout 块数（1）",
+        "pass": true,
+        "detail": "实际 1"
+      },
+      {
+        "name": "拖出原生块类型与 flyout 顺序一致",
+        "pass": true,
+        "detail": "[\"abilixuf_func_Hello\"]"
+      },
+      {
+        "name": "拖出的原生块均已渲染（rendered + SVG root）",
+        "pass": true,
+        "detail": "[]"
+      },
+      {
+        "name": "所有带参原生块的参数输入都已填值（0 个）",
+        "pass": true,
+        "detail": "实际 0/0"
+      },
+      {
+        "name": "拖出的原生块已接入 start 的 code 语句链",
+        "pass": true,
+        "detail": "startBlockId=start_native_test chainLength=1"
+      },
+      {
+        "name": "项目里原有的原生块在拖拽前被移除（避免重复调用，生成内容全部来自本次拖出）",
+        "pass": true,
+        "detail": "removed=1 projectNative=1"
+      },
+      {
+        "name": "真实 maingui.getPythonCode 生成成功",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "文件头恰好出现一次且内容正确",
+        "pass": true,
+        "detail": "期待 '#<SKCON9><USB><NativeTest>'，实际首行 '#<SKCON9><USB><NativeTest>'，出现 1 次"
+      },
+      {
+        "name": "import 无重复且包含 threading/time/libstarpy",
+        "pass": true,
+        "detail": "['threading', 'time', 'libstarpy']"
+      },
+      {
+        "name": "robot = Robot() 恰好一次",
+        "pass": true,
+        "detail": "实际 1 次"
+      },
+      {
+        "name": "生成代码注入了 abilixUserLibPython（整段完全一致）",
+        "pass": true,
+        "detail": "prelude 61 字符，行序匹配=True，sha256=5a0311e2c2b12e8e18b37d7170eee123a67166e1c6ddbad14cd052ce1792927c"
+      },
+      {
+        "name": "userlib 注入内容位于 def main 之前",
+        "pass": true,
+        "detail": "prelude@92 main@152"
+      },
+      {
+        "name": "注入的 def 没有重复",
+        "pass": true,
+        "detail": "重复 []"
+      },
+      {
+        "name": "userlib 1 个函数定义全部出现在生成代码中",
+        "pass": true,
+        "detail": "[]"
+      },
+      {
+        "name": "生成代码里有 def main()",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "main 里调用了全部 1 个原生函数",
+        "pass": true,
+        "detail": "缺失 []"
+      },
+      {
+        "name": "main 里调用顺序与 flyout 拖出顺序一致",
+        "pass": true,
+        "detail": "[[\"func_Hello\", 5]]"
+      },
+      {
+        "name": "main 里带参数调用的实参与填值完全一致（逐表达式匹配）",
+        "pass": true,
+        "detail": "[\"func_Hello()\"]"
+      },
+      {
+        "name": "程序入口 main()#program entry 恰好一次且在末尾",
+        "pass": true,
+        "detail": "出现 1 次"
+      },
+      {
+        "name": "py_compile 语法检查通过",
+        "pass": true,
+        "detail": ""
+      }
+    ],
+    "passed": true,
+    "passedCount": 32,
+    "totalCount": 32
+  },
+  "screenshot": {
+    "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_hello\\native_test_shot.png",
+    "exists": true,
+    "sizeBytes": 31512,
+    "chromeReturncode": 0,
+    "chromeTimedOut": false,
+    "chromeStderrTail": "31512 bytes written to file D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_hello\\native_test_shot.png\r\n"
+  },
+  "screenshots": [
+    {
+      "kind": "page",
+      "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_hello\\native_test_shot_page.png",
+      "exists": true,
+      "sizeBytes": 37151,
+      "chromeReturncode": 0,
+      "chromeTimedOut": false,
+      "chromeStderrTail": "37151 bytes written to file D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_hello\\native_test_shot_page.png\r\n"
+    },
+    {
+      "kind": "flyout",
+      "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_hello\\native_test_shot_flyout.png",
+      "exists": true,
+      "sizeBytes": 39992,
+      "chromeReturncode": 0,
+      "chromeTimedOut": false,
+      "chromeStderrTail": "39992 bytes written to file D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_hello\\native_test_shot_flyout.png\r\n"
+    },
+    {
+      "kind": "drag",
+      "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_hello\\native_test_shot_drag.png",
+      "exists": true,
+      "sizeBytes": 38543,
+      "chromeReturncode": 0,
+      "chromeTimedOut": false,
+      "chromeStderrTail": "38543 bytes written to file D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_hello\\native_test_shot_drag.png\r\n"
+    },
+    {
+      "kind": "python",
+      "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_hello\\native_test_shot_python.png",
+      "exists": true,
+      "sizeBytes": 39605,
+      "chromeReturncode": 0,
+      "chromeTimedOut": false,
+      "chromeStderrTail": "39605 bytes written to file D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_hello\\native_test_shot_python.png\r\n"
+    }
+  ]
+}

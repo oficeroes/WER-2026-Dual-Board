@@ -1,0 +1,17 @@
+# 函数库 v1 验证对象指纹（SHA-256）
+
+> 本文件由 run_validate.py 验证流程记录；报告正文引用的是**这一版**。
+
+- `WER_函数库\WER函数库.srh`
+  - 大小：50195 bytes
+  - SHA-256：`14a204209fa71b53a26ed6b642f9d30641b7e2835f171486639211ce58556069`
+- `WER_函数库\WER函数库.srhs`
+  - 大小：5944 bytes
+  - SHA-256：`7dc818416ff9ad633b4ec4937cf466d4220b4f7e5230bae374d048b4eaf6f8f1`
+
+## 主证据生成物指纹
+
+- `20261110_132617_WER函数库.py`（.srh 生成的 Python）
+  - 大小：16497 bytes
+  - SHA-256：`bb26c9eb7c3eb37e34ab11a55ca49ebb5ebc5db74b78c81c202c680337ed982c`
+  - .srhs 生成的 Python 与之逐字节相同（见 srhs/ 目录同名文件）

@@ -1,0 +1,19 @@
+=== SHOT 1 ===
+  Camera(1) 超时 8 秒，已杀掉
+--- 拍照后新增/变化（mtime>=1794667682）---
+  NEW /sdcard/Abilix/tmp/camshot2.log                                38
+  NEW /sdcard/logger/logs_266.csv                                288469
+  NEW /data/data/com.abilix.controller/files/libuser.so           13048
+新增 3 个；扫描总数 485
+--- 最近文件的 10 个 ---
+  11-14 22:48:09    288469  /sdcard/logger/logs_266.csv
+  11-14 22:48:02        38  /sdcard/Abilix/tmp/camshot2.log
+  11-14 22:48:01     13048  /data/data/com.abilix.controller/files/libuser.so
+  11-14 22:48:00         0  /sdcard/Abilix/log.txt
+  11-14 22:47:33     13048  /sdcard/Abilix/program/CAMSHOT2.c/librobot_CAMSHOT2.so
+  11-14 22:47:33    105984  /sdcard/Abilix/program/CAMSHOT2.c/libRobot.so
+  11-14 22:47:33      5920  /sdcard/Abilix/program/CAMSHOT2.c/Robot.h
+  11-14 22:47:32      3495  /sdcard/Abilix/tmp/CAMSHOT2.c.zip
+  11-14 22:47:32      9246  /sdcard/Abilix/program/CAMSHOT2.c/CAMSHOT2.c
+  11-14 22:46:36        48  /sdcard/Abilix/tmp/camshot.log
+=== END ===

@@ -1,0 +1,8 @@
+[20:36:46] listening TCP+UDP on 12345, timeout 420s
+[20:36:46] UDP listening on 0.0.0.0:12345
+[20:36:46] TCP listening on 0.0.0.0:12345
+[20:37:02] TCP-IN from 192.168.1.103:46314 data=b'PYTEST2-C tcp-ok\n'
+[20:37:02] UDP-IN from 192.168.1.103:33890 data=b'PYTEST2-U udp-ok\n'
+[20:37:02] UDP-IN from 192.168.1.103:45085 data=b'PYTEST2-U udp-ok\n'
+[20:37:02] TCP-IN from 192.168.1.103:46315 data=b'PYTEST2-C tcp-ok\n'
+[20:43:46] listener exit

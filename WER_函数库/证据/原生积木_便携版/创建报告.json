@@ -1,0 +1,161 @@
+{
+  "tool": "创建便携函数版.py",
+  "scheme": "原生函数积木",
+  "started_at": "20261111-134318",
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "steps": {
+    "source": {
+      "ok": true,
+      "app_dir": "D:\\Program Files\\AbilixScratch3.0",
+      "exe": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0.exe",
+      "exe_exists": true,
+      "assets": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+      "assets_size": 85271033,
+      "assets_sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40",
+      "files": 1727,
+      "bytes": 426477282
+    },
+    "library": {
+      "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\我的函数库.srhs",
+      "bytes": 1396,
+      "sha256": "71aa5ba97bfc8c375259046f88299ad2fceb4004e1e09ea182202216bc309890",
+      "top_blocks": 3,
+      "start_blocks": 1,
+      "defnoreturn": 1,
+      "defreturn": 0,
+      "variables": 0,
+      "ok": true,
+      "errors": [],
+      "origin": "默认：我的函数库",
+      "kind": "mine"
+    },
+    "target": {
+      "path": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib",
+      "non_ascii_chars": [],
+      "旧目录": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib.旧-20261111-134318",
+      "ok": true,
+      "free": 5729058816,
+      "needed": 609519588,
+      "已删除旧目录": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib.旧-20261111-134318"
+    },
+    "appdata_safety": {
+      "switch": {
+        "key": "HKCU\\\\Software\\partnerx\\AbilixScratch3.0",
+        "found": true,
+        "name": "clear_app_data_switch_h107047456",
+        "value": 0,
+        "error": null,
+        "effective_value": 0,
+        "reason": "读到开关值"
+      },
+      "backup": null,
+      "fix": null,
+      "need_clean": false
+    },
+    "copy": {
+      "files": 1727,
+      "bytes": 426477282,
+      "linked": 0,
+      "copied": 1727,
+      "fallback": 1725,
+      "mutable": 2,
+      "mutable_list": [
+        "AbilixScratch3.0_Data\\output_log.txt",
+        "AbilixScratch3.0_Data\\Resources\\browser_assets"
+      ],
+      "seconds": 3.47
+    },
+    "copy_verify": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "src": {
+        "files": 1727,
+        "bytes": 426477282,
+        "dirs": 168
+      },
+      "dst": {
+        "files": 1727,
+        "bytes": 426477282,
+        "dirs": 168
+      },
+      "exe": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0.exe",
+      "src_assets": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+      "dst_assets": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+      "assets_independent": true
+    },
+    "orig_backup": {
+      "ok": true,
+      "orig": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\_原始资源\\browser_assets.orig",
+      "sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40",
+      "bytes": 85271033,
+      "detached": false,
+      "error": null
+    },
+    "native_build": {
+      "ok": true,
+      "error": null,
+      "library": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\我的函数库.srhs",
+      "orig": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\_原始资源\\browser_assets.orig",
+      "assets": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+      "build": {
+        "ok": true,
+        "returncode": 0,
+        "seconds": 44.3,
+        "args_used": [
+          "build",
+          "--library",
+          "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\我的函数库.srhs",
+          "--source-assets",
+          "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\_原始资源\\browser_assets.orig",
+          "--out",
+          "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\_原始资源\\browser_assets.build-20261111-134322"
+        ]
+      },
+      "verify": {
+        "ok": true,
+        "returncode": 0,
+        "args_used": [
+          "verify",
+          "--file",
+          "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\_原始资源\\browser_assets.build-20261111-134322",
+          "--original",
+          "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\_原始资源\\browser_assets.orig"
+        ],
+        "stdout_tail": "校验结果：通过 ✔\r\n  修改 /Blockly_Code/maingui.html（69281 -> 69853 字节）\r\n  修改 /Blockly_Code/maingui.js（23313 -> 23733 字节）\r\n  新增 /Blockly_Code/abilix_userlib.js\r\n  新增 /Blockly_Code/abilix_userlib.json\r\n  其余 6643 个条目逐字节不变",
+        "stderr_tail": ""
+      },
+      "orig_bytes": 85271033,
+      "orig_sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40",
+      "before_bytes": 0,
+      "before_sha256": null,
+      "after_bytes": 85274935,
+      "after_sha256": "17ed1363544a09a99463a338ac9a8e24884535a3d8c9fbfc3a87a2ef6af36905"
+    },
+    "install_untouched": {
+      "ok": true,
+      "assets": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+      "sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40",
+      "bytes": 85271033,
+      "error": null
+    },
+    "shortcut": {
+      "ok": true,
+      "returncode": 0,
+      "stdout": "CREATED",
+      "stderr": "#< CLIXML\r\n<Objs Version=\"1.1.0.1\" xmlns=\"http://schemas.microsoft.com/powershell/2004/04\"><Obj S=\"progress\" RefId=\"0\"><TN RefId=\"0\"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N=\"SourceId\">1</I64><PR N=\"Record\"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj><Obj S=\"progress\" RefId=\"1\"><TNRef RefId=\"0\" /><MS><I64 N=\"SourceId\">1</I64><PR N=\"Record\"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>",
+      "lnk": "D:\\UserData\\Desktop\\AbilixScratch3.0 函数版.lnk",
+      "target": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib\\AbilixScratch3.0.exe",
+      "workdir": "C:\\Users\\s1325\\AbilixScratch3.0_FuncLib",
+      "lnk_bytes": 1988
+    }
+  },
+  "install_assets_baseline": {
+    "path": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+    "bytes": 85271033,
+    "sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40"
+  },
+  "finished_at": "20261111-134421"
+}

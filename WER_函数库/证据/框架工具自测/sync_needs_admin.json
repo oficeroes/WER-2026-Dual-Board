@@ -1,0 +1,555 @@
+{
+  "tool_version": "1.0.0",
+  "phase": "done",
+  "ok": true,
+  "exit_code": 2,
+  "dry_run": false,
+  "install_requested": true,
+  "installed": false,
+  "needs_admin": true,
+  "library": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\示例\\WER函数库.srh",
+  "library_label": "命令行 --library",
+  "assets": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+  "assets_source": "命令行 --assets",
+  "langs": [
+    "zh-hans"
+  ],
+  "fragment": {
+    "source": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\示例\\WER函数库.srh",
+    "chars": 48594,
+    "top_blocks": 21,
+    "start_blocks": 1,
+    "function_count": 20,
+    "defnoreturn_count": 20,
+    "variable_count": 27,
+    "functions": [
+      {
+        "name": "func_Init",
+        "args": []
+      },
+      {
+        "name": "func_Stop",
+        "args": []
+      },
+      {
+        "name": "func_ResetEncoder",
+        "args": []
+      },
+      {
+        "name": "func_ForwardCM",
+        "args": [
+          "cm"
+        ]
+      },
+      {
+        "name": "func_BackwardCM",
+        "args": [
+          "cm"
+        ]
+      },
+      {
+        "name": "func_TurnLeft",
+        "args": [
+          "deg"
+        ]
+      },
+      {
+        "name": "func_TurnRight",
+        "args": [
+          "deg"
+        ]
+      },
+      {
+        "name": "func_DriveTime",
+        "args": [
+          "speedL",
+          "speedR",
+          "sec"
+        ]
+      },
+      {
+        "name": "func_DriveSpeed",
+        "args": [
+          "speedL",
+          "speedR"
+        ]
+      },
+      {
+        "name": "func_ArmUp",
+        "args": []
+      },
+      {
+        "name": "func_ArmDown",
+        "args": []
+      },
+      {
+        "name": "func_Grab",
+        "args": []
+      },
+      {
+        "name": "func_Release",
+        "args": []
+      },
+      {
+        "name": "func_LineStep",
+        "args": []
+      },
+      {
+        "name": "func_LineTime",
+        "args": [
+          "sec"
+        ]
+      },
+      {
+        "name": "func_LineUntilCross",
+        "args": []
+      },
+      {
+        "name": "func_WaitStartKey",
+        "args": []
+      },
+      {
+        "name": "func_WaitTouch",
+        "args": []
+      },
+      {
+        "name": "func_Show",
+        "args": [
+          "text"
+        ]
+      },
+      {
+        "name": "func_Beep",
+        "args": []
+      }
+    ],
+    "variables": [
+      "var_1cm",
+      "var_1angle",
+      "var_speed",
+      "var_straight_Kp",
+      "var_turn_speed",
+      "var_arm_speed",
+      "var_arm_time",
+      "var_ray_white",
+      "var_ray_speed",
+      "var_ray_Kp",
+      "var_ray_Kd",
+      "var_ee_white_9",
+      "var_ee_white_10",
+      "var_err_last_9",
+      "var_err_last_10",
+      "var_ready",
+      "cm",
+      "var_enc_diff",
+      "deg",
+      "speedL",
+      "speedR",
+      "sec",
+      "var_err_9",
+      "var_err_10",
+      "var_pid_9",
+      "var_pid_10",
+      "text"
+    ]
+  },
+  "patch": {
+    "ok": true,
+    "assets": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+    "dry_run": true,
+    "errors": [],
+    "warnings": [],
+    "steps": {
+      "validate_original": {
+        "ok": true,
+        "path": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+        "errors": [],
+        "warnings": [],
+        "count": 6645,
+        "index_end": 406350,
+        "file_size": 85271033
+      },
+      "pure_roundtrip": {
+        "ok": true,
+        "original_sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40",
+        "repacked_sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40",
+        "identical": true
+      },
+      "fragment": {
+        "source": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\示例\\WER函数库.srh",
+        "top_blocks": 21,
+        "start_blocks": 1,
+        "defnoreturn": 20,
+        "variables": 27,
+        "chars": 48594
+      },
+      "maingui_init": {
+        "old_bytes": 5242,
+        "old_sha256": "c86fe3fa00c0433c43cf888eedaedebe71d35c93d161ac13d034222901447561",
+        "new_bytes": 54599,
+        "new_sha256": "da229de8adf38b4a132b13bd260b420df03d0a653561b699f7af6dd2cf62fb8a"
+      },
+      "defaultcode_patch": {
+        "patched": [
+          {
+            "var_name": "defaultcode",
+            "line": 5,
+            "old_chars": 379,
+            "new_chars": 48594,
+            "old_raw_len": 379,
+            "new_raw_len": 48594
+          }
+        ],
+        "not_found": [],
+        "errors": []
+      },
+      "compare": {
+        "ok": true,
+        "old": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+        "new": "C:\\Users\\s1325\\AppData\\Local\\Temp\\zfb_patch_r26sopy3\\browser_assets.patched",
+        "old_count": 6645,
+        "new_count": 6645,
+        "changed": [
+          {
+            "name": "/Blockly_Code/maingui_init.js",
+            "old_sha256": "c86fe3fa00c0433c43cf888eedaedebe71d35c93d161ac13d034222901447561",
+            "new_sha256": "da229de8adf38b4a132b13bd260b420df03d0a653561b699f7af6dd2cf62fb8a",
+            "old_len": 5242,
+            "new_len": 54599
+          }
+        ],
+        "missing": [],
+        "extra": [],
+        "order_mismatch": [],
+        "unchanged_allowed": [],
+        "errors": [],
+        "warnings": []
+      }
+    },
+    "installed": false,
+    "original": {
+      "count": 6645,
+      "file_size": 85271033,
+      "sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40"
+    },
+    "workdir": "C:\\Users\\s1325\\AppData\\Local\\Temp\\zfb_patch_r26sopy3",
+    "patched": {
+      "path": "C:\\Users\\s1325\\AppData\\Local\\Temp\\zfb_patch_r26sopy3\\browser_assets.patched",
+      "bytes": 85320390,
+      "sha256": "a1ff700b46a1ae92b08ba780d2a3eaf9bb9b3862440ddcb0bf4c1a2f1441220a"
+    },
+    "unchanged_entries": 6644,
+    "out": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\framework_work\\browser_assets.patched"
+  },
+  "self_check": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "checks": [
+      {
+        "name": "补丁包是合法的 zfbRes_v1 资源包",
+        "ok": true,
+        "level": "ERROR",
+        "detail": ""
+      },
+      {
+        "name": "除 maingui_init.js 外全部条目 sha256 不变",
+        "ok": true,
+        "level": "ERROR",
+        "detail": ""
+      },
+      {
+        "name": "maingui_init.js 确实被修改",
+        "ok": true,
+        "level": "ERROR",
+        "detail": "变化条目：/Blockly_Code/maingui_init.js"
+      },
+      {
+        "name": "条目数量/顺序与原包一致",
+        "ok": true,
+        "level": "ERROR",
+        "detail": "原 6645 / 新 6645"
+      },
+      {
+        "name": "回读 zh-hans defaultcode 与期望片段逐字符相同",
+        "ok": true,
+        "level": "ERROR",
+        "detail": "回读 48594 字符 / 期望 48594 字符"
+      },
+      {
+        "name": "未替换的 zh-hant defaultcode 保持原样",
+        "ok": true,
+        "level": "ERROR",
+        "detail": "defaultcodeTr 与 defaultcodeTr 长度 379/379"
+      },
+      {
+        "name": "未替换的 en defaultcode 保持原样",
+        "ok": true,
+        "level": "ERROR",
+        "detail": "defaultcodeEn 与 defaultcodeEn 长度 407/407"
+      }
+    ],
+    "changed_entries": [
+      {
+        "name": "/Blockly_Code/maingui_init.js",
+        "old_sha256": "c86fe3fa00c0433c43cf888eedaedebe71d35c93d161ac13d034222901447561",
+        "new_sha256": "da229de8adf38b4a132b13bd260b420df03d0a653561b699f7af6dd2cf62fb8a",
+        "old_len": 5242,
+        "new_len": 54599
+      }
+    ]
+  },
+  "install_readback": {},
+  "backup": null,
+  "out": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\framework_work\\browser_assets.patched",
+  "errors": [],
+  "warnings": [
+    "start 主函数里预置了 13 个块（annotation、annotation、annotation、procedures_callnoreturn、annotation、procedures_callnoreturn、math_number、annotation …（共 13 个））：同步后每个新建项目都会自带这些块，建议只放一个“说明”注释。",
+    "没有写入安装目录的权限，已自动改为“演练模式”（只生成补丁包，不改安装目录）。"
+  ],
+  "suggestions": [
+    "以管理员身份运行（任选其一）：",
+    "  · 双击：D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\工具\\框架\\同步我的函数库(管理员).cmd",
+    "  · 管理员命令行：python \"D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\工具\\框架\\框架核心.py\" sync --install --library \"D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\示例\\WER函数库.srh\" --assets \"D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets\"",
+    "如果不想动安装目录，也可使用“便携版”（复制一份软件到可写目录再打补丁）方案。"
+  ],
+  "permission": {
+    "is_admin": false,
+    "assets_dir": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources",
+    "assets_dir_writable": false
+  },
+  "elapsed_sec": 181.012,
+  "validation": {
+    "tool_version": "1.0.0",
+    "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\示例\\WER函数库.srh",
+    "label": "命令行 --library",
+    "kind": "srh",
+    "exists": true,
+    "ok": true,
+    "exit_code": 0,
+    "robot_type": "SKCON9",
+    "robot_code": 111,
+    "program_name": "WERFuncLib",
+    "source_version": "1.0.3.4",
+    "top_block_count": 21,
+    "start_count": 1,
+    "block_type_counts": {
+      "procedures_defnoreturn": 20,
+      "start": 1
+    },
+    "function_count": 20,
+    "defnoreturn_count": 20,
+    "defreturn_count": 0,
+    "orphan_calls": [],
+    "variable_count": 27,
+    "variables": [
+      "var_1cm",
+      "var_1angle",
+      "var_speed",
+      "var_straight_Kp",
+      "var_turn_speed",
+      "var_arm_speed",
+      "var_arm_time",
+      "var_ray_white",
+      "var_ray_speed",
+      "var_ray_Kp",
+      "var_ray_Kd",
+      "var_ee_white_9",
+      "var_ee_white_10",
+      "var_err_last_9",
+      "var_err_last_10",
+      "var_ready",
+      "cm",
+      "var_enc_diff",
+      "deg",
+      "speedL",
+      "speedR",
+      "sec",
+      "var_err_9",
+      "var_err_10",
+      "var_pid_9",
+      "var_pid_10",
+      "text"
+    ],
+    "comment_count": 0,
+    "start_body": {
+      "nested_block_count": 13,
+      "nested_block_types": [
+        "annotation",
+        "annotation",
+        "annotation",
+        "procedures_callnoreturn",
+        "annotation",
+        "procedures_callnoreturn",
+        "math_number",
+        "annotation",
+        "procedures_callnoreturn",
+        "math_number",
+        "procedures_callnoreturn",
+        "annotation",
+        "annotation"
+      ]
+    },
+    "fragment_chars": 48594,
+    "fragment_top_blocks": 21,
+    "fallback_library": false,
+    "elapsed_sec": 0.022,
+    "functions": [
+      {
+        "name": "func_Init",
+        "args": [],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_Stop",
+        "args": [],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_ResetEncoder",
+        "args": [],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_ForwardCM",
+        "args": [
+          "cm"
+        ],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_BackwardCM",
+        "args": [
+          "cm"
+        ],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_TurnLeft",
+        "args": [
+          "deg"
+        ],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_TurnRight",
+        "args": [
+          "deg"
+        ],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_DriveTime",
+        "args": [
+          "speedL",
+          "speedR",
+          "sec"
+        ],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_DriveSpeed",
+        "args": [
+          "speedL",
+          "speedR"
+        ],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_ArmUp",
+        "args": [],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_ArmDown",
+        "args": [],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_Grab",
+        "args": [],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_Release",
+        "args": [],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_LineStep",
+        "args": [],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_LineTime",
+        "args": [
+          "sec"
+        ],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_LineUntilCross",
+        "args": [],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_WaitStartKey",
+        "args": [],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_WaitTouch",
+        "args": [],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_Show",
+        "args": [
+          "text"
+        ],
+        "type": "procedures_defnoreturn"
+      },
+      {
+        "name": "func_Beep",
+        "args": [],
+        "type": "procedures_defnoreturn"
+      }
+    ],
+    "errors": [],
+    "warnings": [
+      "start 主函数里预置了 13 个块（annotation、annotation、annotation、procedures_callnoreturn、annotation、procedures_callnoreturn、math_number、annotation …（共 13 个））：同步后每个新建项目都会自带这些块，建议只放一个“说明”注释。"
+    ],
+    "checks": [
+      {
+        "name": "函数定义块全部位于顶层",
+        "ok": true,
+        "level": "ERROR",
+        "detail": "共 20 个定义块，其中顶层 20 个（有 0 个被拖进了别的积木里，不会被同步）"
+      },
+      {
+        "name": "恰好 1 个 start 块",
+        "ok": true,
+        "level": "ERROR",
+        "detail": "当前 1 个；新建项目模板必须恰好 1 个 start"
+      },
+      {
+        "name": "函数名不重复",
+        "ok": true,
+        "level": "ERROR",
+        "detail": "重复函数名："
+      },
+      {
+        "name": "变量名不重复",
+        "ok": true,
+        "level": "ERROR",
+        "detail": "重复变量名："
+      },
+      {
+        "name": "能生成新建项目默认模板片段",
+        "ok": true,
+        "level": "ERROR",
+        "detail": ""
+      }
+    ]
+  }
+}

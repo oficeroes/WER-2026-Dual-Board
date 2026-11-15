@@ -1,0 +1,90 @@
+{
+  "tool_version": "1.0.0",
+  "ok": true,
+  "exit_code": 0,
+  "assets": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+  "assets_source": "标准安装路径",
+  "file_sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40",
+  "file_size": 85271033,
+  "count": 6645,
+  "entry_sha256": "c86fe3fa00c0433c43cf888eedaedebe71d35c93d161ac13d034222901447561",
+  "entry_bytes_len": 5242,
+  "js_lines": 170,
+  "langs": {
+    "zh-hans": {
+      "var": "defaultcode",
+      "line": 5,
+      "chars": 379,
+      "top_block_count": 1,
+      "start_count": 1,
+      "function_count": 0,
+      "functions": [],
+      "variable_count": 0,
+      "variables": [],
+      "start_nested_block_types": [
+        "annotation",
+        "printf_text"
+      ],
+      "xml_ok": true,
+      "xml_errors": []
+    },
+    "zh-hant": {
+      "var": "defaultcodeTr",
+      "line": 6,
+      "chars": 379,
+      "top_block_count": 1,
+      "start_count": 1,
+      "function_count": 0,
+      "functions": [],
+      "variable_count": 0,
+      "variables": [],
+      "start_nested_block_types": [
+        "annotation",
+        "printf_text"
+      ],
+      "xml_ok": true,
+      "xml_errors": []
+    },
+    "en": {
+      "var": "defaultcodeEn",
+      "line": 7,
+      "chars": 407,
+      "top_block_count": 1,
+      "start_count": 1,
+      "function_count": 0,
+      "functions": [],
+      "variable_count": 0,
+      "variables": [],
+      "start_nested_block_types": [
+        "annotation",
+        "printf_text"
+      ],
+      "xml_ok": true,
+      "xml_errors": []
+    }
+  },
+  "classification": "原始模板（未打补丁；本机无备份可比对）",
+  "template_kind": "original",
+  "compare": {
+    "library": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\我的函数库.srhs",
+    "library_label": "我的函数库.srhs",
+    "library_ok": true,
+    "library_function_count": 0,
+    "current_function_count": 0,
+    "to_add": [],
+    "to_remove": [],
+    "args_changed": [],
+    "variables_to_add": [],
+    "variables_to_remove": [],
+    "expected_fragment_chars": 1155,
+    "current_template_chars": 379,
+    "template_identical_to_library": false,
+    "need_sync": true
+  },
+  "backup": {
+    "path": null,
+    "same_as_current": null
+  },
+  "errors": [],
+  "warnings": []
+}

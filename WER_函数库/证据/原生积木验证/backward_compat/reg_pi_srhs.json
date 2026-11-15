@@ -1,0 +1,2830 @@
+{
+  "meta": {
+    "tool": "run_validate.py",
+    "toolVersion": "1.0",
+    "generatedAt": "2026-11-11T13:51:30",
+    "argv": [
+      "WER_函数库/工具/验证/run_validate.py",
+      "C:/Users/s1325/Documents/School/WER2026/My-WER/Program/PI.srhs",
+      "--web-root",
+      "_分析临时/native_work/patched_web",
+      "--program-name",
+      "ProgramA",
+      "--compare-ref",
+      "逆向资料/样本程序/PI.py",
+      "--fail-on-diff",
+      "--json",
+      "_分析临时/native_work/_scratch/reg_pi_srhs.json",
+      "--py",
+      "_分析临时/native_work/_scratch/reg_pi_srhs.py",
+      "--window-size",
+      "1600,1000"
+    ],
+    "python": "3.12.4",
+    "mode": "project",
+    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "webRoot": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\patched_web",
+    "elapsedMs": 3095,
+    "pythonOutput": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\_scratch\\reg_pi_srhs.py",
+    "jsonOutput": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\_scratch\\reg_pi_srhs.json"
+  },
+  "ok": true,
+  "errors": [],
+  "project": {
+    "inputPath": "D:\\UserData\\Documents\\School\\WER2026\\My-WER\\Program\\PI.srhs",
+    "format": "srhs",
+    "encoding": "utf-8-sig",
+    "info": {
+      "Version": "1.0.3.4",
+      "RobotType": "SKCON9",
+      "DownloadProgramName": "PI"
+    },
+    "infoRaw": "\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ScratchProjectInfo xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <Version>1.0.3.4</Version>\r\n  <RobotType>SKCON9</RobotType>\r\n  <DownloadProgramName>PI</DownloadProgramName>\r\n</ScratchProjectInfo>\n",
+    "zipRobotType": "SKCON9",
+    "robotType": "SKCON9",
+    "connectionType": "USB",
+    "programName": "ProgramA",
+    "static": {
+      "xmlValid": true,
+      "xmlError": null,
+      "rootTag": "xml",
+      "variablesCount": 46,
+      "variables": [
+        {
+          "name": "var_1cm",
+          "id": "%lZZ$hn^M*oIp_,)#:6r"
+        },
+        {
+          "name": "var_cm_up",
+          "id": "A[X0e!,DFS4lgR^~X0l?"
+        },
+        {
+          "name": "var_cm_down",
+          "id": "6*uToO=%*0RQ~VF]PNfI"
+        },
+        {
+          "name": "var_speed_min",
+          "id": "b?f/!/ip]xKhp?e8PAEy"
+        },
+        {
+          "name": "var_speed_max",
+          "id": "|_G%-d:VhdzpJM{P[U!|"
+        },
+        {
+          "name": "var_Kp",
+          "id": "i:NvPSU!Q$Q;=$):K)fb"
+        },
+        {
+          "name": "var_Ki",
+          "id": ":Low6B;6TfB+b2xtfN`2"
+        },
+        {
+          "name": "var_cm",
+          "id": "7e2QU}]l7S{[==5Ql?T,"
+        },
+        {
+          "name": "var_Error_Ki",
+          "id": "Q9v`3!SNIj};PK[@6D*,"
+        },
+        {
+          "name": "var_Error",
+          "id": "ml*,/!h*e2c_b`m:Gaxa"
+        },
+        {
+          "name": "var_Error_max",
+          "id": "`eHbb(t=47V37}MC_U+d"
+        },
+        {
+          "name": "var_PI",
+          "id": "w{ggx}^m84KloKm`^L:E"
+        },
+        {
+          "name": "var_speed",
+          "id": "Usgx-)nm)).0rG9ni-(c"
+        },
+        {
+          "name": "var_angle",
+          "id": "xh{|)jB=Qw*X)LD:#OkE"
+        },
+        {
+          "name": "var_1angle",
+          "id": "Z;Q@5OC}_.45VJ@*pyQl"
+        },
+        {
+          "name": "var_angle_up",
+          "id": "c?d%mR|lHV-{}7J)ZZ_%"
+        },
+        {
+          "name": "var_angle_down",
+          "id": "Xn:cN8Y/Tzw2CffqYcD("
+        },
+        {
+          "name": "var_turn_speed_max",
+          "id": "Fp$^2kKl2_pNlg.I@sL+"
+        },
+        {
+          "name": "var_turn_speed_min",
+          "id": "u@G2DK}gNVGF3YAs{5zd"
+        },
+        {
+          "name": "var_turn_Ki",
+          "id": "b,H9g:`PCL+@3g+jjEmM"
+        },
+        {
+          "name": "var_turn_Kp",
+          "id": "*XhoO3LtDOL2*^Ld]+{="
+        },
+        {
+          "name": "var_turn_Error_Ki",
+          "id": "FKq*BX3Cadrkul/v-r+O"
+        },
+        {
+          "name": "var_turn_Error",
+          "id": "$*6-L1s_+gDBBXSGRG8V"
+        },
+        {
+          "name": "var_turn_PI",
+          "id": "j$-4z,|1CUA=:T$}E}xE"
+        },
+        {
+          "name": "var_turn_speed",
+          "id": "I@o(Ml@V[wkx0@`,j4W`"
+        },
+        {
+          "name": "var_turn_RL",
+          "id": "if[kEz_;#1,69TCZh4#7"
+        },
+        {
+          "name": "var_ray_light_9",
+          "id": "8*^MR:kCoU)5Qu)G1`}`"
+        },
+        {
+          "name": "var_ray_light_10",
+          "id": "}Y%n=%N*27Oa_@SI;](^"
+        },
+        {
+          "name": "var_ray_left_Error",
+          "id": "*Lx4qlLEVkY.yyJw97,X"
+        },
+        {
+          "name": "var_ray_right_Error",
+          "id": "gb+)9DbnZd9#xyu7?_,q"
+        },
+        {
+          "name": "var_ray_Kp",
+          "id": ",P)a25uY$1mj_6aY[;^c"
+        },
+        {
+          "name": "var_ray_left_PID",
+          "id": "P/smb1fOUykBb7stRBy/"
+        },
+        {
+          "name": "var_ray_right_PID",
+          "id": "Stf-,BAror]8%sz(m]Ox"
+        },
+        {
+          "name": "var_ray_left_last_Error",
+          "id": "I[#*441fV=WFY[aX^XM("
+        },
+        {
+          "name": "var_ray_right_last_Error",
+          "id": "v+nl.;WHL%b%hNCMV0@w"
+        },
+        {
+          "name": "var_ray_Kd",
+          "id": "~2sd9%pfkEUbhVk[0%wL"
+        },
+        {
+          "name": "var_ray_speed",
+          "id": "U=6!EMq1s:MdC;p3l9`3"
+        },
+        {
+          "name": "var_ray_time",
+          "id": "`ZT;2n2Ln,E~AH5k`H:("
+        },
+        {
+          "name": "var_ray_return_time",
+          "id": "FAdj_W!|2Fcry2{D~CRX"
+        },
+        {
+          "name": "var_ray_white",
+          "id": "@CGbB162I}DOXgtZ.^Gr"
+        },
+        {
+          "name": "var_ray_choose",
+          "id": "t(J%S5dTk7,;MiD!3H.y"
+        },
+        {
+          "name": "var_green_Kp",
+          "id": "r5`V^AZA)IicQe:um`V$"
+        },
+        {
+          "name": "var_green_Error",
+          "id": "d(6h}NKZ.@*2cvhA[q9l"
+        },
+        {
+          "name": "var_green_Ki",
+          "id": "2$j,vVz)*xxgMHFE$}:Q"
+        },
+        {
+          "name": "var_green_last_Error",
+          "id": "|FNkT_;tLbxGe8g@QEfI"
+        },
+        {
+          "name": "var_green_MC",
+          "id": "HDV/:}JN(DBL26S=[WQ#"
+        }
+      ],
+      "topBlockCount": 52,
+      "topBlocks": [
+        {
+          "type": "procedures_defnoreturn",
+          "id": "uq6ia[(`[aMzu_ixKa!d",
+          "name": "func_end",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "u$6{Sa+M:Q$+1AR(FgLG",
+          "name": "func_name2",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "GP)3fsT7)O[4w+16JIj{",
+          "name": "func_green_end",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "=Fz5{MW?LR+{3,F=K.F;",
+          "name": "func_green_end_1",
+          "args": []
+        },
+        {
+          "type": "block_mod",
+          "id": "]FL/lw,%#!,%^_$.V7^,"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": ")S9~4K|-);Nj$.h_}cTZ",
+          "name": "func_Path_green_1",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "9lfx@B5IVW6[+Ls(5=mp",
+          "name": "func_Path_green_3",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "=yK@/0b}[yEAq;F`FB]$",
+          "name": "func_take_white",
+          "args": []
+        },
+        {
+          "type": "motor",
+          "id": "g6NWZy_`K@QYHEana^w="
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "SAd/fUS,rgJ3!XYiC(Wz",
+          "name": "func_Path_green_2",
+          "args": []
+        },
+        {
+          "type": "block_mod",
+          "id": "gwv/.h$?N|}dbF3UMq20"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "Vt+Yv4b~N|hT{+iR*0B?",
+          "name": "func_Path_green_4",
+          "args": []
+        },
+        {
+          "type": "motor",
+          "id": "s/wwp`$v6E0R/w}90T:E"
+        },
+        {
+          "type": "wait",
+          "id": "|fuWn8.g3`U,=`)`+H1,"
+        },
+        {
+          "type": "block_mod",
+          "id": "I!|myf{}1i#@uLs}f1`d"
+        },
+        {
+          "type": "ifelse",
+          "id": "$EV/IsF=^@7yWI|;;NH8"
+        },
+        {
+          "type": "while_forver",
+          "id": "tFQrBb[R0+qQ`I!Nw0:P"
+        },
+        {
+          "type": "if",
+          "id": "OQLUXO66%hs2k[yGwc{@"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "l1#x},r]|!j=4XN~0sur",
+          "name": "func_backwards",
+          "args": []
+        },
+        {
+          "type": "while_break",
+          "id": "!6(o7mG#J/OBjF=zs~,`"
+        },
+        {
+          "type": "block_mod",
+          "id": "1mPjBZ:;I[X9r:#oB`#`"
+        },
+        {
+          "type": "start",
+          "id": ":,-8s,JP[Hv2l0?r`GjL"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "wR:Tug;HmhfGuMCC?1dR",
+          "name": "func_main",
+          "args": []
+        },
+        {
+          "type": "while_forver",
+          "id": "$hHNE_?kdF{jrg*C-4=u"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "bb!iU!Jl5CR/vHkhqPSZ",
+          "name": "func_Library",
+          "args": []
+        },
+        {
+          "type": "if",
+          "id": "w}^|k5(^a9,eZu7xLXDQ"
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "id": "M${SAQ$L|3FtPi,B3}hU"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "dZ*fkMxs4jpYGBo9b[{}",
+          "name": "func_forward",
+          "args": []
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "id": "TAVgMeTA3=?d*bnWiG`d"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "-b,_RTFOxqMW/Og]cW{)",
+          "name": "func_Turn",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "#oi(Xhke|yrQK?wr1`}.",
+          "name": "func_ON",
+          "args": []
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "id": "_wkorZ`UpHst/4_T{k6K"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "f)=k+F2JJLWyANtJMh:9",
+          "name": "func_ray",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "1t%YI@9$kM%k,p52!;G/",
+          "name": "func_ray_forward_PID",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "@n.mGT_-Fw.qE@;q_iSX",
+          "name": "func_ray_forward",
+          "args": []
+        },
+        {
+          "type": "printf_text",
+          "id": "InRMkC_,vaH-UI6vxw6k"
+        },
+        {
+          "type": "while_forver",
+          "id": "Z{sU{jHUfdhPr83X2G7Z"
+        },
+        {
+          "type": "wait",
+          "id": "F6|v]gWkkJZR.yU{@$P+"
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "id": "*%Pk#{Hh:wjW.4Cee)Pj"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": ",J3cxe%DgqH*?3*:,+FP",
+          "name": "func_Motter_Zero",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "zT;No[I]j7waQdWjC8O!",
+          "name": "func_ray_PID",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "?j_#(;o)zmql[@6QU[V$",
+          "name": "func_value",
+          "args": []
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "x?ko+0;b*.(3=6A2_F.O",
+          "name": "func_Last_light_Error",
+          "args": []
+        },
+        {
+          "type": "variables_get",
+          "id": "O3]x|9RExdXVKGMjcobm"
+        },
+        {
+          "type": "variables_get",
+          "id": "bs*:}zg,7aMI{.c+./7y"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "N|W)X1g0+g^aQ0{oMC42",
+          "name": "func_ray_backwards_PID",
+          "args": []
+        },
+        {
+          "type": "math_op",
+          "id": "Z{c?hQ(I13Q@oOH^T5tB"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "QQusb_X:,IGfZF}N(;_U",
+          "name": "func_ray_Path",
+          "args": []
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "id": "uIoM%avl`fK3VWWVjc=J"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "35a}=WzDp)ASvC(Rw#z4",
+          "name": "func_ray_Path_PID",
+          "args": []
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "id": "x4$8u_4W5l-fs:6!lhZs"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "id": "1@fKHyv+!J8De-GarGdq",
+          "name": "func_ray_Time",
+          "args": []
+        }
+      ],
+      "procedures": {
+        "defnoreturn": [
+          {
+            "type": "procedures_defnoreturn",
+            "id": "uq6ia[(`[aMzu_ixKa!d",
+            "name": "func_end",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "u$6{Sa+M:Q$+1AR(FgLG",
+            "name": "func_name2",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "GP)3fsT7)O[4w+16JIj{",
+            "name": "func_green_end",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "=Fz5{MW?LR+{3,F=K.F;",
+            "name": "func_green_end_1",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": ")S9~4K|-);Nj$.h_}cTZ",
+            "name": "func_Path_green_1",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "9lfx@B5IVW6[+Ls(5=mp",
+            "name": "func_Path_green_3",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "=yK@/0b}[yEAq;F`FB]$",
+            "name": "func_take_white",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "SAd/fUS,rgJ3!XYiC(Wz",
+            "name": "func_Path_green_2",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "Vt+Yv4b~N|hT{+iR*0B?",
+            "name": "func_Path_green_4",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "l1#x},r]|!j=4XN~0sur",
+            "name": "func_backwards",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "wR:Tug;HmhfGuMCC?1dR",
+            "name": "func_main",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "bb!iU!Jl5CR/vHkhqPSZ",
+            "name": "func_Library",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "dZ*fkMxs4jpYGBo9b[{}",
+            "name": "func_forward",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "-b,_RTFOxqMW/Og]cW{)",
+            "name": "func_Turn",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "#oi(Xhke|yrQK?wr1`}.",
+            "name": "func_ON",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "f)=k+F2JJLWyANtJMh:9",
+            "name": "func_ray",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "1t%YI@9$kM%k,p52!;G/",
+            "name": "func_ray_forward_PID",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "@n.mGT_-Fw.qE@;q_iSX",
+            "name": "func_ray_forward",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": ",J3cxe%DgqH*?3*:,+FP",
+            "name": "func_Motter_Zero",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "zT;No[I]j7waQdWjC8O!",
+            "name": "func_ray_PID",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "?j_#(;o)zmql[@6QU[V$",
+            "name": "func_value",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "x?ko+0;b*.(3=6A2_F.O",
+            "name": "func_Last_light_Error",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "N|W)X1g0+g^aQ0{oMC42",
+            "name": "func_ray_backwards_PID",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "QQusb_X:,IGfZF}N(;_U",
+            "name": "func_ray_Path",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "35a}=WzDp)ASvC(Rw#z4",
+            "name": "func_ray_Path_PID",
+            "args": []
+          },
+          {
+            "type": "procedures_defnoreturn",
+            "id": "1@fKHyv+!J8De-GarGdq",
+            "name": "func_ray_Time",
+            "args": []
+          }
+        ],
+        "defreturn": []
+      },
+      "topBlocksByType": {
+        "procedures_defnoreturn": 26,
+        "block_mod": 4,
+        "motor": 2,
+        "wait": 2,
+        "ifelse": 1,
+        "while_forver": 3,
+        "if": 2,
+        "while_break": 1,
+        "start": 1,
+        "procedures_callnoreturn": 6,
+        "printf_text": 1,
+        "variables_get": 2,
+        "math_op": 1
+      },
+      "hasStartBlock": true
+    },
+    "warnings": []
+  },
+  "chrome": {
+    "returncode": 0,
+    "timedOut": false,
+    "elapsedMs": 2419
+  },
+  "harness": {
+    "ok": true,
+    "tool": "wer-blockly-harness",
+    "harnessVersion": "1.0",
+    "startedAt": "2026-11-11T05:51:31.250Z",
+    "config": {
+      "mode": "project",
+      "robotType": "SKCON9",
+      "connectionType": "USB",
+      "programName": "ProgramA",
+      "projectXmlLength": 379419
+    },
+    "steps": [
+      {
+        "name": "inject",
+        "ok": true,
+        "ms": 36.6
+      },
+      {
+        "name": "clear",
+        "ok": true,
+        "ms": 0.1
+      },
+      {
+        "name": "textToDom",
+        "ok": true,
+        "ms": 22.7
+      },
+      {
+        "name": "domToWorkspace",
+        "ok": true,
+        "ms": 584
+      },
+      {
+        "name": "workspaceStats",
+        "ok": true,
+        "ms": 8.5
+      },
+      {
+        "name": "procedures",
+        "ok": true,
+        "ms": 8.6
+      },
+      {
+        "name": "flyoutCategory",
+        "ok": true,
+        "ms": 3.6
+      },
+      {
+        "name": "flyoutInstantiate",
+        "ok": true,
+        "ms": 24.5
+      }
+    ],
+    "windowErrors": [],
+    "consoleErrors": [],
+    "load": {
+      "success": true,
+      "error": null,
+      "ms": 643.5
+    },
+    "workspace": {
+      "topBlockCount": 52,
+      "totalBlockCount": 2256,
+      "variableCount": 46,
+      "variableNames": [
+        "var_1cm",
+        "var_cm_up",
+        "var_cm_down",
+        "var_speed_min",
+        "var_speed_max",
+        "var_Kp",
+        "var_Ki",
+        "var_cm",
+        "var_Error_Ki",
+        "var_Error",
+        "var_Error_max",
+        "var_PI",
+        "var_speed",
+        "var_angle",
+        "var_1angle",
+        "var_angle_up",
+        "var_angle_down",
+        "var_turn_speed_max",
+        "var_turn_speed_min",
+        "var_turn_Ki",
+        "var_turn_Kp",
+        "var_turn_Error_Ki",
+        "var_turn_Error",
+        "var_turn_PI",
+        "var_turn_speed",
+        "var_turn_RL",
+        "var_ray_light_9",
+        "var_ray_light_10",
+        "var_ray_left_Error",
+        "var_ray_right_Error",
+        "var_ray_Kp",
+        "var_ray_left_PID",
+        "var_ray_right_PID",
+        "var_ray_left_last_Error",
+        "var_ray_right_last_Error",
+        "var_ray_Kd",
+        "var_ray_speed",
+        "var_ray_time",
+        "var_ray_return_time",
+        "var_ray_white",
+        "var_ray_choose",
+        "var_green_Kp",
+        "var_green_Error",
+        "var_green_Ki",
+        "var_green_last_Error",
+        "var_green_MC"
+      ],
+      "topBlocksByType": {
+        "procedures_defnoreturn": 26,
+        "block_mod": 4,
+        "motor": 2,
+        "wait": 2,
+        "ifelse": 1,
+        "while_forver": 3,
+        "if": 2,
+        "while_break": 1,
+        "start": 1,
+        "procedures_callnoreturn": 6,
+        "printf_text": 1,
+        "variables_get": 2,
+        "math_op": 1
+      },
+      "allBlocksByType": {
+        "procedures_defnoreturn": 26,
+        "block_mod": 56,
+        "motor": 81,
+        "wait": 28,
+        "ifelse": 14,
+        "while_forver": 16,
+        "if": 28,
+        "while_break": 10,
+        "start": 1,
+        "procedures_callnoreturn": 79,
+        "printf_text": 2,
+        "variables_get": 382,
+        "math_op": 345,
+        "getmsecondsreset": 6,
+        "motor_time": 8,
+        "math_number": 506,
+        "math_compare": 50,
+        "logic_boolean": 1,
+        "getai_touch": 6,
+        "variables_set": 388,
+        "getmseconds": 9,
+        "robot_math_rounding": 54,
+        "block_conststring": 31,
+        "while_cmp": 14,
+        "getai_glay": 11,
+        "logic_operation": 1,
+        "resetencoder": 3,
+        "dual_motor_angle": 9,
+        "getencoder": 51,
+        "eeprom_read": 2,
+        "robot_math_unary_operation": 28,
+        "dual_motor_duration": 1,
+        "math_change": 1,
+        "robot_math_trigonometric_function": 8
+      },
+      "topBlocks": [
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -4507,
+            -4834
+          ],
+          "id": "uq6ia[(`[aMzu_ixKa!d"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -5230,
+            -2611
+          ],
+          "id": "u$6{Sa+M:Q$+1AR(FgLG"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -3722,
+            -2424
+          ],
+          "id": "GP)3fsT7)O[4w+16JIj{"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -2650,
+            -2337
+          ],
+          "id": "=Fz5{MW?LR+{3,F=K.F;"
+        },
+        {
+          "type": "block_mod",
+          "xy": [
+            -1987,
+            -2326
+          ],
+          "id": "]FL/lw,%#!,%^_$.V7^,"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -1903,
+            -2211
+          ],
+          "id": ")S9~4K|-);Nj$.h_}cTZ"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            222,
+            -2281
+          ],
+          "id": "9lfx@B5IVW6[+Ls(5=mp"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -1168,
+            -2132
+          ],
+          "id": "=yK@/0b}[yEAq;F`FB]$"
+        },
+        {
+          "type": "motor",
+          "xy": [
+            -4544,
+            -1943
+          ],
+          "id": "g6NWZy_`K@QYHEana^w="
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -537,
+            -2144
+          ],
+          "id": "SAd/fUS,rgJ3!XYiC(Wz"
+        },
+        {
+          "type": "block_mod",
+          "xy": [
+            1538,
+            -2197
+          ],
+          "id": "gwv/.h$?N|}dbF3UMq20"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            864,
+            -2115
+          ],
+          "id": "Vt+Yv4b~N|hT{+iR*0B?"
+        },
+        {
+          "type": "motor",
+          "xy": [
+            -4163,
+            -1847
+          ],
+          "id": "s/wwp`$v6E0R/w}90T:E"
+        },
+        {
+          "type": "wait",
+          "xy": [
+            -4740,
+            -1698
+          ],
+          "id": "|fuWn8.g3`U,=`)`+H1,"
+        },
+        {
+          "type": "block_mod",
+          "xy": [
+            2070,
+            -1784
+          ],
+          "id": "I!|myf{}1i#@uLs}f1`d"
+        },
+        {
+          "type": "ifelse",
+          "xy": [
+            1813,
+            -1608
+          ],
+          "id": "$EV/IsF=^@7yWI|;;NH8"
+        },
+        {
+          "type": "while_forver",
+          "xy": [
+            -4298,
+            -1017
+          ],
+          "id": "tFQrBb[R0+qQ`I!Nw0:P"
+        },
+        {
+          "type": "if",
+          "xy": [
+            -4371,
+            -933
+          ],
+          "id": "OQLUXO66%hs2k[yGwc{@"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -4139,
+            -910
+          ],
+          "id": "l1#x},r]|!j=4XN~0sur"
+        },
+        {
+          "type": "while_break",
+          "xy": [
+            -4590,
+            -835
+          ],
+          "id": "!6(o7mG#J/OBjF=zs~,`"
+        },
+        {
+          "type": "block_mod",
+          "xy": [
+            1560,
+            -659
+          ],
+          "id": "1mPjBZ:;I[X9r:#oB`#`"
+        },
+        {
+          "type": "start",
+          "xy": [
+            227,
+            -153
+          ],
+          "id": ":,-8s,JP[Hv2l0?r`GjL"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            871,
+            -70
+          ],
+          "id": "wR:Tug;HmhfGuMCC?1dR"
+        },
+        {
+          "type": "while_forver",
+          "xy": [
+            306,
+            77
+          ],
+          "id": "$hHNE_?kdF{jrg*C-4=u"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -165,
+            205
+          ],
+          "id": "bb!iU!Jl5CR/vHkhqPSZ"
+        },
+        {
+          "type": "if",
+          "xy": [
+            493,
+            190
+          ],
+          "id": "w}^|k5(^a9,eZu7xLXDQ"
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "xy": [
+            1052,
+            339
+          ],
+          "id": "M${SAQ$L|3FtPi,B3}hU"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -3568,
+            662
+          ],
+          "id": "dZ*fkMxs4jpYGBo9b[{}"
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "xy": [
+            694,
+            465
+          ],
+          "id": "TAVgMeTA3=?d*bnWiG`d"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            -2622,
+            715
+          ],
+          "id": "-b,_RTFOxqMW/Og]cW{)"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            1410,
+            544
+          ],
+          "id": "#oi(Xhke|yrQK?wr1`}."
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "xy": [
+            903,
+            613
+          ],
+          "id": "_wkorZ`UpHst/4_T{k6K"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            2632,
+            645
+          ],
+          "id": "f)=k+F2JJLWyANtJMh:9"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            3446,
+            638
+          ],
+          "id": "1t%YI@9$kM%k,p52!;G/"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            4226,
+            617
+          ],
+          "id": "@n.mGT_-Fw.qE@;q_iSX"
+        },
+        {
+          "type": "printf_text",
+          "xy": [
+            1090,
+            802
+          ],
+          "id": "InRMkC_,vaH-UI6vxw6k"
+        },
+        {
+          "type": "while_forver",
+          "xy": [
+            576,
+            836
+          ],
+          "id": "Z{sU{jHUfdhPr83X2G7Z"
+        },
+        {
+          "type": "wait",
+          "xy": [
+            839,
+            831
+          ],
+          "id": "F6|v]gWkkJZR.yU{@$P+"
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "xy": [
+            1129,
+            876
+          ],
+          "id": "*%Pk#{Hh:wjW.4Cee)Pj"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            841,
+            923
+          ],
+          "id": ",J3cxe%DgqH*?3*:,+FP"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            2665,
+            872
+          ],
+          "id": "zT;No[I]j7waQdWjC8O!"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            1396,
+            958
+          ],
+          "id": "?j_#(;o)zmql[@6QU[V$"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            1848,
+            1121
+          ],
+          "id": "x?ko+0;b*.(3=6A2_F.O"
+        },
+        {
+          "type": "variables_get",
+          "xy": [
+            5064,
+            1189
+          ],
+          "id": "O3]x|9RExdXVKGMjcobm"
+        },
+        {
+          "type": "variables_get",
+          "xy": [
+            5054,
+            1257
+          ],
+          "id": "bs*:}zg,7aMI{.c+./7y"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            2535,
+            1496
+          ],
+          "id": "N|W)X1g0+g^aQ0{oMC42"
+        },
+        {
+          "type": "math_op",
+          "xy": [
+            3575,
+            2183
+          ],
+          "id": "Z{c?hQ(I13Q@oOH^T5tB"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            2644,
+            2266
+          ],
+          "id": "QQusb_X:,IGfZF}N(;_U"
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "xy": [
+            3165,
+            2658
+          ],
+          "id": "uIoM%avl`fK3VWWVjc=J"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            2670,
+            2693
+          ],
+          "id": "35a}=WzDp)ASvC(Rw#z4"
+        },
+        {
+          "type": "procedures_callnoreturn",
+          "xy": [
+            3379,
+            2665
+          ],
+          "id": "x4$8u_4W5l-fs:6!lhZs"
+        },
+        {
+          "type": "procedures_defnoreturn",
+          "xy": [
+            4475,
+            2646
+          ],
+          "id": "1@fKHyv+!J8De-GarGdq"
+        }
+      ],
+      "render": {
+        "renderedBlockCount": 2256,
+        "renderedSvgRootCount": 2256,
+        "zeroSizeBlockCount": 0,
+        "warningCount": 0,
+        "warnings": [],
+        "disabledBlockCount": 66,
+        "mainWorkspaceIsThis": true,
+        "blocklyBlockCanvasCount": 2,
+        "injectionDivCount": 1,
+        "svgCount": 1
+      }
+    },
+    "procedures": {
+      "defnoreturn": [
+        {
+          "name": "func_end",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "uq6ia[(`[aMzu_ixKa!d"
+        },
+        {
+          "name": "func_name2",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "u$6{Sa+M:Q$+1AR(FgLG"
+        },
+        {
+          "name": "func_green_end",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "GP)3fsT7)O[4w+16JIj{"
+        },
+        {
+          "name": "func_green_end_1",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "=Fz5{MW?LR+{3,F=K.F;"
+        },
+        {
+          "name": "func_Path_green_1",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": ")S9~4K|-);Nj$.h_}cTZ"
+        },
+        {
+          "name": "func_Path_green_3",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "9lfx@B5IVW6[+Ls(5=mp"
+        },
+        {
+          "name": "func_take_white",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "=yK@/0b}[yEAq;F`FB]$"
+        },
+        {
+          "name": "func_Path_green_2",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "SAd/fUS,rgJ3!XYiC(Wz"
+        },
+        {
+          "name": "func_Path_green_4",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "Vt+Yv4b~N|hT{+iR*0B?"
+        },
+        {
+          "name": "func_backwards",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "l1#x},r]|!j=4XN~0sur"
+        },
+        {
+          "name": "func_main",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "wR:Tug;HmhfGuMCC?1dR"
+        },
+        {
+          "name": "func_Library",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "bb!iU!Jl5CR/vHkhqPSZ"
+        },
+        {
+          "name": "func_forward",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "dZ*fkMxs4jpYGBo9b[{}"
+        },
+        {
+          "name": "func_Turn",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "-b,_RTFOxqMW/Og]cW{)"
+        },
+        {
+          "name": "func_ON",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "#oi(Xhke|yrQK?wr1`}."
+        },
+        {
+          "name": "func_ray",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "f)=k+F2JJLWyANtJMh:9"
+        },
+        {
+          "name": "func_ray_forward_PID",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "1t%YI@9$kM%k,p52!;G/"
+        },
+        {
+          "name": "func_ray_forward",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "@n.mGT_-Fw.qE@;q_iSX"
+        },
+        {
+          "name": "func_Motter_Zero",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": ",J3cxe%DgqH*?3*:,+FP"
+        },
+        {
+          "name": "func_ray_PID",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "zT;No[I]j7waQdWjC8O!"
+        },
+        {
+          "name": "func_value",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "?j_#(;o)zmql[@6QU[V$"
+        },
+        {
+          "name": "func_Last_light_Error",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "x?ko+0;b*.(3=6A2_F.O"
+        },
+        {
+          "name": "func_ray_backwards_PID",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "N|W)X1g0+g^aQ0{oMC42"
+        },
+        {
+          "name": "func_ray_Path",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "QQusb_X:,IGfZF}N(;_U"
+        },
+        {
+          "name": "func_ray_Path_PID",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "35a}=WzDp)ASvC(Rw#z4"
+        },
+        {
+          "name": "func_ray_Time",
+          "args": [],
+          "blockType": "procedures_defnoreturn",
+          "id": "1@fKHyv+!J8De-GarGdq"
+        }
+      ],
+      "defreturn": [],
+      "allProceduresSorted": {
+        "defnoreturn": [
+          {
+            "name": "func_backwards",
+            "args": []
+          },
+          {
+            "name": "func_end",
+            "args": []
+          },
+          {
+            "name": "func_forward",
+            "args": []
+          },
+          {
+            "name": "func_green_end",
+            "args": []
+          },
+          {
+            "name": "func_green_end_1",
+            "args": []
+          },
+          {
+            "name": "func_Last_light_Error",
+            "args": []
+          },
+          {
+            "name": "func_Library",
+            "args": []
+          },
+          {
+            "name": "func_main",
+            "args": []
+          },
+          {
+            "name": "func_Motter_Zero",
+            "args": []
+          },
+          {
+            "name": "func_name2",
+            "args": []
+          },
+          {
+            "name": "func_ON",
+            "args": []
+          },
+          {
+            "name": "func_Path_green_1",
+            "args": []
+          },
+          {
+            "name": "func_Path_green_2",
+            "args": []
+          },
+          {
+            "name": "func_Path_green_3",
+            "args": []
+          },
+          {
+            "name": "func_Path_green_4",
+            "args": []
+          },
+          {
+            "name": "func_ray",
+            "args": []
+          },
+          {
+            "name": "func_ray_backwards_PID",
+            "args": []
+          },
+          {
+            "name": "func_ray_forward",
+            "args": []
+          },
+          {
+            "name": "func_ray_forward_PID",
+            "args": []
+          },
+          {
+            "name": "func_ray_Path",
+            "args": []
+          },
+          {
+            "name": "func_ray_Path_PID",
+            "args": []
+          },
+          {
+            "name": "func_ray_PID",
+            "args": []
+          },
+          {
+            "name": "func_ray_Time",
+            "args": []
+          },
+          {
+            "name": "func_take_white",
+            "args": []
+          },
+          {
+            "name": "func_Turn",
+            "args": []
+          },
+          {
+            "name": "func_value",
+            "args": []
+          }
+        ],
+        "defreturn": []
+      }
+    },
+    "flyout": {
+      "categoryXml": {
+        "count": 27,
+        "xml": [
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_defnoreturn\" gap=\"24\"><field name=\"NAME\">func_name</field></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_backwards\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_end\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_forward\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_green_end\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_green_end_1\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Last_light_Error\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Library\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_main\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Motter_Zero\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_name2\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_ON\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Path_green_1\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Path_green_2\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Path_green_3\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Path_green_4\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_ray\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_ray_backwards_PID\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_ray_forward\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_ray_forward_PID\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_ray_Path\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_ray_Path_PID\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_ray_PID\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_ray_Time\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_take_white\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_Turn\"></mutation></block>",
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" gap=\"16\"><mutation name=\"func_value\"></mutation></block>"
+        ],
+        "blocks": [
+          {
+            "tag": "block",
+            "type": "procedures_defnoreturn",
+            "fieldName": "func_name"
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_backwards",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_end",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_forward",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_green_end",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_green_end_1",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Last_light_Error",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Library",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_main",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Motter_Zero",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_name2",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_ON",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Path_green_1",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Path_green_2",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Path_green_3",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Path_green_4",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_ray",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_ray_backwards_PID",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_ray_forward",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_ray_forward_PID",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_ray_Path",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_ray_Path_PID",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_ray_PID",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_ray_Time",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_take_white",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_Turn",
+            "args": []
+          },
+          {
+            "tag": "block",
+            "type": "procedures_callnoreturn",
+            "mutationName": "func_value",
+            "args": []
+          }
+        ]
+      },
+      "instantiate": {
+        "viaTreeSelection": true,
+        "flyoutVisible": true,
+        "blockCount": 27,
+        "blocks": [
+          {
+            "type": "procedures_defnoreturn",
+            "isInFlyout": true,
+            "name": "func_name",
+            "args": [],
+            "inputs": [
+              "",
+              "STACK"
+            ],
+            "width": 150,
+            "height": 62
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_backwards",
+            "callName": "func_backwards",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 132,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_end",
+            "callName": "func_end",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 84,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_forward",
+            "callName": "func_forward",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 112,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_green_end",
+            "callName": "func_green_end",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 132,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_green_end_1",
+            "callName": "func_green_end_1",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 148,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Last_light_Error",
+            "callName": "func_Last_light_Error",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 168,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Library",
+            "callName": "func_Library",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 107,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_main",
+            "callName": "func_main",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 93,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Motter_Zero",
+            "callName": "func_Motter_Zero",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 142,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_name2",
+            "callName": "func_name2",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 105,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_ON",
+            "callName": "func_ON",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 80,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Path_green_1",
+            "callName": "func_Path_green_1",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 153,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Path_green_2",
+            "callName": "func_Path_green_2",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 153,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Path_green_3",
+            "callName": "func_Path_green_3",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 153,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Path_green_4",
+            "callName": "func_Path_green_4",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 153,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_ray",
+            "callName": "func_ray",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 79,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_ray_backwards_PID",
+            "callName": "func_ray_backwards_PID",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 193,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_ray_forward",
+            "callName": "func_ray_forward",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 141,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_ray_forward_PID",
+            "callName": "func_ray_forward_PID",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 173,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_ray_Path",
+            "callName": "func_ray_Path",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 119,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_ray_Path_PID",
+            "callName": "func_ray_Path_PID",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 150,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_ray_PID",
+            "callName": "func_ray_PID",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 111,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_ray_Time",
+            "callName": "func_ray_Time",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 122,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_take_white",
+            "callName": "func_take_white",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 134,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_Turn",
+            "callName": "func_Turn",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 90,
+            "height": 29
+          },
+          {
+            "type": "procedures_callnoreturn",
+            "isInFlyout": true,
+            "name": "func_value",
+            "callName": "func_value",
+            "args": [],
+            "inputs": [
+              "TOPROW"
+            ],
+            "width": 95,
+            "height": 29
+          }
+        ],
+        "render": {
+          "renderedBlockCount": 27,
+          "renderedSvgRootCount": 27,
+          "zeroSizeBlockCount": 0
+        }
+      }
+    },
+    "native": {
+      "attempted": false,
+      "ok": false,
+      "error": null,
+      "category": {},
+      "flyout": {},
+      "drag": {}
+    },
+    "generation": {
+      "success": true,
+      "usedRealSource": true,
+      "evalError": null,
+      "error": null,
+      "code": "#<SKCON9><USB><ProgramA>\n\nimport threading\nimport time\nimport libstarpy\n\nrobot = Robot()\n\nfrom numbers import Number\n\nvar_ray_left_PID = None\nvar_ray_right_PID = None\nvar_ray_left_Error = None\nvar_ray_white = None\nvar_ray_left_last_Error = None\nvar_ray_time = None\nvar_angle = None\nvar_ray_choose = None\nvar_Kp = None\nvar_cm = None\nvar_Error_Ki = None\nvar_turn_Error_Ki = None\nvar_ray_right_Error = None\nvar_1cm = None\nvar_ray_right_last_Error = None\nvar_angle_up = None\nvar_ray_speed = None\nvar_speed = None\nvar_cm_up = None\nvar_ray_light_9 = None\nvar_ray_Kp = None\nvar_1angle = None\nvar_angle_down = None\nvar_cm_down = None\nvar_Error = None\nvar_ray_light_10 = None\nvar_ray_Kd = None\nvar_turn_speed_max = None\nvar_speed_max = None\nvar_turn_RL = None\nvar_turn_Error = None\nvar_ray_return_time = None\nvar_turn_speed_min = None\nvar_speed_min = None\nvar_turn_Ki = None\nvar_Ki = None\nvar_turn_Kp = None\nvar_PI = None\nvar_turn_PI = None\nvar_turn_speed = None\n\ndef func_end():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    #自转\n    if True:\n        var_angle = robot.ceil((23 * var_1angle))\n        var_angle_up = robot.ceil((10 * var_1angle))\n        var_angle_down = robot.ceil((10 * var_1angle))\n        var_turn_speed_max = 25\n        var_turn_speed_min = 5\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.012\n        var_turn_RL = '右'\n        func_Turn()\n    #前进\n    if True:\n        var_cm = (78.4 * var_1cm)\n        var_cm_up = (10 * var_1cm)\n        var_cm_down = (10 * var_1cm)\n        var_speed_max = 50\n        var_speed_min = 4\n        var_Ki = 0.001\n        var_Kp = 0.01\n        func_forward()\n    #自转\n    if True:\n        var_angle = robot.ceil((66.5 * var_1angle))\n        var_angle_up = robot.ceil((10 * var_1angle))\n        var_angle_down = robot.ceil((10 * var_1angle))\n        var_turn_speed_max = 25\n        var_turn_speed_min = 5\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.012\n        var_turn_RL = '右'\n        func_Turn()\n    #巡线\n    if True:\n        # 左，右，十字，时间\n        var_ray_choose = '路口'\n        var_ray_speed = 10\n        var_ray_Kp = 0.002\n        var_ray_Kd = 0\n        func_ray()\n    #前进\n    if True:\n        var_cm = (14.3 * var_1cm)\n        var_cm_up = (4 * var_1cm)\n        var_cm_down = (4 * var_1cm)\n        var_speed_max = 10\n        var_speed_min = 3\n        var_Ki = 0.001\n        var_Kp = 0.01\n        func_forward()\n    #自转\n    if True:\n        var_angle = robot.ceil((88 * var_1angle))\n        var_angle_up = robot.ceil((20 * var_1angle))\n        var_angle_down = robot.ceil((40 * var_1angle))\n        var_turn_speed_max = 20\n        var_turn_speed_min = 5\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.012\n        var_turn_RL = '左'\n        func_Turn()\n    robot.set_double_motor_encoder(1,robot.clamp(-10, -100, 100),2,robot.clamp(-10, -100, 100),1,robot.clamp(770, -99999, 99999))\n    robot.set_motor_time(3,robot.clamp(5, -100, 100),robot.clamp(1.3, 0, 3600))\n    time.sleep(0.25)\n    robot.set_double_motor_encoder(1,robot.clamp(15, -100, 100),2,robot.clamp(15, -100, 100),1,robot.clamp(1320, -99999, 99999))\n    #自转\n    if True:\n        var_angle = robot.ceil((120 * var_1angle))\n        var_angle_up = robot.ceil((10 * var_1angle))\n        var_angle_down = robot.ceil((10 * var_1angle))\n        var_turn_speed_max = 25\n        var_turn_speed_min = 5\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.012\n        var_turn_RL = '左'\n        func_Turn()\n    func_name2()\n    pass\n\ndef func_name2():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    robot.reset_timer(1)\n    while True:\n        if robot.get_timer_ms(1) <= 600:\n            robot.set_motor(1,robot.clamp(60, -100, 100))\n            robot.set_motor(2,robot.clamp(60, -100, 100))\n        else:\n            while True:\n                if robot.get_timer_ms(1) <= 950:\n                    robot.set_motor(2,robot.clamp(50, -100, 100))\n                    robot.set_motor(1,robot.clamp(0, -100, 100))\n                else:\n                    while True:\n                        if robot.get_timer_ms(1) <= 1300:\n                            robot.set_motor(1,robot.clamp(100, -100, 100))\n                            robot.set_motor(2,robot.clamp(100, -100, 100))\n                        else:\n                            robot.set_motor(1,robot.clamp(0, -100, 100))\n                            robot.set_motor(2,robot.clamp(0, -100, 100))\n                            break\n                    break\n            break\n    pass\n\ndef func_green_end():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    #自转\n    if True:\n        var_angle = robot.ceil((10 * var_1angle))\n        var_angle_up = robot.ceil((5 * var_1angle))\n        var_angle_down = robot.ceil((10 * var_1angle))\n        var_turn_speed_max = 20\n        var_turn_speed_min = 5\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.012\n        var_turn_RL = '左'\n        func_Turn()\n    #前进\n    if True:\n        var_cm = (51 * var_1cm)\n        var_cm_up = (10 * var_1cm)\n        var_cm_down = (10 * var_1cm)\n        var_speed_max = 45\n        var_speed_min = 4\n        var_Ki = 0.001\n        var_Kp = 0.01\n        func_forward()\n    #自转\n    if True:\n        var_angle = robot.ceil((99 * var_1angle))\n        var_angle_up = robot.ceil((5 * var_1angle))\n        var_angle_down = robot.ceil((19 * var_1angle))\n        var_turn_speed_max = 20\n        var_turn_speed_min = 5\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.012\n        var_turn_RL = '右'\n        func_Turn()\n    #巡线\n    if True:\n        #选择模式  矩离，时间，路口\n        if True:\n            # 左，右，十字，时间\n            var_ray_choose = '时间'\n        #时间模式\n        if True:\n            var_ray_return_time = 1\n        var_ray_speed = 10\n        var_ray_Kp = 0.005\n        var_ray_Kd = 0.001\n        func_ray()\n    robot.set_motor_time(4,robot.clamp(6, -100, 100),robot.clamp(1.6, 0, 3600))\n    time.sleep(0.39)\n    robot.set_double_motor_encoder(1,robot.clamp(-5, -100, 100),2,robot.clamp(-5, -100, 100),1,robot.clamp(1200, -99999, 99999))\n    func_green_end_1()\n    pass\n\ndef func_green_end_1():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    #自转\n    if True:\n        var_angle = robot.ceil((90 * var_1angle))\n        var_angle_up = robot.ceil((45 * var_1angle))\n        var_angle_down = robot.ceil((45 * var_1angle))\n        var_turn_speed_max = 15\n        var_turn_speed_min = 2\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.012\n        var_turn_RL = '左'\n        func_Turn()\n    #前进\n    if True:\n        var_cm = (9 * var_1cm)\n        var_cm_up = (3 * var_1cm)\n        var_cm_down = (3 * var_1cm)\n        var_speed_max = 13\n        var_speed_min = 2\n        var_Ki = 0.001\n        var_Kp = 0.01\n        func_forward()\n    #自转\n    if True:\n        var_angle = robot.ceil((90 * var_1angle))\n        var_angle_up = robot.ceil((45 * var_1angle))\n        var_angle_down = robot.ceil((45 * var_1angle))\n        var_turn_speed_max = 15\n        var_turn_speed_min = 2\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.012\n        var_turn_RL = '右'\n        func_Turn()\n    robot.set_motor_time(3,robot.clamp(5, -100, 100),robot.clamp(1.3, 0, 3600))\n    time.sleep(0.2)\n    #自转\n    if True:\n        var_angle = robot.ceil((65 * var_1angle))\n        var_angle_up = robot.ceil((12 * var_1angle))\n        var_angle_down = robot.ceil((20 * var_1angle))\n        var_turn_speed_max = 30\n        var_turn_speed_min = 3\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.012\n        var_turn_RL = '右'\n        func_Turn()\n    robot.set_double_motor_time(1,robot.clamp(80, -100, 100),2,robot.clamp(80, -100, 100),robot.clamp(0.75, 0, 3600))\n    pass\n\ndef func_Path_green_1():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    #自转\n    if True:\n        var_angle = robot.ceil((20 * var_1angle))\n        var_angle_up = robot.ceil((5 * var_1angle))\n        var_angle_down = robot.ceil((10 * var_1angle))\n        var_turn_speed_max = 20\n        var_turn_speed_min = 5\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.012\n        var_turn_RL = '右'\n        func_Turn()\n    #前进\n    if True:\n        var_cm = (83 * var_1cm)\n        var_cm_up = (30 * var_1cm)\n        var_cm_down = (30 * var_1cm)\n        var_speed_max = 80\n        var_speed_min = 4\n        var_Ki = 0.001\n        var_Kp = 0.01\n        func_forward()\n    #自转\n    if True:\n        var_angle = robot.ceil((70 * var_1angle))\n        var_angle_up = robot.ceil((5 * var_1angle))\n        var_angle_down = robot.ceil((10 * var_1angle))\n        var_turn_speed_max = 30\n        var_turn_speed_min = 5\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.012\n        var_turn_RL = '右'\n        func_Turn()\n    #巡线\n    if True:\n        # 左，右，十字，时间\n        var_ray_choose = '路口'\n        var_ray_speed = 15\n        var_ray_Kp = 0.007\n        var_ray_Kd = 0.001\n        func_ray()\n    #前进\n    if True:\n        var_cm = (10 * var_1cm)\n        var_cm_up = (2 * var_1cm)\n        var_cm_down = (4 * var_1cm)\n        var_speed_max = 10\n        var_speed_min = 4\n        var_Ki = 0.001\n        var_Kp = 0.012\n        func_forward()\n    #自转\n    if True:\n        var_angle = robot.ceil((89.5 * var_1angle))\n        var_angle_up = robot.ceil((45 * var_1angle))\n        var_angle_down = robot.ceil((45 * var_1angle))\n        var_turn_speed_max = 20\n        var_turn_speed_min = 5\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.01\n        var_turn_RL = '右'\n        func_Turn()\n    robot.set_double_motor_encoder(1,robot.clamp(-10, -100, 100),2,robot.clamp(-10, -100, 100),1,robot.clamp(1500, -99999, 99999))\n    func_take_white()\n    pass\n\ndef func_Path_green_3():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    #自转\n    if True:\n        var_angle = robot.ceil((166 * var_1angle))\n        var_angle_up = robot.ceil((30 * var_1angle))\n        var_angle_down = robot.ceil((30 * var_1angle))\n        var_turn_speed_max = 25\n        var_turn_speed_min = 5\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.01\n        var_turn_RL = '左'\n        func_Turn()\n    #前进\n    if True:\n        var_cm = (25 * var_1cm)\n        var_cm_up = (10 * var_1cm)\n        var_cm_down = (15 * var_1cm)\n        var_speed_max = 40\n        var_speed_min = 5\n        var_Ki = 0.001\n        var_Kp = 0.012\n        func_forward()\n    #自转\n    if True:\n        var_angle = robot.ceil((17 * var_1angle))\n        var_angle_up = robot.ceil((5 * var_1angle))\n        var_angle_down = robot.ceil((12 * var_1angle))\n        var_turn_speed_max = 20\n        var_turn_speed_min = 3\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.01\n        var_turn_RL = '右'\n        func_Turn()\n    #前进\n    if True:\n        var_cm = (48 * var_1cm)\n        var_cm_up = (10 * var_1cm)\n        var_cm_down = (20 * var_1cm)\n        var_speed_max = 50\n        var_speed_min = 5\n        var_Ki = 0.001\n        var_Kp = 0.012\n        func_forward()\n    #自转\n    if True:\n        var_angle = robot.ceil((66 * var_1angle))\n        var_angle_up = robot.ceil((10 * var_1angle))\n        var_angle_down = robot.ceil((20 * var_1angle))\n        var_turn_speed_max = 25\n        var_turn_speed_min = 5\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.01\n        var_turn_RL = '右'\n        func_Turn()\n    #前进\n    if True:\n        var_cm = (40 * var_1cm)\n        var_cm_up = (10 * var_1cm)\n        var_cm_down = (10 * var_1cm)\n        var_speed_max = 50\n        var_speed_min = 5\n        var_Ki = 0.001\n        var_Kp = 0.012\n        func_forward()\n    func_Path_green_4()\n    pass\n\ndef func_take_white():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    robot.set_motor_time(4,robot.clamp(14, -100, 100),robot.clamp(0.7, 0, 3600))\n    robot.set_motor_time(4,robot.clamp(-14, -100, 100),robot.clamp(0.1, 0, 3600))\n    robot.set_motor_time(4,robot.clamp(14, -100, 100),robot.clamp(0.1, 0, 3600))\n    time.sleep(0.4)\n    robot.set_motor_time(3,robot.clamp(20, -100, 100),robot.clamp(1, 0, 3600))\n    time.sleep(0.5)\n    robot.set_motor_time(4,robot.clamp(-13, -100, 100),robot.clamp(1.2, 0, 3600))\n    #前进\n    if True:\n        var_cm = (12 * var_1cm)\n        var_cm_up = (0 * var_1cm)\n        var_cm_down = (0 * var_1cm)\n        var_speed_max = 20\n        var_speed_min = 4\n        var_Ki = 0.001\n        var_Kp = 0.012\n        func_forward()\n    robot.set_motor(4,robot.clamp(0, -100, 100))\n    #自转\n    if True:\n        var_angle = robot.ceil((90 * var_1angle))\n        var_angle_up = robot.ceil((5 * var_1angle))\n        var_angle_down = robot.ceil((30 * var_1angle))\n        var_turn_speed_max = 30\n        var_turn_speed_min = 2\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.01\n        var_turn_RL = '左'\n        func_Turn()\n    robot.set_motor(4,robot.clamp(0, -100, 100))\n    #巡线\n    if True:\n        # 左，右，十字，时间\n        var_ray_choose = '矩离'\n        var_cm = (80 * var_1cm)\n        var_cm_up = (20 * var_1cm)\n        var_cm_down = (20 * var_1cm)\n        var_speed_max = 60\n        var_speed_min = 3\n        var_ray_Kp = 0.04\n        var_ray_Kd = 0.003\n        func_ray()\n    robot.set_motor(4,robot.clamp(0, -100, 100))\n    func_Path_green_2()\n    pass\n\ndef func_Path_green_2():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    #巡线\n    if True:\n        # 左，右，十字，时间\n        var_ray_choose = '路口'\n        var_ray_speed = 10\n        var_ray_Kp = 0.01\n        var_ray_Kd = 0.001\n        func_ray()\n    #前进\n    if True:\n        var_cm = (11 * var_1cm)\n        var_cm_up = (2 * var_1cm)\n        var_cm_down = (4 * var_1cm)\n        var_speed_max = 10\n        var_speed_min = 4\n        var_Ki = 0.001\n        var_Kp = 0.012\n        func_forward()\n    #自转\n    if True:\n        var_angle = robot.ceil((90 * var_1angle))\n        var_angle_up = robot.ceil((20 * var_1angle))\n        var_angle_down = robot.ceil((30 * var_1angle))\n        var_turn_speed_max = 30\n        var_turn_speed_min = 5\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.01\n        var_turn_RL = '左'\n        func_Turn()\n    #巡线\n    if True:\n        # 左，右，十字，时间\n        var_ray_choose = '时间'\n        var_ray_return_time = 1\n        var_ray_speed = 20\n        var_ray_Kp = 0.003\n        var_ray_Kd = 0.0001\n        func_ray()\n    robot.set_double_motor_encoder(1,robot.clamp(-10, -100, 100),2,robot.clamp(-10, -100, 100),1,robot.clamp(1100, -99999, 99999))\n    func_Path_green_3()\n    pass\n\ndef func_Path_green_4():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    #巡线\n    if True:\n        # 左，右，十字，时间\n        var_ray_choose = '路口'\n        var_ray_speed = 30\n        var_ray_Kp = 0.005\n        var_ray_Kd = 0\n        func_ray()\n    robot.reset_timer(1)\n    while True:\n        if robot.get_timer_ms(1) >= 200:\n            robot.set_motor(1,robot.clamp(0, -100, 100))\n            robot.set_motor(2,robot.clamp(0, -100, 100))\n            robot.reset_timer(1)\n            while True:\n                if robot.get_timer_ms(1) >= 300:\n                    robot.set_motor(1,robot.clamp(0, -100, 100))\n                    robot.set_motor(2,robot.clamp(0, -100, 100))\n                    robot.reset_timer(1)\n                    while True:\n                        if robot.get_timer_ms(1) >= 400:\n                            robot.set_motor(1,robot.clamp(0, -100, 100))\n                            robot.set_motor(2,robot.clamp(0, -100, 100))\n                            robot.reset_timer(1)\n                            while True:\n                                if robot.get_timer_ms(1) >= 500:\n                                    robot.set_motor(1,robot.clamp(0, -100, 100))\n                                    robot.set_motor(2,robot.clamp(0, -100, 100))\n                                    break\n                                else:\n                                    robot.set_motor(1,robot.clamp(50, -100, 100))\n                                    robot.set_motor(2,robot.clamp(50, -100, 100))\n                            break\n                        else:\n                            robot.set_motor(2,robot.clamp(50, -100, 100))\n                    break\n                else:\n                    robot.set_motor(1,robot.clamp(30, -100, 100))\n                    robot.set_motor(2,robot.clamp(30, -100, 100))\n            break\n        else:\n            robot.set_motor(1,robot.clamp(50, -100, 100))\n    robot.print('hello world\\n')\n    pass\n\ndef func_backwards():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    func_Motter_Zero()\n    var_Kp = 0.005\n    var_speed = -2\n    while True:\n        if robot.get_gray(7) >= 2000:\n            func_Motter_Zero()\n            break\n        var_Error = (robot.abs(robot.get_encoder(1)) - robot.abs(robot.get_encoder(2)))\n        robot.set_motor(1,robot.clamp((var_speed + (var_Kp * var_Error)), -100, 100))\n        robot.set_motor(2,robot.clamp((var_speed - (var_Kp * var_Error)), -100, 100))\n        var_speed = (var_speed if isinstance(var_speed, Number) else 0) + -0.04\n        time.sleep(0.01)\n    pass\n\ndef func_main():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    if robot.get_touch(1):\n        time.sleep(0.01)\n        func_Path_green_1()\n        while True:\n            if robot.get_touch(1):\n                time.sleep(0.01)\n                func_green_end()\n                while True:\n                    if robot.get_touch(1):\n                        time.sleep(0.01)\n                        func_end()\n    pass\n\ndef func_Library():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    #前进\n    if True:\n        var_cm = (100 * var_1cm)\n        var_cm_up = (20 * var_1cm)\n        var_cm_down = (10 * var_1cm)\n        var_speed_max = 80\n        var_speed_min = 20\n        var_Ki = 0.001\n        var_Kp = 0.012\n        func_forward()\n    #自转\n    if True:\n        var_angle = robot.ceil((360 * var_1angle))\n        var_angle_up = robot.ceil((110 * var_1angle))\n        var_angle_down = robot.ceil((250 * var_1angle))\n        var_turn_speed_max = 20\n        var_turn_speed_min = 3\n        var_turn_Ki = 0.001\n        var_turn_Kp = 0.01\n        var_turn_RL = '左'\n        func_Turn()\n    #巡线\n    if True:\n        #选择模式  矩离，时间，路口\n        if True:\n            # 左，右，十字，时间\n            var_ray_choose = '矩离'\n        #矩离模式\n        if True:\n            var_cm = (60 * var_1cm)\n            var_cm_up = (20 * var_1cm)\n            var_cm_down = (20 * var_1cm)\n            var_speed_max = 80\n            var_speed_min = 15\n        #时间模式\n        if True:\n            var_ray_return_time = 1\n        var_ray_speed = 50\n        var_ray_Kp = 0.01\n        var_ray_Kd = 0.001\n        func_ray()\n    pass\n\ndef func_forward():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    func_Motter_Zero()\n    var_Error_Ki = 0\n    while not robot.get_encoder(1) >= var_cm_up:\n        var_Error = (robot.get_encoder(1) - robot.get_encoder(2))\n        var_Error_Ki = (var_Error_Ki + var_Error)\n        if var_Error_Ki < -2000:\n            var_Error_Ki = -2000\n        if var_Error_Ki > 2000:\n            var_Error_Ki = 2000\n        var_PI = ((var_Kp * var_Error) + (var_Ki * var_Error_Ki))\n        var_speed = (var_speed_min + ((var_speed_max - var_speed_min) * robot.sin(((((robot.get_encoder(1) + robot.get_encoder(2)) / 2) / var_cm_up) * 90) / 180.0 * robot.pi())))\n        robot.set_motor(1,robot.clamp(((var_speed * 1) - var_PI), -100, 100))\n        robot.set_motor(2,robot.clamp(((var_speed * 1) + var_PI), -100, 100))\n        time.sleep(0.01)\n    while not robot.get_encoder(1) >= (var_cm - var_cm_down):\n        var_Error = (robot.get_encoder(1) - robot.get_encoder(2))\n        var_Error_Ki = (var_Error_Ki + var_Error)\n        if var_Error_Ki < -2000:\n            var_Error_Ki = -2000\n        if var_Error_Ki > 2000:\n            var_Error_Ki = 2000\n        var_PI = ((var_Kp * var_Error) + (var_Ki * var_Error_Ki))\n        var_speed = var_speed_max\n        robot.set_motor(1,robot.clamp(((var_speed * 1) - var_PI), -100, 100))\n        robot.set_motor(2,robot.clamp(((var_speed * 1) + var_PI), -100, 100))\n        time.sleep(0.01)\n    while not robot.get_encoder(1) >= var_cm:\n        var_Error = (robot.get_encoder(1) - robot.get_encoder(2))\n        var_Error_Ki = (var_Error_Ki + var_Error)\n        if var_Error_Ki < -2000:\n            var_Error_Ki = -2000\n        if var_Error_Ki > 2000:\n            var_Error_Ki = 2000\n        var_PI = ((var_Kp * var_Error) + (var_Ki * var_Error_Ki))\n        var_speed = (var_speed_min + ((var_speed_max - var_speed_min) * robot.cos((((((robot.get_encoder(1) + robot.get_encoder(2)) / 2) - (var_cm - var_cm_down)) / var_cm_down) * 90) / 180.0 * robot.pi())))\n        robot.set_motor(1,robot.clamp(((var_speed * 1) - var_PI), -100, 100))\n        robot.set_motor(2,robot.clamp(((var_speed * 1) + var_PI), -100, 100))\n        time.sleep(0.01)\n    robot.set_double_motor_encoder(1,robot.clamp(-20, -100, 100),2,robot.clamp(-20, -100, 100),1,robot.clamp(20, -99999, 99999))\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    pass\n\ndef func_Turn():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    func_Motter_Zero()\n    var_turn_Error_Ki = 0\n    if var_turn_RL == '左':\n        while not robot.abs(robot.get_encoder(1)) >= var_angle_up:\n            var_turn_Error = (robot.abs(robot.get_encoder(1)) - robot.abs(robot.get_encoder(2)))\n            var_turn_Error_Ki = (var_turn_Error_Ki + var_turn_Error)\n            if var_turn_Error_Ki < -2000:\n                var_turn_Error_Ki = -2000\n            if var_turn_Error_Ki > 2000:\n                var_turn_Error_Ki = 2000\n            var_turn_PI = ((var_turn_Kp * var_turn_Error) + (var_turn_Ki * var_turn_Error_Ki))\n            var_turn_speed = (var_turn_speed_min + ((var_turn_speed_max - var_turn_speed_min) * robot.sin(((((robot.abs(robot.get_encoder(1)) + robot.abs(robot.get_encoder(2))) / 2) / var_angle_up) * 90) / 180.0 * robot.pi())))\n            robot.set_motor(1,robot.clamp(((var_turn_speed * -1) + var_turn_PI), -100, 100))\n            robot.set_motor(2,robot.clamp(((var_turn_speed * 1) + var_turn_PI), -100, 100))\n            time.sleep(0.01)\n        while not robot.abs(robot.get_encoder(1)) >= (var_angle - var_angle_down):\n            var_turn_Error = (robot.abs(robot.get_encoder(1)) - robot.abs(robot.get_encoder(2)))\n            var_turn_Error_Ki = (var_turn_Error_Ki + var_turn_Error)\n            if var_turn_Error_Ki < -2000:\n                var_turn_Error_Ki = -2000\n            if var_turn_Error_Ki > 2000:\n                var_turn_Error_Ki = 2000\n            var_turn_PI = ((var_turn_Kp * var_turn_Error) + (var_turn_Ki * var_turn_Error_Ki))\n            var_turn_speed = var_turn_speed_max\n            robot.set_motor(1,robot.clamp(((var_turn_speed * -1) + var_turn_PI), -100, 100))\n            robot.set_motor(2,robot.clamp(((var_turn_speed * 1) + var_turn_PI), -100, 100))\n            time.sleep(0.01)\n        while not robot.abs(robot.get_encoder(1)) >= var_angle:\n            var_turn_Error = (robot.abs(robot.get_encoder(1)) - robot.abs(robot.get_encoder(2)))\n            var_turn_Error = (robot.get_encoder(1) - robot.get_encoder(2))\n            var_turn_Error_Ki = (var_turn_Error_Ki + var_turn_Error)\n            if var_turn_Error_Ki < -2000:\n                var_turn_Error_Ki = -2000\n            if var_turn_Error_Ki > 2000:\n                var_turn_Error_Ki = 2000\n            var_turn_PI = ((var_turn_Kp * var_turn_Error) + (var_turn_Ki * var_turn_Error_Ki))\n            var_turn_speed = (var_turn_speed_min + ((var_turn_speed_max - var_turn_speed_min) * robot.cos((((((robot.abs(robot.get_encoder(1)) + robot.abs(robot.get_encoder(2))) / 2) - (var_angle - var_angle_down)) / var_angle_down) * 90) / 180.0 * robot.pi())))\n            robot.set_motor(1,robot.clamp(((var_turn_speed * -1) + 0), -100, 100))\n            robot.set_motor(2,robot.clamp(((var_turn_speed * 1) + 0), -100, 100))\n            time.sleep(0.01)\n        robot.set_double_motor_encoder(1,robot.clamp(20, -100, 100),2,robot.clamp(-20, -100, 100),1,robot.clamp(20, -99999, 99999))\n        robot.set_motor(1,robot.clamp(0, -100, 100))\n        robot.set_motor(2,robot.clamp(0, -100, 100))\n    if var_turn_RL == '右':\n        while not robot.abs(robot.get_encoder(1)) >= var_angle_up:\n            var_turn_Error = (robot.abs(robot.get_encoder(1)) - robot.abs(robot.get_encoder(2)))\n            var_turn_Error_Ki = (var_turn_Error_Ki + var_turn_Error)\n            if var_turn_Error_Ki < -2000:\n                var_turn_Error_Ki = -2000\n            if var_turn_Error_Ki > 2000:\n                var_turn_Error_Ki = 2000\n            var_turn_PI = ((var_turn_Kp * var_turn_Error) + (var_turn_Ki * var_turn_Error_Ki))\n            var_turn_speed = (var_turn_speed_min + ((var_turn_speed_max - var_turn_speed_min) * robot.sin(((((robot.abs(robot.get_encoder(1)) + robot.abs(robot.get_encoder(2))) / 2) / var_angle_up) * 90) / 180.0 * robot.pi())))\n            robot.set_motor(1,robot.clamp(((var_turn_speed * 1) - var_turn_PI), -100, 100))\n            robot.set_motor(2,robot.clamp(((var_turn_speed * -1) - var_turn_PI), -100, 100))\n            time.sleep(0.01)\n        while not robot.abs(robot.get_encoder(1)) >= (var_angle - var_angle_down):\n            var_turn_Error = (robot.abs(robot.get_encoder(1)) - robot.abs(robot.get_encoder(2)))\n            var_turn_Error_Ki = (var_turn_Error_Ki + var_turn_Error)\n            if var_turn_Error_Ki < -2000:\n                var_turn_Error_Ki = -2000\n            if var_turn_Error_Ki > 2000:\n                var_turn_Error_Ki = 2000\n            var_turn_PI = ((var_turn_Kp * var_turn_Error) + (var_turn_Ki * var_turn_Error_Ki))\n            var_turn_speed = var_turn_speed_max\n            robot.set_motor(1,robot.clamp(((var_turn_speed * 1) - var_turn_PI), -100, 100))\n            robot.set_motor(2,robot.clamp(((var_turn_speed * -1) - var_turn_PI), -100, 100))\n            time.sleep(0.01)\n        while not robot.abs(robot.get_encoder(1)) >= var_angle:\n            var_turn_Error = (robot.abs(robot.get_encoder(1)) - robot.abs(robot.get_encoder(2)))\n            var_turn_Error = (robot.get_encoder(1) - robot.get_encoder(2))\n            var_turn_Error_Ki = (var_turn_Error_Ki + var_turn_Error)\n            if var_turn_Error_Ki < -2000:\n                var_turn_Error_Ki = -2000\n            if var_turn_Error_Ki > 2000:\n                var_turn_Error_Ki = 2000\n            var_turn_PI = ((var_turn_Kp * var_turn_Error) + (var_turn_Ki * var_turn_Error_Ki))\n            var_turn_speed = (var_turn_speed_min + ((var_turn_speed_max - var_turn_speed_min) * robot.cos((((((robot.abs(robot.get_encoder(1)) + robot.abs(robot.get_encoder(2))) / 2) - (var_angle - var_angle_down)) / var_angle_down) * 90) / 180.0 * robot.pi())))\n            robot.set_motor(1,robot.clamp(((var_turn_speed * 1) + 0), -100, 100))\n            robot.set_motor(2,robot.clamp(((var_turn_speed * -1) + 0), -100, 100))\n            time.sleep(0.01)\n        robot.set_double_motor_encoder(1,robot.clamp(-20, -100, 100),2,robot.clamp(20, -100, 100),1,robot.clamp(20, -99999, 99999))\n        robot.set_motor(1,robot.clamp(0, -100, 100))\n        robot.set_motor(2,robot.clamp(0, -100, 100))\n    pass\n\ndef func_ON():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    robot.set_motor(1,robot.clamp(10, -100, 100))\n    robot.set_motor(2,robot.clamp(10, -100, 100))\n    time.sleep(0.1)\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    pass\n\ndef func_ray():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    if var_ray_choose == '时间':\n        func_ray_Time()\n    else:\n        if var_ray_choose == '矩离':\n            func_ray_forward()\n        else:\n            if var_ray_choose == '路口':\n                func_ray_Path()\n            else:\n                func_ray_Path()\n    pass\n\ndef func_ray_forward_PID():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    var_ray_left_Error = (var_ray_light_9 - robot.get_gray(9))\n    var_ray_right_Error = (var_ray_light_10 - robot.get_gray(10))\n    var_ray_left_PID = (var_ray_Kp * var_ray_left_Error)\n    var_ray_right_PID = (var_ray_Kp * var_ray_right_Error)\n    var_ray_left_last_Error = (var_ray_left_last_Error + var_ray_left_Error)\n    var_ray_right_last_Error = (var_ray_right_last_Error + var_ray_right_Error)\n    pass\n\ndef func_ray_forward():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    func_Motter_Zero()\n    func_Last_light_Error()\n    var_ray_Kp = 0.007\n    var_ray_Kd = 0.001\n    while not robot.get_encoder(1) >= var_cm_up:\n        var_speed = (var_speed_min + ((var_speed_max - var_speed_min) * robot.sin(((((robot.get_encoder(1) + robot.get_encoder(2)) / 2) / var_cm_up) * 90) / 180.0 * robot.pi())))\n        func_ray_forward_PID()\n        #电机运行\n        if True:\n            robot.set_motor(1,robot.clamp((((var_speed + var_ray_left_PID) - 0) + (var_ray_Kd * ((var_ray_left_Error - var_ray_left_last_Error) * 0.01))), -100, 100))\n            robot.set_motor(2,robot.clamp((((var_speed + var_ray_right_PID) - 0) + ((var_ray_Kd * ((var_ray_right_Error - var_ray_right_last_Error) * 0.01)) * -1)), -100, 100))\n        #Ray Error = 0\n        if True:\n            var_ray_left_last_Error = 0\n            var_ray_right_last_Error = 0\n        time.sleep(0.01)\n    while not robot.get_encoder(1) >= (var_cm - var_cm_down):\n        var_speed = var_speed_max\n        func_ray_forward_PID()\n        #电机运行\n        if True:\n            robot.set_motor(1,robot.clamp(((var_speed + var_ray_left_PID) + (var_ray_Kd * ((var_ray_left_Error - var_ray_left_last_Error) * 0.01))), -100, 100))\n            robot.set_motor(2,robot.clamp(((var_speed + var_ray_right_PID) + ((var_ray_Kd * ((var_ray_right_Error - var_ray_right_last_Error) * 0.01)) * -1)), -100, 100))\n        #Ray Error = 0\n        if True:\n            var_ray_left_last_Error = 0\n            var_ray_right_last_Error = 0\n        time.sleep(0.01)\n    while not robot.get_encoder(1) >= var_cm:\n        var_speed = (var_speed_min + ((var_speed_max - var_speed_min) * robot.cos((((robot.get_encoder(1) - (var_cm - var_cm_down)) / var_cm_down) * 90) / 180.0 * robot.pi())))\n        func_ray_forward_PID()\n        #电机运行\n        if True:\n            robot.set_motor(1,robot.clamp(((var_speed + var_ray_left_PID) + (var_ray_Kd * ((var_ray_left_Error - var_ray_left_last_Error) * 0.01))), -100, 100))\n            robot.set_motor(2,robot.clamp(((var_speed + var_ray_right_PID) + ((var_ray_Kd * ((var_ray_right_Error - var_ray_right_last_Error) * 0.01)) * -1)), -100, 100))\n        #Ray Error = 0\n        if True:\n            var_ray_left_last_Error = 0\n            var_ray_right_last_Error = 0\n        time.sleep(0.01)\n    robot.set_double_motor_encoder(1,robot.clamp(-20, -100, 100),2,robot.clamp(-20, -100, 100),1,robot.clamp(20, -99999, 99999))\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    func_Motter_Zero()\n    pass\n\ndef func_Motter_Zero():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.02)\n    robot.reset_encoder(1);\n    robot.reset_encoder(2);\n    pass\n\ndef func_ray_PID():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    var_ray_left_Error = (var_ray_light_9 - robot.get_gray(9))\n    var_ray_right_Error = (var_ray_light_10 - robot.get_gray(10))\n    var_ray_left_PID = (var_ray_Kp * var_ray_left_Error)\n    var_ray_right_PID = (var_ray_Kp * var_ray_right_Error)\n    var_ray_left_last_Error = (var_ray_left_last_Error + var_ray_left_Error)\n    var_ray_right_last_Error = (var_ray_right_last_Error + var_ray_right_Error)\n    robot.set_motor(1,robot.clamp(((var_ray_speed + var_ray_left_PID) + (var_ray_Kd * ((var_ray_left_Error - var_ray_left_last_Error) * 0.01))), -100, 100))\n    robot.set_motor(2,robot.clamp(((var_ray_speed + var_ray_right_PID) - ((var_ray_Kd * ((var_ray_right_Error - var_ray_right_last_Error) * 0.01)) * -1)), -100, 100))\n    time.sleep(0.01)\n    pass\n\ndef func_value():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    var_ray_white = 1300\n    var_1cm = 90.4\n    var_1angle = 17.8\n    var_ray_light_9 = robot.get_ee(9)\n    var_ray_light_10 = robot.get_ee(10)\n    var_ray_left_last_Error = 0\n    var_ray_right_last_Error = 0\n    robot.reset_encoder(4);\n    pass\n\ndef func_Last_light_Error():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    var_ray_left_last_Error = 0\n    var_ray_right_last_Error = 0\n    pass\n\ndef func_ray_backwards_PID():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    var_ray_left_Error = (var_ray_light_9 - robot.get_gray(9))\n    var_ray_right_Error = (var_ray_light_10 - robot.get_gray(10))\n    var_ray_left_PID = (var_ray_Kp * var_ray_left_Error)\n    var_ray_right_PID = (var_ray_Kp * var_ray_right_Error)\n    var_ray_left_last_Error = (var_ray_left_last_Error + var_ray_left_Error)\n    var_ray_right_last_Error = (var_ray_right_last_Error + var_ray_right_Error)\n    robot.set_motor(1,robot.clamp(((var_ray_speed + var_ray_right_PID) + (var_ray_Kd * ((var_ray_right_Error - var_ray_right_last_Error) * 0.01))), -100, 100))\n    robot.set_motor(2,robot.clamp(((var_ray_speed + var_ray_left_PID) + ((var_ray_Kd * ((var_ray_left_Error - var_ray_left_last_Error) * 0.01)) * -1)), -100, 100))\n    time.sleep(0.01)\n    pass\n\ndef func_ray_Path():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    while True:\n        if robot.get_gray(7) >= var_ray_white or robot.get_gray(8) >= var_ray_white:\n            func_Motter_Zero()\n            break\n        else:\n            func_ray_Path_PID()\n    #Ray Error = 0\n    if True:\n        var_ray_left_last_Error = 0\n        var_ray_right_last_Error = 0\n    func_Motter_Zero()\n    pass\n\ndef func_ray_Path_PID():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    var_ray_left_Error = (var_ray_light_9 - robot.get_gray(9))\n    var_ray_right_Error = (var_ray_light_10 - robot.get_gray(10))\n    var_ray_left_PID = (var_ray_Kp * var_ray_left_Error)\n    var_ray_right_PID = (var_ray_Kp * var_ray_right_Error)\n    var_ray_left_last_Error = (var_ray_left_last_Error + var_ray_left_Error)\n    var_ray_right_last_Error = (var_ray_right_last_Error + var_ray_right_Error)\n    robot.set_motor(1,robot.clamp(((var_ray_speed + var_ray_left_PID) + (var_ray_Kd * ((var_ray_left_Error - var_ray_left_last_Error) * 0.01))), -100, 100))\n    robot.set_motor(2,robot.clamp(((var_ray_speed + var_ray_right_PID) + ((var_ray_Kd * ((var_ray_right_Error - var_ray_right_last_Error) * 0.01)) * -1)), -100, 100))\n    pass\n\ndef func_ray_Time():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    var_ray_time = 0\n    if var_ray_speed > 0:\n        while not var_ray_time >= var_ray_return_time:\n            var_ray_time = (var_ray_time + 0.01)\n            func_ray_PID()\n        var_ray_time = 0\n        #Ray Error = 0\n        if True:\n            var_ray_left_last_Error = 0\n            var_ray_right_last_Error = 0\n        func_Motter_Zero()\n    else:\n        while not var_ray_time >= var_ray_return_time:\n            var_ray_time = (var_ray_time + 0.01)\n            func_ray_backwards_PID()\n        var_ray_time = 0\n        #Ray Error = 0\n        if True:\n            var_ray_left_last_Error = 0\n            var_ray_right_last_Error = 0\n        func_Motter_Zero()\n    pass\n\n\ndef main():\n    global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed\n    func_value()\n    func_ON()\n    while True:\n        func_main()\n\nmain()#program entry",
+      "ms": 115.5,
+      "analysis": {
+        "codeLength": 50142,
+        "codeLines": 938,
+        "headerLine": "#<SKCON9><USB><ProgramA>",
+        "defCount": 27,
+        "defs": [
+          {
+            "name": "func_end",
+            "args": ""
+          },
+          {
+            "name": "func_name2",
+            "args": ""
+          },
+          {
+            "name": "func_green_end",
+            "args": ""
+          },
+          {
+            "name": "func_green_end_1",
+            "args": ""
+          },
+          {
+            "name": "func_Path_green_1",
+            "args": ""
+          },
+          {
+            "name": "func_Path_green_3",
+            "args": ""
+          },
+          {
+            "name": "func_take_white",
+            "args": ""
+          },
+          {
+            "name": "func_Path_green_2",
+            "args": ""
+          },
+          {
+            "name": "func_Path_green_4",
+            "args": ""
+          },
+          {
+            "name": "func_backwards",
+            "args": ""
+          },
+          {
+            "name": "func_main",
+            "args": ""
+          },
+          {
+            "name": "func_Library",
+            "args": ""
+          },
+          {
+            "name": "func_forward",
+            "args": ""
+          },
+          {
+            "name": "func_Turn",
+            "args": ""
+          },
+          {
+            "name": "func_ON",
+            "args": ""
+          },
+          {
+            "name": "func_ray",
+            "args": ""
+          },
+          {
+            "name": "func_ray_forward_PID",
+            "args": ""
+          },
+          {
+            "name": "func_ray_forward",
+            "args": ""
+          },
+          {
+            "name": "func_Motter_Zero",
+            "args": ""
+          },
+          {
+            "name": "func_ray_PID",
+            "args": ""
+          },
+          {
+            "name": "func_value",
+            "args": ""
+          },
+          {
+            "name": "func_Last_light_Error",
+            "args": ""
+          },
+          {
+            "name": "func_ray_backwards_PID",
+            "args": ""
+          },
+          {
+            "name": "func_ray_Path",
+            "args": ""
+          },
+          {
+            "name": "func_ray_Path_PID",
+            "args": ""
+          },
+          {
+            "name": "func_ray_Time",
+            "args": ""
+          },
+          {
+            "name": "main",
+            "args": ""
+          }
+        ],
+        "hasMainCall": true
+      }
+    },
+    "drag": {
+      "attempted": false,
+      "ok": false,
+      "error": null,
+      "created": [],
+      "argFillRules": {}
+    },
+    "finishedAt": "2026-11-11T05:51:32.055Z"
+  },
+  "analysis": {
+    "lineCount": 938,
+    "header": "#<SKCON9><USB><ProgramA>",
+    "imports": [
+      "import threading",
+      "import time",
+      "import libstarpy",
+      "from numbers import Number"
+    ],
+    "robotInit": [
+      "robot = Robot()"
+    ],
+    "varDeclCount": 40,
+    "varDecls": [
+      "var_ray_left_PID",
+      "var_ray_right_PID",
+      "var_ray_left_Error",
+      "var_ray_white",
+      "var_ray_left_last_Error",
+      "var_ray_time",
+      "var_angle",
+      "var_ray_choose",
+      "var_Kp",
+      "var_cm",
+      "var_Error_Ki",
+      "var_turn_Error_Ki",
+      "var_ray_right_Error",
+      "var_1cm",
+      "var_ray_right_last_Error",
+      "var_angle_up",
+      "var_ray_speed",
+      "var_speed",
+      "var_cm_up",
+      "var_ray_light_9",
+      "var_ray_Kp",
+      "var_1angle",
+      "var_angle_down",
+      "var_cm_down",
+      "var_Error",
+      "var_ray_light_10",
+      "var_ray_Kd",
+      "var_turn_speed_max",
+      "var_speed_max",
+      "var_turn_RL",
+      "var_turn_Error",
+      "var_ray_return_time",
+      "var_turn_speed_min",
+      "var_speed_min",
+      "var_turn_Ki",
+      "var_Ki",
+      "var_turn_Kp",
+      "var_PI",
+      "var_turn_PI",
+      "var_turn_speed"
+    ],
+    "otherPreamble": [],
+    "defCount": 27,
+    "defs": [
+      {
+        "name": "func_end",
+        "args": "",
+        "bodyLines": 71,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_name2",
+        "args": "",
+        "bodyLines": 23,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_green_end",
+        "args": "",
+        "bodyLines": 44,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_green_end_1",
+        "args": "",
+        "bodyLines": 44,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_Path_green_1",
+        "args": "",
+        "bodyLines": 58,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_Path_green_3",
+        "args": "",
+        "bodyLines": 60,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_take_white",
+        "args": "",
+        "bodyLines": 42,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_Path_green_2",
+        "args": "",
+        "bodyLines": 36,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_Path_green_4",
+        "args": "",
+        "bodyLines": 43,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_backwards",
+        "args": "",
+        "bodyLines": 14,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_main",
+        "args": "",
+        "bodyLines": 13,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_Library",
+        "args": "",
+        "bodyLines": 36,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_forward",
+        "args": "",
+        "bodyLines": 43,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_Turn",
+        "args": "",
+        "bodyLines": 86,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_ON",
+        "args": "",
+        "bodyLines": 7,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_ray",
+        "args": "",
+        "bodyLines": 12,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_ray_forward_PID",
+        "args": "",
+        "bodyLines": 8,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_ray_forward",
+        "args": "",
+        "bodyLines": 40,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_Motter_Zero",
+        "args": "",
+        "bodyLines": 7,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_ray_PID",
+        "args": "",
+        "bodyLines": 11,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_value",
+        "args": "",
+        "bodyLines": 10,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_Last_light_Error",
+        "args": "",
+        "bodyLines": 4,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_ray_backwards_PID",
+        "args": "",
+        "bodyLines": 11,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_ray_Path",
+        "args": "",
+        "bodyLines": 12,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_ray_Path_PID",
+        "args": "",
+        "bodyLines": 10,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "func_ray_Time",
+        "args": "",
+        "bodyLines": 21,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      },
+      {
+        "name": "main",
+        "args": "",
+        "bodyLines": 5,
+        "globalLine": "global var_ray_left_PID, var_ray_right_PID, var_ray_left_Error, var_ray_white, var_ray_left_last_Error, var_ray_time, var_angle, var_ray_choose, var_Kp, var_cm, var_Error_Ki, var_turn_Error_Ki, var_ray_right_Error, var_1cm, var_ray_right_last_Error, var_angle_up, var_ray_speed, var_speed, var_cm_up, var_ray_light_9, var_ray_Kp, var_1angle, var_angle_down, var_cm_down, var_Error, var_ray_light_10, var_ray_Kd, var_turn_speed_max, var_speed_max, var_turn_RL, var_turn_Error, var_ray_return_time, var_turn_speed_min, var_speed_min, var_turn_Ki, var_Ki, var_turn_Kp, var_PI, var_turn_PI, var_turn_speed"
+      }
+    ],
+    "tail": [
+      "main()#program entry"
+    ]
+  },
+  "syntaxCheck": {
+    "ok": true,
+    "returncode": 0,
+    "cmd": [
+      "C:\\Users\\s1325\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-m",
+      "py_compile",
+      "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_ccpbwivx\\generated_syntax_check.py"
+    ],
+    "stdout": "",
+    "stderr": "",
+    "elapsedMs": 296,
+    "file": "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_ccpbwivx\\generated_syntax_check.py"
+  },
+  "nativeBlocks": {
+    "count": 0,
+    "types": [],
+    "byType": {}
+  },
+  "nativePrelude": {
+    "userlibPath": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\patched_web\\Blockly_Code\\abilix_userlib.js",
+    "userlibFunctionCount": 1,
+    "userlibFunctions": [
+      "func_Hello"
+    ],
+    "preludeChars": 61,
+    "preludeSha256": "5a0311e2c2b12e8e18b37d7170eee123a67166e1c6ddbad14cd052ce1792927c",
+    "projectNativeBlockCount": 0,
+    "projectNativeBlockTypes": [],
+    "expectedInjection": false,
+    "detectedInjection": false,
+    "exactMatch": false,
+    "lineSequenceMatch": false,
+    "ok": true
+  },
+  "userlib": {
+    "present": true,
+    "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\patched_web\\Blockly_Code\\abilix_userlib.js",
+    "encoding": "utf-8-sig",
+    "functions": [
+      {
+        "name": "func_Hello",
+        "args": [],
+        "tip": "hello world",
+        "blockType": "abilixuf_func_Hello"
+      }
+    ],
+    "preludeChars": 61,
+    "preludeSha256": "5a0311e2c2b12e8e18b37d7170eee123a67166e1c6ddbad14cd052ce1792927c",
+    "errors": []
+  },
+  "comparison": {
+    "reference": "D:\\UserData\\Documents\\WER\\2026普级赛\\逆向资料\\样本程序\\PI.py",
+    "refFunctionCount": 27,
+    "genFunctionCount": 27,
+    "refUserFunctionCount": 26,
+    "userFunctionsIdentical": 26,
+    "userAgreementRate": 1.0,
+    "mainIdentical": true,
+    "identicalFunctions": 27,
+    "agreementRate": 1.0,
+    "rawTextIdenticalNormalized": true,
+    "signaturesAllEqual": true,
+    "bodiesAllIdentical": true,
+    "missingInGenerated": [],
+    "extraInGenerated": [],
+    "functions": [
+      {
+        "name": "func_end",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 71,
+        "genBodyLines": 71,
+        "status": "identical"
+      },
+      {
+        "name": "func_name2",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 23,
+        "genBodyLines": 23,
+        "status": "identical"
+      },
+      {
+        "name": "func_green_end",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 44,
+        "genBodyLines": 44,
+        "status": "identical"
+      },
+      {
+        "name": "func_green_end_1",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 44,
+        "genBodyLines": 44,
+        "status": "identical"
+      },
+      {
+        "name": "func_Path_green_1",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 58,
+        "genBodyLines": 58,
+        "status": "identical"
+      },
+      {
+        "name": "func_Path_green_3",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 60,
+        "genBodyLines": 60,
+        "status": "identical"
+      },
+      {
+        "name": "func_take_white",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 42,
+        "genBodyLines": 42,
+        "status": "identical"
+      },
+      {
+        "name": "func_Path_green_2",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 36,
+        "genBodyLines": 36,
+        "status": "identical"
+      },
+      {
+        "name": "func_Path_green_4",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 43,
+        "genBodyLines": 43,
+        "status": "identical"
+      },
+      {
+        "name": "func_backwards",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 14,
+        "genBodyLines": 14,
+        "status": "identical"
+      },
+      {
+        "name": "func_main",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 13,
+        "genBodyLines": 13,
+        "status": "identical"
+      },
+      {
+        "name": "func_Library",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 36,
+        "genBodyLines": 36,
+        "status": "identical"
+      },
+      {
+        "name": "func_forward",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 43,
+        "genBodyLines": 43,
+        "status": "identical"
+      },
+      {
+        "name": "func_Turn",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 86,
+        "genBodyLines": 86,
+        "status": "identical"
+      },
+      {
+        "name": "func_ON",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 7,
+        "genBodyLines": 7,
+        "status": "identical"
+      },
+      {
+        "name": "func_ray",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 12,
+        "genBodyLines": 12,
+        "status": "identical"
+      },
+      {
+        "name": "func_ray_forward_PID",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 8,
+        "genBodyLines": 8,
+        "status": "identical"
+      },
+      {
+        "name": "func_ray_forward",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 40,
+        "genBodyLines": 40,
+        "status": "identical"
+      },
+      {
+        "name": "func_Motter_Zero",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 7,
+        "genBodyLines": 7,
+        "status": "identical"
+      },
+      {
+        "name": "func_ray_PID",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 11,
+        "genBodyLines": 11,
+        "status": "identical"
+      },
+      {
+        "name": "func_value",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 10,
+        "genBodyLines": 10,
+        "status": "identical"
+      },
+      {
+        "name": "func_Last_light_Error",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 4,
+        "genBodyLines": 4,
+        "status": "identical"
+      },
+      {
+        "name": "func_ray_backwards_PID",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 11,
+        "genBodyLines": 11,
+        "status": "identical"
+      },
+      {
+        "name": "func_ray_Path",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 12,
+        "genBodyLines": 12,
+        "status": "identical"
+      },
+      {
+        "name": "func_ray_Path_PID",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 10,
+        "genBodyLines": 10,
+        "status": "identical"
+      },
+      {
+        "name": "func_ray_Time",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 21,
+        "genBodyLines": 21,
+        "status": "identical"
+      },
+      {
+        "name": "main",
+        "argsEqual": true,
+        "bodyEqual": true,
+        "refArgs": "",
+        "genArgs": "",
+        "refBodyLines": 5,
+        "genBodyLines": 5,
+        "status": "identical"
+      }
+    ],
+    "preamble": {
+      "headerEqual": true,
+      "refHeader": "#<SKCON9><USB><ProgramA>",
+      "genHeader": "#<SKCON9><USB><ProgramA>",
+      "importsEqual": true,
+      "refImports": [
+        "import threading",
+        "import time",
+        "import libstarpy",
+        "from numbers import Number"
+      ],
+      "genImports": [
+        "import threading",
+        "import time",
+        "import libstarpy",
+        "from numbers import Number"
+      ],
+      "robotInitEqual": true,
+      "varDeclsSetEqual": true,
+      "varDeclsOrderEqual": true,
+      "refVarDeclCount": 40,
+      "genVarDeclCount": 40,
+      "varDeclsOnlyInRef": [],
+      "varDeclsOnlyInGen": [],
+      "otherPreambleEqual": true,
+      "refOtherPreamble": [],
+      "genOtherPreamble": [],
+      "tailEqual": true,
+      "refTail": [
+        "main()#program entry"
+      ],
+      "genTail": [
+        "main()#program entry"
+      ]
+    },
+    "allowedDifferences": [],
+    "normalizedDiff": [],
+    "normalizedDiffLineCount": 0,
+    "identicalModuloAllowedDiffs": true,
+    "referenceEncoding": "utf-8-sig"
+  }
+}

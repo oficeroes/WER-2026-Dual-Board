@@ -1,0 +1,121 @@
+== WER headless 验证工具 v1.0 ==
+   web_root : D:\UserData\Documents\WER\2026普级赛\_分析临时\native_work\patched_web
+   chrome   : C:\Program Files\Google\Chrome\Application\chrome.exe
+   work tmp : C:\Users\s1325\AppData\Local\Temp\wer_validate_splx9j8i
+   harness URL: http://127.0.0.1:62538/Blockly_Code/__harness__.html
+
+证据已写入：D:\UserData\Documents\WER\2026普级赛\WER_函数库\证据\原生积木验证\no_prelude\20261111_135310_abilixProject.json / .report.txt / .py
+
+==============================================================================
+WER headless 验证报告   生成时间 2026-11-11T13:53:06
+==============================================================================
+输入文件    : D:\UserData\Documents\WER\2026普级赛\_分析临时\PI\abilixProject.srh  (srh, utf-8-sig)
+机器人类型  : SKCON9    连接: USB    程序名: ProgramA
+项目 Info   : {"Version": "1.0.3.4", "RobotType": "SKCON9", "DownloadProgramName": "PI"}
+XML 静态校验: 通过    静态顶层块: 52    变量: 46    静态函数定义: 26
+[1] 加载项目 XML : 成功  (975.1 ms)
+    顶层块数: 52    总块数: 2256    变量数: 46
+    顶层块类型: {"procedures_defnoreturn": 26, "block_mod": 4, "motor": 2, "wait": 2, "ifelse": 1, "while_forver": 3, "if": 2, "while_break": 1, "start": 1, "procedures_callnoreturn": 6, "printf_text": 1, "variables_get": 2, "math_op": 1}
+    渲染检查: 已渲染块 2256/2256    SVG 根 2256    0 尺寸块 0    警告 0    禁用 66    mainWorkspace 正确 True
+[2] 函数定义     : 无返回值 26 个, 有返回值 0 个
+    - func_end()
+    - func_name2()
+    - func_green_end()
+    - func_green_end_1()
+    - func_Path_green_1()
+    - func_Path_green_3()
+    - func_take_white()
+    - func_Path_green_2()
+    - func_Path_green_4()
+    - func_backwards()
+    - func_main()
+    - func_Library()
+    - func_forward()
+    - func_Turn()
+    - func_ON()
+    - func_ray()
+    - func_ray_forward_PID()
+    - func_ray_forward()
+    - func_Motter_Zero()
+    - func_ray_PID()
+    - func_value()
+    - func_Last_light_Error()
+    - func_ray_backwards_PID()
+    - func_ray_Path()
+    - func_ray_Path_PID()
+    - func_ray_Time()
+[3] 函数分类 flyout（Blockly.Procedures.flyoutCategory）: 27 个 XML 块
+    - procedures_defnoreturn  name='func_name'  args=[]
+    - procedures_callnoreturn  name='func_backwards'  args=[]
+    - procedures_callnoreturn  name='func_end'  args=[]
+    - procedures_callnoreturn  name='func_forward'  args=[]
+    - procedures_callnoreturn  name='func_green_end'  args=[]
+    - procedures_callnoreturn  name='func_green_end_1'  args=[]
+    - procedures_callnoreturn  name='func_Last_light_Error'  args=[]
+    - procedures_callnoreturn  name='func_Library'  args=[]
+    - procedures_callnoreturn  name='func_main'  args=[]
+    - procedures_callnoreturn  name='func_Motter_Zero'  args=[]
+    - procedures_callnoreturn  name='func_name2'  args=[]
+    - procedures_callnoreturn  name='func_ON'  args=[]
+    - procedures_callnoreturn  name='func_Path_green_1'  args=[]
+    - procedures_callnoreturn  name='func_Path_green_2'  args=[]
+    - procedures_callnoreturn  name='func_Path_green_3'  args=[]
+    - procedures_callnoreturn  name='func_Path_green_4'  args=[]
+    - procedures_callnoreturn  name='func_ray'  args=[]
+    - procedures_callnoreturn  name='func_ray_backwards_PID'  args=[]
+    - procedures_callnoreturn  name='func_ray_forward'  args=[]
+    - procedures_callnoreturn  name='func_ray_forward_PID'  args=[]
+    - procedures_callnoreturn  name='func_ray_Path'  args=[]
+    - procedures_callnoreturn  name='func_ray_Path_PID'  args=[]
+    - procedures_callnoreturn  name='func_ray_PID'  args=[]
+    - procedures_callnoreturn  name='func_ray_Time'  args=[]
+    - procedures_callnoreturn  name='func_take_white'  args=[]
+    - procedures_callnoreturn  name='func_Turn'  args=[]
+    - procedures_callnoreturn  name='func_value'  args=[]
+[4] 真实 flyout 实例化: 成功 (27 块, 经工具箱树真实选中=True)    渲染 27/27    SVG 根 27    0 尺寸 0
+    - procedures_defnoreturn  name='func_name'  args=[]  inputs=['', 'STACK']
+    - procedures_callnoreturn  name='func_backwards'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_end'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_forward'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_green_end'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_green_end_1'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Last_light_Error'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Library'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_main'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Motter_Zero'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_name2'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ON'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Path_green_1'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Path_green_2'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Path_green_3'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Path_green_4'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_backwards_PID'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_forward'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_forward_PID'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_Path'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_Path_PID'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_PID'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_Time'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_take_white'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Turn'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_value'  args=[]  inputs=['TOPROW']
+[5] Python 生成  : 成功  (141.3 ms, 使用 maingui.js 原始 getPythonCode=True)
+    长度/行数: 938 行
+    文件头: '#<SKCON9><USB><ProgramA>'    def 数: 27    import: ['import threading', 'import time', 'import libstarpy', 'from numbers import Number']
+    变量声明: 40 个   尾部: ['main()#program entry']
+[6] py_compile  : 通过
+[7] 与参考 D:\UserData\Documents\WER\2026普级赛\逆向资料\样本程序\PI.py 对比
+    用户函数（不含 main）: 26/26 完全一致    一致率 1.0    main 一致: True
+    全部 def 数: 参考 27 / 生成 27    完全一致: 27/27
+    参数签名全部相同: True    函数体全部相同: True
+    缺失函数: []    多出函数: []
+    import 集合相同: True    robot=Robot() 行: True
+    变量声明集合相同: True  (参考 40 / 生成 40)
+    变量声明顺序相同: True    尾部语句相同: True
+    原始文本（忽略换行风格）完全相同: True
+    归一化 diff 行数: 0
+    等价（除允许差异外）: True
+[11] 原生块 prelude 注入回归: 通过（项目原生块数 0，期望注入=False，实际注入=False，prelude 61 字符，userlib 函数 1 个）
+生成的 Python 全文见 --py 输出 / JSON generated.code；可另传 --screenshot 截图。
+结论: 通过

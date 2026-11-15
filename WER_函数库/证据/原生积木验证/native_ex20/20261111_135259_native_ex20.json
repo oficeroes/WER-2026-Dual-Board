@@ -1,0 +1,1401 @@
+{
+  "meta": {
+    "tool": "run_validate.py",
+    "toolVersion": "1.0",
+    "generatedAt": "2026-11-11T13:52:41",
+    "argv": [
+      "WER_函数库/工具/验证/run_validate.py",
+      "_分析临时/native_work/evidence/native_ex20.srh",
+      "--native-test",
+      "--web-root",
+      "_分析临时/native_work/patched_web_ex20",
+      "--screenshot",
+      "--evidence-dir",
+      "WER_函数库/证据/原生积木验证/native_ex20",
+      "--window-size",
+      "1600,1800",
+      "--timeout",
+      "300"
+    ],
+    "python": "3.12.4",
+    "mode": "native",
+    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "webRoot": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\patched_web_ex20",
+    "elapsedMs": 17614
+  },
+  "ok": true,
+  "errors": [],
+  "project": {
+    "inputPath": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\evidence\\native_ex20.srh",
+    "format": "srh",
+    "encoding": "utf-8-sig",
+    "info": {
+      "Version": "1.0.3.4",
+      "RobotType": "SKCON9",
+      "DownloadProgramName": "NativeEx20"
+    },
+    "infoRaw": "\r\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\r\n<ScratchProjectInfo xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\r\n  <Version>1.0.3.4</Version>\r\r\n  <RobotType>SKCON9</RobotType>\r\r\n  <DownloadProgramName>NativeEx20</DownloadProgramName>\r\r\n</ScratchProjectInfo>\r\n",
+    "zipRobotType": null,
+    "robotType": "SKCON9",
+    "connectionType": "USB",
+    "programName": "NativeEx20",
+    "static": {
+      "xmlValid": true,
+      "xmlError": null,
+      "rootTag": "xml",
+      "variablesCount": 1,
+      "variables": [
+        {
+          "name": "var_1cm",
+          "id": "var_1cm_id"
+        }
+      ],
+      "topBlockCount": 1,
+      "topBlocks": [
+        {
+          "type": "start",
+          "id": "start_ex20"
+        }
+      ],
+      "procedures": {
+        "defnoreturn": [],
+        "defreturn": []
+      },
+      "topBlocksByType": {
+        "start": 1
+      },
+      "hasStartBlock": true
+    },
+    "warnings": []
+  },
+  "chrome": {
+    "returncode": 0,
+    "timedOut": false,
+    "elapsedMs": 2327
+  },
+  "harness": {
+    "ok": true,
+    "tool": "wer-blockly-harness",
+    "harnessVersion": "1.0",
+    "startedAt": "2026-11-11T05:52:42.940Z",
+    "config": {
+      "mode": "native",
+      "robotType": "SKCON9",
+      "connectionType": "USB",
+      "programName": "NativeEx20",
+      "projectXmlLength": 867
+    },
+    "steps": [
+      {
+        "name": "inject",
+        "ok": true,
+        "ms": 53.9
+      },
+      {
+        "name": "clear",
+        "ok": true,
+        "ms": 0.2
+      },
+      {
+        "name": "textToDom",
+        "ok": true,
+        "ms": 0.7
+      },
+      {
+        "name": "domToWorkspace",
+        "ok": true,
+        "ms": 17.9
+      },
+      {
+        "name": "workspaceStats",
+        "ok": true,
+        "ms": 0.5
+      },
+      {
+        "name": "procedures",
+        "ok": true,
+        "ms": 0.1
+      },
+      {
+        "name": "flyoutCategory",
+        "ok": true,
+        "ms": 0.4
+      },
+      {
+        "name": "nativeCategory",
+        "ok": true,
+        "ms": 0.3
+      },
+      {
+        "name": "nativeFlyout",
+        "ok": true,
+        "ms": 35.2
+      },
+      {
+        "name": "nativeDragFromFlyout",
+        "ok": true,
+        "ms": 488.6
+      }
+    ],
+    "windowErrors": [],
+    "consoleErrors": [],
+    "load": {
+      "success": true,
+      "error": null,
+      "ms": 72.8
+    },
+    "workspace": {
+      "topBlockCount": 1,
+      "totalBlockCount": 6,
+      "variableCount": 1,
+      "variableNames": [
+        "var_1cm"
+      ],
+      "topBlocksByType": {
+        "start": 1
+      },
+      "allBlocksByType": {
+        "start": 1,
+        "abilixuf_func_Init": 1,
+        "abilixuf_func_ForwardCM": 1,
+        "math_number": 2,
+        "abilixuf_func_BackwardCM": 1
+      },
+      "topBlocks": [
+        {
+          "type": "start",
+          "xy": [
+            40,
+            40
+          ],
+          "id": "start_ex20"
+        }
+      ],
+      "render": {
+        "renderedBlockCount": 6,
+        "renderedSvgRootCount": 6,
+        "zeroSizeBlockCount": 0,
+        "warningCount": 0,
+        "warnings": [],
+        "disabledBlockCount": 0,
+        "mainWorkspaceIsThis": true,
+        "blocklyBlockCanvasCount": 2,
+        "injectionDivCount": 1,
+        "svgCount": 1
+      }
+    },
+    "procedures": {
+      "defnoreturn": [],
+      "defreturn": [],
+      "allProceduresSorted": {
+        "defnoreturn": [],
+        "defreturn": []
+      }
+    },
+    "flyout": {
+      "categoryXml": {
+        "count": 1,
+        "xml": [
+          "<block xmlns=\"http://www.w3.org/1999/xhtml\" type=\"procedures_defnoreturn\" gap=\"24\"><field name=\"NAME\">func_name</field></block>"
+        ],
+        "blocks": [
+          {
+            "tag": "block",
+            "type": "procedures_defnoreturn",
+            "fieldName": "func_name"
+          }
+        ]
+      },
+      "instantiate": {
+        "skipped": true,
+        "reason": "原生块模式不实例化 PROCEDURE 分类"
+      }
+    },
+    "native": {
+      "attempted": true,
+      "ok": true,
+      "error": null,
+      "category": {
+        "found": true,
+        "name": "我的函数",
+        "viaTreeSelection": true,
+        "blockCount": 20,
+        "blockTypes": [
+          "abilixuf_func_Init",
+          "abilixuf_func_Stop",
+          "abilixuf_func_ResetEncoder",
+          "abilixuf_func_ForwardCM",
+          "abilixuf_func_BackwardCM",
+          "abilixuf_func_TurnLeft",
+          "abilixuf_func_TurnRight",
+          "abilixuf_func_DriveTime",
+          "abilixuf_func_DriveSpeed",
+          "abilixuf_func_ArmUp",
+          "abilixuf_func_ArmDown",
+          "abilixuf_func_Grab",
+          "abilixuf_func_Release",
+          "abilixuf_func_LineStep",
+          "abilixuf_func_LineTime",
+          "abilixuf_func_LineUntilCross",
+          "abilixuf_func_WaitStartKey",
+          "abilixuf_func_WaitTouch",
+          "abilixuf_func_Show",
+          "abilixuf_func_Beep"
+        ]
+      },
+      "flyout": {
+        "visible": true,
+        "blockCount": 20,
+        "blockTypes": [
+          "abilixuf_func_Init",
+          "abilixuf_func_Stop",
+          "abilixuf_func_ResetEncoder",
+          "abilixuf_func_ForwardCM",
+          "abilixuf_func_BackwardCM",
+          "abilixuf_func_TurnLeft",
+          "abilixuf_func_TurnRight",
+          "abilixuf_func_DriveTime",
+          "abilixuf_func_DriveSpeed",
+          "abilixuf_func_ArmUp",
+          "abilixuf_func_ArmDown",
+          "abilixuf_func_Grab",
+          "abilixuf_func_Release",
+          "abilixuf_func_LineStep",
+          "abilixuf_func_LineTime",
+          "abilixuf_func_LineUntilCross",
+          "abilixuf_func_WaitStartKey",
+          "abilixuf_func_WaitTouch",
+          "abilixuf_func_Show",
+          "abilixuf_func_Beep"
+        ],
+        "blocks": [
+          {
+            "type": "abilixuf_func_Init",
+            "isInFlyout": true,
+            "inputs": [
+              ""
+            ],
+            "width": 81,
+            "height": 29
+          },
+          {
+            "type": "abilixuf_func_Stop",
+            "isInFlyout": true,
+            "inputs": [
+              ""
+            ],
+            "width": 90,
+            "height": 29
+          },
+          {
+            "type": "abilixuf_func_ResetEncoder",
+            "isInFlyout": true,
+            "inputs": [
+              ""
+            ],
+            "width": 152,
+            "height": 29
+          },
+          {
+            "type": "abilixuf_func_ForwardCM",
+            "isInFlyout": true,
+            "inputs": [
+              "",
+              "ARG0"
+            ],
+            "width": 174,
+            "height": 55
+          },
+          {
+            "type": "abilixuf_func_BackwardCM",
+            "isInFlyout": true,
+            "inputs": [
+              "",
+              "ARG0"
+            ],
+            "width": 185,
+            "height": 55
+          },
+          {
+            "type": "abilixuf_func_TurnLeft",
+            "isInFlyout": true,
+            "inputs": [
+              "",
+              "ARG0"
+            ],
+            "width": 153,
+            "height": 55
+          },
+          {
+            "type": "abilixuf_func_TurnRight",
+            "isInFlyout": true,
+            "inputs": [
+              "",
+              "ARG0"
+            ],
+            "width": 163,
+            "height": 55
+          },
+          {
+            "type": "abilixuf_func_DriveTime",
+            "isInFlyout": true,
+            "inputs": [
+              "",
+              "ARG0",
+              "ARG1",
+              "ARG2"
+            ],
+            "width": 165,
+            "height": 107
+          },
+          {
+            "type": "abilixuf_func_DriveSpeed",
+            "isInFlyout": true,
+            "inputs": [
+              "",
+              "ARG0",
+              "ARG1"
+            ],
+            "width": 174,
+            "height": 81
+          },
+          {
+            "type": "abilixuf_func_ArmUp",
+            "isInFlyout": true,
+            "inputs": [
+              ""
+            ],
+            "width": 106,
+            "height": 29
+          },
+          {
+            "type": "abilixuf_func_ArmDown",
+            "isInFlyout": true,
+            "inputs": [
+              ""
+            ],
+            "width": 126,
+            "height": 29
+          },
+          {
+            "type": "abilixuf_func_Grab",
+            "isInFlyout": true,
+            "inputs": [
+              ""
+            ],
+            "width": 91,
+            "height": 29
+          },
+          {
+            "type": "abilixuf_func_Release",
+            "isInFlyout": true,
+            "inputs": [
+              ""
+            ],
+            "width": 111,
+            "height": 29
+          },
+          {
+            "type": "abilixuf_func_LineStep",
+            "isInFlyout": true,
+            "inputs": [
+              ""
+            ],
+            "width": 118,
+            "height": 29
+          },
+          {
+            "type": "abilixuf_func_LineTime",
+            "isInFlyout": true,
+            "inputs": [
+              "",
+              "ARG0"
+            ],
+            "width": 159,
+            "height": 55
+          },
+          {
+            "type": "abilixuf_func_LineUntilCross",
+            "isInFlyout": true,
+            "inputs": [
+              ""
+            ],
+            "width": 158,
+            "height": 29
+          },
+          {
+            "type": "abilixuf_func_WaitStartKey",
+            "isInFlyout": true,
+            "inputs": [
+              ""
+            ],
+            "width": 147,
+            "height": 29
+          },
+          {
+            "type": "abilixuf_func_WaitTouch",
+            "isInFlyout": true,
+            "inputs": [
+              ""
+            ],
+            "width": 130,
+            "height": 29
+          },
+          {
+            "type": "abilixuf_func_Show",
+            "isInFlyout": true,
+            "inputs": [
+              "",
+              "ARG0"
+            ],
+            "width": 134,
+            "height": 55
+          },
+          {
+            "type": "abilixuf_func_Beep",
+            "isInFlyout": true,
+            "inputs": [
+              ""
+            ],
+            "width": 93,
+            "height": 29
+          }
+        ],
+        "render": {
+          "renderedBlockCount": 20,
+          "renderedSvgRootCount": 20,
+          "zeroSizeBlockCount": 0
+        }
+      },
+      "drag": {
+        "attempted": true,
+        "ok": true,
+        "error": null,
+        "viaTreeSelection": true,
+        "removedCount": 3,
+        "removedTypes": [
+          "abilixuf_func_Init",
+          "abilixuf_func_ForwardCM",
+          "abilixuf_func_BackwardCM"
+        ],
+        "createdCount": 20,
+        "created": [
+          {
+            "type": "abilixuf_func_Init",
+            "flyoutIndex": 0,
+            "argInputs": [],
+            "argValues": [],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_Stop",
+            "flyoutIndex": 1,
+            "argInputs": [],
+            "argValues": [],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_ResetEncoder",
+            "flyoutIndex": 2,
+            "argInputs": [],
+            "argValues": [],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_ForwardCM",
+            "flyoutIndex": 3,
+            "argInputs": [
+              "ARG0:math_number"
+            ],
+            "argValues": [
+              "40"
+            ],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_BackwardCM",
+            "flyoutIndex": 4,
+            "argInputs": [
+              "ARG0:math_number"
+            ],
+            "argValues": [
+              "50"
+            ],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_TurnLeft",
+            "flyoutIndex": 5,
+            "argInputs": [
+              "ARG0:math_number"
+            ],
+            "argValues": [
+              "60"
+            ],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_TurnRight",
+            "flyoutIndex": 6,
+            "argInputs": [
+              "ARG0:math_number"
+            ],
+            "argValues": [
+              "70"
+            ],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_DriveTime",
+            "flyoutIndex": 7,
+            "argInputs": [
+              "ARG0:math_number",
+              "ARG1:math_number",
+              "ARG2:math_number"
+            ],
+            "argValues": [
+              "80",
+              "81",
+              "82"
+            ],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_DriveSpeed",
+            "flyoutIndex": 8,
+            "argInputs": [
+              "ARG0:math_number",
+              "ARG1:math_number"
+            ],
+            "argValues": [
+              "90",
+              "91"
+            ],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_ArmUp",
+            "flyoutIndex": 9,
+            "argInputs": [],
+            "argValues": [],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_ArmDown",
+            "flyoutIndex": 10,
+            "argInputs": [],
+            "argValues": [],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_Grab",
+            "flyoutIndex": 11,
+            "argInputs": [],
+            "argValues": [],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_Release",
+            "flyoutIndex": 12,
+            "argInputs": [],
+            "argValues": [],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_LineStep",
+            "flyoutIndex": 13,
+            "argInputs": [],
+            "argValues": [],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_LineTime",
+            "flyoutIndex": 14,
+            "argInputs": [
+              "ARG0:math_number"
+            ],
+            "argValues": [
+              "150"
+            ],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_LineUntilCross",
+            "flyoutIndex": 15,
+            "argInputs": [],
+            "argValues": [],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_WaitStartKey",
+            "flyoutIndex": 16,
+            "argInputs": [],
+            "argValues": [],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_WaitTouch",
+            "flyoutIndex": 17,
+            "argInputs": [],
+            "argValues": [],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_Show",
+            "flyoutIndex": 18,
+            "argInputs": [
+              "ARG0:math_number"
+            ],
+            "argValues": [
+              "190"
+            ],
+            "rendered": true,
+            "svgOk": true
+          },
+          {
+            "type": "abilixuf_func_Beep",
+            "flyoutIndex": 19,
+            "argInputs": [],
+            "argValues": [],
+            "rendered": true,
+            "svgOk": true
+          }
+        ],
+        "startBlockId": "start_ex20",
+        "chainLength": 20,
+        "workspaceTopBlockCountAfter": 1,
+        "workspaceTotalBlockCountAfter": 32
+      }
+    },
+    "generation": {
+      "success": true,
+      "usedRealSource": true,
+      "evalError": null,
+      "error": null,
+      "code": "#<SKCON9><USB><NativeEx20>\n\nimport threading\nimport time\nimport libstarpy\n\nrobot = Robot()\n\ncm = None\ndeg = None\nspeedL = None\nspeedR = None\nsec = None\ntext = None\nvar_1cm = None\nvar_err_9 = None\nvar_1angle = None\nvar_ready = None\nvar_err_10 = None\nvar_err_last_9 = None\nvar_speed = None\nvar_arm_speed = None\nvar_arm_time = None\nvar_ee_white_9 = None\nvar_pid_9 = None\nvar_err_last_10 = None\nvar_straight_Kp = None\nvar_enc_diff = None\nvar_ee_white_10 = None\nvar_pid_10 = None\nvar_turn_speed = None\nvar_ray_Kp = None\nvar_ray_Kd = None\nvar_ray_white = None\nvar_ray_speed = None\n\ndef func_Init():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #初始化：设定校准参数、读 EEPROM 灰度白值、停车、编码器清零。\n    var_1cm = 90.4\n    var_1angle = 17.8\n    var_speed = 40\n    var_straight_Kp = 0.005\n    var_turn_speed = 25\n    var_arm_speed = 30\n    var_arm_time = 0.5\n    var_ray_white = 1300\n    var_ray_speed = 30\n    var_ray_Kp = 0.01\n    var_ray_Kd = 0.001\n    #EEPROM 9/10 = 标定程序写入的左/右灰度白值；没标定过就退回默认 1300。\n    var_ee_white_9 = robot.get_ee(9)\n    var_ee_white_10 = robot.get_ee(10)\n    if var_ee_white_9 < 100:\n        var_ee_white_9 = 1300\n    if var_ee_white_10 < 100:\n        var_ee_white_10 = 1300\n    var_err_last_9 = 0\n    var_err_last_10 = 0\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    robot.reset_encoder(1);\n    robot.reset_encoder(2);\n    #标记已初始化；各个动作函数检测到未初始化会自动调用本函数。\n    var_ready = 1\n    pass\n\ndef func_Stop():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #停止：左右驱动电机速度清零。\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    pass\n\ndef func_ResetEncoder():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #驱动电机编码器清零（1=左轮 2=右轮）。\n    robot.reset_encoder(1);\n    robot.reset_encoder(2);\n    pass\n\ndef func_ForwardCM(cm):\n    global deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #前进 cm 厘米：编码器定距 + 两轮差值纠偏；cm 必须 > 0。\n    func_ResetEncoder()\n    while not robot.abs(robot.get_encoder(1)) >= (cm * var_1cm):\n        var_enc_diff = (robot.get_encoder(1) - robot.get_encoder(2))\n        robot.set_motor(1,robot.clamp((var_speed - (var_straight_Kp * var_enc_diff)), -100, 100))\n        robot.set_motor(2,robot.clamp((var_speed + (var_straight_Kp * var_enc_diff)), -100, 100))\n        time.sleep(0.01)\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    pass\n\ndef func_BackwardCM(cm):\n    global deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #后退 cm 厘米：编码器定距 + 两轮差值纠偏；cm 必须 > 0。\n    func_ResetEncoder()\n    while not robot.abs(robot.get_encoder(1)) >= (cm * var_1cm):\n        var_enc_diff = (robot.get_encoder(1) - robot.get_encoder(2))\n        robot.set_motor(1,robot.clamp((-(var_speed) - (var_straight_Kp * var_enc_diff)), -100, 100))\n        robot.set_motor(2,robot.clamp((-(var_speed) + (var_straight_Kp * var_enc_diff)), -100, 100))\n        time.sleep(0.01)\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    pass\n\ndef func_TurnLeft(deg):\n    global cm, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #原地左转 deg 度：左轮反转、右轮正转，编码器定角度。\n    func_ResetEncoder()\n    while not robot.abs(robot.get_encoder(1)) >= (deg * var_1angle):\n        robot.set_motor(1,robot.clamp(-(var_turn_speed), -100, 100))\n        robot.set_motor(2,robot.clamp(var_turn_speed, -100, 100))\n        time.sleep(0.01)\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    pass\n\ndef func_TurnRight(deg):\n    global cm, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #原地右转 deg 度：左轮正转、右轮反转，编码器定角度。\n    func_ResetEncoder()\n    while not robot.abs(robot.get_encoder(1)) >= (deg * var_1angle):\n        robot.set_motor(1,robot.clamp(var_turn_speed, -100, 100))\n        robot.set_motor(2,robot.clamp(-(var_turn_speed), -100, 100))\n        time.sleep(0.01)\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    pass\n\ndef func_DriveTime(speedL, speedR, sec):\n    global cm, deg, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #双电机按时间行驶：左速度 speedL %、右速度 speedR %，持续 sec 秒后自动停。\n    robot.set_double_motor_time(1,robot.clamp(speedL, -100, 100),2,robot.clamp(speedR, -100, 100),robot.clamp(sec, 0, 3600))\n    pass\n\ndef func_DriveSpeed(speedL, speedR):\n    global cm, deg, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #双电机持续转：左 speedL %、右 speedR %；不会自己停，要配 等待/重复/停止。\n    robot.set_motor(1,robot.clamp(speedL, -100, 100))\n    robot.set_motor(2,robot.clamp(speedR, -100, 100))\n    pass\n\ndef func_ArmUp():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #抬升电机（端口3）正转 var_arm_time 秒（默认 30% 速度）。\n    robot.set_motor_time(3,robot.clamp(var_arm_speed, -100, 100),robot.clamp(var_arm_time, 0, 3600))\n    pass\n\ndef func_ArmDown():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #抬升电机（端口3）反转 var_arm_time 秒。\n    robot.set_motor_time(3,robot.clamp(-(var_arm_speed), -100, 100),robot.clamp(var_arm_time, 0, 3600))\n    pass\n\ndef func_Grab():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #夹爪电机（端口4）正转 var_arm_time 秒（夹紧/取物）。\n    robot.set_motor_time(4,robot.clamp(var_arm_speed, -100, 100),robot.clamp(var_arm_time, 0, 3600))\n    pass\n\ndef func_Release():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #夹爪电机（端口4）反转 var_arm_time 秒（松开/放下）。\n    robot.set_motor_time(4,robot.clamp(-(var_arm_speed), -100, 100),robot.clamp(var_arm_time, 0, 3600))\n    pass\n\ndef func_LineStep():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #内部函数：巡线 PID 走一步（由 func_LineTime / func_LineUntilCross 调用）。\n    var_err_9 = (var_ee_white_9 - robot.get_gray(9))\n    var_err_10 = (var_ee_white_10 - robot.get_gray(10))\n    var_pid_9 = ((var_ray_Kp * var_err_9) + (var_ray_Kd * (var_err_9 - var_err_last_9)))\n    var_pid_10 = ((var_ray_Kp * var_err_10) + (var_ray_Kd * (var_err_10 - var_err_last_10)))\n    var_err_last_9 = var_err_9\n    var_err_last_10 = var_err_10\n    robot.set_motor(1,robot.clamp((var_ray_speed + var_pid_9), -100, 100))\n    robot.set_motor(2,robot.clamp((var_ray_speed + var_pid_10), -100, 100))\n    time.sleep(0.01)\n    pass\n\ndef func_LineTime(sec):\n    global cm, deg, speedL, speedR, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #巡线行驶 sec 秒：灰度9/10 PID 巡线，到时间停车。\n    var_err_last_9 = 0\n    var_err_last_10 = 0\n    robot.reset_timer(2)\n    while not robot.get_timer_ms(2) >= (sec * 1000):\n        func_LineStep()\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    var_err_last_9 = 0\n    var_err_last_10 = 0\n    pass\n\ndef func_LineUntilCross():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    if var_ready == 1:\n        pass\n    else:\n        func_Init()\n    #巡线到路口：灰度7 或 灰度8 读到白值（>= var_ray_white）时停车。\n    var_err_last_9 = 0\n    var_err_last_10 = 0\n    while not robot.get_gray(7) >= var_ray_white:\n        if robot.get_gray(8) >= var_ray_white:\n            break\n        func_LineStep()\n    robot.set_motor(1,robot.clamp(0, -100, 100))\n    robot.set_motor(2,robot.clamp(0, -100, 100))\n    time.sleep(0.05)\n    var_err_last_9 = 0\n    var_err_last_10 = 0\n    pass\n\ndef func_WaitStartKey():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #等待按下主板的 Start(确认)键 1 再继续（如果你的车没有该按键，改用 func_WaitTouch）。\n    while not robot.check_key(1) == 1:\n        time.sleep(0.02)\n    time.sleep(0.2)\n    pass\n\ndef func_WaitTouch():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #等待触碰传感器（端口1）被按下再继续；主程序.py 就是用触碰1当启动/分段键。\n    while not robot.get_touch(1) == 1:\n        time.sleep(0.02)\n    time.sleep(0.2)\n    pass\n\ndef func_Show(text):\n    global cm, deg, speedL, speedR, sec, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #在机器人屏幕显示一段文字（text 里放一个文本块）。\n    robot.print(text,'\\n')\n    pass\n\ndef func_Beep():\n    global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed\n    #播放内置提示音（打招呼声）。\n    robot.play('dazhaohu_c0.mp3')\n    pass\n\ndef main():\n    func_Init()\n    func_Stop()\n    func_ResetEncoder()\n    func_ForwardCM(40)\n    func_BackwardCM(50)\n    func_TurnLeft(60)\n    func_TurnRight(70)\n    func_DriveTime(80, 81, 82)\n    func_DriveSpeed(90, 91)\n    func_ArmUp()\n    func_ArmDown()\n    func_Grab()\n    func_Release()\n    func_LineStep()\n    func_LineTime(150)\n    func_LineUntilCross()\n    func_WaitStartKey()\n    func_WaitTouch()\n    func_Show(190)\n    func_Beep()\n\nmain()#program entry",
+      "ms": 2.8,
+      "analysis": {
+        "codeLength": 14616,
+        "codeLines": 318,
+        "headerLine": "#<SKCON9><USB><NativeEx20>",
+        "defCount": 21,
+        "defs": [
+          {
+            "name": "func_Init",
+            "args": ""
+          },
+          {
+            "name": "func_Stop",
+            "args": ""
+          },
+          {
+            "name": "func_ResetEncoder",
+            "args": ""
+          },
+          {
+            "name": "func_ForwardCM",
+            "args": "cm"
+          },
+          {
+            "name": "func_BackwardCM",
+            "args": "cm"
+          },
+          {
+            "name": "func_TurnLeft",
+            "args": "deg"
+          },
+          {
+            "name": "func_TurnRight",
+            "args": "deg"
+          },
+          {
+            "name": "func_DriveTime",
+            "args": "speedL, speedR, sec"
+          },
+          {
+            "name": "func_DriveSpeed",
+            "args": "speedL, speedR"
+          },
+          {
+            "name": "func_ArmUp",
+            "args": ""
+          },
+          {
+            "name": "func_ArmDown",
+            "args": ""
+          },
+          {
+            "name": "func_Grab",
+            "args": ""
+          },
+          {
+            "name": "func_Release",
+            "args": ""
+          },
+          {
+            "name": "func_LineStep",
+            "args": ""
+          },
+          {
+            "name": "func_LineTime",
+            "args": "sec"
+          },
+          {
+            "name": "func_LineUntilCross",
+            "args": ""
+          },
+          {
+            "name": "func_WaitStartKey",
+            "args": ""
+          },
+          {
+            "name": "func_WaitTouch",
+            "args": ""
+          },
+          {
+            "name": "func_Show",
+            "args": "text"
+          },
+          {
+            "name": "func_Beep",
+            "args": ""
+          },
+          {
+            "name": "main",
+            "args": ""
+          }
+        ],
+        "hasMainCall": true
+      }
+    },
+    "drag": {
+      "attempted": false,
+      "ok": false,
+      "error": null,
+      "created": [],
+      "argFillRules": {}
+    },
+    "finishedAt": "2026-11-11T05:52:43.541Z"
+  },
+  "analysis": {
+    "lineCount": 318,
+    "header": "#<SKCON9><USB><NativeEx20>",
+    "imports": [
+      "import threading",
+      "import time",
+      "import libstarpy"
+    ],
+    "robotInit": [
+      "robot = Robot()"
+    ],
+    "varDeclCount": 27,
+    "varDecls": [
+      "cm",
+      "deg",
+      "speedL",
+      "speedR",
+      "sec",
+      "text",
+      "var_1cm",
+      "var_err_9",
+      "var_1angle",
+      "var_ready",
+      "var_err_10",
+      "var_err_last_9",
+      "var_speed",
+      "var_arm_speed",
+      "var_arm_time",
+      "var_ee_white_9",
+      "var_pid_9",
+      "var_err_last_10",
+      "var_straight_Kp",
+      "var_enc_diff",
+      "var_ee_white_10",
+      "var_pid_10",
+      "var_turn_speed",
+      "var_ray_Kp",
+      "var_ray_Kd",
+      "var_ray_white",
+      "var_ray_speed"
+    ],
+    "otherPreamble": [],
+    "defCount": 21,
+    "defs": [
+      {
+        "name": "func_Init",
+        "args": "",
+        "bodyLines": 27,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_Stop",
+        "args": "",
+        "bodyLines": 5,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_ResetEncoder",
+        "args": "",
+        "bodyLines": 4,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_ForwardCM",
+        "args": "cm",
+        "bodyLines": 15,
+        "globalLine": "global deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_BackwardCM",
+        "args": "cm",
+        "bodyLines": 15,
+        "globalLine": "global deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_TurnLeft",
+        "args": "deg",
+        "bodyLines": 14,
+        "globalLine": "global cm, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_TurnRight",
+        "args": "deg",
+        "bodyLines": 14,
+        "globalLine": "global cm, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_DriveTime",
+        "args": "speedL, speedR, sec",
+        "bodyLines": 7,
+        "globalLine": "global cm, deg, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_DriveSpeed",
+        "args": "speedL, speedR",
+        "bodyLines": 8,
+        "globalLine": "global cm, deg, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_ArmUp",
+        "args": "",
+        "bodyLines": 7,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_ArmDown",
+        "args": "",
+        "bodyLines": 7,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_Grab",
+        "args": "",
+        "bodyLines": 7,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_Release",
+        "args": "",
+        "bodyLines": 7,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_LineStep",
+        "args": "",
+        "bodyLines": 11,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_LineTime",
+        "args": "sec",
+        "bodyLines": 16,
+        "globalLine": "global cm, deg, speedL, speedR, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_LineUntilCross",
+        "args": "",
+        "bodyLines": 17,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_WaitStartKey",
+        "args": "",
+        "bodyLines": 5,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_WaitTouch",
+        "args": "",
+        "bodyLines": 5,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_Show",
+        "args": "text",
+        "bodyLines": 3,
+        "globalLine": "global cm, deg, speedL, speedR, sec, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "func_Beep",
+        "args": "",
+        "bodyLines": 3,
+        "globalLine": "global cm, deg, speedL, speedR, sec, text, var_1cm, var_err_9, var_1angle, var_ready, var_err_10, var_err_last_9, var_speed, var_arm_speed, var_arm_time, var_ee_white_9, var_pid_9, var_err_last_10, var_straight_Kp, var_enc_diff, var_ee_white_10, var_pid_10, var_turn_speed, var_ray_Kp, var_ray_Kd, var_ray_white, var_ray_speed"
+      },
+      {
+        "name": "main",
+        "args": "",
+        "bodyLines": 20,
+        "globalLine": null
+      }
+    ],
+    "tail": [
+      "main()#program entry"
+    ]
+  },
+  "syntaxCheck": {
+    "ok": true,
+    "returncode": 0,
+    "cmd": [
+      "C:\\Users\\s1325\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-m",
+      "py_compile",
+      "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_5_32lby5\\generated_syntax_check.py"
+    ],
+    "stdout": "",
+    "stderr": "",
+    "elapsedMs": 311,
+    "file": "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_validate_5_32lby5\\generated_syntax_check.py"
+  },
+  "nativeBlocks": {
+    "count": 3,
+    "types": [
+      "abilixuf_func_Init",
+      "abilixuf_func_ForwardCM",
+      "abilixuf_func_BackwardCM"
+    ],
+    "byType": {
+      "abilixuf_func_Init": 1,
+      "abilixuf_func_ForwardCM": 1,
+      "abilixuf_func_BackwardCM": 1
+    }
+  },
+  "nativePrelude": {
+    "userlibPath": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\patched_web_ex20\\Blockly_Code\\abilix_userlib.js",
+    "userlibFunctionCount": 20,
+    "userlibFunctions": [
+      "func_Init",
+      "func_Stop",
+      "func_ResetEncoder",
+      "func_ForwardCM",
+      "func_BackwardCM",
+      "func_TurnLeft",
+      "func_TurnRight",
+      "func_DriveTime",
+      "func_DriveSpeed",
+      "func_ArmUp",
+      "func_ArmDown",
+      "func_Grab",
+      "func_Release",
+      "func_LineStep",
+      "func_LineTime",
+      "func_LineUntilCross",
+      "func_WaitStartKey",
+      "func_WaitTouch",
+      "func_Show",
+      "func_Beep"
+    ],
+    "preludeChars": 14064,
+    "preludeSha256": "d4e1f1261cd8653712f6ad87bd5ece2cf822ccf9367ac5133e7cdd3ab26ae721",
+    "projectNativeBlockCount": 3,
+    "projectNativeBlockTypes": [
+      "abilixuf_func_Init",
+      "abilixuf_func_ForwardCM",
+      "abilixuf_func_BackwardCM"
+    ],
+    "expectedInjection": true,
+    "detectedInjection": true,
+    "exactMatch": true,
+    "lineSequenceMatch": true,
+    "ok": true
+  },
+  "userlib": {
+    "present": true,
+    "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\patched_web_ex20\\Blockly_Code\\abilix_userlib.js",
+    "encoding": "utf-8-sig",
+    "functions": [
+      {
+        "name": "func_Init",
+        "args": [],
+        "tip": "初始化：设定校准参数、读 EEPROM 灰度白值、停车、编码器清零。 EEPROM 9/10 = 标定程序写入的左/右灰度白值；没标定过就退回默认 1300。 标记已初始化；各个动作函数检测到未初始化会自动调用本函数。",
+        "blockType": "abilixuf_func_Init"
+      },
+      {
+        "name": "func_Stop",
+        "args": [],
+        "tip": "停止：左右驱动电机速度清零。",
+        "blockType": "abilixuf_func_Stop"
+      },
+      {
+        "name": "func_ResetEncoder",
+        "args": [],
+        "tip": "驱动电机编码器清零（1=左轮 2=右轮）。",
+        "blockType": "abilixuf_func_ResetEncoder"
+      },
+      {
+        "name": "func_ForwardCM",
+        "args": [
+          "cm"
+        ],
+        "tip": "前进 cm 厘米：编码器定距 + 两轮差值纠偏；cm 必须 > 0。",
+        "blockType": "abilixuf_func_ForwardCM"
+      },
+      {
+        "name": "func_BackwardCM",
+        "args": [
+          "cm"
+        ],
+        "tip": "后退 cm 厘米：编码器定距 + 两轮差值纠偏；cm 必须 > 0。",
+        "blockType": "abilixuf_func_BackwardCM"
+      },
+      {
+        "name": "func_TurnLeft",
+        "args": [
+          "deg"
+        ],
+        "tip": "原地左转 deg 度：左轮反转、右轮正转，编码器定角度。",
+        "blockType": "abilixuf_func_TurnLeft"
+      },
+      {
+        "name": "func_TurnRight",
+        "args": [
+          "deg"
+        ],
+        "tip": "原地右转 deg 度：左轮正转、右轮反转，编码器定角度。",
+        "blockType": "abilixuf_func_TurnRight"
+      },
+      {
+        "name": "func_DriveTime",
+        "args": [
+          "speedL",
+          "speedR",
+          "sec"
+        ],
+        "tip": "双电机按时间行驶：左速度 speedL %、右速度 speedR %，持续 sec 秒后自动停。",
+        "blockType": "abilixuf_func_DriveTime"
+      },
+      {
+        "name": "func_DriveSpeed",
+        "args": [
+          "speedL",
+          "speedR"
+        ],
+        "tip": "双电机持续转：左 speedL %、右 speedR %；不会自己停，要配 等待/重复/停止。",
+        "blockType": "abilixuf_func_DriveSpeed"
+      },
+      {
+        "name": "func_ArmUp",
+        "args": [],
+        "tip": "抬升电机（端口3）正转 var_arm_time 秒（默认 30% 速度）。",
+        "blockType": "abilixuf_func_ArmUp"
+      },
+      {
+        "name": "func_ArmDown",
+        "args": [],
+        "tip": "抬升电机（端口3）反转 var_arm_time 秒。",
+        "blockType": "abilixuf_func_ArmDown"
+      },
+      {
+        "name": "func_Grab",
+        "args": [],
+        "tip": "夹爪电机（端口4）正转 var_arm_time 秒（夹紧/取物）。",
+        "blockType": "abilixuf_func_Grab"
+      },
+      {
+        "name": "func_Release",
+        "args": [],
+        "tip": "夹爪电机（端口4）反转 var_arm_time 秒（松开/放下）。",
+        "blockType": "abilixuf_func_Release"
+      },
+      {
+        "name": "func_LineStep",
+        "args": [],
+        "tip": "内部函数：巡线 PID 走一步（由 func_LineTime / func_LineUntilCross 调用）。",
+        "blockType": "abilixuf_func_LineStep"
+      },
+      {
+        "name": "func_LineTime",
+        "args": [
+          "sec"
+        ],
+        "tip": "巡线行驶 sec 秒：灰度9/10 PID 巡线，到时间停车。",
+        "blockType": "abilixuf_func_LineTime"
+      },
+      {
+        "name": "func_LineUntilCross",
+        "args": [],
+        "tip": "巡线到路口：灰度7 或 灰度8 读到白值（>= var_ray_white）时停车。",
+        "blockType": "abilixuf_func_LineUntilCross"
+      },
+      {
+        "name": "func_WaitStartKey",
+        "args": [],
+        "tip": "等待按下主板的 Start(确认)键 1 再继续（如果你的车没有该按键，改用 func_WaitTouch）。",
+        "blockType": "abilixuf_func_WaitStartKey"
+      },
+      {
+        "name": "func_WaitTouch",
+        "args": [],
+        "tip": "等待触碰传感器（端口1）被按下再继续；主程序.py 就是用触碰1当启动/分段键。",
+        "blockType": "abilixuf_func_WaitTouch"
+      },
+      {
+        "name": "func_Show",
+        "args": [
+          "text"
+        ],
+        "tip": "在机器人屏幕显示一段文字（text 里放一个文本块）。",
+        "blockType": "abilixuf_func_Show"
+      },
+      {
+        "name": "func_Beep",
+        "args": [],
+        "tip": "播放内置提示音（打招呼声）。",
+        "blockType": "abilixuf_func_Beep"
+      }
+    ],
+    "preludeChars": 14064,
+    "preludeSha256": "d4e1f1261cd8653712f6ad87bd5ece2cf822ccf9367ac5133e7cdd3ab26ae721",
+    "errors": []
+  },
+  "nativeTest": {
+    "checks": [
+      {
+        "name": "项目加载成功",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "web_root 中存在原生函数块补丁 abilix_userlib.js",
+        "pass": true,
+        "detail": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\patched_web_ex20\\Blockly_Code\\abilix_userlib.js"
+      },
+      {
+        "name": "userlib 解析无错误",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "userlib 中解析出原生函数（20 个）",
+        "pass": true,
+        "detail": "func_Init, func_Stop, func_ResetEncoder, func_ForwardCM, func_BackwardCM, func_TurnLeft, func_TurnRight, func_DriveTime..."
+      },
+      {
+        "name": "工具箱树里找到「我的函数」分类",
+        "pass": true,
+        "detail": "name='我的函数' blockCount=20"
+      },
+      {
+        "name": "分类名 == '我的函数'",
+        "pass": true,
+        "detail": "我的函数"
+      },
+      {
+        "name": "经由真实工具箱树选中分类（Toolbox.TreeControl.setSelectedItem）",
+        "pass": true,
+        "detail": "True"
+      },
+      {
+        "name": "flyout 实例化块数 == userlib 函数数（20）",
+        "pass": true,
+        "detail": "实际 20"
+      },
+      {
+        "name": "flyout 里全部是 abilixuf_* 原生块",
+        "pass": true,
+        "detail": "['abilixuf_func_Init', 'abilixuf_func_Stop', 'abilixuf_func_ResetEncoder', 'abilixuf_func_ForwardCM', 'abilixuf_func_BackwardCM', 'abilixuf_func_TurnLeft', 'abilixuf_func_TurnRight', 'abilixuf_func_DriveTime']"
+      },
+      {
+        "name": "flyout 原生块类型与 userlib 完全一致（含顺序）",
+        "pass": true,
+        "detail": "{\"flyout\": [\"abilixuf_func_Init\", \"abilixuf_func_Stop\", \"abilixuf_func_ResetEncoder\", \"abilixuf_func_ForwardCM\", \"abilixuf_func_BackwardCM\", \"abilixuf_func_TurnLeft\", \"abilixuf_func_TurnRight\", \"abilixuf_func_DriveTime\"], \"expected\": [\"abilixuf_func_Init\", \"abilixuf_func_Stop\", \"abilixuf_func_ResetEncoder\", \"abilixuf_func_ForwardCM\", \"abilixuf_func_BackwardCM\", \"abilixuf_func_TurnLeft\", \"abilixuf_func_TurnRight\", \"abilixuf_func_DriveTime\"]}"
+      },
+      {
+        "name": "flyout 原生块均已渲染（rendered + SVG root + 非 0 尺寸）",
+        "pass": true,
+        "detail": "{\"renderedBlockCount\": 20, \"renderedSvgRootCount\": 20, \"zeroSizeBlockCount\": 0}"
+      },
+      {
+        "name": "拖拽路径执行成功（Flyout.createBlock 真实拖出）",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "从 flyout 拖出的原生块数量 == flyout 块数（20）",
+        "pass": true,
+        "detail": "实际 20"
+      },
+      {
+        "name": "拖出原生块类型与 flyout 顺序一致",
+        "pass": true,
+        "detail": "[\"abilixuf_func_Init\", \"abilixuf_func_Stop\", \"abilixuf_func_ResetEncoder\", \"abilixuf_func_ForwardCM\", \"abilixuf_func_BackwardCM\", \"abilixuf_func_TurnLeft\", \"abilixuf_func_TurnRight\", \"abilixuf_func_DriveTime\"]"
+      },
+      {
+        "name": "拖出的原生块均已渲染（rendered + SVG root）",
+        "pass": true,
+        "detail": "[]"
+      },
+      {
+        "name": "所有带参原生块的参数输入都已填值（11 个）",
+        "pass": true,
+        "detail": "实际 11/11"
+      },
+      {
+        "name": "拖出的原生块已接入 start 的 code 语句链",
+        "pass": true,
+        "detail": "startBlockId=start_ex20 chainLength=20"
+      },
+      {
+        "name": "项目里原有的原生块在拖拽前被移除（避免重复调用，生成内容全部来自本次拖出）",
+        "pass": true,
+        "detail": "removed=3 projectNative=3"
+      },
+      {
+        "name": "真实 maingui.getPythonCode 生成成功",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "文件头恰好出现一次且内容正确",
+        "pass": true,
+        "detail": "期待 '#<SKCON9><USB><NativeEx20>'，实际首行 '#<SKCON9><USB><NativeEx20>'，出现 1 次"
+      },
+      {
+        "name": "import 无重复且包含 threading/time/libstarpy",
+        "pass": true,
+        "detail": "['threading', 'time', 'libstarpy']"
+      },
+      {
+        "name": "robot = Robot() 恰好一次",
+        "pass": true,
+        "detail": "实际 1 次"
+      },
+      {
+        "name": "生成代码注入了 abilixUserLibPython（整段完全一致）",
+        "pass": true,
+        "detail": "prelude 14064 字符，行序匹配=True，sha256=d4e1f1261cd8653712f6ad87bd5ece2cf822ccf9367ac5133e7cdd3ab26ae721"
+      },
+      {
+        "name": "userlib 注入内容位于 def main 之前",
+        "pass": true,
+        "detail": "prelude@92 main@14155"
+      },
+      {
+        "name": "注入的 def 没有重复",
+        "pass": true,
+        "detail": "重复 []"
+      },
+      {
+        "name": "userlib 20 个函数定义全部出现在生成代码中",
+        "pass": true,
+        "detail": "[]"
+      },
+      {
+        "name": "生成代码里有 def main()",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "main 里调用了全部 20 个原生函数",
+        "pass": true,
+        "detail": "缺失 []"
+      },
+      {
+        "name": "main 里调用顺序与 flyout 拖出顺序一致",
+        "pass": true,
+        "detail": "[[\"func_Init\", 5], [\"func_Stop\", 21], [\"func_ResetEncoder\", 37], [\"func_ForwardCM\", 61], [\"func_BackwardCM\", 84], [\"func_TurnLeft\", 108], [\"func_TurnRight\", 130], [\"func_DriveTime\", 153], [\"func_DriveSpeed\", 184], [\"func_ArmUp\", 212], [\"func_ArmDown\", 229], [\"func_Grab\", 248]]"
+      },
+      {
+        "name": "main 里带参数调用的实参与填值完全一致（逐表达式匹配）",
+        "pass": true,
+        "detail": "[\"func_Init()\", \"func_Stop()\", \"func_ResetEncoder()\", \"func_ForwardCM(40)\", \"func_BackwardCM(50)\", \"func_TurnLeft(60)\", \"func_TurnRight(70)\", \"func_DriveTime(80, 81, 82)\", \"func_DriveSpeed(90, 91)\", \"func_ArmUp()\", \"func_ArmDown()\", \"func_Grab()\"]"
+      },
+      {
+        "name": "程序入口 main()#program entry 恰好一次且在末尾",
+        "pass": true,
+        "detail": "出现 1 次"
+      },
+      {
+        "name": "py_compile 语法检查通过",
+        "pass": true,
+        "detail": ""
+      }
+    ],
+    "passed": true,
+    "passedCount": 32,
+    "totalCount": 32
+  },
+  "screenshot": {
+    "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_ex20\\native_ex20_shot.png",
+    "exists": true,
+    "sizeBytes": 88890,
+    "chromeReturncode": 0,
+    "chromeTimedOut": false,
+    "chromeStderrTail": "88890 bytes written to file D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_ex20\\native_ex20_shot.png\r\n"
+  },
+  "screenshots": [
+    {
+      "kind": "page",
+      "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_ex20\\native_ex20_shot_page.png",
+      "exists": true,
+      "sizeBytes": 44497,
+      "chromeReturncode": 0,
+      "chromeTimedOut": false,
+      "chromeStderrTail": "44497 bytes written to file D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_ex20\\native_ex20_shot_page.png\r\n"
+    },
+    {
+      "kind": "flyout",
+      "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_ex20\\native_ex20_shot_flyout.png",
+      "exists": true,
+      "sizeBytes": 118093,
+      "chromeReturncode": 0,
+      "chromeTimedOut": false,
+      "chromeStderrTail": "118093 bytes written to file D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_ex20\\native_ex20_shot_flyout.png\r\n"
+    },
+    {
+      "kind": "drag",
+      "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_ex20\\native_ex20_shot_drag.png",
+      "exists": true,
+      "sizeBytes": 110831,
+      "chromeReturncode": 0,
+      "chromeTimedOut": false,
+      "chromeStderrTail": "110831 bytes written to file D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_ex20\\native_ex20_shot_drag.png\r\n"
+    },
+    {
+      "kind": "python",
+      "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_ex20\\native_ex20_shot_python.png",
+      "exists": true,
+      "sizeBytes": 186990,
+      "chromeReturncode": 0,
+      "chromeTimedOut": false,
+      "chromeStderrTail": "186990 bytes written to file D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木验证\\native_ex20\\native_ex20_shot_python.png\r\n"
+    }
+  ]
+}

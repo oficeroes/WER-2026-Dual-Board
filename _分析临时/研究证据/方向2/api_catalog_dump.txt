@@ -1,0 +1,1911 @@
+# robotApiCatalog.json 全量方法抽取（方向2 证据）
+来源: WER_VSCode_工具/api/robotApiCatalog.json ；version=1.0.0 generatedAt=2026-11-04T23:01:52+08:00
+
+## sources
+[
+ {
+  "id": "manual",
+  "path": "WER_积木库完全手册.md",
+  "role": "主文档：第16章 Python API 完全参考、附录B API 索引、第13章巡线、第14章 AI"
+ },
+ {
+  "id": "ai_guide",
+  "path": "WER机器人代码生成_给AI的说明书.md",
+  "role": "第3章程序骨架/型号差异、第4章 API 完整参考、第5章可用性、第6章硬性规则"
+ },
+ {
+  "id": "generator_json",
+  "path": "逆向资料/通用数据/生成器.json",
+  "role": "105 个积木生成器源码（积木→Python 精确对照，第一手证据）"
+ },
+ {
+  "id": "generator_js",
+  "path": "逆向资料/关键源码/myrobotpythoncode.js",
+  "role": "生成器源码原文（本目录 evidence.generator 行号即指向此文件）"
+ },
+ {
+  "id": "block_details",
+  "path": "逆向资料/通用数据/积木明细_供撰写.md",
+  "role": "积木字段/下拉取值（参数取值范围证据）"
+ },
+ {
+  "id": "api_list",
+  "path": "逆向资料/通用数据/API清单_供撰写.md",
+  "role": "生成器中出现的 81 个 robot.* 方法清单"
+ },
+ {
+  "id": "coverage",
+  "path": "复核通用/覆盖清单.json",
+  "role": "80 个 robot.* 方法权威清单、分类、C API 映射（evidence.basis/cApi 来源）"
+ },
+ {
+  "id": "robot_h",
+  "path": "逆向资料/apk_assets/Robot.h",
+  "role": "控制器底层 C API 原型（交叉印证参数/返回值）"
+ },
+ {
+  "id": "samples",
+  "path": "逆向资料/样本程序/*.py",
+  "role": "12 个真实历史程序（实际调用方式/实参示例证据）"
+ },
+ {
+  "id": "main_program",
+  "path": "主程序.py",
+  "role": "真实比赛程序（robot.get_ee(9/10) 等实际用法证据）"
+ },
+ {
+  "id": "quick_ref",
+  "path": "WER_API速查表.md",
+  "role": "常用 API 速查与动作模板"
+ },
+ {
+  "id": "reverse_doc",
+  "path": "WER_积木库与主程序_逆向文档.md",
+  "role": "第3章 Robot API 完整参考、附录A 方法总表"
+ }
+]
+
+## notes
+[
+ "方法总数 80 与 复核通用/覆盖清单.json 的 robot_methods 完全一致（该清单由生成器源码自动提取并经复核）。",
+ "evidence.generator 指向 逆向资料/关键源码/myrobotpythoncode.js 的实际行号；所有签名实参顺序以生成器为准。",
+ "WER_* 原生巡线参数语义官方未公开，全部标 uncertain，正式使用前必须真机实测。",
+ "参数名称为本项目在证据基础上的语义命名（生成器内部变量名如 channel_1/speed_1；手册用 pA/spA），参数顺序/个数不可改动。",
+ "SKCON2 的 robot 是模块（import robot），且 pi 是属性、使用 robot.sleep；SKCON9/SKCON5 是 Robot 实例 + libstarpy + time.sleep。"
+]
+
+## coverage
+{
+ "methods": 82,
+ "activeMethods": 80,
+ "deprecatedMethods": 2,
+ "methodEvidence": {
+  "withGeneratorSourceLine": 80,
+  "withManualReference": 80,
+  "withCApiMapping": 58,
+  "withRealProgramCall": 32
+ },
+ "uncertainMethods": 39,
+ "byCategory": {
+  "AI/二维码": 4,
+  "传感器": 18,
+  "原生巡线": 11,
+  "存储(EEPROM)": 2,
+  "已废弃": 2,
+  "执行器/电机": 10,
+  "按键/输入": 1,
+  "数学/工具": 20,
+  "显示/声音": 7,
+  "编码器/计时器": 7
+ },
+ "byPlatform": {
+  "SKCON9": 76,
+  "SKCON5": 74,
+  "SKCON2": 62
+ },
+ "note": "80 个有效方法 = 复核通用/覆盖清单.json 的 robot_methods 全量；另含 2 个仅注释中出现的已废弃方法（标记 deprecated，仅供补全时提示禁用）。"
+}
+
+## providerHints
+{
+ "catalogPathForExtension": "WER_VSCode_工具/api/robotApiCatalog.json（扩展内可复制为 src/robotApiCatalog.json）",
+ "triggerCharacters": [
+  ".",
+  "r",
+  "_"
+ ],
+ "contexts": [
+  {
+   "pattern": "robot\\s*\\.",
+   "suggest": "classes[0].methods + constants(kind=emojiValue/soundName/enum)",
+   "reason": "所有硬件 API 都通过 robot 对象调用"
+  },
+  {
+   "pattern": "Robot\\s*\\(",
+   "suggest": "classes[0].name + globals(kind=class)",
+   "reason": "生成器固定写 robot = Robot()"
+  },
+  {
+   "pattern": "print_expression\\s*\\(\\s*['\\\"]?$",
+   "suggest": "constants(kind=emojiValue)",
+   "reason": "表情内部名是有限枚举"
+  },
+  {
+   "pattern": "play(_until)?\\s*\\(\\s*['\\\"]?$",
+   "suggest": "constants(kind=soundName)",
+   "reason": "声音文件名为有限枚举（附录 C）"
+  }
+ ],
+ "itemMapping": {
+  "label": "method.name",
+  "detail": "method.signature",
+  "documentation": "Markdown：method.doc + 参数表 + 示例 + 阻塞/平台 + 证据（evidence）",
+  "insertText": "SnippetString：method.name + '(' + params.map((p,i)=>'${'+(i+1)+':'+p.name+'}').join(', ') + ')'",
+  "sortText": "method.name",
+  "filterText": "method.name + ' ' + method.doc（便于中文关键词过滤）",
+  "deprecated": "method.deprecated==true 时 item.tags=[CompletionItemTag.Deprecated]，且不要默认建议"
+ },
+ "snippetMapping": {
+  "label": "snippet.label",
+  "detail": "snippet.description",
+  "documentation": "snippet.evidence",
+  "insertText": "SnippetString(snippet.snippet)",
+  "scope": "只对 python 语言生效；程序骨架类 snippet 可在空文件/文件头上下文优先"
+ },
+ "platformFilter": {
+  "setting": "wer.robotType（默认 111=SKCON9）",
+  "rule": "只提示 method.platforms 包含当前型号的方法；platforms 缺省（全部型号）的方法始终提示。",
+  "detailSuffix": "对 platforms 少于全部型号的方法，detail 末尾可加“（仅 SKCON9）”等后缀提醒。"
+ },
+ "fallback": "若 catalog 读取失败，扩展应给出中文提示并退回内置最小方法列表（至少 set_motor/set_motor_time/get_encoder/get_gray/robot.print）。"
+}
+
+## classes
+
+### class Robot | constructor=Robot() | platforms=['SKCON9', 'SKCON5']
+doc: 控制器运行时自动注入的 Robot 类（SKCON9/SKCON5）。程序里写 robot = Robot() 创建对象，所有硬件 API 都调用 robot.xxx(...)。不要自己定义该类，也不要 from libstarpy import Robot 写进下载到控制器的代码。
+
+- `set_motor(port: int, speed: float) -> None` ｜port:int, speed:float -> None
+  doc: 设置单个电机的速度并保持。非阻塞：调用后立即返回，电机一直按该速度转，不会自动停；要停必须再调用 set_motor(port, 0)。同一端口后一次调用覆盖前一次速度。生成器会自动把速度 clamp 到 -100～100。
+   - port: 电机端口 1～4（界面 A/B/C/D）
+   - speed: 速度 -100～100（%），负=反转，0=停
+
+- `set_motor_time(port: int, speed: float, seconds: float) -> None` ｜port:int, speed:float, seconds:float -> None
+  doc: 单个电机按指定速度转 N 秒后自动停。是否阻塞【推断/待实测】：手册与生成器未明确，多数资料推断为“转完才返回”；若发现后续动作“抢跑”，说明该固件下可能非阻塞，需要自己补等待。常用于抬臂、夹爪、推杆等按时间动作的机构。
+   - port: 电机端口 1～4
+   - speed: 速度 -100～100（%）
+   - seconds: 持续时间（秒），生成器 clamp 到 0～3600
+
+- `set_motor_encoder(port: int, speed: float, target: float) -> None` ｜port:int, speed:float, target:float -> None
+  doc: 单个电机转动，直到编码器读数超过目标值后停。阻塞【推断】。使用前建议先 reset_encoder，否则目标是从上电累计值算起。反向运动时 target 正负/比较方式取决于固件，需实测。
+   - port: 电机端口 1～4
+   - speed: 速度 -100～100（%）
+   - target: 目标编码器计数，生成器 clamp 到 -99999～99999
+
+- `set_double_motor_time(port_a: int, speed_a: float, port_b: int, speed_b: float, seconds: float) -> None` ｜port_a:int, speed_a:float, port_b:int, speed_b:float, seconds:float -> None
+  doc: 两个电机同时按各自速度转 N 秒后停（双轮定时/双机构同步）。阻塞【推断】。两轮同向正转=前进；想原地转，一轮正一轮负。参数顺序由生成器证据确定（channel_1, speed_1, channel_2, speed_2, time）。
+   - port_a: 第一个电机端口 1～4
+   - speed_a: 第一个电机速度 -100～100
+   - port_b: 第二个电机端口 1～4
+   - speed_b: 第二个电机速度 -100～100
+   - seconds: 持续时间（秒），clamp 到 0～3600
+
+- `set_double_motor_encoder(port_a: int, speed_a: float, port_b: int, speed_b: float, encoder_port: int, target: float) -> None` ｜port_a:int, speed_a:float, port_b:int, speed_b:float, encoder_port:int, target:float -> None
+  doc: 两个电机同时转，直到指定的那个编码器通道读数超过目标值后停（双轮定量直行常用：用 A 轮里程作参考、B 轮跟着转）。阻塞【推断】。参数顺序由生成器证据确定（channel_1, speed_1, channel_2, speed_2, channel_3, angle）。Robot.h 中无同名 C 函数，属 Python 层封装。
+   - port_a: 第一个电机端口 1～4
+   - speed_a: 第一个电机速度 -100～100
+   - port_b: 第二个电机端口 1～4
+   - speed_b: 第二个电机速度 -100～100
+   - encoder_port: 以哪个电机的编码器为准（1～4）
+   - target: 目标编码器计数，clamp 到 -99999～99999
+
+- `set_motor_advanced(port: int, motor_type: int, reverse: int, open_loop: int) -> None` ｜port:int, motor_type:int, reverse:int, open_loop:int -> None
+  doc: 电机高级设置（更换电机类型、逻辑反转、开环/闭环）。非阻塞的“配置”类命令，一般在上电初始化时设一次。reverse 通常保持 0，方向统一在代码里用方向常数处理，避免双重反转。配置是否掉电保存待实测。
+   - port: 电机端口 1～4
+   - motor_type: 电机类型：0=小电机，1=大电机
+   - reverse: 是否逻辑反转：0=不反转，1=反转
+   - open_loop: 控制模式：0=闭环，1=开环【具体行为待实测】
+
+- `set_servo(channel: int, speed: float, angle: float) -> None` ｜channel:int, speed:float, angle:float -> None
+  doc: 控制智能电机/舵机转到指定角度。非阻塞。channel=254 时对全部智能电机同时生效。仅 SKCON9 支持（SKCON5/2 无智能电机积木）。
+   - channel: 智能电机 ID 1～11；254=全部智能电机
+   - speed: 速度 0～100
+   - angle: 目标角度 -90～90（度）
+
+- `get_servo_angle(channel: int) -> int` ｜channel:int -> int
+  doc: 读取智能电机当前角度（度）。仅 SKCON9 支持。Robot.h 中没有 GetServoAngle 同名函数，底层映射的 C 函数名待确认（手册 §16.9 亦标注“角度读取函数名待确认”）。
+   - channel: 智能电机 ID 1～11（254=全部）
+
+- `set_do(port: int, state: int) -> None` ｜port:int, state:int -> None
+  doc: 数字输出：控制电磁铁（1=吸合/0=释放）、LED 彩灯（1=亮/0=灭）、继电器、气泵等。非阻塞。同一个函数被“数字输出/电磁铁/彩灯”三类积木共用。
+   - port: 数字输出端口 1～12
+   - state: 状态：0=OFF/释放/灭，1=ON/吸合/亮
+
+- `smart_led(port: int, mode: int, period: float, r: int, g: int, b: int) -> None` ｜port:int, mode:int, period:float, r:int, g:int, b:int -> None
+  doc: 控制 RGB 智能灯（常亮/闪烁/呼吸）。非阻塞。关闭用 smart_led(port, 0, 0, 0, 0, 0)。
+   - port: 智能灯端口 1～12
+   - mode: 模式：0=关闭，1=常亮，2=闪烁，3=呼吸
+   - period: 闪烁/呼吸周期（秒），生成器 clamp 到 0～10
+   - r: 红色分量 0～255
+   - g: 绿色分量 0～255
+   - b: 蓝色分量 0～255
+
+- `get_encoder(port: int) -> int` ｜port:int -> int
+  doc: 读取电机编码器累计计数（可被 reset_encoder 清零）。用来算位移、速度、双轮同步纠偏。编码器通道号默认等于电机端口号，但接线不同时可能不同，建议在配置区显式写 LEFT_ENC/RIGHT_ENC。
+   - port: 编码器/电机通道 1～4（A～D）
+
+- `reset_encoder(port: int) -> None` ｜port:int -> None
+  doc: 把电机编码器累计值清零。建议习惯：任何需要计数的动作前先清零，否则读到的是上电以来的累计值。
+   - port: 编码器/电机通道 1～4
+
+- `get_instant_incoder(port: int) -> int` ｜port:int -> int
+  doc: 读取编码器“实时值”。注意：SKCON9/SKCON5 的方法名拼写是 incoder（少一个 e），写 get_instant_encoder 会找不到方法。与 get_encoder 的区别【待实测】：累计值用于位移控制，实时值更像瞬时读数，不要用它做累计位移。
+   - port: 编码器/电机通道 1～4
+
+- `get_instant_encoder(port: int) -> int` ｜port:int -> int
+  doc: 读取编码器“实时值”（SKCON2 的拼写）。注意：SKCON9/SKCON5 上不存在这个方法，那两个型号要用 get_instant_incoder（拼写不同）。
+   - port: 编码器/电机通道 1～4
+
+- `reset_timer(timer_id: int) -> None` ｜timer_id:int -> None
+  doc: 把指定计时器清零。与 get_timer_ms 配合做非阻塞时序/超时判断。
+   - timer_id: 计时器 ID 1～12
+
+- `get_timer_ms(timer_id: int) -> int` ｜timer_id:int -> int
+  doc: 读取计时器读数，单位毫秒。软件计时，精度一般够用；需要精确运动控制时优先用编码器。
+   - timer_id: 计时器 ID 1～12
+
+- `sleep(seconds: float) -> None` ｜seconds:float -> None
+  doc: 等待指定秒数。仅 SKCON2 用 robot.sleep（SKCON2 不保证有 time.sleep）；SKCON9/SKCON5 的等待积木生成的是 time.sleep，不要在这两个型号上用 robot.sleep。来源：生成器 wait 积木的 SKCON2 分支。
+   - seconds: 等待时间（秒）
+
+- `get_gray(port: int) -> int` ｜port:int -> int
+  doc: 读取地面/巡线灰度传感器的原始值（整数）。极性【待实测】：本队经验“越大越白”，主程序用 WHITE≈1300 作白阈值。阈值必须自己实测：分别放黑线/白底打印读数，取中间值。
+   - port: 灰度传感器端口 1～12
+
+- `get_channel_gray(port: int, channel: int) -> int` ｜port:int, channel:int -> int
+  doc: 读取集成灰度模块的指定通道灰度值（一个模块有 5 个通道，可当 5 路巡线阵列用）。
+   - port: 集成灰度模块端口 1～12
+   - channel: 通道 1～5
+
+- `get_touch(port: int) -> int` ｜port:int -> int
+  doc: 读取触碰/碰撞传感器：1=碰到/按下，0=松开。可直接当条件用（if robot.get_touch(1):）。常用于启动开关、限位、碰墙检测。注意轮询循环里加 sleep。
+   - port: 触碰/碰撞传感器端口 1～12
+
+- `get_ultra_sonic(port: int) -> int` ｜port:int -> int
+  doc: 读取超声波测距值。单位【待实测】（一般厘米或毫米，需实测确认）。“超声探测到物体”积木不是独立函数，生成的是区间判断：(get_ultra_sonic(p) > 50 and get_ultra_sonic(p) < 200)。
+   - port: 超声波传感器端口 1～12
+
+- `get_infrared(port: int) -> int` ｜port:int -> int
+  doc: 读取红外测距值。量纲/极性【待实测】。适合近距离检测、避障、计数。
+   - port: 红外传感器端口 1～12
+
+- `get_light(port: int) -> int` ｜port:int -> int
+  doc: 读取光敏传感器（环境光亮度）。量程【待实测】。可用于按光线做条件或辅助场地识别。
+   - port: 光敏传感器端口 1～12
+
+- `get_flame(port: int) -> int` ｜port:int -> int
+  doc: 读取火焰传感器（光源强度，检测到火焰/强光时数值变化）。量程【待实测】。
+   - port: 火焰传感器端口 1～12
+
+- `get_temperature(port: int) -> int` ｜port:int -> int
+  doc: 读取环境温度。单位【待实测】（摄氏度/原始值未知）。
+   - port: 温度传感器端口 1～12
+
+- `get_humidity(port: int) -> int` ｜port:int -> int
+  doc: 读取环境湿度。单位/量程【待实测】。
+   - port: 湿度传感器端口 1～12
+
+- `get_magnet(port: int) -> int` ｜port:int -> int
+  doc: 读取磁敏传感器（检测到磁铁时数值变化）。返回值格式【待实测】。
+   - port: 磁敏传感器端口 1～12
+
+- `get_angle(port: int) -> int` ｜port:int -> int
+  doc: 读取角度传感器角度值。量程/方向【待实测】。可用于测量机械臂/云台角度。
+   - port: 角度传感器端口 1～12
+
+- `get_color(port: int) -> int` ｜port:int -> int
+  doc: 读取颜色传感器的颜色读数。具体编码格式【待实测】。注意：颜色积木的“比较颜色”功能在当前生成器里被注释掉了（旧方法 compare_color 已废弃），颜色比较需要自己用读数判断。
+   - port: 颜色传感器端口 1～12
+
+- `get_mic() -> int` ｜ -> int
+  doc: 读取麦克风声音强度（无参数）。量程【待实测】。可用于拍手启动、声音大小控制。
+
+- `get_motion_sensor(sensor_type: int, axis: int) -> int` ｜sensor_type:int, axis:int -> int
+  doc: 读取 9 轴运动传感器/陀螺仪：type=0 读角度（度），type=1 读角速度。轴 0/1/2 对应 X/Y/Z。仅 SKCON5/SKCON9 支持。用于直线保持、精确转向、姿态判断；做角度闭环前先 reset_gyro 校准。
+   - sensor_type: 0=姿态角度，1=角速度（陀螺仪）
+   - axis: 轴：0=X，1=Y，2=Z
+
+- `reset_gyro() -> None` ｜ -> None
+  doc: 陀螺仪校准/清零：把当前姿态归零。上电后、开始精确转向或直线保持前调用一次，校准时机器人必须静止。仅 SKCON5/SKCON9 支持。
+
+- `get_ai(port: int) -> int` ｜port:int -> int
+  doc: 读取通用模拟通道的读数。超声、红外、光敏、温度等智能传感器底层也走模拟采集，但都有各自独立函数；get_ai 是通用模拟输入，供自定义传感器使用。注意与旧式 getAI（大写）不同。
+   - port: 模拟通道/端口 1～12
+
+- `get_battery() -> int` ｜ -> int
+  doc: 读取电量百分比（0～100 或电压值【待实测】）。仅 SKCON5/SKCON9 提供该积木；SKCON2 无电量积木。
+
+- `start_qr_identify(seconds: float) -> str` ｜seconds:float -> str
+  doc: 开启二维码识别并持续指定秒数，返回识别结果。结果的具体格式【待实测】（可能是字符串/数字/编码）。仅 SKCON5/SKCON9。摄像头要对准二维码、光线足。
+   - seconds: 持续扫描时间（秒），生成器 clamp 到 3～30
+
+- `print(*args: object) -> None` ｜*args:object -> None
+  doc: 在机器人屏幕显示。非阻塞。注意：必须用 robot.print，不能用 Python 内置 print()（控制器环境不保证可用/输出不可见）。生成器生成的文本自带 '\n'；手写时建议每行末尾加 '\n'，多行刷新先 clear()。
+   - *args: 任意个字符串/数字；生成器习惯在末尾拼 '\n' 换行
+
+- `clear() -> None` ｜ -> None
+  doc: 清屏。多行刷新时先 clear 再多次 print，避免文字叠加。非阻塞。
+
+- `print_expression(name: str) -> None` ｜name:str -> None
+  doc: 显示表情。非阻塞。可选表情内部名：danxiao（胆小）、gaoxing（高兴）、jiayou（加油）、keai（可爱）、kuqi（哭泣）、weiqu（委屈）、zhayanjing（眨眼睛）。仅 SKCON5/SKCON9。
+   - name: 表情内部名：danxiao/gaoxing/jiayou/keai/kuqi/weiqu/zhayanjing
+
+- `play(filename: str) -> None` ｜filename:str -> None
+  doc: 播放声音文件，不等待（后台播放，立即继续执行）。连续调用可能“抢话”（后一句打断前一句）；要顺序播放用 play_until。仅 SKCON5/SKCON9。
+   - filename: 声音文件名（软件声音库里的值，如 dazhaohu_c0.mp3、luyin_p1）
+
+- `play_until(filename: str) -> None` ｜filename:str -> None
+  doc: 播放声音文件并等到播放完毕才继续（阻塞）。要顺序播放多段声音时用它，或在 play 之间自己加等待。仅 SKCON5/SKCON9。
+   - filename: 声音文件名（同 play）
+
+- `record_audio(record_id: int, seconds: int) -> None` ｜record_id:int, seconds:int -> None
+  doc: 录音并保存为文件号（1～10），之后可用 robot.play('luyin_pN') 播放。阻塞【推断】：录完才返回。仅 SKCON5/SKCON9。
+   - record_id: 保存为文件 1～10
+   - seconds: 录音时长（秒）
+
+- `beep(freq: int, ms: int) -> None` ｜freq:int, ms:int -> None
+  doc: 播放单音/音符。SKCON2 的“播放音符”积木用它（生成器把音符名换算成频率、把节拍换算成毫秒）。SKCON2 以外的型号是否可用【待实测】。
+   - freq: 频率（Hz）
+   - ms: 持续时间（毫秒）
+
+- `get_ee(address: int) -> int` ｜address:int -> int
+  doc: 读取 EEPROM 中保存的整数（掉电不丢失）。不要和传感器混淆：它读的是之前写入的数据。本队约定：地址 9/10 存巡线灰度白值（主程序 robot.get_ee(9)、get_ee(10) 即此用法）。未写过的地址返回初始值【待实测】。
+   - address: EEPROM 地址 1～128
+
+- `set_ee(address: int, value: float) -> None` ｜address:int, value:float -> None
+  doc: 把整数写入 EEPROM（掉电不丢失）。只在标定/初始化时写，不要放在循环里频繁写（EEPROM 有擦写寿命）。本队约定：EE2/3=灰度1/2黑线值，EE6/7=灰度1/2白底值，EE9/10=巡线灰度9/10白值。
+   - address: EEPROM 地址 1～128
+   - value: 要保存的整数，生成器 clamp 到 -99999～99999
+
+- `clamp(value: float, low: float, high: float) -> float` ｜value:float, low:float, high:float -> float
+  doc: 把 value 限制在 [low, high] 区间内。生成器在所有数字输入处自动包裹 robot.clamp(...)，手写代码时也建议所有速度/时间先限幅。输入整数时通常仍按数值返回。
+   - value: 要限制的值
+   - low: 下限
+   - high: 上限
+
+- `abs(x: float) -> float` ｜x:float -> float
+  doc: 绝对值（对应标准 C 数学库 fabs 的封装）。
+   - x: 数值
+
+- `round(x: float) -> int` ｜x:float -> int
+  doc: 四舍五入。手册示例 robot.round(3.6) -> 4。返回值是 int 还是 float 未实测（C 层 round 返回浮点，手册示例写作整数）。
+   - x: 数值
+
+- `ceil(x: float) -> int` ｜x:float -> int
+  doc: 向上取整。手册示例 robot.ceil(3.1) -> 4。主程序里常用 robot.ceil(角度 * var_1angle) 把目标编码器计数取整。返回类型 int/float 未实测。
+   - x: 数值
+
+- `floor(x: float) -> int` ｜x:float -> int
+  doc: 向下取整。手册示例 robot.floor(3.9) -> 3。返回类型 int/float 未实测。
+   - x: 数值
+
+- `sqrt(x: float) -> float` ｜x:float -> float
+  doc: 平方根。数学常量 sqrt(2)、sqrt(1/2) 的积木也用它。
+   - x: 数值（应 >= 0）
+
+- `pow(a: float, b: float) -> float` ｜a:float, b:float -> float
+  doc: 幂运算 a 的 b 次方。积木里的“^”与“10^”都生成它（10^ 生成 robot.pow(10, x)）。
+   - a: 底数
+   - b: 指数
+
+- `ln(x: float) -> float` ｜x:float -> float
+  doc: 自然对数（以 e 为底）。不是 Python 的 math.log。
+   - x: 数值（应 > 0）
+
+- `log10(x: float) -> float` ｜x:float -> float
+  doc: 常用对数（以 10 为底）。
+   - x: 数值（应 > 0）
+
+- `exp(x: float) -> float` ｜x:float -> float
+  doc: e 的 x 次方。积木里的“e^”生成它。
+   - x: 指数
+
+- `e() -> float` ｜ -> float
+  doc: 自然常数 e（约 2.718281828）。注意是方法，要写括号 robot.e()。
+
+- `pi() -> float` ｜ -> float
+  doc: 圆周率 π。SKCON9/SKCON5 上写作 robot.pi()（方法，要括号）；SKCON2 上它是属性 robot.pi（无括号）——生成器对 SKCON2 专门生成 robot.pi，写错会报错。三角函数积木会把角度自动转弧度：deg/180.0*robot.pi()。
+
+- `sin(x: float) -> float` ｜x:float -> float
+  doc: 正弦，参数是弧度。角度要先转弧度：robot.sin(deg / 180.0 * robot.pi())。主程序用 robot.sin 做梯形调速的加速段。
+   - x: 弧度值（不是角度！）
+
+- `cos(x: float) -> float` ｜x:float -> float
+  doc: 余弦，参数是弧度。角度要先转弧度：robot.cos(deg / 180.0 * robot.pi())。
+   - x: 弧度值
+
+- `tan(x: float) -> float` ｜x:float -> float
+  doc: 正切，参数是弧度。
+   - x: 弧度值
+
+- `asin(x: float) -> float` ｜x:float -> float
+  doc: 反正弦，返回弧度。积木生成 robot.asin(x) / robot.pi() * 180.0 以得到角度。
+   - x: 数值 -1～1
+
+- `acos(x: float) -> float` ｜x:float -> float
+  doc: 反余弦，返回弧度。积木生成 robot.acos(x) / robot.pi() * 180.0 以得到角度。
+   - x: 数值 -1～1
+
+- `atan(x: float) -> float` ｜x:float -> float
+  doc: 反正切，返回弧度。积木生成 robot.atan(x) / robot.pi() * 180.0 以得到角度。
+   - x: 数值
+
+- `isprime(x: float) -> bool` ｜x:float -> bool
+  doc: 判断是否为质数。手册示例 robot.isprime(7) -> True；底层 C 函数返回 int（1/0），Python 层是否转换成 bool 未实测，两种返回值都能直接当条件用。
+   - x: 要判断的数
+
+- `random(min: int, max: int) -> int` ｜min:int, max:int -> int
+  doc: 返回 [min, max] 范围内的随机整数。对应“从 [1] 到 [100] 范围内的随机整数”积木。
+   - min: 范围下限
+   - max: 范围上限
+
+- `WER_InitRobot_5(left_port: int, left_speed_ratio: float, right_port: int, right_speed_ratio: float, gray1: int, gray2: int, gray3: int, gray4: int, gray5: int) -> None` ｜left_port:int, left_speed_ratio:float, right_port:int, right_speed_ratio:float, gray1:int, gray2:int, gray3:int, gray4:int, gray5:int -> None
+  doc: 初始化 5 路灰度原生巡线（对应“初始化巡线”积木）。9 个参数，速度比是 -1～1 的小数（积木默认左 -0.8 / 右 0.8）。参数含义来自生成器实参顺序与 Robot.h 原型推断，官方未公开；使用前先小速度实测。日常巡线建议优先自己写 P 控制。
+   - left_port: 左电机端口（A=1/B=2/C=3/D=4）
+   - left_speed_ratio: 左电机速度比，积木默认 -0.8，范围 -1～1
+   - right_port: 右电机端口
+   - right_speed_ratio: 右电机速度比，积木默认 0.8，范围 -1～1
+   - gray1: 灰度传感器端口（第 1 路）
+   - gray2: 灰度传感器端口（第 2 路）
+   - gray3: 灰度传感器端口（第 3 路）
+   - gray4: 灰度传感器端口（第 4 路）
+   - gray5: 灰度传感器端口（第 5 路）
+
+- `WER_InitRobot(left_port: int, left_speed_ratio: float, right_port: int, right_speed_ratio: float, integrated_gray_port: int) -> None` ｜left_port:int, left_speed_ratio:float, right_port:int, right_speed_ratio:float, integrated_gray_port:int -> None
+  doc: 初始化集成灰度原生巡线（对应“初始化巡线（集成灰度）”积木）。5 个参数，后一个参数是集成灰度模块端口。参数语义官方未公开，需实测。
+   - left_port: 左电机端口 1～4
+   - left_speed_ratio: 左电机速度比 -1～1
+   - right_port: 右电机端口 1～4
+   - right_speed_ratio: 右电机速度比 -1～1
+   - integrated_gray_port: 集成灰度模块端口 1～12
+
+- `WER_Set_GrayscaleSensor() -> None` ｜ -> None
+  doc: 采集巡线灰度环境基准（对应“环境采集”积木）。使用 WER_* 巡线前应先调用一次，让机器人采集黑白基准。无参数。
+
+- `WER_LineWay_C(type: int, speed: float, seconds: float) -> None` ｜type:int, speed:float, seconds:float -> None
+  doc: 路口巡线（对应“路口巡线”积木）。注意参数顺序因型号而异：SKCON9/SKCON5 生成 (type, speed, time)，SKCON2 生成 (speed, type, time)；而 Robot.h 的 C 原型顺序是 (nSpeed, nType, nTime)，说明 Python 层对 SKCON9 做过重排——所以这里只有生成器证据可信，需实测确认。
+   - type: 路口类型：1=左路口，15=T 字路口，5=右路口
+   - speed: 速度（%），生成器 clamp 到 10～100
+   - seconds: 冲过路口时间（秒），生成器 clamp 到 0～60
+
+- `WER_AdvancedWay_T(speed: float, seconds: float) -> None` ｜speed:float, seconds:float -> None
+  doc: 按时间的高级巡线（对应“高级巡线（按时间）”积木）。参数语义官方未公开，需实测。
+   - speed: 巡线速度（%），生成器 clamp 到 -100～100
+   - seconds: 持续时间（秒），生成器 clamp 到 0～3600
+
+- `WER_AdvancedWay_E(speed: float, encoder_port: int, target: float) -> None` ｜speed:float, encoder_port:int, target:float -> None
+  doc: 巡线到指定编码器目标值（对应“高级巡线（按编码器）”积木）。参数语义官方未公开，需实测。
+   - speed: 巡线速度（%）
+   - encoder_port: 以哪个电机编码器为准（1～4）
+   - target: 目标编码器计数，clamp 到 -99999～99999
+
+- `WER_AdvancedWay_K(speed: float) -> None` ｜speed:float -> None
+  doc: 高级巡线“走一步”：设置巡线速度后立即返回，需要放进 while 循环里配合条件反复调用，循环结束后再调用 WER_AdvancedWay_K(0) 停。生成器在“高级巡线直到条件”积木里就是生成这种 while 循环。Robot.h 中没有 _K 同名函数，疑对应带条件参数的 WER_AdvancedWay_S 变体（待确认）。
+   - speed: 巡线速度（%），clamp 到 -100～100；传 0 表示停止
+
+- `WER_Around(left_speed: float, right_speed: float, end_pos: int) -> None` ｜left_speed:float, right_speed:float, end_pos:int -> None
+  doc: 巡线转弯/转向（对应“转弯”积木）。end_pos 取值来自积木下拉：中间=0 / 偏左=1 / 偏右=2。参数语义官方未公开，需实测。
+   - left_speed: 左轮速度（%），clamp 到 -100～100
+   - right_speed: 右轮速度（%），clamp 到 -100～100
+   - end_pos: 结束位置：0=中间，1=偏左，2=偏右
+
+- `WER_SetMotor_T(left_speed: float, right_speed: float, seconds: float) -> None` ｜left_speed:float, right_speed:float, seconds:float -> None
+  doc: 双电机定时（原生巡线系列的“启动电机（按时间）”积木）。参数语义官方未公开，需实测。
+   - left_speed: 左轮速度（%）
+   - right_speed: 右轮速度（%）
+   - seconds: 持续时间（秒），clamp 到 0～3600
+
+- `WER_SetMotor_E(left_speed: float, right_speed: float, encoder_port: int, target: float) -> None` ｜left_speed:float, right_speed:float, encoder_port:int, target:float -> None
+  doc: 双电机到指定编码器目标值（原生巡线系列的“启动电机（按编码器）”积木）。参数语义官方未公开，需实测。
+   - left_speed: 左轮速度（%）
+   - right_speed: 右轮速度（%）
+   - encoder_port: 以哪个编码器为准（1～4）
+   - target: 目标编码器计数，clamp 到 -99999～99999
+
+- `WER_SetMotor_K(left_speed: float, right_speed: float) -> None` ｜left_speed:float, right_speed:float -> None
+  doc: 双电机“走一步”：设置左右轮速度后立即返回，需要放进 while 循环里配合条件反复调用，循环结束后再调用 WER_SetMotor_K(0, 0) 停。生成器在“启动电机（按条件停）”积木里就是生成这种循环。Robot.h 中没有 _K 同名函数，疑对应 WER_SetMotor_S 变体（待确认）。
+   - left_speed: 左轮速度（%）
+   - right_speed: 右轮速度（%）
+
+- `getAI(channel: int) -> int` ｜channel:int -> int
+  doc: 旧式大写 AI 方法（由工具箱隐藏的“AI [通道]”积木生成 robot.getAI(...)）。功能上与 get_ai（读取模拟通道）高度重合，通道编号与返回值含义【待实测】，新程序建议用 get_ai。生成器源码里是特殊拼接：RobotLib + 'getAI(' + 通道 + ')'，所以不在常规 robot.* 调用表里，但确实是 robot 的方法。
+   - channel: AI 通道/端口编号
+
+- `get_ai_result() -> str` ｜ -> str
+  doc: 获取 AI 图像识别结果（通常是识别到的类别名/编号字符串）。必须放在 start_ai_identify 之后、stop_ai_identify 之前；没识别到东西时返回什么【待实测】。比较结果时注意大小写/空格。仅 SKCON5/SKCON9。
+
+- `start_ai_identify(model_filename: str) -> None` ｜model_filename:str -> None
+  doc: 载入 AI 样本模型并开始图像识别（对应“识别图像”积木）。识别需要时间，开始后不要马上读结果。仅 SKCON5/SKCON9；模型必须先在电脑软件里训练好。
+   - model_filename: AI 样本模型文件名（与电脑软件训练时保存的名字一致）
+
+- `stop_ai_identify() -> None` ｜ -> None
+  doc: 停止 AI 图像识别并释放摄像头占用（对应“停止识别”积木）。程序结束前最好调用一次。仅 SKCON5/SKCON9。
+
+- `check_key(port: int) -> int` ｜port:int -> int
+  doc: 读取 Start 按键状态：1=按下，0=未按（返回 1/0，可直接当条件用）。仅 SKCON2 工具箱提供“Start 按键”积木，其他型号不保证可用；样品 ProgramA_112.py（SKCON2）里用 robot.check_key(1)。与 C 层 getHIDValue 的对应关系置信度较低。
+   - port: 按键编号：1=确认键，2=左键，3=右键
+
+## moduleFunctions
+[]
+
+## constants
+[
+ {
+  "name": "SERVO_ALL",
+  "value": 254,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "智能电机 ID：254=全部智能电机",
+  "usedBy": [
+   "set_servo"
+  ],
+  "evidence": "积木明细 servoa_angle 下拉 / 手册 §16.0"
+ },
+ {
+  "name": "LINE_CROSS_LEFT",
+  "value": 1,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "路口类型：左路口",
+  "usedBy": [
+   "WER_LineWay_C"
+  ],
+  "evidence": "积木明细 walkline_linewayc 下拉 / 手册 §13.4"
+ },
+ {
+  "name": "LINE_CROSS_T",
+  "value": 15,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "路口类型：T 字路口",
+  "usedBy": [
+   "WER_LineWay_C"
+  ],
+  "evidence": "积木明细 walkline_linewayc 下拉 / 手册 §13.4"
+ },
+ {
+  "name": "LINE_CROSS_RIGHT",
+  "value": 5,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "路口类型：右路口",
+  "usedBy": [
+   "WER_LineWay_C"
+  ],
+  "evidence": "积木明细 walkline_linewayc 下拉 / 手册 §13.4"
+ },
+ {
+  "name": "AROUND_POS_CENTER",
+  "value": 0,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "转弯结束位置：中间",
+  "usedBy": [
+   "WER_Around"
+  ],
+  "evidence": "积木明细 walkline_around 下拉 / 手册 §13.8"
+ },
+ {
+  "name": "AROUND_POS_LEFT",
+  "value": 1,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "转弯结束位置：偏左",
+  "usedBy": [
+   "WER_Around"
+  ],
+  "evidence": "积木明细 walkline_around 下拉 / 手册 §13.8"
+ },
+ {
+  "name": "AROUND_POS_RIGHT",
+  "value": 2,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "转弯结束位置：偏右",
+  "usedBy": [
+   "WER_Around"
+  ],
+  "evidence": "积木明细 walkline_around 下拉 / 手册 §13.8"
+ },
+ {
+  "name": "MOTION_TYPE_ANGLE",
+  "value": 0,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "9 轴传感器读取类型：姿态角度",
+  "usedBy": [
+   "get_motion_sensor"
+  ],
+  "evidence": "生成器 getmotionsensor / 手册 §16.3"
+ },
+ {
+  "name": "MOTION_TYPE_GYRO",
+  "value": 1,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "9 轴传感器读取类型：角速度",
+  "usedBy": [
+   "get_motion_sensor"
+  ],
+  "evidence": "生成器 get_motion_sensor_angular_velocity / 手册 §16.3"
+ },
+ {
+  "name": "AXIS_X",
+  "value": 0,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "轴：X 轴",
+  "usedBy": [
+   "get_motion_sensor"
+  ],
+  "evidence": "myrobotrun.js:1335 axis 下拉"
+ },
+ {
+  "name": "AXIS_Y",
+  "value": 1,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "轴：Y 轴",
+  "usedBy": [
+   "get_motion_sensor"
+  ],
+  "evidence": "myrobotrun.js:1335 axis 下拉"
+ },
+ {
+  "name": "AXIS_Z",
+  "value": 2,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "轴：Z 轴",
+  "usedBy": [
+   "get_motion_sensor"
+  ],
+  "evidence": "myrobotrun.js:1335 axis 下拉"
+ },
+ {
+  "name": "MOTOR_TYPE_SMALL",
+  "value": 0,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "电机类型：小电机",
+  "usedBy": [
+   "set_motor_advanced"
+  ],
+  "evidence": "生成器 set_motor_reverse_open_loop / 手册 §16.1"
+ },
+ {
+  "name": "MOTOR_TYPE_BIG",
+  "value": 1,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "电机类型：大电机",
+  "usedBy": [
+   "set_motor_advanced"
+  ],
+  "evidence": "生成器 set_motor_reverse_open_loop / 手册 §16.1"
+ },
+ {
+  "name": "LED_MODE_OFF",
+  "value": 0,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "智能灯模式：关闭（close_smart_light 生成）",
+  "usedBy": [
+   "smart_led"
+  ],
+  "evidence": "生成器 close_smart_light / 手册 §16.1"
+ },
+ {
+  "name": "LED_MODE_ON",
+  "value": 1,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "智能灯模式：常亮",
+  "usedBy": [
+   "smart_led"
+  ],
+  "evidence": "积木明细 set_smart_light / 手册 §16.1"
+ },
+ {
+  "name": "LED_MODE_BLINK",
+  "value": 2,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "智能灯模式：闪烁",
+  "usedBy": [
+   "smart_led"
+  ],
+  "evidence": "积木明细 set_smart_light / 手册 §16.1"
+ },
+ {
+  "name": "LED_MODE_BREATH",
+  "value": 3,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "智能灯模式：呼吸",
+  "usedBy": [
+   "smart_led"
+  ],
+  "evidence": "积木明细 set_smart_light / 手册 §16.1"
+ },
+ {
+  "name": "KEY_CONFIRM",
+  "value": 1,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "Start 按键：确认键（SKCON2）",
+  "usedBy": [
+   "check_key"
+  ],
+  "evidence": "积木明细 get_key 下拉 / 手册 §16.3"
+ },
+ {
+  "name": "KEY_LEFT",
+  "value": 2,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "Start 按键：左键（SKCON2）",
+  "usedBy": [
+   "check_key"
+  ],
+  "evidence": "积木明细 get_key 下拉 / 手册 §16.3"
+ },
+ {
+  "name": "KEY_RIGHT",
+  "value": 3,
+  "kind": "enum",
+  "runtimeSymbol": false,
+  "doc": "Start 按键：右键（SKCON2）",
+  "usedBy": [
+   "check_key"
+  ],
+  "evidence": "积木明细 get_key 下拉 / 手册 §16.3"
+ },
+ {
+  "name": "PLATFORM_SKCON9",
+  "value": "SKCON9",
+  "kind": "platform",
+  "runtimeSymbol": false,
+  "doc": "主板型号：SKCON9（本工具默认）",
+  "usedBy": [],
+  "evidence": "手册 附录 D"
+ },
+ {
+  "name": "PLATFORM_SKCON5",
+  "value": "SKCON5",
+  "kind": "platform",
+  "runtimeSymbol": false,
+  "doc": "主板型号：SKCON5",
+  "usedBy": [],
+  "evidence": "手册 附录 D"
+ },
+ {
+  "name": "PLATFORM_SKCON2",
+  "value": "SKCON2",
+  "kind": "platform",
+  "runtimeSymbol": false,
+  "doc": "主板型号：SKCON2（import robot 模块）",
+  "usedBy": [],
+  "evidence": "手册 附录 D"
+ },
+ {
+  "name": "danxiao",
+  "value": "danxiao",
+  "kind": "emojiValue",
+  "runtimeSymbol": false,
+  "doc": "显示表情：胆小（print_expression 的实参）",
+  "usedBy": [
+   "print_expression"
+  ],
+  "evidence": "生成器 printf_emoji 下拉 / 手册 §16.4"
+ },
+ {
+  "name": "gaoxing",
+  "value": "gaoxing",
+  "kind": "emojiValue",
+  "runtimeSymbol": false,
+  "doc": "显示表情：高兴（print_expression 的实参）",
+  "usedBy": [
+   "print_expression"
+  ],
+  "evidence": "生成器 printf_emoji 下拉 / 手册 §16.4"
+ },
+ {
+  "name": "jiayou",
+  "value": "jiayou",
+  "kind": "emojiValue",
+  "runtimeSymbol": false,
+  "doc": "显示表情：加油（print_expression 的实参）",
+  "usedBy": [
+   "print_expression"
+  ],
+  "evidence": "生成器 printf_emoji 下拉 / 手册 §16.4"
+ },
+ {
+  "name": "keai",
+  "value": "keai",
+  "kind": "emojiValue",
+  "runtimeSymbol": false,
+  "doc": "显示表情：可爱（print_expression 的实参）",
+  "usedBy": [
+   "print_expression"
+  ],
+  "evidence": "生成器 printf_emoji 下拉 / 手册 §16.4"
+ },
+ {
+  "name": "kuqi",
+  "value": "kuqi",
+  "kind": "emojiValue",
+  "runtimeSymbol": false,
+  "doc": "显示表情：哭泣（print_expression 的实参）",
+  "usedBy": [
+   "print_expression"
+  ],
+  "evidence": "生成器 printf_emoji 下拉 / 手册 §16.4"
+ },
+ {
+  "name": "weiqu",
+  "value": "weiqu",
+  "kind": "emojiValue",
+  "runtimeSymbol": false,
+  "doc": "显示表情：委屈（print_expression 的实参）",
+  "usedBy": [
+   "print_expression"
+  ],
+  "evidence": "生成器 printf_emoji 下拉 / 手册 §16.4"
+ },
+ {
+  "name": "zhayanjing",
+  "value": "zhayanjing",
+  "kind": "emojiValue",
+  "runtimeSymbol": false,
+  "doc": "显示表情：眨眼睛（print_expression 的实参）",
+  "usedBy": [
+   "print_expression"
+  ],
+  "evidence": "生成器 printf_emoji 下拉 / 手册 §16.4"
+ },
+ {
+  "name": "dazhaohu_c0.mp3",
+  "value": "dazhaohu_c0.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：打招呼-你好），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dazhaohu_c1.mp3",
+  "value": "dazhaohu_c1.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：打招呼-再见），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dazhaohu_c2.mp3",
+  "value": "dazhaohu_c2.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：打招呼-反对），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dazhaohu_c3.mp3",
+  "value": "dazhaohu_c3.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：打招呼-欢迎），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dazhaohu_c4.mp3",
+  "value": "dazhaohu_c4.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：打招呼-请多关照），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongwu_p0.mp3",
+  "value": "dongwu_p0.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动物海豹），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongwu_p1.mp3",
+  "value": "dongwu_p1.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动物鹦鹉），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongwu_p2.mp3",
+  "value": "dongwu_p2.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动物青蛙），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongwu_p3.mp3",
+  "value": "dongwu_p3.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动物羊），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongwu_p4.mp3",
+  "value": "dongwu_p4.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动物鸡），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongwu_p5.mp3",
+  "value": "dongwu_p5.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动物鸭子），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongwu_p6.mp3",
+  "value": "dongwu_p6.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动物狗），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongwu_p7.mp3",
+  "value": "dongwu_p7.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动物天鹅），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongwu_p8.mp3",
+  "value": "dongwu_p8.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动物蜜蜂），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiaotong_p0.mp3",
+  "value": "jiaotong_p0.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：交通摩托车），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiaotong_p1.mp3",
+  "value": "jiaotong_p1.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：交通赛车），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiaotong_p2.mp3",
+  "value": "jiaotong_p2.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：交通火车），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiaotong_p3.mp3",
+  "value": "jiaotong_p3.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：交通汽车），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiaotong_p4.mp3",
+  "value": "jiaotong_p4.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：交通飞机），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiaotong_p5.mp3",
+  "value": "jiaotong_p5.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：交通轮船），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiaotong_p6.mp3",
+  "value": "jiaotong_p6.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：交通自行车），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiaotong_p7.mp3",
+  "value": "jiaotong_p7.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：交通直升机），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "gangqin_p0.mp3",
+  "value": "gangqin_p0.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：钢琴-do），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "gangqin_p1.mp3",
+  "value": "gangqin_p1.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：钢琴-ri），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "gangqin_p2.mp3",
+  "value": "gangqin_p2.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：钢琴-mi），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "gangqin_p3.mp3",
+  "value": "gangqin_p3.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：钢琴-fa），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "gangqin_p4.mp3",
+  "value": "gangqin_p4.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：钢琴-so），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "gangqin_p5.mp3",
+  "value": "gangqin_p5.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：钢琴-la），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "gangqin_p6.mp3",
+  "value": "gangqin_p6.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：钢琴-si），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "gangqin_p7.mp3",
+  "value": "gangqin_p7.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：钢琴-Hdo），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "biaoqing_c0.mp3",
+  "value": "biaoqing_c0.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：表情生气），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "biaoqing_c1.mp3",
+  "value": "biaoqing_c1.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：表情傲慢），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "biaoqing_c2.mp3",
+  "value": "biaoqing_c2.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：表情哭泣），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "biaoqing_c3.mp3",
+  "value": "biaoqing_c3.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：表情激动），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "biaoqing_c4.mp3",
+  "value": "biaoqing_c4.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：表情惊吓），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "biaoqing_c5.mp3",
+  "value": "biaoqing_c5.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：表情委屈），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "biaoqing_c6.mp3",
+  "value": "biaoqing_c6.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：表情高兴），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "biaoqing_c7.mp3",
+  "value": "biaoqing_c7.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：表情可爱），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "biaoqing_c8.mp3",
+  "value": "biaoqing_c8.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：表情大笑），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "biaoqing_c9.mp3",
+  "value": "biaoqing_c9.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：表情悲伤），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "biaoqing_c10.mp3",
+  "value": "biaoqing_c10.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：表情愤怒），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "biaoqing_c11.mp3",
+  "value": "biaoqing_c11.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：表情调皮），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongzuo_c0.mp3",
+  "value": "dongzuo_c0.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动作打寒颤），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongzuo_c1.mp3",
+  "value": "dongzuo_c1.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动作卖萌），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongzuo_c2.mp3",
+  "value": "dongzuo_c2.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动作赞成），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongzuo_c3.mp3",
+  "value": "dongzuo_c3.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动作求抱抱），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongzuo_c4.mp3",
+  "value": "dongzuo_c4.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动作打哈欠），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongzuo_c5.mp3",
+  "value": "dongzuo_c5.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动作加油），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongzuo_c6.mp3",
+  "value": "dongzuo_c6.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动作睡觉），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongzuo_c7.mp3",
+  "value": "dongzuo_c7.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动作休息），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "dongzuo_c8.mp3",
+  "value": "dongzuo_c8.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：动作鬼鬼祟祟），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "xiaotiqin_p0.mp3",
+  "value": "xiaotiqin_p0.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：小提琴 -1），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "xiaotiqin_p1.mp3",
+  "value": "xiaotiqin_p1.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：小提琴  +-2），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "xiaotiqin_p2.mp3",
+  "value": "xiaotiqin_p2.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：小提琴  +-3），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "xiaotiqin_p3.mp3",
+  "value": "xiaotiqin_p3.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：小提琴  +-4），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "xiaotiqin_p4.mp3",
+  "value": "xiaotiqin_p4.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：小提琴  +-5），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "xiaotiqin_p5.mp3",
+  "value": "xiaotiqin_p5.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：小提琴  +-6），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "xiaotiqin_p6.mp3",
+  "value": "xiaotiqin_p6.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：小提琴  +-7），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "xiaotiqin_p7.mp3",
+  "value": "xiaotiqin_p7.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：小提琴  +-8），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiazigu_p0.mp3",
+  "value": "jiazigu_p0.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：架子鼓低音大鼓），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiazigu_p1.mp3",
+  "value": "jiazigu_p1.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：架子鼓军鼓），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiazigu_p2.mp3",
+  "value": "jiazigu_p2.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：架子鼓落地鼓），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiazigu_p3.mp3",
+  "value": "jiazigu_p3.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：架子鼓嗵嗵鼓1），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiazigu_p4.mp3",
+  "value": "jiazigu_p4.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：架子鼓嗵嗵鼓2），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiazigu_p5.mp3",
+  "value": "jiazigu_p5.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：架子鼓踩镲），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiazigu_p6.mp3",
+  "value": "jiazigu_p6.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：架子鼓吊镲），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiazigu_p7.mp3",
+  "value": "jiazigu_p7.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：架子鼓节奏镲），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "jiazigu_p8.mp3",
+  "value": "jiazigu_p8.mp3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：架子鼓镲片），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "luyin_p1",
+  "value": "luyin_p1",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：录音-1），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "luyin_p2",
+  "value": "luyin_p2",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：录音-2），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "luyin_p3",
+  "value": "luyin_p3",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：录音-3），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "luyin_p4",
+  "value": "luyin_p4",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：录音-4），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "luyin_p5",
+  "value": "luyin_p5",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：录音-5），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "luyin_p7",
+  "value": "luyin_p7",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：录音-7），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "luyin_p8",
+  "value": "luyin_p8",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：录音-8），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "luyin_p9",
+  "value": "luyin_p9",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：录音-9），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "luyin_p10",
+  "value": "luyin_p10",
+  "kind": "soundName",
+  "doc": "声音文件名（显示名：录音-10），用于 play/play_until",
+  "usedBy": [
+   "play",
+   "play_until"
+  ],
+  "evidence": "完全手册 附录 C"
+ },
+ {
+  "name": "ProgramA",
+  "value": "ProgramA",
+  "kind": "programSlot",
+  "runtimeSymbol": false,
+  "doc": "程序槽：文件头 #<型号><USB|WiFi><ProgramA> 与下载程序名需一致",
+  "usedBy": [],
+  "evidence": "生成器 maingui.js 程序头 / 手册 §1.4、说明书 §3.2、§R42"
+ },
+ {
+  "name": "ProgramB",
+  "value": "ProgramB",
+  "kind": "programSlot",
+  "runtimeSymbol": false,
+  "doc": "程序槽：文件头 #<型号><USB|WiFi><ProgramB> 与下载程序名需一致",
+  "usedBy": [],
+  "evidence": "生成器 maingui.js 程序头 / 手册 §1.4、说明书 §3.2、§R42"
+ },
+ {
+  "name": "ProgramC",
+  "value": "ProgramC",
+  "kind": "programSlot",
+  "runtimeSymbol": false,
+  "doc": "程序槽：文件头 #<型号><USB|WiFi><ProgramC> 与下载程序名需一致",
+  "usedBy": [],
+  "evidence": "生成器 maingui.js 程序头 / 手册 §1.4、说明书 §3.2、§R42"
+ },
+ {
+  "name": "ProgramD",
+  "value": "ProgramD",
+  "kind": "programSlot",
+  "runtimeSymbol": false,
+  "doc": "程序槽：文件头 #<型号><USB|WiFi><ProgramD> 与下载程序名需一致",
+  "usedBy": [],
+  "evidence": "生成器 maingui.js 程序头 / 手册 §1.4、说明书 §3.2、§R42"
+ },
+ {
+  "name": "WiFi",
+  "value": "WiFi",
+  "kind": "connection",
+  "runtimeSymbol": false,
+  "doc": "连接方式：无线（文件头第二段写 <WiFi>；USB 则写 <USB>）",
+  "usedBy": [],
+  "evidence": "说明书 §3.1、§R2"
+ }
+]
+
+## deprecatedMethods
+[
+ {
+  "name": "compare_color",
+  "signature": "compare_color(port: int, colour: int) -> int",
+  "params": [
+   {
+    "name": "port",
+    "type": "int",
+    "doc": "颜色传感器端口"
+   },
+   {
+    "name": "colour",
+    "type": "int",
+    "doc": "颜色值/颜色代码"
+   }
+  ],
+  "returns": "int",
+  "doc": "【已废弃，禁止使用】旧版“颜色比较”方法，只出现在生成器源码的注释里（myrobotpythoncode.js:431 的 // 注释），当前版本颜色积木只生成 get_color(port)，不生成 compare_color。手册附录 B 也标注“（旧版注释，未使用）”。保留此条目只为让补全给出明确警告，不要在新代码里调用。",
+  "example": "# 不要使用；用读数自己比较：\nv = robot.get_color(1)\nif v == TARGET_COLOR:\n    pass",
+  "category": "已废弃",
+  "platforms": [],
+  "deprecated": true,
+  "uncertain": true,
+  "uncertainNote": "参数个数/含义仅来自注释，未经验证；当前固件是否存在该方法未知。",
+  "evidence": {
+   "manual": "WER_积木库完全手册.md 附录B（旧版注释，未使用）",
+   "generator": "逆向资料/关键源码/myrobotpythoncode.js:431  // var code = 'robot.compare_color(' + port + ',' + colour + ')';",
+   "blocks": [],
+   "cApi": "无（仅旧版注释中出现）",
+   "samples": null,
+   "note": "仅出现在 myrobotpythoncode.js 的注释中（约 431 行），不在任何生成器实际生成的代码里。"
+  }
+ },
+ {
+  "name": "is_ultrasonic_detacted",
+  "signature": "is_ultrasonic_detacted(port: int) -> int",
+  "params": [
+   {
+    "name": "port",
+    "type": "int",
+    "doc": "超声波传感器端口"
+   }
+  ],
+  "returns": "int",
+  "doc": "【已废弃，禁止使用】旧版“超声波探测到物体”方法，只出现在生成器源码的注释里（myrobotpythoncode.js:373），当前版本该积木生成区间判断 (robot.get_ultra_sonic(p) > 50 and robot.get_ultra_sonic(p) < 200)，不再是独立函数。手册附录 B 标注“（旧版注释，未使用）”。注意方法名拼写就是 detacted（软件原有拼写错误）。",
+  "example": "# 不要使用；当前写法：\nd = robot.get_ultra_sonic(1)\nif 50 < d < 200:\n    pass",
+  "category": "已废弃",
+  "platforms": [],
+  "deprecated": true,
+  "uncertain": true,
+  "uncertainNote": "仅注释中出现，当前固件是否存在未知；参数含义未验证。",
+  "evidence": {
+   "manual": "WER_积木库完全手册.md 附录B（旧版注释，未使用）",
+   "generator": "逆向资料/关键源码/myrobotpythoncode.js:373  // var code = 'robot.is_ultrasonic_detacted(' + port + ')';",
+   "blocks": [],
+   "cApi": "无（仅旧版注释中出现）",
+   "samples": null,
+   "note": "仅出现在 myrobotpythoncode.js 的注释中（约 373 行），不在任何生成器实际生成的代码里。"
+  }
+ }
+]
+
+## snippets
+[
+ {
+  "id": "wer_robot_skeleton_wifi",
+  "label": "WER 程序骨架（SKCON9 WiFi）",
+  "prefix": "werskel",
+  "description": "SKCON9 无线下载程序骨架：WiFi 文件头 / import time+libstarpy / robot=Robot() / 配置区 / main() / 入口调用",
+  "scope": "python",
+  "snippet": "#<SKCON9><WiFi>${1:ProgramA}\n\nimport time\nimport libstarpy\n\nrobot = Robot()\n\n# ==== 配置区（端口、方向、标定、阈值） ====\nLEFT_PORT  = 1      # 左驱动电机端口（A=1/B=2/C=3/D=4）\nRIGHT_PORT = 2      # 右驱动电机端口\nLEFT_ENC   = 1      # 左轮编码器通道\nRIGHT_ENC  = 2      # 右轮编码器通道\nC1CM       = 90.4   # TODO 实测：1 厘米 = 多少编码器计数\nC1DEG      = 17.8   # TODO 实测：1 度 = 多少编码器计数\nWHITE      = 1300   # TODO 实测：灰度白/黑中间阈值\n\ndef stop_all():\n    robot.set_motor(LEFT_PORT, 0)\n    robot.set_motor(RIGHT_PORT, 0)\n\ndef main():\n    stop_all()\n    robot.print('start\\n')\n    ${2:pass}\n\nmain()  # program entry\n",
+  "insertText": "#<SKCON9><WiFi>${1:ProgramA}\n\nimport time\nimport libstarpy\n\nrobot = Robot()\n\n# ==== 配置区（端口、方向、标定、阈值） ====\nLEFT_PORT  = 1      # 左驱动电机端口（A=1/B=2/C=3/D=4）\nRIGHT_PORT = 2      # 右驱动电机端口\nLEFT_ENC   = 1      # 左轮编码器通道\nRIGHT_ENC  = 2      # 右轮编码器通道\nC1CM       = 90.4   # TODO 实测：1 厘米 = 多少编码器计数\nC1DEG      = 17.8   # TODO 实测：1 度 = 多少编码器计数\nWHITE      = 1300   # TODO 实测：灰度白/黑中间阈值\n\ndef stop_all():\n    robot.set_motor(LEFT_PORT, 0)\n    robot.set_motor(RIGHT_PORT, 0)\n\ndef main():\n    stop_all()\n    robot.print('start\\n')\n    ${2:pass}\n\nmain()  # program entry\n",
+  "body": "#<SKCON9><WiFi>ProgramA\n\nimport time\nimport libstarpy\n\nrobot = Robot()\n\n# ==== 配置区（端口、方向、标定、阈值） ====\nLEFT_PORT  = 1      # 左驱动电机端口（A=1/B=2/C=3/D=4）\nRIGHT_PORT = 2      # 右驱动电机端口\nLEFT_ENC   = 1      # 左轮编码器通道\nRIGHT_ENC  = 2      # 右轮编码器通道\nC1CM       = 90.4   # TODO 实测：1 厘米 = 多少编码器计数\nC1DEG      = 17.8   # TODO 实测：1 度 = 多少编码器计数\nWHITE      = 1300   # TODO 实测：灰度白/黑中间阈值\n\ndef stop_all():\n    robot.set_motor(LEFT_PORT, 0)\n    robot.set_motor(RIGHT_PORT, 0)\n\ndef main():\n    stop_all()\n    robot.print('start\\n')\n    pass\n\nmain()  # program entry\n",
+  "evidence": "手册 §17.2；说明书 §3.2 与 §7.1；样本程序 ProgramA.py 实际文件头一致"
+ },
+ {
+  "id": "wer_robot_skeleton_usb",
+  "label": "WER 程序骨架（SKCON9 USB）",
+  "prefix": "werskelusb",
+  "description": "同上，但文件头连接方式为 <USB>",
+  "scope": "python",
+  "snippet": "#<SKCON9><USB>${1:ProgramA}\n\nimport time\nimport libstarpy\n\nrobot = Robot()\n\n# ==== 配置区（端口、方向、标定、阈值） ====\nLEFT_PORT  = 1      # 左驱动电机端口（A=1/B=2/C=3/D=4）\nRIGHT_PORT = 2      # 右驱动电机端口\nLEFT_ENC   = 1      # 左轮编码器通道\nRIGHT_ENC  = 2      # 右轮编码器通道\nC1CM       = 90.4   # TODO 实测：1 厘米 = 多少编码器计数\nC1DEG      = 17.8   # TODO 实测：1 度 = 多少编码器计数\nWHITE      = 1300   # TODO 实测：灰度白/黑中间阈值\n\ndef stop_all():\n    robot.set_motor(LEFT_PORT, 0)\n    robot.set_motor(RIGHT_PORT, 0)\n\ndef main():\n    stop_all()\n    robot.print('start\\n')\n    ${2:pass}\n\nmain()  # program entry\n",
+  "insertText": "#<SKCON9><USB>${1:ProgramA}\n\nimport time\nimport libstarpy\n\nrobot = Robot()\n\n# ==== 配置区（端口、方向、标定、阈值） ====\nLEFT_PORT  = 1      # 左驱动电机端口（A=1/B=2/C=3/D=4）\nRIGHT_PORT = 2      # 右驱动电机端口\nLEFT_ENC   = 1      # 左轮编码器通道\nRIGHT_ENC  = 2      # 右轮编码器通道\nC1CM       = 90.4   # TODO 实测：1 厘米 = 多少编码器计数\nC1DEG      = 17.8   # TODO 实测：1 度 = 多少编码器计数\nWHITE      = 1300   # TODO 实测：灰度白/黑中间阈值\n\ndef stop_all():\n    robot.set_motor(LEFT_PORT, 0)\n    robot.set_motor(RIGHT_PORT, 0)\n\ndef main():\n    stop_all()\n    robot.print('start\\n')\n    ${2:pass}\n\nmain()  # program entry\n",
+  "body": "#<SKCON9><USB>ProgramA\n\nimport time\nimport libstarpy\n\nrobot = Robot()\n\n# ==== 配置区（端口、方向、标定、阈值） ====\nLEFT_PORT  = 1      # 左驱动电机端口（A=1/B=2/C=3/D=4）\nRIGHT_PORT = 2      # 右驱动电机端口\nLEFT_ENC   = 1      # 左轮编码器通道\nRIGHT_ENC  = 2      # 右轮编码器通道\nC1CM       = 90.4   # TODO 实测：1 厘米 = 多少编码器计数\nC1DEG      = 17.8   # TODO 实测：1 度 = 多少编码器计数\nWHITE      = 1300   # TODO 实测：灰度白/黑中间阈值\n\ndef stop_all():\n    robot.set_motor(LEFT_PORT, 0)\n    robot.set_motor(RIGHT_PORT, 0)\n\ndef main():\n    stop_all()\n    robot.print('start\\n')\n    pass\n\nmain()  # program entry\n",
+  "evidence": "逆向资料/样本程序/*.py 实际文件头 #<SKCON9><USB><ProgramA>"
+ },
+ {
+  "id": "wer_robot_skeleton_pylance",
+  "label": "WER 程序骨架（带 Pylance 类型提示）",
+  "prefix": "werskelpylance",
+  "description": "在上面的骨架上加 TYPE_CHECKING 三行，让 Pylance 能识别 Robot 类型并获得 robot.* 补全/悬停（运行时零副作用）",
+  "scope": "python",
+  "snippet": "#<SKCON9><WiFi>${1:ProgramA}\n\nimport time\nimport libstarpy\n\nfrom typing import TYPE_CHECKING\nif TYPE_CHECKING:          # 仅给 VSCode/Pylance 提供 Robot 的类型（运行时不执行）\n    from libstarpy import Robot\n\nrobot = Robot()\n\ndef main():\n    robot.print('start\\n')\n    ${2:pass}\n\nmain()  # program entry\n",
+  "insertText": "#<SKCON9><WiFi>${1:ProgramA}\n\nimport time\nimport libstarpy\n\nfrom typing import TYPE_CHECKING\nif TYPE_CHECKING:          # 仅给 VSCode/Pylance 提供 Robot 的类型（运行时不执行）\n    from libstarpy import Robot\n\nrobot = Robot()\n\ndef main():\n    robot.print('start\\n')\n    ${2:pass}\n\nmain()  # program entry\n",
+  "body": "#<SKCON9><WiFi>ProgramA\n\nimport time\nimport libstarpy\n\nfrom typing import TYPE_CHECKING\nif TYPE_CHECKING:          # 仅给 VSCode/Pylance 提供 Robot 的类型（运行时不执行）\n    from libstarpy import Robot\n\nrobot = Robot()\n\ndef main():\n    robot.print('start\\n')\n    pass\n\nmain()  # program entry\n",
+  "evidence": "本次存根方案（见 python-stubs/README.md）；Robot 名由运行时注入这一事实见手册 §1.3、复核/独立分析.md U0"
+ },
+ {
+  "id": "wer_skcon2_skeleton",
+  "label": "WER 程序骨架（SKCON2）",
+  "prefix": "werskel2",
+  "description": "SKCON2 程序骨架：import robot、无文件头、等待用 robot.sleep",
+  "scope": "python",
+  "snippet": "import robot\n\n# ==== 配置区 ====\nLEFT_PORT  = 1\nRIGHT_PORT = 2\nLEFT_ENC   = 1\nRIGHT_ENC  = 2\n\ndef main():\n    robot.set_motor(LEFT_PORT, 0)\n    robot.set_motor(RIGHT_PORT, 0)\n    robot.sleep(0.1)       # SKCON2 用 robot.sleep，不用 time.sleep\n    ${1:pass}\n\nmain()  # program entry\n",
+  "insertText": "import robot\n\n# ==== 配置区 ====\nLEFT_PORT  = 1\nRIGHT_PORT = 2\nLEFT_ENC   = 1\nRIGHT_ENC  = 2\n\ndef main():\n    robot.set_motor(LEFT_PORT, 0)\n    robot.set_motor(RIGHT_PORT, 0)\n    robot.sleep(0.1)       # SKCON2 用 robot.sleep，不用 time.sleep\n    ${1:pass}\n\nmain()  # program entry\n",
+  "body": "import robot\n\n# ==== 配置区 ====\nLEFT_PORT  = 1\nRIGHT_PORT = 2\nLEFT_ENC   = 1\nRIGHT_ENC  = 2\n\ndef main():\n    robot.set_motor(LEFT_PORT, 0)\n    robot.set_motor(RIGHT_PORT, 0)\n    robot.sleep(0.1)       # SKCON2 用 robot.sleep，不用 time.sleep\n    pass\n\nmain()  # program entry\n",
+  "evidence": "手册 §3.3、附录 D；样本程序 ProgramA_112.py"
+ },
+ {
+  "id": "wer_file_header",
+  "label": "WER 文件头（#<SKCON9><WiFi><ProgramA>）",
+  "prefix": "werheader",
+  "description": "程序第一行文件头：型号 / 连接方式 / 程序槽，三者必须与实际下载设置一致",
+  "scope": "python",
+  "snippet": "#<SKCON9><WiFi>${1:ProgramA}\n",
+  "insertText": "#<SKCON9><WiFi>${1:ProgramA}\n",
+  "body": "#<SKCON9><WiFi>ProgramA\n",
+  "evidence": "逆向资料/关键源码/maingui.js 程序头生成；手册 §1.4；说明书 §R42"
+ },
+ {
+  "id": "wer_stop_all",
+  "label": "WER 安全停车（stop_all）",
+  "prefix": "werstop",
+  "description": "停止左右轮/机构电机的通用安全停车函数；动作结束、超时、异常分支都应调用",
+  "scope": "python",
+  "snippet": "def stop_all():\n    robot.set_motor(${1:1}, 0)\n    robot.set_motor(${2:2}, 0)\n",
+  "insertText": "def stop_all():\n    robot.set_motor(${1:1}, 0)\n    robot.set_motor(${2:2}, 0)\n",
+  "body": "def stop_all():\n    robot.set_motor(1, 0)\n    robot.set_motor(2, 0)\n",
+  "evidence": "说明书 §R15 安全收尾；手册 §18.16"
+ },
+ {
+  "id": "wer_move_time",
+  "label": "WER 定时直行（set_motor + sleep）",
+  "prefix": "wermovetime",
+  "description": "非阻塞原语写法：设速度 → time.sleep → 停车，语义确定，适合关键动作",
+  "scope": "python",
+  "snippet": "robot.set_motor(${1:1}, ${2:40})\nrobot.set_motor(${3:2}, ${4:40})\ntime.sleep(${5:1.0})\nrobot.set_motor(${1:1}, 0)\nrobot.set_motor(${3:2}, 0)\n",
+  "insertText": "robot.set_motor(${1:1}, ${2:40})\nrobot.set_motor(${3:2}, ${4:40})\ntime.sleep(${5:1.0})\nrobot.set_motor(${1:1}, 0)\nrobot.set_motor(${3:2}, 0)\n",
+  "body": "robot.set_motor(1, 40)\nrobot.set_motor(2, 40)\ntime.sleep(1.0)\nrobot.set_motor(1, 0)\nrobot.set_motor(2, 0)

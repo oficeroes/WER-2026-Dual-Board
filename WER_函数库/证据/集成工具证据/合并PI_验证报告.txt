@@ -1,0 +1,161 @@
+==============================================================================
+WER headless 验证报告   生成时间 2026-11-10T13:26:44
+==============================================================================
+输入文件    : D:\UserData\Documents\WER\2026普级赛\_分析临时\integration_work\PI_含函数库.srhs  (srhs, utf-8-sig)
+机器人类型  : SKCON9    连接: USB    程序名: PI
+项目 Info   : {"Version": "1.0.3.4", "RobotType": "SKCON9", "DownloadProgramName": "PI"}
+XML 静态校验: 通过    静态顶层块: 72    变量: 65    静态函数定义: 46
+[1] 加载项目 XML : 成功  (788.3 ms)
+    顶层块数: 72    总块数: 2655    变量数: 65
+    顶层块类型: {"procedures_defnoreturn": 46, "block_mod": 4, "motor": 2, "wait": 2, "ifelse": 1, "while_forver": 3, "if": 2, "while_break": 1, "start": 1, "procedures_callnoreturn": 6, "printf_text": 1, "variables_get": 2, "math_op": 1}
+    渲染检查: 已渲染块 2655/2655    SVG 根 2655    0 尺寸块 0    警告 0    禁用 66    mainWorkspace 正确 True
+[2] 函数定义     : 无返回值 46 个, 有返回值 0 个
+    - func_end()
+    - func_name2()
+    - func_green_end()
+    - func_green_end_1()
+    - func_Path_green_1()
+    - func_Path_green_3()
+    - func_take_white()
+    - func_Path_green_2()
+    - func_Path_green_4()
+    - func_backwards()
+    - func_main()
+    - func_Library()
+    - func_forward()
+    - func_Turn()
+    - func_ON()
+    - func_ray()
+    - func_ray_forward_PID()
+    - func_ray_forward()
+    - func_Motter_Zero()
+    - func_ray_PID()
+    - func_value()
+    - func_Last_light_Error()
+    - func_ray_backwards_PID()
+    - func_ray_Path()
+    - func_ray_Path_PID()
+    - func_ray_Time()
+    - func_Init()
+    - func_Stop()
+    - func_ResetEncoder()
+    - func_ForwardCM(cm)
+    - func_BackwardCM(cm)
+    - func_TurnLeft(deg)
+    - func_TurnRight(deg)
+    - func_DriveTime(speedL, speedR, sec)
+    - func_DriveSpeed(speedL, speedR)
+    - func_ArmUp()
+    - func_ArmDown()
+    - func_Grab()
+    - func_Release()
+    - func_LineStep()
+    - func_LineTime(sec)
+    - func_LineUntilCross()
+    - func_WaitStartKey()
+    - func_WaitTouch()
+    - func_Show(text)
+    - func_Beep()
+[3] 函数分类 flyout（Blockly.Procedures.flyoutCategory）: 47 个 XML 块
+    - procedures_defnoreturn  name='func_name'  args=[]
+    - procedures_callnoreturn  name='func_ArmDown'  args=[]
+    - procedures_callnoreturn  name='func_ArmUp'  args=[]
+    - procedures_callnoreturn  name='func_BackwardCM'  args=['cm']
+    - procedures_callnoreturn  name='func_backwards'  args=[]
+    - procedures_callnoreturn  name='func_Beep'  args=[]
+    - procedures_callnoreturn  name='func_DriveSpeed'  args=['speedL', 'speedR']
+    - procedures_callnoreturn  name='func_DriveTime'  args=['speedL', 'speedR', 'sec']
+    - procedures_callnoreturn  name='func_end'  args=[]
+    - procedures_callnoreturn  name='func_forward'  args=[]
+    - procedures_callnoreturn  name='func_ForwardCM'  args=['cm']
+    - procedures_callnoreturn  name='func_Grab'  args=[]
+    - procedures_callnoreturn  name='func_green_end'  args=[]
+    - procedures_callnoreturn  name='func_green_end_1'  args=[]
+    - procedures_callnoreturn  name='func_Init'  args=[]
+    - procedures_callnoreturn  name='func_Last_light_Error'  args=[]
+    - procedures_callnoreturn  name='func_Library'  args=[]
+    - procedures_callnoreturn  name='func_LineStep'  args=[]
+    - procedures_callnoreturn  name='func_LineTime'  args=['sec']
+    - procedures_callnoreturn  name='func_LineUntilCross'  args=[]
+    - procedures_callnoreturn  name='func_main'  args=[]
+    - procedures_callnoreturn  name='func_Motter_Zero'  args=[]
+    - procedures_callnoreturn  name='func_name2'  args=[]
+    - procedures_callnoreturn  name='func_ON'  args=[]
+    - procedures_callnoreturn  name='func_Path_green_1'  args=[]
+    - procedures_callnoreturn  name='func_Path_green_2'  args=[]
+    - procedures_callnoreturn  name='func_Path_green_3'  args=[]
+    - procedures_callnoreturn  name='func_Path_green_4'  args=[]
+    - procedures_callnoreturn  name='func_ray'  args=[]
+    - procedures_callnoreturn  name='func_ray_backwards_PID'  args=[]
+    - procedures_callnoreturn  name='func_ray_forward'  args=[]
+    - procedures_callnoreturn  name='func_ray_forward_PID'  args=[]
+    - procedures_callnoreturn  name='func_ray_Path'  args=[]
+    - procedures_callnoreturn  name='func_ray_Path_PID'  args=[]
+    - procedures_callnoreturn  name='func_ray_PID'  args=[]
+    - procedures_callnoreturn  name='func_ray_Time'  args=[]
+    - procedures_callnoreturn  name='func_Release'  args=[]
+    - procedures_callnoreturn  name='func_ResetEncoder'  args=[]
+    - procedures_callnoreturn  name='func_Show'  args=['text']
+    - procedures_callnoreturn  name='func_Stop'  args=[]
+    - procedures_callnoreturn  name='func_take_white'  args=[]
+    - procedures_callnoreturn  name='func_Turn'  args=[]
+    - procedures_callnoreturn  name='func_TurnLeft'  args=['deg']
+    - procedures_callnoreturn  name='func_TurnRight'  args=['deg']
+    - procedures_callnoreturn  name='func_value'  args=[]
+    - procedures_callnoreturn  name='func_WaitStartKey'  args=[]
+    - procedures_callnoreturn  name='func_WaitTouch'  args=[]
+[4] 真实 flyout 实例化: 成功 (47 块, 经工具箱树真实选中=True)    渲染 47/47    SVG 根 47    0 尺寸 0
+    - procedures_defnoreturn  name='func_name'  args=[]  inputs=['', 'STACK']
+    - procedures_callnoreturn  name='func_ArmDown'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ArmUp'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_BackwardCM'  args=['cm']  inputs=['TOPROW', 'ARG0']
+    - procedures_callnoreturn  name='func_backwards'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Beep'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_DriveSpeed'  args=['speedL', 'speedR']  inputs=['TOPROW', 'ARG0', 'ARG1']
+    - procedures_callnoreturn  name='func_DriveTime'  args=['speedL', 'speedR', 'sec']  inputs=['TOPROW', 'ARG0', 'ARG1', 'ARG2']
+    - procedures_callnoreturn  name='func_end'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_forward'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ForwardCM'  args=['cm']  inputs=['TOPROW', 'ARG0']
+    - procedures_callnoreturn  name='func_Grab'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_green_end'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_green_end_1'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Init'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Last_light_Error'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Library'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_LineStep'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_LineTime'  args=['sec']  inputs=['TOPROW', 'ARG0']
+    - procedures_callnoreturn  name='func_LineUntilCross'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_main'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Motter_Zero'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_name2'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ON'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Path_green_1'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Path_green_2'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Path_green_3'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Path_green_4'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_backwards_PID'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_forward'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_forward_PID'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_Path'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_Path_PID'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_PID'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ray_Time'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Release'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_ResetEncoder'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Show'  args=['text']  inputs=['TOPROW', 'ARG0']
+    - procedures_callnoreturn  name='func_Stop'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_take_white'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_Turn'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_TurnLeft'  args=['deg']  inputs=['TOPROW', 'ARG0']
+    - procedures_callnoreturn  name='func_TurnRight'  args=['deg']  inputs=['TOPROW', 'ARG0']
+    - procedures_callnoreturn  name='func_value'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_WaitStartKey'  args=[]  inputs=['TOPROW']
+    - procedures_callnoreturn  name='func_WaitTouch'  args=[]  inputs=['TOPROW']
+[5] Python 生成  : 成功  (103.2 ms, 使用 maingui.js 原始 getPythonCode=True)
+    长度/行数: 1216 行
+    文件头: '#<SKCON9><USB><PI>'    def 数: 47    import: ['import threading', 'import time', 'import libstarpy', 'from numbers import Number']
+    变量声明: 59 个   尾部: ['main()#program entry']
+[6] py_compile  : 通过
+生成的 Python 全文见 --py 输出 / JSON generated.code；可另传 --screenshot 截图。
+结论: 通过

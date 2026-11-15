@@ -1,0 +1,12 @@
+=== CAMSHOT3 ===
+uid=10017 pid=3762
+--- /sdcard/Abilix/photo ---
+  1.png                               69154  mtime=1794669294
+(共 1 项)
+最新文件（调用前）: /sdcard/Abilix/photo/1.png size=69154 mtime=1794669294
+已启动 Camera(1) 线程，等待照片出现...
+发现新照片: /sdcard/Abilix/photo/1.png size=69154
+--- /sdcard/Abilix/photo ---
+  1.png                               69154  mtime=1794669294
+(共 1 项)
+照片头: 89 50 4e 47

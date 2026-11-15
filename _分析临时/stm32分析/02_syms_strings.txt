@@ -1,0 +1,1001 @@
+=== ALL SYMBOLS (FUNC/OBJECT) sorted by addr, n=179 ===
+0x00002514 __on_dlclose                               size=16     STT_FUNC .symtab 11
+0x00002524 __atexit_handler_wrapper                   size=12     STT_FUNC .symtab 11
+0x00002530 atexit                                     size=32     STT_FUNC .symtab 11
+0x00002551 CCJ_Interface                              size=824    STT_FUNC .symtab 11
+0x00002889 SetMotorOverTurn                           size=152    STT_FUNC .symtab 11
+0x00002921 SetMotorAdvanced                           size=152    STT_FUNC .symtab 11
+0x000029b9 SetMotor                                   size=128    STT_FUNC .symtab 11
+0x00002a39 SetMotorTime                               size=136    STT_FUNC .symtab 11
+0x00002ac1 SetMotorEncoder                            size=124    STT_FUNC .symtab 11
+0x00002b3d SetServo                                   size=124    STT_FUNC .symtab 11
+0x00002bb9 SmartLed                                   size=192    STT_FUNC .symtab 11
+0x00002c79 SetDO                                      size=128    STT_FUNC .symtab 11
+0x00002cf9 Play                                       size=108    STT_FUNC .symtab 11
+0x00002d65 PlayUntil                                  size=108    STT_FUNC .symtab 11
+0x00002dd1 Wait                                       size=112    STT_FUNC .symtab 11
+0x00002e41 Clear                                      size=88     STT_FUNC .symtab 11
+0x00002e99 SetEE                                      size=128    STT_FUNC .symtab 11
+0x00002f19 GetEE                                      size=116    STT_FUNC .symtab 11
+0x00002f8d Camera                                     size=108    STT_FUNC .symtab 11
+0x00002ff9 GetMicrophone                              size=128    STT_FUNC .symtab 11
+0x00003079 GetMic                                     size=96     STT_FUNC .symtab 11
+0x000030d9 PrintfExpression                           size=108    STT_FUNC .symtab 11
+0x00003145 getAI                                      size=136    STT_FUNC .symtab 11
+0x000031cd GetAI                                      size=40     STT_FUNC .symtab 11
+0x000031f5 GetGray                                    size=40     STT_FUNC .symtab 11
+0x0000321d GetTouch                                   size=40     STT_FUNC .symtab 11
+0x00003245 GetUltraSonic                              size=40     STT_FUNC .symtab 11
+0x0000326d GetFlame                                   size=40     STT_FUNC .symtab 11
+0x00003295 GetTemperature                             size=40     STT_FUNC .symtab 11
+0x000032bd GetMagnet                                  size=40     STT_FUNC .symtab 11
+0x000032e5 GetHumidity                                size=40     STT_FUNC .symtab 11
+0x0000330d GetInfrared                                size=40     STT_FUNC .symtab 11
+0x00003335 GetAngle                                   size=40     STT_FUNC .symtab 11
+0x0000335d GetLight                                   size=40     STT_FUNC .symtab 11
+0x00003385 GetColor                                   size=40     STT_FUNC .symtab 11
+0x000033ad GetChannelGray                             size=136    STT_FUNC .symtab 11
+0x00003435 GetBattery                                 size=96     STT_FUNC .symtab 11
+0x00003495 ResetMotionSensor                          size=88     STT_FUNC .symtab 11
+0x000034ed GetMotionSensor                            size=136    STT_FUNC .symtab 11
+0x00003575 ResetEncoder                               size=108    STT_FUNC .symtab 11
+0x000035e1 GetEncoder                                 size=116    STT_FUNC .symtab 11
+0x00003655 GetInstantEncoder                          size=116    STT_FUNC .symtab 11
+0x000036c9 ResetTimer                                 size=108    STT_FUNC .symtab 11
+0x00003735 GetTimerMS                                 size=116    STT_FUNC .symtab 11
+0x000037a9 GetSeconds                                 size=136    STT_FUNC .symtab 11
+0x00003831 getHIDValue                                size=136    STT_FUNC .symtab 11
+0x000038b9 setSendCmd                                 size=124    STT_FUNC .symtab 11
+0x00003935 getSendCmd                                 size=136    STT_FUNC .symtab 11
+0x000039bd toUpper                                    size=60     STT_FUNC .symtab 11
+0x000039f9 hexString2bytes                            size=180    STT_FUNC .symtab 11
+0x00003aad getSendCmdBuffer                           size=220    STT_FUNC .symtab 11
+0x00003b89 getRecvCmd                                 size=136    STT_FUNC .symtab 11
+0x00003c11 getRecvCmdBuffer                           size=220    STT_FUNC .symtab 11
+0x00003ced WER_InitRobot_5                            size=236    STT_FUNC .symtab 11
+0x00003dd9 WER_InitRobot                              size=176    STT_FUNC .symtab 11
+0x00003e89 WER_Set_GrayscaleSensor                    size=88     STT_FUNC .symtab 11
+0x00003ee1 WER_LineWay_T                              size=132    STT_FUNC .symtab 11
+0x00003f65 WER_LineWay_C                              size=136    STT_FUNC .symtab 11
+0x00003fed WER_Around                                 size=124    STT_FUNC .symtab 11
+0x00004069 WER_SetMotor                               size=136    STT_FUNC .symtab 11
+0x000040f1 WER_SetMotor_T                             size=136    STT_FUNC .symtab 11
+0x00004179 WER_SetMotor_E                             size=152    STT_FUNC .symtab 11
+0x00004211 WER_SetMotor_S                             size=176    STT_FUNC .symtab 11
+0x000042c1 WER_SetMotor_CS                            size=192    STT_FUNC .symtab 11
+0x00004381 WER_AdvancedWay_T                          size=132    STT_FUNC .symtab 11
+0x00004405 WER_AdvancedWay_E                          size=124    STT_FUNC .symtab 11
+0x00004481 WER_AdvancedWay_S                          size=152    STT_FUNC .symtab 11
+0x00004519 WER_AdvancedWay_CS                         size=176    STT_FUNC .symtab 11
+0x000045c9 AIOpen                                     size=136    STT_FUNC .symtab 11
+0x00004651 GetAICode                                  size=132    STT_FUNC .symtab 11
+0x000046d5 GetAIString                                size=240    STT_FUNC .symtab 11
+0x000047c5 GetQRCode                                  size=116    STT_FUNC .symtab 11
+0x00004839 GetQRString                                size=248    STT_FUNC .symtab 11
+0x00004931 Random                                     size=136    STT_FUNC .symtab 11
+0x000049b9 LogPrint                                   size=132    STT_FUNC .symtab 11
+0x00004a3d Log                                        size=160    STT_FUNC .symtab 11
+0x00004add Printf                                     size=160    STT_FUNC .symtab 11
+0x00004b7d iseven                                     size=78     STT_FUNC .symtab 11
+0x00004bcb isint                                      size=58     STT_FUNC .symtab 11
+0x00004c05 isodd                                      size=78     STT_FUNC .symtab 11
+0x00004c53 isprime                                    size=148    STT_FUNC .symtab 11
+0x00004ce7 ispositive                                 size=38     STT_FUNC .symtab 11
+0x00004d0d isnegative                                 size=38     STT_FUNC .symtab 11
+0x00004d33 isdivided                                  size=110    STT_FUNC .symtab 11
+0x00004da1 range                                      size=70     STT_FUNC .symtab 11
+0x00004de7 rangef                                     size=96     STT_FUNC .symtab 11
+0x00004e49 CreateTask                                 size=112    STT_FUNC .symtab 11
+0x00004eb9 Java_com_abilix_utils_ProgramAndInterfaceC_JCC_1Exit size=76     STT_FUNC .symtab 11
+0x00004f05 Java_com_abilix_utils_ProgramAndInterfaceC_JCC_1Main size=476    STT_FUNC .symtab 11
+0x000050e1 trapsigiot6                                size=72     STT_FUNC .symtab 11
+0x00005129 trapsigfpe8                                size=72     STT_FUNC .symtab 11
+0x00005171 __aeabi_idiv                               size=0      STT_FUNC .symtab 11
+0x00005171 __divsi3                                   size=196    STT_FUNC .symtab 11
+0x00005235 __aeabi_idivmod                            size=26     STT_FUNC .symtab 11
+0x00005251 __aeabi_idiv0                              size=12     STT_FUNC .symtab 11
+0x00005251 __aeabi_ldiv0                              size=12     STT_FUNC .symtab 11
+0x0000525d selfrel_offset31                           size=18     STT_FUNC .symtab 11
+0x0000526f search_EIT_table                           size=104    STT_FUNC .symtab 11
+0x000052d7 __gnu_unwind_get_pr_addr                   size=50     STT_FUNC .symtab 11
+0x00005309 get_eit_entry                              size=160    STT_FUNC .symtab 11
+0x000053a9 restore_non_core_regs                      size=78     STT_FUNC .symtab 11
+0x000053f7 _Unwind_decode_typeinfo_ptr.isra.0         size=12     STT_FUNC .symtab 11
+0x00005403 __gnu_unwind_24bit.isra.1                  size=4      STT_FUNC .symtab 11
+0x00005407 _Unwind_DebugHook                          size=2      STT_FUNC .symtab 11
+0x00005409 unwind_phase2                              size=58     STT_FUNC .symtab 11
+0x00005443 unwind_phase2_forced                       size=190    STT_FUNC .symtab 11
+0x00005501 _Unwind_GetCFA                             size=4      STT_FUNC .symtab 11
+0x00005505 __gnu_Unwind_RaiseException                size=98     STT_FUNC .symtab 11
+0x00005567 __gnu_Unwind_ForcedUnwind                  size=20     STT_FUNC .symtab 11
+0x0000557b __gnu_Unwind_Resume                        size=66     STT_FUNC .symtab 11
+0x000055bd __gnu_Unwind_Resume_or_Rethrow             size=16     STT_FUNC .symtab 11
+0x000055cd _Unwind_Complete                           size=2      STT_FUNC .symtab 11
+0x000055cf _Unwind_DeleteException                    size=12     STT_FUNC .symtab 11
+0x000055db _Unwind_VRS_Get                            size=46     STT_FUNC .symtab 11
+0x00005609 _Unwind_GetGR                              size=24     STT_FUNC .symtab 11
+0x00005621 _Unwind_VRS_Set                            size=46     STT_FUNC .symtab 11
+0x0000564f _Unwind_SetGR                              size=26     STT_FUNC .symtab 11
+0x00005669 __gnu_Unwind_Backtrace                     size=122    STT_FUNC .symtab 11
+0x000056e3 __gnu_unwind_pr_common                     size=618    STT_FUNC .symtab 11
+0x0000594d __aeabi_unwind_cpp_pr0                     size=4      STT_FUNC .symtab 11
+0x00005951 __aeabi_unwind_cpp_pr1                     size=4      STT_FUNC .symtab 11
+0x00005955 __aeabi_unwind_cpp_pr2                     size=4      STT_FUNC .symtab 11
+0x00005959 _Unwind_VRS_Pop                            size=560    STT_FUNC .symtab 11
+0x00005b89 __restore_core_regs                        size=24     STT_FUNC .symtab 11
+0x00005b89 restore_core_regs                          size=24     STT_FUNC .symtab 11
+0x00005ba1 __gnu_Unwind_Restore_VFP                   size=0      STT_FUNC .symtab 11
+0x00005ba9 __gnu_Unwind_Save_VFP                      size=0      STT_FUNC .symtab 11
+0x00005bb1 __gnu_Unwind_Restore_VFP_D                 size=0      STT_FUNC .symtab 11
+0x00005bb9 __gnu_Unwind_Save_VFP_D                    size=0      STT_FUNC .symtab 11
+0x00005bc1 __gnu_Unwind_Restore_VFP_D_16_to_31        size=0      STT_FUNC .symtab 11
+0x00005bc9 __gnu_Unwind_Save_VFP_D_16_to_31           size=0      STT_FUNC .symtab 11
+0x00005bd1 __gnu_Unwind_Restore_WMMXD                 size=0      STT_FUNC .symtab 11
+0x00005c15 __gnu_Unwind_Save_WMMXD                    size=0      STT_FUNC .symtab 11
+0x00005c59 __gnu_Unwind_Restore_WMMXC                 size=0      STT_FUNC .symtab 11
+0x00005c6d __gnu_Unwind_Save_WMMXC                    size=0      STT_FUNC .symtab 11
+0x00005c81 _Unwind_RaiseException                     size=34     STT_FUNC .symtab 11
+0x00005c81 ___Unwind_RaiseException                   size=34     STT_FUNC .symtab 11
+0x00005ca5 _Unwind_Resume                             size=34     STT_FUNC .symtab 11
+0x00005ca5 ___Unwind_Resume                           size=34     STT_FUNC .symtab 11
+0x00005cc9 _Unwind_Resume_or_Rethrow                  size=34     STT_FUNC .symtab 11
+0x00005cc9 ___Unwind_Resume_or_Rethrow                size=34     STT_FUNC .symtab 11
+0x00005ced _Unwind_ForcedUnwind                       size=34     STT_FUNC .symtab 11
+0x00005ced ___Unwind_ForcedUnwind                     size=34     STT_FUNC .symtab 11
+0x00005d11 _Unwind_Backtrace                          size=34     STT_FUNC .symtab 11
+0x00005d11 ___Unwind_Backtrace                        size=34     STT_FUNC .symtab 11
+0x00005d35 next_unwind_byte                           size=44     STT_FUNC .symtab 11
+0x00005d61 _Unwind_GetGR.constprop.0                  size=24     STT_FUNC .symtab 11
+0x00005d79 unwind_UCB_from_context                    size=2      STT_FUNC .symtab 11
+0x00005d7b __gnu_unwind_execute                       size=630    STT_FUNC .symtab 11
+0x00005ff1 __gnu_unwind_frame                         size=42     STT_FUNC .symtab 11
+0x0000601b _Unwind_GetRegionStart                     size=10     STT_FUNC .symtab 11
+0x00006025 _Unwind_GetLanguageSpecificData            size=18     STT_FUNC .symtab 11
+0x00006037 _Unwind_GetDataRelBase                     size=6      STT_FUNC .symtab 11
+0x0000603d _Unwind_GetTextRelBase                     size=6      STT_FUNC .symtab 11
+0x00007d84 _DYNAMIC                                   size=280    STT_OBJECT .symtab 17
+0x00007f0c _GLOBAL_OFFSET_TABLE_                      size=0      STT_OBJECT .symtab 18
+0x00008000 __dso_handle                               size=4      STT_OBJECT .symtab 19
+0x00008004 TAG                                        size=4      STT_OBJECT .symtab 19
+0x00008008 AI_TYPE_COLLISION                          size=4      STT_OBJECT .symtab 19
+0x0000800c AI_TYPE_INFRARED                           size=4      STT_OBJECT .symtab 19
+0x00008010 AI_TYPE_GRAY                               size=4      STT_OBJECT .symtab 19
+0x00008014 AI_TYPE_COLOR                              size=4      STT_OBJECT .symtab 19
+0x00008018 AI_TYPE_ULTRASONIC                         size=4      STT_OBJECT .symtab 19
+0x0000801c AI_TYPE_FLAME                              size=4      STT_OBJECT .symtab 19
+0x00008020 AI_TYPE_LIGHT                              size=4      STT_OBJECT .symtab 19
+0x00008024 AI_TYPE_MAGNETIC_SWITCH                    size=4      STT_OBJECT .symtab 19
+0x00008028 AI_TYPE_TEMPERATURE                        size=4      STT_OBJECT .symtab 19
+0x0000802c AI_TYPE_HUMIDITY                           size=4      STT_OBJECT .symtab 19
+0x00008030 AI_TYPE_ANGLE                              size=4      STT_OBJECT .symtab 19
+0x00008034 AI_TYPE_ELECTROMAGNET                      size=4      STT_OBJECT .symtab 19
+0x00008038 g_AbilixJVM                                size=4      STT_OBJECT .symtab 20
+0x0000803c cac_func                                   size=4      STT_OBJECT .symtab 20
+0x00008040 main_tid                                   size=4      STT_OBJECT .symtab 20
+0x00008044 AI_TYPE_UNKNOWN                            size=4      STT_OBJECT .symtab 20
+0x00008048 error                                      size=4      STT_OBJECT .symtab 20
+0x0000804c g_AbilixEnv                                size=4      STT_OBJECT .symtab 20
+0x00008050 g_AbilixJobject                            size=4      STT_OBJECT .symtab 20
+0x00008054 handle                                     size=4      STT_OBJECT .symtab 20
+0x00008058 mutexID                                    size=4      STT_OBJECT .symtab 20
+
+=== STRINGS in .rodata (addr 0x64c0, size 0x48e) ===
+0x000064c0  [C] %s: AttachCurrentThread() failed
+0x000064e5  CCJ_Interface
+0x000064f3  (Ljava/lang/String;)Ljava/lang/String;
+0x0000651d  [C] %s: DetachCurrentThread() failed
+0x00006542  %s&%d&%d&%d&%d
+0x00006551  SetMotorOverTurn
+0x00006562  SetMotorAdvanced
+0x00006573  %s&%d&%d
+0x0000657c  SetMotor
+0x00006585  %s&%d&%d&%f
+0x00006591  SetMotorTime
+0x0000659e  %s&%d&%d&%s
+0x000065aa  SetMotorEncoder
+0x000065ba  %s&%d&%d&%d
+0x000065c6  SetServo
+0x000065cf  %s&%d&%d&%d&%d&%d&%d
+0x000065e4  SmartLed
+0x000065ed  SetDO
+0x000065f3  %s&%s
+0x000065f9  Play
+0x000065fe  PlayUntil
+0x00006608  %s&%f
+0x0000660e  Wait
+0x00006613  Clear
+0x00006619  SetEE
+0x0000661f  %s&%d
+0x00006625  GetEE
+0x0000662b  Camera
+0x00006632  GetMicrophone
+0x00006640  GetMic
+0x00006647  PrintfExpression
+0x00006658  GetAI
+0x0000665e  GetChannelGray
+0x0000666d  GetBattery
+0x00006678  ResetMotionSensor
+0x0000668a  GetMotionSensor
+0x0000669a  ResetEncoder
+0x000066a7  GetEncoder
+0x000066b2  GetInstantEncoder
+0x000066c4  ResetTimer
+0x000066cf  GetTimerMS
+0x000066da  GetSeconds
+0x000066e5  getHIDValue
+0x000066f1  setSendCmd
+0x000066fc  getSendCmd
+0x00006707  getSendCmdBuffer
+0x00006718  null
+0x0000671d  getRecvCmd
+0x00006728  getRecvCmdBuffer
+0x00006739  %s&%d&%f&%d&%f&%d&%d&%d&%d&%d
+0x00006757  WER_InitRobot_5
+0x00006767  %s&%d&%f&%d&%f&%d
+0x00006779  WER_InitRobot
+0x00006787  WER_Set_GrayscaleSensor
+0x0000679f  %s&%d&%f
+0x000067a8  WER_LineWay_T
+0x000067b6  WER_LineWay_C
+0x000067c4  WER_Around
+0x000067cf  WER_SetMotor
+0x000067dc  WER_SetMotor_T
+0x000067eb  WER_SetMotor_E
+0x000067fa  %s&%d&%d&%d&%d&%d
+0x0000680c  WER_SetMotor_S
+0x0000681b  WER_SetMotor_CS
+0x0000682b  WER_AdvancedWay_T
+0x0000683d  WER_AdvancedWay_E
+0x0000684f  WER_AdvancedWay_S
+0x00006861  WER_AdvancedWay_CS
+0x00006874  %s&%s&%d
+0x0000687d  AIOpen
+0x00006884  my_ai
+0x0000688a  %s&%d&%s
+0x00006893  GetAICode
+0x0000689d  GetQRCode
+0x000068a7  Random
+0x000068ae  [U] %s
+0x000068b5  Log
+0x000068b9  Printf
+0x000068c0  [C] PragramAndInterfaceC_JCC_1Exit end ( %d)
+0x000068ed  Main
+0x000068f2  [C] Main: %d
+0x00006900  wddadd
+0x00006907  +++++++++++Got SIGTERM with %d %s 
+0x0000692b  +++++++++++Got SIGQUIT with %d %s
+
+=== STRINGS in .data (addr 0x8000, size 0x38) ===
+
+=== .debug_str strings ===
+Android clang version 3.8.275480  (based on LLVM 3.8.275480)
+F:\Android_Apps\Controller\app\src\main\cpp\program_c\Robot.c
+F:\Android_Apps\Controller\app\.externalNativeBuild\cmake\debug\armeabi-v7a
+g_AbilixJVM
+reserved0
+reserved1
+reserved2
+DestroyJavaVM
+int
+jint
+AttachCurrentThread
+reserved3
+GetVersion
+DefineClass
+jobject
+jclass
+char
+signed char
+jbyte
+jsize
+FindClass
+FromReflectedMethod
+_jmethodID
+jmethodID
+FromReflectedField
+_jfieldID
+jfieldID
+ToReflectedMethod
+unsigned char
+jboolean
+GetSuperclass
+IsAssignableFrom
+ToReflectedField
+Throw
+jthrowable
+ThrowNew
+ExceptionOccurred
+ExceptionDescribe
+ExceptionClear
+FatalError
+PushLocalFrame
+PopLocalFrame
+NewGlobalRef
+DeleteGlobalRef
+DeleteLocalRef
+IsSameObject
+NewLocalRef
+EnsureLocalCapacity
+AllocObject
+NewObject
+NewObjectV
+__ap
+__va_list
+__builtin_va_list
+va_list
+NewObjectA
+unsigned short
+jchar
+short
+jshort
+long long int
+jlong
+float
+jfloat
+double
+jdouble
+jvalue
+GetObjectClass
+IsInstanceOf
+GetMethodID
+CallObjectMethod
+CallObjectMethodV
+CallObjectMethodA
+CallBooleanMethod
+CallBooleanMethodV
+CallBooleanMethodA
+CallByteMethod
+CallByteMethodV
+CallByteMethodA
+CallCharMethod
+CallCharMethodV
+CallCharMethodA
+CallShortMethod
+CallShortMethodV
+CallShortMethodA
+CallIntMethod
+CallIntMethodV
+CallIntMethodA
+CallLongMethod
+CallLongMethodV
+CallLongMethodA
+CallFloatMethod
+CallFloatMethodV
+CallFloatMethodA
+CallDoubleMethod
+CallDoubleMethodV
+CallDoubleMethodA
+CallVoidMethod
+CallVoidMethodV
+CallVoidMethodA
+CallNonvirtualObjectMethod
+CallNonvirtualObjectMethodV
+CallNonvirtualObjectMethodA
+CallNonvirtualBooleanMethod
+CallNonvirtualBooleanMethodV
+CallNonvirtualBooleanMethodA
+CallNonvirtualByteMethod
+CallNonvirtualByteMethodV
+CallNonvirtualByteMethodA
+CallNonvirtualCharMethod
+CallNonvirtualCharMethodV
+CallNonvirtualCharMethodA
+CallNonvirtualShortMethod
+CallNonvirtualShortMethodV
+CallNonvirtualShortMethodA
+CallNonvirtualIntMethod
+CallNonvirtualIntMethodV
+CallNonvirtualIntMethodA
+CallNonvirtualLongMethod
+CallNonvirtualLongMethodV
+CallNonvirtualLongMethodA
+CallNonvirtualFloatMethod
+CallNonvirtualFloatMethodV
+CallNonvirtualFloatMethodA
+CallNonvirtualDoubleMethod
+CallNonvirtualDoubleMethodV
+CallNonvirtualDoubleMethodA
+CallNonvirtualVoidMethod
+CallNonvirtualVoidMethodV
+CallNonvirtualVoidMethodA
+GetFieldID
+GetObjectField
+GetBooleanField
+GetByteField
+GetCharField
+GetShortField
+GetIntField
+GetLongField
+GetFloatField
+GetDoubleField
+SetObjectField
+SetBooleanField
+SetByteField
+SetCharField
+SetShortField
+SetIntField
+SetLongField
+SetFloatField
+SetDoubleField
+GetStaticMethodID
+CallStaticObjectMethod
+CallStaticObjectMethodV
+CallStaticObjectMethodA
+CallStaticBooleanMethod
+CallStaticBooleanMethodV
+CallStaticBooleanMethodA
+CallStaticByteMethod
+CallStaticByteMethodV
+CallStaticByteMethodA
+CallStaticCharMethod
+CallStaticCharMethodV
+CallStaticCharMethodA
+CallStaticShortMethod
+CallStaticShortMethodV
+CallStaticShortMethodA
+CallStaticIntMethod
+CallStaticIntMethodV
+CallStaticIntMethodA
+CallStaticLongMethod
+CallStaticLongMethodV
+CallStaticLongMethodA
+CallStaticFloatMethod
+CallStaticFloatMethodV
+CallStaticFloatMethodA
+CallStaticDoubleMethod
+CallStaticDoubleMethodV
+CallStaticDoubleMethodA
+CallStaticVoidMethod
+CallStaticVoidMethodV
+CallStaticVoidMethodA
+GetStaticFieldID
+GetStaticObjectField
+GetStaticBooleanField
+GetStaticByteField
+GetStaticCharField
+GetStaticShortField
+GetStaticIntField
+GetStaticLongField
+GetStaticFloatField
+GetStaticDoubleField
+SetStaticObjectField
+SetStaticBooleanField
+SetStaticByteField
+SetStaticCharField
+SetStaticShortField
+SetStaticIntField
+SetStaticLongField
+SetStaticFloatField
+SetStaticDoubleField
+NewString
+jstring
+GetStringLength
+GetStringChars
+ReleaseStringChars
+NewStringUTF
+GetStringUTFLength
+GetStringUTFChars
+ReleaseStringUTFChars
+GetArrayLength
+jarray
+NewObjectArray
+jobjectArray
+GetObjectArrayElement
+SetObjectArrayElement
+NewBooleanArray
+jbooleanArray
+NewByteArray
+jbyteArray
+NewCharArray
+jcharArray
+NewShortArray
+jshortArray
+NewIntArray
+jintArray
+NewLongArray
+jlongArray
+NewFloatArray
+jfloatArray
+NewDoubleArray
+jdoubleArray
+GetBooleanArrayElements
+GetByteArrayElements
+GetCharArrayElements
+GetShortArrayElements
+GetIntArrayElements
+GetLongArrayElements
+GetFloatArrayElements
+GetDoubleArrayElements
+ReleaseBooleanArrayElements
+ReleaseByteArrayElements
+ReleaseCharArrayElements
+ReleaseShortArrayElements
+ReleaseIntArrayElements
+ReleaseLongArrayElements
+ReleaseFloatArrayElements
+ReleaseDoubleArrayElements
+GetBooleanArrayRegion
+GetByteArrayRegion
+GetCharArrayRegion
+GetShortArrayRegion
+GetIntArrayRegion
+GetLongArrayRegion
+GetFloatArrayRegion
+GetDoubleArrayRegion
+SetBooleanArrayRegion
+SetByteArrayRegion
+SetCharArrayRegion
+SetShortArrayRegion
+SetIntArrayRegion
+SetLongArrayRegion
+SetFloatArrayRegion
+SetDoubleArrayRegion
+RegisterNatives
+name
+signature
+fnPtr
+JNINativeMethod
+UnregisterNatives
+MonitorEnter
+MonitorExit
+GetJavaVM
+GetStringRegion
+GetStringUTFRegion
+GetPrimitiveArrayCritical
+ReleasePrimitiveArrayCritical
+GetStringCritical
+ReleaseStringCritical
+NewWeakGlobalRef
+jweak
+DeleteWeakGlobalRef
+ExceptionCheck
+NewDirectByteBuffer
+GetDirectBufferAddress
+GetDirectBufferCapacity
+GetObjectRefType
+JNIInvalidRefType
+JNILocalRefType
+JNIGlobalRefType
+JNIWeakGlobalRefType
+jobjectRefType
+JNINativeInterface
+JNIEnv
+DetachCurrentThread
+GetEnv
+AttachCurrentThreadAsDaemon
+JNIInvokeInterface
+JavaVM
+cac_func
+CAC_FUNC
+main_tid
+__kernel_pid_t
+__pid_t
+pid_t
+AI_TYPE_UNKNOWN
+AI_TYPE_COLLISION
+AI_TYPE_INFRARED
+AI_TYPE_GRAY
+AI_TYPE_COLOR
+AI_TYPE_ULTRASONIC
+AI_TYPE_FLAME
+AI_TYPE_LIGHT
+AI_TYPE_MAGNETIC_SWITCH
+AI_TYPE_TEMPERATURE
+AI_TYPE_HUMIDITY
+AI_TYPE_ANGLE
+AI_TYPE_ELECTROMAGNET
+g_AbilixJobject
+g_AbilixEnv
+mutexID
+value
+pthread_mutex_t
+handle
+error
+TAG
+ANDROID_LOG_UNKNOWN
+ANDROID_LOG_DEFAULT
+ANDROID_LOG_VERBOSE
+ANDROID_LOG_DEBUG
+ANDROID_LOG_INFO
+ANDROID_LOG_WARN
+ANDROID_LOG_ERROR
+ANDROID_LOG_FATAL
+ANDROID_LOG_SILENT
+android_LogPriority
+RTLD_NOW
+RTLD_LAZY
+RTLD_LOCAL
+RTLD_GLOBAL
+RTLD_NOLOAD
+unsigned int
+size_t
+CCJ_Interface
+SetMotorOverTurn
+SetMotorAdvanced
+SetMotor
+SetMotorTime
+SetMotorEncoder
+SetServo
+SmartLed
+SetDO
+Play
+PlayUntil
+Wait
+Clear
+SetEE
+GetEE
+Camera
+GetMicrophone
+GetMic
+PrintfExpression
+getAI
+GetAI
+GetGray
+GetTouch
+GetUltraSonic
+GetFlame
+GetTemperature
+GetMagnet
+GetHumidity
+GetInfrared
+GetAngle
+GetLight
+GetColor
+GetChannelGray
+GetBattery
+ResetMotionSensor
+GetMotionSensor
+ResetEncoder
+GetEncoder
+GetInstantEncoder
+ResetTimer
+GetTimerMS
+GetSeconds
+getHIDValue
+setSendCmd
+getSendCmd
+toUpper
+hexString2bytes
+getSendCmdBuffer
+getRecvCmd
+getRecvCmdBuffer
+WER_InitRobot_5
+WER_InitRobot
+WER_Set_GrayscaleSensor
+WER_LineWay_T
+WER_LineWay_C
+WER_Around
+WER_SetMotor
+WER_SetMotor_T
+WER_SetMotor_E
+WER_SetMotor_S
+WER_SetMotor_CS
+WER_AdvancedWay_T
+WER_AdvancedWay_E
+WER_AdvancedWay_S
+WER_AdvancedWay_CS
+AIOpen
+GetAICode
+GetAIString
+GetQRCode
+GetQRString
+Random
+LogPrint
+Log
+Printf
+iseven
+isint
+isodd
+isprime
+ispositive
+isnegative
+isdivided
+range
+rangef
+CreateTask
+Java_com_abilix_utils_ProgramAndInterfaceC_JCC_1Exit
+Java_com_abilix_utils_ProgramAndInterfaceC_JCC_1Main
+trapsigiot6
+trapsigfpe8
+methodName
+str
+result
+env
+clazz
+methodID
+jstr
+extraStr
+ptr
+nAValue
+nBValue
+nCValue
+nDValue
+send
+sizetype
+nPort
+nType
+nOverTurn
+nOpenClosed
+nSpeed
+nTime
+nEncoder
+nStopMotor
+nID
+nAngle
+mModel
+nCycle
+nEnable
+mFileName
+addressId
+pictureId
+recordId
+time
+expression
+type
+nChannel
+nAxis
+encoderId
+timerId
+nValueType
+cmd
+index
+letter
+src
+dest
+len
+highByte
+lowByte
+length
+cmdBuffer
+lPort
+fPower
+rPort
+rPower
+mPort
+lSpeed
+rSpeed
+nPos
+fTime
+nEncPort
+lParam
+nSign
+rParam
+lChannel
+mCommand
+nStart
+AIFileName
+ret
+nAIFileName
+mResult
+mResultSize
+mMin
+mMax
+format
+print
+mCount
+mValue
+mTaskName
+arg
+s_tid_subloop
+long int
+pthread_t
+attr
+flags
+__uint32_t
+uint32_t
+stack_base
+stack_size
+guard_size
+sched_policy
+__int32_t
+int32_t
+__sched_priority
+pthread_attr_t
+mEnv
+mjobject
+mjint
+mjstring
+libPath
+errorInfo
+signum
+__gnu_Unwind_Restore_WMMXC
+__gnu_Unwind_Restore_WMMXD
+exception_cleanup
+_Unwind_decode_typeinfo_ptr
+_UVRSD_VFPX
+saved_vrs
+EHT16
+_Unwind_VRS_RegClass
+__gnu_Unwind_Restore_VFP
+bitpattern
+__page_shift
+_UVRSR_OK
+return_address
+ctm_succeeded
+__gnu_Unwind_Restore_VFP_D_16_to_31
+next
+_Unwind_Trace_Fn
+mask
+next_vrs
+_Unwind_VRS_Set
+core_regs
+valuep
+in_range
+handler
+__gnu_unwind_get_pr_addr
+tmp_count_2
+words_left
+representation
+prev_sp
+_UVRSD_UINT64
+_uw64
+_Unwind_Context
+__gnu_unwind_pr_common
+num_vfpv3_regs
+__aeabi_unwind_cpp_pr0
+__aeabi_unwind_cpp_pr1
+__aeabi_unwind_cpp_pr2
+EHT32
+tmp_count
+_Unwind_Action
+__gnu_Unwind_Save_VFP
+_US_END_OF_STACK
+_Unwind_EHT_Header
+search_EIT_table
+_UVRSD_DOUBLE
+_US_UNWIND_FRAME_STARTING
+__gnu_Unwind_RaiseException
+stop_fn
+__gnu_Unwind_Restore_VFP_D
+eitp
+_UVRSC_CORE
+_UVRSC_WMMXD
+base
+count
+long long unsigned int
+offset
+trace
+_US_FORCE_UNWIND
+phase1_vrs
+pr_result
+__gnu_Unwind_Resume_or_Rethrow
+core
+abort
+_URC_CONTINUE_UNWIND
+bytes_left
+wmmxd_regs
+cleanup_cache
+__exidx_start
+this_fn
+get_eit_entry
+tmp_16_to_31
+__gnu_Unwind_Find_exidx
+code
+__cxa_type_match
+_Unwind_GetCFA
+__gnu_Unwind_Backtrace
+vfpv3_regs
+trace_argument
+unwinder_cache
+_US_ACTION_MASK
+_URC_INSTALL_CONTEXT
+_Unwind_VRS_Result
+restore_core_regs
+vfpv3_start
+_Unwind_Stop_Fn
+_ZSt9type_info
+regclass
+_UVRSD_FLOAT
+table
+entry_code
+data
+__gnu_Unwind_ForcedUnwind
+_US_UNWIND_FRAME_RESUME
+wmmxc
+wmmxd
+demand_save_flags
+_Unwind_Complete
+__cxa_type_match_result
+_Unwind_Reason_Code
+__EIT_entry
+right
+next_fn
+_URC_HANDLER_FOUND
+match_type
+context
+bool
+restore_non_core_regs
+_Unwind_Control_Block
+additional
+__gnu_unwind_state
+_Unwind_VRS_Pop
+regno
+_Unwind_DebugHook
+vfp_regs
+unwind_phase2_forced
+stop_code
+exception_class
+compact
+barrier_cache
+ctm_failed
+_UVRSR_NOT_IMPLEMENTED
+/usr/local/google/buildbot/tmp/build/toolchain/host-x86_64-linux-gnu/gcc-4.9/arm-linux-androideabi/armv7-a/thumb/libgcc
+__cxa_begin_cleanup
+entry_vrs
+_uw8
+__gnu_Unwind_Save_VFP_D
+discriminator
+ctm_succeeded_with_ptr_to_base
+GNU C 4.9.x 20150123 (prerelease) -mbionic -march=armv7-a -mthumb -mfloat-abi=soft -mfpu=vfp -mtls-dialect=gnu -g -g -g -g -g -O2 -Os -O2 -Os -O2 -O2 -Os -O2 -Os -fno-short-enums -fbuilding-libgcc -fno-stack-protector -funwind-tables -fPIC -fno-inline -fexceptions
+_UVRSC_VFP
+short int
+__gnu_Unwind_Save_VFP_D_16_to_31
+_URC_END_OF_STACK
+type_info
+__gnu_Unwind_Save_WMMXC
+__gnu_Unwind_Save_WMMXD
+unwind_phase2
+fnoffset
+action
+left
+reserved4
+reserved5
+__gnu_unwind_execute
+_URC_FOREIGN_EXCEPTION_CAUGHT
+start
+ucbp
+_Unwind_Word
+_UVRSD_FPAX
+matched
+long unsigned int
+_Unwind_VRS_DataRepresentation
+wmmxc_regs
+resuming
+ehtp
+_uw16
+state
+_Unwind_Ptr
+forced_unwind
+pr_cache
+is_reference
+phase2_call_unexpected_after_unwind
+fnstart
+__page_size
+_UVRSR_FAILED
+content
+addr
+__exidx_end
+_Unwind_State
+_UVRSC_WMMXC
+vfp_regs_16_to_31
+short unsigned int
+phase2_vrs
+memcpy
+_UVRSD_UINT32
+personality_routine
+/usr/local/google/buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/libgcc/config/arm/unwind-arm.c
+stop_arg
+_Unwind_SetGR
+_Unwind_VRS_Get
+rtti
+rtti_count
+_Unwind_DeleteException
+_UVRSC_FPA
+_Unwind_GetGR
+_URC_FAILURE
+nrec
+_US_VIRTUAL_UNWIND_FRAME
+__gnu_Unwind_Resume
+selfrel_offset31
+_URC_OK
+__gnu_unwind_24bit
+_Unwind_GetRegionStart
+__gnu_unwind_frame
+_Unwind_GetLanguageSpecificData
+next_unwind_byte
+_Unwind_GetDataRelBase
+/usr/local/google/buildbot/src/android/gcc/toolchain/build/../gcc/gcc-4.9/libgcc/config/arm/pr-support.c
+unwind_UCB_from_context
+_Unwind_GetTextRelBase
+set_pc
+shift

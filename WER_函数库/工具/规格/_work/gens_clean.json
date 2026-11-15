@@ -1,0 +1,902 @@
+{
+ "start": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 13,
+  "end_line": 75,
+  "source": "Blockly.Python['start'] = function(block)\n\n{\n\n  var globals = [];\n\n  var varName;\n\n  var workspace = block.workspace;\n\n  var variables = Blockly.Variables.allUsedVarModels(workspace) || [];\n\n  for (var i = 0, variable; variable = variables[i]; i++) {\n\n    varName = variable.name;\n\n    // PCScratchView.Log( \"------ varName: \" + varName ); \n\n    \n\n      globals.push(Blockly.Python.variableDB_.getName(varName,\n\n          Blockly.Variables.NAME_TYPE));\n\n    \n\n  }\n\n  \n\n  globals = globals.length ?\n\n      Blockly.Python.INDENT + 'global ' + globals.join(', ') + '\\n' : '';\n\n   // PCScratchView.Log( \"------ globals: \" + globals );    \n\n\n\n  var statements_code = Blockly.Python.statementToCode(block, 'code');\n\n  // PCScratchView.Log( \"------ statements_code: \" + statements_code );   \n\n  if (statements_code == null || statements_code == '')\n\n  {\n\n    statements_code = Blockly.Python.PASS + '\\n';\n\n  }\n\n  else if( Blockly.Python.isAllComments(statements_code))\n\n  {\n\n    statements_code += Blockly.Python.PASS + '\\n';\n\n  }\n\n  var code = 'def main():\\n' + globals + statements_code;\n\n  return code;\n\n}"
+ },
+ "annotation": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 81,
+  "end_line": 101,
+  "source": "Blockly.Python['annotation'] = function(block)\n\n{\n\n  var statements_code = Blockly.Python.statementToCode(block, 'code');  \n\n  var text_text = block.getFieldValue('text');\n\n  var code = '#' + text_text +'\\n';  \n\n  // if(block.nextConnection != null)\n\n  // {\n\n  //     code = code + Blockly.Python.PASS + '\\n';\n\n  // }\n\n  return code;\n\n}"
+ },
+ "block_mod": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 105,
+  "end_line": 125,
+  "source": "Blockly.Python['block_mod'] = function(block)\n\n{\n\n  var text_name = block.getFieldValue('NAME');\n\n  var statements_code = Blockly.Python.statementToCode(block, 'code');  \n\n  if (statements_code == null || statements_code == '')\n\n  {\n\n    statements_code = Blockly.Python.PASS + '\\n';\n\n  }\n\n  var code = '#' + text_name + '\\nif True:\\n' + statements_code;\n\n  return code;\n\n}"
+ },
+ "AI": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 131,
+  "end_line": 141,
+  "source": "Blockly.Python['AI'] = function(block)\n\n{\n\n  var value_aich = Blockly.Python.valueToCode(block, 'CHANNEL', Blockly.Python.ORDER_ATOMIC);// TODO: Assemble Python into code variable.\n\n  var code = RobotLib + 'getAI(' + value_aich.toString() + ')';\n\n return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "motor": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 147,
+  "end_line": 161,
+  "source": "Blockly.Python['motor'] = function(block)\n\n{\n\n  var value_channel =  Number(block.getFieldValue('channel'));\n\n  var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);\n\n  value_speed =  'robot.clamp(' + value_speed + ', -100, 100)';\n\n  var code = 'robot.set_motor(' + value_channel.toString() + ',' + value_speed.toString() + ')\\n';\n\n  return code;\n\n}"
+ },
+ "motor_time": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 167,
+  "end_line": 185,
+  "source": "Blockly.Python['motor_time'] = function(block)\n\n{\n\n  var value_channel =   Number(block.getFieldValue('channel'));\n\n  var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);\n\n  value_speed =  'robot.clamp(' + value_speed + ', -100, 100)';\n\n  var value_time = Blockly.Python.valueToCode(block, 'time', Blockly.Python.ORDER_ATOMIC);\n\n  value_time =  'robot.clamp(' + value_time + ', 0, 3600)';\n\n  var code = 'robot.set_motor_time(' + value_channel + ',' + value_speed + ',' + value_time + ')\\n';\n\n  return code;\n\n}"
+ },
+ "dual_motor_duration": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 191,
+  "end_line": 231,
+  "source": "Blockly.Python['dual_motor_duration'] = function(block)\n\n{\n\n  var value_channel_1 =   Number(block.getFieldValue('port_1'));\n\n  var value_channel_2 =   Number(block.getFieldValue('port_2'));\n\n  //speed 1\n\n  var value_speed = Blockly.Python.valueToCode(block, 'speed_1', Blockly.Python.ORDER_ATOMIC);\n\n  value_speed_1 =  'robot.clamp(' + value_speed + ', -100, 100)';\n\n  //speed2\n\n  value_speed = Blockly.Python.valueToCode(block, 'speed_2', Blockly.Python.ORDER_ATOMIC);\n\n  value_speed_2 =  'robot.clamp(' + value_speed + ', -100, 100)';\n\n\n\n  var value_time = Blockly.Python.valueToCode(block, 'time', Blockly.Python.ORDER_ATOMIC);\n\n  value_time =  'robot.clamp(' + value_time + ', 0, 3600)';\n\n  // var code = 'robot.set_motor(' + value_channel_1 + ',' + value_speed_1 + ')\\n'\n\n  //     code +='robot.set_motor(' + value_channel_2 + ',' + value_speed_2 + ')\\n'\n\n  //     code += 'time.sleep('+ value_time + ')\\n'\n\n  //     code += 'robot.set_motor('+  value_channel_1 +',0)\\n';\n\n  //     code += 'robot.set_motor('+  value_channel_2 +',0)\\n';\n\n  var code = 'robot.set_double_motor_time('+ value_channel_1 + ',' + value_speed_1 + ',' + value_channel_2 + ',' + value_speed_2 + ',' + value_time + ')\\n';\n\n  return code;\n\n}"
+ },
+ "dual_motor_angle": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 237,
+  "end_line": 279,
+  "source": "Blockly.Python['dual_motor_angle'] = function(block)\n\n{\n\n  var value_channel_1 =   Number(block.getFieldValue('port_1'));\n\n  var value_channel_2 =   Number(block.getFieldValue('port_2'));\n\n  var value_channel_3 =   Number(block.getFieldValue('port_3'));\n\n  //speed 1\n\n  var value_speed = Blockly.Python.valueToCode(block, 'speed_1', Blockly.Python.ORDER_ATOMIC);\n\n  value_speed_1 =  'robot.clamp(' + value_speed + ', -100, 100)';\n\n  //speed2\n\n  value_speed = Blockly.Python.valueToCode(block, 'speed_2', Blockly.Python.ORDER_ATOMIC);\n\n  value_speed_2 =  'robot.clamp(' + value_speed + ', -100, 100)';\n\n\n\n  var value_time = Blockly.Python.valueToCode(block, 'angle', Blockly.Python.ORDER_ATOMIC);\n\n  value_time =  'robot.clamp(' + value_time + ', -99999, 99999)';\n\n  // var code = 'robot.reset_encoder('+ value_channel_1 + ')\\n'\n\n  //     code += 'robot.set_motor(' + value_channel_1 + ',' + value_speed_1 + ')\\n'\n\n  //     code +='robot.set_motor(' + value_channel_2 + ',' + value_speed_2 + ')\\n'      \n\n  //     code += 'robot.set_motor_encoder('+  value_channel_3 + ',' + value_time + ',\"' + PortEnStringMap[value_channel_1] + PortEnStringMap[value_channel_2] + '\")\\n';     \n\n  var code = 'robot.set_double_motor_encoder('+ value_channel_1 + ',' + value_speed_1 + ',' + value_channel_2 + ',' + value_speed_2 + ','\n\n                                              + value_channel_3 + ',' + value_time + ')\\n';\n\n  return code;\n\n}"
+ },
+ "motor_angle": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 285,
+  "end_line": 303,
+  "source": "Blockly.Python['motor_angle'] = function(block)\n\n{\n\n  var value_channel =  Number(block.getFieldValue('channel'));\n\n  var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);\n\n  value_speed =  'robot.clamp(' + value_speed + ', -100, 100)';\n\n  var value_angle = Blockly.Python.valueToCode(block, 'angle', Blockly.Python.ORDER_ATOMIC);\n\n  value_angle =  'robot.clamp(' + value_angle + ', -99999, 99999)';\n\n  var code = 'robot.set_motor_encoder(' + value_channel + ',' + value_speed + ',' + value_angle + ')\\n';\n\n  return code;\n\n}"
+ },
+ "servoa_angle": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 309,
+  "end_line": 327,
+  "source": "Blockly.Python['servoa_angle'] = function(block)\n\n{\n\n  var value_channel =   block.getFieldValue('channel');\n\n  var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);\n\n  value_speed =  'robot.clamp(' + value_speed + ', 0, 100)';\n\n  var value_angle = Blockly.Python.valueToCode(block, 'angle', Blockly.Python.ORDER_ATOMIC);\n\n  value_angle =  'robot.clamp(' + value_angle + ', -90, 90)';\n\n  var code = 'robot.set_servo(' + value_channel + ',' + value_speed + ',' + value_angle + ')\\n';\n\n  return code;\n\n}"
+ },
+ "set_electric_magnet": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 331,
+  "end_line": 341,
+  "source": "Blockly.Python['set_electric_magnet'] = function(block)\n\n{\n\n  var value_channel = block.getFieldValue('channel');\n\n  var value_status = block.getFieldValue('status');\n\n  return 'robot.set_do(' + value_channel + ',' + value_status + ')\\n'\n\n}"
+ },
+ "set_motor_reverse_open_loop": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 345,
+  "end_line": 361,
+  "source": "Blockly.Python['set_motor_reverse_open_loop'] = function(block)\n\n{\n\n  var value_channel = block.getFieldValue('channel');\n\n  var motor_type = block.getFieldValue('motor_type');\n\n  var reverse = block.getFieldValue('reverse') == 'TRUE' ? 1 : 0;\n\n  var open_loop = block.getFieldValue('open_loop') == 'TRUE' ? 1 : 0;\n\n\n\n  return 'robot.set_motor_advanced(' + value_channel + ',' + motor_type + ',' + reverse + ',' + open_loop + ')\\n'\n\n}"
+ },
+ "setdo_led": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 367,
+  "end_line": 379,
+  "source": "Blockly.Python['setdo_led'] = function(block)\n\n{\n\n  var dropdown_channel = block.getFieldValue('channel');\n\n  var colour_name = block.getFieldValue('NAME');\n\n   var code = 'setDOLed(' + dropdown_channel + ',' + colour_name +')\\n';\n\n  return code;\n\n}"
+ },
+ "set_do": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 385,
+  "end_line": 397,
+  "source": "Blockly.Python['set_do'] = function(block)\n\n{\n\n  var dropdown_port = block.getFieldValue('PORT');\n\n  var dropdown_state = block.getFieldValue('STATE');\n\n  var code = 'robot.set_do(' + dropdown_port + ',' + dropdown_state +')\\n';\n\n  return code;\n\n}"
+ },
+ "printf_text": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 403,
+  "end_line": 1135,
+  "source": "Blockly.Python['printf_text'] = function(block)\n\n{\n\n  var text_text = block.getFieldValue('text');\n\n  text_text = text_text.replace(/\\'/g, \"\\\\'\");\n\n  var code = 'robot.print(\\'' + text_text +'\\\\n\\')\\n';\n\n  return code;\n\n};\n\n\n\n//显示数字\n\nBlockly.Python['printf_number'] = function(block)\n\n{\n\n  var text_dataname = block.getFieldValue('dataname');\n\n  console.log(text_dataname);\n\n  var value_data = Blockly.Python.valueToCode(block, 'data', Blockly.Python.ORDER_ATOMIC);\n\n  console.log(value_data);\n\n  // var code = 'robot.print(\\'' +text_dataname + '%d\\' % ' + value_data  + ',' + '\\'\\\\n\\'' +')\\n';\n\n  // var code = 'robot.print(\\'' +text_dataname + '\\' ,' + value_data + ',' + '\\'\\\\n\\'' + ')\\n';\n\n  var code = 'robot.print(\\'' + text_dataname + ' \\' +' + 'str(' + value_data + ') +'+ '\\'\\\\n\\''+')\\n';\n\n  // console.log(code);\n\n  return code;\n\n};\n\n\n\n//多行显示\n\nBlockly.Python['printf_lines'] = function(block)\n\n{\n\n  var statements_code = Blockly.Python.statementToCode(block, 'code');\n\n  if (statements_code == null || statements_code == '')\n\n  {\n\n    statements_code = Blockly.Python.PASS + '\\n';\n\n  }\n\n  var code = 'robot.clear()\\nif True:\\n' + statements_code + '\\n';\n\n  return code;\n\n};\n\n\n\n//printf生成\n\nBlockly.Python['printf'] = function(block)\n\n{\n\n  var value_para1 = Blockly.Python.valueToCode(block, 'para1', Blockly.Python.ORDER_ATOMIC);\n\n  value_para1 = value_para1 + ',' + '\\'\\\\n\\'';\n\n  var code = 'robot.print(' + value_para1 + ')\\n';\n\n  return code;\n\n};\n\n\n\n//显示表情\n\nBlockly.Python['printf_emoji'] = function (block)\n\n{\n\n  var emoji_name = block.getFieldValue('emoji_name');\n\n  var code = 'robot.print_expression(\\'' + emoji_name + '\\')\\n';\n\n  return code;\n\n}\n\n\n\n//播放模块 \n\nBlockly.Python['play_sound'] = function(block)\n\n{\n\n  var dropdown_musicname = block.getFieldValue('musicname');\n\n  var code = 'robot.play(\\'' + dropdown_musicname + '\\')\\n';\n\n  return code;\n\n};\n\n\n\n//播放模块阻塞\n\nBlockly.Python['play_sound_until'] = function(block)\n\n{\n\n  var dropdown_musicname = block.getFieldValue('musicname');\n\n  var code = 'robot.play_until(\\'' + dropdown_musicname + '\\')\\n';\n\n  return code;\n\n};\n\n\n\n//录音\n\nBlockly.Python['record'] = function (block)\n\n{\n\n  var record_ID = block.getFieldValue('record_ID');\n\n  var record_time = block.getFieldValue('record_time');\n\n  var code = 'robot.record_audio(' + record_ID + ',' + record_time + ')\\n';\n\n  return code;\n\n}\n\n\n\n//彩灯\n\nBlockly.Python['set_coloured_light'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var on_off = block.getFieldValue('on_off');\n\n  var code = 'robot.set_do(' + port + ',' + on_off + ')\\n';\n\n  return code;\n\n}\n\n\n\n//智能灯\n\nBlockly.Python['set_smart_light'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var mode = block.getFieldValue('mode');\n\n  var period = block.getFieldValue('period');\n\n  period = parseInt(period);\n\n  if (period < 0)\n\n    period = 0;\n\n  else if (period > 10)\n\n    period = 10;\n\n  var colour = block.getFieldValue('colour');\n\n\n\n  var r = colour.slice(1, 3);\n\n  var g = colour.slice(3, 5);\n\n  var b = colour.slice(5, 7);\n\n\n\n  r = parseInt(r, 16);\n\n  g = parseInt(g, 16);\n\n  b = parseInt(b, 16);\n\n\n\n  var code = 'robot.smart_led(' + port + ',' + mode + ',' + period + ',' + r + ',' + g + ',' + b + ')\\n';\n\n  return code;\n\n}\n\n\n\n//关闭智能灯\n\nBlockly.Python['close_smart_light'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var mode = 0; //mode为0代表关闭\n\n  var code = 'robot.smart_led(' + port + ',' + mode + ',0,0,0,0)\\n';\n\n  return code;\n\n}\n\n\n\n//读取麦克风\n\nBlockly.Python['getai_mic'] = function(block)\n\n{\n\n  var code = 'robot.get_mic()';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//读取红外测据传感器\n\nBlockly.Python['getai_ir'] = function(block)\n\n{\n\n  var dropdown_channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_infrared(' + dropdown_channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//读取火焰传感器\n\nBlockly.Python['get_flame'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.get_flame(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}\n\n\n\n//读取地面灰度传感器\n\nBlockly.Python['getai_glay'] = function(block)\n\n{\n\n  var dropdown_channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_gray(' + dropdown_channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//集成灰度\n\nBlockly.Python['get_integrated_grayscale'] = function(block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_channel_gray(' + port + ', ' + channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//超声测据传感器\n\nBlockly.Python['getai_sonic'] = function(block)\n\n{\n\n  var dropdown_channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_ultra_sonic(' + dropdown_channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//超声探测到物体\n\nBlockly.Python['get_sonic_detect_object'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  // var code = 'robot.is_ultrasonic_detacted(' + port + ')';\n\n  var code = '(robot.get_ultra_sonic(' + port + ') > 50 and robot.get_ultra_sonic('+ port + ') <200)';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//光敏强度\n\nBlockly.Python['getai_light'] = function(block)\n\n{\n\n  var dropdown_channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_light(' + dropdown_channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//角度传感器\n\nBlockly.Python['get_angle'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.get_angle(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}\n\n\n\n//获取智能电机角度\n\nBlockly.Python['get_intelligent_motor_angle'] = function (block)\n\n{\n\n  var port = block.getFieldValue('intelligent_motor_id');\n\n  var code = 'robot.get_servo_angle(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}\n\n\n\n//温度传感器\n\nBlockly.Python['getai_temperature'] = function(block)\n\n{\n\n  var dropdown_channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_temperature(' + dropdown_channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//湿度传感器\n\nBlockly.Python['get_humidity'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.get_humidity(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}\n\n\n\n//磁敏传感器\n\nBlockly.Python['get_magnetic'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.get_magnet(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//颜色传感器\n\nBlockly.Python['get_colour'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  // var colour = block.getFieldValue('colour');\n\n  // var code = 'robot.compare_color(' + port + ',' + colour + ')';\n\n  var code = 'robot.get_color(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//触碰传感器\n\nBlockly.Python['getai_touch'] = function(block)\n\n{\n\n  var dropdown_channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_touch(' + dropdown_channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//输入通道可以为参数的模拟采集模块\n\nBlockly.Python['get_aibychannel'] = function(block)\n\n{\n\n  var port = block.getFieldValue('Port');\n\n  var code = 'robot.get_ai(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//电量百分比\n\nBlockly.Python['getai_battery'] = function(block)\n\n{\n\n  var code = 'robot.get_battery()';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//扫秒二维码\n\nBlockly.Python['get_camcode'] = function(block)\n\n{\n\n  var value_time = Blockly.Python.valueToCode(block, 'time', Blockly.Python.ORDER_ATOMIC);\n\n  value_time =  'robot.clamp(' + value_time + ', 3, 30)';\n\n  var code = 'robot.start_qr_identify(' + value_time + ')'\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//读取9轴传感器数据\n\nBlockly.Python['getmotionsensor'] = function(block)\n\n{\n\n  var axis = block.getFieldValue('axis');\n\n  var code = 'robot.get_motion_sensor(0,' + axis + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//陀螺仪探测到\n\nBlockly.Python['get_motion_sensor_angular_velocity'] = function (block)\n\n{\n\n  var axis = block.getFieldValue('axis');\n\n  var code = 'robot.get_motion_sensor(1,' + axis + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}\n\n\n\n//9轴传感器清零\n\nBlockly.Python['resetmotionsensor'] = function(block)\n\n{\n\n  var code = 'robot.reset_gyro()\\n';\n\n  return code;\n\n};\n\n\n\n//获取电机编码器累计值\n\nBlockly.Python['getencoder'] = function(block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.get_encoder(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//获取电机编码器实时值\n\nBlockly.Python['get_encoder_real_time_value'] = function(block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code ='';\n\n   if (maingui.robotType == 'SKCON2')\n\n   {\n\n     code = 'robot.get_instant_encoder(' + port + ')';\n\n   }\n\n   else\n\n   {\n\n     code = 'robot.get_instant_incoder(' + port + ')';\n\n   }   \n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//电机编码器清零\n\nBlockly.Python['resetencoder'] = function(block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.reset_encoder(' + port + ');\\n';\n\n  return code;\n\n};\n\n\n\n//定时器清零\n\nBlockly.Python['getmsecondsreset'] = function(block)\n\n{\n\n  var timer_ID = block.getFieldValue('timer_ID');\n\n  var code = 'robot.reset_timer(' + timer_ID + ')\\n';\n\n  return code;\n\n};\n\n\n\n//获取定时器毫秒数\n\nBlockly.Python['getmseconds'] = function(block)\n\n{\n\n  var timer_ID = block.getFieldValue('timer_ID');\n\n  var code = 'robot.get_timer_ms(' + timer_ID + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//读取EEPROM\n\nBlockly.Python['eeprom_read'] = function(block)\n\n{\n\n  var address = block.getFieldValue('address');\n\n  var code = 'robot.get_ee(' + address + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n};\n\n\n\n//写入EEPROM\n\nBlockly.Python['eeprom_write'] = function(block)\n\n{\n\n  var address = block.getFieldValue('address');\n\n  var data = 'robot.clamp(' + Blockly.Python.valueToCode(block, 'data', Blockly.Python.ORDER_ATOMIC) + \", -99999, 99999)\";\n\n  var code = 'robot.set_ee(' + address + ',' + data + ')\\n';\n\n  return code;\n\n};\n\n\n\n//训练我的AI\n\nBlockly.Python['ai_learn'] = function (block)\n\n{\n\n  return '';\n\n}\n\n\n\n//AI开始识别\n\nBlockly.Python['ai_open'] = function (block)\n\n{\n\n  var aiFileName = block.getFieldValue('ai_file_name');\n\n  aiFileName = aiFileName.replace(\"\\'\",Blockly.Msg[\"ABILIX_SCRATCH_AI_SAMPLE_NAME\"]);\n\n  return 'robot.start_ai_identify(\\'' + aiFileName + '\\')\\n';\n\n}"
+ },
+ "printf_number": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 421,
+  "end_line": 443,
+  "source": "Blockly.Python['printf_number'] = function(block)\n\n{\n\n  var text_dataname = block.getFieldValue('dataname');\n\n  console.log(text_dataname);\n\n  var value_data = Blockly.Python.valueToCode(block, 'data', Blockly.Python.ORDER_ATOMIC);\n\n  console.log(value_data);\n\n  // var code = 'robot.print(\\'' +text_dataname + '%d\\' % ' + value_data  + ',' + '\\'\\\\n\\'' +')\\n';\n\n  // var code = 'robot.print(\\'' +text_dataname + '\\' ,' + value_data + ',' + '\\'\\\\n\\'' + ')\\n';\n\n  var code = 'robot.print(\\'' + text_dataname + ' \\' +' + 'str(' + value_data + ') +'+ '\\'\\\\n\\''+')\\n';\n\n  // console.log(code);\n\n  return code;\n\n}"
+ },
+ "printf_lines": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 449,
+  "end_line": 467,
+  "source": "Blockly.Python['printf_lines'] = function(block)\n\n{\n\n  var statements_code = Blockly.Python.statementToCode(block, 'code');\n\n  if (statements_code == null || statements_code == '')\n\n  {\n\n    statements_code = Blockly.Python.PASS + '\\n';\n\n  }\n\n  var code = 'robot.clear()\\nif True:\\n' + statements_code + '\\n';\n\n  return code;\n\n}"
+ },
+ "printf": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 473,
+  "end_line": 485,
+  "source": "Blockly.Python['printf'] = function(block)\n\n{\n\n  var value_para1 = Blockly.Python.valueToCode(block, 'para1', Blockly.Python.ORDER_ATOMIC);\n\n  value_para1 = value_para1 + ',' + '\\'\\\\n\\'';\n\n  var code = 'robot.print(' + value_para1 + ')\\n';\n\n  return code;\n\n}"
+ },
+ "printf_emoji": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 491,
+  "end_line": 501,
+  "source": "Blockly.Python['printf_emoji'] = function (block)\n\n{\n\n  var emoji_name = block.getFieldValue('emoji_name');\n\n  var code = 'robot.print_expression(\\'' + emoji_name + '\\')\\n';\n\n  return code;\n\n}"
+ },
+ "play_sound": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 507,
+  "end_line": 517,
+  "source": "Blockly.Python['play_sound'] = function(block)\n\n{\n\n  var dropdown_musicname = block.getFieldValue('musicname');\n\n  var code = 'robot.play(\\'' + dropdown_musicname + '\\')\\n';\n\n  return code;\n\n}"
+ },
+ "play_sound_until": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 523,
+  "end_line": 533,
+  "source": "Blockly.Python['play_sound_until'] = function(block)\n\n{\n\n  var dropdown_musicname = block.getFieldValue('musicname');\n\n  var code = 'robot.play_until(\\'' + dropdown_musicname + '\\')\\n';\n\n  return code;\n\n}"
+ },
+ "record": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 539,
+  "end_line": 551,
+  "source": "Blockly.Python['record'] = function (block)\n\n{\n\n  var record_ID = block.getFieldValue('record_ID');\n\n  var record_time = block.getFieldValue('record_time');\n\n  var code = 'robot.record_audio(' + record_ID + ',' + record_time + ')\\n';\n\n  return code;\n\n}"
+ },
+ "set_coloured_light": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 557,
+  "end_line": 569,
+  "source": "Blockly.Python['set_coloured_light'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var on_off = block.getFieldValue('on_off');\n\n  var code = 'robot.set_do(' + port + ',' + on_off + ')\\n';\n\n  return code;\n\n}"
+ },
+ "set_smart_light": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 575,
+  "end_line": 619,
+  "source": "Blockly.Python['set_smart_light'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var mode = block.getFieldValue('mode');\n\n  var period = block.getFieldValue('period');\n\n  period = parseInt(period);\n\n  if (period < 0)\n\n    period = 0;\n\n  else if (period > 10)\n\n    period = 10;\n\n  var colour = block.getFieldValue('colour');\n\n\n\n  var r = colour.slice(1, 3);\n\n  var g = colour.slice(3, 5);\n\n  var b = colour.slice(5, 7);\n\n\n\n  r = parseInt(r, 16);\n\n  g = parseInt(g, 16);\n\n  b = parseInt(b, 16);\n\n\n\n  var code = 'robot.smart_led(' + port + ',' + mode + ',' + period + ',' + r + ',' + g + ',' + b + ')\\n';\n\n  return code;\n\n}"
+ },
+ "close_smart_light": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 625,
+  "end_line": 637,
+  "source": "Blockly.Python['close_smart_light'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var mode = 0; //mode为0代表关闭\n\n  var code = 'robot.smart_led(' + port + ',' + mode + ',0,0,0,0)\\n';\n\n  return code;\n\n}"
+ },
+ "getai_mic": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 643,
+  "end_line": 651,
+  "source": "Blockly.Python['getai_mic'] = function(block)\n\n{\n\n  var code = 'robot.get_mic()';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "getai_ir": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 657,
+  "end_line": 667,
+  "source": "Blockly.Python['getai_ir'] = function(block)\n\n{\n\n  var dropdown_channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_infrared(' + dropdown_channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "get_flame": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 673,
+  "end_line": 683,
+  "source": "Blockly.Python['get_flame'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.get_flame(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "getai_glay": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 689,
+  "end_line": 699,
+  "source": "Blockly.Python['getai_glay'] = function(block)\n\n{\n\n  var dropdown_channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_gray(' + dropdown_channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "get_integrated_grayscale": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 705,
+  "end_line": 717,
+  "source": "Blockly.Python['get_integrated_grayscale'] = function(block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_channel_gray(' + port + ', ' + channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "getai_sonic": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 723,
+  "end_line": 733,
+  "source": "Blockly.Python['getai_sonic'] = function(block)\n\n{\n\n  var dropdown_channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_ultra_sonic(' + dropdown_channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "get_sonic_detect_object": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 739,
+  "end_line": 751,
+  "source": "Blockly.Python['get_sonic_detect_object'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  // var code = 'robot.is_ultrasonic_detacted(' + port + ')';\n\n  var code = '(robot.get_ultra_sonic(' + port + ') > 50 and robot.get_ultra_sonic('+ port + ') <200)';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "getai_light": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 757,
+  "end_line": 767,
+  "source": "Blockly.Python['getai_light'] = function(block)\n\n{\n\n  var dropdown_channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_light(' + dropdown_channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "get_angle": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 773,
+  "end_line": 783,
+  "source": "Blockly.Python['get_angle'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.get_angle(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "get_intelligent_motor_angle": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 789,
+  "end_line": 799,
+  "source": "Blockly.Python['get_intelligent_motor_angle'] = function (block)\n\n{\n\n  var port = block.getFieldValue('intelligent_motor_id');\n\n  var code = 'robot.get_servo_angle(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "getai_temperature": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 805,
+  "end_line": 815,
+  "source": "Blockly.Python['getai_temperature'] = function(block)\n\n{\n\n  var dropdown_channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_temperature(' + dropdown_channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "get_humidity": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 821,
+  "end_line": 831,
+  "source": "Blockly.Python['get_humidity'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.get_humidity(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "get_magnetic": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 837,
+  "end_line": 847,
+  "source": "Blockly.Python['get_magnetic'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.get_magnet(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "get_colour": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 853,
+  "end_line": 867,
+  "source": "Blockly.Python['get_colour'] = function (block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  // var colour = block.getFieldValue('colour');\n\n  // var code = 'robot.compare_color(' + port + ',' + colour + ')';\n\n  var code = 'robot.get_color(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "getai_touch": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 873,
+  "end_line": 883,
+  "source": "Blockly.Python['getai_touch'] = function(block)\n\n{\n\n  var dropdown_channel = block.getFieldValue('channel');\n\n  var code = 'robot.get_touch(' + dropdown_channel + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "get_aibychannel": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 889,
+  "end_line": 899,
+  "source": "Blockly.Python['get_aibychannel'] = function(block)\n\n{\n\n  var port = block.getFieldValue('Port');\n\n  var code = 'robot.get_ai(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "getai_battery": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 905,
+  "end_line": 913,
+  "source": "Blockly.Python['getai_battery'] = function(block)\n\n{\n\n  var code = 'robot.get_battery()';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "get_camcode": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 919,
+  "end_line": 931,
+  "source": "Blockly.Python['get_camcode'] = function(block)\n\n{\n\n  var value_time = Blockly.Python.valueToCode(block, 'time', Blockly.Python.ORDER_ATOMIC);\n\n  value_time =  'robot.clamp(' + value_time + ', 3, 30)';\n\n  var code = 'robot.start_qr_identify(' + value_time + ')'\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "getmotionsensor": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 937,
+  "end_line": 947,
+  "source": "Blockly.Python['getmotionsensor'] = function(block)\n\n{\n\n  var axis = block.getFieldValue('axis');\n\n  var code = 'robot.get_motion_sensor(0,' + axis + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "get_motion_sensor_angular_velocity": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 953,
+  "end_line": 963,
+  "source": "Blockly.Python['get_motion_sensor_angular_velocity'] = function (block)\n\n{\n\n  var axis = block.getFieldValue('axis');\n\n  var code = 'robot.get_motion_sensor(1,' + axis + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "resetmotionsensor": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 969,
+  "end_line": 977,
+  "source": "Blockly.Python['resetmotionsensor'] = function(block)\n\n{\n\n  var code = 'robot.reset_gyro()\\n';\n\n  return code;\n\n}"
+ },
+ "getencoder": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 983,
+  "end_line": 993,
+  "source": "Blockly.Python['getencoder'] = function(block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.get_encoder(' + port + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "get_encoder_real_time_value": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 999,
+  "end_line": 1025,
+  "source": "Blockly.Python['get_encoder_real_time_value'] = function(block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code ='';\n\n   if (maingui.robotType == 'SKCON2')\n\n   {\n\n     code = 'robot.get_instant_encoder(' + port + ')';\n\n   }\n\n   else\n\n   {\n\n     code = 'robot.get_instant_incoder(' + port + ')';\n\n   }   \n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "resetencoder": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1031,
+  "end_line": 1041,
+  "source": "Blockly.Python['resetencoder'] = function(block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.reset_encoder(' + port + ');\\n';\n\n  return code;\n\n}"
+ },
+ "getmsecondsreset": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1047,
+  "end_line": 1057,
+  "source": "Blockly.Python['getmsecondsreset'] = function(block)\n\n{\n\n  var timer_ID = block.getFieldValue('timer_ID');\n\n  var code = 'robot.reset_timer(' + timer_ID + ')\\n';\n\n  return code;\n\n}"
+ },
+ "getmseconds": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1063,
+  "end_line": 1073,
+  "source": "Blockly.Python['getmseconds'] = function(block)\n\n{\n\n  var timer_ID = block.getFieldValue('timer_ID');\n\n  var code = 'robot.get_timer_ms(' + timer_ID + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "eeprom_read": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1079,
+  "end_line": 1089,
+  "source": "Blockly.Python['eeprom_read'] = function(block)\n\n{\n\n  var address = block.getFieldValue('address');\n\n  var code = 'robot.get_ee(' + address + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "eeprom_write": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1095,
+  "end_line": 1107,
+  "source": "Blockly.Python['eeprom_write'] = function(block)\n\n{\n\n  var address = block.getFieldValue('address');\n\n  var data = 'robot.clamp(' + Blockly.Python.valueToCode(block, 'data', Blockly.Python.ORDER_ATOMIC) + \", -99999, 99999)\";\n\n  var code = 'robot.set_ee(' + address + ',' + data + ')\\n';\n\n  return code;\n\n}"
+ },
+ "ai_learn": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1113,
+  "end_line": 1119,
+  "source": "Blockly.Python['ai_learn'] = function (block)\n\n{\n\n  return '';\n\n}"
+ },
+ "ai_open": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1125,
+  "end_line": 1135,
+  "source": "Blockly.Python['ai_open'] = function (block)\n\n{\n\n  var aiFileName = block.getFieldValue('ai_file_name');\n\n  aiFileName = aiFileName.replace(\"\\'\",Blockly.Msg[\"ABILIX_SCRATCH_AI_SAMPLE_NAME\"]);\n\n  return 'robot.start_ai_identify(\\'' + aiFileName + '\\')\\n';\n\n}"
+ },
+ "ai_close": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1141,
+  "end_line": 1147,
+  "source": "Blockly.Python['ai_close'] = function (block)\n\n{\n\n  return 'robot.stop_ai_identify()\\n';\n\n}"
+ },
+ "ai_result": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1153,
+  "end_line": 1159,
+  "source": "Blockly.Python['ai_result'] = function (block)\n\n{\n\n  return ['robot.get_ai_result()', Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "if": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1165,
+  "end_line": 1181,
+  "source": "Blockly.Python['if'] = function(block)\n\n{\n\n  var value_logic_val = Blockly.Python.valueToCode(block, 'logic_val', Blockly.Python.ORDER_ATOMIC);\n\n  var statements_code = Blockly.Python.statementToCode(block, 'code');\n\n  if(statements_code == '')\n\n    statements_code = Blockly.Python.PASS;\n\n  var code = 'if ' + value_logic_val + ':\\n' + statements_code;\n\n  return code;\n\n}"
+ },
+ "ifelse": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1187,
+  "end_line": 1215,
+  "source": "Blockly.Python['ifelse'] = function(block)\n\n{\n\n  var value_logic_val = Blockly.Python.valueToCode(block, 'logic_val', Blockly.Python.ORDER_ATOMIC);\n\n  console.log(value_logic_val);\n\n  var statements_code = Blockly.Python.statementToCode(block, 'code');\n\n  if(statements_code == '')\n\n  \tstatements_code = Blockly.Python.PASS;\n\n  console.log(statements_code);\n\n  var statements_else_code = Blockly.Python.statementToCode(block, 'else_code');\n\n  if(statements_else_code == '')\n\n  \tstatements_else_code = Blockly.Python.PASS;\n\n  console.log(statements_else_code);\n\n  var code = 'if ' + value_logic_val + ':\\n' + statements_code + 'else:\\n' + statements_else_code;\n\n  return code;\n\n}"
+ },
+ "while_forver": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1221,
+  "end_line": 1235,
+  "source": "Blockly.Python['while_forver'] = function(block)\n\n{\n\n  var statements_name = Blockly.Python.statementToCode(block, 'NAME');\n\n  if(statements_name == '')\n\n  \tstatements_name = Blockly.Python.PASS;\n\n  var code = 'while True:\\n' + statements_name + '';\n\n  return code;\n\n}"
+ },
+ "while_cmp": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1241,
+  "end_line": 1257,
+  "source": "Blockly.Python['while_cmp'] = function(block)\n\n{\n\n  var value_bool = Blockly.Python.valueToCode(block, 'bool', Blockly.Python.ORDER_ATOMIC);\n\n  var statements_code = Blockly.Python.statementToCode(block, 'code');\n\n  if(statements_code == '')\n\n  \tstatements_code = Blockly.Python.PASS;\n\n  var code = 'while not ' +  value_bool + ':\\n' + statements_code + '';\n\n  return code;\n\n}"
+ },
+ "while_number": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1263,
+  "end_line": 1309,
+  "source": "Blockly.Python['while_number'] = function(block)\n\n{\n\n  // Repeat n times.\n\n  if (block.getField('TIMES')) {\n\n    // Internal number.\n\n    var repeats = String(parseInt(block.getFieldValue('TIMES'), 10));\n\n  } else {\n\n    // External number.\n\n    var repeats = Blockly.Python.valueToCode(block, 'TIMES',\n\n        Blockly.Python.ORDER_NONE) || '0';\n\n  }\n\n  if (Blockly.isNumber(repeats)) {\n\n    repeats = parseInt(repeats, 10);\n\n  } else {\n\n    repeats = 'int(' + repeats + ')';\n\n  }\n\n  var branch = Blockly.Python.statementToCode(block, 'code');\n\n  branch = Blockly.Python.addLoopTrap(branch, block.id) ||\n\n      Blockly.Python.PASS;\n\n  var loopVar = Blockly.Python.variableDB_.getDistinctName(\n\n      'count', Blockly.Variables.NAME_TYPE);\n\n  var code = 'for ' + loopVar + ' in range(' + repeats + '):\\n' + branch;\n\n  return code;\n\n}"
+ },
+ "wait_until": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1315,
+  "end_line": 1327,
+  "source": "Blockly.Python['wait_until'] = function(block)\n\n{\n\n  var value_bool = Blockly.Python.valueToCode(block, 'bool', Blockly.Python.ORDER_ATOMIC);\n\n  var statements_code = Blockly.Python.PASS;\n\n  var code = 'while not ' +  value_bool + ':\\n' + statements_code + '';\n\n  return code;\n\n}"
+ },
+ "while_break": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1333,
+  "end_line": 1341,
+  "source": "Blockly.Python['while_break'] = function(block)\n\n{\n\n  var code = 'break\\n';\n\n  return code;\n\n}"
+ },
+ "wait": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1345,
+  "end_line": 1371,
+  "source": "Blockly.Python['wait'] = function(block)\n\n{\n\n  var value_time = Blockly.Python.valueToCode(block, 'time', Blockly.Python.ORDER_ATOMIC);\n\n  var code =\"\";\n\n  if (maingui.robotType == 'SKCON2')\n\n  {\n\n    code = 'robot.sleep(' + value_time + ')\\n';\n\n  }\n\n  else\n\n  {\n\n    code = 'time.sleep(' + value_time + ')\\n';\n\n  } \n\n  return code;\n\n}"
+ },
+ "new_var": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1377,
+  "end_line": 1389,
+  "source": "Blockly.Python['new_var'] = function(block)\n\n{\n\n  var text_name = block.getFieldValue('NAME');\n\n  var value_name = Blockly.Python.valueToCode(block, 'NAME', Blockly.Python.ORDER_ATOMIC);\n\n  var code = text_name + '=' + value_name + '\\n';\n\n  return code;\n\n}"
+ },
+ "setup_var": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1393,
+  "end_line": 1405,
+  "source": "Blockly.Python['setup_var'] = function(block)\n\n{\n\n  var text_name = block.getFieldValue('NAME');\n\n  var value_name = Blockly.Python.valueToCode(block, 'NAME', Blockly.Python.ORDER_ATOMIC);\n\n  var code =  text_name + '=' + value_name + '\\n';\n\n  return code;\n\n}"
+ },
+ "read_var": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1411,
+  "end_line": 1421,
+  "source": "Blockly.Python['read_var'] = function(block)\n\n{\n\n  var text_name = block.getFieldValue('NAME');\n\n  var code = text_name;\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "var_add": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1427,
+  "end_line": 1439,
+  "source": "Blockly.Python['var_add'] = function(block)\n\n{\n\n  var text_var = block.getFieldValue('var');\n\n  var value_name = Blockly.Python.valueToCode(block, 'NAME', Blockly.Python.ORDER_ATOMIC);\n\n  var code = text_var + ' += ' + value_name + '\\n';\n\n  return code;\n\n}"
+ },
+ "arr_new": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1447,
+  "end_line": 1463,
+  "source": "Blockly.Python['arr_new'] = function(block)\n\n{\n\n  var text_name = block.getFieldValue('NAME');\n\n  var array_length = 'robot.clamp(' + Blockly.Python.valueToCode(block, 'length', Blockly.Python.ORDER_ATOMIC) + ', 0, 999999)';\n\n  var code = text_name +' = []\\n'\n\n           + 'for i in range(' + array_length + '):\\n' \n\n           + Blockly.Python.INDENT + text_name + '.append(0)\\n';\n\n  return code;\n\n}"
+ },
+ "arr_setvalue": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1469,
+  "end_line": 1483,
+  "source": "Blockly.Python['arr_setvalue'] = function(block)\n\n{\n\n  var text_arrname = block.getFieldValue('arrname');\n\n  var value_index = Blockly.Python.valueToCode(block, 'index', Blockly.Python.ORDER_ATOMIC);\n\n  var value_data = Blockly.Python.valueToCode(block, 'data', Blockly.Python.ORDER_ATOMIC);\n\n  var code = text_arrname + '[' + value_index + '] = ' + value_data +'\\n';\n\n  return code;\n\n}"
+ },
+ "arr_insert": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1489,
+  "end_line": 1503,
+  "source": "Blockly.Python['arr_insert'] = function(block)\n\n{\n\n  var text_arrname = block.getFieldValue('arrname');\n\n  var value_index = Blockly.Python.valueToCode(block, 'index', Blockly.Python.ORDER_ATOMIC);\n\n  var value_data = Blockly.Python.valueToCode(block, 'data', Blockly.Python.ORDER_ATOMIC);\n\n  var code = text_arrname + '.insert(' + value_index + ' ,' + value_data +')\\n';\n\n  return code;\n\n}"
+ },
+ "arr_sort": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1509,
+  "end_line": 1533,
+  "source": "Blockly.Python['arr_sort'] = function(block)\n\n{\n\n  var text_arrname = block.getFieldValue('arrname');\n\n  var dropdown_sorttype = block.getFieldValue('sorttype');\n\n  var code = '';\n\n  var reverse = 'False';\n\n  if(dropdown_sorttype == 1)//降序\n\n  \treverse = 'True';\n\n  else\n\n  \treverse = 'False';\n\n  code = text_arrname + '.sort(reverse = ' + reverse + ')\\n';\n\n  return code;\n\n}"
+ },
+ "arr_getvalue": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1539,
+  "end_line": 1551,
+  "source": "Blockly.Python['arr_getvalue'] = function(block)\n\n{\n\n  var text_arrname = block.getFieldValue('arrname');\n\n  var value_name = Blockly.Python.valueToCode(block, 'NAME', Blockly.Python.ORDER_ATOMIC);\n\n  var code = text_arrname + '[' + value_name + ']';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "arr_lenght": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1557,
+  "end_line": 1567,
+  "source": "Blockly.Python['arr_lenght'] = function(block)\n\n{\n\n  var text_arrname = block.getFieldValue('arrname');\n\n  var code = 'len(' + text_arrname + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "arr_math": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1573,
+  "end_line": 1601,
+  "source": "Blockly.Python['arr_math'] = function(block)\n\n{\n\n  var text_arrname = block.getFieldValue('arrname');\n\n  var dropdown_optype = block.getFieldValue('optype');\n\n  var code='';\n\n  if(dropdown_optype == 0)//sum\n\n  \tcode='sum(' + text_arrname + ')';\n\n  else if(dropdown_optype == 1)//avg\n\n  \tcode='sum(' + text_arrname + ') / ' + 'len(' + text_arrname + ')';  \t\n\n  else if(dropdown_optype == 2)//最大值\n\n  \tcode='max(' + text_arrname + ')';  \t\n\n  else if(dropdown_optype == 3)//最小值\n\n  \tcode='min(' + text_arrname + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "function_new": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1609,
+  "end_line": 1621,
+  "source": "Blockly.Python['function_new'] = function(block)\n\n{\n\n  var text_name = block.getFieldValue('NAME');\n\n  var statements_name = Blockly.Python.statementToCode(block, 'NAME');\n\n  var code = 'def -1' + text_name + '():\\n' + statements_name + Blockly.Python.INDENT + 'return\\n\\n' ;\n\n  return code;\n\n}"
+ },
+ "function_new_para1": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1627,
+  "end_line": 1643,
+  "source": "Blockly.Python['function_new_para1'] = function(block)\n\n{\n\n  var text_name = block.getFieldValue('NAME');\n\n  var text_para1 = block.getFieldValue('para1');\n\n  var statements_name = Blockly.Python.statementToCode(block, 'NAME');\n\n  var value_returnval = Blockly.Python.valueToCode(block, 'returnval', Blockly.Python.ORDER_ATOMIC);\n\n  var code = 'def -2' + text_name + '(' + text_para1 +'):\\n' + statements_name + Blockly.Python.INDENT + 'return\\n\\n' ;\n\n  return code;\n\n}"
+ },
+ "function_new_para2": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1649,
+  "end_line": 1667,
+  "source": "Blockly.Python['function_new_para2'] = function(block)\n\n{\n\n  var text_name = block.getFieldValue('NAME');\n\n  var text_para1 = block.getFieldValue('para1');\n\n  var text_para2 = block.getFieldValue('para2');\n\n  var statements_name = Blockly.Python.statementToCode(block, 'NAME');\n\n  var value_returnval = Blockly.Python.valueToCode(block, 'returnval', Blockly.Python.ORDER_ATOMIC);\n\n  var code = 'def -3' + text_name + '(' + text_para1 +' , ' + text_para2 +'):\\n' + statements_name + Blockly.Python.INDENT + 'return\\n\\n' ;\n\n  return code;\n\n}"
+ },
+ "function_call_noreturn": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1673,
+  "end_line": 1683,
+  "source": "Blockly.Python['function_call_noreturn'] = function(block)\n\n{\n\n  var text_name = block.getFieldValue('NAME');\n\n  var code = text_name+'()----;\\n';\n\n  return code;\n\n}"
+ },
+ "function_call_noreturn_para1": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1689,
+  "end_line": 1701,
+  "source": "Blockly.Python['function_call_noreturn_para1'] = function(block)\n\n{\n\n  var text_name = block.getFieldValue('NAME');\n\n  var value_para1 = Blockly.Python.valueToCode(block, 'para1', Blockly.Python.ORDER_ATOMIC);\n\n  var code = text_name+'(' + value_para1 + ');\\n';\n\n  return code;\n\n}"
+ },
+ "function_call_noreturn_para2": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1707,
+  "end_line": 1723,
+  "source": "Blockly.Python['function_call_noreturn_para2'] = function(block)\n\n{\n\n  var text_name = block.getFieldValue('NAME');\n\n  var value_para1 = Blockly.Python.valueToCode(block, 'para1', Blockly.Python.ORDER_ATOMIC);\n\n  var value_para2 = Blockly.Python.valueToCode(block, 'para2', Blockly.Python.ORDER_ATOMIC);\n\n  // TODO: Assemble Python into code variable.\n\n  var code = text_name+'(' + value_para1 + ' , ' +  value_para2 + ');\\n';\n\n  return code;\n\n}"
+ },
+ "walkline_init": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1731,
+  "end_line": 1779,
+  "source": "Blockly.Python['walkline_init'] = function(block)\n\n{\n\n  var dropdown_leftch = block.getFieldValue('leftch');\n\n  var number_leftspeed = block.getFieldValue('leftspeed');\n\n  var dropdown_rightch = block.getFieldValue('rightch');\n\n  var number_rightspeed = block.getFieldValue('rightspeed');\n\n  var dropdown_ch1 = block.getFieldValue('ch1');\n\n  var dropdown_ch2 = block.getFieldValue('ch2');\n\n  var dropdown_ch3 = block.getFieldValue('ch3');\n\n  var dropdown_ch4 = block.getFieldValue('ch4');\n\n  var dropdown_ch5 = block.getFieldValue('ch5');\n\n  // TODO: Assemble Python into code variable.\n\n  var code = 'robot.WER_InitRobot_5(' + dropdown_leftch + ','+ \n\n                      \t\t\t\t\t\tnumber_leftspeed + ','+ \n\n                      \t\t\t\t\t\tdropdown_rightch + ','+ \n\n                      \t\t\t\t\t\tnumber_rightspeed + ','+                       \n\n                      \t\t\t\t\t\tdropdown_ch1 + ','+ \n\n                      \t\t\t\t\t\tdropdown_ch2 + ','+ \n\n                      \t\t\t\t\t\tdropdown_ch3 + ','+  \n\n                      \t\t\t\t\t\tdropdown_ch4 + ','+\n\n                      \t\t\t\t\t\tdropdown_ch5 + ''+\n\n                      \t\t\t\t\t\t');\\n';\n\n  \n\n  return code;\n\n}"
+ },
+ "walkline_init_integrated_grayscale": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1785,
+  "end_line": 1813,
+  "source": "Blockly.Python['walkline_init_integrated_grayscale'] = function(block)\n\n{\n\n  var dropdown_leftch = block.getFieldValue('leftch');\n\n  var number_leftspeed = block.getFieldValue('leftspeed');\n\n  var dropdown_rightch = block.getFieldValue('rightch');\n\n  var number_rightspeed = block.getFieldValue('rightspeed');\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.WER_InitRobot(' + dropdown_leftch + ','+ \n\n                                  number_leftspeed + ','+ \n\n                                  dropdown_rightch + ','+ \n\n                                  number_rightspeed + ','+                       \n\n                                  port +\n\n                                  ');\\n';\n\n  return code;\n\n}"
+ },
+ "walkline_floorsensor": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1821,
+  "end_line": 1829,
+  "source": "Blockly.Python['walkline_floorsensor'] = function(block)\n\n{\n\n  var code = 'robot.WER_Set_GrayscaleSensor();\\n';\n\n  return code;\n\n}"
+ },
+ "walkline_linewayc": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1835,
+  "end_line": 1883,
+  "source": "Blockly.Python['walkline_linewayc'] = function(block)\n\n{\n\n  var dropdown_type = block.getFieldValue('type');\n\n  var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);\n\n  // value_speed = 'robot.clamp(' + value_speed + ', -100, 100)';\n\n  var value_time = Blockly.Python.valueToCode(block, 'time', Blockly.Python.ORDER_ATOMIC);\n\n  // value_time =  'robot.clamp(' + value_time + ', 0, 60)';\n\n  // TODO: Assemble Python into code variable.\n\n\n\n  var code = '';\n\n   if (maingui.robotType == 'SKCON2')\n\n   {\n\n     code = 'robot.WER_LineWay_C('+ 'robot.clamp(' + value_speed + ',10,100),' +\n\n                                    dropdown_type + ',robot.clamp('+ \n\n                                  value_time + ',0,60))\\n';      \n\n   }\n\n   else\n\n   {\n\n      code = 'robot.WER_LineWay_C(' + dropdown_type + ',robot.clamp('+ \n\n                                    value_speed + ',10,100),robot.clamp('+ \n\n                                  value_time + ',0,60))\\n';   \n\n   }\n\n                  \t\t\t\t\t\t\n\n  return code;\n\n}"
+ },
+ "walkline_linewayt": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1889,
+  "end_line": 1909,
+  "source": "Blockly.Python['walkline_linewayt'] = function(block)\n\n{\n\n  var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);\n\n  value_speed =  'robot.clamp(' + value_speed + ', -100, 100)';\n\n  var value_time = Blockly.Python.valueToCode(block, 'time', Blockly.Python.ORDER_ATOMIC);\n\n  value_time =  'robot.clamp(' + value_time + ', 0, 3600)';\n\n  var code = 'robot.WER_AdvancedWay_T(' +   value_speed + ','+ \n\n                      \t\t\t\t\t\tvalue_time + ''+ \n\n                      \t\t\t\t\t\t');\\n';\n\n  return code;\n\n}"
+ },
+ "walkline_lineway_e": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1915,
+  "end_line": 1933,
+  "source": "Blockly.Python['walkline_lineway_e'] = function(block)\n\n{\n\n  var speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);\n\n  speed =  'robot.clamp(' + speed + ', -100, 100)';\n\n  var motor_port = block.getFieldValue('motor_port');\n\n  var encoder_value = Blockly.Python.valueToCode(block, 'encoder_value', Blockly.Python.ORDER_ATOMIC);\n\n  encoder_value =  'robot.clamp(' + encoder_value + ', -99999, 99999)';\n\n  var code ='robot.WER_AdvancedWay_E(' + speed + ',' + motor_port + ',' + encoder_value + ')\\n';\n\n  return code;\n\n}"
+ },
+ "walkline_stop_until": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1939,
+  "end_line": 1957,
+  "source": "Blockly.Python['walkline_stop_until'] = function (block)\n\n{\n\n  var speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);\n\n  speed =  'robot.clamp(' + speed + ', -100, 100)';\n\n  var stop_condition = Blockly.Python.valueToCode(block, 'stop_condition', Blockly.Python.ORDER_ATOMIC);\n\n  var code = 'while(not '+ stop_condition + '):\\n' +\n\n             Blockly.Python.INDENT + 'robot.WER_AdvancedWay_K('+ speed + ')\\n'+\n\n             'robot.WER_AdvancedWay_K(0)\\n'\n\n  return code;\n\n}"
+ },
+ "walkline_around": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1963,
+  "end_line": 1987,
+  "source": "Blockly.Python['walkline_around'] = function(block)\n\n{\n\n  var value_leftspeed = Blockly.Python.valueToCode(block, 'leftspeed', Blockly.Python.ORDER_ATOMIC);\n\n  value_leftspeed =  'robot.clamp(' + value_leftspeed + ', -100, 100)';\n\n  var value_rightspeed = Blockly.Python.valueToCode(block, 'rightspeed', Blockly.Python.ORDER_ATOMIC);\n\n  value_rightspeed =  'robot.clamp(' + value_rightspeed + ', -100, 100)';\n\n  var dropdown_stopoption = block.getFieldValue('stopoption');\n\n  var code = 'robot.WER_Around('    +   value_leftspeed + ','+ \n\n                      \t\t\t\t\t\tvalue_rightspeed + ','+ \n\n                      \t\t\t\t\t\tdropdown_stopoption + ''+ \n\n                      \t\t\t\t\t\t');\\n';\n\n  return code;\n\n}"
+ },
+ "walkline_start_motor_last": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 1993,
+  "end_line": 2013,
+  "source": "Blockly.Python['walkline_start_motor_last'] = function(block)\n\n{\n\n  var left_speed = Blockly.Python.valueToCode(block, 'left_speed', Blockly.Python.ORDER_ATOMIC);\n\n  left_speed =  'robot.clamp(' + left_speed + ', -100, 100)';\n\n  var right_speed = Blockly.Python.valueToCode(block, 'right_speed', Blockly.Python.ORDER_ATOMIC);\n\n  right_speed =  'robot.clamp(' + right_speed + ', -100, 100)';\n\n  var duration = Blockly.Python.valueToCode(block, 'duration', Blockly.Python.ORDER_ATOMIC);\n\n  duration =  'robot.clamp(' + duration + ', 0, 3600)';\n\n  var code = 'robot.WER_SetMotor_T(' + left_speed + ',' + right_speed + ',' + duration + ');\\n';\n\n  return code;\n\n}"
+ },
+ "wer_set_motor_e": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2019,
+  "end_line": 2041,
+  "source": "Blockly.Python['wer_set_motor_e'] = function(block)\n\n{\n\n  var left_speed = Blockly.Python.valueToCode(block, 'left_speed', Blockly.Python.ORDER_ATOMIC);\n\n  left_speed =  'robot.clamp(' + left_speed + ', -100, 100)';\n\n  var right_speed = Blockly.Python.valueToCode(block, 'right_speed', Blockly.Python.ORDER_ATOMIC);\n\n  right_speed =  'robot.clamp(' + right_speed + ', -100, 100)';\n\n  var motor_port = block.getFieldValue('motor_port');\n\n  var encoder_value = Blockly.Python.valueToCode(block, 'encoder_value', Blockly.Python.ORDER_ATOMIC);\n\n  encoder_value =  'robot.clamp(' + encoder_value + ', -99999, 99999)';\n\n  var code = 'robot.WER_SetMotor_E(' + left_speed + ',' + right_speed + ',' + motor_port + ',' + encoder_value + ')\\n';\n\n  return code;\n\n}"
+ },
+ "walkline_motor_stop_until": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2045,
+  "end_line": 2067,
+  "source": "Blockly.Python['walkline_motor_stop_until'] = function(block)\n\n{\n\n  var left_speed = Blockly.Python.valueToCode(block, 'leftspeed', Blockly.Python.ORDER_ATOMIC);\n\n  left_speed =  'robot.clamp(' + left_speed + ', -100, 100)';\n\n  var right_speed = Blockly.Python.valueToCode(block, 'rightspeed', Blockly.Python.ORDER_ATOMIC);\n\n  right_speed =  'robot.clamp(' + right_speed + ', -100, 100)';\n\n  var value_stopbool = Blockly.Python.valueToCode(block, 'stopbool', Blockly.Python.ORDER_ATOMIC);\n\n  var code = 'while(not '+ value_stopbool + '):\\n'+ \n\n             Blockly.Python.INDENT + 'robot.WER_SetMotor_K(' + left_speed + ',' + right_speed + ')\\n' +\n\n             'robot.WER_SetMotor_K(0,0)' + '\\n';\n\n  return code;\n\n}"
+ },
+ "math_constval": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2073,
+  "end_line": 2083,
+  "source": "Blockly.Python['math_constval'] = function(block)\n\n{\n\n  var dropdown_valname = block.getFieldValue('valname');\n\n  var code = dropdown_valname;\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "math_op": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2109,
+  "end_line": 2131,
+  "source": "Blockly.Python['math_op'] = function(block)\n\n{\n\n  var value_a = Blockly.Python.valueToCode(block, 'A', Blockly.Python.ORDER_ATOMIC);\n\n  var dropdown_valname = block.getFieldValue('valname');\n\n  var value_b = Blockly.Python.valueToCode(block, 'B', Blockly.Python.ORDER_ATOMIC);\n\n  var code = '...';\n\n  if(dropdown_valname == '^')\n\n  \tcode='robot.pow(' + value_a + ',' + value_b + ')';\n\n  else\n\n  \tcode= '('+ value_a + ' ' + dropdown_valname +' ' +  value_b + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "math_compare": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2137,
+  "end_line": 2151,
+  "source": "Blockly.Python['math_compare'] = function (block)\n\n{\n\n  var value_a = Blockly.Python.valueToCode(block, 'A', Blockly.Python.ORDER_ATOMIC);\n\n  var comparison_operator = block.getFieldValue('comparison_operator');\n\n  var value_b = Blockly.Python.valueToCode(block, 'B', Blockly.Python.ORDER_ATOMIC);\n\n  var code = value_a + ' ' + comparison_operator +' ' +  value_b;\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "robot_math_unary_operation": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2157,
+  "end_line": 2197,
+  "source": "Blockly.Python['robot_math_unary_operation'] = function (block)\n\n{\n\n  var operation = block.getFieldValue('operation');\n\n  var operand = Blockly.Python.valueToCode(block, 'operand', Blockly.Python.ORDER_NONE);\n\n  var code = '';\n\n  if (operation == 'sqrt')\n\n    code = 'robot.sqrt(' + operand + ')';\n\n  else if (operation == 'fabs')\n\n    code = 'robot.abs(' + operand + ')';\n\n  else if (operation == 'negative')\n\n    code = '-(' + operand + ')';\n\n  else if (operation == 'ln')\n\n    code = 'robot.ln(' + operand + ')';\n\n  else if (operation == 'log10')\n\n    code = 'robot.log10(' + operand + ')';\n\n  else if (operation == 'e^')\n\n    code = 'robot.exp(' + operand + ')';\n\n  else if (operation == '10^')\n\n    code = 'robot.pow(10, ' + operand + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "robot_math_trigonometric_function": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2203,
+  "end_line": 2249,
+  "source": "Blockly.Python['robot_math_trigonometric_function'] = function (block)\n\n{\n\n  var trigonometric_function_type = block.getFieldValue('trigonometric_function_type');\n\n  var param = Blockly.Python.valueToCode(block, 'param', Blockly.Python.ORDER_NONE);\n\n  var piStr = 'robot.pi()';\n\n  if (maingui.robotType == 'SKCON2')\n\n  {\n\n    piStr = 'robot.pi';\n\n  }\n\n  var code = '';\n\n  if (trigonometric_function_type == 'sin')\n\n    code = 'robot.sin(' + param + ' / 180.0 * '+ piStr + ')'\n\n  else if (trigonometric_function_type == 'cos')\n\n    code = 'robot.cos(' + param + ' / 180.0 * '+ piStr + ')'\n\n  else if (trigonometric_function_type == 'tan')\n\n    code = 'robot.tan(' + param + ' / 180.0 * '+ piStr + ')'\n\n  else if (trigonometric_function_type == 'asin')\n\n    code = 'robot.asin(' + param + ') / '+ piStr + '* 180.0'\n\n  else if (trigonometric_function_type == 'acos')\n\n    code = 'robot.acos(' + param + ') / '+ piStr + '* 180.0'\n\n  else if (trigonometric_function_type == 'atan')\n\n    code = 'robot.atan(' + param + ') / '+ piStr + '* 180.0'\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "robot_math_rounding": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2255,
+  "end_line": 2279,
+  "source": "Blockly.Python['robot_math_rounding'] = function (block)\n\n{\n\n  var rounding_type = block.getFieldValue('rounding_type');\n\n  var param = Blockly.Python.valueToCode(block, 'param', Blockly.Python.ORDER_NONE);\n\n  var code = '';\n\n  if (rounding_type == 'round')\n\n    code = 'robot.round(' + param + ')';\n\n  else if (rounding_type == 'ceil')\n\n    code = 'robot.ceil(' + param + ')';\n\n  else if (rounding_type == 'floor')\n\n    code = 'robot.floor(' + param + ')';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "abilix_math_number_property": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2283,
+  "end_line": 2365,
+  "source": "Blockly.Python['abilix_math_number_property'] = function(block) {\n\n  // Check if a number is even, odd, prime, whole, positive, or negative\n\n  // or if it is divisible by certain number. Returns true or false.\n\n  var number_to_check = Blockly.Python.valueToCode(block, 'NUMBER_TO_CHECK',\n\n      Blockly.Python.ORDER_MULTIPLICATIVE) || '0';\n\n  var dropdown_property = block.getFieldValue('PROPERTY');\n\n  var code;\n\n\n\n  if (dropdown_property == 'PRIME') {\n\n    var functionName = 'robot.isprime';\n\n    code = functionName + '(' + number_to_check + ')';\n\n    return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n\n  }\n\n\n\n  switch (dropdown_property) {\n\n    case 'EVEN':\n\n      code = number_to_check + ' % 2 == 0';\n\n      break;\n\n    case 'ODD':\n\n      code = number_to_check + ' % 2 == 1';\n\n      break;\n\n    case 'WHOLE':\n\n      code = number_to_check + ' % 1 == 0';\n\n      break;\n\n    case 'POSITIVE':\n\n      code = number_to_check + ' > 0';\n\n      break;\n\n    case 'NEGATIVE':\n\n      code = number_to_check + ' < 0';\n\n      break;\n\n    case 'DIVISIBLE_BY':\n\n      var divisor = Blockly.Python.valueToCode(block, 'DIVISOR',\n\n          Blockly.Python.ORDER_MULTIPLICATIVE);\n\n      // If 'divisor' is some code that evals to 0, Python will raise an error.\n\n      if (!divisor || divisor == '0') {\n\n        return ['False', Blockly.Python.ORDER_ATOMIC];\n\n      }\n\n      code = number_to_check + ' % ' + divisor + ' == 0';\n\n      break;\n\n  }\n\n  return [code, Blockly.Python.ORDER_RELATIONAL];\n\n}"
+ },
+ "robot_math_random": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2369,
+  "end_line": 2385,
+  "source": "Blockly.Python['robot_math_random'] = function(block)\n\n{\n\n  var argument0 = Blockly.Python.valueToCode(block, 'FROM',\n\n      Blockly.Python.ORDER_NONE) || '0';\n\n  var argument1 = Blockly.Python.valueToCode(block, 'TO',\n\n      Blockly.Python.ORDER_NONE) || '0';\n\n  var code = 'robot.random(' + argument0 + ', ' + argument1 + ')';\n\n  return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n\n}"
+ },
+ "robot_math_constants": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2391,
+  "end_line": 2429,
+  "source": "Blockly.Python['robot_math_constants'] = function (block)\n\n{\n\n  var constant_type = block.getFieldValue('constant_type');\n\n  var code = '';\n\n  if (constant_type == 'pi')\n\n  {\n\n    code = 'robot.pi()';\n\n    if (maingui.robotType == 'SKCON2')\n\n    {\n\n      piStr = 'robot.pi';\n\n    }\n\n  }\n\n  else if (constant_type == 'e')\n\n    code = 'robot.e()';\n\n  else if (constant_type == 'sqrt(2)')\n\n    code = 'robot.sqrt(2)';\n\n  else if (constant_type == 'sqrt(1/2)')\n\n    code = 'robot.sqrt(1 / 2)';\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "play_note": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2437,
+  "end_line": 2471,
+  "source": "Blockly.Python['play_note'] = function(block)\n\n{\n\n  var note = block.getFieldValue('note'); //Blockly.Clike.valueToCode(block, 'note', Blockly.Clike.ORDER_ATOMIC);  \n\n  var volume = block.getFieldValue('volume');//Blockly.Clike.valueToCode(block, 'volume', Blockly.Clike.ORDER_ATOMIC);\n\n  var beat = block.getFieldValue('beat');//Blockly.Clike.valueToCode(block, 'beat', Blockly.Clike.ORDER_ATOMIC);\n\n  var speed = block.getFieldValue('speed');//Blockly.Clike.valueToCode(block, 'speed', Blockly.Clike.ORDER_ATOMIC);\n\n  if(volume == '1')\n\n    volume= 'l';\n\n  else if(volume == '2')\n\n    volume = 'm';\n\n  else if(volume == '3')\n\n    volume = 'h';\n\n\n\n  speed = noteSpeedMap[speed] * noteBeatMap[beat];\n\n\n\n  var code = 'robot.beep('+ noteData[ volume + '_' + note ][1] + ','+  speed +  ')\\n';\n\n  return code;\n\n}"
+ },
+ "play_note_zero": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2479,
+  "end_line": 2497,
+  "source": "Blockly.Python['play_note_zero'] = function(block)\n\n{\n\n  var beat = block.getFieldValue('beat');//Blockly.Clike.valueToCode(block, 'beat', Blockly.Clike.ORDER_ATOMIC);\n\n  var speed = block.getFieldValue('speed');//Blockly.Clike.valueToCode(block, 'speed', Blockly.Clike.ORDER_ATOMIC); \n\n\n\n  speed = noteSpeedMap[speed] * noteBeatMap[beat];\n\n\n\n  var code = 'robot.beep('+ noteData['0'][1] + ','+  speed +  ')\\n';\n\n  return code;\n\n}"
+ },
+ "get_key": {
+  "file": "generators/myrobotpythoncode.js",
+  "start_line": 2503,
+  "end_line": 2515,
+  "source": "Blockly.Python['get_key'] = function(block)\n\n{\n\n  var port = block.getFieldValue('port');\n\n  var code = 'robot.check_key(' + port + ')';\n\n  // return code;\n\n  return [code, Blockly.Python.ORDER_NONE];\n\n}"
+ },
+ "procedures_defreturn": {
+  "file": "generators/python/procedures.js",
+  "start_line": 32,
+  "end_line": 88,
+  "source": "Blockly.Python['procedures_defreturn'] = function(block) {\n  // Define a procedure with a return value.\n  // First, add a 'global' statement for every variable that is not shadowed by\n  // a local parameter.\n  var globals = [];\n  var varName;\n  var workspace = block.workspace;\n  var variables = Blockly.Variables.allUsedVarModels(workspace) || [];\n  for (var i = 0, variable; variable = variables[i]; i++) {\n    varName = variable.name;\n    if (block.arguments_.indexOf(varName) == -1) {\n      globals.push(Blockly.Python.variableDB_.getName(varName,\n          Blockly.Variables.NAME_TYPE));\n    }\n  }\n  // Add developer variables.\n  var devVarList = Blockly.Variables.allDeveloperVariables(workspace);\n  for (var i = 0; i < devVarList.length; i++) {\n    globals.push(Blockly.Python.variableDB_.getName(devVarList[i],\n        Blockly.Names.DEVELOPER_VARIABLE_TYPE));\n  }\n\n  globals = globals.length ?\n      Blockly.Python.INDENT + 'global ' + globals.join(', ') + '\\n' : '';\n  var funcName = Blockly.Python.variableDB_.getName(\n      block.getFieldValue('NAME'), Blockly.Procedures.NAME_TYPE);\n  var branch = Blockly.Python.statementToCode(block, 'STACK');\n  if (Blockly.Python.STATEMENT_PREFIX) {\n    var id = block.id.replace(/\\$/g, '$$$$');  // Issue 251.\n    branch = Blockly.Python.prefixLines(\n        Blockly.Python.STATEMENT_PREFIX.replace(\n            /%1/g, '\\'' + id + '\\''), Blockly.Python.INDENT) + branch;\n  }\n  if (Blockly.Python.INFINITE_LOOP_TRAP) {\n    branch = Blockly.Python.INFINITE_LOOP_TRAP.replace(/%1/g,\n        '\"' + block.id + '\"') + branch;\n  }\n  var returnValue = Blockly.Python.valueToCode(block, 'RETURN',\n      Blockly.Python.ORDER_NONE) || '';\n  if (returnValue) {\n    returnValue = Blockly.Python.INDENT + 'return ' + returnValue + '\\n';\n  } else if (!branch) {\n    // branch = Blockly.Python.PASS;\n  }\n  var args = [];\n  for (var i = 0; i < block.arguments_.length; i++) {\n    args[i] = Blockly.Python.variableDB_.getName(block.arguments_[i],\n        Blockly.Variables.NAME_TYPE);\n  }\n  branch = branch + Blockly.Python.PASS;\n  var code = 'def ' + funcName + '(' + args.join(', ') + '):\\n' +\n      globals + branch + returnValue;\n  code = Blockly.Python.scrub_(block, code);\n  // Add % so as not to collide with helper functions in definitions list.\n  Blockly.Python.definitions_['%' + funcName] = code;\n  return null;\n}"
+ },
+ "procedures_callreturn": {
+  "file": "generators/python/procedures.js",
+  "start_line": 95,
+  "end_line": 106,
+  "source": "Blockly.Python['procedures_callreturn'] = function(block) {\n  // Call a procedure with a return value.\n  var funcName = Blockly.Python.variableDB_.getName(block.getFieldValue('NAME'),\n      Blockly.Procedures.NAME_TYPE);\n  var args = [];\n  for (var i = 0; i < block.arguments_.length; i++) {\n    args[i] = Blockly.Python.valueToCode(block, 'ARG' + i,\n        Blockly.Python.ORDER_NONE) || 'None';\n  }\n  var code = funcName + '(' + args.join(', ') + ')';\n  return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n}"
+ },
+ "procedures_callnoreturn": {
+  "file": "generators/python/procedures.js",
+  "start_line": 108,
+  "end_line": 119,
+  "source": "Blockly.Python['procedures_callnoreturn'] = function(block) {\n  // Call a procedure with no return value.\n  var funcName = Blockly.Python.variableDB_.getName(block.getFieldValue('NAME'),\n      Blockly.Procedures.NAME_TYPE);\n  var args = [];\n  for (var i = 0; i < block.arguments_.length; i++) {\n    args[i] = Blockly.Python.valueToCode(block, 'ARG' + i,\n        Blockly.Python.ORDER_NONE) || 'None';\n  }\n  var code = funcName + '(' + args.join(', ') + ')\\n';\n  return code;\n}"
+ },
+ "procedures_ifreturn": {
+  "file": "generators/python/procedures.js",
+  "start_line": 121,
+  "end_line": 134,
+  "source": "Blockly.Python['procedures_ifreturn'] = function(block) {\n  // Conditionally return value from a procedure.\n  var condition = Blockly.Python.valueToCode(block, 'CONDITION',\n      Blockly.Python.ORDER_NONE) || 'False';\n  var code = 'if ' + condition + ':\\n';\n  if (block.hasReturnValue_) {\n    var value = Blockly.Python.valueToCode(block, 'VALUE',\n        Blockly.Python.ORDER_NONE) || 'None';\n    code += Blockly.Python.INDENT + 'return ' + value + '\\n';\n  } else {\n    code += Blockly.Python.INDENT + 'return\\n';\n  }\n  return code;\n}"
+ },
+ "controls_if": {
+  "file": "generators/python/logic.js",
+  "start_line": 32,
+  "end_line": 52,
+  "source": "Blockly.Python['controls_if'] = function(block) {\n  // If/elseif/else condition.\n  var n = 0;\n  var code = '', branchCode, conditionCode;\n  do {\n    conditionCode = Blockly.Python.valueToCode(block, 'IF' + n,\n        Blockly.Python.ORDER_NONE) || 'False';\n    branchCode = Blockly.Python.statementToCode(block, 'DO' + n) ||\n        Blockly.Python.PASS;\n    code += (n == 0 ? 'if ' : 'elif ' ) + conditionCode + ':\\n' + branchCode;\n\n    ++n;\n  } while (block.getInput('IF' + n));\n\n  if (block.getInput('ELSE')) {\n    branchCode = Blockly.Python.statementToCode(block, 'ELSE') ||\n        Blockly.Python.PASS;\n    code += 'else:\\n' + branchCode;\n  }\n  return code;\n}"
+ },
+ "logic_compare": {
+  "file": "generators/python/logic.js",
+  "start_line": 56,
+  "end_line": 72,
+  "source": "Blockly.Python['logic_compare'] = function(block) {\n  // Comparison operator.\n  var OPERATORS = {\n    'EQ': '==',\n    'NEQ': '!=',\n    'LT': '<',\n    'LTE': '<=',\n    'GT': '>',\n    'GTE': '>='\n  };\n  var operator = OPERATORS[block.getFieldValue('OP')];\n  var order = Blockly.Python.ORDER_RELATIONAL;\n  var argument0 = Blockly.Python.valueToCode(block, 'A', order) || '0';\n  var argument1 = Blockly.Python.valueToCode(block, 'B', order) || '0';\n  var code = argument0 + ' ' + operator + ' ' + argument1;\n  return [code, order];\n}"
+ },
+ "logic_operation": {
+  "file": "generators/python/logic.js",
+  "start_line": 74,
+  "end_line": 97,
+  "source": "Blockly.Python['logic_operation'] = function(block) {\n  // Operations 'and', 'or'.\n  var operator = (block.getFieldValue('OP') == 'AND') ? 'and' : 'or';\n  var order = (operator == 'and') ? Blockly.Python.ORDER_LOGICAL_AND :\n      Blockly.Python.ORDER_LOGICAL_OR;\n  var argument0 = Blockly.Python.valueToCode(block, 'A', order);\n  var argument1 = Blockly.Python.valueToCode(block, 'B', order);\n  if (!argument0 && !argument1) {\n    // If there are no arguments, then the return value is false.\n    argument0 = 'False';\n    argument1 = 'False';\n  } else {\n    // Single missing arguments have no effect on the return value.\n    var defaultArgument = (operator == 'and') ? 'True' : 'False';\n    if (!argument0) {\n      argument0 = defaultArgument;\n    }\n    if (!argument1) {\n      argument1 = defaultArgument;\n    }\n  }\n  var code = argument0 + ' ' + operator + ' ' + argument1;\n  return [code, order];\n}"
+ },
+ "logic_negate": {
+  "file": "generators/python/logic.js",
+  "start_line": 99,
+  "end_line": 105,
+  "source": "Blockly.Python['logic_negate'] = function(block) {\n  // Negation.\n  var argument0 = Blockly.Python.valueToCode(block, 'BOOL',\n      Blockly.Python.ORDER_LOGICAL_NOT) || 'True';\n  var code = 'not ' + argument0;\n  return [code, Blockly.Python.ORDER_LOGICAL_NOT];\n}"
+ },
+ "logic_boolean": {
+  "file": "generators/python/logic.js",
+  "start_line": 107,
+  "end_line": 111,
+  "source": "Blockly.Python['logic_boolean'] = function(block) {\n  // Boolean values true and false.\n  var code = (block.getFieldValue('BOOL') == 'TRUE') ? 'True' : 'False';\n  return [code, Blockly.Python.ORDER_ATOMIC];\n}"
+ },
+ "logic_null": {
+  "file": "generators/python/logic.js",
+  "start_line": 113,
+  "end_line": 116,
+  "source": "Blockly.Python['logic_null'] = function(block) {\n  // Null data type.\n  return ['None', Blockly.Python.ORDER_ATOMIC];\n}"
+ },
+ "logic_ternary": {
+  "file": "generators/python/logic.js",
+  "start_line": 118,
+  "end_line": 128,
+  "source": "Blockly.Python['logic_ternary'] = function(block) {\n  // Ternary operator.\n  var value_if = Blockly.Python.valueToCode(block, 'IF',\n      Blockly.Python.ORDER_CONDITIONAL) || 'False';\n  var value_then = Blockly.Python.valueToCode(block, 'THEN',\n      Blockly.Python.ORDER_CONDITIONAL) || 'None';\n  var value_else = Blockly.Python.valueToCode(block, 'ELSE',\n      Blockly.Python.ORDER_CONDITIONAL) || 'None';\n  var code = value_then + ' if ' + value_if + ' else ' + value_else;\n  return [code, Blockly.Python.ORDER_CONDITIONAL];\n}"
+ },
+ "math_number": {
+  "file": "generators/python/math.js",
+  "start_line": 35,
+  "end_line": 50,
+  "source": "Blockly.Python['math_number'] = function(block) {\n  // Numeric value.\n  var code = parseFloat(block.getFieldValue('NUM'));\n  var order;\n  if (code == Infinity) {\n    code = 'float(\"inf\")';\n    order = Blockly.Python.ORDER_FUNCTION_CALL;\n  } else if (code == -Infinity) {\n    code = '-float(\"inf\")';\n    order = Blockly.Python.ORDER_UNARY_SIGN;\n  } else {\n    order = code < 0 ? Blockly.Python.ORDER_UNARY_SIGN :\n            Blockly.Python.ORDER_ATOMIC;\n  }\n  return [code, order];\n}"
+ },
+ "math_arithmetic": {
+  "file": "generators/python/math.js",
+  "start_line": 52,
+  "end_line": 73,
+  "source": "Blockly.Python['math_arithmetic'] = function(block) {\n  // Basic arithmetic operators, and power.\n  var OPERATORS = {\n    'ADD': [' + ', Blockly.Python.ORDER_ADDITIVE],\n    'MINUS': [' - ', Blockly.Python.ORDER_ADDITIVE],\n    'MULTIPLY': [' * ', Blockly.Python.ORDER_MULTIPLICATIVE],\n    'DIVIDE': [' / ', Blockly.Python.ORDER_MULTIPLICATIVE],\n    'POWER': [' ** ', Blockly.Python.ORDER_EXPONENTIATION]\n  };\n  var tuple = OPERATORS[block.getFieldValue('OP')];\n  var operator = tuple[0];\n  var order = tuple[1];\n  var argument0 = Blockly.Python.valueToCode(block, 'A', order) || '0';\n  var argument1 = Blockly.Python.valueToCode(block, 'B', order) || '0';\n  var code = argument0 + operator + argument1;\n  return [code, order];\n  // In case of 'DIVIDE', division between integers returns different results\n  // in Python 2 and 3. However, is not an issue since Blockly does not\n  // guarantee identical results in all languages.  To do otherwise would\n  // require every operator to be wrapped in a function call.  This would kill\n  // legibility of the generated code.\n}"
+ },
+ "math_single": {
+  "file": "generators/python/math.js",
+  "start_line": 75,
+  "end_line": 153,
+  "source": "Blockly.Python['math_single'] = function(block) {\n  // Math operators with single operand.\n  var operator = block.getFieldValue('OP');\n  var code;\n  var arg;\n  if (operator == 'NEG') {\n    // Negation is a special case given its different operator precedence.\n    var code = Blockly.Python.valueToCode(block, 'NUM',\n        Blockly.Python.ORDER_UNARY_SIGN) || '0';\n    return ['-' + code, Blockly.Python.ORDER_UNARY_SIGN];\n  }\n  Blockly.Python.definitions_['import_math'] = 'import math';\n  if (operator == 'SIN' || operator == 'COS' || operator == 'TAN') {\n    arg = Blockly.Python.valueToCode(block, 'NUM',\n        Blockly.Python.ORDER_MULTIPLICATIVE) || '0';\n  } else {\n    arg = Blockly.Python.valueToCode(block, 'NUM',\n        Blockly.Python.ORDER_NONE) || '0';\n  }\n  // First, handle cases which generate values that don't need parentheses\n  // wrapping the code.\n  switch (operator) {\n    case 'ABS':\n      code = 'math.fabs(' + arg + ')';\n      break;\n    case 'ROOT':\n      code = 'math.sqrt(' + arg + ')';\n      break;\n    case 'LN':\n      code = 'math.log(' + arg + ')';\n      break;\n    case 'LOG10':\n      code = 'math.log10(' + arg + ')';\n      break;\n    case 'EXP':\n      code = 'math.exp(' + arg + ')';\n      break;\n    case 'POW10':\n      code = 'math.pow(10,' + arg + ')';\n      break;\n    case 'ROUND':\n      code = 'round(' + arg + ')';\n      break;\n    case 'ROUNDUP':\n      code = 'math.ceil(' + arg + ')';\n      break;\n    case 'ROUNDDOWN':\n      code = 'math.floor(' + arg + ')';\n      break;\n    case 'SIN':\n      code = 'math.sin(' + arg + ' / 180.0 * math.pi)';\n      break;\n    case 'COS':\n      code = 'math.cos(' + arg + ' / 180.0 * math.pi)';\n      break;\n    case 'TAN':\n      code = 'math.tan(' + arg + ' / 180.0 * math.pi)';\n      break;\n  }\n  if (code) {\n    return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n  }\n  // Second, handle cases which generate values that may need parentheses\n  // wrapping the code.\n  switch (operator) {\n    case 'ASIN':\n      code = 'math.asin(' + arg + ') / math.pi * 180';\n      break;\n    case 'ACOS':\n      code = 'math.acos(' + arg + ') / math.pi * 180';\n      break;\n    case 'ATAN':\n      code = 'math.atan(' + arg + ') / math.pi * 180';\n      break;\n    default:\n      throw Error('Unknown math operator: ' + operator);\n  }\n  return [code, Blockly.Python.ORDER_MULTIPLICATIVE];\n}"
+ },
+ "math_constant": {
+  "file": "generators/python/math.js",
+  "start_line": 155,
+  "end_line": 171,
+  "source": "Blockly.Python['math_constant'] = function(block) {\n  // Constants: PI, E, the Golden Ratio, sqrt(2), 1/sqrt(2), INFINITY.\n  var CONSTANTS = {\n    'PI': ['math.pi', Blockly.Python.ORDER_MEMBER],\n    'E': ['math.e', Blockly.Python.ORDER_MEMBER],\n    'GOLDEN_RATIO': ['(1 + math.sqrt(5)) / 2',\n                     Blockly.Python.ORDER_MULTIPLICATIVE],\n    'SQRT2': ['math.sqrt(2)', Blockly.Python.ORDER_MEMBER],\n    'SQRT1_2': ['math.sqrt(1.0 / 2)', Blockly.Python.ORDER_MEMBER],\n    'INFINITY': ['float(\\'inf\\')', Blockly.Python.ORDER_ATOMIC]\n  };\n  var constant = block.getFieldValue('CONSTANT');\n  if (constant != 'INFINITY') {\n    Blockly.Python.definitions_['import_math'] = 'import math';\n  }\n  return CONSTANTS[constant];\n}"
+ },
+ "math_number_property": {
+  "file": "generators/python/math.js",
+  "start_line": 173,
+  "end_line": 238,
+  "source": "Blockly.Python['math_number_property'] = function(block) {\n  // Check if a number is even, odd, prime, whole, positive, or negative\n  // or if it is divisible by certain number. Returns true or false.\n  var number_to_check = Blockly.Python.valueToCode(block, 'NUMBER_TO_CHECK',\n      Blockly.Python.ORDER_MULTIPLICATIVE) || '0';\n  var dropdown_property = block.getFieldValue('PROPERTY');\n  var code;\n  if (dropdown_property == 'PRIME') {\n    Blockly.Python.definitions_['import_math'] = 'import math';\n    if(maingui.robotType != 'SKCON2')\n    {\n    Blockly.Python.definitions_['from_numbers_import_Number'] =\n        'from numbers import Number';\n    }\n    var functionName = Blockly.Python.provideFunction_(\n        'math_isPrime',\n        ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(n):',\n         '  # https://en.wikipedia.org/wiki/Primality_test#Naive_methods',\n         '  # If n is not a number but a string, try parsing it.',\n         '  if not isinstance(n, Number):',\n         '    try:',\n         '      n = float(n)',\n         '    except:',\n         '      return False',\n         '  if n == 2 or n == 3:',\n         '    return True',\n         '  # False if n is negative, is 1, or not whole,' +\n             ' or if n is divisible by 2 or 3.',\n         '  if n <= 1 or n % 1 != 0 or n % 2 == 0 or n % 3 == 0:',\n         '    return False',\n         '  # Check all the numbers of form 6k +/- 1, up to sqrt(n).',\n         '  for x in range(6, int(math.sqrt(n)) + 2, 6):',\n         '    if n % (x - 1) == 0 or n % (x + 1) == 0:',\n         '      return False',\n         '  return True']);\n    code = functionName + '(' + number_to_check + ')';\n    return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n  }\n  switch (dropdown_property) {\n    case 'EVEN':\n      code = number_to_check + ' % 2 == 0';\n      break;\n    case 'ODD':\n      code = number_to_check + ' % 2 == 1';\n      break;\n    case 'WHOLE':\n      code = number_to_check + ' % 1 == 0';\n      break;\n    case 'POSITIVE':\n      code = number_to_check + ' > 0';\n      break;\n    case 'NEGATIVE':\n      code = number_to_check + ' < 0';\n      break;\n    case 'DIVISIBLE_BY':\n      var divisor = Blockly.Python.valueToCode(block, 'DIVISOR',\n          Blockly.Python.ORDER_MULTIPLICATIVE);\n      // If 'divisor' is some code that evals to 0, Python will raise an error.\n      if (!divisor || divisor == '0') {\n        return ['False', Blockly.Python.ORDER_ATOMIC];\n      }\n      code = number_to_check + ' % ' + divisor + ' == 0';\n      break;\n  }\n  return [code, Blockly.Python.ORDER_RELATIONAL];\n}"
+ },
+ "math_change": {
+  "file": "generators/python/math.js",
+  "start_line": 240,
+  "end_line": 262,
+  "source": "Blockly.Python['math_change'] = function(block) {\n  // Add to a variable in place.\n  if(maingui.robotType != 'SKCON2')\n  {\n  Blockly.Python.definitions_['from_numbers_import_Number'] =\n      'from numbers import Number';\n  }\n  var argument0 = Blockly.Python.valueToCode(block, 'DELTA',\n      Blockly.Python.ORDER_ADDITIVE) || '0';\n  var varName = Blockly.Python.variableDB_.getName(block.getFieldValue('VAR'),\n      Blockly.Variables.NAME_TYPE);\n\n  if(maingui.robotType == 'SKCON2')\n  {\n      return varName + ' = (' + varName + ' if isinstance(' + varName +\n      ', float) else 0) + ' + argument0 + '\\n';\n  }\n  else\n  {\n       return varName + ' = (' + varName + ' if isinstance(' + varName +\n      ', Number) else 0) + ' + argument0 + '\\n';\n  }\n}"
+ },
+ "math_on_list": {
+  "file": "generators/python/math.js",
+  "start_line": 269,
+  "end_line": 369,
+  "source": "Blockly.Python['math_on_list'] = function(block) {\n  // Math functions for lists.\n  var func = block.getFieldValue('OP');\n  var list = Blockly.Python.valueToCode(block, 'LIST',\n      Blockly.Python.ORDER_NONE) || '[]';\n  var code;\n  switch (func) {\n    case 'SUM':\n      code = 'sum(' + list + ')';\n      break;\n    case 'MIN':\n      code = 'min(' + list + ')';\n      break;\n    case 'MAX':\n      code = 'max(' + list + ')';\n      break;\n    case 'AVERAGE':\n    if(maingui.robotType != 'SKCON2')\n    {\n      Blockly.Python.definitions_['from_numbers_import_Number'] =\n          'from numbers import Number';\n    }\n      var functionName = Blockly.Python.provideFunction_(\n          'math_mean',\n          // This operation excludes null and values that aren't int or float:',\n          // math_mean([null, null, \"aString\", 1, 9]) == 5.0.',\n          ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(myList):',\n           '  localList = [e for e in myList if isinstance(e, Number)]',\n           '  if not localList: return',\n           '  return float(sum(localList)) / len(localList)']);\n      code = functionName + '(' + list + ')';\n      break;\n    case 'MEDIAN':\n     if(maingui.robotType != 'SKCON2')\n    {\n      Blockly.Python.definitions_['from_numbers_import_Number'] =\n          'from numbers import Number';\n        }\n      var functionName = Blockly.Python.provideFunction_(\n          'math_median',\n          // This operation excludes null values:\n          // math_median([null, null, 1, 3]) == 2.0.\n          ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(myList):',\n           '  localList = sorted([e for e in myList if isinstance(e, Number)])',\n           '  if not localList: return',\n           '  if len(localList) % 2 == 0:',\n           '    return (localList[len(localList) // 2 - 1] + ' +\n               'localList[len(localList) // 2]) / 2.0',\n           '  else:',\n           '    return localList[(len(localList) - 1) // 2]']);\n      code = functionName + '(' + list + ')';\n      break;\n    case 'MODE':\n      var functionName = Blockly.Python.provideFunction_(\n          'math_modes',\n          // As a list of numbers can contain more than one mode,\n          // the returned result is provided as an array.\n          // Mode of [3, 'x', 'x', 1, 1, 2, '3'] -> ['x', 1].\n          ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(some_list):',\n           '  modes = []',\n           '  # Using a lists of [item, count] to keep count rather than dict',\n           '  # to avoid \"unhashable\" errors when the counted item is ' +\n               'itself a list or dict.',\n           '  counts = []',\n           '  maxCount = 1',\n           '  for item in some_list:',\n           '    found = False',\n           '    for count in counts:',\n           '      if count[0] == item:',\n           '        count[1] += 1',\n           '        maxCount = max(maxCount, count[1])',\n           '        found = True',\n           '    if not found:',\n           '      counts.append([item, 1])',\n           '  for counted_item, item_count in counts:',\n           '    if item_count == maxCount:',\n           '      modes.append(counted_item)',\n           '  return modes']);\n      code = functionName + '(' + list + ')';\n      break;\n    case 'STD_DEV':\n      Blockly.Python.definitions_['import_math'] = 'import math';\n      var functionName = Blockly.Python.provideFunction_(\n          'math_standard_deviation',\n          ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(numbers):',\n           '  n = len(numbers)',\n           '  if n == 0: return',\n           '  mean = float(sum(numbers)) / n',\n           '  variance = sum((x - mean) ** 2 for x in numbers) / n',\n           '  return math.sqrt(variance)']);\n      code = functionName + '(' + list + ')';\n      break;\n    case 'RANDOM':\n      Blockly.Python.definitions_['import_random'] = 'import random';\n      code = 'random.choice(' + list + ')';\n      break;\n    default:\n      throw Error('Unknown operator: ' + func);\n  }\n  return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n}"
+ },
+ "math_modulo": {
+  "file": "generators/python/math.js",
+  "start_line": 371,
+  "end_line": 379,
+  "source": "Blockly.Python['math_modulo'] = function(block) {\n  // Remainder computation.\n  var argument0 = Blockly.Python.valueToCode(block, 'DIVIDEND',\n      Blockly.Python.ORDER_MULTIPLICATIVE) || '0';\n  var argument1 = Blockly.Python.valueToCode(block, 'DIVISOR',\n      Blockly.Python.ORDER_MULTIPLICATIVE) || '0';\n  var code = argument0 + ' % ' + argument1;\n  return [code, Blockly.Python.ORDER_MULTIPLICATIVE];\n}"
+ },
+ "math_constrain": {
+  "file": "generators/python/math.js",
+  "start_line": 381,
+  "end_line": 392,
+  "source": "Blockly.Python['math_constrain'] = function(block) {\n  // Constrain a number between two limits.\n  var argument0 = Blockly.Python.valueToCode(block, 'VALUE',\n      Blockly.Python.ORDER_NONE) || '0';\n  var argument1 = Blockly.Python.valueToCode(block, 'LOW',\n      Blockly.Python.ORDER_NONE) || '0';\n  var argument2 = Blockly.Python.valueToCode(block, 'HIGH',\n      Blockly.Python.ORDER_NONE) || 'float(\\'inf\\')';\n  var code = 'min(max(' + argument0 + ', ' + argument1 + '), ' +\n      argument2 + ')';\n  return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n}"
+ },
+ "math_random_int": {
+  "file": "generators/python/math.js",
+  "start_line": 394,
+  "end_line": 403,
+  "source": "Blockly.Python['math_random_int'] = function(block) {\n  // Random integer between [X] and [Y].\n  Blockly.Python.definitions_['import_random'] = 'import random';\n  var argument0 = Blockly.Python.valueToCode(block, 'FROM',\n      Blockly.Python.ORDER_NONE) || '0';\n  var argument1 = Blockly.Python.valueToCode(block, 'TO',\n      Blockly.Python.ORDER_NONE) || '0';\n  var code = 'random.randint(' + argument0 + ', ' + argument1 + ')';\n  return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n}"
+ },
+ "math_random_float": {
+  "file": "generators/python/math.js",
+  "start_line": 405,
+  "end_line": 409,
+  "source": "Blockly.Python['math_random_float'] = function(block) {\n  // Random fraction between 0 and 1.\n  Blockly.Python.definitions_['import_random'] = 'import random';\n  return ['random.random()', Blockly.Python.ORDER_FUNCTION_CALL];\n}"
+ },
+ "math_atan2": {
+  "file": "generators/python/math.js",
+  "start_line": 411,
+  "end_line": 420,
+  "source": "Blockly.Python['math_atan2'] = function(block) {\n  // Arctangent of point (X, Y) in degrees from -180 to 180.\n  Blockly.Python.definitions_['import_math'] = 'import math';\n  var argument0 = Blockly.Python.valueToCode(block, 'X',\n      Blockly.Python.ORDER_NONE) || '0';\n  var argument1 = Blockly.Python.valueToCode(block, 'Y',\n      Blockly.Python.ORDER_NONE) || '0';\n  return ['math.atan2(' + argument1 + ', ' + argument0 + ') / math.pi * 180',\n      Blockly.Python.ORDER_MULTIPLICATIVE];\n}"
+ },
+ "text": {
+  "file": "generators/python/text.js",
+  "start_line": 32,
+  "end_line": 36,
+  "source": "Blockly.Python['text'] = function(block) {\n  // Text value.\n  var code = Blockly.Python.quote_(block.getFieldValue('TEXT'));\n  return [code, Blockly.Python.ORDER_ATOMIC];\n}"
+ },
+ "text_join": {
+  "file": "generators/python/text.js",
+  "start_line": 57,
+  "end_line": 91,
+  "source": "Blockly.Python['text_join'] = function(block) {\n  // Create a string made up of any number of elements of any type.\n  //Should we allow joining by '-' or ',' or any other characters?\n  switch (block.itemCount_) {\n    case 0:\n      return ['\\'\\'', Blockly.Python.ORDER_ATOMIC];\n      break;\n    case 1:\n      var element = Blockly.Python.valueToCode(block, 'ADD0',\n              Blockly.Python.ORDER_NONE) || '\\'\\'';\n      var code = Blockly.Python.text.forceString_(element);\n      return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n      break;\n    case 2:\n      var element0 = Blockly.Python.valueToCode(block, 'ADD0',\n          Blockly.Python.ORDER_NONE) || '\\'\\'';\n      var element1 = Blockly.Python.valueToCode(block, 'ADD1',\n          Blockly.Python.ORDER_NONE) || '\\'\\'';\n      var code = Blockly.Python.text.forceString_(element0) + ' + ' +\n          Blockly.Python.text.forceString_(element1);\n      return [code, Blockly.Python.ORDER_ADDITIVE];\n      break;\n    default:\n      var elements = [];\n      for (var i = 0; i < block.itemCount_; i++) {\n        elements[i] = Blockly.Python.valueToCode(block, 'ADD' + i,\n                Blockly.Python.ORDER_NONE) || '\\'\\'';\n      }\n      var tempVar = Blockly.Python.variableDB_.getDistinctName('x',\n          Blockly.Variables.NAME_TYPE);\n      var code = '\\'\\'.join([str(' + tempVar + ') for ' + tempVar + ' in [' +\n          elements.join(', ') + ']])';\n      return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n  }\n}"
+ },
+ "text_append": {
+  "file": "generators/python/text.js",
+  "start_line": 93,
+  "end_line": 101,
+  "source": "Blockly.Python['text_append'] = function(block) {\n  // Append to a variable in place.\n  var varName = Blockly.Python.variableDB_.getName(block.getFieldValue('VAR'),\n      Blockly.Variables.NAME_TYPE);\n  var value = Blockly.Python.valueToCode(block, 'TEXT',\n      Blockly.Python.ORDER_NONE) || '\\'\\'';\n  return varName + ' = str(' + varName + ') + ' +\n      Blockly.Python.text.forceString_(value) + '\\n';\n}"
+ },
+ "text_length": {
+  "file": "generators/python/text.js",
+  "start_line": 103,
+  "end_line": 108,
+  "source": "Blockly.Python['text_length'] = function(block) {\n  // Is the string null or array empty?\n  var text = Blockly.Python.valueToCode(block, 'VALUE',\n      Blockly.Python.ORDER_NONE) || '\\'\\'';\n  return ['len(' + text + ')', Blockly.Python.ORDER_FUNCTION_CALL];\n}"
+ },
+ "text_isEmpty": {
+  "file": "generators/python/text.js",
+  "start_line": 110,
+  "end_line": 116,
+  "source": "Blockly.Python['text_isEmpty'] = function(block) {\n  // Is the string null or array empty?\n  var text = Blockly.Python.valueToCode(block, 'VALUE',\n      Blockly.Python.ORDER_NONE) || '\\'\\'';\n  var code = 'not len(' + text + ')';\n  return [code, Blockly.Python.ORDER_LOGICAL_NOT];\n}"
+ },
+ "text_indexOf": {
+  "file": "generators/python/text.js",
+  "start_line": 118,
+  "end_line": 131,
+  "source": "Blockly.Python['text_indexOf'] = function(block) {\n  // Search the text for a substring.\n  // Should we allow for non-case sensitive???\n  var operator = block.getFieldValue('END') == 'FIRST' ? 'find' : 'rfind';\n  var substring = Blockly.Python.valueToCode(block, 'FIND',\n      Blockly.Python.ORDER_NONE) || '\\'\\'';\n  var text = Blockly.Python.valueToCode(block, 'VALUE',\n      Blockly.Python.ORDER_MEMBER) || '\\'\\'';\n  var code = text + '.' + operator + '(' + substring + ')';\n  if (block.workspace.options.oneBasedIndex) {\n    return [code + ' + 1', Blockly.Python.ORDER_ADDITIVE];\n  }\n  return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n}"
+ },
+ "text_charAt": {
+  "file": "generators/python/text.js",
+  "start_line": 133,
+  "end_line": 165,
+  "source": "Blockly.Python['text_charAt'] = function(block) {\n  // Get letter at index.\n  // Note: Until January 2013 this block did not have the WHERE input.\n  var where = block.getFieldValue('WHERE') || 'FROM_START';\n  var text = Blockly.Python.valueToCode(block, 'VALUE',\n      Blockly.Python.ORDER_MEMBER) || '\\'\\'';\n  switch (where) {\n    case 'FIRST':\n      var code = text + '[0]';\n      return [code, Blockly.Python.ORDER_MEMBER];\n    case 'LAST':\n      var code = text + '[-1]';\n      return [code, Blockly.Python.ORDER_MEMBER];\n    case 'FROM_START':\n      var at = Blockly.Python.getAdjustedInt(block, 'AT');\n      var code = text + '[' + at + ']';\n      return [code, Blockly.Python.ORDER_MEMBER];\n    case 'FROM_END':\n      var at = Blockly.Python.getAdjustedInt(block, 'AT', 1, true);\n      var code = text + '[' + at + ']';\n      return [code, Blockly.Python.ORDER_MEMBER];\n    case 'RANDOM':\n      Blockly.Python.definitions_['import_random'] = 'import random';\n      var functionName = Blockly.Python.provideFunction_(\n          'text_random_letter',\n          ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(text):',\n           '  x = int(random.random() * len(text))',\n           '  return text[x];']);\n      code = functionName + '(' + text + ')';\n      return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n  }\n  throw Error('Unhandled option (text_charAt).');\n}"
+ },
+ "text_getSubstring": {
+  "file": "generators/python/text.js",
+  "start_line": 167,
+  "end_line": 212,
+  "source": "Blockly.Python['text_getSubstring'] = function(block) {\n  // Get substring.\n  var where1 = block.getFieldValue('WHERE1');\n  var where2 = block.getFieldValue('WHERE2');\n  var text = Blockly.Python.valueToCode(block, 'STRING',\n      Blockly.Python.ORDER_MEMBER) || '\\'\\'';\n  switch (where1) {\n    case 'FROM_START':\n      var at1 = Blockly.Python.getAdjustedInt(block, 'AT1');\n      if (at1 == '0') {\n        at1 = '';\n      }\n      break;\n    case 'FROM_END':\n      var at1 = Blockly.Python.getAdjustedInt(block, 'AT1', 1, true);\n      break;\n    case 'FIRST':\n      var at1 = '';\n      break;\n    default:\n      throw Error('Unhandled option (text_getSubstring)');\n  }\n  switch (where2) {\n    case 'FROM_START':\n      var at2 = Blockly.Python.getAdjustedInt(block, 'AT2', 1);\n      break;\n    case 'FROM_END':\n      var at2 = Blockly.Python.getAdjustedInt(block, 'AT2', 0, true);\n      // Ensure that if the result calculated is 0 that sub-sequence will\n      // include all elements as expected.\n      if (!Blockly.isNumber(String(at2))) {\n        Blockly.Python.definitions_['import_sys'] = 'import sys';\n        at2 += ' or sys.maxsize';\n      } else if (at2 == '0') {\n        at2 = '';\n      }\n      break;\n    case 'LAST':\n      var at2 = '';\n      break;\n    default:\n      throw Error('Unhandled option (text_getSubstring)');\n  }\n  var code = text + '[' + at1 + ' : ' + at2 + ']';\n  return [code, Blockly.Python.ORDER_MEMBER];\n}"
+ },
+ "text_changeCase": {
+  "file": "generators/python/text.js",
+  "start_line": 214,
+  "end_line": 226,
+  "source": "Blockly.Python['text_changeCase'] = function(block) {\n  // Change capitalization.\n  var OPERATORS = {\n    'UPPERCASE': '.upper()',\n    'LOWERCASE': '.lower()',\n    'TITLECASE': '.title()'\n  };\n  var operator = OPERATORS[block.getFieldValue('CASE')];\n  var text = Blockly.Python.valueToCode(block, 'TEXT',\n      Blockly.Python.ORDER_MEMBER) || '\\'\\'';\n  var code = text + operator;\n  return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n}"
+ },
+ "text_trim": {
+  "file": "generators/python/text.js",
+  "start_line": 228,
+  "end_line": 240,
+  "source": "Blockly.Python['text_trim'] = function(block) {\n  // Trim spaces.\n  var OPERATORS = {\n    'LEFT': '.lstrip()',\n    'RIGHT': '.rstrip()',\n    'BOTH': '.strip()'\n  };\n  var operator = OPERATORS[block.getFieldValue('MODE')];\n  var text = Blockly.Python.valueToCode(block, 'TEXT',\n      Blockly.Python.ORDER_MEMBER) || '\\'\\'';\n  var code = text + operator;\n  return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n}"
+ },
+ "text_print": {
+  "file": "generators/python/text.js",
+  "start_line": 242,
+  "end_line": 247,
+  "source": "Blockly.Python['text_print'] = function(block) {\n  // Print statement.\n  var msg = Blockly.Python.valueToCode(block, 'TEXT',\n      Blockly.Python.ORDER_NONE) || '\\'\\'';\n  return 'print(' + msg + ')\\n';\n}"
+ },
+ "text_prompt_ext": {
+  "file": "generators/python/text.js",
+  "start_line": 249,
+  "end_line": 272,
+  "source": "Blockly.Python['text_prompt_ext'] = function(block) {\n  // Prompt function.\n  var functionName = Blockly.Python.provideFunction_(\n      'text_prompt',\n      ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(msg):',\n       '  try:',\n       '    return raw_input(msg)',\n       '  except NameError:',\n       '    return input(msg)']);\n  if (block.getField('TEXT')) {\n    // Internal message.\n    var msg = Blockly.Python.quote_(block.getFieldValue('TEXT'));\n  } else {\n    // External message.\n    var msg = Blockly.Python.valueToCode(block, 'TEXT',\n        Blockly.Python.ORDER_NONE) || '\\'\\'';\n  }\n  var code = functionName + '(' + msg + ')';\n  var toNumber = block.getFieldValue('TYPE') == 'NUMBER';\n  if (toNumber) {\n    code = 'float(' + code + ')';\n  }\n  return [code, Blockly.Python.ORDER_FUNCTION_CALL];\n}"
+ },
+ "text_count": {
+  "file": "generators/python/text.js",
+  "start_line": 276,
+  "end_line": 283,
+  "source": "Blockly.Python['text_count'] = function(block) {\n  var text = Blockly.Python.valueToCode(block, 'TEXT',\n      Blockly.Python.ORDER_MEMBER) || '\\'\\'';\n  var sub = Blockly.Python.valueToCode(block, 'SUB',\n      Blockly.Python.ORDER_NONE) || '\\'\\'';\n  var code = text + '.count(' + sub + ')';\n  return [code, Blockly.Python.ORDER_MEMBER];\n}"
+ },
+ "text_replace": {
+  "file": "generators/python/text.js",
+  "start_line": 285,
+  "end_line": 294,
+  "source": "Blockly.Python['text_replace'] = function(block) {\n  var text = Blockly.Python.valueToCode(block, 'TEXT',\n      Blockly.Python.ORDER_MEMBER) || '\\'\\'';\n  var from = Blockly.Python.valueToCode(block, 'FROM',\n      Blockly.Python.ORDER_NONE) || '\\'\\'';\n  var to = Blockly.Python.valueToCode(block, 'TO',\n      Blockly.Python.ORDER_NONE) || '\\'\\'';\n  var code = text + '.replace(' + from + ', ' + to + ')';\n  return [code, Blockly.Python.ORDER_MEMBER];\n}"
+ },
+ "text_reverse": {
+  "file": "generators/python/text.js",
+  "start_line": 296,
+  "end_line": 301,
+  "source": "Blockly.Python['text_reverse'] = function(block) {\n  var text = Blockly.Python.valueToCode(block, 'TEXT',\n      Blockly.Python.ORDER_MEMBER) || '\\'\\'';\n  var code = text + '[::-1]';\n  return [code, Blockly.Python.ORDER_MEMBER];\n}"
+ },
+ "variables_get": {
+  "file": "generators/python/variables.js",
+  "start_line": 32,
+  "end_line": 37,
+  "source": "Blockly.Python['variables_get'] = function(block) {\n  // Variable getter.\n  var code = Blockly.Python.variableDB_.getName(block.getFieldValue('VAR'),\n      Blockly.Variables.NAME_TYPE);\n  return [code, Blockly.Python.ORDER_ATOMIC];\n}"
+ },
+ "variables_set": {
+  "file": "generators/python/variables.js",
+  "start_line": 39,
+  "end_line": 46,
+  "source": "Blockly.Python['variables_set'] = function(block) {\n  // Variable setter.\n  var argument0 = Blockly.Python.valueToCode(block, 'VALUE',\n      Blockly.Python.ORDER_NONE) || '0';\n  var varName = Blockly.Python.variableDB_.getName(block.getFieldValue('VAR'),\n      Blockly.Variables.NAME_TYPE);\n  return varName + ' = ' + argument0 + '\\n';\n}"
+ },
+ "controls_repeat_ext": {
+  "file": "generators/python/loops.js",
+  "start_line": 32,
+  "end_line": 54,
+  "source": "Blockly.Python['controls_repeat_ext'] = function(block) {\n  // Repeat n times.\n  if (block.getField('TIMES')) {\n    // Internal number.\n    var repeats = String(parseInt(block.getFieldValue('TIMES'), 10));\n  } else {\n    // External number.\n    var repeats = Blockly.Python.valueToCode(block, 'TIMES',\n        Blockly.Python.ORDER_NONE) || '0';\n  }\n  if (Blockly.isNumber(repeats)) {\n    repeats = parseInt(repeats, 10);\n  } else {\n    repeats = 'int(' + repeats + ')';\n  }\n  var branch = Blockly.Python.statementToCode(block, 'DO');\n  branch = Blockly.Python.addLoopTrap(branch, block.id) ||\n      Blockly.Python.PASS;\n  var loopVar = Blockly.Python.variableDB_.getDistinctName(\n      'count', Blockly.Variables.NAME_TYPE);\n  var code = 'for ' + loopVar + ' in range(' + repeats + '):\\n' + branch;\n  return code;\n}"
+ },
+ "controls_whileUntil": {
+  "file": "generators/python/loops.js",
+  "start_line": 58,
+  "end_line": 71,
+  "source": "Blockly.Python['controls_whileUntil'] = function(block) {\n  // Do while/until loop.\n  var until = block.getFieldValue('MODE') == 'UNTIL';\n  var argument0 = Blockly.Python.valueToCode(block, 'BOOL',\n      until ? Blockly.Python.ORDER_LOGICAL_NOT :\n      Blockly.Python.ORDER_NONE) || 'False';\n  var branch = Blockly.Python.statementToCode(block, 'DO');\n  branch = Blockly.Python.addLoopTrap(branch, block.id) ||\n      Blockly.Python.PASS;\n  if (until) {\n    argument0 = 'not ' + argument0;\n  }\n  return 'while ' + argument0 + ':\\n' + branch;\n}"
+ },
+ "controls_for": {
+  "file": "generators/python/loops.js",
+  "start_line": 73,
+  "end_line": 187,
+  "source": "Blockly.Python['controls_for'] = function(block) {\n  // For loop.\n  var variable0 = Blockly.Python.variableDB_.getName(\n      block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);\n  var argument0 = Blockly.Python.valueToCode(block, 'FROM',\n      Blockly.Python.ORDER_NONE) || '0';\n  var argument1 = Blockly.Python.valueToCode(block, 'TO',\n      Blockly.Python.ORDER_NONE) || '0';\n  var increment = Blockly.Python.valueToCode(block, 'BY',\n      Blockly.Python.ORDER_NONE) || '1';\n  var branch = Blockly.Python.statementToCode(block, 'DO');\n  branch = Blockly.Python.addLoopTrap(branch, block.id) ||\n      Blockly.Python.PASS;\n\n  var code = '';\n  var range;\n\n  // Helper functions.\n  var defineUpRange = function() {\n    return Blockly.Python.provideFunction_(\n        'upRange',\n        ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ +\n            '(start, stop, step):',\n         '  while start <= stop:',\n         '    yield start',\n         '    start += abs(step)']);\n  };\n  var defineDownRange = function() {\n    return Blockly.Python.provideFunction_(\n        'downRange',\n        ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ +\n            '(start, stop, step):',\n         '  while start >= stop:',\n         '    yield start',\n         '    start -= abs(step)']);\n  };\n  // Arguments are legal Python code (numbers or strings returned by scrub()).\n  var generateUpDownRange = function(start, end, inc) {\n    return '(' + start + ' <= ' + end + ') and ' +\n        defineUpRange() + '(' + start + ', ' + end + ', ' + inc + ') or ' +\n        defineDownRange() + '(' + start + ', ' + end + ', ' + inc + ')';\n  };\n\n  if (Blockly.isNumber(argument0) && Blockly.isNumber(argument1) &&\n      Blockly.isNumber(increment)) {\n    // All parameters are simple numbers.\n    argument0 = parseFloat(argument0);\n    argument1 = parseFloat(argument1);\n    increment = Math.abs(parseFloat(increment));\n    if (argument0 % 1 === 0 && argument1 % 1 === 0 && increment % 1 === 0) {\n      // All parameters are integers.\n      if (argument0 <= argument1) {\n        // Count up.\n        argument1++;\n        if (argument0 == 0 && increment == 1) {\n          // If starting index is 0, omit it.\n          range = argument1;\n        } else {\n          range = argument0 + ', ' + argument1;\n        }\n        // If increment isn't 1, it must be explicit.\n        if (increment != 1) {\n          range += ', ' + increment;\n        }\n      } else {\n        // Count down.\n        argument1--;\n        range = argument0 + ', ' + argument1 + ', -' + increment;\n      }\n      range = 'range(' + range + ')';\n    } else {\n      // At least one of the parameters is not an integer.\n      if (argument0 < argument1) {\n        range = defineUpRange();\n      } else {\n        range = defineDownRange();\n      }\n      range += '(' + argument0 + ', ' + argument1 + ', ' + increment + ')';\n    }\n  } else {\n    // Cache non-trivial values to variables to prevent repeated look-ups.\n    var scrub = function(arg, suffix) {\n      if (Blockly.isNumber(arg)) {\n        // Simple number.\n        arg = parseFloat(arg);\n      } else if (arg.match(/^\\w+$/)) {\n        // Variable.\n        arg = 'float(' + arg + ')';\n      } else {\n        // It's complicated.\n        var varName = Blockly.Python.variableDB_.getDistinctName(\n            variable0 + suffix, Blockly.Variables.NAME_TYPE);\n        code += varName + ' = float(' + arg + ')\\n';\n        arg = varName;\n      }\n      return arg;\n    };\n    var startVar = scrub(argument0, '_start');\n    var endVar = scrub(argument1, '_end');\n    var incVar = scrub(increment, '_inc');\n\n    if (typeof startVar == 'number' && typeof endVar == 'number') {\n      if (startVar < endVar) {\n        range = defineUpRange(startVar, endVar, increment);\n      } else {\n        range = defineDownRange(startVar, endVar, increment);\n      }\n    } else {\n      // We cannot determine direction statically.\n      range = generateUpDownRange(startVar, endVar, increment);\n    }\n  }\n  code += 'for ' + variable0 + ' in ' + range + ':\\n' + branch;\n  return code;\n}"
+ },
+ "controls_forEach": {
+  "file": "generators/python/loops.js",
+  "start_line": 189,
+  "end_line": 200,
+  "source": "Blockly.Python['controls_forEach'] = function(block) {\n  // For each loop.\n  var variable0 = Blockly.Python.variableDB_.getName(\n      block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);\n  var argument0 = Blockly.Python.valueToCode(block, 'LIST',\n      Blockly.Python.ORDER_RELATIONAL) || '[]';\n  var branch = Blockly.Python.statementToCode(block, 'DO');\n  branch = Blockly.Python.addLoopTrap(branch, block.id) ||\n      Blockly.Python.PASS;\n  var code = 'for ' + variable0 + ' in ' + argument0 + ':\\n' + branch;\n  return code;\n}"
+ },
+ "controls_flow_statements": {
+  "file": "generators/python/loops.js",
+  "start_line": 202,
+  "end_line": 211,
+  "source": "Blockly.Python['controls_flow_statements'] = function(block) {\n  // Flow statements: continue, break.\n  switch (block.getFieldValue('FLOW')) {\n    case 'BREAK':\n      return 'break\\n';\n    case 'CONTINUE':\n      return 'continue\\n';\n  }\n  throw Error('Unknown flow statement.');\n}"
+ }
+}

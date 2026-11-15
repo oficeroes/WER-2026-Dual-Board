@@ -1,0 +1,6 @@
+﻿backup_time=20261110-135211
+source=C:\Users\s1325\AppData\LocalLow\partnerx\AbilixScratch3_0\standalonewindows\AbilixProjects
+files=13
+config_sha_before=71C414CBA6409A8D78549FE2329AE4923CE58ACE4B56B9443C2AE5FBD75DCE29
+lead_backup=D:\UserData\Documents\WER\2026普级赛\_分析临时\appdata_backup_round2_20261110_134614\AbilixProjects
+lead_config_sha=71C414CBA6409A8D78549FE2329AE4923CE58ACE4B56B9443C2AE5FBD75DCE29

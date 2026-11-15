@@ -1,0 +1,111 @@
+{
+  "ok": true,
+  "toolVersion": "1.0.0",
+  "builtAt": "2026-11-11 13:39:36",
+  "library": {
+    "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\我的函数库.srhs",
+    "sha256": "71aa5ba97bfc8c375259046f88299ad2fceb4004e1e09ea182202216bc309890",
+    "defs": [
+      {
+        "name": "func_Hello",
+        "args": []
+      }
+    ]
+  },
+  "sourceAssets": {
+    "path": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+    "sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40",
+    "size": 85271033
+  },
+  "patchedAssets": {
+    "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木_便携版\\_临时\\build_test.bin",
+    "size": 85274942,
+    "sha256": "58e774a184cafd985a53db77190ac164f84d3b848fa288c20143d2c467f81f86",
+    "count": 6647
+  },
+  "manifest": {
+    "tool": "WER原生积木核心",
+    "toolVersion": "1.0.0",
+    "builtAt": "2026-11-11 13:39:36",
+    "library": {
+      "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\我的函数库.srhs",
+      "sha256": "71aa5ba97bfc8c375259046f88299ad2fceb4004e1e09ea182202216bc309890",
+      "size": 1396,
+      "robotType": "SKCON9",
+      "programName": "MyFuncLib",
+      "defs": [
+        {
+          "name": "func_Hello",
+          "args": [],
+          "blockType": "abilixuf_func_Hello"
+        }
+      ]
+    },
+    "prelude": {
+      "sha256": "5a0311e2c2b12e8e18b37d7170eee123a67166e1c6ddbad14cd052ce1792927c",
+      "chars": 61
+    },
+    "sourceAssets": {
+      "path": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+      "sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40",
+      "size": 85271033
+    },
+    "entries": {
+      "/Blockly_Code/maingui.html": {
+        "size": 69853,
+        "sha256": "17bf0a1c2a9b2f29ab2c981eebd59281f3d1e9ae27f5fbb147fd914ccea84ca3"
+      },
+      "/Blockly_Code/maingui.js": {
+        "size": 23733,
+        "sha256": "f4b771c305690becafac5b665b062ae89ec707dd73e45b2e2d55dae59f53bbdc"
+      },
+      "/Blockly_Code/abilix_userlib.js": {
+        "size": 1514,
+        "sha256": "cb9c13edc0d65832e42cbd0ebbe223d74f881e539c61b424326ab0df48412a67"
+      }
+    }
+  },
+  "verify": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "changed": [
+      {
+        "name": "/Blockly_Code/maingui.html",
+        "old_len": 69281,
+        "new_len": 69853
+      },
+      {
+        "name": "/Blockly_Code/maingui.js",
+        "old_len": 23313,
+        "new_len": 23733
+      }
+    ],
+    "added": [
+      "/Blockly_Code/abilix_userlib.js",
+      "/Blockly_Code/abilix_userlib.json"
+    ],
+    "removed": [],
+    "unchanged": 6643,
+    "original": {
+      "path": "D:\\Program Files\\AbilixScratch3.0\\AbilixScratch3.0_Data\\Resources\\browser_assets",
+      "count": 6645,
+      "size": 85271033,
+      "sha256": "df6db241752d42bff2995fcd24521e070adf9eb5d96e870148f9dc51690edc40"
+    },
+    "patched": {
+      "path": "D:\\UserData\\Documents\\WER\\2026普级赛\\WER_函数库\\证据\\原生积木_便携版\\_临时\\build_test.bin",
+      "count": 6647,
+      "size": 85274942,
+      "sha256": "58e774a184cafd985a53db77190ac164f84d3b848fa288c20143d2c467f81f86"
+    }
+  },
+  "engine": {
+    "webRoot": "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_native_tzn5jcu0\\web",
+    "generatedPy": "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_native_tzn5jcu0\\library_generated.py",
+    "usedRealSource": false,
+    "flyoutBlocks": null
+  },
+  "workdir": "C:\\Users\\s1325\\AppData\\Local\\Temp\\wer_native_tzn5jcu0",
+  "elapsedSec": 37.6
+}

@@ -1,0 +1,56 @@
+==============================================================================
+WER headless 验证报告   生成时间 2026-11-11T13:52:29
+==============================================================================
+输入文件    : D:\UserData\Documents\WER\2026普级赛\_分析临时\native_work\evidence\native_test.srh  (srh, utf-8-sig)
+机器人类型  : SKCON9    连接: USB    程序名: NativeTest
+项目 Info   : {"Version": "1.0.3.4", "RobotType": "SKCON9", "DownloadProgramName": "NativeTest"}
+XML 静态校验: 通过    静态顶层块: 1    变量: 0    静态函数定义: 0
+[1] 加载项目 XML : 成功  (40.9 ms)
+    顶层块数: 1    总块数: 2    变量数: 0
+    顶层块类型: {"start": 1}
+    渲染检查: 已渲染块 2/2    SVG 根 2    0 尺寸块 0    警告 0    禁用 0    mainWorkspace 正确 True
+[2] 函数定义     : 无返回值 0 个, 有返回值 0 个
+[3] 函数分类 flyout（Blockly.Procedures.flyoutCategory）: 1 个 XML 块
+    - procedures_defnoreturn  name='func_name'  args=[]
+[4] 真实 flyout 实例化: 空 (None 块, 经工具箱树真实选中=None)    渲染 None/None    SVG 根 None    0 尺寸 None
+[5] Python 生成  : 成功  (0.8 ms, 使用 maingui.js 原始 getPythonCode=True)
+    长度/行数: 16 行
+    文件头: '#<SKCON9><USB><NativeTest>'    def 数: 2    import: ['import threading', 'import time', 'import libstarpy']
+    变量声明: 0 个   尾部: ['main()#program entry']
+[6] py_compile  : 通过
+[10] 原生函数块（工具箱“我的函数”分类 → flyout createBlock 拖出 → 接入 start → 生成 Python）: 通过 (32/32)
+    [PASS] 项目加载成功: 
+    [PASS] web_root 中存在原生函数块补丁 abilix_userlib.js: D:\UserData\Documents\WER\2026普级赛\_分析临时\native_work\patched_web\Blockly_Code\abilix_userlib.js
+    [PASS] userlib 解析无错误: 
+    [PASS] userlib 中解析出原生函数（1 个）: func_Hello
+    [PASS] 工具箱树里找到「我的函数」分类: name='我的函数' blockCount=1
+    [PASS] 分类名 == '我的函数': 我的函数
+    [PASS] 经由真实工具箱树选中分类（Toolbox.TreeControl.setSelectedItem）: True
+    [PASS] flyout 实例化块数 == userlib 函数数（1）: 实际 1
+    [PASS] flyout 里全部是 abilixuf_* 原生块: ['abilixuf_func_Hello']
+    [PASS] flyout 原生块类型与 userlib 完全一致（含顺序）: {"flyout": ["abilixuf_func_Hello"], "expected": ["abilixuf_func_Hello"]}
+    [PASS] flyout 原生块均已渲染（rendered + SVG root + 非 0 尺寸）: {"renderedBlockCount": 1, "renderedSvgRootCount": 1, "zeroSizeBlockCount": 0}
+    [PASS] 拖拽路径执行成功（Flyout.createBlock 真实拖出）: 
+    [PASS] 从 flyout 拖出的原生块数量 == flyout 块数（1）: 实际 1
+    [PASS] 拖出原生块类型与 flyout 顺序一致: ["abilixuf_func_Hello"]
+    [PASS] 拖出的原生块均已渲染（rendered + SVG root）: []
+    [PASS] 所有带参原生块的参数输入都已填值（0 个）: 实际 0/0
+    [PASS] 拖出的原生块已接入 start 的 code 语句链: startBlockId=start_native_test chainLength=1
+    [PASS] 项目里原有的原生块在拖拽前被移除（避免重复调用，生成内容全部来自本次拖出）: removed=1 projectNative=1
+    [PASS] 真实 maingui.getPythonCode 生成成功: 
+    [PASS] 文件头恰好出现一次且内容正确: 期待 '#<SKCON9><USB><NativeTest>'，实际首行 '#<SKCON9><USB><NativeTest>'，出现 1 次
+    [PASS] import 无重复且包含 threading/time/libstarpy: ['threading', 'time', 'libstarpy']
+    [PASS] robot = Robot() 恰好一次: 实际 1 次
+    [PASS] 生成代码注入了 abilixUserLibPython（整段完全一致）: prelude 61 字符，行序匹配=True，sha256=5a0311e2c2b12e8e18b37d7170eee123a67166e1c6ddbad14cd052ce1792927c
+    [PASS] userlib 注入内容位于 def main 之前: prelude@92 main@152
+    [PASS] 注入的 def 没有重复: 重复 []
+    [PASS] userlib 1 个函数定义全部出现在生成代码中: []
+    [PASS] 生成代码里有 def main(): 
+    [PASS] main 里调用了全部 1 个原生函数: 缺失 []
+    [PASS] main 里调用顺序与 flyout 拖出顺序一致: [["func_Hello", 5]]
+    [PASS] main 里带参数调用的实参与填值完全一致（逐表达式匹配）: ["func_Hello()"]
+    [PASS] 程序入口 main()#program entry 恰好一次且在末尾: 出现 1 次
+    [PASS] py_compile 语法检查通过: 
+[11] 原生块 prelude 注入回归: 通过（项目原生块数 1，期望注入=True，实际注入=True，prelude 61 字符，userlib 函数 1 个）
+生成的 Python 全文见 --py 输出 / JSON generated.code；可另传 --screenshot 截图。
+结论: 通过

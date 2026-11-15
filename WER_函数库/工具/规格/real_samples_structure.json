@@ -1,0 +1,817 @@
+{
+ "annotation": {
+  "fields": {
+   "text": [
+    "白底S2",
+    "白底S3",
+    "黑线S2",
+    "黑线S3"
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"annotation\" id=\"8ZR/[/ya}dc|X~N{:i0W\"><html:field name=\"text\">黑线S2</html:field><html:next><html:block type=\"printf_number\" id=\"pX%B9dB;Yk2^gCX1QIrH\"><html:field name=\"dataname\">数据地址</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"]cSt5c~wdu4NW~`~%oQQ\"><html:field name=\"NUM\">2</html:field></html:shadow></html:value><html:next><html:block type=\"annotation\" id=\"R!aH|-p.N;w#a{8J-%+2\"><html:field name=\"text\">黑线S3</html:field><html:next><html:block type=\"printf_number\" id=\"{t2.}`EyY+?}@Fj+Gd/?\"><html:field name=\"dataname\">数据地址</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"=i3J@b^)nSo{X;Q4w#Gw\"><html:field name=\"NUM\">3</html:field></html:shadow></html:value></html:block></html:next></html:block></html:next></html:block></html:next></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"annotation\" id=\"R!aH|-p.N;w#a{8J-%+2\"><html:field name=\"text\">黑线S3</html:field><html:next><html:block type=\"printf_number\" id=\"{t2.}`EyY+?}@Fj+Gd/?\"><html:field name=\"dataname\">数据地址</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"=i3J@b^)nSo{X;Q4w#Gw\"><html:field name=\"NUM\">3</html:field></html:shadow></html:value></html:block></html:next></html:block>"
+  ]
+ },
+ "block_conststring": {
+  "fields": {
+   "NAME": [
+    "右",
+    "左",
+    "时间",
+    "矩离",
+    "路口"
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"block_conststring\" id=\"V!VqnVajt(rMyqjyfkId\"><html:field name=\"NAME\">右</html:field></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"block_conststring\" id=\"T^-$,|U#ynCWQ|xg$8dM\"><html:field name=\"NAME\">右</html:field></html:block>"
+  ]
+ },
+ "block_mod": {
+  "fields": {
+   "NAME": [
+    "--",
+    "Ray Error = 0",
+    "前进",
+    "巡线",
+    "时间模式",
+    "电机运行",
+    "白底数据位置",
+    "矩离模式",
+    "简要说明",
+    "自转",
+    "选择模式  矩离，时间，路口",
+    "黑线数据位置"
+   ]
+  },
+  "values": [],
+  "statements": [
+   "code"
+  ],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"block_mod\" id=\";}WxtPH-gY)C-+rmIZ{@\"><html:field name=\"NAME\">自转</html:field><html:statement name=\"code\"><html:block type=\"variables_set\" id=\"n`G8M@8,9.S,v@$Bx08D\"><html:field name=\"VAR\" id=\"xh{|)jB=Qw*X)LD:#OkE\" variabletype=\"\">var_angle</html:field><html:value name=\"VALUE\"><html:block type=\"robot_math_rounding\" id=\"btjjgv,`RyZ1iM:7yH#r\"><html:field name=\"rounding_type\">ceil</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"n~GnfsOg;3vfk3T0%r^X\" disabled=\"true\"><html:field name=\"NUM\">3.1</html:field></html:shadow><html:block type=\"math_op\" id=\"y^Y$3SJR:cCw`?RqshJE\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"Pe%OQX7{t|(}i/uSrYz[\"><html:field name=\"NUM\">23</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\".XMx-tIJKWMQ,4c*s9tc\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*pyQl\" variabletype=\"\">var_1angle</html:field></html:block></html:value></html:block></html:value></html:block></html:value><html:next><html:block type=\"variables_set\" id=\"65v8i_{InO-^9Z6)+;1D\"><html:field name=\"VAR\" id=\"c?d%mR|lHV-{}7J)ZZ_%\" variabletype=\"\">var_angle_up</html:field><html:value name=\"VALUE\"><html:block type=\"robot_math_rounding\" id=\"ht{c/w)3Pue-#=AMs*[y\"><html:field name=\"rounding_type\">ceil</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"n~GnfsOg;3vfk3T0%r^X\" disabled=\"true\"><html:field name=\"NUM\">3.1</html:field></html:shadow><html:block type=\"math_op\" id=\"`nUC%ZC_ghyx)kXtV;Rx\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\";$XkzFj:UTBi(U{?pVw-\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"block_mod\" id=\"rHHeFZFckE_8?B[;iLVT\"><html:field name=\"NAME\">前进</html:field><html:statement name=\"code\"><html:block type=\"variables_set\" id=\"5q4=Sp6ksc870C5LWyb|\"><html:field name=\"VAR\" id=\"7e2QU}]l7S{[==5Ql?T,\" variabletype=\"\">var_cm</html:field><html:value name=\"VALUE\"><html:block type=\"math_op\" id=\"`v*x@*Z}nUJ;K@|!+9~p\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"$h[5tW{~k$ee6O={fXb%\"><html:field name=\"NUM\">78.4</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\"SD$)F$nyJ9d%!@:pn,3!\"><html:field name=\"VAR\" id=\"%lZZ$hn^M*oIp_,)#:6r\" variabletype=\"\">var_1cm</html:field></html:block></html:value></html:block></html:value><html:next><html:block type=\"variables_set\" id=\"I+q:[qRd[5/*tH1$]|0;\"><html:field name=\"VAR\" id=\"A[X0e!,DFS4lgR^~X0l?\" variabletype=\"\">var_cm_up</html:field><html:value name=\"VALUE\"><html:block type=\"math_op\" id=\"X5Y:IJ`eRH6qXs:*M_Ya\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"l?W`zD,J4BxDb{:PqnRu\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\")2a_}21g.{=|L+v{-4)u\"><html:field name=\"VAR\" id=\"%lZZ$hn^M*oIp_,)#:6r\" variabletype=\"\">var_1cm</html:field></html:block></html:value></html:block></html:value><html:next><html:block type=\"variables_set\" id=\"GTP*70;WA:%xVJBt/Z^m\"><html:field name=\"VAR\" id=\"6*uToO=%*0RQ~VF]PNfI\" variabletype=\"\">var_cm_down</html:field><html:value name=\"VALUE\"><html:block type=\"math_op\" id=\";#0yAg?gK+PDvI8XmM{S\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"-Z2@BKZphOHorGqf8M,@\""
+  ]
+ },
+ "dual_motor_angle": {
+  "fields": {
+   "port_1": [
+    "1"
+   ],
+   "port_2": [
+    "2"
+   ],
+   "port_3": [
+    "1"
+   ]
+  },
+  "values": [
+   "angle",
+   "speed_1",
+   "speed_2"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"dual_motor_angle\" id=\"_UW_;Vj%W8zE=j:Crchn\"><html:field name=\"port_1\">1</html:field><html:field name=\"port_2\">2</html:field><html:field name=\"port_3\">1</html:field><html:value name=\"speed_1\"><html:shadow type=\"math_number\" id=\"guXziejU4g*K;SAq/:UH\"><html:field name=\"NUM\">-10</html:field></html:shadow></html:value><html:value name=\"speed_2\"><html:shadow type=\"math_number\" id=\"7/v(s2Au5iy|@V4=4X|/\"><html:field name=\"NUM\">-10</html:field></html:shadow></html:value><html:value name=\"angle\"><html:shadow type=\"math_number\" id=\"[rv$W)1[F{[!4/dn?-,Q\"><html:field name=\"NUM\">770</html:field></html:shadow></html:value><html:next><html:block type=\"motor_time\" id=\"rP3wJ*#H?B^t7ROL5eF4\"><html:field name=\"channel\">3</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\";c#S~!D(i}JE#lnY3HqQ\"><html:field name=\"NUM\">5</html:field></html:shadow></html:value><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"`P(}-H1P?9uVIWwWx*v3\"><html:field name=\"NUM\">1.3</html:field></html:shadow></html:value><html:next><html:block type=\"wait\" id=\"_k^`j2h@L%ab(qf^Xfj`\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"GLFlq*Q(h{]?Sj,ZrDgJ\"><html:field name=\"NUM\">0.25</html:field></html:shadow></html:value><html:next><html:block type=\"dual_motor_angle\" id=\"0;,{lk;.7t1$vc$$n|C]\"><html:field name=\"port_1\">1</html:field><html:field name=\"port_2\">2</html:field><html:field name=\"port_3\">1</html:field><html:value name=\"speed_1\"><html:shadow type=\"math_number\" id=\"+1HA.f2=H(,NJ1Y,Ydb@\"><html:field name=\"NUM\">15</html:field></html:shadow></html:value><html:value name=\"speed_2\"><html:shadow type=\"math_number\" id=\"-oV=gbt%I+qKuE~2fz[W\"><html:field name=\"NUM\">15</html:field></html:shadow></html:value><html:value name=\"angle\"><html:shadow type=\"math_number\" id=\",|g1-kvh!So^$%%0vxas\"><html:field name=\"NUM\">1320</html:field></html:shadow></html:value><html:next><html:block type=\"block_mod\" id=\"xMq`:b96.jS%wcpTQTfl\"><ht",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"dual_motor_angle\" id=\"0;,{lk;.7t1$vc$$n|C]\"><html:field name=\"port_1\">1</html:field><html:field name=\"port_2\">2</html:field><html:field name=\"port_3\">1</html:field><html:value name=\"speed_1\"><html:shadow type=\"math_number\" id=\"+1HA.f2=H(,NJ1Y,Ydb@\"><html:field name=\"NUM\">15</html:field></html:shadow></html:value><html:value name=\"speed_2\"><html:shadow type=\"math_number\" id=\"-oV=gbt%I+qKuE~2fz[W\"><html:field name=\"NUM\">15</html:field></html:shadow></html:value><html:value name=\"angle\"><html:shadow type=\"math_number\" id=\",|g1-kvh!So^$%%0vxas\"><html:field name=\"NUM\">1320</html:field></html:shadow></html:value><html:next><html:block type=\"block_mod\" id=\"xMq`:b96.jS%wcpTQTfl\"><html:field name=\"NAME\">自转</html:field><html:statement name=\"code\"><html:block type=\"variables_set\" id=\"F?mn`2pA~@x@J5|DC1po\"><html:field name=\"VAR\" id=\"xh{|)jB=Qw*X)LD:#OkE\" variabletype=\"\">var_angle</html:field><html:value name=\"VALUE\"><html:block type=\"robot_math_rounding\" id=\"t]=v{::l`fe4n,YxKcv~\"><html:field name=\"rounding_type\">ceil</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"n~GnfsOg;3vfk3T0%r^X\" disabled=\"true\"><html:field name=\"NUM\">3.1</html:field></html:shadow><html:block type=\"math_op\" id=\"U~z(+!O|LxJjBr#}^^[X\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"2#N87a-D[iU3oqS^3C`h\"><html:field name=\"NUM\">120</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\"We6mw]kcr4HqRy%cVc1F\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*pyQl\" variabletype=\"\">var_1angle</html:field></html:block></html:value></html:block></html:value></html:block></html:value><html:next><html:block type=\"variables_set\" id=\":hZxitRDz=db}x,IvR*{\"><html:field name=\"VAR\" id=\"c?d%mR|lHV-{}7J)ZZ_%\" variabletype=\"\">var_angle_up</html:field><"
+  ]
+ },
+ "dual_motor_duration": {
+  "fields": {
+   "port_1": [
+    "1"
+   ],
+   "port_2": [
+    "2"
+   ]
+  },
+  "values": [
+   "speed_1",
+   "speed_2",
+   "time"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"dual_motor_duration\" id=\"K~6SXTC[!wbYS~GkF73N\"><html:field name=\"port_1\">1</html:field><html:field name=\"port_2\">2</html:field><html:value name=\"speed_1\"><html:shadow type=\"math_number\" id=\"qr3?JLHI1/3@,cNN;z4d\"><html:field name=\"NUM\">80</html:field></html:shadow></html:value><html:value name=\"speed_2\"><html:shadow type=\"math_number\" id=\"k~@B0~+0tYzKqi-^f8_-\"><html:field name=\"NUM\">80</html:field></html:shadow></html:value><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"UVYB560xrq)O7$b5VV9z\"><html:field name=\"NUM\">0.75</html:field></html:shadow></html:value></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"dual_motor_duration\" id=\"5*6u{(vVcBqgMgqK3Ong\"><html:field name=\"port_1\">1</html:field><html:field name=\"port_2\">2</html:field><html:value name=\"speed_1\"><html:shadow type=\"math_number\" id=\"%kx/6#uzSUTWb/*eieI`\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"speed_2\"><html:shadow type=\"math_number\" id=\"I7L2B1%5SP=7cTPkQAkn\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"~C=R=n5Lpvg^F.K`VNu4\"><html:field name=\"NUM\">0.5</html:field></html:shadow></html:value><html:next><html:block type=\"wait\" id=\"qSj#~VI.vc?ZLw%@Va3=\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"Qfv1EJ/TAuGoYl@AZ]^z\"><html:field name=\"NUM\">1</html:field></html:shadow></html:value><html:next><html:block type=\"variables_set\" id=\"H(jo0QQUAaUt!!56xyWW\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field><html:value name=\"VALUE\"><html:block type=\"math_number\" id=\"PXXNzXuLp!lv!:j,h2;.\"><html:field name=\"NUM\">3</html:field></html:block></html:value><html:next><html:block type=\"while_number\" id=\":^m|[Ns@%Qj`aS;0-2B1\"><html:value name=\"TIMES\"><html:shadow type=\"math_number\" id=\"e0%k=y;CUQnnx#_=:OHc\"><html:field name=\"NUM\">10</html:field></html:shadow><html:block type=\"variables_get\" id=\"g`uB0S(`-CwL;8?9+H$.\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field></html:block></html:value><html:statement name=\"code\"><html:block type=\"printf_lines\" id=\"i%(+;!V/.UYf9hnL6(!l\"><html:statement name=\"code\"><html:block type=\"printf_text\" id=\"M=r2A;z)B@,=wlzT)ua7\"><html:field name=\"text\">光电放在白底上</html:field><html:next><html:block type=\"printf_number\" id=\"}_*e]#,r5BD}(}x$^;2C\"><html:field name=\"dataname\">時間</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"//R{8;TQAaZI`%L0[_lb\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"v"
+  ]
+ },
+ "eeprom_read": {
+  "fields": {
+   "address": [
+    "10",
+    "2",
+    "3",
+    "6",
+    "7",
+    "9"
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"eeprom_read\" id=\"vmM!5.inoJ.R!gZzs1FJ\"><html:field name=\"address\">9</html:field></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"eeprom_read\" id=\"cZc_dOM{I||X!Zdsv/NV\"><html:field name=\"address\">10</html:field></html:block>"
+  ]
+ },
+ "eeprom_write": {
+  "fields": {
+   "address": [
+    "10",
+    "2",
+    "3",
+    "6",
+    "7",
+    "8",
+    "9"
+   ]
+  },
+  "values": [
+   "data"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"eeprom_write\" id=\"f{6Wq2IFoeO.8#[?6U}W\"><html:field name=\"address\">2</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"K:~5sG~HZ$xARq6eR.AS\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"variables_get\" id=\"I}Z?177~F1Vhz_0@=iWw\"><html:field name=\"VAR\" id=\"p{qU@ny+:$%O.PJaPm7S\" variabletype=\"\">var_S2_0</html:field></html:block></html:value><html:next><html:block type=\"eeprom_write\" id=\"9$z2L.2itWMNi-jjv1$L\"><html:field name=\"address\">3</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"[/2XCUA`6._=4dLkf9#x\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"variables_get\" id=\"QNx6!^4g-6;*TVMhWf8[\"><html:field name=\"VAR\" id=\"1|%5q].2XVU/^k^(.!0R\" variabletype=\"\">var_S3_0</html:field></html:block></html:value><html:next><html:block type=\"play_sound\" id=\"*VU(1y|$HtcBJ+TT`2qc\"><html:field name=\"musicname\">luyin_p1</html:field><html:next><html:block type=\"dual_motor_duration\" id=\"5*6u{(vVcBqgMgqK3Ong\"><html:field name=\"port_1\">1</html:field><html:field name=\"port_2\">2</html:field><html:value name=\"speed_1\"><html:shadow type=\"math_number\" id=\"%kx/6#uzSUTWb/*eieI`\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"speed_2\"><html:shadow type=\"math_number\" id=\"I7L2B1%5SP=7cTPkQAkn\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"~C=R=n5Lpvg^F.K`VNu4\"><html:field name=\"NUM\">0.5</html:field></html:shadow></html:value><html:next><html:block type=\"wait\" id=\"qSj#~VI.vc?ZLw%@Va3=\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"Qfv1EJ/TAuGoYl@AZ]^z\"><html:field name=\"NUM\">1</html:field></html:shadow></html:value><html:next><html:block type=\"variables_set\" id=\"H(jo0QQUAaUt!!56xyWW\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field><html:value name=\"VALUE\"><html:block type=\"math_numbe",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"eeprom_write\" id=\"9$z2L.2itWMNi-jjv1$L\"><html:field name=\"address\">3</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"[/2XCUA`6._=4dLkf9#x\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"variables_get\" id=\"QNx6!^4g-6;*TVMhWf8[\"><html:field name=\"VAR\" id=\"1|%5q].2XVU/^k^(.!0R\" variabletype=\"\">var_S3_0</html:field></html:block></html:value><html:next><html:block type=\"play_sound\" id=\"*VU(1y|$HtcBJ+TT`2qc\"><html:field name=\"musicname\">luyin_p1</html:field><html:next><html:block type=\"dual_motor_duration\" id=\"5*6u{(vVcBqgMgqK3Ong\"><html:field name=\"port_1\">1</html:field><html:field name=\"port_2\">2</html:field><html:value name=\"speed_1\"><html:shadow type=\"math_number\" id=\"%kx/6#uzSUTWb/*eieI`\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"speed_2\"><html:shadow type=\"math_number\" id=\"I7L2B1%5SP=7cTPkQAkn\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"~C=R=n5Lpvg^F.K`VNu4\"><html:field name=\"NUM\">0.5</html:field></html:shadow></html:value><html:next><html:block type=\"wait\" id=\"qSj#~VI.vc?ZLw%@Va3=\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"Qfv1EJ/TAuGoYl@AZ]^z\"><html:field name=\"NUM\">1</html:field></html:shadow></html:value><html:next><html:block type=\"variables_set\" id=\"H(jo0QQUAaUt!!56xyWW\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field><html:value name=\"VALUE\"><html:block type=\"math_number\" id=\"PXXNzXuLp!lv!:j,h2;.\"><html:field name=\"NUM\">3</html:field></html:block></html:value><html:next><html:block type=\"while_number\" id=\":^m|[Ns@%Qj`aS;0-2B1\"><html:value name=\"TIMES\"><html:shadow type=\"math_number\" id=\"e0%k=y;CUQnnx#_=:OHc\"><html:field name=\"NUM\">10</html:field></html:shadow><html:block type=\"variables_get\" id=\"g`uB0S(`-CwL;8?9+H$.\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype"
+  ]
+ },
+ "getai_battery": {
+  "fields": {},
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"getai_battery\" id=\"JVZZcGmqX*6anKgA:TU[\" disabled=\"true\" />"
+  ]
+ },
+ "getai_glay": {
+  "fields": {
+   "channel": [
+    "1",
+    "10",
+    "2",
+    "7",
+    "8",
+    "9"
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"getai_glay\" id=\"D2||RbbmkYQ~9E@+g/Q:\"><html:field name=\"channel\">7</html:field></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"getai_glay\" id=\"|j+HcH=Nvppfy;F~yG1o\"><html:field name=\"channel\">9</html:field></html:block>"
+  ]
+ },
+ "getai_touch": {
+  "fields": {
+   "channel": [
+    "1",
+    "5",
+    "6"
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"getai_touch\" id=\"snfo6rU7W]$#sygJZggb\"><html:field name=\"channel\">1</html:field></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"getai_touch\" id=\"N/ctfiQda`O;a9IxC{R!\"><html:field name=\"channel\">1</html:field></html:block>"
+  ]
+ },
+ "getencoder": {
+  "fields": {
+   "port": [
+    "1",
+    "2"
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"getencoder\" id=\"sgD[cHr:Pxo,,he${2zb\"><html:field name=\"port\">1</html:field></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"getencoder\" id=\"y^2{.-5MDsfyE)E(Sf#P\"><html:field name=\"port\">2</html:field></html:block>"
+  ]
+ },
+ "getmseconds": {
+  "fields": {
+   "timer_ID": [
+    "1"
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"getmseconds\" id=\"YSehxwr!lxiGn#8#X@B}\"><html:field name=\"timer_ID\">1</html:field></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"getmseconds\" id=\"@-#wE}g:-bp2{},Y0L_G\"><html:field name=\"timer_ID\">1</html:field></html:block>"
+  ]
+ },
+ "getmsecondsreset": {
+  "fields": {
+   "timer_ID": [
+    "1"
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"getmsecondsreset\" id=\"E@wHcwz1?*m|bSopPaLa\"><html:field name=\"timer_ID\">1</html:field><html:next><html:block type=\"while_forver\" id=\"qn-5I}UdHQ](n2sfjD~c\"><html:statement name=\"NAME\"><html:block type=\"ifelse\" id=\"YE.$D=O=iIjv0nPqENr:\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"8:Z|k(/Z8TCsk3x4D+^a\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"rx.pQ7/dN9/=dW6-YKI=\"><html:field name=\"comparison_operator\">&lt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"E79U9MwFV^#@$E77g$;m\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getmseconds\" id=\"YSehxwr!lxiGn#8#X@B}\"><html:field name=\"timer_ID\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"RlY1,8ov+HVT?d~!kQ2m\"><html:field name=\"NUM\">600</html:field></html:shadow></html:value></html:block></html:value><html:statement name=\"code\"><html:block type=\"motor\" id=\"v-f?L0{-jg0DDl[eZSKf\"><html:field name=\"channel\">1</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\",GLWG.]v2*?1U)1XAF+}\"><html:field name=\"NUM\">60</html:field></html:shadow></html:value><html:next><html:block type=\"motor\" id=\"sG5sw@DeHxv]94oCeY3n\"><html:field name=\"channel\">2</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\"TaB[$@dAttw[Ln|Q:D3H\"><html:field name=\"NUM\">60</html:field></html:shadow></html:value></html:block></html:next></html:block></html:statement><html:statement name=\"else_code\"><html:block type=\"while_forver\" id=\"b%q8[/5oSqEnw}Mr-}lu\"><html:statement name=\"NAME\"><html:block type=\"ifelse\" id=\"DRQl+G6}]K%2aV!0TJ(-\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"8:Z|k(/Z8TCsk3x4D+^a\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"Yx}sNGRHW?}I5DOFsmH~\"><html:field name=\"compari",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"getmsecondsreset\" id=\")H,QA8(zzKjdng7zZi|p\"><html:field name=\"timer_ID\">1</html:field><html:next><html:block type=\"while_forver\" id=\"ch7PCV2kWbSPyfVWq*1k\"><html:statement name=\"NAME\"><html:block type=\"ifelse\" id=\"E/F)?(V{tte;Pj{p=mBS\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"AP4JCEZ]nic$]%m%l6NG\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"_2mITLNAADxsI_eoE)-Z\"><html:field name=\"comparison_operator\">&gt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"JMcgJ,8Q[3IbcN4Gb@K(\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getmseconds\" id=\"w?;ZV:?DG:W*7t.!#3_x\"><html:field name=\"timer_ID\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"-FMdTzG::`O8qGgqG*RR\"><html:field name=\"NUM\">200</html:field></html:shadow></html:value></html:block></html:value><html:statement name=\"code\"><html:block type=\"motor\" id=\"Q?N,GIIwKevN4AlSB-M@\"><html:field name=\"channel\">1</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\"VO9eMd95!9$m!T{EBd^}\"><html:field name=\"NUM\">0</html:field></html:shadow></html:value><html:next><html:block type=\"motor\" id=\"i3vnFdcsVE6D.BFCszdb\"><html:field name=\"channel\">2</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\"PT5grzT0vs@(Cuv4-;4g\"><html:field name=\"NUM\">0</html:field></html:shadow></html:value><html:next><html:block type=\"getmsecondsreset\" id=\"V%MWVx`hvFP={74SceL_\"><html:field name=\"timer_ID\">1</html:field><html:next><html:block type=\"while_forver\" id=\"9.tY$4RX7I9t(E+I2xgF\"><html:statement name=\"NAME\"><html:block type=\"ifelse\" id=\"Nf{/%EjNe!C~uHFp/I:|\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"AP4JCEZ]nic$]%m%l6NG\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"zZj|ho$-]I3O+^Sx!Int\"><html:field name=\"com"
+  ]
+ },
+ "if": {
+  "fields": {},
+  "values": [
+   "logic_val"
+  ],
+  "statements": [
+   "code"
+  ],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"if\" id=\"OQLUXO66%hs2k[yGwc{@\" disabled=\"true\" x=\"-4371\" y=\"-933\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"k7!TV_~6Ed+)z.+x:huH\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow></html:value></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"if\" id=\"/pLl)r~?X[YJyLi60emQ\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"=%SeruVm[6{0:-u,M2d9\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"xMSz;p,Vpp@.r4Pke2r{\"><html:field name=\"comparison_operator\">&gt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"bl8]%%l@Myt)e!*;v+)y\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getai_glay\" id=\"D2||RbbmkYQ~9E@+g/Q:\"><html:field name=\"channel\">7</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"h[}#b{0Gj3dl~fkewB={\"><html:field name=\"NUM\">2000</html:field></html:shadow></html:value></html:block></html:value><html:statement name=\"code\"><html:block type=\"procedures_callnoreturn\" id=\"0f=!,U(GZ,a~sKfX}Vg/\"><html:mutation name=\"func_Motter_Zero\" /><html:next><html:block type=\"while_break\" id=\"g$n_yQ@?J+32@1/WFT{j\" /></html:next></html:block></html:statement><html:next><html:block type=\"variables_set\" id=\"RT%`5g9P`AhDBwdR[2.y\"><html:field name=\"VAR\" id=\"ml*,/!h*e2c_b`m:Gaxa\" variabletype=\"\">var_Error</html:field><html:value name=\"VALUE\"><html:block type=\"math_op\" id=\"(qW+oWx0,m^N.R1@ql:/\"><html:field name=\"valname\">-</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"/1Q@2Z~c%NYTI6wG_Q+V\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"robot_math_unary_operation\" id=\"/dvDnYtIAN??W}3pqNK^\"><html:field name=\"operation\">fabs</html:field><html:value name=\"operand\"><html:shadow type=\"math_number\" id=\"zBq|sh0h7x$!f!Mwa.Qy\" disabled=\"true\"><html:field name=\"NUM\">9</html:field></html:shadow><html:block type=\"getencoder\" id=\"sgD[cHr:Pxo,,he${2zb\"><html:field name=\"port\">1</html:field></html:block></html:value></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"BLsZ=6IKr{QJQy;D(P,G\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"robot_"
+  ]
+ },
+ "ifelse": {
+  "fields": {},
+  "values": [
+   "logic_val"
+  ],
+  "statements": [
+   "code",
+   "else_code"
+  ],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"ifelse\" id=\"YE.$D=O=iIjv0nPqENr:\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"8:Z|k(/Z8TCsk3x4D+^a\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"rx.pQ7/dN9/=dW6-YKI=\"><html:field name=\"comparison_operator\">&lt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"E79U9MwFV^#@$E77g$;m\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getmseconds\" id=\"YSehxwr!lxiGn#8#X@B}\"><html:field name=\"timer_ID\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"RlY1,8ov+HVT?d~!kQ2m\"><html:field name=\"NUM\">600</html:field></html:shadow></html:value></html:block></html:value><html:statement name=\"code\"><html:block type=\"motor\" id=\"v-f?L0{-jg0DDl[eZSKf\"><html:field name=\"channel\">1</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\",GLWG.]v2*?1U)1XAF+}\"><html:field name=\"NUM\">60</html:field></html:shadow></html:value><html:next><html:block type=\"motor\" id=\"sG5sw@DeHxv]94oCeY3n\"><html:field name=\"channel\">2</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\"TaB[$@dAttw[Ln|Q:D3H\"><html:field name=\"NUM\">60</html:field></html:shadow></html:value></html:block></html:next></html:block></html:statement><html:statement name=\"else_code\"><html:block type=\"while_forver\" id=\"b%q8[/5oSqEnw}Mr-}lu\"><html:statement name=\"NAME\"><html:block type=\"ifelse\" id=\"DRQl+G6}]K%2aV!0TJ(-\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"8:Z|k(/Z8TCsk3x4D+^a\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"Yx}sNGRHW?}I5DOFsmH~\"><html:field name=\"comparison_operator\">&lt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"E79U9MwFV^#@$E77g$;m\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getms",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"ifelse\" id=\"DRQl+G6}]K%2aV!0TJ(-\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"8:Z|k(/Z8TCsk3x4D+^a\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"Yx}sNGRHW?}I5DOFsmH~\"><html:field name=\"comparison_operator\">&lt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"E79U9MwFV^#@$E77g$;m\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getmseconds\" id=\"@-#wE}g:-bp2{},Y0L_G\"><html:field name=\"timer_ID\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"82Ab2t^{@KN*FZ=5KSdu\"><html:field name=\"NUM\">950</html:field></html:shadow></html:value></html:block></html:value><html:statement name=\"code\"><html:block type=\"motor\" id=\"5A(6z#.=o?r$e)1!$0zY\"><html:field name=\"channel\">2</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\"m)004PtH!A@.b)k|W/L=\"><html:field name=\"NUM\">50</html:field></html:shadow></html:value><html:next><html:block type=\"motor\" id=\"rj2i{LfboE`n$gsv3b!a\"><html:field name=\"channel\">1</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\"L`OOO1*n{FRVf?ETrGKS\"><html:field name=\"NUM\">0</html:field></html:shadow></html:value></html:block></html:next></html:block></html:statement><html:statement name=\"else_code\"><html:block type=\"while_forver\" id=\"|3SENX^*c1h7(00kX{$o\"><html:statement name=\"NAME\"><html:block type=\"ifelse\" id=\"w8gw2,59~wA;3n*bDx;v\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"8:Z|k(/Z8TCsk3x4D+^a\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"W{X(jMtDSElq6p]pKI=*\"><html:field name=\"comparison_operator\">&lt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"E79U9MwFV^#@$E77g$;m\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getmse"
+  ]
+ },
+ "logic_operation": {
+  "fields": {
+   "OP": [
+    "OR"
+   ]
+  },
+  "values": [
+   "A",
+   "B"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"logic_operation\" id=\"[A+5/l%}64{4D1?=+)=p\"><html:field name=\"OP\">OR</html:field><html:value name=\"A\"><html:shadow type=\"logic_boolean\" id=\"dyd9LloD8QE{4A.1/Ke~\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"AMB}fj.B^E*PX=34XS,v\"><html:field name=\"comparison_operator\">&gt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"+rdJV$KjU_UDAA;[C[|p\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getai_glay\" id=\"p.NMS4OE`jJY0H*ar/#_\"><html:field name=\"channel\">7</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"D,D7/ml6-V[_[=a{8e-2\"><html:field name=\"NUM\">3000</html:field></html:shadow><html:block type=\"variables_get\" id=\"nD-7[c_(_-KQ7M@@]+CE\"><html:field name=\"VAR\" id=\"@CGbB162I}DOXgtZ.^Gr\" variabletype=\"\">var_ray_white</html:field></html:block></html:value></html:block></html:value><html:value name=\"B\"><html:shadow type=\"logic_boolean\" id=\"GGX?HB`,}^B0:z9RCLl1\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"d:lPYIApn9KA?bneEtH*\"><html:field name=\"comparison_operator\">&gt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"+rdJV$KjU_UDAA;[C[|p\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getai_glay\" id=\"$q_uMzB)$YrH?)oz=OsB\"><html:field name=\"channel\">8</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"ahvP5%f_Nrp=cSE%BQW]\"><html:field name=\"NUM\">3000</html:field></html:shadow><html:block type=\"variables_get\" id=\"!d7sP)yF/bkzXO%(`u{j\"><html:field name=\"VAR\" id=\"@CGbB162I}DOXgtZ.^Gr\" variabletype=\"\">var_ray_white</html:field></html:block></html:value></html:block></html:value></html:block>"
+  ]
+ },
+ "math_change": {
+  "fields": {
+   "VAR": [
+    "var_speed",
+    "var_time"
+   ]
+  },
+  "values": [
+   "DELTA"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"math_change\" id=\"j.}ixq)W0%2P$]|2:,,x\"><html:field name=\"VAR\" id=\"Usgx-)nm)).0rG9ni-(c\" variabletype=\"\">var_speed</html:field><html:value name=\"DELTA\"><html:shadow type=\"math_number\" id=\"Q5PVXnZ:|oNS_,/ch)2]\"><html:field name=\"NUM\">-0.04</html:field></html:shadow></html:value><html:next><html:block type=\"wait\" id=\"vTpgDN}i7#n(V|)GWf?B\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"%h(kU2ael]Ja|3NbHC.k\"><html:field name=\"NUM\">0.01</html:field></html:shadow></html:value></html:block></html:next></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"math_change\" id=\"wo*oy_A+a+g+,fyH7OLt\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field><html:value name=\"DELTA\"><html:shadow type=\"math_number\" id=\"+iAz}p4:$+{7]LVe9}QS\"><html:field name=\"NUM\">-1</html:field></html:shadow></html:value><html:next><html:block type=\"wait\" id=\"/SYEPx++7?5XP5]q$~yg\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"A2nQlEH0R23k.yVTd]=8\"><html:field name=\"NUM\">1</html:field></html:shadow></html:value></html:block></html:next></html:block>"
+  ]
+ },
+ "math_compare": {
+  "fields": {
+   "comparison_operator": [
+    "<",
+    "<=",
+    "==",
+    ">",
+    ">="
+   ]
+  },
+  "values": [
+   "A",
+   "B"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"math_compare\" id=\"rx.pQ7/dN9/=dW6-YKI=\"><html:field name=\"comparison_operator\">&lt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"E79U9MwFV^#@$E77g$;m\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getmseconds\" id=\"YSehxwr!lxiGn#8#X@B}\"><html:field name=\"timer_ID\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"RlY1,8ov+HVT?d~!kQ2m\"><html:field name=\"NUM\">600</html:field></html:shadow></html:value></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"math_compare\" id=\"Yx}sNGRHW?}I5DOFsmH~\"><html:field name=\"comparison_operator\">&lt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"E79U9MwFV^#@$E77g$;m\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getmseconds\" id=\"@-#wE}g:-bp2{},Y0L_G\"><html:field name=\"timer_ID\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"82Ab2t^{@KN*FZ=5KSdu\"><html:field name=\"NUM\">950</html:field></html:shadow></html:value></html:block>"
+  ]
+ },
+ "math_number": {
+  "fields": {
+   "NUM": [
+    "-2",
+    "-2000",
+    "0",
+    "0.0001",
+    "0.001",
+    "0.002",
+    "0.003",
+    "0.005",
+    "0.007",
+    "0.01",
+    "0.012",
+    "0.04",
+    "1",
+    "10",
+    "13",
+    "1300",
+    "15",
+    "17.8",
+    "2",
+    "20",
+    "2000",
+    "25",
+    "3",
+    "30",
+    "4",
+    "40",
+    "45",
+    "5",
+    "50",
+    "60",
+    "70",
+    "80",
+    "90.4"
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"math_number\" id=\"V;R_DpnI6/=VZVUE;tyK\"><html:field name=\"NUM\">25</html:field></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"math_number\" id=\"vp.EM44[^@Me0^`EDlMP\"><html:field name=\"NUM\">5</html:field></html:block>"
+  ]
+ },
+ "math_op": {
+  "fields": {
+   "valname": [
+    "*",
+    "+",
+    "-",
+    "/"
+   ]
+  },
+  "values": [
+   "A",
+   "B"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"math_op\" id=\"y^Y$3SJR:cCw`?RqshJE\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"Pe%OQX7{t|(}i/uSrYz[\"><html:field name=\"NUM\">23</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\".XMx-tIJKWMQ,4c*s9tc\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*pyQl\" variabletype=\"\">var_1angle</html:field></html:block></html:value></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"math_op\" id=\"`nUC%ZC_ghyx)kXtV;Rx\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\";$XkzFj:UTBi(U{?pVw-\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\"QiNyBLq,@$-4^7LEs9mM\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*pyQl\" variabletype=\"\">var_1angle</html:field></html:block></html:value></html:block>"
+  ]
+ },
+ "motor": {
+  "fields": {
+   "channel": [
+    "1",
+    "2",
+    "4"
+   ]
+  },
+  "values": [
+   "speed"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"motor\" id=\"v-f?L0{-jg0DDl[eZSKf\"><html:field name=\"channel\">1</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\",GLWG.]v2*?1U)1XAF+}\"><html:field name=\"NUM\">60</html:field></html:shadow></html:value><html:next><html:block type=\"motor\" id=\"sG5sw@DeHxv]94oCeY3n\"><html:field name=\"channel\">2</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\"TaB[$@dAttw[Ln|Q:D3H\"><html:field name=\"NUM\">60</html:field></html:shadow></html:value></html:block></html:next></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"motor\" id=\"sG5sw@DeHxv]94oCeY3n\"><html:field name=\"channel\">2</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\"TaB[$@dAttw[Ln|Q:D3H\"><html:field name=\"NUM\">60</html:field></html:shadow></html:value></html:block>"
+  ]
+ },
+ "motor_time": {
+  "fields": {
+   "channel": [
+    "3",
+    "4"
+   ]
+  },
+  "values": [
+   "speed",
+   "time"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"motor_time\" id=\"rP3wJ*#H?B^t7ROL5eF4\"><html:field name=\"channel\">3</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\";c#S~!D(i}JE#lnY3HqQ\"><html:field name=\"NUM\">5</html:field></html:shadow></html:value><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"`P(}-H1P?9uVIWwWx*v3\"><html:field name=\"NUM\">1.3</html:field></html:shadow></html:value><html:next><html:block type=\"wait\" id=\"_k^`j2h@L%ab(qf^Xfj`\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"GLFlq*Q(h{]?Sj,ZrDgJ\"><html:field name=\"NUM\">0.25</html:field></html:shadow></html:value><html:next><html:block type=\"dual_motor_angle\" id=\"0;,{lk;.7t1$vc$$n|C]\"><html:field name=\"port_1\">1</html:field><html:field name=\"port_2\">2</html:field><html:field name=\"port_3\">1</html:field><html:value name=\"speed_1\"><html:shadow type=\"math_number\" id=\"+1HA.f2=H(,NJ1Y,Ydb@\"><html:field name=\"NUM\">15</html:field></html:shadow></html:value><html:value name=\"speed_2\"><html:shadow type=\"math_number\" id=\"-oV=gbt%I+qKuE~2fz[W\"><html:field name=\"NUM\">15</html:field></html:shadow></html:value><html:value name=\"angle\"><html:shadow type=\"math_number\" id=\",|g1-kvh!So^$%%0vxas\"><html:field name=\"NUM\">1320</html:field></html:shadow></html:value><html:next><html:block type=\"block_mod\" id=\"xMq`:b96.jS%wcpTQTfl\"><html:field name=\"NAME\">自转</html:field><html:statement name=\"code\"><html:block type=\"variables_set\" id=\"F?mn`2pA~@x@J5|DC1po\"><html:field name=\"VAR\" id=\"xh{|)jB=Qw*X)LD:#OkE\" variabletype=\"\">var_angle</html:field><html:value name=\"VALUE\"><html:block type=\"robot_math_rounding\" id=\"t]=v{::l`fe4n,YxKcv~\"><html:field name=\"rounding_type\">ceil</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"n~GnfsOg;3vfk3T0%r^X\" disabled=\"true\"><html:field name=\"NUM\">3.1</html:field></html:shadow><html:block type=\"math_op\" id=\"U~z(+!O|LxJjBr#}^^[X\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_num",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"motor_time\" id=\"jaUlUHN4Xy[a*JiT=#3$\"><html:field name=\"channel\">4</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\"hN/P%U2yWMCC)2O?6=W_\"><html:field name=\"NUM\">6</html:field></html:shadow></html:value><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"Jq}E(i13~[AK4nEW{Xg}\"><html:field name=\"NUM\">1.6</html:field></html:shadow></html:value><html:next><html:block type=\"wait\" id=\"+0*NtY-V|0N~x$9`nV~Q\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"kWAgGyLo~|d`}p2I[u^q\"><html:field name=\"NUM\">0.39</html:field></html:shadow></html:value><html:next><html:block type=\"dual_motor_angle\" id=\"[_#W_]m3siC*ADFo/7fU\"><html:field name=\"port_1\">1</html:field><html:field name=\"port_2\">2</html:field><html:field name=\"port_3\">1</html:field><html:value name=\"speed_1\"><html:shadow type=\"math_number\" id=\"q::w3a]@OaxShx8t%?BV\"><html:field name=\"NUM\">-5</html:field></html:shadow></html:value><html:value name=\"speed_2\"><html:shadow type=\"math_number\" id=\"X-^K=s:FtjsajXK*2DlR\"><html:field name=\"NUM\">-5</html:field></html:shadow></html:value><html:value name=\"angle\"><html:shadow type=\"math_number\" id=\"yMEOuE0:w%0*Wd/JGwqF\"><html:field name=\"NUM\">1200</html:field></html:shadow></html:value><html:next><html:block type=\"procedures_callnoreturn\" id=\"#C*vFAqjRf|Eb8-m+(1z\"><html:mutation name=\"func_green_end_1\" /></html:block></html:next></html:block></html:next></html:block></html:next></html:block>"
+  ]
+ },
+ "play_sound": {
+  "fields": {
+   "musicname": [
+    "luyin_p1",
+    "luyin_p2"
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"play_sound\" id=\"*VU(1y|$HtcBJ+TT`2qc\"><html:field name=\"musicname\">luyin_p1</html:field><html:next><html:block type=\"dual_motor_duration\" id=\"5*6u{(vVcBqgMgqK3Ong\"><html:field name=\"port_1\">1</html:field><html:field name=\"port_2\">2</html:field><html:value name=\"speed_1\"><html:shadow type=\"math_number\" id=\"%kx/6#uzSUTWb/*eieI`\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"speed_2\"><html:shadow type=\"math_number\" id=\"I7L2B1%5SP=7cTPkQAkn\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"~C=R=n5Lpvg^F.K`VNu4\"><html:field name=\"NUM\">0.5</html:field></html:shadow></html:value><html:next><html:block type=\"wait\" id=\"qSj#~VI.vc?ZLw%@Va3=\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"Qfv1EJ/TAuGoYl@AZ]^z\"><html:field name=\"NUM\">1</html:field></html:shadow></html:value><html:next><html:block type=\"variables_set\" id=\"H(jo0QQUAaUt!!56xyWW\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field><html:value name=\"VALUE\"><html:block type=\"math_number\" id=\"PXXNzXuLp!lv!:j,h2;.\"><html:field name=\"NUM\">3</html:field></html:block></html:value><html:next><html:block type=\"while_number\" id=\":^m|[Ns@%Qj`aS;0-2B1\"><html:value name=\"TIMES\"><html:shadow type=\"math_number\" id=\"e0%k=y;CUQnnx#_=:OHc\"><html:field name=\"NUM\">10</html:field></html:shadow><html:block type=\"variables_get\" id=\"g`uB0S(`-CwL;8?9+H$.\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field></html:block></html:value><html:statement name=\"code\"><html:block type=\"printf_lines\" id=\"i%(+;!V/.UYf9hnL6(!l\"><html:statement name=\"code\"><html:block type=\"printf_text\" id=\"M=r2A;z)B@,=wlzT)ua7\"><html:field name=\"text\">光电放在白底上</html:field><html:next><html:block type=\"printf_number\" id=\"}_*e]#,r5BD}(}x$^;2C\"><html:field name=\"dataname\">時間</html:field><html:value name=\"data\"><html:shadow ",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"play_sound\" id=\"-{[,|Tp4(6Y|Lb([G0*K\"><html:field name=\"musicname\">luyin_p1</html:field><html:next><html:block type=\"printf_lines\" id=\",%9[z.KmLgf!tY*yPauo\"><html:statement name=\"code\"><html:block type=\"printf_number\" id=\"UR)N=P8[p,nf$FF`S9MC\"><html:field name=\"dataname\">白底S2</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\";zd*zf}b$B(DMnt$BgVi\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"eeprom_read\" id=\"nS]+p+lxaY/{3huI@E33\"><html:field name=\"address\">2</html:field></html:block></html:value><html:next><html:block type=\"printf_number\" id=\"_%U}rf?yv2^iP*1Rx|uK\"><html:field name=\"dataname\">白底S3</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\":RZDD6{/Gr(*=@!Lm|[T\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"eeprom_read\" id=\"xqm,43=h7Lt{{NdeF8rn\"><html:field name=\"address\">3</html:field></html:block></html:value><html:next><html:block type=\"printf_number\" id=\"-;oQFqWc27:L|qK_;D?K\"><html:field name=\"dataname\">黑线S2</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"pDP:jred.+Uk@/*BdGP5\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"eeprom_read\" id=\"_DvAXL.jpxpd9Am.5Vb:\"><html:field name=\"address\">6</html:field></html:block></html:value><html:next><html:block type=\"printf_number\" id=\"5xEiMn^-RzdKafR82,Fo\"><html:field name=\"dataname\">黑线S3</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"b;,y]4u|UO{EZ@2Q,k:P\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"eeprom_read\" id=\",FG+Q}`zh(lr9^!5fzaL\"><html:field name=\"address\">7</html:field></html:block></html:value></html:block></html:next></html:block></html:next></html:block></html:next></html:block></html:statement><html:next><html:block type=\"while_forver\" id=\"cP)NM3ss,/foICAKu}cQ\"><html:statement name=\"NAME\"><html:block type=\"if\" id=\"4Ca*R=n[x~c1[Hcg9|$R\"><html:value name=\"lo"
+  ]
+ },
+ "printf_lines": {
+  "fields": {},
+  "values": [],
+  "statements": [
+   "code"
+  ],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"printf_lines\" id=\"^aL%JxR@_+I+XVpINMp9\"><html:statement name=\"code\"><html:block type=\"printf_text\" id=\"-#F[y}37ok6y(TH(Yo1G\"><html:field name=\"text\">光电放在黑线上</html:field><html:next><html:block type=\"printf_number\" id=\"33:+`P~-S3is5,*I:)Fp\"><html:field name=\"dataname\">時間</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"//R{8;TQAaZI`%L0[_lb\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"variables_get\" id=\"Pv2Av:,~g?v6z`~?cOP!\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field></html:block></html:value></html:block></html:next></html:block></html:statement><html:next><html:block type=\"math_change\" id=\"wo*oy_A+a+g+,fyH7OLt\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field><html:value name=\"DELTA\"><html:shadow type=\"math_number\" id=\"+iAz}p4:$+{7]LVe9}QS\"><html:field name=\"NUM\">-1</html:field></html:shadow></html:value><html:next><html:block type=\"wait\" id=\"/SYEPx++7?5XP5]q$~yg\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"A2nQlEH0R23k.yVTd]=8\"><html:field name=\"NUM\">1</html:field></html:shadow></html:value></html:block></html:next></html:block></html:next></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"printf_lines\" id=\"9xyIhD]PBWU{l0;leb?(\"><html:statement name=\"code\"><html:block type=\"printf_text\" id=\"n`j9iCkOhDd#A$gpcf8~\"><html:field name=\"text\">光电放在黑线上</html:field><html:next><html:block type=\"printf_number\" id=\"Q|kESR*UpK{!lwr-w%%!\"><html:field name=\"dataname\">時間</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"//R{8;TQAaZI`%L0[_lb\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"variables_get\" id=\"AwU),]Q71ugsPEKh(?N$\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field></html:block></html:value></html:block></html:next></html:block></html:statement><html:next><html:block type=\"variables_set\" id=\"mVhtV4^rV7kXl]A.pf[Z\"><html:field name=\"VAR\" id=\"p{qU@ny+:$%O.PJaPm7S\" variabletype=\"\">var_S2_0</html:field><html:value name=\"VALUE\"><html:block type=\"getai_glay\" id=\"OZbF,U7;pNB+=Fq+@swS\"><html:field name=\"channel\">1</html:field></html:block></html:value><html:next><html:block type=\"variables_set\" id=\"#SP_i_IJw^M5g.S{Ytz-\"><html:field name=\"VAR\" id=\"1|%5q].2XVU/^k^(.!0R\" variabletype=\"\">var_S3_0</html:field><html:value name=\"VALUE\"><html:block type=\"getai_glay\" id=\"1Og(!C%TvI~bruepJ1|)\"><html:field name=\"channel\">2</html:field></html:block></html:value><html:next><html:block type=\"eeprom_write\" id=\"f{6Wq2IFoeO.8#[?6U}W\"><html:field name=\"address\">2</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"K:~5sG~HZ$xARq6eR.AS\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"variables_get\" id=\"I}Z?177~F1Vhz_0@=iWw\"><html:field name=\"VAR\" id=\"p{qU@ny+:$%O.PJaPm7S\" variabletype=\"\">var_S2_0</html:field></html:block></html:value><html:next><html:block type=\"eeprom_write\" id=\"9$z2L.2itWMNi-jjv1$L\"><html:field name=\"address\">3</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"[/2XCUA`6._=4dLkf9#x\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"variables_"
+  ]
+ },
+ "printf_number": {
+  "fields": {
+   "dataname": [
+    "倒计时",
+    "数据地址",
+    "時間",
+    "正在计算中. . .     倒计时:",
+    "灰度10：",
+    "灰度7：",
+    "灰度8：",
+    "灰度9：",
+    "电量:",
+    "白底S2",
+    "白底S3",
+    "黑线S2",
+    "黑线S3"
+   ]
+  },
+  "values": [
+   "data"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"printf_number\" id=\"33:+`P~-S3is5,*I:)Fp\"><html:field name=\"dataname\">時間</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"//R{8;TQAaZI`%L0[_lb\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"variables_get\" id=\"Pv2Av:,~g?v6z`~?cOP!\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field></html:block></html:value></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"printf_number\" id=\"Q|kESR*UpK{!lwr-w%%!\"><html:field name=\"dataname\">時間</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"//R{8;TQAaZI`%L0[_lb\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"variables_get\" id=\"AwU),]Q71ugsPEKh(?N$\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field></html:block></html:value></html:block>"
+  ]
+ },
+ "printf_text": {
+  "fields": {
+   "text": [
+    "hello world",
+    "光电放在白底上",
+    "光电放在黑线上",
+    "可以通过数据库检查  ^_^",
+    "数据输入完成. . .",
+    "校准陀螺仪",
+    "检测完成.. . .",
+    "正在计算中. . ."
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"printf_text\" id=\"W3`*%[?f.u7shUEBDx]m\"><html:field name=\"text\">hello world</html:field></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"printf_text\" id=\"InRMkC_,vaH-UI6vxw6k\" disabled=\"true\" x=\"1090\" y=\"802\"><html:field name=\"text\">hello world</html:field><html:next><html:block type=\"procedures_callnoreturn\" id=\"4PY)MQ~Q_GqF57CFT?:t\" disabled=\"true\"><html:mutation name=\"func_Path_green_2\" /></html:block></html:next></html:block>"
+  ]
+ },
+ "procedures_callnoreturn": {
+  "fields": {},
+  "values": [],
+  "statements": [],
+  "mutation_name": "func_initial",
+  "mutation_args": [],
+  "mutation_attrs": {
+   "name": "func_initial"
+  },
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" id=\"MSc=fXy23`t(mCy]Y6w*\"><html:mutation name=\"func_Turn\" /></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"procedures_callnoreturn\" id=\"MU}_18D(w4vsRKYpMn1@\"><html:mutation name=\"func_forward\" /></html:block>"
+  ]
+ },
+ "procedures_defnoreturn": {
+  "fields": {
+   "NAME": [
+    "func_Last_light_Error",
+    "func_Learntofollowtheline",
+    "func_Library",
+    "func_Motter_Zero",
+    "func_ON",
+    "func_Path_green_1",
+    "func_Path_green_2",
+    "func_Path_green_3",
+    "func_Path_green_4",
+    "func_Turn",
+    "func_backwards",
+    "func_end",
+    "func_forward",
+    "func_green_end",
+    "func_green_end_1",
+    "func_initial",
+    "func_main",
+    "func_name",
+    "func_name2",
+    "func_off",
+    "func_ray",
+    "func_ray_PID",
+    "func_ray_Path",
+    "func_ray_Path_PID",
+    "func_ray_Time",
+    "func_ray_backwards_PID",
+    "func_ray_forward",
+    "func_ray_forward_PID",
+    "func_take_white",
+    "func_value"
+   ]
+  },
+  "values": [],
+  "statements": [
+   "STACK"
+  ],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"procedures_defnoreturn\" id=\"uq6ia[(`[aMzu_ixKa!d\" x=\"-4507\" y=\"-4834\"><html:field name=\"NAME\">func_end</html:field><html:statement name=\"STACK\"><html:block type=\"block_mod\" id=\";}WxtPH-gY)C-+rmIZ{@\"><html:field name=\"NAME\">自转</html:field><html:statement name=\"code\"><html:block type=\"variables_set\" id=\"n`G8M@8,9.S,v@$Bx08D\"><html:field name=\"VAR\" id=\"xh{|)jB=Qw*X)LD:#OkE\" variabletype=\"\">var_angle</html:field><html:value name=\"VALUE\"><html:block type=\"robot_math_rounding\" id=\"btjjgv,`RyZ1iM:7yH#r\"><html:field name=\"rounding_type\">ceil</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"n~GnfsOg;3vfk3T0%r^X\" disabled=\"true\"><html:field name=\"NUM\">3.1</html:field></html:shadow><html:block type=\"math_op\" id=\"y^Y$3SJR:cCw`?RqshJE\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"Pe%OQX7{t|(}i/uSrYz[\"><html:field name=\"NUM\">23</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\".XMx-tIJKWMQ,4c*s9tc\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*pyQl\" variabletype=\"\">var_1angle</html:field></html:block></html:value></html:block></html:value></html:block></html:value><html:next><html:block type=\"variables_set\" id=\"65v8i_{InO-^9Z6)+;1D\"><html:field name=\"VAR\" id=\"c?d%mR|lHV-{}7J)ZZ_%\" variabletype=\"\">var_angle_up</html:field><html:value name=\"VALUE\"><html:block type=\"robot_math_rounding\" id=\"ht{c/w)3Pue-#=AMs*[y\"><html:field name=\"rounding_type\">ceil</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"n~GnfsOg;3vfk3T0%r^X\" disabled=\"true\"><html:field name=\"NUM\">3.1</html:field></html:shadow><html:block type=\"math_op\" id=\"`nUC%ZC_ghyx)kXtV;Rx\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\";$XkzFj:UTBi(U{?pVw-\"><html:field name=\"",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"procedures_defnoreturn\" id=\"u$6{Sa+M:Q$+1AR(FgLG\" x=\"-5230\" y=\"-2611\"><html:field name=\"NAME\">func_name2</html:field><html:statement name=\"STACK\"><html:block type=\"getmsecondsreset\" id=\"E@wHcwz1?*m|bSopPaLa\"><html:field name=\"timer_ID\">1</html:field><html:next><html:block type=\"while_forver\" id=\"qn-5I}UdHQ](n2sfjD~c\"><html:statement name=\"NAME\"><html:block type=\"ifelse\" id=\"YE.$D=O=iIjv0nPqENr:\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"8:Z|k(/Z8TCsk3x4D+^a\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"rx.pQ7/dN9/=dW6-YKI=\"><html:field name=\"comparison_operator\">&lt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"E79U9MwFV^#@$E77g$;m\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getmseconds\" id=\"YSehxwr!lxiGn#8#X@B}\"><html:field name=\"timer_ID\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"RlY1,8ov+HVT?d~!kQ2m\"><html:field name=\"NUM\">600</html:field></html:shadow></html:value></html:block></html:value><html:statement name=\"code\"><html:block type=\"motor\" id=\"v-f?L0{-jg0DDl[eZSKf\"><html:field name=\"channel\">1</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\",GLWG.]v2*?1U)1XAF+}\"><html:field name=\"NUM\">60</html:field></html:shadow></html:value><html:next><html:block type=\"motor\" id=\"sG5sw@DeHxv]94oCeY3n\"><html:field name=\"channel\">2</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\"TaB[$@dAttw[Ln|Q:D3H\"><html:field name=\"NUM\">60</html:field></html:shadow></html:value></html:block></html:next></html:block></html:statement><html:statement name=\"else_code\"><html:block type=\"while_forver\" id=\"b%q8[/5oSqEnw}Mr-}lu\"><html:statement name=\"NAME\"><html:block type=\"ifelse\" id=\"DRQl+G6}]K%2aV!0TJ(-\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"8:Z|k(/Z8TCs"
+  ]
+ },
+ "record": {
+  "fields": {
+   "record_time": [
+    "5"
+   ],
+   "record_ID": [
+    "2"
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"record\" id=\"}aNXR;2ZDM(|5[AIBz6w\" disabled=\"true\" x=\"53\" y=\"274\"><html:field name=\"record_time\">5</html:field><html:field name=\"record_ID\">2</html:field></html:block>"
+  ]
+ },
+ "resetencoder": {
+  "fields": {
+   "port": [
+    "1",
+    "2",
+    "4"
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"resetencoder\" id=\"FVRbh{[x=_:=gW]#9Uue\"><html:field name=\"port\">1</html:field><html:next><html:block type=\"resetencoder\" id=\"Qt0{#KNqhK.*.Ae3=f27\"><html:field name=\"port\">2</html:field></html:block></html:next></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"resetencoder\" id=\"Qt0{#KNqhK.*.Ae3=f27\"><html:field name=\"port\">2</html:field></html:block>"
+  ]
+ },
+ "resetmotionsensor": {
+  "fields": {},
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"resetmotionsensor\" id=\"p3+9R?(CR3;*u)+9)?z5\"><html:next><html:block type=\"while_break\" id=\"7(@vft;cm~MJQ@2V4mXm\" /></html:next></html:block>"
+  ]
+ },
+ "robot_math_rounding": {
+  "fields": {
+   "rounding_type": [
+    "ceil",
+    "round"
+   ]
+  },
+  "values": [
+   "param"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"robot_math_rounding\" id=\"btjjgv,`RyZ1iM:7yH#r\"><html:field name=\"rounding_type\">ceil</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"n~GnfsOg;3vfk3T0%r^X\" disabled=\"true\"><html:field name=\"NUM\">3.1</html:field></html:shadow><html:block type=\"math_op\" id=\"y^Y$3SJR:cCw`?RqshJE\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"Pe%OQX7{t|(}i/uSrYz[\"><html:field name=\"NUM\">23</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\".XMx-tIJKWMQ,4c*s9tc\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*pyQl\" variabletype=\"\">var_1angle</html:field></html:block></html:value></html:block></html:value></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"robot_math_rounding\" id=\"ht{c/w)3Pue-#=AMs*[y\"><html:field name=\"rounding_type\">ceil</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"n~GnfsOg;3vfk3T0%r^X\" disabled=\"true\"><html:field name=\"NUM\">3.1</html:field></html:shadow><html:block type=\"math_op\" id=\"`nUC%ZC_ghyx)kXtV;Rx\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\";$XkzFj:UTBi(U{?pVw-\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\"QiNyBLq,@$-4^7LEs9mM\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*pyQl\" variabletype=\"\">var_1angle</html:field></html:block></html:value></html:block></html:value></html:block>"
+  ]
+ },
+ "robot_math_trigonometric_function": {
+  "fields": {
+   "trigonometric_function_type": [
+    "cos",
+    "sin"
+   ]
+  },
+  "values": [
+   "param"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"robot_math_trigonometric_function\" id=\"Ln`!RG$Lp~P(JQ,cZNKq\"><html:field name=\"trigonometric_function_type\">sin</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"?4x*l!|x_|^CTl#$Zu$`\" disabled=\"true\"><html:field name=\"NUM\">45</html:field></html:shadow><html:block type=\"math_op\" id=\"dsLf}96+mK+$}ff/`*VP\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"B%g@S;qRtBKiRqkCQ]D}\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"math_op\" id=\"W^#F%oa+c7!g09b?7Pkt\"><html:field name=\"valname\">/</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"0wxC=jVsL{LF4G[GqYsd\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"math_op\" id=\"3gM@*.?Wm3:)yA2Pe@,h\"><html:field name=\"valname\">/</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"0wxC=jVsL{LF4G[GqYsd\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"math_op\" id=\"*rYEm]yvU/z4bvt93Xs%\"><html:field name=\"valname\">+</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"lxe;$L[X=7~WE#90I0]q\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getencoder\" id=\"ZY3S+*4,RJbmPZiL]5C8\"><html:field name=\"port\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"o#.G7JV@@4gw#^ZYy|i)\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getencoder\" id=\"JmVD@]!mi(cRzlfG$tQQ\"><html:field name=\"port\">2</html:field></html:block></html:value></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"Sl5TVadma)m}U-.7*e,F\"><html:field name=\"NUM\">2</html:field></html:shadow></html:value></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"=aGg,J,UM^S;5@%z!mPK\" disabled=\"true\"><html:field name=\"NUM\">2</htm",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"robot_math_trigonometric_function\" id=\"biJb3Zh2aFBp*_vHg1BZ\"><html:field name=\"trigonometric_function_type\">cos</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"?4x*l!|x_|^CTl#$Zu$`\" disabled=\"true\"><html:field name=\"NUM\">45</html:field></html:shadow><html:block type=\"math_op\" id=\"]Gf?wMjHZgVf^Z{SNPWp\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"B%g@S;qRtBKiRqkCQ]D}\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"math_op\" id=\"+Dhaw;1uuRK!JBVTM.*r\"><html:field name=\"valname\">/</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"0wxC=jVsL{LF4G[GqYsd\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"math_op\" id=\"BhS;+cWS{LIqRUueIYgx\"><html:field name=\"valname\">-</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"p3KP)-b)I-1-wk#FX)P$\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"math_op\" id=\"UsKcxSaXpLkN*ml5s{$F\"><html:field name=\"valname\">/</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"0wxC=jVsL{LF4G[GqYsd\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"math_op\" id=\"(ph,kK*ek7Iej|XupxT1\"><html:field name=\"valname\">+</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"lxe;$L[X=7~WE#90I0]q\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getencoder\" id=\"{ol4tFjJL`Al@9PRs:Ba\"><html:field name=\"port\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"o#.G7JV@@4gw#^ZYy|i)\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getencoder\" id=\"Vo#1E*0E-iCh9t*_JGIQ\"><html:field name=\"port\">2</html:field></html:block></html:value></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"X]0xpvjmgG68"
+  ]
+ },
+ "robot_math_unary_operation": {
+  "fields": {
+   "operation": [
+    "fabs"
+   ]
+  },
+  "values": [
+   "operand"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"robot_math_unary_operation\" id=\"/dvDnYtIAN??W}3pqNK^\"><html:field name=\"operation\">fabs</html:field><html:value name=\"operand\"><html:shadow type=\"math_number\" id=\"zBq|sh0h7x$!f!Mwa.Qy\" disabled=\"true\"><html:field name=\"NUM\">9</html:field></html:shadow><html:block type=\"getencoder\" id=\"sgD[cHr:Pxo,,he${2zb\"><html:field name=\"port\">1</html:field></html:block></html:value></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"robot_math_unary_operation\" id=\"b5MB^guDR.IS(bO,c_28\"><html:field name=\"operation\">fabs</html:field><html:value name=\"operand\"><html:shadow type=\"math_number\" id=\"zBq|sh0h7x$!f!Mwa.Qy\" disabled=\"true\"><html:field name=\"NUM\">9</html:field></html:shadow><html:block type=\"getencoder\" id=\"y^2{.-5MDsfyE)E(Sf#P\"><html:field name=\"port\">2</html:field></html:block></html:value></html:block>"
+  ]
+ },
+ "start": {
+  "fields": {},
+  "values": [],
+  "statements": [
+   "code"
+  ],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"start\" id=\":,-8s,JP[Hv2l0?r`GjL\" deletable=\"false\" x=\"227\" y=\"-153\"><html:statement name=\"code\"><html:block type=\"procedures_callnoreturn\" id=\"m-`+0U}S1L?tRdB;QI8o\"><html:mutation name=\"func_value\" /><html:next><html:block type=\"procedures_callnoreturn\" id=\"p_TjI)y+XmtbZNRa4`|{\"><html:mutation name=\"func_ON\" /><html:next><html:block type=\"while_forver\" id=\"5lU{Ye!VS0Pl)`_%o^:h\"><html:statement name=\"NAME\"><html:block type=\"procedures_callnoreturn\" id=\"HH^u6yvbKZKU[HQE3Qup\"><html:mutation name=\"func_main\" /></html:block></html:statement></html:block></html:next></html:block></html:next></html:block></html:statement></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"start\" id=\":,-8s,JP[Hv2l0?r`GjL\" deletable=\"false\" x=\"-2319\" y=\"988\"><html:statement name=\"code\"><html:block type=\"procedures_callnoreturn\" id=\"t(Z{TqyhQji1)v{vk`A]\"><html:mutation name=\"func_initial\" /><html:next><html:block type=\"variables_set\" id=\"tqE+IXvq27|::%SCi7n6\"><html:field name=\"VAR\" id=\"h{jr^lBz,i?zKQt]N38J\" variabletype=\"\">var_while</html:field><html:value name=\"VALUE\"><html:block type=\"math_number\" id=\"6GX@=gZ(`;Br74UV|w+i\"><html:field name=\"NUM\">70</html:field></html:block></html:value><html:next><html:block type=\"while_forver\" id=\"xFfAi7x4A)$9yG}!x{V_\"><html:statement name=\"NAME\"><html:block type=\"if\" id=\"|}0VA~!iJzFFjNa}-|Ia\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"lz3$$3cOD2q=%O@r9gg=\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"getai_touch\" id=\"@A=u^SU:N6MR+cGWkN.z\"><html:field name=\"channel\">1</html:field></html:block></html:value><html:statement name=\"code\"><html:block type=\"getmsecondsreset\" id=\"_L4Y8Z?T%mx1I/kUM-*[\"><html:field name=\"timer_ID\">1</html:field><html:next><html:block type=\"while_number\" id=\"yjYhwD)1?_nCAF(G=l=u\"><html:value name=\"TIMES\"><html:shadow type=\"math_number\" id=\"o_)f-L$kxGc1gu#xam$8\"><html:field name=\"NUM\">70</html:field></html:shadow><html:block type=\"variables_get\" id=\"J-!^L?[F4W8~|^d;$pvT\"><html:field name=\"VAR\" id=\"h{jr^lBz,i?zKQt]N38J\" variabletype=\"\">var_while</html:field></html:block></html:value><html:statement name=\"code\"><html:block type=\"variables_set\" id=\"w4}LczMT:_XCHQUz^wjn\"><html:field name=\"VAR\" id=\"?a0x/_=SYHw9Ovy]CYN-\" variabletype=\"\">var_past_9</html:field><html:value name=\"VALUE\"><html:block type=\"math_op\" id=\"su_D^f%hU*iWBgOA];d+\"><html:field name=\"valname\">+</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"xRH+mvt^j-:[3ruqP=Yy\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\"+n2c(H_UzWP%5$1Fed:1\"><html:field na"
+  ]
+ },
+ "variables_get": {
+  "fields": {
+   "VAR": [
+    "var_1angle",
+    "var_1cm",
+    "var_Error",
+    "var_Error_Ki",
+    "var_Ki",
+    "var_Kp",
+    "var_PI",
+    "var_S2_0",
+    "var_S2_1",
+    "var_S3_0",
+    "var_S3_1",
+    "var_angle",
+    "var_angle_down",
+    "var_angle_up",
+    "var_cm",
+    "var_cm_down",
+    "var_cm_up",
+    "var_past_10",
+    "var_past_7",
+    "var_past_8",
+    "var_past_9",
+    "var_ray_Kd",
+    "var_ray_Kp",
+    "var_ray_choose",
+    "var_ray_left_Error",
+    "var_ray_left_PID",
+    "var_ray_left_last_Error",
+    "var_ray_light_10",
+    "var_ray_light_9",
+    "var_ray_return_time",
+    "var_ray_right_Error",
+    "var_ray_right_PID",
+    "var_ray_right_last_Error",
+    "var_ray_speed",
+    "var_ray_time",
+    "var_ray_white",
+    "var_result_10",
+    "var_result_7",
+    "var_result_8",
+    "var_result_9",
+    "var_speed",
+    "var_speed_max",
+    "var_speed_min",
+    "var_time",
+    "var_turn_Error",
+    "var_turn_Error_Ki",
+    "var_turn_Ki",
+    "var_turn_Kp",
+    "var_turn_PI",
+    "var_turn_RL",
+    "var_turn_speed",
+    "var_turn_speed_max",
+    "var_turn_speed_min",
+    "var_while"
+   ]
+  },
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"variables_get\" id=\".XMx-tIJKWMQ,4c*s9tc\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*pyQl\" variabletype=\"\">var_1angle</html:field></html:block>",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"variables_get\" id=\"QiNyBLq,@$-4^7LEs9mM\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*pyQl\" variabletype=\"\">var_1angle</html:field></html:block>"
+  ]
+ },
+ "variables_set": {
+  "fields": {
+   "VAR": [
+    "var_1angle",
+    "var_1cm",
+    "var_Error",
+    "var_Error_Ki",
+    "var_Ki",
+    "var_Kp",
+    "var_PI",
+    "var_S2_0",
+    "var_S2_1",
+    "var_S3_0",
+    "var_S3_1",
+    "var_angle",
+    "var_angle_down",
+    "var_angle_up",
+    "var_cm",
+    "var_cm_down",
+    "var_cm_up",
+    "var_past_10",
+    "var_past_7",
+    "var_past_8",
+    "var_past_9",
+    "var_ray_Kd",
+    "var_ray_Kp",
+    "var_ray_choose",
+    "var_ray_left_Error",
+    "var_ray_left_PID",
+    "var_ray_left_last_Error",
+    "var_ray_light_10",
+    "var_ray_light_9",
+    "var_ray_return_time",
+    "var_ray_right_Error",
+    "var_ray_right_PID",
+    "var_ray_right_last_Error",
+    "var_ray_speed",
+    "var_ray_time",
+    "var_ray_white",
+    "var_result_10",
+    "var_result_7",
+    "var_result_8",
+    "var_result_9",
+    "var_speed",
+    "var_speed_max",
+    "var_speed_min",
+    "var_time",
+    "var_turn_Error",
+    "var_turn_Error_Ki",
+    "var_turn_Ki",
+    "var_turn_Kp",
+    "var_turn_PI",
+    "var_turn_RL",
+    "var_turn_speed",
+    "var_turn_speed_max",
+    "var_turn_speed_min",
+    "var_while"
+   ]
+  },
+  "values": [
+   "VALUE"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"variables_set\" id=\"n`G8M@8,9.S,v@$Bx08D\"><html:field name=\"VAR\" id=\"xh{|)jB=Qw*X)LD:#OkE\" variabletype=\"\">var_angle</html:field><html:value name=\"VALUE\"><html:block type=\"robot_math_rounding\" id=\"btjjgv,`RyZ1iM:7yH#r\"><html:field name=\"rounding_type\">ceil</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"n~GnfsOg;3vfk3T0%r^X\" disabled=\"true\"><html:field name=\"NUM\">3.1</html:field></html:shadow><html:block type=\"math_op\" id=\"y^Y$3SJR:cCw`?RqshJE\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"Pe%OQX7{t|(}i/uSrYz[\"><html:field name=\"NUM\">23</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\".XMx-tIJKWMQ,4c*s9tc\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*pyQl\" variabletype=\"\">var_1angle</html:field></html:block></html:value></html:block></html:value></html:block></html:value><html:next><html:block type=\"variables_set\" id=\"65v8i_{InO-^9Z6)+;1D\"><html:field name=\"VAR\" id=\"c?d%mR|lHV-{}7J)ZZ_%\" variabletype=\"\">var_angle_up</html:field><html:value name=\"VALUE\"><html:block type=\"robot_math_rounding\" id=\"ht{c/w)3Pue-#=AMs*[y\"><html:field name=\"rounding_type\">ceil</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"n~GnfsOg;3vfk3T0%r^X\" disabled=\"true\"><html:field name=\"NUM\">3.1</html:field></html:shadow><html:block type=\"math_op\" id=\"`nUC%ZC_ghyx)kXtV;Rx\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\";$XkzFj:UTBi(U{?pVw-\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\"QiNyBLq,@$-4^7LEs9mM\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*pyQl\"",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"variables_set\" id=\"65v8i_{InO-^9Z6)+;1D\"><html:field name=\"VAR\" id=\"c?d%mR|lHV-{}7J)ZZ_%\" variabletype=\"\">var_angle_up</html:field><html:value name=\"VALUE\"><html:block type=\"robot_math_rounding\" id=\"ht{c/w)3Pue-#=AMs*[y\"><html:field name=\"rounding_type\">ceil</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"n~GnfsOg;3vfk3T0%r^X\" disabled=\"true\"><html:field name=\"NUM\">3.1</html:field></html:shadow><html:block type=\"math_op\" id=\"`nUC%ZC_ghyx)kXtV;Rx\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\";$XkzFj:UTBi(U{?pVw-\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\"QiNyBLq,@$-4^7LEs9mM\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*pyQl\" variabletype=\"\">var_1angle</html:field></html:block></html:value></html:block></html:value></html:block></html:value><html:next><html:block type=\"variables_set\" id=\"G_`C(hySbrAGIfi_=_XK\"><html:field name=\"VAR\" id=\"Xn:cN8Y/Tzw2CffqYcD(\" variabletype=\"\">var_angle_down</html:field><html:value name=\"VALUE\"><html:block type=\"robot_math_rounding\" id=\"Qu(]IpvoN#M:5ln|6c{u\"><html:field name=\"rounding_type\">ceil</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"n~GnfsOg;3vfk3T0%r^X\" disabled=\"true\"><html:field name=\"NUM\">3.1</html:field></html:shadow><html:block type=\"math_op\" id=\"odryr|co1t;L*te|5bZ/\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"Fz!-%W}@jkqyz`HO#xx9\"><html:field name=\"NUM\">10</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\"Lqm9)Tf[PrQW-p0vnix4\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*"
+  ]
+ },
+ "wait": {
+  "fields": {},
+  "values": [
+   "time"
+  ],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"wait\" id=\"_k^`j2h@L%ab(qf^Xfj`\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"GLFlq*Q(h{]?Sj,ZrDgJ\"><html:field name=\"NUM\">0.25</html:field></html:shadow></html:value><html:next><html:block type=\"dual_motor_angle\" id=\"0;,{lk;.7t1$vc$$n|C]\"><html:field name=\"port_1\">1</html:field><html:field name=\"port_2\">2</html:field><html:field name=\"port_3\">1</html:field><html:value name=\"speed_1\"><html:shadow type=\"math_number\" id=\"+1HA.f2=H(,NJ1Y,Ydb@\"><html:field name=\"NUM\">15</html:field></html:shadow></html:value><html:value name=\"speed_2\"><html:shadow type=\"math_number\" id=\"-oV=gbt%I+qKuE~2fz[W\"><html:field name=\"NUM\">15</html:field></html:shadow></html:value><html:value name=\"angle\"><html:shadow type=\"math_number\" id=\",|g1-kvh!So^$%%0vxas\"><html:field name=\"NUM\">1320</html:field></html:shadow></html:value><html:next><html:block type=\"block_mod\" id=\"xMq`:b96.jS%wcpTQTfl\"><html:field name=\"NAME\">自转</html:field><html:statement name=\"code\"><html:block type=\"variables_set\" id=\"F?mn`2pA~@x@J5|DC1po\"><html:field name=\"VAR\" id=\"xh{|)jB=Qw*X)LD:#OkE\" variabletype=\"\">var_angle</html:field><html:value name=\"VALUE\"><html:block type=\"robot_math_rounding\" id=\"t]=v{::l`fe4n,YxKcv~\"><html:field name=\"rounding_type\">ceil</html:field><html:value name=\"param\"><html:shadow type=\"math_number\" id=\"n~GnfsOg;3vfk3T0%r^X\" disabled=\"true\"><html:field name=\"NUM\">3.1</html:field></html:shadow><html:block type=\"math_op\" id=\"U~z(+!O|LxJjBr#}^^[X\"><html:field name=\"valname\">*</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"2#N87a-D[iU3oqS^3C`h\"><html:field name=\"NUM\">120</html:field></html:shadow></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"yZUb6z5}q)Q}+vx81h={\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\"We6mw]kcr4HqRy%cVc1F\"><html:field name=\"VAR\" id=\"Z;Q@5OC}_.45VJ@*pyQl\" variabletype=\"\">var_1angle</html:field></html:block></html:value></h",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"wait\" id=\"+0*NtY-V|0N~x$9`nV~Q\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"kWAgGyLo~|d`}p2I[u^q\"><html:field name=\"NUM\">0.39</html:field></html:shadow></html:value><html:next><html:block type=\"dual_motor_angle\" id=\"[_#W_]m3siC*ADFo/7fU\"><html:field name=\"port_1\">1</html:field><html:field name=\"port_2\">2</html:field><html:field name=\"port_3\">1</html:field><html:value name=\"speed_1\"><html:shadow type=\"math_number\" id=\"q::w3a]@OaxShx8t%?BV\"><html:field name=\"NUM\">-5</html:field></html:shadow></html:value><html:value name=\"speed_2\"><html:shadow type=\"math_number\" id=\"X-^K=s:FtjsajXK*2DlR\"><html:field name=\"NUM\">-5</html:field></html:shadow></html:value><html:value name=\"angle\"><html:shadow type=\"math_number\" id=\"yMEOuE0:w%0*Wd/JGwqF\"><html:field name=\"NUM\">1200</html:field></html:shadow></html:value><html:next><html:block type=\"procedures_callnoreturn\" id=\"#C*vFAqjRf|Eb8-m+(1z\"><html:mutation name=\"func_green_end_1\" /></html:block></html:next></html:block></html:next></html:block>"
+  ]
+ },
+ "while_break": {
+  "fields": {},
+  "values": [],
+  "statements": [],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"while_break\" id=\"dn7xzy*;)R+/Hw6$$v[:\" />",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"while_break\" id=\"v!QNe4I73cDg6dTH0v4K\" />"
+  ]
+ },
+ "while_cmp": {
+  "fields": {},
+  "values": [
+   "bool"
+  ],
+  "statements": [
+   "code"
+  ],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"while_cmp\" id=\"pU1JNoQbtrIjNwz99:GR\"><html:value name=\"bool\"><html:shadow type=\"logic_boolean\" id=\"MspNb)B^f;hCRR|Cj_nE\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"o}2i=0IOu7U$LL.ZwgC,\"><html:field name=\"comparison_operator\">&gt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"6,*4.@DYvR}DHoF2cJ-B\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getencoder\" id=\"C~OT(Svi%_L3[Ql.(|0I\"><html:field name=\"port\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\")@EutE=OvsDALoTz|o#5\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\"_5hFKVb6Hrxq)Vy5BHT7\"><html:field name=\"VAR\" id=\"A[X0e!,DFS4lgR^~X0l?\" variabletype=\"\">var_cm_up</html:field></html:block></html:value></html:block></html:value><html:statement name=\"code\"><html:block type=\"variables_set\" id=\"X$}kLKyF6rjrEpxjn1|H\"><html:field name=\"VAR\" id=\"ml*,/!h*e2c_b`m:Gaxa\" variabletype=\"\">var_Error</html:field><html:value name=\"VALUE\"><html:block type=\"math_op\" id=\"vELt[0lm^D)8vZmBtR,R\"><html:field name=\"valname\">-</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"/1Q@2Z~c%NYTI6wG_Q+V\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getencoder\" id=\"v*^3,iLct+4Q_hz3aaG=\"><html:field name=\"port\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"BLsZ=6IKr{QJQy;D(P,G\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getencoder\" id=\"^*UpQ~I2]~P1ebUbk[Fn\"><html:field name=\"port\">2</html:field></html:block></html:value></html:block></html:value><html:next><html:block type=\"variables_set\" id=\"9pwy1d6:YPkgt{#6i_OH\"><html:field name=\"VAR\" id=\"Q9v`3!SNIj};PK[@6D*,\" variabletype=\"\">var_Error_Ki</html:field><html:value name=\"VALUE\"><html:block type=\"math_op\" id=\"nyTZO,h?Ro]uPxH#T^1L\"><html:field na",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"while_cmp\" id=\"]xLAp=8dsn+/vzL56!!U\"><html:value name=\"bool\"><html:shadow type=\"logic_boolean\" id=\"MspNb)B^f;hCRR|Cj_nE\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"#%0L2+iCcJ$kb}ITEpeC\"><html:field name=\"comparison_operator\">&gt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"6,*4.@DYvR}DHoF2cJ-B\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getencoder\" id=\"YK0LT,!}fm%a-i-;_lu/\"><html:field name=\"port\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\")@EutE=OvsDALoTz|o#5\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"math_op\" id=\"|x(hXwd[4y5z8.--^m+)\"><html:field name=\"valname\">-</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"J8_w.keo`488jPc)Me4b\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\"an5J7l8=~35;:,5dS.gw\"><html:field name=\"VAR\" id=\"7e2QU}]l7S{[==5Ql?T,\" variabletype=\"\">var_cm</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"D2Sjk7,u@kvT}JMVnZQT\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"variables_get\" id=\"I}}0zCGM4#bF=SuW_f{0\"><html:field name=\"VAR\" id=\"6*uToO=%*0RQ~VF]PNfI\" variabletype=\"\">var_cm_down</html:field></html:block></html:value></html:block></html:value></html:block></html:value><html:statement name=\"code\"><html:block type=\"variables_set\" id=\"2[a*m$iQ]lFKJqO+Oedu\"><html:field name=\"VAR\" id=\"ml*,/!h*e2c_b`m:Gaxa\" variabletype=\"\">var_Error</html:field><html:value name=\"VALUE\"><html:block type=\"math_op\" id=\"cxVq?C7`nlaD#0vLw5)i\"><html:field name=\"valname\">-</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"/1Q@2Z~c%NYTI6wG_Q+V\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getencoder\" id=\"pWIjAj|l:O)M?78IW1MO\"><html:fie"
+  ]
+ },
+ "while_forver": {
+  "fields": {},
+  "values": [],
+  "statements": [
+   "NAME"
+  ],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"while_forver\" id=\"qn-5I}UdHQ](n2sfjD~c\"><html:statement name=\"NAME\"><html:block type=\"ifelse\" id=\"YE.$D=O=iIjv0nPqENr:\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"8:Z|k(/Z8TCsk3x4D+^a\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"rx.pQ7/dN9/=dW6-YKI=\"><html:field name=\"comparison_operator\">&lt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"E79U9MwFV^#@$E77g$;m\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getmseconds\" id=\"YSehxwr!lxiGn#8#X@B}\"><html:field name=\"timer_ID\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"RlY1,8ov+HVT?d~!kQ2m\"><html:field name=\"NUM\">600</html:field></html:shadow></html:value></html:block></html:value><html:statement name=\"code\"><html:block type=\"motor\" id=\"v-f?L0{-jg0DDl[eZSKf\"><html:field name=\"channel\">1</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\",GLWG.]v2*?1U)1XAF+}\"><html:field name=\"NUM\">60</html:field></html:shadow></html:value><html:next><html:block type=\"motor\" id=\"sG5sw@DeHxv]94oCeY3n\"><html:field name=\"channel\">2</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\"TaB[$@dAttw[Ln|Q:D3H\"><html:field name=\"NUM\">60</html:field></html:shadow></html:value></html:block></html:next></html:block></html:statement><html:statement name=\"else_code\"><html:block type=\"while_forver\" id=\"b%q8[/5oSqEnw}Mr-}lu\"><html:statement name=\"NAME\"><html:block type=\"ifelse\" id=\"DRQl+G6}]K%2aV!0TJ(-\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"8:Z|k(/Z8TCsk3x4D+^a\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"Yx}sNGRHW?}I5DOFsmH~\"><html:field name=\"comparison_operator\">&lt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"E79U9MwFV^#@$E77g$;m\" disa",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"while_forver\" id=\"b%q8[/5oSqEnw}Mr-}lu\"><html:statement name=\"NAME\"><html:block type=\"ifelse\" id=\"DRQl+G6}]K%2aV!0TJ(-\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"8:Z|k(/Z8TCsk3x4D+^a\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"Yx}sNGRHW?}I5DOFsmH~\"><html:field name=\"comparison_operator\">&lt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"E79U9MwFV^#@$E77g$;m\" disabled=\"true\"><html:field name=\"NUM\">1</html:field></html:shadow><html:block type=\"getmseconds\" id=\"@-#wE}g:-bp2{},Y0L_G\"><html:field name=\"timer_ID\">1</html:field></html:block></html:value><html:value name=\"B\"><html:shadow type=\"math_number\" id=\"82Ab2t^{@KN*FZ=5KSdu\"><html:field name=\"NUM\">950</html:field></html:shadow></html:value></html:block></html:value><html:statement name=\"code\"><html:block type=\"motor\" id=\"5A(6z#.=o?r$e)1!$0zY\"><html:field name=\"channel\">2</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\"m)004PtH!A@.b)k|W/L=\"><html:field name=\"NUM\">50</html:field></html:shadow></html:value><html:next><html:block type=\"motor\" id=\"rj2i{LfboE`n$gsv3b!a\"><html:field name=\"channel\">1</html:field><html:value name=\"speed\"><html:shadow type=\"math_number\" id=\"L`OOO1*n{FRVf?ETrGKS\"><html:field name=\"NUM\">0</html:field></html:shadow></html:value></html:block></html:next></html:block></html:statement><html:statement name=\"else_code\"><html:block type=\"while_forver\" id=\"|3SENX^*c1h7(00kX{$o\"><html:statement name=\"NAME\"><html:block type=\"ifelse\" id=\"w8gw2,59~wA;3n*bDx;v\"><html:value name=\"logic_val\"><html:shadow type=\"logic_boolean\" id=\"8:Z|k(/Z8TCsk3x4D+^a\" disabled=\"true\"><html:field name=\"BOOL\">TRUE</html:field></html:shadow><html:block type=\"math_compare\" id=\"W{X(jMtDSElq6p]pKI=*\"><html:field name=\"comparison_operator\">&lt;=</html:field><html:value name=\"A\"><html:shadow type=\"math_number\" id=\"E79U9MwFV^#@$E77g$;m\" disab"
+  ]
+ },
+ "while_number": {
+  "fields": {},
+  "values": [
+   "TIMES"
+  ],
+  "statements": [
+   "code"
+  ],
+  "examples": [
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"while_number\" id=\"O`x#h5L^t;l7bOUsLUVB\"><html:value name=\"TIMES\"><html:shadow type=\"math_number\" id=\"e0%k=y;CUQnnx#_=:OHc\"><html:field name=\"NUM\">10</html:field></html:shadow><html:block type=\"variables_get\" id=\"7+.R_t$9jAz80Ko|6:}f\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field></html:block></html:value><html:statement name=\"code\"><html:block type=\"printf_lines\" id=\"^aL%JxR@_+I+XVpINMp9\"><html:statement name=\"code\"><html:block type=\"printf_text\" id=\"-#F[y}37ok6y(TH(Yo1G\"><html:field name=\"text\">光电放在黑线上</html:field><html:next><html:block type=\"printf_number\" id=\"33:+`P~-S3is5,*I:)Fp\"><html:field name=\"dataname\">時間</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"//R{8;TQAaZI`%L0[_lb\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"variables_get\" id=\"Pv2Av:,~g?v6z`~?cOP!\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field></html:block></html:value></html:block></html:next></html:block></html:statement><html:next><html:block type=\"math_change\" id=\"wo*oy_A+a+g+,fyH7OLt\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field><html:value name=\"DELTA\"><html:shadow type=\"math_number\" id=\"+iAz}p4:$+{7]LVe9}QS\"><html:field name=\"NUM\">-1</html:field></html:shadow></html:value><html:next><html:block type=\"wait\" id=\"/SYEPx++7?5XP5]q$~yg\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"A2nQlEH0R23k.yVTd]=8\"><html:field name=\"NUM\">1</html:field></html:shadow></html:value></html:block></html:next></html:block></html:next></html:block></html:statement><html:next><html:block type=\"printf_lines\" id=\"9xyIhD]PBWU{l0;leb?(\"><html:statement name=\"code\"><html:block type=\"printf_text\" id=\"n`j9iCkOhDd#A$gpcf8~\"><html:field name=\"text\">光电放在黑线上</html:field><html:next><html:block type=\"printf_number\" id=\"Q|kESR*UpK{!lwr-w%%!\"><html:field name=\"dataname\">時間</html:field><html",
+   "<html:block xmlns:html=\"http://www.w3.org/1999/xhtml\" type=\"while_number\" id=\":^m|[Ns@%Qj`aS;0-2B1\"><html:value name=\"TIMES\"><html:shadow type=\"math_number\" id=\"e0%k=y;CUQnnx#_=:OHc\"><html:field name=\"NUM\">10</html:field></html:shadow><html:block type=\"variables_get\" id=\"g`uB0S(`-CwL;8?9+H$.\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field></html:block></html:value><html:statement name=\"code\"><html:block type=\"printf_lines\" id=\"i%(+;!V/.UYf9hnL6(!l\"><html:statement name=\"code\"><html:block type=\"printf_text\" id=\"M=r2A;z)B@,=wlzT)ua7\"><html:field name=\"text\">光电放在白底上</html:field><html:next><html:block type=\"printf_number\" id=\"}_*e]#,r5BD}(}x$^;2C\"><html:field name=\"dataname\">時間</html:field><html:value name=\"data\"><html:shadow type=\"math_number\" id=\"//R{8;TQAaZI`%L0[_lb\"><html:field name=\"NUM\">100</html:field></html:shadow><html:block type=\"variables_get\" id=\":k4hmj$7V}S|bxXO.k0H\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field></html:block></html:value></html:block></html:next></html:block></html:statement><html:next><html:block type=\"math_change\" id=\"R9Wia)oj3,bC-]1dn3}M\"><html:field name=\"VAR\" id=\"S]39vBe7{#|g)JGM`2*k\" variabletype=\"\">var_time</html:field><html:value name=\"DELTA\"><html:shadow type=\"math_number\" id=\"=[|aS}}Z]As@$}z|%=Z-\"><html:field name=\"NUM\">-1</html:field></html:shadow></html:value><html:next><html:block type=\"wait\" id=\"g6Ce=WN2c3*BG3cu-++:\"><html:value name=\"time\"><html:shadow type=\"math_number\" id=\"Kq`[C6fmVr:)4k,|NqRJ\"><html:field name=\"NUM\">1</html:field></html:shadow></html:value></html:block></html:next></html:block></html:next></html:block></html:statement><html:next><html:block type=\"printf_lines\" id=\"u-!m#%ZL[K!|Gg!bep5O\"><html:statement name=\"code\"><html:block type=\"printf_text\" id=\"MA/M:O3u5L/v%g:#K;dF\"><html:field name=\"text\">光电放在白底上</html:field><html:next><html:block type=\"printf_number\" id=\"*~lJ*z9,3`x+OHy*xI7/\"><html:field name=\"dataname\">時間</html:field><html"
+  ]
+ }
+}

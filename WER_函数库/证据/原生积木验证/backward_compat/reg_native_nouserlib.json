@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "tool": "run_validate.py",
+    "toolVersion": "1.0",
+    "generatedAt": "2026-11-11T13:51:29",
+    "argv": [
+      "WER_函数库/工具/验证/run_validate.py",
+      "_分析临时/native_work/evidence/native_test.srh",
+      "--native-test",
+      "--json",
+      "_分析临时/native_work/_scratch/reg_native_nouserlib.json",
+      "--window-size",
+      "1600,1000"
+    ],
+    "python": "3.12.4",
+    "mode": "native",
+    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "webRoot": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\blockly_web",
+    "elapsedMs": 40,
+    "jsonOutput": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\_scratch\\reg_native_nouserlib.json"
+  },
+  "ok": false,
+  "errors": [
+    "--native-test 需要 web_root 中存在 Blockly_Code\\abilix_userlib.js（由原生积木补丁脚本生成）；当前 web_root=D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\blockly_web"
+  ],
+  "project": {
+    "inputPath": "D:\\UserData\\Documents\\WER\\2026普级赛\\_分析临时\\native_work\\evidence\\native_test.srh",
+    "format": "srh",
+    "encoding": "utf-8-sig",
+    "info": {
+      "Version": "1.0.3.4",
+      "RobotType": "SKCON9",
+      "DownloadProgramName": "NativeTest"
+    },
+    "infoRaw": "\r\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\r\n<ScratchProjectInfo xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\r\n  <Version>1.0.3.4</Version>\r\r\n  <RobotType>SKCON9</RobotType>\r\r\n  <DownloadProgramName>NativeTest</DownloadProgramName>\r\r\n</ScratchProjectInfo>\r\n",
+    "zipRobotType": null,
+    "robotType": "SKCON9",
+    "connectionType": "USB",
+    "programName": "NativeTest",
+    "static": {
+      "xmlValid": true,
+      "xmlError": null,
+      "rootTag": "xml",
+      "variablesCount": 0,
+      "variables": [],
+      "topBlockCount": 1,
+      "topBlocks": [
+        {
+          "type": "start",
+          "id": "start_native_test"
+        }
+      ],
+      "procedures": {
+        "defnoreturn": [],
+        "defreturn": []
+      },
+      "topBlocksByType": {
+        "start": 1
+      },
+      "hasStartBlock": true
+    },
+    "warnings": []
+  }
+}

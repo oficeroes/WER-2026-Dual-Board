@@ -1,0 +1,7 @@
+size 24172 first words: ['0x20004020', '0x08004145', '0x08006c7f', '0x08006025']
+instructions: 4469
+Traceback (most recent call last):
+  File "D:\UserData\Documents\WER\2026普级赛\_分析临时\stm32分析\11_stm32.py", line 72, in <module>
+    if mem is not None and mem.base in regval:
+                           ^^^^^^^^
+AttributeError: 'ArmOp' object has no attribute 'base'

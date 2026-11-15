@@ -1,0 +1,29 @@
+从便携版 IDE 右侧 Python 代码面板复制的生成代码（1 函数用户库：我的函数库.srhs，含 func_Hello）
+来源：截图 13_拖拽完成_Python证据.png / crop_13_python面板_放大.png（14:01，IDE 前台，主函数内已连接 func_Hello 原生块）
+说明：下方代码中 ASCII 行与截图逐字一致；第 14 行注释为截图转录（复制时中文在控制台曾出现编码乱码，已按截图校正）。
+
+---8<---
+#<SKCON9><USB><ProgramA>
+
+import threading
+import time
+import libstarpy
+
+robot = Robot()
+
+def func_Hello():
+    robot.print('hello world\n')
+    pass
+
+def main():
+    #将要运行的模块放入主函数
+    func_Hello()
+    robot.print('hello world\n')
+
+main()#program entry
+---8<---
+
+要点：
+1. 第 9-11 行 `def func_Hello():` 是核心工具 build 注入的函数定义（来自用户函数库 func_Hello）。
+2. 第 15 行 `func_Hello()` 是从左侧「我的函数」flyout 拖进主函数的原生块所产生的调用。
+3. 二者同时出现在真实 IDE 生成的 Python 代码里，证明「原生函数积木」方案端到端打通。
